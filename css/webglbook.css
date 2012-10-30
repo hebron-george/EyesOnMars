@@ -1,0 +1,14 @@
+* {
+    font-family: Arial;
+    font-style: italic;
+}
+
+body {
+	/*background-image: url("../images/background.png");*/
+	background-color:#FFFFFF;
+	color:#212121;
+}
+
+#container {
+	z-index:-1;
+}

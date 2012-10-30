@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Camera Interaction Example - Navigation</title>
+
+	<link href="/css/base.css" rel="stylesheet" /> 
+	<script src="/libs/Three.js"></script>
+	<script src="/libs/jquery-1.6.4.js"></script>
+    <script src="/libs/jquery.mousewheel.js"></script>
+	<script src="/libs/RequestAnimationFrame.js"></script>
+	<script src="/libs/Tween.js"></script>
+	<script src="/libs/deepCopy.js"></script>
+	<script src="/libs/FirstPersonControls.js"></script>
+	<script src="/libs/DragControls.js"></script>
+	<script src="/libs/THREEx.FullScreen.js"></script>
+	<script src="/libs/EOM_Utils.js"></script>
+	<script src="/sim/sim.js"></script>
+	<script src="/sim/animation.js"></script>
+	<script src="/sim/interaction.js"></script>
+	<script src="/sim/utils.js"></script>
+	<script src="interaction-camera-navigation.js"></script>
+	<Script src="/alpha/images.js"></script>
+	<Script src="/alpha/locations.js"></script>
+	<!--<script>
+	// 	function getUrlVars() {
+	// 	var vars = {};
+	// 	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+	// 		vars[key] = value;
+	// 	});
+	// 	return vars;
+	// 	}
+	// </script>-->
+	<script>
+		function getNext()
+		{
+			var pathname = window.location.value;
+			var sitePattern = /site=(d+)/;
+			var drivePattern = /drive=(d+)/;
+			var site = pathname.match(sitePattern);
+			alert("Going to the next location\nCurrent Path: " + site);
+		}
+	</script>
+	
+	<script>
+		function getPrev()
+		{
+			var pathname = window.location;
+			alert("Going to the previous location!\nCurrent Path: " + pathname);
+		}
+	</script>
+
+	<script> 
+
+	var renderer = null;
+	var scene = null;
+	var camera = null;
+	var mesh = null;
+	var planeArr = Array();
+
+	
+	$(document).ready(
+		function() {
+			var container = document.getElementById("container");
+			var app = new SceneViewer();
+			app.init({ container: container });
+			app.run();
+			console.log(planeArr);
+			console.log(SiteLocation);
+			driveSwitching(getUrlVars()["site"],getUrlVars()["drive"]);
+		}
+	);
+	</script>
+
+</head>
+<body>
+	<center><h1>Camera Interaction Example - Navigation</h1></center>
+    
+    <div id="container"  style="width:95%; height:80%; position:absolute; background-color:#000000"></div>
+	
+	<div id="prompt" style="width:95%; height:6%; bottom:20px; text-align:center; position:absolute;">
+		<br />
+		<center>
+			<form action="" method = "POST">
+				<button type="button" name="prev" onClick="getPrev()">Previous</button>
+				<button type="button" name="next" onClick="getNext()">Next</button>
+			</form>
+		</center>
+		<br />
+		Move mouse pointer while mouse is clicked to look around scene.<br/>
+		W/Left = move forward, S/Right = move back, A = pan left, D = pan right, R = move up, F = move down<br/>
+		L = full screen toggle (does not function correctly in Chrome, yet)<br/>
+	</div>
+
+</body>
+</html>

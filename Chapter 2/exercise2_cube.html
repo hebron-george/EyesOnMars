@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>plane with texture and responds to mouse</title>
+
+	<link rel="stylesheet" href="../css/webglbook.css" />
+
+	<script src="../libs/Three.js"></script>
+	<script src="../libs/RequestAnimationFrame.js"></script>
+	<script>
+
+	var renderer = null,
+		scene = null,
+		camera = null,
+		plane = null,
+		plane2 = null,
+		animating = false;
+
+
+	function onLoad()
+	{
+		
+		
+	
+		// Grab our container div
+		var container = document.getElementById("container");
+
+		// Create the Three.js renderer, add it to our div
+		renderer = new THREE.WebGLRenderer( { antialias: true } );
+		renderer.setSize(container.offsetWidth, container.offsetHeight);
+		container.appendChild( renderer.domElement );
+
+		// Create a new Three.js scene
+		scene = new THREE.Scene();
+
+		// Create a camera and add it to the scene
+		camera = new THREE.PerspectiveCamera( 100, container.offsetWidth / container.offsetHeight, 0.1, 4000 );
+		camera.position.set( 0, 0, 0 );
+		
+
+
+		
+/*
+		// Create a directional light to show off the object
+		var light = new THREE.DirectionalLight( 0xffffff, 1.5);
+		light.position.set(-1,0,1);
+		scene.add( light );
+*/
+
+		// Creat a shaded, texture-mapped plane and add it to the scene
+		// First, create the texture map
+		
+		//imageURLsfromframe = new Array();
+		
+		//ArrayOfSites = new Array();
+		images = new Array();
+
+		
+		var mapUrl = 'http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399621461EDR_F0030308NCAM00404M_.JPG' 
+			+ '?' + escape(new Date());	
+		
+		var mapUrl2 = 'http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399626500EDR_F0030372SAPP07712M_.JPG' 
+			+ '?' + escape(new Date());
+		
+		//imageURLsfromframe[0] = mapUrl;
+		
+		//imageURLsfromframe[1] = mapUrl2;
+
+		imageURLs = new Array();
+		imageURLs = parent.document.getElementById( "menu_id").contentWindow.imageURLsfromframe.slice(0);
+
+		
+		
+		images[0] = new Image();
+		images[1] = new Image();			
+		
+		images[0].src = imageURLs[0];
+		images[1].src = imageURLs[1];	
+		
+		images[0].crossOrigin = ''; // synonymous with, er, 'anonymous'
+
+		images[1].crossOrigin = ''; // synonymous with, er, 'anonymous'
+
+		//var map = THREE.ImageUtils.loadTexture(mapUrl);
+		var map = new THREE.Texture(images[0]);
+		
+		map.needsUpdate = true;
+		
+
+		
+		//var map2 = THREE.ImageUtils.loadTexture(mapUrl2);		
+		var map2 = new THREE.Texture(images[1]);
+
+		map2.needsUpdate = true;
+		
+		images[0].onload = function () { map.needsUpdate = true; };
+		images[1].onload = function () { map2.needsUpdate = true; };
+		
+
+		
+		
+		// Now, create a Phong material to show shading; pass in the map
+		var material = new THREE.MeshBasicMaterial({ map: map, transparent: true, opacity: 0.5 });
+		var material2 = new THREE.MeshBasicMaterial({ map: map2, transparent: true });
+
+		// Create the plane geometry
+		var geometry = new THREE.PlaneGeometry(1, 1);
+
+		// And put the geometry and material together into a mesh
+		plane = new THREE.Mesh(geometry, material);
+		plane2 = new THREE.Mesh(geometry, material2);
+
+		// Turn it toward the scene, or we won't see the plane shape!
+		plane.rotation.x = Math.PI / 5;
+		plane.rotation.y = Math.PI / 5;
+		plane.position.set(-3, 0, -3);
+		
+		plane2.rotation.x = 2 * Math.PI / 4;
+		//plane2.rotation.y = Math.PI / 5;
+		//plane2.rotation.z = Math.PI / 5;
+		
+		// Add the plane to our scene
+		scene.add ( plane );
+		var q = new THREE.Quaternion(0.795134,-0.0211898,-0.0459318,0.604321);
+		var v3 = new THREE.Vector3( 3, 0, -3);
+		var v3again = new THREE.Vector3(v3.x, v3.y, v3.z);
+		//q.multiplyVector3(v3);
+		plane2.position.set(v3.x, v3.y, v3.z);
+		scene.add ( plane2  );
+		
+		camera.lookAt(v3again);
+
+		// Add a mouse up handler to toggle the animation
+		addMouseHandler();
+
+		// Rus our render loop
+		run();
+	}
+
+
+	function run() {
+		// Render the scene
+		renderer.render( scene, camera);
+
+		// Spin the plane for next fram
+		if (animating)
+		{
+			plane.rotation.y -= 0.01;
+			plane2.rotation.y -= 0.02;
+			//camera.rotation.y -= 0.03;
+		}
+
+		// Ask for another frame
+		requestAnimationFrame(run);
+	}
+
+
+	function addMouseHandler() {
+		var dom = renderer.domElement;
+		dom.addEventListener ( 'mouseup', onMouseUp, false); 
+	}
+
+
+	function onMouseUp (event) {
+		event.preventDefault();
+		animating = !animating;
+	}
+
+
+	</script>
+
+</head>
+
+<body onLoad='onLoad();' style=''>
+	<center><h1>Welcome to plane with texture and spining</h1></center>
+	<div id='container' style='width:95%; height:95%; bottom: 0; position:absolute;'>
+	</div>
+	<div id='prompt' style ='width:95%; height:6% height; bottom:0; text-align:center; position:absolute;'> Click to animate plane.
+	</div>
+</body>
+
+</html>
