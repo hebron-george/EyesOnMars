@@ -1,2 +1,0 @@
-//301 Redirect Entire Directory
-RedirectMatch 301 /dbd(.*) /dbd/index.php/$1
