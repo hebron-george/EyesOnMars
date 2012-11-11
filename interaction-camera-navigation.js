@@ -47,7 +47,7 @@ SceneViewer.prototype.createCameraControls = function()
 	// Set up the FP controls
 	var controls = new THREE.FirstPersonControls( this.camera );
 
-	controls.movementSpeed = 2;
+	controls.movementSpeed = 10;
 	controls.lookSpeed = 0.05;
 	
 	// Allow tilt up/down
