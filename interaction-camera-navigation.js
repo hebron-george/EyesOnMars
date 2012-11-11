@@ -158,13 +158,13 @@ Scene.prototype.addCuriosityPics = function()
 
 	//targetDate = "2012-09-17";
 
-	var targetDrive = null;
+	// var targetDrive = null;
 	
-	if (getUrlVars()["drive"])
-	{
-		targetDrive = getUrlVars()["drive"];
-		// console.log("Drive number from URL is: " + targetDrive)
-	}
+	// if (getUrlVars()["drive"])
+	// {
+	// 	targetDrive = getUrlVars()["drive"];
+	// 	// console.log("Drive number from URL is: " + targetDrive)
+	// }
 
 
 	var targetSite = null;
