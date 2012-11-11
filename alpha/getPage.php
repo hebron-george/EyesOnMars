@@ -29,6 +29,7 @@
 				fwrite($fh, "\tthis.urlList = 0;\n");
 				fwrite($fh, "\tthis.attitude = 0;\n");
 				fwrite($fh, "\tthis.cameraPosition = 0;\n");
+				fwrite($fh, "\tthis.cameraVector = 0;\n");
 				fwrite($fh, "\tthis.mastAz = 0;\n");
 				fwrite($fh, "\tthis.mastEl = 0;\n");
 				fwrite($fh, "\tthis.xyz = 0;\n");
@@ -97,6 +98,14 @@
 							{
 								fwrite($fh, "\tImage".$count.".cameraPosition = new THREE.Vector3".$i->cameraPosition.";\n");
 							}
+							if ($i->cameraVector == "UNK")
+							{
+								fwrite($fh, "\tImage".$count.".cameraVector = \"".$i->cameraVector."\";\n");
+							}
+							else
+							{
+								fwrite($fh, "\tImage".$count.".cameraVector = new THREE.Vector3".$i->cameraVector.";\n");
+							}							
 							fwrite($fh, "\tImage".$count.".mastAz = \"".$i->mastAz."\";\n");
 							fwrite($fh, "\tImage".$count.".mastEl = \"".$i->mastEl."\";\n");
 							fwrite($fh, "\tImage".$count.".xyz = new THREE.Vector3".$i->xyz.";\n");

@@ -8,6 +8,7 @@ function ImageInfo() {
 	this.urlList = 0;
 	this.attitude = 0;
 	this.cameraPosition = 0;
+	this.cameraVector = 0;
 	this.mastAz = 0;
 	this.mastEl = 0;
 	this.xyz = 0;
@@ -26,6 +27,7 @@ function getImageDataArray()
 	Image1.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/fcam/FLA_397504830EDR_F0010000AUT_04096M_.JPG";
 	Image1.attitude = new THREE.Quaternion(1.0,0.0,0.0,0.0);
 	Image1.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1.mastAz = "1.03995";
 	Image1.mastEl = "-43.4728";
 	Image1.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -50,6 +52,7 @@ function getImageDataArray()
 	Image2.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/fcam/FRA_397504830EDR_F0010000AUT_04096M_.JPG";
 	Image2.attitude = new THREE.Quaternion(1.0,0.0,0.0,0.0);
 	Image2.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image2.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image2.mastAz = "359.974";
 	Image2.mastEl = "-43.7598";
 	Image2.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -74,6 +77,7 @@ function getImageDataArray()
 	Image3.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/rcam/RLA_397504876EDR_F0010000AUT_04096M_.JPG";
 	Image3.attitude = new THREE.Quaternion(1.0,0.0,0.0,0.0);
 	Image3.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image3.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image3.mastAz = "182.571";
 	Image3.mastEl = "-44.9097";
 	Image3.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -98,6 +102,7 @@ function getImageDataArray()
 	Image4.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/rcam/RRA_397504876EDR_F0010000AUT_04096M_.JPG";
 	Image4.attitude = new THREE.Quaternion(1.0,0.0,0.0,0.0);
 	Image4.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image4.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image4.mastAz = "182.044";
 	Image4.mastEl = "-43.5257";
 	Image4.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -122,6 +127,7 @@ function getImageDataArray()
 	Image5.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/fcam/FLA_397506083EDR_F0010008AUT_04096M_.JPG";
 	Image5.attitude = new THREE.Quaternion(0.554112,0.0145717,-0.0349824,0.831579);
 	Image5.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image5.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image5.mastAz = "1.03995";
 	Image5.mastEl = "-43.4728";
 	Image5.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -146,6 +152,7 @@ function getImageDataArray()
 	Image6.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/fcam/FRA_397506083EDR_F0010008AUT_04096M_.JPG";
 	Image6.attitude = new THREE.Quaternion(0.554112,0.0145717,-0.0349824,0.831579);
 	Image6.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image6.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image6.mastAz = "359.974";
 	Image6.mastEl = "-43.7598";
 	Image6.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -170,6 +177,7 @@ function getImageDataArray()
 	Image7.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/rcam/RLA_397506157EDR_F0010008AUT_04096M_.JPG";
 	Image7.attitude = new THREE.Quaternion(0.554112,0.0145717,-0.0349824,0.831579);
 	Image7.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image7.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image7.mastAz = "182.571";
 	Image7.mastEl = "-44.9097";
 	Image7.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -194,6 +202,7 @@ function getImageDataArray()
 	Image8.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/rcam/RRA_397506157EDR_F0010008AUT_04096M_.JPG";
 	Image8.attitude = new THREE.Quaternion(0.554112,0.0145717,-0.0349824,0.831579);
 	Image8.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image8.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image8.mastAz = "182.044";
 	Image8.mastEl = "-43.5257";
 	Image8.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -218,6 +227,7 @@ function getImageDataArray()
 	Image9.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/ccam/CR0_397506222EDR_F0010008CCAM00000M_.JPG";
 	Image9.attitude = new THREE.Quaternion(0.554112,0.0145717,-0.0349824,0.831579);
 	Image9.cameraPosition = new THREE.Vector3;
+	Image9.cameraVector = new THREE.Vector3;
 	Image9.mastAz = "";
 	Image9.mastEl = "";
 	Image9.xyz = new THREE.Vector3;
@@ -242,6 +252,7 @@ function getImageDataArray()
 	Image10.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00000/opgs/edr/ccam/CR0_397506434EDR_F0010008CCAM00000M_.JPG";
 	Image10.attitude = new THREE.Quaternion(0.554112,0.0145717,-0.0349824,0.831579);
 	Image10.cameraPosition = new THREE.Vector3;
+	Image10.cameraVector = new THREE.Vector3;
 	Image10.mastAz = "";
 	Image10.mastEl = "";
 	Image10.xyz = new THREE.Vector3;
@@ -266,6 +277,7 @@ function getImageDataArray()
 	Image11.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397671934EDR_F0010008AUT_04096M_.JPG";
 	Image11.attitude = new THREE.Quaternion(0.749871,0.00503076,-0.037643,0.660493);
 	Image11.cameraPosition = new THREE.Vector3(0.620263,0.671995,-2.04434);
+	Image11.cameraVector = new THREE.Vector3(-0.1591709158998334,-0.3946009012463271,-0.90496118605562);
 	Image11.mastAz = "247.979";
 	Image11.mastEl = "64.8421";
 	Image11.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -290,6 +302,7 @@ function getImageDataArray()
 	Image12.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397671964EDR_F0010008AUT_04096M_.JPG";
 	Image12.attitude = new THREE.Quaternion(0.58263,0.0133453,-0.0355557,0.81185);
 	Image12.cameraPosition = new THREE.Vector3(0.684096,0.737919,-2.04526);
+	Image12.cameraVector = new THREE.Vector3(-0.3449726479728105,-0.3077604941687854,-0.8867228148523145);
 	Image12.mastAz = "221.688";
 	Image12.mastEl = "62.4882";
 	Image12.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -314,6 +327,7 @@ function getImageDataArray()
 	Image13.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397672951EDR_F0010008AUT_04096M_.JPG";
 	Image13.attitude = new THREE.Quaternion(0.563214,0.0141847,-0.0352293,0.825438);
 	Image13.cameraPosition = new THREE.Vector3(0.703751,0.748923,-2.04632);
+	Image13.cameraVector = new THREE.Vector3(-0.4355195254786448,-0.28333039295903995,-0.8544276630309509);
 	Image13.mastAz = "213.002";
 	Image13.mastEl = "58.7204";
 	Image13.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -338,6 +352,7 @@ function getImageDataArray()
 	Image14.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397673010EDR_F0010008AUT_04096M_.JPG";
 	Image14.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image14.cameraPosition = new THREE.Vector3(0.956654,0.358925,-1.85773);
+	Image14.cameraVector = new THREE.Vector3(0.5516916359799345,0.07038329178800827,0.8310731201445921);
 	Image14.mastAz = "7.22711";
 	Image14.mastEl = "-56.1863";
 	Image14.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -362,6 +377,7 @@ function getImageDataArray()
 	Image15.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681339EDR_F0020000AUT_04096M_.JPG";
 	Image15.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image15.cameraPosition = new THREE.Vector3(0.569112,0.471461,-1.95651);
+	Image15.cameraVector = new THREE.Vector3(-0.16816612567593017,-0.9502687277271047,0.26212496882032654);
 	Image15.mastAz = "259.94";
 	Image15.mastEl = "-15.1731";
 	Image15.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -386,6 +402,7 @@ function getImageDataArray()
 	Image16.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681339EDR_F0020000AUT_04096M_.JPG";
 	Image16.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image16.cameraPosition = new THREE.Vector3(0.985014,0.391114,-1.95603);
+	Image16.cameraVector = new THREE.Vector3(-0.17809778555810424,-0.9471949128154277,0.26665141273931725);
 	Image16.mastAz = "259.327";
 	Image16.mastEl = "-15.4414";
 	Image16.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -410,6 +427,7 @@ function getImageDataArray()
 	Image17.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681372EDR_F0020000AUT_04096M_.JPG";
 	Image17.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image17.cameraPosition = new THREE.Vector3(0.642465,0.36845,-1.9605);
+	Image17.cameraVector = new THREE.Vector3(0.3241419465044579,-0.9170058344785835,0.23244848471981494);
 	Image17.mastAz = "289.443";
 	Image17.mastEl = "-13.4181";
 	Image17.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -434,6 +452,7 @@ function getImageDataArray()
 	Image18.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681372EDR_F0020000AUT_04096M_.JPG";
 	Image18.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image18.cameraPosition = new THREE.Vector3(1.04399,0.503374,-1.96003);
+	Image18.cameraVector = new THREE.Vector3(0.3140269700065138,-0.9193560767258402,0.23700520309858036);
 	Image18.mastAz = "288.835";
 	Image18.mastEl = "-13.6862";
 	Image18.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -458,6 +477,7 @@ function getImageDataArray()
 	Image19.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681398EDR_F0020000AUT_04096M_.JPG";
 	Image19.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image19.cameraPosition = new THREE.Vector3(1.03988,0.629247,-1.96202);
+	Image19.cameraVector = new THREE.Vector3(0.7290017252885603,-0.6473713182537754,0.22241146739471818);
 	Image19.mastAz = "318.37";
 	Image19.mastEl = "-12.8271";
 	Image19.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -482,6 +502,7 @@ function getImageDataArray()
 	Image20.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681398EDR_F0020000AUT_04096M_.JPG";
 	Image20.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image20.cameraPosition = new THREE.Vector3(0.757025,0.313935,-1.96238);
+	Image20.cameraVector = new THREE.Vector3(0.736591777585353,-0.640296288208632,0.21783759202648678);
 	Image20.mastAz = "318.976";
 	Image20.mastEl = "-12.559";
 	Image20.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -506,6 +527,7 @@ function getImageDataArray()
 	Image21.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681429EDR_F0020000AUT_04096M_.JPG";
 	Image21.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image21.cameraPosition = new THREE.Vector3(0.883933,0.322173,-1.96167);
+	Image21.cameraVector = new THREE.Vector3(0.9550805894627654,-0.19579578358691122,0.22245241909461008);
 	Image21.mastAz = "348.39";
 	Image21.mastEl = "-12.83";
 	Image21.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -530,6 +552,7 @@ function getImageDataArray()
 	Image22.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681429EDR_F0020000AUT_04096M_.JPG";
 	Image22.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image22.cameraPosition = new THREE.Vector3(0.975522,0.735745,-1.9615);
+	Image22.cameraVector = new THREE.Vector3(0.9519223024435602,-0.20567787236068472,0.22702542353607247);
 	Image22.mastAz = "347.784";
 	Image22.mastEl = "-13.0984";
 	Image22.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -554,6 +577,7 @@ function getImageDataArray()
 	Image23.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681455EDR_F0020000AUT_04096M_.JPG";
 	Image23.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image23.cameraPosition = new THREE.Vector3(0.991846,0.392577,-1.95853);
+	Image23.cameraVector = new THREE.Vector3(0.9221164415175905,0.2993409482207041,0.24514539563545854);
 	Image23.mastAz = "17.9604";
 	Image23.mastEl = "-14.1673";
 	Image23.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -578,6 +602,7 @@ function getImageDataArray()
 	Image24.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681455EDR_F0020000AUT_04096M_.JPG";
 	Image24.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image24.cameraPosition = new THREE.Vector3(0.867499,0.797506,-1.95859);
+	Image24.cameraVector = new THREE.Vector3(0.9241407683150081,0.2891584191822247,0.24970232068241463);
 	Image24.mastAz = "17.3503";
 	Image24.mastEl = "-14.4362";
 	Image24.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -602,6 +627,7 @@ function getImageDataArray()
 	Image25.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681486EDR_F0020000AUT_04096M_.JPG";
 	Image25.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image25.cameraPosition = new THREE.Vector3(1.05103,0.508059,-1.95373);
+	Image25.cameraVector = new THREE.Vector3(0.647720904717532,0.7086822408094935,0.27969109952434446);
 	Image25.mastAz = "47.5487";
 	Image25.mastEl = "-16.2187";
 	Image25.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -626,6 +652,7 @@ function getImageDataArray()
 	Image26.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681486EDR_F0020000AUT_04096M_.JPG";
 	Image26.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image26.cameraPosition = new THREE.Vector3(0.743045,0.798875,-1.95399);
+	Image26.cameraVector = new THREE.Vector3(0.6543943359306811,0.7007078688383206,0.2842121314263374);
 	Image26.mastAz = "46.9328";
 	Image26.mastEl = "-16.4881";
 	Image26.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -650,6 +677,7 @@ function getImageDataArray()
 	Image27.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681520EDR_F0020000AUT_04096M_.JPG";
 	Image27.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image27.cameraPosition = new THREE.Vector3(1.04415,0.639792,-1.94845);
+	Image27.cameraVector = new THREE.Vector3(0.20432299742858573,0.9260960457980353,0.3171722350380646);
 	Image27.mastAz = "77.5333";
 	Image27.mastEl = "-18.4689";
 	Image27.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -674,6 +702,7 @@ function getImageDataArray()
 	Image28.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681520EDR_F0020000AUT_04096M_.JPG";
 	Image28.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image28.cameraPosition = new THREE.Vector3(0.632075,0.737893,-1.94882);
+	Image28.cameraVector = new THREE.Vector3(0.21404565787289898,0.9223506850745662,0.32164214600738533);
 	Image28.mastAz = "76.91";
 	Image28.mastEl = "-18.7388";
 	Image28.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -698,6 +727,7 @@ function getImageDataArray()
 	Image29.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681553EDR_F0020000AUT_04096M_.JPG";
 	Image29.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image29.cameraPosition = new THREE.Vector3(0.565004,0.627014,-1.94457);
+	Image29.cameraVector = new THREE.Vector3(-0.28020328022086316,0.8932902693008425,0.3514521539639451);
 	Image29.mastAz = "107.39";
 	Image29.mastEl = "-20.5526";
 	Image29.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -722,6 +752,7 @@ function getImageDataArray()
 	Image30.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681553EDR_F0020000AUT_04096M_.JPG";
 	Image30.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image30.cameraPosition = new THREE.Vector3(0.969905,0.751454,-1.94419);
+	Image30.cameraVector = new THREE.Vector3(-0.29052347029895387,0.8917224190248031,0.34702628231015353);
 	Image30.mastAz = "108.02";
 	Image30.mastEl = "-20.2826";
 	Image30.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -746,6 +777,7 @@ function getImageDataArray()
 	Image31.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681586EDR_F0020000AUT_04096M_.JPG";
 	Image31.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image31.cameraPosition = new THREE.Vector3(0.848646,0.8093,-1.94213);
+	Image31.cameraVector = new THREE.Vector3(-0.699929515294309,0.6158869659978753,0.3616378281289246);
 	Image31.mastAz = "138.629";
 	Image31.mastEl = "-21.1777";
 	Image31.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -770,6 +802,7 @@ function getImageDataArray()
 	Image32.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681586EDR_F0020000AUT_04096M_.JPG";
 	Image32.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image32.cameraPosition = new THREE.Vector3(0.56352,0.496037,-1.9424);
+	Image32.cameraVector = new THREE.Vector3(-0.6917908134854394,0.6224490215292584,0.3660364544337393);
 	Image32.mastAz = "137.995";
 	Image32.mastEl = "-21.4478";
 	Image32.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -794,6 +827,7 @@ function getImageDataArray()
 	Image33.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681619EDR_F0020000AUT_04096M_.JPG";
 	Image33.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image33.cameraPosition = new THREE.Vector3(0.714648,0.796607,-1.94293);
+	Image33.cameraVector = new THREE.Vector3(-0.918333350774479,0.17115245272739232,0.35689031197374294);
 	Image33.mastAz = "169.417";
 	Image33.mastEl = "-20.8864";
 	Image33.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -818,6 +852,7 @@ function getImageDataArray()
 	Image34.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681619EDR_F0020000AUT_04096M_.JPG";
 	Image34.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image34.cameraPosition = new THREE.Vector3(0.630146,0.381529,-1.94299);
+	Image34.cameraVector = new THREE.Vector3(-0.9147244992634549,0.18095848398057593,0.361293672132067);
 	Image34.mastAz = "168.784";
 	Image34.mastEl = "-21.156";
 	Image34.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -842,6 +877,7 @@ function getImageDataArray()
 	Image35.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681703EDR_F0020000AUT_04096M_.JPG";
 	Image35.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image35.cameraPosition = new THREE.Vector3(0.747085,0.317546,-1.94616);
+	Image35.cameraVector = new THREE.Vector3(-0.8860008573542641,-0.31691515041071916,0.3384778695980874);
 	Image35.mastAz = "199.657";
 	Image35.mastEl = "-19.7606";
 	Image35.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -866,6 +902,7 @@ function getImageDataArray()
 	Image36.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681703EDR_F0020000AUT_04096M_.JPG";
 	Image36.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image36.cameraPosition = new THREE.Vector3(0.606527,0.717138,-1.94633);
+	Image36.cameraVector = new THREE.Vector3(-0.8839604221360551,-0.3271503395962829,0.33404584625330075);
 	Image36.mastAz = "200.284";
 	Image36.mastEl = "-19.4914";
 	Image36.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -890,6 +927,7 @@ function getImageDataArray()
 	Image37.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681736EDR_F0020000AUT_04096M_.JPG";
 	Image37.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image37.cameraPosition = new THREE.Vector3(0.875462,0.322021,-1.95094);
+	Image37.cameraVector = new THREE.Vector3(-0.6204667496318785,-0.7229151995950255,0.3039977414319658);
 	Image37.mastAz = "229.336";
 	Image37.mastEl = "-17.6743";
 	Image37.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -914,6 +952,7 @@ function getImageDataArray()
 	Image38.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681736EDR_F0020000AUT_04096M_.JPG";
 	Image38.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image38.cameraPosition = new THREE.Vector3(0.555434,0.599531,-1.95131);
+	Image38.cameraVector = new THREE.Vector3(-0.6135150587771598,-0.7306763443332747,0.29951853446059024);
 	Image38.mastAz = "229.956";
 	Image38.mastEl = "-17.4056";
 	Image38.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -938,6 +977,7 @@ function getImageDataArray()
 	Image39.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681768EDR_F0020000AUT_04096M_.JPG";
 	Image39.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image39.cameraPosition = new THREE.Vector3(0.572917,0.451794,-1.88436);
+	Image39.cameraVector = new THREE.Vector3(-0.08265610680685227,-0.7011867181830986,0.7081702861961592);
 	Image39.mastAz = "263.243";
 	Image39.mastEl = "-45.0633";
 	Image39.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -962,6 +1002,7 @@ function getImageDataArray()
 	Image40.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681768EDR_F0020000AUT_04096M_.JPG";
 	Image40.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image40.cameraPosition = new THREE.Vector3(0.99245,0.393298,-1.88408);
+	Image40.cameraVector = new THREE.Vector3(-0.0924421007623701,-0.6965493870005103,0.7115289238505017);
 	Image40.mastAz = "262.407";
 	Image40.mastEl = "-45.336";
 	Image40.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -986,6 +1027,7 @@ function getImageDataArray()
 	Image41.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681801EDR_F0020000AUT_04096M_.JPG";
 	Image41.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image41.cameraPosition = new THREE.Vector3(0.652033,0.354165,-1.8885);
+	Image41.cameraVector = new THREE.Vector3(0.26758743090064224,-0.6758034998142938,0.6867944353754956);
 	Image41.mastAz = "291.569";
 	Image41.mastEl = "-43.3539";
 	Image41.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1010,6 +1052,7 @@ function getImageDataArray()
 	Image42.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681801EDR_F0020000AUT_04096M_.JPG";
 	Image42.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image42.cameraPosition = new THREE.Vector3(1.04901,0.501948,-1.88824);
+	Image42.cameraVector = new THREE.Vector3(0.2568087353975223,-0.6764642049876617,0.6902502827192005);
 	Image42.mastAz = "290.756";
 	Image42.mastEl = "-43.6263";
 	Image42.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1034,6 +1077,7 @@ function getImageDataArray()
 	Image43.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681834EDR_F0020000AUT_04096M_.JPG";
 	Image43.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image43.cameraPosition = new THREE.Vector3(0.765986,0.306526,-1.89041);
+	Image43.cameraVector = new THREE.Vector3(0.5600051389302824,-0.4782684533697029,0.6765009466978056);
 	Image43.mastAz = "319.469";
 	Image43.mastEl = "-42.5481";
 	Image43.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1058,6 +1102,7 @@ function getImageDataArray()
 	Image44.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681834EDR_F0020000AUT_04096M_.JPG";
 	Image44.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image44.cameraPosition = new THREE.Vector3(1.04766,0.622895,-1.89025);
+	Image44.cameraVector = new THREE.Vector3(0.5508248190523812,-0.483928364521617,0.6800039387586989);
 	Image44.mastAz = "318.667";
 	Image44.mastEl = "-42.8205";
 	Image44.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1082,6 +1127,7 @@ function getImageDataArray()
 	Image45.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681867EDR_F0020000AUT_04096M_.JPG";
 	Image45.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image45.cameraPosition = new THREE.Vector3(0.888505,0.317846,-1.88968);
+	Image45.cameraVector = new THREE.Vector3(0.7155981619768985,-0.1602760334544453,0.6798756236808273);
 	Image45.mastAz = "347.343";
 	Image45.mastEl = "-42.811";
 	Image45.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1106,6 +1152,7 @@ function getImageDataArray()
 	Image46.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681867EDR_F0020000AUT_04096M_.JPG";
 	Image46.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image46.cameraPosition = new THREE.Vector3(0.989786,0.729152,-1.8897);
+	Image46.cameraVector = new THREE.Vector3(0.7101107246458552,-0.16956209323957366,0.6833677306393335);
 	Image46.mastAz = "346.538";
 	Image46.mastEl = "-43.0838";
 	Image46.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1130,6 +1177,7 @@ function getImageDataArray()
 	Image47.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681893EDR_F0020000AUT_04096M_.JPG";
 	Image47.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image47.cameraPosition = new THREE.Vector3(0.992208,0.386029,-1.88644);
+	Image47.cameraVector = new THREE.Vector3(0.6914617670308862,0.1930544517148797,0.6961397872608572);
 	Image47.mastAz = "15.5664";
 	Image47.mastEl = "-44.0954";
 	Image47.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1154,6 +1202,7 @@ function getImageDataArray()
 	Image48.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681893EDR_F0020000AUT_04096M_.JPG";
 	Image48.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image48.cameraPosition = new THREE.Vector3(0.88732,0.796429,-1.88668);
+	Image48.cameraVector = new THREE.Vector3(0.6909324033370114,0.1822592795107314,0.6995669868219699);
 	Image48.mastAz = "14.7443";
 	Image48.mastEl = "-44.3689";
 	Image48.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1178,6 +1227,7 @@ function getImageDataArray()
 	Image49.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681917EDR_F0020000AUT_04096M_.JPG";
 	Image49.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image49.cameraPosition = new THREE.Vector3(1.05198,0.497498,-1.88145);
+	Image49.cameraVector = new THREE.Vector3(0.49421509754013626,0.4856624032084532,0.7210294497960422);
 	Image49.mastAz = "44.4655";
 	Image49.mastEl = "-46.1168";
 	Image49.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1202,6 +1252,7 @@ function getImageDataArray()
 	Image50.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681917EDR_F0020000AUT_04096M_.JPG";
 	Image50.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image50.cameraPosition = new THREE.Vector3(0.762211,0.806474,-1.88188);
+	Image50.cameraVector = new THREE.Vector3(0.49886755315422043,0.4758725440772866,0.7243455571778792);
 	Image50.mastAz = "43.6142";
 	Image50.mastEl = "-46.3911";
 	Image50.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1226,6 +1277,7 @@ function getImageDataArray()
 	Image51.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681941EDR_F0020000AUT_04096M_.JPG";
 	Image51.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image51.cameraPosition = new THREE.Vector3(1.04958,0.628104,-1.87595);
+	Image51.cameraVector = new THREE.Vector3(0.17761413352826166,0.6397874965058757,0.747746734453417);
 	Image51.mastAz = "74.4484";
 	Image51.mastEl = "-48.3727";
 	Image51.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1250,6 +1302,7 @@ function getImageDataArray()
 	Image52.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681941EDR_F0020000AUT_04096M_.JPG";
 	Image52.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image52.cameraPosition = new THREE.Vector3(0.64435,0.751481,-1.87652);
+	Image52.cameraVector = new THREE.Vector3(0.1864941707255756,0.6334986074401473,0.7509323795500991);
 	Image52.mastAz = "73.5604";
 	Image52.mastEl = "-48.6478";
 	Image52.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1274,6 +1327,7 @@ function getImageDataArray()
 	Image53.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681967EDR_F0020000AUT_04096M_.JPG";
 	Image53.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image53.cameraPosition = new THREE.Vector3(0.97811,0.744755,-1.87146);
+	Image53.cameraVector = new THREE.Vector3(-0.17572561548981666,0.6144671343684417,0.7691232988551058);
 	Image53.mastAz = "105.922";
 	Image53.mastEl = "-50.2526";
 	Image53.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1298,6 +1352,7 @@ function getImageDataArray()
 	Image54.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681967EDR_F0020000AUT_04096M_.JPG";
 	Image54.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image54.cameraPosition = new THREE.Vector3(0.567976,0.638834,-1.87204);
+	Image54.cameraVector = new THREE.Vector3(-0.16484436779027622,0.6136260590705259,0.7721977687337613);
 	Image54.mastAz = "105.0";
 	Image54.mastEl = "-50.5283";
 	Image54.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1322,6 +1377,7 @@ function getImageDataArray()
 	Image55.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397681999EDR_F0020000AUT_04096M_.JPG";
 	Image55.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image55.cameraPosition = new THREE.Vector3(0.852259,0.808534,-1.86933);
+	Image55.cameraVector = new THREE.Vector3(-0.4682910030514439,0.41639541117497075,0.7793063569697732);
 	Image55.mastAz = "138.319";
 	Image55.mastEl = "-51.1746";
 	Image55.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1346,6 +1402,7 @@ function getImageDataArray()
 	Image56.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397681999EDR_F0020000AUT_04096M_.JPG";
 	Image56.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image56.cameraPosition = new THREE.Vector3(0.562652,0.49941,-1.8698);
+	Image56.cameraVector = new THREE.Vector3(-0.4586152368600604,0.4214827567861153,0.7823198516283266);
 	Image56.mastAz = "137.378";
 	Image56.mastEl = "-51.4502";
 	Image56.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1370,6 +1427,7 @@ function getImageDataArray()
 	Image57.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682034EDR_F0020000AUT_04096M_.JPG";
 	Image57.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image57.cameraPosition = new THREE.Vector3(0.709936,0.794915,-1.87018);
+	Image57.cameraVector = new THREE.Vector3(-0.6231165014537813,0.09861300933312586,0.7758874274057187);
 	Image57.mastAz = "170.969";
 	Image57.mastEl = "-50.8628";
 	Image57.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1394,6 +1452,7 @@ function getImageDataArray()
 	Image58.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682034EDR_F0020000AUT_04096M_.JPG";
 	Image58.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image58.cameraPosition = new THREE.Vector3(0.633201,0.378332,-1.87043);
+	Image58.cameraVector = new THREE.Vector3(-0.6177388625572856,0.10812359896028181,0.7789146198617066);
 	Image58.mastAz = "170.034";
 	Image58.mastEl = "-51.1379";
 	Image58.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1418,6 +1477,7 @@ function getImageDataArray()
 	Image59.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682119EDR_F0020000AUT_04096M_.JPG";
 	Image59.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image59.cameraPosition = new THREE.Vector3(0.59788,0.707587,-1.87378);
+	Image59.cameraVector = new THREE.Vector3(-0.5976758301270733,-0.2566505630129031,0.7595486097591607);
 	Image59.mastAz = "203.203";
 	Image59.mastEl = "-49.4016";
 	Image59.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1442,6 +1502,7 @@ function getImageDataArray()
 	Image60.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682119EDR_F0020000AUT_04096M_.JPG";
 	Image60.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image60.cameraPosition = new THREE.Vector3(0.755725,0.314503,-1.87379);
+	Image60.cameraVector = new THREE.Vector3(-0.5982902877969846,-0.2457666922387035,0.7626581570493085);
 	Image60.mastAz = "202.295";
 	Image60.mastEl = "-49.6758";
 	Image60.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1466,6 +1527,7 @@ function getImageDataArray()
 	Image61.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682152EDR_F0020000AUT_04096M_.JPG";
 	Image61.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image61.cameraPosition = new THREE.Vector3(0.550659,0.582233,-1.87904);
+	Image61.cameraVector = new THREE.Vector3(-0.4040492453602286,-0.5451192320978141,0.7345673761615874);
 	Image61.mastAz = "233.419";
 	Image61.mastEl = "-47.248";
 	Image61.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1490,6 +1552,7 @@ function getImageDataArray()
 	Image62.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682152EDR_F0020000AUT_04096M_.JPG";
 	Image62.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image62.cameraPosition = new THREE.Vector3(0.885257,0.322475,-1.87886);
+	Image62.cameraVector = new THREE.Vector3(-0.41013981782230385,-0.5361212956081762,0.7378070792775697);
 	Image62.mastAz = "232.549";
 	Image62.mastEl = "-47.5213";
 	Image62.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1514,6 +1577,7 @@ function getImageDataArray()
 	Image63.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682189EDR_F0020000AUT_04096M_.JPG";
 	Image63.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image63.cameraPosition = new THREE.Vector3(0.669163,0.774296,-1.87142);
+	Image63.cameraVector = new THREE.Vector3(-0.637556133341629,-0.013872714072225402,0.7702789914328062);
 	Image63.mastAz = "181.209";
 	Image63.mastEl = "-50.3561";
 	Image63.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1538,6 +1602,7 @@ function getImageDataArray()
 	Image64.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682189EDR_F0020000AUT_04096M_.JPG";
 	Image64.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image64.cameraPosition = new THREE.Vector3(0.667913,0.350706,-1.8716);
+	Image64.cameraVector = new THREE.Vector3(-0.6339883008183298,-0.0035536025304879278,0.7733344724855747);
 	Image64.mastAz = "180.284";
 	Image64.mastEl = "-50.6308";
 	Image64.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1562,6 +1627,7 @@ function getImageDataArray()
 	Image65.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682223EDR_F0020000AUT_04096M_.JPG";
 	Image65.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image65.cameraPosition = new THREE.Vector3(0.568929,0.65429,-1.87152);
+	Image65.cameraVector = new THREE.Vector3(-0.508686533668995,-0.3843019028214618,0.7704219999140901);
 	Image65.mastAz = "217.033";
 	Image65.mastEl = "-50.369";
 	Image65.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1586,6 +1652,7 @@ function getImageDataArray()
 	Image66.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682223EDR_F0020000AUT_04096M_.JPG";
 	Image66.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image66.cameraPosition = new THREE.Vector3(0.816083,0.310277,-1.87145);
+	Image66.cameraVector = new THREE.Vector3(-0.5118399140198058,-0.373847590813699,0.7734713189634059);
 	Image66.mastAz = "216.107";
 	Image66.mastEl = "-50.6432";
 	Image66.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1610,6 +1677,7 @@ function getImageDataArray()
 	Image67.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682254EDR_F0020000AUT_04096M_.JPG";
 	Image67.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image67.cameraPosition = new THREE.Vector3(0.551225,0.578027,-1.87154);
+	Image67.cameraVector = new THREE.Vector3(-0.3674691560967033,-0.5207676392803192,0.7705630961809552);
 	Image67.mastAz = "234.755";
 	Image67.mastEl = "-50.3817";
 	Image67.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1634,6 +1702,7 @@ function getImageDataArray()
 	Image68.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682254EDR_F0020000AUT_04096M_.JPG";
 	Image68.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image68.cameraPosition = new THREE.Vector3(0.891432,0.325659,-1.87137);
+	Image68.cameraVector = new THREE.Vector3(-0.3736551325933184,-0.5117667770116187,0.7736126988576453);
 	Image68.mastAz = "233.829";
 	Image68.mastEl = "-50.6557";
 	Image68.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1658,6 +1727,7 @@ function getImageDataArray()
 	Image69.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682285EDR_F0020000AUT_04096M_.JPG";
 	Image69.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image69.cameraPosition = new THREE.Vector3(0.960595,0.364917,-1.87131);
+	Image69.cameraVector = new THREE.Vector3(-0.19361102271423408,-0.6031484160866049,0.7737743599110586);
 	Image69.mastAz = "252.166";
 	Image69.mastEl = "-50.6706";
 	Image69.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1682,6 +1752,7 @@ function getImageDataArray()
 	Image70.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682285EDR_F0020000AUT_04096M_.JPG";
 	Image70.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image70.cameraPosition = new THREE.Vector3(0.558243,0.497365,-1.87153);
+	Image70.cameraVector = new THREE.Vector3(-0.18490576084746768,-0.6097405060544437,0.7707310652113938);
 	Image70.mastAz = "253.092";
 	Image70.mastEl = "-50.3967";
 	Image70.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1706,6 +1777,7 @@ function getImageDataArray()
 	Image71.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682316EDR_F0020000AUT_04096M_.JPG";
 	Image71.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image71.cameraPosition = new THREE.Vector3(0.590348,0.422931,-1.8715);
+	Image71.cameraVector = new THREE.Vector3(0.016639932103352816,-0.6366802185889179,0.7709483847295899);
 	Image71.mastAz = "271.46";
 	Image71.mastEl = "-50.4162";
 	Image71.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1730,6 +1802,7 @@ function getImageDataArray()
 	Image72.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682316EDR_F0020000AUT_04096M_.JPG";
 	Image72.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image72.cameraPosition = new THREE.Vector3(1.01394,0.424035,-1.87125);
+	Image72.cameraVector = new THREE.Vector3(0.006299354087580281,-0.6331650361763945,0.773991185416103);
 	Image72.mastAz = "270.533";
 	Image72.mastEl = "-50.6901";
 	Image72.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1754,6 +1827,7 @@ function getImageDataArray()
 	Image73.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682347EDR_F0020000AUT_04096M_.JPG";
 	Image73.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image73.cameraPosition = new THREE.Vector3(1.04591,0.496862,-1.87122);
+	Image73.cameraVector = new THREE.Vector3(0.20526188499158868,-0.5987468226340522,0.7741897706346464);
 	Image73.mastAz = "288.885";
 	Image73.mastEl = "-50.7081";
 	Image73.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1778,6 +1852,7 @@ function getImageDataArray()
 	Image74.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682347EDR_F0020000AUT_04096M_.JPG";
 	Image74.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image74.cameraPosition = new THREE.Vector3(0.644203,0.362466,-1.87144);
+	Image74.cameraVector = new THREE.Vector3(0.21618527138883825,-0.5988305370675912,0.771145846328614);
 	Image74.mastAz = "289.813";
 	Image74.mastEl = "-50.4342";
 	Image74.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1802,6 +1877,7 @@ function getImageDataArray()
 	Image75.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682394EDR_F0020000AUT_04096M_.JPG";
 	Image75.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image75.cameraPosition = new THREE.Vector3(0.690387,0.350622,-1.82365);
+	Image75.cameraVector = new THREE.Vector3(-0.30203643967271376,-0.004809225881402449,0.9532842495584686);
 	Image75.mastAz = "180.833";
 	Image75.mastEl = "-72.3945";
 	Image75.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1826,6 +1902,7 @@ function getImageDataArray()
 	Image76.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682394EDR_F0020000AUT_04096M_.JPG";
 	Image76.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image76.cameraPosition = new THREE.Vector3(0.69173,0.774211,-1.82336);
+	Image76.cameraVector = new THREE.Vector3(-0.30648896693179395,-0.01512415449327525,0.951754050739972);
 	Image76.mastAz = "182.745";
 	Image76.mastEl = "-72.1078";
 	Image76.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1850,6 +1927,7 @@ function getImageDataArray()
 	Image77.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682428EDR_F0020000AUT_04096M_.JPG";
 	Image77.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image77.cameraPosition = new THREE.Vector3(0.587263,0.667474,-1.82345);
+	Image77.cameraVector = new THREE.Vector3(-0.23964544773294352,-0.19122103822950604,0.9518427254117702);
 	Image77.mastAz = "218.507";
 	Image77.mastEl = "-72.1243";
 	Image77.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1874,6 +1952,7 @@ function getImageDataArray()
 	Image78.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682428EDR_F0020000AUT_04096M_.JPG";
 	Image78.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image78.cameraPosition = new THREE.Vector3(0.834341,0.323406,-1.8235);
+	Image78.cameraVector = new THREE.Vector3(-0.24208091053908715,-0.18025160298558937,0.9533657180608561);
 	Image78.mastAz = "216.592";
 	Image78.mastEl = "-72.41";
 	Image78.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1898,6 +1977,7 @@ function getImageDataArray()
 	Image79.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682462EDR_F0020000AUT_04096M_.JPG";
 	Image79.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image79.cameraPosition = new THREE.Vector3(0.565286,0.518849,-1.82347);
+	Image79.cameraVector = new THREE.Vector3(-0.08122282163983714,-0.29509781911032357,0.9520084718116715);
 	Image79.mastAz = "254.531";
 	Image79.mastEl = "-72.1553";
 	Image79.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1922,6 +2002,7 @@ function getImageDataArray()
 	Image80.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682462EDR_F0020000AUT_04096M_.JPG";
 	Image80.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image80.cameraPosition = new THREE.Vector3(0.967609,0.386312,-1.82336);
+	Image80.cameraVector = new THREE.Vector3(-0.0896512068422908,-0.2876664947671469,0.9535253792637635);
 	Image80.mastAz = "252.611";
 	Image80.mastEl = "-72.4403";
 	Image80.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1946,6 +2027,7 @@ function getImageDataArray()
 	Image81.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682493EDR_F0020000AUT_04096M_.JPG";
 	Image81.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image81.cameraPosition = new THREE.Vector3(0.590259,0.445551,-1.82345);
+	Image81.cameraVector = new THREE.Vector3(0.01586965425543227,-0.30538022219017913,0.952098248065235);
 	Image81.mastAz = "272.894";
 	Image81.mastEl = "-72.1721";
 	Image81.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1970,6 +2052,7 @@ function getImageDataArray()
 	Image82.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682493EDR_F0020000AUT_04096M_.JPG";
 	Image82.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image82.cameraPosition = new THREE.Vector3(1.01385,0.446562,-1.82332);
+	Image82.cameraVector = new THREE.Vector3(0.005528099912892494,-0.30098348936205416,0.9536133279494343);
 	Image82.mastAz = "270.973";
 	Image82.mastEl = "-72.457";
 	Image82.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -1994,6 +2077,7 @@ function getImageDataArray()
 	Image83.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NRA_397682534EDR_F0020000AUT_04096M_.JPG";
 	Image83.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image83.cameraPosition = new THREE.Vector3(0.971676,0.730256,-1.82682);
+	Image83.cameraVector = new THREE.Vector3(0.31834172831093144,-0.08212616372907412,0.9444119002041188);
 	Image83.mastAz = "345.462";
 	Image83.mastEl = "-70.7829";
 	Image83.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2018,6 +2102,7 @@ function getImageDataArray()
 	Image84.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00002/opgs/edr/ncam/NLA_397682534EDR_F0020000AUT_04096M_.JPG";
 	Image84.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image84.cameraPosition = new THREE.Vector3(0.85903,0.321917,-1.82665);
+	Image84.cameraVector = new THREE.Vector3(0.3253064401472702,-0.07333256515315237,0.9427608683472013);
 	Image84.mastAz = "347.223";
 	Image84.mastEl = "-70.4984";
 	Image84.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2042,6 +2127,7 @@ function getImageDataArray()
 	Image85.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ccam/CR0_398380645EDR_F0030000CCAM04010M_.JPG";
 	Image85.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image85.cameraPosition = new THREE.Vector3;
+	Image85.cameraVector = new THREE.Vector3;
 	Image85.mastAz = "";
 	Image85.mastEl = "";
 	Image85.xyz = new THREE.Vector3;
@@ -2066,6 +2152,7 @@ function getImageDataArray()
 	Image86.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ncam/NLA_398380694EDR_F0030000NCAM15000M_.JPG";
 	Image86.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image86.cameraPosition = new THREE.Vector3(0.635407,0.75125,-1.92329);
+	Image86.cameraVector = new THREE.Vector3(-0.8620028670052386,-0.1429497162281792,0.4863295548339952);
 	Image86.mastAz = "189.389";
 	Image86.mastEl = "-29.0766";
 	Image86.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2090,6 +2177,7 @@ function getImageDataArray()
 	Image87.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ncam/NRA_398380694EDR_F0030000NCAM15000M_.JPG";
 	Image87.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image87.cameraPosition = new THREE.Vector3(0.697331,0.332209,-1.92326);
+	Image87.cameraVector = new THREE.Vector3(-0.8613464690416702,-0.13240964354549978,0.49045891424827887);
 	Image87.mastAz = "188.712";
 	Image87.mastEl = "-29.3472";
 	Image87.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2114,6 +2202,7 @@ function getImageDataArray()
 	Image88.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ccam/CR0_398380781EDR_F0030000CCAM05010M_.JPG";
 	Image88.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image88.cameraPosition = new THREE.Vector3;
+	Image88.cameraVector = new THREE.Vector3;
 	Image88.mastAz = "";
 	Image88.mastEl = "";
 	Image88.xyz = new THREE.Vector3;
@@ -2138,6 +2227,7 @@ function getImageDataArray()
 	Image89.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ccam/CR0_398380890EDR_F0030000CCAM05010M_.JPG";
 	Image89.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image89.cameraPosition = new THREE.Vector3;
+	Image89.cameraVector = new THREE.Vector3;
 	Image89.mastAz = "";
 	Image89.mastEl = "";
 	Image89.xyz = new THREE.Vector3;
@@ -2162,6 +2252,7 @@ function getImageDataArray()
 	Image90.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ccam/CR0_398380999EDR_F0030000CCAM05010M_.JPG";
 	Image90.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image90.cameraPosition = new THREE.Vector3;
+	Image90.cameraVector = new THREE.Vector3;
 	Image90.mastAz = "";
 	Image90.mastEl = "";
 	Image90.xyz = new THREE.Vector3;
@@ -2186,6 +2277,7 @@ function getImageDataArray()
 	Image91.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ccam/CR0_398381109EDR_F0030000CCAM05010M_.JPG";
 	Image91.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image91.cameraPosition = new THREE.Vector3;
+	Image91.cameraVector = new THREE.Vector3;
 	Image91.mastAz = "";
 	Image91.mastEl = "";
 	Image91.xyz = new THREE.Vector3;
@@ -2210,6 +2302,7 @@ function getImageDataArray()
 	Image92.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ccam/CR0_398381250EDR_F0030000CCAM05010M_.JPG";
 	Image92.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image92.cameraPosition = new THREE.Vector3;
+	Image92.cameraVector = new THREE.Vector3;
 	Image92.mastAz = "";
 	Image92.mastEl = "";
 	Image92.xyz = new THREE.Vector3;
@@ -2234,6 +2327,7 @@ function getImageDataArray()
 	Image93.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ccam/CR0_398381359EDR_F0030000CCAM05010M_.JPG";
 	Image93.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image93.cameraPosition = new THREE.Vector3;
+	Image93.cameraVector = new THREE.Vector3;
 	Image93.mastAz = "";
 	Image93.mastEl = "";
 	Image93.xyz = new THREE.Vector3;
@@ -2258,6 +2352,7 @@ function getImageDataArray()
 	Image94.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ccam/CR0_398381468EDR_F0030000CCAM05010M_.JPG";
 	Image94.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image94.cameraPosition = new THREE.Vector3;
+	Image94.cameraVector = new THREE.Vector3;
 	Image94.mastAz = "";
 	Image94.mastEl = "";
 	Image94.xyz = new THREE.Vector3;
@@ -2282,6 +2377,7 @@ function getImageDataArray()
 	Image95.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ccam/CR0_398381577EDR_F0030000CCAM05010M_.JPG";
 	Image95.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image95.cameraPosition = new THREE.Vector3;
+	Image95.cameraVector = new THREE.Vector3;
 	Image95.mastAz = "";
 	Image95.mastEl = "";
 	Image95.xyz = new THREE.Vector3;
@@ -2306,6 +2402,7 @@ function getImageDataArray()
 	Image96.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ccam/CR0_398381687EDR_F0030000CCAM05010M_.JPG";
 	Image96.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image96.cameraPosition = new THREE.Vector3;
+	Image96.cameraVector = new THREE.Vector3;
 	Image96.mastAz = "";
 	Image96.mastEl = "";
 	Image96.xyz = new THREE.Vector3;
@@ -2330,6 +2427,7 @@ function getImageDataArray()
 	Image97.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ncam/NLA_398381736EDR_F0030000NCAM15000M_.JPG";
 	Image97.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image97.cameraPosition = new THREE.Vector3(0.650942,0.763746,-1.92501);
+	Image97.cameraVector = new THREE.Vector3(-0.8764469453351258,-0.07643671752316185,0.4753926589957097);
 	Image97.mastAz = "184.957";
 	Image97.mastEl = "-28.3618";
 	Image97.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2354,6 +2452,7 @@ function getImageDataArray()
 	Image98.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00010/opgs/edr/ncam/NRA_398381736EDR_F0030000NCAM15000M_.JPG";
 	Image98.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image98.cameraPosition = new THREE.Vector3(0.680338,0.341176,-1.92501);
+	Image98.cameraVector = new THREE.Vector3(-0.8750319716782493,-0.06598366907032392,0.4795468735763935);
 	Image98.mastAz = "184.286";
 	Image98.mastEl = "-28.6323";
 	Image98.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2378,6 +2477,7 @@ function getImageDataArray()
 	Image99.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560124EDR_F0030004CCAM02012M_.JPG";
 	Image99.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image99.cameraPosition = new THREE.Vector3;
+	Image99.cameraVector = new THREE.Vector3;
 	Image99.mastAz = "";
 	Image99.mastEl = "";
 	Image99.xyz = new THREE.Vector3;
@@ -2402,6 +2502,7 @@ function getImageDataArray()
 	Image100.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560248EDR_F0030004CCAM02012M_.JPG";
 	Image100.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image100.cameraPosition = new THREE.Vector3;
+	Image100.cameraVector = new THREE.Vector3;
 	Image100.mastAz = "";
 	Image100.mastEl = "";
 	Image100.xyz = new THREE.Vector3;
@@ -2426,6 +2527,7 @@ function getImageDataArray()
 	Image101.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560321EDR_F0030004CCAM02012M_.JPG";
 	Image101.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image101.cameraPosition = new THREE.Vector3;
+	Image101.cameraVector = new THREE.Vector3;
 	Image101.mastAz = "";
 	Image101.mastEl = "";
 	Image101.xyz = new THREE.Vector3;
@@ -2450,6 +2552,7 @@ function getImageDataArray()
 	Image102.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560394EDR_F0030004CCAM02012M_.JPG";
 	Image102.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image102.cameraPosition = new THREE.Vector3;
+	Image102.cameraVector = new THREE.Vector3;
 	Image102.mastAz = "";
 	Image102.mastEl = "";
 	Image102.xyz = new THREE.Vector3;
@@ -2474,6 +2577,7 @@ function getImageDataArray()
 	Image103.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560467EDR_F0030004CCAM02012M_.JPG";
 	Image103.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image103.cameraPosition = new THREE.Vector3;
+	Image103.cameraVector = new THREE.Vector3;
 	Image103.mastAz = "";
 	Image103.mastEl = "";
 	Image103.xyz = new THREE.Vector3;
@@ -2498,6 +2602,7 @@ function getImageDataArray()
 	Image104.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560571EDR_F0030004CCAM02012M_.JPG";
 	Image104.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image104.cameraPosition = new THREE.Vector3;
+	Image104.cameraVector = new THREE.Vector3;
 	Image104.mastAz = "";
 	Image104.mastEl = "";
 	Image104.xyz = new THREE.Vector3;
@@ -2522,6 +2627,7 @@ function getImageDataArray()
 	Image105.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560650EDR_F0030004CCAM02012M_.JPG";
 	Image105.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image105.cameraPosition = new THREE.Vector3;
+	Image105.cameraVector = new THREE.Vector3;
 	Image105.mastAz = "";
 	Image105.mastEl = "";
 	Image105.xyz = new THREE.Vector3;
@@ -2546,6 +2652,7 @@ function getImageDataArray()
 	Image106.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560723EDR_F0030004CCAM02012M_.JPG";
 	Image106.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image106.cameraPosition = new THREE.Vector3;
+	Image106.cameraVector = new THREE.Vector3;
 	Image106.mastAz = "";
 	Image106.mastEl = "";
 	Image106.xyz = new THREE.Vector3;
@@ -2570,6 +2677,7 @@ function getImageDataArray()
 	Image107.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560796EDR_F0030004CCAM02012M_.JPG";
 	Image107.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image107.cameraPosition = new THREE.Vector3;
+	Image107.cameraVector = new THREE.Vector3;
 	Image107.mastAz = "";
 	Image107.mastEl = "";
 	Image107.xyz = new THREE.Vector3;
@@ -2594,6 +2702,7 @@ function getImageDataArray()
 	Image108.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560869EDR_F0030004CCAM02012M_.JPG";
 	Image108.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image108.cameraPosition = new THREE.Vector3;
+	Image108.cameraVector = new THREE.Vector3;
 	Image108.mastAz = "";
 	Image108.mastEl = "";
 	Image108.xyz = new THREE.Vector3;
@@ -2618,6 +2727,7 @@ function getImageDataArray()
 	Image109.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ccam/CR0_398560983EDR_F0030004CCAM03012M_.JPG";
 	Image109.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image109.cameraPosition = new THREE.Vector3;
+	Image109.cameraVector = new THREE.Vector3;
 	Image109.mastAz = "";
 	Image109.mastEl = "";
 	Image109.xyz = new THREE.Vector3;
@@ -2642,6 +2752,7 @@ function getImageDataArray()
 	Image110.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ncam/NLA_398561160EDR_F0030004NCAM15000M_.JPG";
 	Image110.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image110.cameraPosition = new THREE.Vector3(1.04588,0.477556,-1.87923);
+	Image110.cameraVector = new THREE.Vector3(0.5225071119476538,0.4370688569696025,0.7320909316686057);
 	Image110.mastAz = "39.8768";
 	Image110.mastEl = "-47.0391";
 	Image110.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2666,6 +2777,7 @@ function getImageDataArray()
 	Image111.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ncam/NRA_398561160EDR_F0030004NCAM15000M_.JPG";
 	Image111.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image111.cameraPosition = new THREE.Vector3(0.781878,0.808818,-1.87965);
+	Image111.cameraVector = new THREE.Vector3(0.5263199953029543,0.4268999707511415,0.7353527571968249);
 	Image111.mastAz = "39.0108";
 	Image111.mastEl = "-47.3136";
 	Image111.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2690,6 +2802,7 @@ function getImageDataArray()
 	Image112.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ncam/NLA_398561738EDR_F0030004NCAM00400M_.JPG";
 	Image112.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image112.cameraPosition = new THREE.Vector3(0.842889,0.332555,-2.01903);
+	Image112.cameraVector = new THREE.Vector3(0.9381202499979316,-0.17801600282602845,-0.29705336100044677);
 	Image112.mastAz = "349.231";
 	Image112.mastEl = "17.304";
 	Image112.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2714,6 +2827,7 @@ function getImageDataArray()
 	Image113.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ncam/NRA_398561738EDR_F0030004NCAM00400M_.JPG";
 	Image113.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image113.cameraPosition = new THREE.Vector3(0.928684,0.747367,-2.01867);
+	Image113.cameraVector = new THREE.Vector3(0.9374759215665708,-0.18843606285283712,-0.2926273170765682);
 	Image113.mastAz = "348.61";
 	Image113.mastEl = "17.039";
 	Image113.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2738,6 +2852,7 @@ function getImageDataArray()
 	Image114.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ncam/NLA_398561766EDR_F0030004NCAM00400M_.JPG";
 	Image114.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image114.cameraPosition = new THREE.Vector3(0.955255,0.384063,-2.01663);
+	Image114.cameraVector = new THREE.Vector3(0.9065125473577863,0.32339809725954,-0.2713828885022161);
 	Image114.mastAz = "19.6095";
 	Image114.mastEl = "15.7699";
 	Image114.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2762,6 +2877,7 @@ function getImageDataArray()
 	Image115.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ncam/NRA_398561766EDR_F0030004NCAM00400M_.JPG";
 	Image115.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image115.cameraPosition = new THREE.Vector3(0.819373,0.785269,-2.0165);
+	Image115.cameraVector = new THREE.Vector3(0.9111147579428136,0.31404971088896605,-0.2669132386176548);
 	Image115.mastAz = "18.9941";
 	Image115.mastEl = "15.5044";
 	Image115.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2786,6 +2902,7 @@ function getImageDataArray()
 	Image116.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ncam/NLA_398561794EDR_F0030004NCAM00400M_.JPG";
 	Image116.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image116.cameraPosition = new THREE.Vector3(1.02568,0.486753,-2.0133);
+	Image116.cameraVector = new THREE.Vector3(0.6266387308119954,0.7426703621460866,-0.23614536674712067);
 	Image116.mastAz = "49.8193";
 	Image116.mastEl = "13.6824";
 	Image116.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2810,6 +2927,7 @@ function getImageDataArray()
 	Image117.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ncam/NRA_398561794EDR_F0030004NCAM00400M_.JPG";
 	Image117.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image117.cameraPosition = new THREE.Vector3(0.706305,0.765012,-2.01337);
+	Image117.cameraVector = new THREE.Vector3(0.6352120958609269,0.7367875704632456,-0.23162398252952227);
 	Image117.mastAz = "49.2099";
 	Image117.mastEl = "13.4164";
 	Image117.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2834,6 +2952,7 @@ function getImageDataArray()
 	Image118.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ncam/NLA_398561822EDR_F0030004NCAM00400M_.JPG";
 	Image118.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image118.cameraPosition = new THREE.Vector3(1.0333,0.610692,-2.00963);
+	Image118.cameraVector = new THREE.Vector3(0.17480186034372036,0.9644763587638606,-0.19806479496866397);
 	Image118.mastAz = "79.7032";
 	Image118.mastEl = "11.447";
 	Image118.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2858,6 +2977,7 @@ function getImageDataArray()
 	Image119.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00012/opgs/edr/ncam/NRA_398561822EDR_F0030004NCAM00400M_.JPG";
 	Image119.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image119.cameraPosition = new THREE.Vector3(0.617727,0.692751,-2.0098);
+	Image119.cameraVector = new THREE.Vector3(0.185132741851235,0.9634756192725022,-0.19349573370519624);
 	Image119.mastAz = "79.0992";
 	Image119.mastEl = "11.1806";
 	Image119.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2882,6 +3002,7 @@ function getImageDataArray()
 	Image120.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ccam/CR0_398645450EDR_F0030004CCAM02013M_.JPG";
 	Image120.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image120.cameraPosition = new THREE.Vector3;
+	Image120.cameraVector = new THREE.Vector3;
 	Image120.mastAz = "";
 	Image120.mastEl = "";
 	Image120.xyz = new THREE.Vector3;
@@ -2906,6 +3027,7 @@ function getImageDataArray()
 	Image121.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ccam/CR0_398645661EDR_F0030004CCAM02013M_.JPG";
 	Image121.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image121.cameraPosition = new THREE.Vector3;
+	Image121.cameraVector = new THREE.Vector3;
 	Image121.mastAz = "";
 	Image121.mastEl = "";
 	Image121.xyz = new THREE.Vector3;
@@ -2930,6 +3052,7 @@ function getImageDataArray()
 	Image122.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ncam/NLA_398645812EDR_F0030004NCAM15000M_.JPG";
 	Image122.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image122.cameraPosition = new THREE.Vector3(1.04514,0.475131,-1.88011);
+	Image122.cameraVector = new THREE.Vector3(0.5307309287608528,0.43441112051292186,0.7277442267935557);
 	Image122.mastAz = "39.2658";
 	Image122.mastEl = "-46.6748";
 	Image122.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2954,6 +3077,7 @@ function getImageDataArray()
 	Image123.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ncam/NRA_398645812EDR_F0030004NCAM15000M_.JPG";
 	Image123.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image123.cameraPosition = new THREE.Vector3(0.784627,0.809143,-1.88053);
+	Image123.cameraVector = new THREE.Vector3(0.5344512142355025,0.42421416670136863,0.7310295755795797);
 	Image123.mastAz = "38.4057";
 	Image123.mastEl = "-46.9492";
 	Image123.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -2978,6 +3102,7 @@ function getImageDataArray()
 	Image124.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ccam/CR0_398645989EDR_F0030004CCAM03013M_.JPG";
 	Image124.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image124.cameraPosition = new THREE.Vector3;
+	Image124.cameraVector = new THREE.Vector3;
 	Image124.mastAz = "";
 	Image124.mastEl = "";
 	Image124.xyz = new THREE.Vector3;
@@ -3002,6 +3127,7 @@ function getImageDataArray()
 	Image125.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ccam/CR0_398646096EDR_F0030004CCAM03013M_.JPG";
 	Image125.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image125.cameraPosition = new THREE.Vector3;
+	Image125.cameraVector = new THREE.Vector3;
 	Image125.mastAz = "";
 	Image125.mastEl = "";
 	Image125.xyz = new THREE.Vector3;
@@ -3026,6 +3152,7 @@ function getImageDataArray()
 	Image126.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ccam/CR0_398646222EDR_F0030004CCAM04013M_.JPG";
 	Image126.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image126.cameraPosition = new THREE.Vector3;
+	Image126.cameraVector = new THREE.Vector3;
 	Image126.mastAz = "";
 	Image126.mastEl = "";
 	Image126.xyz = new THREE.Vector3;
@@ -3050,6 +3177,7 @@ function getImageDataArray()
 	Image127.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ncam/NLA_398646382EDR_F0030004NCAM15000M_.JPG";
 	Image127.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image127.cameraPosition = new THREE.Vector3(1.0204,0.683582,-1.84558);
+	Image127.cameraVector = new THREE.Vector3(-0.011062530541747693,0.47717492669516554,0.8787387039111662);
 	Image127.mastAz = "91.2774";
 	Image127.mastEl = "-61.4683";
 	Image127.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3074,6 +3202,7 @@ function getImageDataArray()
 	Image128.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ncam/NRA_398646382EDR_F0030004NCAM15000M_.JPG";
 	Image128.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image128.cameraPosition = new THREE.Vector3(0.596841,0.688684,-1.84624);
+	Image128.cameraVector = new THREE.Vector3(-7.859252294327946E-4,0.472984710479223,0.8810702843555782);
 	Image128.mastAz = "90.045";
 	Image128.mastEl = "-61.7483";
 	Image128.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3098,6 +3227,7 @@ function getImageDataArray()
 	Image129.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ccam/CR0_398646468EDR_F0030004CCAM05013M_.JPG";
 	Image129.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image129.cameraPosition = new THREE.Vector3;
+	Image129.cameraVector = new THREE.Vector3;
 	Image129.mastAz = "";
 	Image129.mastEl = "";
 	Image129.xyz = new THREE.Vector3;
@@ -3122,6 +3252,7 @@ function getImageDataArray()
 	Image130.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ncam/NLA_398646643EDR_F0030004NCAM15000M_.JPG";
 	Image130.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image130.cameraPosition = new THREE.Vector3(0.601139,0.406619,-1.93741);
+	Image130.cameraVector = new THREE.Vector3(0.08522703736462926,-0.9142536641091539,0.3960764948403707);
 	Image130.mastAz = "275.3";
 	Image130.mastEl = "-23.31";
 	Image130.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3146,6 +3277,7 @@ function getImageDataArray()
 	Image131.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ncam/NRA_398646643EDR_F0030004NCAM15000M_.JPG";
 	Image131.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image131.cameraPosition = new THREE.Vector3(1.02349,0.439027,-1.93698);
+	Image131.cameraVector = new THREE.Vector3(0.07478772661805654,-0.9132853883371621,0.4003955486729866);
 	Image131.mastAz = "274.656";
 	Image131.mastEl = "-23.5793";
 	Image131.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3170,6 +3302,7 @@ function getImageDataArray()
 	Image132.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ccam/CR0_398646721EDR_F0030004CCAM06013M_.JPG";
 	Image132.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image132.cameraPosition = new THREE.Vector3;
+	Image132.cameraVector = new THREE.Vector3;
 	Image132.mastAz = "";
 	Image132.mastEl = "";
 	Image132.xyz = new THREE.Vector3;
@@ -3194,6 +3327,7 @@ function getImageDataArray()
 	Image133.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ncam/NLA_398646918EDR_F0030004NCAM15000M_.JPG";
 	Image133.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image133.cameraPosition = new THREE.Vector3(0.92153,0.77659,-1.83655);
+	Image133.cameraVector = new THREE.Vector3(-0.23270832772102162,0.3404094273607967,0.9110259359497841);
 	Image133.mastAz = "124.298";
 	Image133.mastEl = "-65.6252";
 	Image133.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3218,6 +3352,7 @@ function getImageDataArray()
 	Image134.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00013/opgs/edr/ncam/NRA_398646918EDR_F0030004NCAM15000M_.JPG";
 	Image134.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image134.cameraPosition = new THREE.Vector3(0.562408,0.551955,-1.83717);
+	Image134.cameraVector = new THREE.Vector3(-0.22171575550748415,0.34230830587175126,0.91305374841296);
 	Image134.mastAz = "122.873";
 	Image134.mastEl = "-65.9075";
 	Image134.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3242,6 +3377,7 @@ function getImageDataArray()
 	Image135.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ccam/CR0_398736578EDR_F0030004CCAM01014M_.JPG";
 	Image135.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image135.cameraPosition = new THREE.Vector3;
+	Image135.cameraVector = new THREE.Vector3;
 	Image135.mastAz = "";
 	Image135.mastEl = "";
 	Image135.xyz = new THREE.Vector3;
@@ -3266,6 +3402,7 @@ function getImageDataArray()
 	Image136.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ccam/CR0_398736852EDR_F0030004CCAM01014M_.JPG";
 	Image136.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image136.cameraPosition = new THREE.Vector3;
+	Image136.cameraVector = new THREE.Vector3;
 	Image136.mastAz = "";
 	Image136.mastEl = "";
 	Image136.xyz = new THREE.Vector3;
@@ -3290,6 +3427,7 @@ function getImageDataArray()
 	Image137.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ccam/CR0_398737093EDR_F0030004CCAM02014M_.JPG";
 	Image137.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image137.cameraPosition = new THREE.Vector3;
+	Image137.cameraVector = new THREE.Vector3;
 	Image137.mastAz = "";
 	Image137.mastEl = "";
 	Image137.xyz = new THREE.Vector3;
@@ -3314,6 +3452,7 @@ function getImageDataArray()
 	Image138.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ccam/CR0_398737329EDR_F0030004CCAM02014M_.JPG";
 	Image138.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image138.cameraPosition = new THREE.Vector3;
+	Image138.cameraVector = new THREE.Vector3;
 	Image138.mastAz = "";
 	Image138.mastEl = "";
 	Image138.xyz = new THREE.Vector3;
@@ -3338,6 +3477,7 @@ function getImageDataArray()
 	Image139.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ccam/CR0_398737568EDR_F0030004CCAM03014M_.JPG";
 	Image139.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image139.cameraPosition = new THREE.Vector3;
+	Image139.cameraVector = new THREE.Vector3;
 	Image139.mastAz = "";
 	Image139.mastEl = "";
 	Image139.xyz = new THREE.Vector3;
@@ -3362,6 +3502,7 @@ function getImageDataArray()
 	Image140.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ccam/CR0_398737757EDR_F0030004CCAM04014M_.JPG";
 	Image140.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image140.cameraPosition = new THREE.Vector3;
+	Image140.cameraVector = new THREE.Vector3;
 	Image140.mastAz = "";
 	Image140.mastEl = "";
 	Image140.xyz = new THREE.Vector3;
@@ -3386,6 +3527,7 @@ function getImageDataArray()
 	Image141.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/fcam/FLA_398741806EDR_F0030004FHAZ00200M_.JPG";
 	Image141.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image141.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image141.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image141.mastAz = "1.03995";
 	Image141.mastEl = "-43.4728";
 	Image141.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3410,6 +3552,7 @@ function getImageDataArray()
 	Image142.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/fcam/FRA_398741806EDR_F0030004FHAZ00200M_.JPG";
 	Image142.attitude = new THREE.Quaternion(0.562815,0.0142017,-0.0352224,0.82571);
 	Image142.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image142.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image142.mastAz = "359.974";
 	Image142.mastEl = "-43.7598";
 	Image142.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3434,6 +3577,7 @@ function getImageDataArray()
 	Image143.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ncam/NLA_398742207EDR_F0030004NCAM00105M_.JPG";
 	Image143.attitude = new THREE.Quaternion(0.562772,0.0149114,-0.0348944,0.82574);
 	Image143.cameraPosition = new THREE.Vector3(0.776158,0.316644,-1.98319);
+	Image143.cameraVector = new THREE.Vector3(0.8233632218249131,-0.56521152117636,0.05107779630724148);
 	Image143.mastAz = "325.508";
 	Image143.mastEl = "-2.90464";
 	Image143.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3458,6 +3602,7 @@ function getImageDataArray()
 	Image144.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ncam/NRA_398742207EDR_F0030004NCAM00105M_.JPG";
 	Image144.attitude = new THREE.Quaternion(0.562772,0.0149114,-0.0348944,0.82574);
 	Image144.cameraPosition = new THREE.Vector3(1.02124,0.662136,-1.9828);
+	Image144.cameraVector = new THREE.Vector3(0.8172698831713278,-0.5735528233487607,0.05574133914600212);
 	Image144.mastAz = "324.915";
 	Image144.mastEl = "-3.17176";
 	Image144.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3482,6 +3627,7 @@ function getImageDataArray()
 	Image145.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ncam/NLA_398742240EDR_F0030004NCAM00105M_.JPG";
 	Image145.attitude = new THREE.Quaternion(0.562772,0.0149114,-0.0348944,0.82574);
 	Image145.cameraPosition = new THREE.Vector3(0.734297,0.314351,-1.93248);
+	Image145.cameraVector = new THREE.Vector3(0.6075528140283095,-0.6688780290275225,0.42834770975288244);
 	Image145.mastAz = "312.223";
 	Image145.mastEl = "-25.3396";
 	Image145.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3506,6 +3652,7 @@ function getImageDataArray()
 	Image146.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ncam/NRA_398742240EDR_F0030004NCAM00105M_.JPG";
 	Image146.attitude = new THREE.Quaternion(0.562772,0.0149114,-0.0348944,0.82574);
 	Image146.cameraPosition = new THREE.Vector3(1.05257,0.593871,-1.93217);
+	Image146.cameraVector = new THREE.Vector3(0.5985250034076146,-0.6742566286419327,0.432603535617001);
 	Image146.mastAz = "311.569";
 	Image146.mastEl = "-25.6093";
 	Image146.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3530,6 +3677,7 @@ function getImageDataArray()
 	Image147.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ncam/NLA_398742273EDR_F0030004NCAM00105M_.JPG";
 	Image147.attitude = new THREE.Quaternion(0.562772,0.0149114,-0.0348944,0.82574);
 	Image147.cameraPosition = new THREE.Vector3(0.734662,0.313061,-1.89541);
+	Image147.cameraVector = new THREE.Vector3(0.5105741432321239,-0.5630263428454161,0.649857970271119);
 	Image147.mastAz = "312.172";
 	Image147.mastEl = "-40.5081";
 	Image147.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3554,6 +3702,7 @@ function getImageDataArray()
 	Image148.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ncam/NRA_398742273EDR_F0030004NCAM00105M_.JPG";
 	Image148.attitude = new THREE.Quaternion(0.562772,0.0149114,-0.0348944,0.82574);
 	Image148.cameraPosition = new THREE.Vector3(1.05404,0.591317,-1.89521);
+	Image148.cameraVector = new THREE.Vector3(0.5008378846984218,-0.567575052328182,0.6534676527766863);
 	Image148.mastAz = "311.394";
 	Image148.mastEl = "-40.7801";
 	Image148.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3578,6 +3727,7 @@ function getImageDataArray()
 	Image149.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ncam/NLA_398742309EDR_F0030004NCAM00121M_.JPG";
 	Image149.attitude = new THREE.Quaternion(0.562772,0.0149114,-0.0348944,0.82574);
 	Image149.cameraPosition = new THREE.Vector3(0.905382,0.339311,-1.82202);
+	Image149.cameraVector = new THREE.Vector3(0.2954801006890093,3.23587092001817E-4,0.9553488396330457);
 	Image149.mastAz = "359.979";
 	Image149.mastEl = "-72.7917";
 	Image149.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3602,6 +3752,7 @@ function getImageDataArray()
 	Image150.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/ncam/NRA_398742349EDR_F0030004NCAM00121M_.JPG";
 	Image150.attitude = new THREE.Quaternion(0.562772,0.0149114,-0.0348944,0.82574);
 	Image150.cameraPosition = new THREE.Vector3(1.03886,0.520187,-1.82272);
+	Image150.cameraVector = new THREE.Vector3(0.10026357400686631,-0.27836843110670034,0.9552267962586496);
 	Image150.mastAz = "289.728";
 	Image150.mastEl = "-72.7667";
 	Image150.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3626,6 +3777,7 @@ function getImageDataArray()
 	Image151.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/fcam/FLA_398742695EDR_F0030004FHAZ00200M_.JPG";
 	Image151.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image151.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image151.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image151.mastAz = "1.03995";
 	Image151.mastEl = "-43.4728";
 	Image151.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3650,6 +3802,7 @@ function getImageDataArray()
 	Image152.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00014/opgs/edr/fcam/FRA_398742695EDR_F0030004FHAZ00200M_.JPG";
 	Image152.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image152.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image152.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image152.mastAz = "359.974";
 	Image152.mastEl = "-43.7598";
 	Image152.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3674,6 +3827,7 @@ function getImageDataArray()
 	Image153.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ccam/CR0_398824843EDR_F0030004CCAM01015M_.JPG";
 	Image153.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image153.cameraPosition = new THREE.Vector3;
+	Image153.cameraVector = new THREE.Vector3;
 	Image153.mastAz = "";
 	Image153.mastEl = "";
 	Image153.xyz = new THREE.Vector3;
@@ -3698,6 +3852,7 @@ function getImageDataArray()
 	Image154.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ccam/CR0_398825112EDR_F0030004CCAM01015M_.JPG";
 	Image154.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image154.cameraPosition = new THREE.Vector3;
+	Image154.cameraVector = new THREE.Vector3;
 	Image154.mastAz = "";
 	Image154.mastEl = "";
 	Image154.xyz = new THREE.Vector3;
@@ -3722,6 +3877,7 @@ function getImageDataArray()
 	Image155.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ccam/CR0_398825499EDR_F0030004CCAM02015M_.JPG";
 	Image155.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image155.cameraPosition = new THREE.Vector3;
+	Image155.cameraVector = new THREE.Vector3;
 	Image155.mastAz = "";
 	Image155.mastEl = "";
 	Image155.xyz = new THREE.Vector3;
@@ -3746,6 +3902,7 @@ function getImageDataArray()
 	Image156.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ccam/CR0_398825626EDR_F0030004CCAM03015M_.JPG";
 	Image156.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image156.cameraPosition = new THREE.Vector3;
+	Image156.cameraVector = new THREE.Vector3;
 	Image156.mastAz = "";
 	Image156.mastEl = "";
 	Image156.xyz = new THREE.Vector3;
@@ -3770,6 +3927,7 @@ function getImageDataArray()
 	Image157.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ccam/CR0_398825899EDR_F0030004CCAM03015M_.JPG";
 	Image157.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image157.cameraPosition = new THREE.Vector3;
+	Image157.cameraVector = new THREE.Vector3;
 	Image157.mastAz = "";
 	Image157.mastEl = "";
 	Image157.xyz = new THREE.Vector3;
@@ -3794,6 +3952,7 @@ function getImageDataArray()
 	Image158.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ccam/CR0_398826118EDR_F0030004CCAM04015M_.JPG";
 	Image158.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image158.cameraPosition = new THREE.Vector3;
+	Image158.cameraVector = new THREE.Vector3;
 	Image158.mastAz = "";
 	Image158.mastEl = "";
 	Image158.xyz = new THREE.Vector3;
@@ -3818,6 +3977,7 @@ function getImageDataArray()
 	Image159.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ccam/CR0_398826345EDR_F0030004CCAM05015M_.JPG";
 	Image159.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image159.cameraPosition = new THREE.Vector3;
+	Image159.cameraVector = new THREE.Vector3;
 	Image159.mastAz = "";
 	Image159.mastEl = "";
 	Image159.xyz = new THREE.Vector3;
@@ -3842,6 +4002,7 @@ function getImageDataArray()
 	Image160.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ccam/CR0_398826604EDR_F0030004CCAM05015M_.JPG";
 	Image160.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image160.cameraPosition = new THREE.Vector3;
+	Image160.cameraVector = new THREE.Vector3;
 	Image160.mastAz = "";
 	Image160.mastEl = "";
 	Image160.xyz = new THREE.Vector3;
@@ -3866,6 +4027,7 @@ function getImageDataArray()
 	Image161.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828068EDR_F0030004NCAM00503M_.JPG";
 	Image161.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image161.cameraPosition = new THREE.Vector3(0.59269,0.614043,-2.03983);
+	Image161.cameraVector = new THREE.Vector3(0.0023137250923131536,-0.30693892054525046,-0.9517264027706248);
 	Image161.mastAz = "270.359";
 	Image161.mastEl = "72.149";
 	Image161.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3890,6 +4052,7 @@ function getImageDataArray()
 	Image162.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828109EDR_F0030004NCAM00503M_.JPG";
 	Image162.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image162.cameraPosition = new THREE.Vector3(0.634369,0.69323,-2.04344);
+	Image162.cameraVector = new THREE.Vector3(-0.532464342137883,-0.531411401504676,-0.6588502460366145);
 	Image162.mastAz = "224.912";
 	Image162.mastEl = "41.2358";
 	Image162.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3914,6 +4077,7 @@ function getImageDataArray()
 	Image163.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828142EDR_F0030004NCAM00503M_.JPG";
 	Image163.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image163.cameraPosition = new THREE.Vector3(0.612903,0.694918,-2.00918);
+	Image163.cameraVector = new THREE.Vector3(-0.8357849611331585,-0.5150760465205156,-0.19015826315056714);
 	Image163.mastAz = "211.621";
 	Image163.mastEl = "10.9853";
 	Image163.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3938,6 +4102,7 @@ function getImageDataArray()
 	Image164.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828172EDR_F0030004NCAM00504M_.JPG";
 	Image164.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image164.cameraPosition = new THREE.Vector3(0.663145,0.741034,-2.01894);
+	Image164.cameraVector = new THREE.Vector3(-0.9109523242206222,-0.2874561165331088,-0.2958628805118175);
 	Image164.mastAz = "197.489";
 	Image164.mastEl = "17.2326";
 	Image164.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3962,6 +4127,7 @@ function getImageDataArray()
 	Image165.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828251EDR_F0030004NCAM00504M_.JPG";
 	Image165.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image165.cameraPosition = new THREE.Vector3(0.769225,0.787834,-2.01691);
+	Image165.cameraVector = new THREE.Vector3(-0.9399427621355367,0.2030985682269586,-0.2743329646491244);
 	Image165.mastAz = "167.783";
 	Image165.mastEl = "15.9456";
 	Image165.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -3986,6 +4152,7 @@ function getImageDataArray()
 	Image166.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828283EDR_F0030004NCAM00504M_.JPG";
 	Image166.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image166.cameraPosition = new THREE.Vector3(0.883398,0.776885,-2.01647);
+	Image166.cameraVector = new THREE.Vector3(-0.7263593560189584,0.6318779302502322,-0.27042996724920587);
 	Image166.mastAz = "138.955";
 	Image166.mastEl = "15.7131";
 	Image166.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4010,6 +4177,7 @@ function getImageDataArray()
 	Image167.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828316EDR_F0030004NCAM00504M_.JPG";
 	Image167.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image167.cameraPosition = new THREE.Vector3(0.980752,0.708311,-2.01774);
+	Image167.cameraVector = new THREE.Vector3(-0.32005732849549007,0.9034218601219861,-0.28529326863783616);
 	Image167.mastAz = "109.483";
 	Image167.mastEl = "16.5997";
 	Image167.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4034,6 +4202,7 @@ function getImageDataArray()
 	Image168.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828349EDR_F0030004NCAM00504M_.JPG";
 	Image168.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image168.cameraPosition = new THREE.Vector3(1.03063,0.598308,-2.02034);
+	Image168.cameraVector = new THREE.Vector3(0.16634495122519238,0.9343592569944872,-0.3151224144211232);
 	Image168.mastAz = "79.8806";
 	Image168.mastEl = "18.3915";
 	Image168.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4058,6 +4227,7 @@ function getImageDataArray()
 	Image169.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828376EDR_F0030004NCAM00504M_.JPG";
 	Image169.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image169.cameraPosition = new THREE.Vector3(1.01714,0.477587,-2.0235);
+	Image169.cameraVector = new THREE.Vector3(0.5993635456336671,0.7189075864400017,-0.3520443470991265);
 	Image169.mastAz = "50.1566";
 	Image169.mastEl = "20.6357";
 	Image169.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4082,6 +4252,7 @@ function getImageDataArray()
 	Image170.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828403EDR_F0030004NCAM00504M_.JPG";
 	Image170.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image170.cameraPosition = new THREE.Vector3(0.942887,0.380267,-2.02631);
+	Image170.cameraVector = new THREE.Vector3(0.8672169325950839,0.31494499646425267,-0.38567400874638347);
 	Image170.mastAz = "19.934";
 	Image170.mastEl = "22.709";
 	Image170.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4106,6 +4277,7 @@ function getImageDataArray()
 	Image171.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828435EDR_F0030004NCAM00504M_.JPG";
 	Image171.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image171.cameraPosition = new THREE.Vector3(0.828762,0.335301,-2.02808);
+	Image171.cameraVector = new THREE.Vector3(0.897103938528471,-0.171950657030703,-0.406985865876709);
 	Image171.mastAz = "349.124";
 	Image171.mastEl = "24.039";
 	Image171.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4130,6 +4302,7 @@ function getImageDataArray()
 	Image172.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828462EDR_F0030004NCAM00504M_.JPG";
 	Image172.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image172.cameraPosition = new THREE.Vector3(0.710108,0.354943,-2.02848);
+	Image172.cameraVector = new THREE.Vector3(0.6810007141976678,-0.6061359624811696,-0.4108980679551709);
 	Image172.mastAz = "318.303";
 	Image172.mastEl = "24.2846";
 	Image172.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4154,6 +4327,7 @@ function getImageDataArray()
 	Image173.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828489EDR_F0030004NCAM00504M_.JPG";
 	Image173.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image173.cameraPosition = new THREE.Vector3(0.619278,0.430272,-2.02739);
+	Image173.cameraVector = new THREE.Vector3(0.27630673743660206,-0.8757101436159558,-0.39596253764120515);
 	Image173.mastAz = "287.486";
 	Image173.mastEl = "23.3494";
 	Image173.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4178,6 +4352,7 @@ function getImageDataArray()
 	Image174.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828523EDR_F0030004NCAM00504M_.JPG";
 	Image174.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image174.cameraPosition = new THREE.Vector3(0.578414,0.538455,-2.02503);
+	Image174.cameraVector = new THREE.Vector3(-0.20961334462925496,-0.9066358289182384,-0.36616078363893045);
 	Image174.mastAz = "256.957";
 	Image174.mastEl = "21.5024";
 	Image174.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4202,6 +4377,7 @@ function getImageDataArray()
 	Image175.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398828555EDR_F0030004NCAM00504M_.JPG";
 	Image175.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image175.cameraPosition = new THREE.Vector3(0.594781,0.650534,-2.02192);
+	Image175.cameraVector = new THREE.Vector3(-0.642861853657012,-0.6915909132051102,-0.32928808949731525);
 	Image175.mastAz = "227.067";
 	Image175.mastEl = "19.2489";
 	Image175.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4226,6 +4402,7 @@ function getImageDataArray()
 	Image176.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/fcam/FLA_398830747EDR_F0030004FHAZ00105M_.JPG";
 	Image176.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image176.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image176.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image176.mastAz = "1.03995";
 	Image176.mastEl = "-43.4728";
 	Image176.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4250,6 +4427,7 @@ function getImageDataArray()
 	Image177.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/fcam/FRA_398830747EDR_F0030004FHAZ00105M_.JPG";
 	Image177.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image177.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image177.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image177.mastAz = "359.974";
 	Image177.mastEl = "-43.7598";
 	Image177.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4274,6 +4452,7 @@ function getImageDataArray()
 	Image178.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/rcam/RRA_398830780EDR_F0030004RHAZ00105M_.JPG";
 	Image178.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image178.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image178.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image178.mastAz = "182.044";
 	Image178.mastEl = "-43.5257";
 	Image178.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4298,6 +4477,7 @@ function getImageDataArray()
 	Image179.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/rcam/RLA_398830780EDR_F0030004RHAZ00105M_.JPG";
 	Image179.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image179.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image179.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image179.mastAz = "182.571";
 	Image179.mastEl = "-44.9097";
 	Image179.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4322,6 +4502,7 @@ function getImageDataArray()
 	Image180.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398830842EDR_F0030004NCAM00119M_.JPG";
 	Image180.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image180.cameraPosition = new THREE.Vector3(1.04323,0.606062,-1.82529);
+	Image180.cameraVector = new THREE.Vector3(0.07937214875408147,0.31473104067080787,0.9458564553040965);
 	Image180.mastAz = "75.7699";
 	Image180.mastEl = "-71.0375";
 	Image180.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4346,6 +4527,7 @@ function getImageDataArray()
 	Image181.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398830889EDR_F0030004NCAM00113M_.JPG";
 	Image181.attitude = new THREE.Quaternion(0.562724,0.0149091,-0.0347931,0.825778);
 	Image181.cameraPosition = new THREE.Vector3(0.698757,0.792504,-1.89274);
+	Image181.cameraVector = new THREE.Vector3(-0.7420871931574126,0.0972389502445893,0.6632127745355056);
 	Image181.mastAz = "172.503";
 	Image181.mastEl = "-41.5224";
 	Image181.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4370,6 +4552,7 @@ function getImageDataArray()
 	Image182.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398831109EDR_F0030016NCAM00119M_.JPG";
 	Image182.attitude = new THREE.Quaternion(0.563619,0.0159338,-0.0351127,0.825135);
 	Image182.cameraPosition = new THREE.Vector3(1.04307,0.606851,-1.82529);
+	Image182.cameraVector = new THREE.Vector3(0.0783223911082773,0.3149740198043267,0.9458630820046766);
 	Image182.mastAz = "75.9601";
 	Image182.mastEl = "-71.0387";
 	Image182.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4394,6 +4577,7 @@ function getImageDataArray()
 	Image183.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398831175EDR_F0030024NCAM00113M_.JPG";
 	Image183.attitude = new THREE.Quaternion(0.563331,0.0162056,-0.0344168,0.825355);
 	Image183.cameraPosition = new THREE.Vector3(0.698756,0.792504,-1.89275);
+	Image183.cameraVector = new THREE.Vector3(-0.7421332929105937,0.09724638588695561,0.6631600983062869);
 	Image183.mastAz = "172.503";
 	Image183.mastEl = "-41.5183";
 	Image183.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4418,6 +4602,7 @@ function getImageDataArray()
 	Image184.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398831207EDR_F0030028NCAM00113M_.JPG";
 	Image184.attitude = new THREE.Quaternion(0.563492,0.0166663,-0.0350565,0.825209);
 	Image184.cameraPosition = new THREE.Vector3(0.698756,0.792504,-1.89275);
+	Image184.cameraVector = new THREE.Vector3(-0.7421332929105937,0.09724638588695561,0.6631600983062869);
 	Image184.mastAz = "172.503";
 	Image184.mastEl = "-41.5183";
 	Image184.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4442,6 +4627,7 @@ function getImageDataArray()
 	Image185.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/fcam/FLA_398831344EDR_F0030044FHAZ00103M_.JPG";
 	Image185.attitude = new THREE.Quaternion(0.562686,0.0159466,-0.0337911,0.825826);
 	Image185.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image185.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image185.mastAz = "1.03995";
 	Image185.mastEl = "-43.4728";
 	Image185.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4466,6 +4652,7 @@ function getImageDataArray()
 	Image186.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/fcam/FRA_398831344EDR_F0030044FHAZ00103M_.JPG";
 	Image186.attitude = new THREE.Quaternion(0.562686,0.0159466,-0.0337911,0.825826);
 	Image186.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image186.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image186.mastAz = "359.974";
 	Image186.mastEl = "-43.7598";
 	Image186.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4490,6 +4677,7 @@ function getImageDataArray()
 	Image187.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/rcam/RLA_398831370EDR_F0030044RHAZ00103M_.JPG";
 	Image187.attitude = new THREE.Quaternion(0.562686,0.0159466,-0.0337911,0.825826);
 	Image187.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image187.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image187.mastAz = "182.571";
 	Image187.mastEl = "-44.9097";
 	Image187.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4514,6 +4702,7 @@ function getImageDataArray()
 	Image188.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/rcam/RRA_398831370EDR_F0030044RHAZ00103M_.JPG";
 	Image188.attitude = new THREE.Quaternion(0.562686,0.0159466,-0.0337911,0.825826);
 	Image188.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image188.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image188.mastAz = "182.044";
 	Image188.mastEl = "-43.5257";
 	Image188.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4538,6 +4727,7 @@ function getImageDataArray()
 	Image189.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398831390EDR_F0030044NCAM00131M_.JPG";
 	Image189.attitude = new THREE.Quaternion(0.562686,0.0159466,-0.0337911,0.825826);
 	Image189.cameraPosition = new THREE.Vector3(0.698756,0.792504,-1.89275);
+	Image189.cameraVector = new THREE.Vector3(-0.7421332929105937,0.09724638588695561,0.6631600983062869);
 	Image189.mastAz = "172.503";
 	Image189.mastEl = "-41.5183";
 	Image189.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4562,6 +4752,7 @@ function getImageDataArray()
 	Image190.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00015/opgs/edr/ncam/NLA_398831442EDR_F0030044NCAM00130M_.JPG";
 	Image190.attitude = new THREE.Quaternion(0.562686,0.0159466,-0.0337911,0.825826);
 	Image190.cameraPosition = new THREE.Vector3(1.04307,0.606842,-1.82527);
+	Image190.cameraVector = new THREE.Vector3(0.07828912795667414,0.3148666978118726,0.9459015673170387);
 	Image190.mastAz = "75.9611";
 	Image190.mastEl = "-71.0455";
 	Image190.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -4586,6 +4777,7 @@ function getImageDataArray()
 	Image191.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/fcam/FLA_398917092EDR_F0030054FHAZ00130M_.JPG";
 	Image191.attitude = new THREE.Quaternion(0.566808,0.0100063,-0.0163178,0.823628);
 	Image191.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image191.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image191.mastAz = "1.03995";
 	Image191.mastEl = "-43.4728";
 	Image191.xyz = new THREE.Vector3(-0.320528,0.841328,0.0620359);
@@ -4610,6 +4802,7 @@ function getImageDataArray()
 	Image192.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/fcam/FRA_398917092EDR_F0030054FHAZ00130M_.JPG";
 	Image192.attitude = new THREE.Quaternion(0.566808,0.0100063,-0.0163178,0.823628);
 	Image192.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image192.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image192.mastAz = "359.974";
 	Image192.mastEl = "-43.7598";
 	Image192.xyz = new THREE.Vector3(-0.320528,0.841328,0.0620359);
@@ -4634,6 +4827,7 @@ function getImageDataArray()
 	Image193.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/rcam/RLA_398917119EDR_F0030054RHAZ00130M_.JPG";
 	Image193.attitude = new THREE.Quaternion(0.566808,0.0100063,-0.0163178,0.823628);
 	Image193.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image193.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image193.mastAz = "182.571";
 	Image193.mastEl = "-44.9097";
 	Image193.xyz = new THREE.Vector3(-0.320528,0.841328,0.0620359);
@@ -4658,6 +4852,7 @@ function getImageDataArray()
 	Image194.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/rcam/RRA_398917119EDR_F0030054RHAZ00130M_.JPG";
 	Image194.attitude = new THREE.Quaternion(0.566808,0.0100063,-0.0163178,0.823628);
 	Image194.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image194.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image194.mastAz = "182.044";
 	Image194.mastEl = "-43.5257";
 	Image194.xyz = new THREE.Vector3(-0.320528,0.841328,0.0620359);
@@ -4682,6 +4877,7 @@ function getImageDataArray()
 	Image195.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398917167EDR_F0030054NCAM00132M_.JPG";
 	Image195.attitude = new THREE.Quaternion(0.566808,0.0100063,-0.0163178,0.823628);
 	Image195.cameraPosition = new THREE.Vector3(1.04323,0.606058,-1.82529);
+	Image195.cameraVector = new THREE.Vector3(0.07938633568379277,0.3147509356570981,0.9458486444509403);
 	Image195.mastAz = "75.7683";
 	Image195.mastEl = "-71.0362";
 	Image195.xyz = new THREE.Vector3(-0.320528,0.841328,0.0620359);
@@ -4706,6 +4902,7 @@ function getImageDataArray()
 	Image196.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398917211EDR_F0030054NCAM00133M_.JPG";
 	Image196.attitude = new THREE.Quaternion(0.566808,0.0100063,-0.0163178,0.823628);
 	Image196.cameraPosition = new THREE.Vector3(0.698762,0.792507,-1.89274);
+	Image196.cameraVector = new THREE.Vector3(-0.7421157215121238,0.09726154725616405,0.6631775383031884);
 	Image196.mastAz = "172.502";
 	Image196.mastEl = "-41.5197";
 	Image196.xyz = new THREE.Vector3(-0.320528,0.841328,0.0620359);
@@ -4730,6 +4927,7 @@ function getImageDataArray()
 	Image197.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/fcam/FLA_398917334EDR_F0030060FHAZ00130M_.JPG";
 	Image197.attitude = new THREE.Quaternion(0.560056,-0.00026221,-0.0359711, 0.827673);
 	Image197.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image197.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image197.mastAz = "1.03995";
 	Image197.mastEl = "-43.4728";
 	Image197.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4754,6 +4952,7 @@ function getImageDataArray()
 	Image198.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/fcam/FRA_398917334EDR_F0030060FHAZ00130M_.JPG";
 	Image198.attitude = new THREE.Quaternion(0.560056,-0.00026221,-0.0359711, 0.827673);
 	Image198.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image198.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image198.mastAz = "359.974";
 	Image198.mastEl = "-43.7598";
 	Image198.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4778,6 +4977,7 @@ function getImageDataArray()
 	Image199.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/rcam/RLA_398917361EDR_F0030060RHAZ00130M_.JPG";
 	Image199.attitude = new THREE.Quaternion(0.560056,-0.00026221,-0.0359711, 0.827673);
 	Image199.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image199.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image199.mastAz = "182.571";
 	Image199.mastEl = "-44.9097";
 	Image199.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4802,6 +5002,7 @@ function getImageDataArray()
 	Image200.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/rcam/RRA_398917361EDR_F0030060RHAZ00130M_.JPG";
 	Image200.attitude = new THREE.Quaternion(0.560056,-0.00026221,-0.0359711, 0.827673);
 	Image200.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image200.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image200.mastAz = "182.044";
 	Image200.mastEl = "-43.5257";
 	Image200.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4826,6 +5027,7 @@ function getImageDataArray()
 	Image201.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398917381EDR_F0030060NCAM00133M_.JPG";
 	Image201.attitude = new THREE.Quaternion(0.560056,-0.00026221,-0.0359711, 0.827673);
 	Image201.cameraPosition = new THREE.Vector3(0.698762,0.792507,-1.89274);
+	Image201.cameraVector = new THREE.Vector3(-0.7421157215121238,0.09726154725616405,0.6631775383031884);
 	Image201.mastAz = "172.502";
 	Image201.mastEl = "-41.5197";
 	Image201.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4850,6 +5052,7 @@ function getImageDataArray()
 	Image202.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398917433EDR_F0030060NCAM00132M_.JPG";
 	Image202.attitude = new THREE.Quaternion(0.560056,-0.00026221,-0.0359711, 0.827673);
 	Image202.cameraPosition = new THREE.Vector3(1.04307,0.606867,-1.82529);
+	Image202.cameraVector = new THREE.Vector3(0.07832040587221363,0.31502099665591854,0.945847601725523);
 	Image202.mastAz = "75.9624";
 	Image202.mastEl = "-71.036";
 	Image202.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4874,6 +5077,7 @@ function getImageDataArray()
 	Image203.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/fcam/FLA_398917511EDR_F0030066FHAZ00130M_.JPG";
 	Image203.attitude = new THREE.Quaternion(0.0959144,-0.0243326,-0.0341702, 0.994505);
 	Image203.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image203.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image203.mastAz = "1.03995";
 	Image203.mastEl = "-43.4728";
 	Image203.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4898,6 +5102,7 @@ function getImageDataArray()
 	Image204.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/fcam/FRA_398917511EDR_F0030066FHAZ00130M_.JPG";
 	Image204.attitude = new THREE.Quaternion(0.0959144,-0.0243326,-0.0341702, 0.994505);
 	Image204.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image204.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image204.mastAz = "359.974";
 	Image204.mastEl = "-43.7598";
 	Image204.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4922,6 +5127,7 @@ function getImageDataArray()
 	Image205.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/rcam/RRA_398917538EDR_F0030066RHAZ00130M_.JPG";
 	Image205.attitude = new THREE.Quaternion(0.0959144,-0.0243326,-0.0341702, 0.994505);
 	Image205.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image205.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image205.mastAz = "182.044";
 	Image205.mastEl = "-43.5257";
 	Image205.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4946,6 +5152,7 @@ function getImageDataArray()
 	Image206.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/rcam/RLA_398917538EDR_F0030066RHAZ00130M_.JPG";
 	Image206.attitude = new THREE.Quaternion(0.0959144,-0.0243326,-0.0341702, 0.994505);
 	Image206.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image206.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image206.mastAz = "182.571";
 	Image206.mastEl = "-44.9097";
 	Image206.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4970,6 +5177,7 @@ function getImageDataArray()
 	Image207.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398917564EDR_F0030066NCAM00132M_.JPG";
 	Image207.attitude = new THREE.Quaternion(0.0959144,-0.0243326,-0.0341702, 0.994505);
 	Image207.cameraPosition = new THREE.Vector3(1.04307,0.606867,-1.82529);
+	Image207.cameraVector = new THREE.Vector3(0.07832040587221363,0.31502099665591854,0.945847601725523);
 	Image207.mastAz = "75.9624";
 	Image207.mastEl = "-71.036";
 	Image207.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -4994,6 +5202,7 @@ function getImageDataArray()
 	Image208.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398917610EDR_F0030066NCAM00133M_.JPG";
 	Image208.attitude = new THREE.Quaternion(0.0959144,-0.0243326,-0.0341702, 0.994505);
 	Image208.cameraPosition = new THREE.Vector3(0.698756,0.792504,-1.89274);
+	Image208.cameraVector = new THREE.Vector3(-0.742117964536681,0.09724456560247549,0.6631775185971848);
 	Image208.mastAz = "172.503";
 	Image208.mastEl = "-41.5197";
 	Image208.xyz = new THREE.Vector3(-1.65662,4.18066,0.209189);
@@ -5018,6 +5227,7 @@ function getImageDataArray()
 	Image209.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919347EDR_F0030078NCAM00119M_.JPG";
 	Image209.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image209.cameraPosition = new THREE.Vector3(1.04323,0.606062,-1.8253);
+	Image209.cameraVector = new THREE.Vector3(0.07940003814784953,0.3147937645712677,0.9458332409728308);
 	Image209.mastAz = "75.7679";
 	Image209.mastEl = "-71.0334";
 	Image209.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5042,6 +5252,7 @@ function getImageDataArray()
 	Image210.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919391EDR_F0030078NCAM00113M_.JPG";
 	Image210.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image210.cameraPosition = new THREE.Vector3(0.698756,0.792504,-1.89274);
+	Image210.cameraVector = new THREE.Vector3(-0.7421025224748858,0.09724077068196524,0.6631953548190674);
 	Image210.mastAz = "172.503";
 	Image210.mastEl = "-41.521";
 	Image210.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5066,6 +5277,7 @@ function getImageDataArray()
 	Image211.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/fcam/FLA_398919417EDR_F0030078FHAZ00302M_.JPG";
 	Image211.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image211.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image211.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image211.mastAz = "1.03995";
 	Image211.mastEl = "-43.4728";
 	Image211.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5090,6 +5302,7 @@ function getImageDataArray()
 	Image212.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/fcam/FRA_398919417EDR_F0030078FHAZ00302M_.JPG";
 	Image212.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image212.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image212.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image212.mastAz = "359.974";
 	Image212.mastEl = "-43.7598";
 	Image212.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5114,6 +5327,7 @@ function getImageDataArray()
 	Image213.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/rcam/RRA_398919443EDR_F0030078RHAZ00302M_.JPG";
 	Image213.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image213.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image213.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image213.mastAz = "182.044";
 	Image213.mastEl = "-43.5257";
 	Image213.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5138,6 +5352,7 @@ function getImageDataArray()
 	Image214.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/rcam/RLA_398919443EDR_F0030078RHAZ00302M_.JPG";
 	Image214.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image214.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image214.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image214.mastAz = "182.571";
 	Image214.mastEl = "-44.9097";
 	Image214.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5162,6 +5377,7 @@ function getImageDataArray()
 	Image215.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919509EDR_F0030078NCAM00300M_.JPG";
 	Image215.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image215.cameraPosition = new THREE.Vector3(0.9754,0.371337,-1.93929);
+	Image215.cameraVector = new THREE.Vector3(0.9079351591243501,0.17294855616014,0.38176241793550564);
 	Image215.mastAz = "10.7592";
 	Image215.mastEl = "-22.4199";
 	Image215.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5186,6 +5402,7 @@ function getImageDataArray()
 	Image216.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919509EDR_F0030078NCAM00300M_.JPG";
 	Image216.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image216.cameraPosition = new THREE.Vector3(0.903119,0.788716,-1.93935);
+	Image216.cameraVector = new THREE.Vector3(0.9080255387870655,0.1624807845820902,0.3861212446266686);
 	Image216.mastAz = "10.1196";
 	Image216.mastEl = "-22.6898";
 	Image216.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5210,6 +5427,7 @@ function getImageDataArray()
 	Image217.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919544EDR_F0030078NCAM00300M_.JPG";
 	Image217.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image217.cameraPosition = new THREE.Vector3(1.04733,0.485063,-1.94061);
+	Image217.cameraVector = new THREE.Vector3(0.6943624769875182,0.615961960570339,0.37209086750698706);
 	Image217.mastAz = "41.5503";
 	Image217.mastEl = "-21.8216";
 	Image217.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5234,6 +5452,7 @@ function getImageDataArray()
 	Image218.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919544EDR_F0030078NCAM00300M_.JPG";
 	Image218.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image218.cameraPosition = new THREE.Vector3(0.771612,0.80664,-1.94087);
+	Image218.cameraVector = new THREE.Vector3(0.6998324124754721,0.6070443524039679,0.3764727728046317);
 	Image218.mastAz = "40.9135";
 	Image218.mastEl = "-22.0917";
 	Image218.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5258,6 +5477,7 @@ function getImageDataArray()
 	Image219.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919572EDR_F0030078NCAM00300M_.JPG";
 	Image219.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image219.cameraPosition = new THREE.Vector3(0.649427,0.753851,-1.94556);
+	Image219.cameraVector = new THREE.Vector3(0.29486255062717165,0.891260627889311,0.34454400214194697);
 	Image219.mastAz = "71.6687";
 	Image219.mastEl = "-20.1304";
 	Image219.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5282,6 +5502,7 @@ function getImageDataArray()
 	Image220.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919572EDR_F0030078NCAM00300M_.JPG";
 	Image220.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image220.cameraPosition = new THREE.Vector3(1.05081,0.618491,-1.94519);
+	Image220.cameraVector = new THREE.Vector3(0.285557972361578,0.8959814500468263,0.3401086379272523);
 	Image220.mastAz = "72.2973";
 	Image220.mastEl = "-19.8604";
 	Image220.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5306,6 +5527,7 @@ function getImageDataArray()
 	Image221.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919607EDR_F0030078NCAM00300M_.JPG";
 	Image221.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image221.cameraPosition = new THREE.Vector3(0.988124,0.732329,-1.95161);
+	Image221.cameraVector = new THREE.Vector3(-0.20667067576460482,0.9329917406150584,0.29464155125013364);
 	Image221.mastAz = "102.465";
 	Image221.mastEl = "-17.1129";
 	Image221.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5330,6 +5552,7 @@ function getImageDataArray()
 	Image222.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919607EDR_F0030078NCAM00300M_.JPG";
 	Image222.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image222.cameraPosition = new THREE.Vector3(0.573109,0.64752,-1.95197);
+	Image222.cameraVector = new THREE.Vector3(-0.19629526812055964,0.9337988244802455,0.2991453210611676);
 	Image222.mastAz = "101.847";
 	Image222.mastEl = "-17.3826";
 	Image222.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5354,6 +5577,7 @@ function getImageDataArray()
 	Image223.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919642EDR_F0030078NCAM00300M_.JPG";
 	Image223.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image223.cameraPosition = new THREE.Vector3(0.561479,0.519208,-1.95836);
+	Image223.cameraVector = new THREE.Vector3(-0.6428368270124954,0.723321786773688,0.25212379224306924);
 	Image223.mastAz = "131.604";
 	Image223.mastEl = "-14.5797";
 	Image223.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5378,6 +5602,7 @@ function getImageDataArray()
 	Image224.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919642EDR_F0030078NCAM00300M_.JPG";
 	Image224.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image224.cameraPosition = new THREE.Vector3(0.879623,0.798877,-1.95811);
+	Image224.cameraVector = new THREE.Vector3(-0.6512970904271357,0.7173025112585075,0.24756657153861833);
 	Image224.mastAz = "132.214";
 	Image224.mastEl = "-14.3104";
 	Image224.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5402,6 +5627,7 @@ function getImageDataArray()
 	Image225.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919692EDR_F0030078NCAM00301M_.JPG";
 	Image225.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image225.cameraPosition = new THREE.Vector3(0.972287,0.369788,-1.86642);
+	Image225.cameraVector = new THREE.Vector3(0.5981441988032169,0.11500436662865425,0.7930936345062918);
 	Image225.mastAz = "10.8439";
 	Image225.mastEl = "-52.4527";
 	Image225.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5426,6 +5652,7 @@ function getImageDataArray()
 	Image226.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919692EDR_F0030078NCAM00301M_.JPG";
 	Image226.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image226.cameraPosition = new THREE.Vector3(0.903203,0.787708,-1.86668);
+	Image226.cameraVector = new THREE.Vector3(0.5962277010430627,0.1042189549966729,0.796021945632346);
 	Image226.mastAz = "9.87588";
 	Image226.mastEl = "-52.7283";
 	Image226.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5450,6 +5677,7 @@ function getImageDataArray()
 	Image227.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919728EDR_F0030078NCAM00301M_.JPG";
 	Image227.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image227.cameraPosition = new THREE.Vector3(0.763093,0.804928,-1.86838);
+	Image227.cameraVector = new THREE.Vector3(0.4496214004475039,0.41906121503849486,0.7888144866253952);
 	Image227.mastAz = "42.9468";
 	Image227.mastEl = "-52.0515";
 	Image227.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5474,6 +5702,7 @@ function getImageDataArray()
 	Image228.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919728EDR_F0030078NCAM00301M_.JPG";
 	Image228.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image228.cameraPosition = new THREE.Vector3(1.04888,0.492266,-1.86791);
+	Image228.cameraVector = new THREE.Vector3(0.4453216136706877,0.4291232624095183,0.7858383332828366);
 	Image228.mastAz = "43.9";
 	Image228.mastEl = "-51.7757";
 	Image228.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5498,6 +5727,7 @@ function getImageDataArray()
 	Image229.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919757EDR_F0030078NCAM00301M_.JPG";
 	Image229.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image229.cameraPosition = new THREE.Vector3(0.638301,0.745742,-1.87334);
+	Image229.cameraVector = new THREE.Vector3(0.16219359305954426,0.6219324212287769,0.7660896173392159);
 	Image229.mastAz = "75.3465";
 	Image229.mastEl = "-49.9804";
 	Image229.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5522,6 +5752,7 @@ function getImageDataArray()
 	Image230.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919757EDR_F0030078NCAM00301M_.JPG";
 	Image230.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image230.cameraPosition = new THREE.Vector3(1.04714,0.634932,-1.87276);
+	Image230.cameraVector = new THREE.Vector3(0.15314580875747094,0.6280198108436357,0.7629793433953138);
 	Image230.mastAz = "76.2585";
 	Image230.mastEl = "-49.7049";
 	Image230.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5546,6 +5777,7 @@ function getImageDataArray()
 	Image231.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919784EDR_F0030078NCAM00301M_.JPG";
 	Image231.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image231.cameraPosition = new THREE.Vector3(0.56605,0.636083,-1.88014);
+	Image231.cameraVector = new THREE.Vector3(-0.18826379151924602,0.6533486733641458,0.733275020586484);
 	Image231.mastAz = "106.04";
 	Image231.mastEl = "-47.1382";
 	Image231.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5570,6 +5802,7 @@ function getImageDataArray()
 	Image232.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919784EDR_F0030078NCAM00301M_.JPG";
 	Image232.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image232.cameraPosition = new THREE.Vector3(0.974112,0.749729,-1.87958);
+	Image232.cameraVector = new THREE.Vector3(-0.19910806917770507,0.6538044369396362,0.729997078779341);
 	Image232.mastAz = "106.902";
 	Image232.mastEl = "-46.8635";
 	Image232.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5594,6 +5827,7 @@ function getImageDataArray()
 	Image233.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919819EDR_F0030078NCAM00301M_.JPG";
 	Image233.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image233.cameraPosition = new THREE.Vector3(0.859772,0.808901,-1.88627);
+	Image233.cameraVector = new THREE.Vector3(-0.5149781421893456,0.49966331316647195,0.6965156757336582);
 	Image233.mastAz = "135.832";
 	Image233.mastEl = "-44.1252";
 	Image233.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5618,6 +5852,7 @@ function getImageDataArray()
 	Image234.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919819EDR_F0030078NCAM00301M_.JPG";
 	Image234.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image234.cameraPosition = new THREE.Vector3(0.558034,0.511606,-1.88671);
+	Image234.cameraVector = new THREE.Vector3(-0.5053887048749116,0.5046398924773614,0.6999434519340092);
 	Image234.mastAz = "135.009";
 	Image234.mastEl = "-44.3991";
 	Image234.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5642,6 +5877,7 @@ function getImageDataArray()
 	Image235.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919855EDR_F0030078NCAM00303M_.JPG";
 	Image235.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image235.cameraPosition = new THREE.Vector3(0.75496,0.804375,-1.96294);
+	Image235.cameraVector = new THREE.Vector3(-0.9265866077833155,0.31067660250549317,0.21193703530117647);
 	Image235.mastAz = "161.44";
 	Image235.mastEl = "-12.2128";
 	Image235.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5666,6 +5902,7 @@ function getImageDataArray()
 	Image236.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919855EDR_F0030078NCAM00303M_.JPG";
 	Image236.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image236.cameraPosition = new THREE.Vector3(0.613964,0.404938,-1.963);
+	Image236.cameraVector = new THREE.Vector3(-0.9223019610317935,0.32011770415365914,0.21652655302363866);
 	Image236.mastAz = "160.835";
 	Image236.mastEl = "-12.4815";
 	Image236.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5690,6 +5927,7 @@ function getImageDataArray()
 	Image237.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919948EDR_F0030078NCAM00303M_.JPG";
 	Image237.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image237.cameraPosition = new THREE.Vector3(0.641385,0.748105,-1.96509);
+	Image237.cameraVector = new THREE.Vector3(-0.9623739330276544,-0.18781740049227313,0.19636964404206883);
 	Image237.mastAz = "191.019";
 	Image237.mastEl = "-11.3017";
 	Image237.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5714,6 +5952,7 @@ function getImageDataArray()
 	Image238.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919948EDR_F0030078NCAM00303M_.JPG";
 	Image238.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image238.cameraPosition = new THREE.Vector3(0.716002,0.331136,-1.96493);
+	Image238.cameraVector = new THREE.Vector3(-0.9633815759458019,-0.17750357649309925,0.20096870268860717);
 	Image238.mastAz = "190.416";
 	Image238.mastEl = "-11.57";
 	Image238.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5738,6 +5977,7 @@ function getImageDataArray()
 	Image239.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398919983EDR_F0030078NCAM00303M_.JPG";
 	Image239.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image239.cameraPosition = new THREE.Vector3(0.569965,0.64508,-1.96392);
+	Image239.cameraVector = new THREE.Vector3(-0.7494263835622248,-0.6291967068403591,0.20608638897824472);
 	Image239.mastAz = "219.992";
 	Image239.mastEl = "-11.87";
 	Image239.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5762,6 +6002,7 @@ function getImageDataArray()
 	Image240.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398919983EDR_F0030078NCAM00303M_.JPG";
 	Image240.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image240.cameraPosition = new THREE.Vector3(0.837242,0.316457,-1.96357);
+	Image240.cameraVector = new THREE.Vector3(-0.7552708819629397,-0.6206319511597107,0.21067006445770484);
 	Image240.mastAz = "219.387";
 	Image240.mastEl = "-12.1381";
 	Image240.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5786,6 +6027,7 @@ function getImageDataArray()
 	Image241.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920017EDR_F0030078NCAM00303M_.JPG";
 	Image241.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image241.cameraPosition = new THREE.Vector3(0.55751,0.51697,-1.95976);
+	Image241.cameraVector = new THREE.Vector3(-0.3405365526655625,-0.9096241872574937,0.23794683073072956);
 	Image241.mastAz = "249.451";
 	Image241.mastEl = "-13.7423";
 	Image241.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5810,6 +6052,7 @@ function getImageDataArray()
 	Image242.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920017EDR_F0030078NCAM00303M_.JPG";
 	Image242.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image242.cameraPosition = new THREE.Vector3(0.951845,0.362278,-1.9593);
+	Image242.cameraVector = new THREE.Vector3(-0.34978567013813017,-0.9049003327975809,0.24249819106303963);
 	Image242.mastAz = "248.842";
 	Image242.mastEl = "-14.0104";
 	Image242.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5834,6 +6077,7 @@ function getImageDataArray()
 	Image243.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920052EDR_F0030078NCAM00303M_.JPG";
 	Image243.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image243.cameraPosition = new THREE.Vector3(1.03031,0.45839,-1.9531);
+	Image243.cameraVector = new THREE.Vector3(0.14081806094957539,-0.9472100949648043,0.2880335218462738);
 	Image243.mastAz = "278.431";
 	Image243.mastEl = "-16.7166";
 	Image243.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5858,6 +6102,7 @@ function getImageDataArray()
 	Image244.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920052EDR_F0030078NCAM00303M_.JPG";
 	Image244.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image244.cameraPosition = new THREE.Vector3(0.611015,0.398192,-1.95358);
+	Image244.cameraVector = new THREE.Vector3(0.1512237506144727,-0.9469629829661402,0.28353568759851205);
 	Image244.mastAz = "279.049";
 	Image244.mastEl = "-16.4482";
 	Image244.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5882,6 +6127,7 @@ function getImageDataArray()
 	Image245.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920087EDR_F0030078NCAM00303M_.JPG";
 	Image245.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image245.cameraPosition = new THREE.Vector3(1.05186,0.583574,-1.94654);
+	Image245.cameraVector = new THREE.Vector3(0.5874246920463502,-0.7366056409392836,0.3351781032685129);
 	Image245.mastAz = "308.547";
 	Image245.mastEl = "-19.5598";
 	Image245.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5906,6 +6152,7 @@ function getImageDataArray()
 	Image246.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920087EDR_F0030078NCAM00303M_.JPG";
 	Image246.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image246.cameraPosition = new THREE.Vector3(0.71934,0.321163,-1.9469);
+	Image246.cameraVector = new THREE.Vector3(0.5964383668530712,-0.7313471478784643,0.3307455575448847);
 	Image246.mastAz = "309.173";
 	Image246.mastEl = "-19.2909";
 	Image246.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5930,6 +6177,7 @@ function getImageDataArray()
 	Image247.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920122EDR_F0030078NCAM00303M_.JPG";
 	Image247.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image247.cameraPosition = new THREE.Vector3(0.853358,0.31035,-1.9416);
+	Image247.cameraVector = new THREE.Vector3(0.8725467238314909,-0.3226199905449366,0.3668495010651055);
 	Image247.mastAz = "339.683";
 	Image247.mastEl = "-21.4984";
 	Image247.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5954,6 +6202,7 @@ function getImageDataArray()
 	Image248.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920122EDR_F0030078NCAM00303M_.JPG";
 	Image248.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image248.cameraPosition = new THREE.Vector3(1.00677,0.705186,-1.94142);
+	Image248.cameraVector = new THREE.Vector3(0.8672890874860548,-0.3316616564823215,0.37122794122615427);
 	Image248.mastAz = "339.047";
 	Image248.mastEl = "-21.7678";
 	Image248.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -5978,6 +6227,7 @@ function getImageDataArray()
 	Image249.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920191EDR_F0030078NCAM00304M_.JPG";
 	Image249.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image249.cameraPosition = new THREE.Vector3(0.735471,0.805797,-1.89121);
+	Image249.cameraVector = new THREE.Vector3(-0.7119754332670586,0.20642289817101506,0.6711784930514857);
 	Image249.mastAz = "163.799";
 	Image249.mastEl = "-42.1351";
 	Image249.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6002,6 +6252,7 @@ function getImageDataArray()
 	Image250.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920191EDR_F0030078NCAM00304M_.JPG";
 	Image250.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image250.cameraPosition = new THREE.Vector3(0.608858,0.401571,-1.89146);
+	Image250.cameraVector = new THREE.Vector3(-0.7059633225053079,0.21536155227365372,0.6747111893836867);
 	Image250.mastAz = "163.003";
 	Image250.mastEl = "-42.4082";
 	Image250.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6026,6 +6277,7 @@ function getImageDataArray()
 	Image251.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920279EDR_F0030078NCAM00304M_.JPG";
 	Image251.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image251.cameraPosition = new THREE.Vector3(0.629072,0.745835,-1.89335);
+	Image251.cameraVector = new THREE.Vector3(-0.7362728438908195,-0.14797148738566349,0.6603080631567353);
 	Image251.mastAz = "191.332";
 	Image251.mastEl = "-41.3004";
 	Image251.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6050,6 +6302,7 @@ function getImageDataArray()
 	Image252.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920279EDR_F0030078NCAM00304M_.JPG";
 	Image252.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image252.cameraPosition = new THREE.Vector3(0.703947,0.328914,-1.89339);
+	Image252.cameraVector = new THREE.Vector3(-0.7351324182327597,-0.1372716084179792,0.6638801346520287);
 	Image252.mastAz = "190.546";
 	Image252.mastEl = "-41.573";
 	Image252.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6074,6 +6327,7 @@ function getImageDataArray()
 	Image253.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920312EDR_F0030078NCAM00304M_.JPG";
 	Image253.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image253.cameraPosition = new THREE.Vector3(0.56361,0.645821,-1.89215);
+	Image253.cameraVector = new THREE.Vector3(-0.5838849402542325,-0.462511951704155,0.6672039201586909);
 	Image253.mastAz = "218.352";
 	Image253.mastEl = "-41.8287";
 	Image253.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6098,6 +6352,7 @@ function getImageDataArray()
 	Image254.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920312EDR_F0030078NCAM00304M_.JPG";
 	Image254.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image254.cameraPosition = new THREE.Vector3(0.81979,0.308475,-1.89202);
+	Image254.cameraVector = new THREE.Vector3(-0.5877057493323598,-0.4524379256498089,0.6707472516793398);
 	Image254.mastAz = "217.559";
 	Image254.mastEl = "-42.1011";
 	Image254.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6122,6 +6377,7 @@ function getImageDataArray()
 	Image255.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920346EDR_F0030078NCAM00304M_.JPG";
 	Image255.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image255.cameraPosition = new THREE.Vector3(0.551396,0.523465,-1.88787);
+	Image255.cameraVector = new THREE.Vector3(-0.2907448034262198,-0.6627825785076432,0.6900628325793301);
 	Image255.mastAz = "246.281";
 	Image255.mastEl = "-43.6123";
 	Image255.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6146,6 +6402,7 @@ function getImageDataArray()
 	Image256.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920346EDR_F0030078NCAM00304M_.JPG";
 	Image256.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image256.cameraPosition = new THREE.Vector3(0.93569,0.345286,-1.88762);
+	Image256.cameraVector = new THREE.Vector3(-0.29879009676899815,-0.6555720776725064,0.6935053922277216);
 	Image256.mastAz = "245.465";
 	Image256.mastEl = "-43.8848";
 	Image256.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6170,6 +6427,7 @@ function getImageDataArray()
 	Image257.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920382EDR_F0030078NCAM00304M_.JPG";
 	Image257.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image257.cameraPosition = new THREE.Vector3(0.599539,0.407534,-1.88144);
+	Image257.cameraVector = new THREE.Vector3(0.060345231564465196,-0.6883486026341935,0.7228655852086086);
 	Image257.mastAz = "274.976";
 	Image257.mastEl = "-46.2689";
 	Image257.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6194,6 +6452,7 @@ function getImageDataArray()
 	Image258.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920382EDR_F0030078NCAM00304M_.JPG";
 	Image258.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image258.cameraPosition = new THREE.Vector3(1.02221,0.435379,-1.88117);
+	Image258.cameraVector = new THREE.Vector3(0.04981759749016479,-0.6857215623232523,0.7261571083073318);
 	Image258.mastAz = "274.121";
 	Image258.mastEl = "-46.5418";
 	Image258.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6218,6 +6477,7 @@ function getImageDataArray()
 	Image259.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920416EDR_F0030078NCAM00304M_.JPG";
 	Image259.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image259.cameraPosition = new THREE.Vector3(1.05427,0.562756,-1.8743);
+	Image259.cameraVector = new THREE.Vector3(0.3669135869441736,-0.5367698847428041,0.759771354125014);
 	Image259.mastAz = "304.318";
 	Image259.mastEl = "-49.4204";
 	Image259.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6242,6 +6502,7 @@ function getImageDataArray()
 	Image260.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920416EDR_F0030078NCAM00304M_.JPG";
 	Image260.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image260.cameraPosition = new THREE.Vector3(0.702828,0.326289,-1.87449);
+	Image260.cameraVector = new THREE.Vector3(0.3774255684844364,-0.5338880888448015,0.7566461847150525);
 	Image260.mastAz = "305.221";
 	Image260.mastEl = "-49.1467";
 	Image260.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6266,6 +6527,7 @@ function getImageDataArray()
 	Image261.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920451EDR_F0030078NCAM00304M_.JPG";
 	Image261.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image261.cameraPosition = new THREE.Vector3(1.01339,0.695062,-1.86898);
+	Image261.cameraVector = new THREE.Vector3(0.5675428839026712,-0.2482485705910769,0.7850272110767411);
 	Image261.mastAz = "336.337";
 	Image261.mastEl = "-51.6999";
 	Image261.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6290,6 +6552,7 @@ function getImageDataArray()
 	Image262.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920451EDR_F0030078NCAM00304M_.JPG";
 	Image262.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image262.cameraPosition = new THREE.Vector3(0.840433,0.308388,-1.86897);
+	Image262.cameraVector = new THREE.Vector3(0.5750432769370231,-0.24028710684336704,0.7820404950732248);
 	Image262.mastAz = "337.284";
 	Image262.mastEl = "-51.4252";
 	Image262.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6314,6 +6577,7 @@ function getImageDataArray()
 	Image263.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920488EDR_F0030078NCAM00302M_.JPG";
 	Image263.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image263.cameraPosition = new THREE.Vector3(0.68306,0.337255,-1.86632);
+	Image263.cameraVector = new THREE.Vector3(0.30971105936451404,-0.5222188597541931,0.7945857551103851);
 	Image263.mastAz = "300.631";
 	Image263.mastEl = "-52.5933";
 	Image263.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6338,6 +6602,7 @@ function getImageDataArray()
 	Image264.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920488EDR_F0030078NCAM00302M_.JPG";
 	Image264.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image264.cameraPosition = new THREE.Vector3(1.05266,0.544208,-1.86614);
+	Image264.cameraVector = new THREE.Vector3(0.298909298758872,-0.5240766119620184,0.7974941604236933);
 	Image264.mastAz = "299.659";
 	Image264.mastEl = "-52.8678";
 	Image264.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6362,6 +6627,7 @@ function getImageDataArray()
 	Image265.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920523EDR_F0030078NCAM00302M_.JPG";
 	Image265.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image265.cameraPosition = new THREE.Vector3(1.02767,0.66904,-1.86622);
+	Image265.cameraVector = new THREE.Vector3(0.5192964541816814,-0.30720509040264093,0.7974686358127436);
 	Image265.mastAz = "329.353";
 	Image265.mastEl = "-52.8656";
 	Image265.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6386,6 +6652,7 @@ function getImageDataArray()
 	Image266.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920523EDR_F0030078NCAM00302M_.JPG";
 	Image266.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image266.cameraPosition = new THREE.Vector3(0.808951,0.306282,-1.86625);
+	Image266.cameraVector = new THREE.Vector3(0.5277601613895807,-0.30024506390944466,0.7945578101359632);
 	Image266.mastAz = "330.325";
 	Image266.mastEl = "-52.5906";
 	Image266.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6410,6 +6677,7 @@ function getImageDataArray()
 	Image267.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NLA_398920558EDR_F0030078NCAM00302M_.JPG";
 	Image267.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image267.cameraPosition = new THREE.Vector3(0.935465,0.342767,-1.86614);
+	Image267.cameraVector = new THREE.Vector3(0.6071529615164684,0.005767743409403275,0.794564040501296);
 	Image267.mastAz = "0.504765";
 	Image267.mastEl = "-52.5913";
 	Image267.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6434,6 +6702,7 @@ function getImageDataArray()
 	Image268.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00016/opgs/edr/ncam/NRA_398920558EDR_F0030078NCAM00302M_.JPG";
 	Image268.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image268.cameraPosition = new THREE.Vector3(0.942445,0.766302,-1.86632);
+	Image268.cameraVector = new THREE.Vector3(0.6033294241028199,-0.0044993714488874,0.7974793800897455);
 	Image268.mastAz = "359.534";
 	Image268.mastEl = "-52.8667";
 	Image268.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6458,6 +6727,7 @@ function getImageDataArray()
 	Image269.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00017/opgs/edr/ncam/NLA_399014158EDR_F0030078NCAM00402M_.JPG";
 	Image269.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image269.cameraPosition = new THREE.Vector3(0.584015,0.624131,-2.01966);
+	Image269.cameraVector = new THREE.Vector3(-0.5674160702201143,-0.7657264938542312,-0.30282328157799926);
 	Image269.mastAz = "233.437";
 	Image269.mastEl = "17.6505";
 	Image269.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6482,6 +6752,7 @@ function getImageDataArray()
 	Image270.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00017/opgs/edr/ncam/NRA_399014158EDR_F0030078NCAM00402M_.JPG";
 	Image270.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image270.cameraPosition = new THREE.Vector3(0.920105,0.366307,-2.01905);
+	Image270.cameraVector = new THREE.Vector3(-0.576534872664996,-0.760630071370313,-0.2984115197648195);
 	Image270.mastAz = "232.815";
 	Image270.mastEl = "17.3859";
 	Image270.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6506,6 +6777,7 @@ function getImageDataArray()
 	Image271.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00017/opgs/edr/ncam/NRA_399014186EDR_F0030078NCAM00402M_.JPG";
 	Image271.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image271.cameraPosition = new THREE.Vector3(1.00052,0.445105,-2.01529);
+	Image271.cameraVector = new THREE.Vector3(-0.1208161350099448,-0.9589773181152375,-0.2564487567951252);
 	Image271.mastAz = "262.795";
 	Image271.mastEl = "14.8832";
 	Image271.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6530,6 +6802,7 @@ function getImageDataArray()
 	Image272.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00017/opgs/edr/ncam/NLA_399014186EDR_F0030078NCAM00402M_.JPG";
 	Image272.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image272.cameraPosition = new THREE.Vector3(0.580564,0.500449,-2.01596);
+	Image272.cameraVector = new THREE.Vector3(-0.11039558718616405,-0.9590276535023391,-0.260919095022996);
 	Image272.mastAz = "263.409";
 	Image272.mastEl = "15.148";
 	Image272.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6554,6 +6827,7 @@ function getImageDataArray()
 	Image273.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00017/opgs/edr/ncam/NRA_399014214EDR_F0030078NCAM00402M_.JPG";
 	Image273.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image273.cameraPosition = new THREE.Vector3(1.03347,0.553813,-2.01077);
+	Image273.cameraVector = new THREE.Vector3(0.3806038873056735,-0.9011050048007463,-0.20772686704145207);
 	Image273.mastAz = "292.874";
 	Image273.mastEl = "12.0129";
 	Image273.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6578,6 +6852,7 @@ function getImageDataArray()
 	Image274.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00017/opgs/edr/ncam/NLA_399014214EDR_F0030078NCAM00402M_.JPG";
 	Image274.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image274.cameraPosition = new THREE.Vector3(0.642351,0.391159,-2.0114);
+	Image274.cameraVector = new THREE.Vector3(0.38973146334432646,-0.8961338361834416,-0.21225817799707597);
 	Image274.mastAz = "293.48";
 	Image274.mastEl = "12.2781";
 	Image274.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6602,6 +6877,7 @@ function getImageDataArray()
 	Image275.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00017/opgs/edr/ncam/NLA_399014249EDR_F0030078NCAM00402M_.JPG";
 	Image275.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image275.cameraPosition = new THREE.Vector3(0.750396,0.33009,-2.00695);
+	Image275.cameraVector = new THREE.Vector3(0.7884975107438817,-0.5918331973231533,-0.16734736955493335);
 	Image275.mastAz = "323.085";
 	Image275.mastEl = "9.65691";
 	Image275.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6626,6 +6902,7 @@ function getImageDataArray()
 	Image276.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00017/opgs/edr/ncam/NRA_399014249EDR_F0030078NCAM00402M_.JPG";
 	Image276.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image276.cameraPosition = new THREE.Vector3(1.01002,0.664796,-2.00647);
+	Image276.cameraVector = new THREE.Vector3(0.7828528774042082,-0.6005399506797281,-0.16276713420571579);
 	Image276.mastAz = "322.484";
 	Image276.mastEl = "9.39122";
 	Image276.xyz = new THREE.Vector3(0.00286264,6.04228,0.39717);
@@ -6650,6 +6927,7 @@ function getImageDataArray()
 	Image277.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399178628EDR_F0030078CCAM01019M_.JPG";
 	Image277.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image277.cameraPosition = new THREE.Vector3;
+	Image277.cameraVector = new THREE.Vector3;
 	Image277.mastAz = "";
 	Image277.mastEl = "";
 	Image277.xyz = new THREE.Vector3;
@@ -6674,6 +6952,7 @@ function getImageDataArray()
 	Image278.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399179117EDR_F0030078CCAM01019M_.JPG";
 	Image278.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image278.cameraPosition = new THREE.Vector3;
+	Image278.cameraVector = new THREE.Vector3;
 	Image278.mastAz = "";
 	Image278.mastEl = "";
 	Image278.xyz = new THREE.Vector3;
@@ -6698,6 +6977,7 @@ function getImageDataArray()
 	Image279.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399179339EDR_F0030078CCAM02019M_.JPG";
 	Image279.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image279.cameraPosition = new THREE.Vector3;
+	Image279.cameraVector = new THREE.Vector3;
 	Image279.mastAz = "";
 	Image279.mastEl = "";
 	Image279.xyz = new THREE.Vector3;
@@ -6722,6 +7002,7 @@ function getImageDataArray()
 	Image280.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399179831EDR_F0030078CCAM02019M_.JPG";
 	Image280.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image280.cameraPosition = new THREE.Vector3;
+	Image280.cameraVector = new THREE.Vector3;
 	Image280.mastAz = "";
 	Image280.mastEl = "";
 	Image280.xyz = new THREE.Vector3;
@@ -6746,6 +7027,7 @@ function getImageDataArray()
 	Image281.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399180055EDR_F0030078CCAM15305M_.JPG";
 	Image281.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image281.cameraPosition = new THREE.Vector3;
+	Image281.cameraVector = new THREE.Vector3;
 	Image281.mastAz = "";
 	Image281.mastEl = "";
 	Image281.xyz = new THREE.Vector3;
@@ -6770,6 +7052,7 @@ function getImageDataArray()
 	Image282.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399180211EDR_F0030078CCAM15305M_.JPG";
 	Image282.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image282.cameraPosition = new THREE.Vector3;
+	Image282.cameraVector = new THREE.Vector3;
 	Image282.mastAz = "";
 	Image282.mastEl = "";
 	Image282.xyz = new THREE.Vector3;
@@ -6794,6 +7077,7 @@ function getImageDataArray()
 	Image283.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399180340EDR_F0030078CCAM15305M_.JPG";
 	Image283.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image283.cameraPosition = new THREE.Vector3;
+	Image283.cameraVector = new THREE.Vector3;
 	Image283.mastAz = "";
 	Image283.mastEl = "";
 	Image283.xyz = new THREE.Vector3;
@@ -6818,6 +7102,7 @@ function getImageDataArray()
 	Image284.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399180597EDR_F0030078CCAM03019M_.JPG";
 	Image284.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image284.cameraPosition = new THREE.Vector3;
+	Image284.cameraVector = new THREE.Vector3;
 	Image284.mastAz = "";
 	Image284.mastEl = "";
 	Image284.xyz = new THREE.Vector3;
@@ -6842,6 +7127,7 @@ function getImageDataArray()
 	Image285.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399181078EDR_F0030078CCAM03019M_.JPG";
 	Image285.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image285.cameraPosition = new THREE.Vector3;
+	Image285.cameraVector = new THREE.Vector3;
 	Image285.mastAz = "";
 	Image285.mastEl = "";
 	Image285.xyz = new THREE.Vector3;
@@ -6866,6 +7152,7 @@ function getImageDataArray()
 	Image286.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399181293EDR_F0030078CCAM04019M_.JPG";
 	Image286.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image286.cameraPosition = new THREE.Vector3;
+	Image286.cameraVector = new THREE.Vector3;
 	Image286.mastAz = "";
 	Image286.mastEl = "";
 	Image286.xyz = new THREE.Vector3;
@@ -6890,6 +7177,7 @@ function getImageDataArray()
 	Image287.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00019/opgs/edr/ccam/CR0_399181533EDR_F0030078CCAM04019M_.JPG";
 	Image287.attitude = new THREE.Quaternion(0.40656,0.0384374,0.0297852,-0.912329);
 	Image287.cameraPosition = new THREE.Vector3;
+	Image287.cameraVector = new THREE.Vector3;
 	Image287.mastAz = "";
 	Image287.mastEl = "";
 	Image287.xyz = new THREE.Vector3;
@@ -6914,6 +7202,7 @@ function getImageDataArray()
 	Image288.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NLA_399363597EDR_F0030100SAPP07612M_.JPG";
 	Image288.attitude = new THREE.Quaternion(0.132198,0.0369349,0.0304416,-0.990067);
 	Image288.cameraPosition = new THREE.Vector3(1.00547,0.637932,-2.04451);
+	Image288.cameraVector = new THREE.Vector3(-0.20178170145535856,0.6875982515483864,-0.6974903507758242);
 	Image288.mastAz = "106.322";
 	Image288.mastEl = "44.2496";
 	Image288.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -6938,6 +7227,7 @@ function getImageDataArray()
 	Image289.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NLA_399363664EDR_F0030100SAPP07612M_.JPG";
 	Image289.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image289.cameraPosition = new THREE.Vector3(0.581337,0.434369,-1.8904);
+	Image289.cameraVector = new THREE.Vector3(-0.03324813700062371,-0.7352802313191904,0.6769472230663077);
 	Image289.mastAz = "267.379";
 	Image289.mastEl = "-42.5827";
 	Image289.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -6962,6 +7252,7 @@ function getImageDataArray()
 	Image290.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/fcam/FLA_399365049EDR_F0030100FHAZ00302M_.JPG";
 	Image290.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image290.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image290.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image290.mastAz = "1.03995";
 	Image290.mastEl = "-43.4728";
 	Image290.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -6986,6 +7277,7 @@ function getImageDataArray()
 	Image291.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/fcam/FRA_399365049EDR_F0030100FHAZ00302M_.JPG";
 	Image291.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image291.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image291.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image291.mastAz = "359.974";
 	Image291.mastEl = "-43.7598";
 	Image291.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7010,6 +7302,7 @@ function getImageDataArray()
 	Image292.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/rcam/RLA_399365076EDR_F0030100RHAZ00302M_.JPG";
 	Image292.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image292.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image292.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image292.mastAz = "182.571";
 	Image292.mastEl = "-44.9097";
 	Image292.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7034,6 +7327,7 @@ function getImageDataArray()
 	Image293.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/rcam/RRA_399365076EDR_F0030100RHAZ00302M_.JPG";
 	Image293.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image293.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image293.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image293.mastAz = "182.044";
 	Image293.mastEl = "-43.5257";
 	Image293.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7058,6 +7352,7 @@ function getImageDataArray()
 	Image294.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NLA_399365141EDR_F0030100NCAM00305M_.JPG";
 	Image294.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image294.cameraPosition = new THREE.Vector3(0.554896,0.56698,-1.96378);
+	Image294.cameraVector = new THREE.Vector3(-0.5136681647438048,-0.8325243622062604,0.20748060839941315);
 	Image294.mastAz = "238.301";
 	Image294.mastEl = "-11.9516";
 	Image294.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7082,6 +7377,7 @@ function getImageDataArray()
 	Image295.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NRA_399365141EDR_F0030100NCAM00305M_.JPG";
 	Image295.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image295.cameraPosition = new THREE.Vector3(0.911887,0.338973,-1.96334);
+	Image295.cameraVector = new THREE.Vector3(-0.5219074786093176,-0.8262216525834427,0.2120621714826792);
 	Image295.mastAz = "237.696";
 	Image295.mastEl = "-12.2195";
 	Image295.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7106,6 +7402,7 @@ function getImageDataArray()
 	Image296.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NLA_399365176EDR_F0030100NCAM00305M_.JPG";
 	Image296.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image296.cameraPosition = new THREE.Vector3(0.58275,0.44262,-1.95967);
+	Image296.cameraVector = new THREE.Vector3(-0.04251947941450285,-0.9701545693586967,0.2387304032224659);
 	Image296.mastAz = "267.466";
 	Image296.mastEl = "-13.7885";
 	Image296.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7130,6 +7427,7 @@ function getImageDataArray()
 	Image297.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NRA_399365176EDR_F0030100NCAM00305M_.JPG";
 	Image297.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image297.cameraPosition = new THREE.Vector3(1.00559,0.417472,-1.95918);
+	Image297.cameraVector = new THREE.Vector3(-0.052775957387776566,-0.9685188504894516,0.24328159521097112);
 	Image297.mastAz = "266.857";
 	Image297.mastEl = "-14.0566";
 	Image297.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7154,6 +7452,7 @@ function getImageDataArray()
 	Image298.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NLA_399365204EDR_F0030100NCAM00305M_.JPG";
 	Image298.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image298.cameraPosition = new THREE.Vector3(0.670771,0.345997,-1.95355);
+	Image298.cameraVector = new THREE.Vector3(0.4383315487123088,-0.8529020131016937,0.28359056657538345);
 	Image298.mastAz = "297.175";
 	Image298.mastEl = "-16.4515";
 	Image298.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7178,6 +7477,7 @@ function getImageDataArray()
 	Image299.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NRA_399365204EDR_F0030100NCAM00305M_.JPG";
 	Image299.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image299.cameraPosition = new THREE.Vector3(1.05053,0.533646,-1.95311);
+	Image299.cameraVector = new THREE.Vector3(0.4285191103292064,-0.8563735366655982,0.2880898085346314);
 	Image299.mastAz = "296.558";
 	Image299.mastEl = "-16.72";
 	Image299.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7202,6 +7502,7 @@ function getImageDataArray()
 	Image300.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NRA_399365236EDR_F0030100NCAM00403M_.JPG";
 	Image300.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image300.cameraPosition = new THREE.Vector3(1.05583,0.568202,-1.91884);
+	Image300.cameraVector = new THREE.Vector3(0.5038853706152736,-0.691976144759039,0.5169802204768822);
 	Image300.mastAz = "306.034";
 	Image300.mastEl = "-31.1064";
 	Image300.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7226,6 +7527,7 @@ function getImageDataArray()
 	Image301.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NLA_399365236EDR_F0030100NCAM00403M_.JPG";
 	Image301.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image301.cameraPosition = new THREE.Vector3(0.712029,0.320752,-1.91914);
+	Image301.cameraVector = new THREE.Vector3(0.5136260502023067,-0.6878167853399363,0.512929186494796);
 	Image301.mastAz = "306.723";
 	Image301.mastEl = "-30.836";
 	Image301.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7250,6 +7552,7 @@ function getImageDataArray()
 	Image302.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NLA_399365272EDR_F0030100NCAM00403M_.JPG";
 	Image302.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image302.cameraPosition = new THREE.Vector3(0.846133,0.30662,-1.91257);
+	Image302.cameraVector = new THREE.Vector3(0.7689235607277309,-0.32255558537955675,0.5520094673991008);
 	Image302.mastAz = "337.214";
 	Image302.mastEl = "-33.482";
 	Image302.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7274,6 +7577,7 @@ function getImageDataArray()
 	Image303.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NRA_399365272EDR_F0030100NCAM00403M_.JPG";
 	Image303.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image303.cameraPosition = new THREE.Vector3(1.01713,0.694164,-1.91246);
+	Image303.cameraVector = new THREE.Vector3(0.7624653904361813,-0.3309976190977339,0.5559560275225304);
 	Image303.mastAz = "336.505";
 	Image303.mastEl = "-33.7531";
 	Image303.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7298,6 +7602,7 @@ function getImageDataArray()
 	Image304.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NLA_399365300EDR_F0030100NCAM00403M_.JPG";
 	Image304.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image304.cameraPosition = new THREE.Vector3(0.971297,0.364847,-1.90805);
+	Image304.cameraVector = new THREE.Vector3(0.8071337290717207,0.12084620652826131,0.5778679241509318);
 	Image304.mastAz = "8.48605";
 	Image304.mastEl = "-35.2778";
 	Image304.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7322,6 +7627,7 @@ function getImageDataArray()
 	Image305.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00021/opgs/edr/ncam/NRA_399365300EDR_F0030100NCAM00403M_.JPG";
 	Image305.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image305.cameraPosition = new THREE.Vector3(0.916599,0.784892,-1.90818);
+	Image305.cameraVector = new THREE.Vector3(0.8058645097637032,0.11026415591345547,0.5817423895711914);
 	Image305.mastAz = "7.76225";
 	Image305.mastEl = "-35.5495";
 	Image305.xyz = new THREE.Vector3(3.49574,2.60562,0.323847);
@@ -7346,6 +7652,7 @@ function getImageDataArray()
 	Image306.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ccam/CR0_399443964EDR_F0030100CCAM01022M_.JPG";
 	Image306.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image306.cameraPosition = new THREE.Vector3;
+	Image306.cameraVector = new THREE.Vector3;
 	Image306.mastAz = "";
 	Image306.mastEl = "";
 	Image306.xyz = new THREE.Vector3;
@@ -7370,6 +7677,7 @@ function getImageDataArray()
 	Image307.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ccam/CR0_399444659EDR_F0030100CCAM01022M_.JPG";
 	Image307.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image307.cameraPosition = new THREE.Vector3;
+	Image307.cameraVector = new THREE.Vector3;
 	Image307.mastAz = "";
 	Image307.mastEl = "";
 	Image307.xyz = new THREE.Vector3;
@@ -7394,6 +7702,7 @@ function getImageDataArray()
 	Image308.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ccam/CR0_399444802EDR_F0030100CCAM02022M_.JPG";
 	Image308.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image308.cameraPosition = new THREE.Vector3;
+	Image308.cameraVector = new THREE.Vector3;
 	Image308.mastAz = "";
 	Image308.mastEl = "";
 	Image308.xyz = new THREE.Vector3;
@@ -7418,6 +7727,7 @@ function getImageDataArray()
 	Image309.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ccam/CR0_399445462EDR_F0030100CCAM02022M_.JPG";
 	Image309.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image309.cameraPosition = new THREE.Vector3;
+	Image309.cameraVector = new THREE.Vector3;
 	Image309.mastAz = "";
 	Image309.mastEl = "";
 	Image309.xyz = new THREE.Vector3;
@@ -7442,6 +7752,7 @@ function getImageDataArray()
 	Image310.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ccam/CR0_399445595EDR_F0030100CCAM03022M_.JPG";
 	Image310.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image310.cameraPosition = new THREE.Vector3;
+	Image310.cameraVector = new THREE.Vector3;
 	Image310.mastAz = "";
 	Image310.mastEl = "";
 	Image310.xyz = new THREE.Vector3;
@@ -7466,6 +7777,7 @@ function getImageDataArray()
 	Image311.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ccam/CR0_399446244EDR_F0030100CCAM03022M_.JPG";
 	Image311.attitude = new THREE.Quaternion(0.134083,0.0368769,0.0305119,-0.989814);
 	Image311.cameraPosition = new THREE.Vector3;
+	Image311.cameraVector = new THREE.Vector3;
 	Image311.mastAz = "";
 	Image311.mastEl = "";
 	Image311.xyz = new THREE.Vector3;
@@ -7490,6 +7802,7 @@ function getImageDataArray()
 	Image312.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399449733EDR_F0030106NCAM00411M_.JPG";
 	Image312.attitude = new THREE.Quaternion(0.137575,0.0367482,0.039909,-0.989004);
 	Image312.cameraPosition = new THREE.Vector3(0.86504,0.31223,-1.8758);
+	Image312.cameraVector = new THREE.Vector3(0.6311339177710956,-0.19856128677356516,0.749828909307806);
 	Image312.mastAz = "342.5";
 	Image312.mastEl = "-48.5526";
 	Image312.xyz = new THREE.Vector3(6.70176,3.48993,0.58318);
@@ -7514,6 +7827,7 @@ function getImageDataArray()
 	Image313.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399449733EDR_F0030106NCAM00411M_.JPG";
 	Image313.attitude = new THREE.Quaternion(0.137575,0.0367482,0.039909,-0.989004);
 	Image313.cameraPosition = new THREE.Vector3(1.00158,0.713212,-1.87583);
+	Image313.cameraVector = new THREE.Vector3(0.624548324397668,-0.2072303309567128,0.7529906907948041);
 	Image313.mastAz = "341.608";
 	Image313.mastEl = "-48.8267";
 	Image313.xyz = new THREE.Vector3(6.70176,3.48993,0.58318);
@@ -7538,6 +7852,7 @@ function getImageDataArray()
 	Image314.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/fcam/FLA_399455394EDR_F0030260FHAZ00302M_.JPG";
 	Image314.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image314.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image314.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image314.mastAz = "1.03995";
 	Image314.mastEl = "-43.4728";
 	Image314.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7562,6 +7877,7 @@ function getImageDataArray()
 	Image315.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/fcam/FRA_399455394EDR_F0030260FHAZ00302M_.JPG";
 	Image315.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image315.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image315.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image315.mastAz = "359.974";
 	Image315.mastEl = "-43.7598";
 	Image315.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7586,6 +7902,7 @@ function getImageDataArray()
 	Image316.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/rcam/RLA_399455435EDR_F0030260RHAZ00302M_.JPG";
 	Image316.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image316.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image316.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image316.mastAz = "182.571";
 	Image316.mastEl = "-44.9097";
 	Image316.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7610,6 +7927,7 @@ function getImageDataArray()
 	Image317.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/rcam/RRA_399455435EDR_F0030260RHAZ00302M_.JPG";
 	Image317.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image317.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image317.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image317.mastAz = "182.044";
 	Image317.mastEl = "-43.5257";
 	Image317.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7634,6 +7952,7 @@ function getImageDataArray()
 	Image318.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455489EDR_F0030260NCAM00412M_.JPG";
 	Image318.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image318.cameraPosition = new THREE.Vector3(1.02937,0.658018,-1.96195);
+	Image318.cameraVector = new THREE.Vector3(0.8038981182588453,-0.551340822792786,0.22309440284790125);
 	Image318.mastAz = "325.532";
 	Image318.mastEl = "-12.8672";
 	Image318.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7658,6 +7977,7 @@ function getImageDataArray()
 	Image319.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455489EDR_F0030260NCAM00412M_.JPG";
 	Image319.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image319.cameraPosition = new THREE.Vector3(0.788026,0.309905,-1.96227);
+	Image319.cameraVector = new THREE.Vector3(0.810548637545242,-0.5433780159839643,0.218520566352191);
 	Image319.mastAz = "326.139";
 	Image319.mastEl = "-12.599";
 	Image319.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7682,6 +8002,7 @@ function getImageDataArray()
 	Image320.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455517EDR_F0030260NCAM00412M_.JPG";
 	Image320.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image320.cameraPosition = new THREE.Vector3(0.911805,0.333599,-1.96244);
+	Image320.cameraVector = new THREE.Vector3(0.9731353340194278,-0.07850153461497886,0.2164373598665208);
 	Image320.mastAz = "355.364";
 	Image320.mastEl = "-12.4768";
 	Image320.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7706,6 +8027,7 @@ function getImageDataArray()
 	Image321.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455517EDR_F0030260NCAM00412M_.JPG";
 	Image321.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image321.cameraPosition = new THREE.Vector3(0.952507,0.75523,-1.96232);
+	Image321.cameraVector = new THREE.Vector3(0.9712278062988501,-0.08869687193862383,0.22101903352477717);
 	Image321.mastAz = "354.758";
 	Image321.mastEl = "-12.7453";
 	Image321.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7730,6 +8052,7 @@ function getImageDataArray()
 	Image322.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455545EDR_F0030260NCAM00412M_.JPG";
 	Image322.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image322.cameraPosition = new THREE.Vector3(1.01003,0.416118,-1.96001);
+	Image322.cameraVector = new THREE.Vector3(0.8818249619986509,0.40943744904517815,0.23397801545327945);
 	Image322.mastAz = "24.8814";
 	Image322.mastEl = "-13.5083";
 	Image322.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7754,6 +8077,7 @@ function getImageDataArray()
 	Image323.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455545EDR_F0030260NCAM00412M_.JPG";
 	Image323.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image323.cameraPosition = new THREE.Vector3(0.837788,0.80311,-1.9601);
+	Image323.cameraVector = new THREE.Vector3(0.8851103060717316,0.39959314958770514,0.238547816775135);
 	Image323.mastAz = "24.2731";
 	Image323.mastEl = "-13.7773";
 	Image323.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7778,6 +8102,7 @@ function getImageDataArray()
 	Image324.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455573EDR_F0030260NCAM00412M_.JPG";
 	Image324.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image324.cameraPosition = new THREE.Vector3(1.05502,0.53754,-1.95556);
+	Image324.cameraVector = new THREE.Vector3(0.5600183483415031,0.7845232975068501,0.2662755061770292);
 	Image324.mastAz = "54.455";
 	Image324.mastEl = "-15.4197";
 	Image324.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7802,6 +8127,7 @@ function getImageDataArray()
 	Image325.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455573EDR_F0030260NCAM00412M_.JPG";
 	Image325.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image325.cameraPosition = new THREE.Vector3(0.714285,0.789195,-1.95584);
+	Image325.cameraVector = new THREE.Vector3(0.5676396214223765,0.7774613348333501,0.2708119883435866);
 	Image325.mastAz = "53.8416";
 	Image325.mastEl = "-15.6891";
 	Image325.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7826,6 +8152,7 @@ function getImageDataArray()
 	Image326.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455608EDR_F0030260NCAM00412M_.JPG";
 	Image326.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image326.cameraPosition = new THREE.Vector3(1.03271,0.667426,-1.95014);
+	Image326.cameraVector = new THREE.Vector3(0.09215509230152023,0.9478428723593704,0.3051251026717352);
 	Image326.mastAz = "84.4219";
 	Image326.mastEl = "-17.7426";
 	Image326.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7850,6 +8177,7 @@ function getImageDataArray()
 	Image327.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455608EDR_F0030260NCAM00412M_.JPG";
 	Image327.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image327.cameraPosition = new THREE.Vector3(0.611842,0.715363,-1.95052);
+	Image327.cameraVector = new THREE.Vector3(0.10226369821050095,0.9453474989984894,0.30961305231791025);
 	Image327.mastAz = "83.8012";
 	Image327.mastEl = "-18.0124";
 	Image327.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7874,6 +8202,7 @@ function getImageDataArray()
 	Image328.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455647EDR_F0030260NCAM00413M_.JPG";
 	Image328.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image328.cameraPosition = new THREE.Vector3(1.02979,0.440116,-1.87966);
+	Image328.cameraVector = new THREE.Vector3(0.5874310770256876,0.3490109177248178,0.7301480048958028);
 	Image328.mastAz = "30.6809";
 	Image328.mastEl = "-46.876";
 	Image328.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7898,6 +8227,7 @@ function getImageDataArray()
 	Image329.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455647EDR_F0030260NCAM00413M_.JPG";
 	Image329.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image329.cameraPosition = new THREE.Vector3(0.822038,0.809265,-1.88002);
+	Image329.cameraVector = new THREE.Vector3(0.5895798630501076,0.33837030531612805,0.733417426549224);
 	Image329.mastAz = "29.8175";
 	Image329.mastEl = "-47.1503";
 	Image329.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7922,6 +8252,7 @@ function getImageDataArray()
 	Image330.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455675EDR_F0030260NCAM00413M_.JPG";
 	Image330.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image330.cameraPosition = new THREE.Vector3(1.05932,0.566807,-1.87961);
+	Image330.cameraVector = new THREE.Vector3(0.3386169871850301,0.5936688142885117,0.7299971746048102);
 	Image330.mastAz = "60.2654";
 	Image330.mastEl = "-46.8634";
 	Image330.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7946,6 +8277,7 @@ function getImageDataArray()
 	Image331.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455675EDR_F0030260NCAM00413M_.JPG";
 	Image331.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image331.cameraPosition = new THREE.Vector3(0.696485,0.785403,-1.88012);
+	Image331.cameraVector = new THREE.Vector3(0.3457344169732055,0.5854727492211745,0.7332730547617289);
 	Image331.mastAz = "59.4025";
 	Image331.mastEl = "-47.138";
 	Image331.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7970,6 +8302,7 @@ function getImageDataArray()
 	Image332.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455704EDR_F0030260NCAM00413M_.JPG";
 	Image332.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image332.cameraPosition = new THREE.Vector3(1.02106,0.693902,-1.87958);
+	Image332.cameraVector = new THREE.Vector3(-0.005816365976991028,0.6834439395325742,0.7299798294494284);
 	Image332.mastAz = "90.4526";
 	Image332.mastEl = "-46.8619";
 	Image332.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -7994,6 +8327,7 @@ function getImageDataArray()
 	Image333.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455704EDR_F0030260NCAM00413M_.JPG";
 	Image333.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image333.cameraPosition = new THREE.Vector3(0.597523,0.700477,-1.88015);
+	Image333.cameraVector = new THREE.Vector3(0.004455687301528007,0.6799358660014665,0.7332580480127762);
 	Image333.mastAz = "89.5897";
 	Image333.mastEl = "-47.1367";
 	Image333.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8018,6 +8352,7 @@ function getImageDataArray()
 	Image334.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455732EDR_F0030260NCAM00413M_.JPG";
 	Image334.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image334.cameraPosition = new THREE.Vector3(0.554754,0.57845,-1.88014);
+	Image334.cameraVector = new THREE.Vector3(-0.33521314892254805,0.5916377667470227,0.7332099956683794);
 	Image334.mastAz = "119.5";
 	Image334.mastEl = "-47.1327";
 	Image334.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8042,6 +8377,7 @@ function getImageDataArray()
 	Image335.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455732EDR_F0030260NCAM00413M_.JPG";
 	Image335.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image335.cameraPosition = new THREE.Vector3(0.925132,0.783999,-1.87961);
+	Image335.cameraVector = new THREE.Vector3(-0.34586543816052573,0.5895539305058273,0.7299337378907469);
 	Image335.mastAz = "120.363";
 	Image335.mastEl = "-46.858";
 	Image335.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8066,6 +8402,7 @@ function getImageDataArray()
 	Image336.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455767EDR_F0030260NCAM00413M_.JPG";
 	Image336.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image336.cameraPosition = new THREE.Vector3(0.796155,0.814218,-1.87968);
+	Image336.cameraVector = new THREE.Vector3(-0.5948128293259988,0.33657435604025454,0.7300105485027516);
 	Image336.mastAz = "150.462";
 	Image336.mastEl = "-46.8645";
 	Image336.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8090,6 +8427,7 @@ function getImageDataArray()
 	Image337.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455767EDR_F0030260NCAM00413M_.JPG";
 	Image337.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image337.cameraPosition = new THREE.Vector3(0.578936,0.450561,-1.88005);
+	Image337.cameraVector = new THREE.Vector3(-0.5866420206440179,0.3437223865505631,0.733284433626331);
 	Image337.mastAz = "149.599";
 	Image337.mastEl = "-47.1389";
 	Image337.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8114,6 +8452,7 @@ function getImageDataArray()
 	Image338.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455803EDR_F0030260NCAM00410M_.JPG";
 	Image338.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image338.cameraPosition = new THREE.Vector3(0.9464,0.769215,-1.94531);
+	Image338.cameraVector = new THREE.Vector3(-0.3940890368755043,0.8541331645869822,0.3393381324979035);
 	Image338.mastAz = "114.743";
 	Image338.mastEl = "-19.8135";
 	Image338.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8138,6 +8477,7 @@ function getImageDataArray()
 	Image339.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455803EDR_F0030260NCAM00410M_.JPG";
 	Image339.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image339.cameraPosition = new THREE.Vector3(0.558863,0.598204,-1.94566);
+	Image339.cameraVector = new THREE.Vector3(-0.3840366951184879,0.8569326104965042,0.34377655224013787);
 	Image339.mastAz = "114.115";
 	Image339.mastEl = "-20.0835";
 	Image339.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8162,6 +8502,7 @@ function getImageDataArray()
 	Image340.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455839EDR_F0030260NCAM00410M_.JPG";
 	Image340.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image340.cameraPosition = new THREE.Vector3(0.820565,0.812639,-1.94228);
+	Image340.cameraVector = new THREE.Vector3(-0.7644369646730146,0.5343225489029023,0.36074303981562);
 	Image340.mastAz = "145.022";
 	Image340.mastEl = "-21.1228";
 	Image340.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8186,6 +8527,7 @@ function getImageDataArray()
 	Image341.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455839EDR_F0030260NCAM00410M_.JPG";
 	Image341.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image341.cameraPosition = new THREE.Vector3(0.572107,0.469567,-1.94251);
+	Image341.cameraVector = new THREE.Vector3(-0.7570861333793366,0.5417487807387491,0.36514222600625645);
 	Image341.mastAz = "144.388";
 	Image341.mastEl = "-21.3928";
 	Image341.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8210,6 +8552,7 @@ function getImageDataArray()
 	Image342.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455874EDR_F0030260NCAM00410M_.JPG";
 	Image342.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image342.cameraPosition = new THREE.Vector3(0.687244,0.784458,-1.9421);
+	Image342.cameraVector = new THREE.Vector3(-0.9298152598748882,0.062205643829682605,0.36273136117453186);
 	Image342.mastAz = "176.147";
 	Image342.mastEl = "-21.245";
 	Image342.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8234,6 +8577,7 @@ function getImageDataArray()
 	Image343.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455874EDR_F0030260NCAM00410M_.JPG";
 	Image343.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image343.cameraPosition = new THREE.Vector3(0.651968,0.362337,-1.94212);
+	Image343.cameraVector = new THREE.Vector3(-0.9273532990118282,0.07236492401587714,0.36712283582481614);
 	Image343.mastAz = "175.513";
 	Image343.mastEl = "-21.5147";
 	Image343.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8258,6 +8602,7 @@ function getImageDataArray()
 	Image344.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455961EDR_F0030260NCAM00410M_.JPG";
 	Image344.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image344.cameraPosition = new THREE.Vector3(0.589219,0.693007,-1.94477);
+	Image344.cameraVector = new THREE.Vector3(-0.8366730687909977,-0.42527769076832417,0.3451333969563304);
 	Image344.mastAz = "206.919";
 	Image344.mastEl = "-20.1669";
 	Image344.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8282,6 +8627,7 @@ function getImageDataArray()
 	Image345.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455961EDR_F0030260NCAM00410M_.JPG";
 	Image345.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image345.cameraPosition = new THREE.Vector3(0.774993,0.312327,-1.94455);
+	Image345.cameraVector = new THREE.Vector3(-0.8398343424294485,-0.41532411218864035,0.34954850752193684);
 	Image345.mastAz = "206.289";
 	Image345.mastEl = "-20.4361";
 	Image345.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8306,6 +8652,7 @@ function getImageDataArray()
 	Image346.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399455989EDR_F0030260NCAM00410M_.JPG";
 	Image346.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image346.cameraPosition = new THREE.Vector3(0.903227,0.331798,-1.94906);
+	Image346.cameraVector = new THREE.Vector3(-0.5263696926559723,-0.7888437553072069,0.31727035217000776);
 	Image346.mastAz = "236.261";
 	Image346.mastEl = "-18.4743";
 	Image346.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8330,6 +8677,7 @@ function getImageDataArray()
 	Image347.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399455989EDR_F0030260NCAM00410M_.JPG";
 	Image347.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image347.cameraPosition = new THREE.Vector3(0.552072,0.568695,-1.94946);
+	Image347.cameraVector = new THREE.Vector3(-0.5185682403289786,-0.7957615749676955,0.3128106390886337);
 	Image347.mastAz = "236.884";
 	Image347.mastEl = "-18.2056";
 	Image347.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8354,6 +8702,7 @@ function getImageDataArray()
 	Image348.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399456024EDR_F0030260NCAM00410M_.JPG";
 	Image348.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image348.cameraPosition = new THREE.Vector3(1.00453,0.414287,-1.95439);
+	Image348.cameraVector = new THREE.Vector3(-0.05855256176281917,-0.9586016861241259,0.2786653994865419);
 	Image348.mastAz = "266.48";
 	Image348.mastEl = "-16.1569";
 	Image348.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8378,6 +8727,7 @@ function getImageDataArray()
 	Image349.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399456024EDR_F0030260NCAM00410M_.JPG";
 	Image349.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image349.cameraPosition = new THREE.Vector3(0.581855,0.442219,-1.95487);
+	Image349.cameraVector = new THREE.Vector3(-0.04831752458775574,-0.9604704963647672,0.27415660201886266);
 	Image349.mastAz = "267.096";
 	Image349.mastEl = "-15.8886";
 	Image349.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8402,6 +8752,7 @@ function getImageDataArray()
 	Image350.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NRA_399456059EDR_F0030260NCAM00410M_.JPG";
 	Image350.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image350.cameraPosition = new THREE.Vector3(1.04928,0.533274,-1.95905);
+	Image350.cameraVector = new THREE.Vector3(0.4253126007462588,-0.8714346071788965,0.24435817370699014);
 	Image350.mastAz = "295.991";
 	Image350.mastEl = "-14.1203";
 	Image350.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8426,6 +8777,7 @@ function getImageDataArray()
 	Image351.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00022/opgs/edr/ncam/NLA_399456059EDR_F0030260NCAM00410M_.JPG";
 	Image351.attitude = new THREE.Quaternion(0.844761,0.0105654,-0.0376446,0.533713);
 	Image351.cameraPosition = new THREE.Vector3(0.667688,0.349386,-1.95951);
+	Image351.cameraVector = new THREE.Vector3(0.4350672950660787,-0.8678754662146889,0.23980955757959652);
 	Image351.mastAz = "296.6";
 	Image351.mastEl = "-13.8521";
 	Image351.xyz = new THREE.Vector3(3.06529,14.6861,1.0857);
@@ -8450,6 +8802,7 @@ function getImageDataArray()
 	Image352.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399621413EDR_F0030308NCAM00405M_.JPG";
 	Image352.attitude = new THREE.Quaternion(0.795134,-0.0211898,-0.0459318,0.604321);
 	Image352.cameraPosition = new THREE.Vector3(0.587393,0.683608,-1.93524);
+	Image352.cameraVector = new THREE.Vector3(-0.06134152805635891,0.9078412690430067,0.4148029015786822);
 	Image352.mastAz = "93.8396";
 	Image352.mastEl = "-24.4834";
 	Image352.xyz = new THREE.Vector3(4.70634,20.4447,1.45895);
@@ -8474,6 +8827,7 @@ function getImageDataArray()
 	Image353.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399621413EDR_F0030308NCAM00405M_.JPG";
 	Image353.attitude = new THREE.Quaternion(0.795134,-0.0211898,-0.0459318,0.604321);
 	Image353.cameraPosition = new THREE.Vector3(1.01019,0.709602,-1.93482);
+	Image353.cameraVector = new THREE.Vector3(-0.07175995798632041,0.9090366321529653,0.4104910593835095);
 	Image353.mastAz = "94.4876";
 	Image353.mastEl = "-24.2127";
 	Image353.xyz = new THREE.Vector3(4.70634,20.4447,1.45895);
@@ -8498,6 +8852,7 @@ function getImageDataArray()
 	Image354.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399621461EDR_F0030308NCAM00404M_.JPG";
 	Image354.attitude = new THREE.Quaternion(0.795134,-0.0211898,-0.0459318,0.604321);
 	Image354.cameraPosition = new THREE.Vector3(0.890449,0.317981,-1.90417);
+	Image354.cameraVector = new THREE.Vector3(0.7806081507153164,-0.17285340148664752,0.6006435021136162);
 	Image354.mastAz = "347.484";
 	Image354.mastEl = "-36.8931";
 	Image354.xyz = new THREE.Vector3(4.70634,20.4447,1.45895);
@@ -8522,6 +8877,7 @@ function getImageDataArray()
 	Image355.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399621461EDR_F0030308NCAM00404M_.JPG";
 	Image355.attitude = new THREE.Quaternion(0.795134,-0.0211898,-0.0459318,0.604321);
 	Image355.cameraPosition = new THREE.Vector3(0.989984,0.729712,-1.90415);
+	Image355.cameraVector = new THREE.Vector3(0.7755249130488335,-0.1822523263578979,0.6044379197053518);
 	Image355.mastAz = "346.746";
 	Image355.mastEl = "-37.1648";
 	Image355.xyz = new THREE.Vector3(4.70634,20.4447,1.45895);
@@ -8546,6 +8902,7 @@ function getImageDataArray()
 	Image356.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399622593EDR_F0030350NCAM00404M_.JPG";
 	Image356.attitude = new THREE.Quaternion(0.168498,-0.0685019,0.00562162,0.983303);
 	Image356.cameraPosition = new THREE.Vector3(0.556133,0.586532,-1.93749);
+	Image356.cameraVector = new THREE.Vector3(-0.42048184291724405,0.814557459054988,0.3996137706270887);
 	Image356.mastAz = "117.278";
 	Image356.mastEl = "-23.5304";
 	Image356.xyz = new THREE.Vector3(5.96545,28.1196,1.63277);
@@ -8570,6 +8927,7 @@ function getImageDataArray()
 	Image357.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399622593EDR_F0030350NCAM00404M_.JPG";
 	Image357.attitude = new THREE.Quaternion(0.168498,-0.0685019,0.00562162,0.983303);
 	Image357.cameraPosition = new THREE.Vector3(0.933682,0.778592,-1.93712);
+	Image357.cameraVector = new THREE.Vector3(-0.4304848799297833,0.811444468804568,0.3952728705569258);
 	Image357.mastAz = "117.921";
 	Image357.mastEl = "-23.26";
 	Image357.xyz = new THREE.Vector3(5.96545,28.1196,1.63277);
@@ -8594,6 +8952,7 @@ function getImageDataArray()
 	Image358.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399626441EDR_F0030372SAPP07712M_.JPG";
 	Image358.attitude = new THREE.Quaternion(0.524976,0.00597904,-0.0177345,0.850911);
 	Image358.cameraPosition = new THREE.Vector3(0.748418,0.766832,-2.04595);
+	Image358.cameraVector = new THREE.Vector3(-0.4652965050961738,-0.17987082719300435,-0.8666865914909441);
 	Image358.mastAz = "201.089";
 	Image358.mastEl = "60.0996";
 	Image358.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8618,6 +8977,7 @@ function getImageDataArray()
 	Image359.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399626500EDR_F0030372SAPP07712M_.JPG";
 	Image359.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image359.cameraPosition = new THREE.Vector3(0.907766,0.330458,-1.8551);
+	Image359.cameraVector = new THREE.Vector3(0.5367003741718783,-0.05088539901920259,0.8422371308191193);
 	Image359.mastAz = "354.539";
 	Image359.mastEl = "-57.3544";
 	Image359.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8642,6 +9002,7 @@ function getImageDataArray()
 	Image360.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/fcam/FRA_399627431EDR_F0030372FHAZ00303M_.JPG";
 	Image360.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image360.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image360.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image360.mastAz = "359.974";
 	Image360.mastEl = "-43.7598";
 	Image360.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8666,6 +9027,7 @@ function getImageDataArray()
 	Image361.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/fcam/FLA_399627431EDR_F0030372FHAZ00303M_.JPG";
 	Image361.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image361.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image361.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image361.mastAz = "1.03995";
 	Image361.mastEl = "-43.4728";
 	Image361.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8690,6 +9052,7 @@ function getImageDataArray()
 	Image362.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/rcam/RLA_399627458EDR_F0030372RHAZ00303M_.JPG";
 	Image362.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image362.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image362.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image362.mastAz = "182.571";
 	Image362.mastEl = "-44.9097";
 	Image362.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8714,6 +9077,7 @@ function getImageDataArray()
 	Image363.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/rcam/RRA_399627458EDR_F0030372RHAZ00303M_.JPG";
 	Image363.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image363.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image363.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image363.mastAz = "182.044";
 	Image363.mastEl = "-43.5257";
 	Image363.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8738,6 +9102,7 @@ function getImageDataArray()
 	Image364.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627511EDR_F0030372NCAM00407M_.JPG";
 	Image364.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image364.cameraPosition = new THREE.Vector3(0.696544,0.332697,-1.95735);
+	Image364.cameraVector = new THREE.Vector3(0.5417140061679582,-0.8007203031041146,0.2557204170931928);
 	Image364.mastAz = "304.055";
 	Image364.mastEl = "-14.7932";
 	Image364.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8762,6 +9127,7 @@ function getImageDataArray()
 	Image365.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627511EDR_F0030372NCAM00407M_.JPG";
 	Image365.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image365.cameraPosition = new THREE.Vector3(1.05107,0.564518,-1.95693);
+	Image365.cameraVector = new THREE.Vector3(0.5324633656672759,-0.8054502410104207,0.2602550162408636);
 	Image365.mastAz = "303.443";
 	Image365.mastEl = "-15.0615";
 	Image365.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8786,6 +9152,7 @@ function getImageDataArray()
 	Image366.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627538EDR_F0030372NCAM00407M_.JPG";
 	Image366.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image366.cameraPosition = new THREE.Vector3(1.01658,0.685248,-1.95705);
+	Image366.cameraVector = new THREE.Vector3(0.8601344131040223,-0.43885018968510703,0.25996019389042);
 	Image366.mastAz = "332.944";
 	Image366.mastEl = "-15.044";
 	Image366.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8810,6 +9177,7 @@ function getImageDataArray()
 	Image367.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627538EDR_F0030372NCAM00407M_.JPG";
 	Image367.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image367.cameraPosition = new THREE.Vector3(0.822143,0.30892,-1.95731);
+	Image367.cameraVector = new THREE.Vector3(0.8658566394529986,-0.43017650474441677,0.25542211079120897);
 	Image367.mastAz = "333.556";
 	Image367.mastEl = "-14.7755";
 	Image367.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8834,6 +9202,7 @@ function getImageDataArray()
 	Image368.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627567EDR_F0030372NCAM00407M_.JPG";
 	Image368.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image368.cameraPosition = new THREE.Vector3(0.944727,0.350785,-1.95602);
+	Image368.cameraVector = new THREE.Vector3(0.9628079278711494,0.0568902447557444,0.26412950247955114);
 	Image368.mastAz = "3.35708";
 	Image368.mastEl = "-15.2921";
 	Image368.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8858,6 +9227,7 @@ function getImageDataArray()
 	Image369.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627567EDR_F0030372NCAM00407M_.JPG";
 	Image369.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image369.cameraPosition = new THREE.Vector3(0.926498,0.773984,-1.95597);
+	Image369.cameraVector = new THREE.Vector3(0.9621107648190317,0.04652023120423828,0.26866102119221175);
 	Image369.mastAz = "2.74381";
 	Image369.mastEl = "-15.561";
 	Image369.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8882,6 +9252,7 @@ function getImageDataArray()
 	Image370.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627595EDR_F0030372NCAM00407M_.JPG";
 	Image370.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image370.cameraPosition = new THREE.Vector3(1.03058,0.448495,-1.95375);
+	Image370.cameraVector = new THREE.Vector3(0.8033106355755801,0.5256801471204754,0.2799149972662286);
 	Image370.mastAz = "33.1757";
 	Image370.mastEl = "-16.2321";
 	Image370.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8906,6 +9277,7 @@ function getImageDataArray()
 	Image371.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627595EDR_F0030372NCAM00407M_.JPG";
 	Image371.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image371.cameraPosition = new THREE.Vector3(0.804399,0.806649,-1.95391);
+	Image371.cameraVector = new THREE.Vector3(0.8077976092840506,0.5162952200929886,0.2844332402236154);
 	Image371.mastAz = "32.5598";
 	Image371.mastEl = "-16.5014";
 	Image371.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8930,6 +9302,7 @@ function getImageDataArray()
 	Image372.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627623EDR_F0030372NCAM00407M_.JPG";
 	Image372.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image372.cameraPosition = new THREE.Vector3(1.05617,0.577452,-1.95109);
+	Image372.cameraVector = new THREE.Vector3(0.429230043776559,0.8524484796394413,0.29848477193983997);
 	Image372.mastAz = "63.2488";
 	Image372.mastEl = "-17.3436";
 	Image372.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8954,6 +9327,7 @@ function getImageDataArray()
 	Image373.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627623EDR_F0030372NCAM00407M_.JPG";
 	Image373.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image373.cameraPosition = new THREE.Vector3(0.681006,0.774138,-1.95142);
+	Image373.cameraVector = new THREE.Vector3(0.43777059157196324,0.8464978034009457,0.3029824714271558);
 	Image373.mastAz = "62.6293";
 	Image373.mastEl = "-17.6132";
 	Image373.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -8978,6 +9352,7 @@ function getImageDataArray()
 	Image374.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627657EDR_F0030372NCAM00406M_.JPG";
 	Image374.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image374.cameraPosition = new THREE.Vector3(1.01332,0.701747,-1.94879);
+	Image374.cameraVector = new THREE.Vector3(-0.05490269422212202,0.9475797092186544,0.31476719785302043);
 	Image374.mastAz = "93.2911";
 	Image374.mastEl = "-18.3237";
 	Image374.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9002,6 +9377,7 @@ function getImageDataArray()
 	Image375.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627657EDR_F0030372NCAM00406M_.JPG";
 	Image375.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image375.cameraPosition = new THREE.Vector3(0.590093,0.684251,-1.94917);
+	Image375.cameraVector = new THREE.Vector3(-0.04452813632558641,0.9466260737607332,0.3192433578818971);
 	Image375.mastAz = "92.6683";
 	Image375.mastEl = "-18.5935";
 	Image375.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9026,6 +9402,7 @@ function getImageDataArray()
 	Image376.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627692EDR_F0030372NCAM00406M_.JPG";
 	Image376.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image376.cameraPosition = new THREE.Vector3(0.91274,0.788029,-1.94744);
+	Image376.cameraVector = new THREE.Vector3(-0.5237176846890177,0.7876683665624575,0.3244970432235161);
 	Image376.mastAz = "123.595";
 	Image376.mastEl = "-18.9121";
 	Image376.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9050,6 +9427,7 @@ function getImageDataArray()
 	Image377.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627692EDR_F0030372NCAM00406M_.JPG";
 	Image377.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image377.cameraPosition = new THREE.Vector3(0.556163,0.559374,-1.94776);
+	Image377.cameraVector = new THREE.Vector3(-0.5142522401804468,0.7920426172477649,0.32895763546800777);
 	Image377.mastAz = "122.97";
 	Image377.mastEl = "-19.1819";
 	Image377.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9074,6 +9452,7 @@ function getImageDataArray()
 	Image378.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627727EDR_F0030372NCAM00406M_.JPG";
 	Image378.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image378.cameraPosition = new THREE.Vector3(0.781839,0.811344,-1.94743);
+	Image378.cameraVector = new THREE.Vector3(-0.8505399705296249,0.413338487711923,0.32516619305746597);
 	Image378.mastAz = "154.057";
 	Image378.mastEl = "-18.9525";
 	Image378.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9098,6 +9477,7 @@ function getImageDataArray()
 	Image379.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627727EDR_F0030372NCAM00406M_.JPG";
 	Image379.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image379.cameraPosition = new THREE.Vector3(0.59045,0.433454,-1.94758);
+	Image379.cameraVector = new THREE.Vector3(-0.8445979259259423,0.42190652383879806,0.3296198244400027);
 	Image379.mastAz = "153.431";
 	Image379.mastEl = "-19.2221";
 	Image379.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9122,6 +9502,7 @@ function getImageDataArray()
 	Image380.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627814EDR_F0030372NCAM00406M_.JPG";
 	Image380.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image380.cameraPosition = new THREE.Vector3(0.657823,0.765217,-1.94877);
+	Image380.cameraVector = new THREE.Vector3(-0.945697524973228,-0.07407294865493391,0.3164954810689629);
 	Image380.mastAz = "184.454";
 	Image380.mastEl = "-18.4281";
 	Image380.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9146,6 +9527,7 @@ function getImageDataArray()
 	Image381.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627814EDR_F0030372NCAM00406M_.JPG";
 	Image381.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image381.cameraPosition = new THREE.Vector3(0.684048,0.342438,-1.9487);
+	Image381.cameraVector = new THREE.Vector3(-0.9449502384009522,-0.06367586783325238,0.3209586122877306);
 	Image381.mastAz = "183.83";
 	Image381.mastEl = "-18.6973";
 	Image381.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9170,6 +9552,7 @@ function getImageDataArray()
 	Image382.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627849EDR_F0030372NCAM00406M_.JPG";
 	Image382.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image382.cameraPosition = new THREE.Vector3(0.575551,0.66546,-1.9511);
+	Image382.cameraVector = new THREE.Vector3(-0.7881253501141922,-0.53706918719601,0.3006910718195654);
 	Image382.mastAz = "214.248";
 	Image382.mastEl = "-17.4761";
 	Image382.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9194,6 +9577,7 @@ function getImageDataArray()
 	Image383.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627849EDR_F0030372NCAM00406M_.JPG";
 	Image383.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image383.cameraPosition = new THREE.Vector3(0.808467,0.311652,-1.95082);
+	Image383.cameraVector = new THREE.Vector3(-0.792707762658649,-0.5277165398576046,0.3051715199382739);
 	Image383.mastAz = "213.628";
 	Image383.mastEl = "-17.7449";
 	Image383.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9218,6 +9602,7 @@ function getImageDataArray()
 	Image384.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627884EDR_F0030372NCAM00406M_.JPG";
 	Image384.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image384.cameraPosition = new THREE.Vector3(0.55373,0.536394,-1.95375);
+	Image384.cameraVector = new THREE.Vector3(-0.41255687885722186,-0.8661300331368358,0.28216234228892273);
 	Image384.mastAz = "244.506";
 	Image384.mastEl = "-16.3661";
 	Image384.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9242,6 +9627,7 @@ function getImageDataArray()
 	Image385.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627884EDR_F0030372NCAM00406M_.JPG";
 	Image385.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image385.cameraPosition = new THREE.Vector3(0.933232,0.348223,-1.95331);
+	Image385.cameraVector = new THREE.Vector3(-0.42127057086384245,-0.8604394786384931,0.28666183862588096);
 	Image385.mastAz = "243.889";
 	Image385.mastEl = "-16.6346";
 	Image385.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9266,6 +9652,7 @@ function getImageDataArray()
 	Image386.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NLA_399627919EDR_F0030372NCAM00406M_.JPG";
 	Image386.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image386.cameraPosition = new THREE.Vector3(0.598125,0.41588,-1.95601);
+	Image386.cameraVector = new THREE.Vector3(0.07156870515157028,-0.9613527549125315,0.2658548496172556);
 	Image386.mastAz = "274.233";
 	Image386.mastEl = "-15.3947";
 	Image386.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9290,6 +9677,7 @@ function getImageDataArray()
 	Image387.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00024/opgs/edr/ncam/NRA_399627919EDR_F0030372NCAM00406M_.JPG";
 	Image387.attitude = new THREE.Quaternion(0.526266,0.00595213,-0.0177436,0.850114);
 	Image387.cameraPosition = new THREE.Vector3(1.02099,0.440695,-1.95552);
+	Image387.cameraVector = new THREE.Vector3(0.06118440289699831,-0.960808769529908,0.27037562248945773);
 	Image387.mastAz = "273.619";
 	Image387.mastEl = "-15.663";
 	Image387.xyz = new THREE.Vector3(-0.461425,31.8852,1.26995);
@@ -9314,6 +9702,7 @@ function getImageDataArray()
 	Image388.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399803342EDR_F0030496NCAM00416M_.JPG";
 	Image388.attitude = new THREE.Quaternion(0.123511,0.0162254,0.0296805,-0.991766);
 	Image388.cameraPosition = new THREE.Vector3(0.853307,0.809107,-1.93711);
+	Image388.cameraVector = new THREE.Vector3(-0.6759578488493269,0.6217004414332408,0.3956887004966203);
 	Image388.mastAz = "137.368";
 	Image388.mastEl = "-23.286";
 	Image388.xyz = new THREE.Vector3(-8.9756,38.5485,1.5205);
@@ -9338,6 +9727,7 @@ function getImageDataArray()
 	Image389.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399803342EDR_F0030496NCAM00416M_.JPG";
 	Image389.attitude = new THREE.Quaternion(0.123511,0.0162254,0.0296805,-0.991766);
 	Image389.cameraPosition = new THREE.Vector3(0.561268,0.502279,-1.93739);
+	Image389.cameraVector = new THREE.Vector3(-0.6675581857793281,0.6279692732820213,0.4000258246821848);
 	Image389.mastAz = "136.725";
 	Image389.mastEl = "-23.5563";
 	Image389.xyz = new THREE.Vector3(-8.9756,38.5485,1.5205);
@@ -9362,6 +9752,7 @@ function getImageDataArray()
 	Image390.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/fcam/FLA_399806994EDR_F0030530FHAZ00302M_.JPG";
 	Image390.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image390.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image390.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image390.mastAz = "1.03995";
 	Image390.mastEl = "-43.4728";
 	Image390.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9386,6 +9777,7 @@ function getImageDataArray()
 	Image391.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/fcam/FRA_399806994EDR_F0030530FHAZ00302M_.JPG";
 	Image391.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image391.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image391.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image391.mastAz = "359.974";
 	Image391.mastEl = "-43.7598";
 	Image391.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9410,6 +9802,7 @@ function getImageDataArray()
 	Image392.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/rcam/RLA_399807021EDR_F0030530RHAZ00302M_.JPG";
 	Image392.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image392.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image392.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image392.mastAz = "182.571";
 	Image392.mastEl = "-44.9097";
 	Image392.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9434,6 +9827,7 @@ function getImageDataArray()
 	Image393.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/rcam/RRA_399807021EDR_F0030530RHAZ00302M_.JPG";
 	Image393.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image393.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image393.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image393.mastAz = "182.044";
 	Image393.mastEl = "-43.5257";
 	Image393.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9458,6 +9852,7 @@ function getImageDataArray()
 	Image394.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807081EDR_F0030530NCAM00414M_.JPG";
 	Image394.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image394.cameraPosition = new THREE.Vector3(0.664395,0.350113,-1.95349);
+	Image394.cameraVector = new THREE.Vector3(0.41230707883322043,-0.8656317609198043,0.2840502195579069);
 	Image394.mastAz = "295.444";
 	Image394.mastEl = "-16.479";
 	Image394.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9482,6 +9877,7 @@ function getImageDataArray()
 	Image395.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807081EDR_F0030530NCAM00414M_.JPG";
 	Image395.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image395.cameraPosition = new THREE.Vector3(1.04965,0.526206,-1.95305);
+	Image395.cameraVector = new THREE.Vector3(0.40239239482740463,-0.8688036141742097,0.2885491995880372);
 	Image395.mastAz = "294.827";
 	Image395.mastEl = "-16.7474";
 	Image395.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9506,6 +9902,7 @@ function getImageDataArray()
 	Image396.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807115EDR_F0030530NCAM00414M_.JPG";
 	Image396.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image396.cameraPosition = new THREE.Vector3(1.03349,0.652312,-1.95451);
+	Image396.cameraVector = new THREE.Vector3(0.7824667793990191,-0.5569888305274169,0.27840470866102024);
 	Image396.mastAz = "324.531";
 	Image396.mastEl = "-16.1414";
 	Image396.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9530,6 +9927,7 @@ function getImageDataArray()
 	Image397.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807115EDR_F0030530NCAM00414M_.JPG";
 	Image397.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image397.cameraPosition = new THREE.Vector3(0.786081,0.308479,-1.95482);
+	Image397.cameraVector = new THREE.Vector3(0.7894677554042949,-0.5492949986504047,0.2738898823150573);
 	Image397.mastAz = "325.146";
 	Image397.mastEl = "-15.8728";
 	Image397.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9554,6 +9952,7 @@ function getImageDataArray()
 	Image398.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807144EDR_F0030530NCAM00414M_.JPG";
 	Image398.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image398.cameraPosition = new THREE.Vector3(0.914069,0.333074,-1.95555);
+	Image398.cameraVector = new THREE.Vector3(0.9602093172984248,-0.07947672800534517,0.2677340409414855);
 	Image398.mastAz = "355.244";
 	Image398.mastEl = "-15.5063";
 	Image398.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9578,6 +9977,7 @@ function getImageDataArray()
 	Image399.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807144EDR_F0030530NCAM00414M_.JPG";
 	Image399.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image399.cameraPosition = new THREE.Vector3(0.955739,0.754611,-1.95545);
+	Image399.cameraVector = new THREE.Vector3(0.9580387668272152,-0.08964399439442838,0.27226030839106957);
 	Image399.mastAz = "354.63";
 	Image399.mastEl = "-15.7752";
 	Image399.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9602,6 +10002,7 @@ function getImageDataArray()
 	Image400.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807171EDR_F0030530NCAM00414M_.JPG";
 	Image400.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image400.cameraPosition = new THREE.Vector3(1.01181,0.417051,-1.95547);
+	Image400.cameraVector = new THREE.Vector3(0.8734643892816321,0.40677030051497054,0.26757780789113633);
 	Image400.mastAz = "24.9467";
 	Image400.mastEl = "-15.4971";
 	Image400.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9626,6 +10027,7 @@ function getImageDataArray()
 	Image401.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807171EDR_F0030530NCAM00414M_.JPG";
 	Image401.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image401.cameraPosition = new THREE.Vector3(0.839189,0.803873,-1.95558);
+	Image401.cameraVector = new THREE.Vector3(0.8766161415338023,0.39686373763757277,0.2721090115206116);
 	Image401.mastAz = "24.333";
 	Image401.mastEl = "-15.7662";
 	Image401.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9650,6 +10052,7 @@ function getImageDataArray()
 	Image402.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807200EDR_F0030530NCAM00414M_.JPG";
 	Image402.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image402.cameraPosition = new THREE.Vector3(1.05534,0.539077,-1.95456);
+	Image402.cameraVector = new THREE.Vector3(0.5549301735751504,0.7856305853582514,0.27356367778911156);
 	Image402.mastAz = "54.74";
 	Image402.mastEl = "-15.8534";
 	Image402.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9674,6 +10077,7 @@ function getImageDataArray()
 	Image403.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807200EDR_F0030530NCAM00414M_.JPG";
 	Image403.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image403.cameraPosition = new THREE.Vector3(0.713373,0.789047,-1.95484);
+	Image403.cameraVector = new THREE.Vector3(0.562567607965292,0.7785770356785345,0.27809258527014974);
 	Image403.mastAz = "54.1253";
 	Image403.mastEl = "-16.1228";
 	Image403.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9698,6 +10102,7 @@ function getImageDataArray()
 	Image404.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807228EDR_F0030530NCAM00414M_.JPG";
 	Image404.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image404.cameraPosition = new THREE.Vector3(1.032,0.667699,-1.95306);
+	Image404.cameraVector = new THREE.Vector3(0.08758511551007804,0.954773070003582,0.28414297868682453);
 	Image404.mastAz = "84.734";
 	Image404.mastEl = "-16.4845";
 	Image404.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9722,6 +10127,7 @@ function getImageDataArray()
 	Image405.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807228EDR_F0030530NCAM00414M_.JPG";
 	Image405.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image405.cameraPosition = new THREE.Vector3(0.610869,0.713287,-1.95343);
+	Image405.cameraVector = new THREE.Vector3(0.09771904653383638,0.9524319016201471,0.28865976636994056);
 	Image405.mastAz = "84.1174";
 	Image405.mastEl = "-16.7541";
 	Image405.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9746,6 +10152,7 @@ function getImageDataArray()
 	Image406.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807263EDR_F0030530NCAM00414M_.JPG";
 	Image406.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image406.cameraPosition = new THREE.Vector3(0.947508,0.767231,-1.95138);
+	Image406.cameraVector = new THREE.Vector3(-0.3984935397742021,0.8679651422642772,0.2963771424593659);
 	Image406.mastAz = "114.636";
 	Image406.mastEl = "-17.217";
 	Image406.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9770,6 +10177,7 @@ function getImageDataArray()
 	Image407.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807263EDR_F0030530NCAM00414M_.JPG";
 	Image407.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image407.cameraPosition = new THREE.Vector3(0.559701,0.596831,-1.95172);
+	Image407.cameraVector = new THREE.Vector3(-0.3885176843025038,0.8709351373696437,0.3008753819758937);
 	Image407.mastAz = "114.017";
 	Image407.mastEl = "-17.4867";
 	Image407.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9794,6 +10202,7 @@ function getImageDataArray()
 	Image408.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807291EDR_F0030530NCAM00414M_.JPG";
 	Image408.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image408.cameraPosition = new THREE.Vector3(0.823655,0.811204,-1.94998);
+	Image408.cameraVector = new THREE.Vector3(-0.7771841231277099,0.5493546824787446,0.3069108528496349);
 	Image408.mastAz = "144.721";
 	Image408.mastEl = "-17.8501";
 	Image408.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9818,6 +10227,7 @@ function getImageDataArray()
 	Image409.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807291EDR_F0030530NCAM00414M_.JPG";
 	Image409.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image409.cameraPosition = new THREE.Vector3(0.573524,0.46935,-1.95018);
+	Image409.cameraVector = new THREE.Vector3(-0.7699998909071535,0.5568962511698506,0.3113948192182049);
 	Image409.mastAz = "144.099";
 	Image409.mastEl = "-18.1197";
 	Image409.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9842,6 +10252,7 @@ function getImageDataArray()
 	Image410.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807333EDR_F0030530NCAM00414M_.JPG";
 	Image410.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image410.cameraPosition = new THREE.Vector3(0.650273,0.365098,-1.9492);
+	Image410.cameraVector = new THREE.Vector3(-0.9437286889868455,0.09207878730227038,0.31764391779493134);
 	Image410.mastAz = "174.403";
 	Image410.mastEl = "-18.497";
 	Image410.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9866,6 +10277,7 @@ function getImageDataArray()
 	Image411.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807333EDR_F0030530NCAM00414M_.JPG";
 	Image411.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image411.cameraPosition = new THREE.Vector3(0.693675,0.78646,-1.9492);
+	Image411.cameraVector = new THREE.Vector3(-0.9461531450118601,0.08194341227027818,0.31317647320587355);
 	Image411.mastAz = "175.025";
 	Image411.mastEl = "-18.2277";
 	Image411.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9890,6 +10302,7 @@ function getImageDataArray()
 	Image412.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807408EDR_F0030530NCAM00417M_.JPG";
 	Image412.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image412.cameraPosition = new THREE.Vector3(0.580662,0.452594,-1.97068);
+	Image412.cameraVector = new THREE.Vector3(-0.06517268817107792,-0.9858899421958284,0.15418671341481194);
 	Image412.mastAz = "266.194";
 	Image412.mastEl = "-8.84643";
 	Image412.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9914,6 +10327,7 @@ function getImageDataArray()
 	Image413.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807408EDR_F0030530NCAM00417M_.JPG";
 	Image413.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image413.cameraPosition = new THREE.Vector3(1.00285,0.418137,-1.97015);
+	Image413.cameraVector = new THREE.Vector3(-0.07542344259728369,-0.9844245031797201,0.1588071215221019);
 	Image413.mastAz = "265.595";
 	Image413.mastEl = "-9.11396";
 	Image413.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9938,6 +10352,7 @@ function getImageDataArray()
 	Image414.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807459EDR_F0030530NCAM00415M_.JPG";
 	Image414.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image414.cameraPosition = new THREE.Vector3(0.824026,0.809124,-1.88008);
+	Image414.cameraVector = new THREE.Vector3(0.5925324480820479,0.33384542983508225,0.7331115378631852);
 	Image414.mastAz = "29.3631";
 	Image414.mastEl = "-47.1245";
 	Image414.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9962,6 +10377,7 @@ function getImageDataArray()
 	Image415.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807459EDR_F0030530NCAM00415M_.JPG";
 	Image415.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image415.cameraPosition = new THREE.Vector3(1.02884,0.438341,-1.87972);
+	Image415.cameraVector = new THREE.Vector3(0.5904692513180282,0.34450255529018997,0.729838374331233);
 	Image415.mastAz = "30.2261";
 	Image415.mastEl = "-46.8502";
 	Image415.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -9986,6 +10402,7 @@ function getImageDataArray()
 	Image416.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807487EDR_F0030530NCAM00415M_.JPG";
 	Image416.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image416.cameraPosition = new THREE.Vector3(1.05929,0.567695,-1.87961);
+	Image416.cameraVector = new THREE.Vector3(0.33655842127692365,0.5948634293555156,0.7299766636564351);
 	Image416.mastAz = "60.4649";
 	Image416.mastEl = "-46.8618";
 	Image416.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -10010,6 +10427,7 @@ function getImageDataArray()
 	Image417.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807487EDR_F0030530NCAM00415M_.JPG";
 	Image417.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image417.cameraPosition = new THREE.Vector3(0.695699,0.785026,-1.88013);
+	Image417.cameraVector = new THREE.Vector3(0.3437042478688381,0.586692483271608,0.7332525622659019);
 	Image417.mastAz = "59.602";
 	Image417.mastEl = "-47.1365";
 	Image417.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -10034,6 +10452,7 @@ function getImageDataArray()
 	Image418.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NLA_399807515EDR_F0030530NCAM00415M_.JPG";
 	Image418.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image418.cameraPosition = new THREE.Vector3(1.02102,0.693965,-1.87958);
+	Image418.cameraVector = new THREE.Vector3(-0.006012929551194457,0.6834587360539633,0.729964383233683);
 	Image418.mastAz = "90.4691";
 	Image418.mastEl = "-46.8605";
 	Image418.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -10058,6 +10477,7 @@ function getImageDataArray()
 	Image419.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00026/opgs/edr/ncam/NRA_399807515EDR_F0030530NCAM00415M_.JPG";
 	Image419.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image419.cameraPosition = new THREE.Vector3(0.597482,0.700418,-1.88016);
+	Image419.cameraVector = new THREE.Vector3(0.004260621955589929,0.67995774658937,0.7332389173752697);
 	Image419.mastAz = "89.6062";
 	Image419.mastEl = "-47.1353";
 	Image419.xyz = new THREE.Vector3(-19.1648,49.5493,1.68217);
@@ -10082,6 +10502,7 @@ function getImageDataArray()
 	Image420.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399888044EDR_F0030530CCAM01027M_.JPG";
 	Image420.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image420.cameraPosition = new THREE.Vector3;
+	Image420.cameraVector = new THREE.Vector3;
 	Image420.mastAz = "";
 	Image420.mastEl = "";
 	Image420.xyz = new THREE.Vector3;
@@ -10106,6 +10527,7 @@ function getImageDataArray()
 	Image421.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399888284EDR_F0030530CCAM01027M_.JPG";
 	Image421.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image421.cameraPosition = new THREE.Vector3;
+	Image421.cameraVector = new THREE.Vector3;
 	Image421.mastAz = "";
 	Image421.mastEl = "";
 	Image421.xyz = new THREE.Vector3;
@@ -10130,6 +10552,7 @@ function getImageDataArray()
 	Image422.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399888571EDR_F0030530CCAM01027M_.JPG";
 	Image422.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image422.cameraPosition = new THREE.Vector3;
+	Image422.cameraVector = new THREE.Vector3;
 	Image422.mastAz = "";
 	Image422.mastEl = "";
 	Image422.xyz = new THREE.Vector3;
@@ -10154,6 +10577,7 @@ function getImageDataArray()
 	Image423.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399888858EDR_F0030530CCAM01027M_.JPG";
 	Image423.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image423.cameraPosition = new THREE.Vector3;
+	Image423.cameraVector = new THREE.Vector3;
 	Image423.mastAz = "";
 	Image423.mastEl = "";
 	Image423.xyz = new THREE.Vector3;
@@ -10178,6 +10602,7 @@ function getImageDataArray()
 	Image424.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399889145EDR_F0030530CCAM01027M_.JPG";
 	Image424.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image424.cameraPosition = new THREE.Vector3;
+	Image424.cameraVector = new THREE.Vector3;
 	Image424.mastAz = "";
 	Image424.mastEl = "";
 	Image424.xyz = new THREE.Vector3;
@@ -10202,6 +10627,7 @@ function getImageDataArray()
 	Image425.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399889463EDR_F0030530CCAM01027M_.JPG";
 	Image425.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image425.cameraPosition = new THREE.Vector3;
+	Image425.cameraVector = new THREE.Vector3;
 	Image425.mastAz = "";
 	Image425.mastEl = "";
 	Image425.xyz = new THREE.Vector3;
@@ -10226,6 +10652,7 @@ function getImageDataArray()
 	Image426.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399889750EDR_F0030530CCAM01027M_.JPG";
 	Image426.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image426.cameraPosition = new THREE.Vector3;
+	Image426.cameraVector = new THREE.Vector3;
 	Image426.mastAz = "";
 	Image426.mastEl = "";
 	Image426.xyz = new THREE.Vector3;
@@ -10250,6 +10677,7 @@ function getImageDataArray()
 	Image427.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399890037EDR_F0030530CCAM01027M_.JPG";
 	Image427.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image427.cameraPosition = new THREE.Vector3;
+	Image427.cameraVector = new THREE.Vector3;
 	Image427.mastAz = "";
 	Image427.mastEl = "";
 	Image427.xyz = new THREE.Vector3;
@@ -10274,6 +10702,7 @@ function getImageDataArray()
 	Image428.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399890324EDR_F0030530CCAM01027M_.JPG";
 	Image428.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image428.cameraPosition = new THREE.Vector3;
+	Image428.cameraVector = new THREE.Vector3;
 	Image428.mastAz = "";
 	Image428.mastEl = "";
 	Image428.xyz = new THREE.Vector3;
@@ -10298,6 +10727,7 @@ function getImageDataArray()
 	Image429.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399890612EDR_F0030530CCAM01027M_.JPG";
 	Image429.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image429.cameraPosition = new THREE.Vector3;
+	Image429.cameraVector = new THREE.Vector3;
 	Image429.mastAz = "";
 	Image429.mastEl = "";
 	Image429.xyz = new THREE.Vector3;
@@ -10322,6 +10752,7 @@ function getImageDataArray()
 	Image430.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399890787EDR_F0030530CCAM02027M_.JPG";
 	Image430.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image430.cameraPosition = new THREE.Vector3;
+	Image430.cameraVector = new THREE.Vector3;
 	Image430.mastAz = "";
 	Image430.mastEl = "";
 	Image430.xyz = new THREE.Vector3;
@@ -10346,6 +10777,7 @@ function getImageDataArray()
 	Image431.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00027/opgs/edr/ccam/CR0_399891429EDR_F0030530CCAM02027M_.JPG";
 	Image431.attitude = new THREE.Quaternion(0.923045,0.00667759,-0.0103687,0.384495);
 	Image431.cameraPosition = new THREE.Vector3;
+	Image431.cameraVector = new THREE.Vector3;
 	Image431.mastAz = "";
 	Image431.mastEl = "";
 	Image431.xyz = new THREE.Vector3;
@@ -10370,6 +10802,7 @@ function getImageDataArray()
 	Image432.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/fcam/FLA_400066496EDR_F0030872FHAZ00301M_.JPG";
 	Image432.attitude = new THREE.Quaternion(0.36421,-0.0104626,-0.0154,0.931131);
 	Image432.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image432.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image432.mastAz = "1.03995";
 	Image432.mastEl = "-43.4728";
 	Image432.xyz = new THREE.Vector3(-41.6611,65.202,1.66193);
@@ -10394,6 +10827,7 @@ function getImageDataArray()
 	Image433.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/fcam/FRA_400066496EDR_F0030872FHAZ00301M_.JPG";
 	Image433.attitude = new THREE.Quaternion(0.36421,-0.0104626,-0.0154,0.931131);
 	Image433.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image433.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image433.mastAz = "359.974";
 	Image433.mastEl = "-43.7598";
 	Image433.xyz = new THREE.Vector3(-41.6611,65.202,1.66193);
@@ -10418,6 +10852,7 @@ function getImageDataArray()
 	Image434.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400066545EDR_F0030872NCAM00302M_.JPG";
 	Image434.attitude = new THREE.Quaternion(0.36421,-0.0104626,-0.0154,0.931131);
 	Image434.cameraPosition = new THREE.Vector3(1.0526,0.54342,-1.86612);
+	Image434.cameraVector = new THREE.Vector3(0.2971996707182161,-0.5249634142364917,0.7975498538888648);
 	Image434.mastAz = "299.477";
 	Image434.mastEl = "-52.8731";
 	Image434.xyz = new THREE.Vector3(-41.6611,65.202,1.66193);
@@ -10442,6 +10877,7 @@ function getImageDataArray()
 	Image435.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400066545EDR_F0030872NCAM00302M_.JPG";
 	Image435.attitude = new THREE.Quaternion(0.36421,-0.0104626,-0.0154,0.931131);
 	Image435.cameraPosition = new THREE.Vector3(0.68235,0.337647,-1.86631);
+	Image435.cameraVector = new THREE.Vector3(0.3080061728559819,-0.5231415371338726,0.7946415101212747);
 	Image435.mastAz = "300.449";
 	Image435.mastEl = "-52.5985";
 	Image435.xyz = new THREE.Vector3(-41.6611,65.202,1.66193);
@@ -10466,6 +10902,7 @@ function getImageDataArray()
 	Image436.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400066580EDR_F0030872NCAM00302M_.JPG";
 	Image436.attitude = new THREE.Quaternion(0.36421,-0.0104626,-0.0154,0.931131);
 	Image436.cameraPosition = new THREE.Vector3(0.808866,0.306281,-1.86624);
+	Image436.cameraVector = new THREE.Vector3(0.5276458153107303,-0.3004136175705705,0.7945700422009613);
 	Image436.mastAz = "330.306";
 	Image436.mastEl = "-52.592";
 	Image436.xyz = new THREE.Vector3(-41.6611,65.202,1.66193);
@@ -10490,6 +10927,7 @@ function getImageDataArray()
 	Image437.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400066580EDR_F0030872NCAM00302M_.JPG";
 	Image437.attitude = new THREE.Quaternion(0.36421,-0.0104626,-0.0154,0.931131);
 	Image437.cameraPosition = new THREE.Vector3(1.0277,0.668966,-1.86621);
+	Image437.cameraVector = new THREE.Vector3(0.5191757811699358,-0.3073675896861812,0.797484591109505);
 	Image437.mastAz = "329.334";
 	Image437.mastEl = "-52.8669";
 	Image437.xyz = new THREE.Vector3(-41.6611,65.202,1.66193);
@@ -10514,6 +10952,7 @@ function getImageDataArray()
 	Image438.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400066615EDR_F0030872NCAM00302M_.JPG";
 	Image438.attitude = new THREE.Quaternion(0.36421,-0.0104626,-0.0154,0.931131);
 	Image438.cameraPosition = new THREE.Vector3(0.942436,0.766308,-1.86632);
+	Image438.cameraVector = new THREE.Vector3(0.6033459083651295,-0.004470888798553493,0.7974670689203457);
 	Image438.mastAz = "359.536";
 	Image438.mastEl = "-52.8654";
 	Image438.xyz = new THREE.Vector3(-41.6611,65.202,1.66193);
@@ -10538,6 +10977,7 @@ function getImageDataArray()
 	Image439.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400066615EDR_F0030872NCAM00302M_.JPG";
 	Image439.attitude = new THREE.Quaternion(0.36421,-0.0104626,-0.0154,0.931131);
 	Image439.cameraPosition = new THREE.Vector3(0.935476,0.342774,-1.86614);
+	Image439.cameraVector = new THREE.Vector3(0.6071738170368417,0.005797008942173072,0.7945478906851594);
 	Image439.mastAz = "0.507474";
 	Image439.mastEl = "-52.59";
 	Image439.xyz = new THREE.Vector3(-41.6611,65.202,1.66193);
@@ -10562,6 +11002,7 @@ function getImageDataArray()
 	Image440.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400069880EDR_F0030888SAPP07712M_.JPG";
 	Image440.attitude = new THREE.Quaternion(0.497567,0.01213,0.0306157,-0.8668);
 	Image440.cameraPosition = new THREE.Vector3(1.00868,0.491901,-2.04565);
+	Image440.cameraVector = new THREE.Vector3(0.1065405806293702,0.4859505550989112,-0.8674682488011976);
 	Image440.mastAz = "77.588";
 	Image440.mastEl = "60.1895";
 	Image440.xyz = new THREE.Vector3(-43.8559,67.1969,1.73461);
@@ -10586,6 +11027,7 @@ function getImageDataArray()
 	Image441.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400069948EDR_F0030888SAPP07712M_.JPG";
 	Image441.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image441.cameraPosition = new THREE.Vector3(0.556373,0.598653,-1.85525);
+	Image441.cameraVector = new THREE.Vector3(-0.3373766494582987,-0.4206420443210061,0.8421622569016834);
 	Image441.mastAz = "231.224";
 	Image441.mastEl = "-57.3467";
 	Image441.xyz = new THREE.Vector3(-43.8559,67.1969,1.73461);
@@ -10610,6 +11052,7 @@ function getImageDataArray()
 	Image442.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/fcam/FRA_400070892EDR_F0040000FHAZ00302M_.JPG";
 	Image442.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image442.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image442.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image442.mastAz = "359.974";
 	Image442.mastEl = "-43.7598";
 	Image442.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10634,6 +11077,7 @@ function getImageDataArray()
 	Image443.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/fcam/FLA_400070892EDR_F0040000FHAZ00302M_.JPG";
 	Image443.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image443.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image443.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image443.mastAz = "1.03995";
 	Image443.mastEl = "-43.4728";
 	Image443.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10658,6 +11102,7 @@ function getImageDataArray()
 	Image444.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/rcam/RLA_400070919EDR_F0040000RHAZ00303M_.JPG";
 	Image444.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image444.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image444.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image444.mastAz = "182.571";
 	Image444.mastEl = "-44.9097";
 	Image444.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10682,6 +11127,7 @@ function getImageDataArray()
 	Image445.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/rcam/RRA_400070919EDR_F0040000RHAZ00303M_.JPG";
 	Image445.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image445.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image445.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image445.mastAz = "182.044";
 	Image445.mastEl = "-43.5257";
 	Image445.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10706,6 +11152,7 @@ function getImageDataArray()
 	Image446.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400070989EDR_F0040000NCAM00408M_.JPG";
 	Image446.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image446.cameraPosition = new THREE.Vector3(0.953758,0.759508,-1.87297);
+	Image446.cameraVector = new THREE.Vector3(0.6408848076917771,-0.03520960693517295,0.7668291510169291);
 	Image446.mastAz = "356.819";
 	Image446.mastEl = "-50.0465";
 	Image446.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10730,6 +11177,7 @@ function getImageDataArray()
 	Image447.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400070989EDR_F0040000NCAM00408M_.JPG";
 	Image447.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image447.cameraPosition = new THREE.Vector3(0.926988,0.336763,-1.87283);
+	Image447.cameraVector = new THREE.Vector3(0.6450393924878057,-0.025123076261668282,0.7637362196322192);
 	Image447.mastAz = "357.732";
 	Image447.mastEl = "-49.7719";
 	Image447.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10754,6 +11202,7 @@ function getImageDataArray()
 	Image448.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071025EDR_F0040000NCAM00408M_.JPG";
 	Image448.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image448.cameraPosition = new THREE.Vector3(1.02618,0.435735,-1.87076);
+	Image448.cameraVector = new THREE.Vector3(0.5498007784259684,0.316755478476783,0.7729068966551814);
 	Image448.mastAz = "29.9097";
 	Image448.mastEl = "-50.5929";
 	Image448.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10778,6 +11227,7 @@ function getImageDataArray()
 	Image449.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071025EDR_F0040000NCAM00408M_.JPG";
 	Image449.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image449.cameraPosition = new THREE.Vector3(0.82411,0.808025,-1.87113);
+	Image449.cameraVector = new THREE.Vector3(0.5516048566989782,0.3059841828525376,0.7759547421790556);
 	Image449.mastAz = "28.9804";
 	Image449.mastEl = "-50.8682";
 	Image449.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10802,6 +11252,7 @@ function getImageDataArray()
 	Image450.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071053EDR_F0040000NCAM00408M_.JPG";
 	Image450.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image450.cameraPosition = new THREE.Vector3(0.687978,0.780003,-1.87179);
+	Image450.cameraVector = new THREE.Vector3(0.3032734403604102,0.5568156761984381,0.7732926503670113);
 	Image450.mastAz = "61.3874";
 	Image450.mastEl = "-50.6272";
 	Image450.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10826,6 +11277,7 @@ function getImageDataArray()
 	Image451.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071053EDR_F0040000NCAM00408M_.JPG";
 	Image451.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image451.cameraPosition = new THREE.Vector3(1.05801,0.573826,-1.87124);
+	Image451.cameraVector = new THREE.Vector3(0.2959762027355673,0.5649338240170542,0.7702258512252771);
 	Image451.mastAz = "62.3118";
 	Image451.mastEl = "-50.3516";
 	Image451.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10850,6 +11302,7 @@ function getImageDataArray()
 	Image452.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071081EDR_F0040000NCAM00408M_.JPG";
 	Image452.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image452.cameraPosition = new THREE.Vector3(1.01267,0.705482,-1.87417);
+	Image452.cameraVector = new THREE.Vector3(-0.045461236482040875,0.6526949864401446,0.7562555987583982);
 	Image452.mastAz = "93.9477";
 	Image452.mastEl = "-49.1124";
 	Image452.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10874,6 +11327,7 @@ function getImageDataArray()
 	Image453.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071081EDR_F0040000NCAM00408M_.JPG";
 	Image453.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image453.cameraPosition = new THREE.Vector3(0.589496,0.686707,-1.87476);
+	Image453.cameraVector = new THREE.Vector3(-0.034991569642865865,0.6496859179650767,0.7593969963410468);
 	Image453.mastAz = "93.0466";
 	Image453.mastEl = "-49.3878";
 	Image453.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10898,6 +11352,7 @@ function getImageDataArray()
 	Image454.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071109EDR_F0040000NCAM00408M_.JPG";
 	Image454.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image454.cameraPosition = new THREE.Vector3(0.554134,0.559833,-1.87916);
+	Image454.cameraVector = new THREE.Vector3(-0.3750624776928197,0.5610059259476712,0.737970520331618);
 	Image454.mastAz = "123.73";
 	Image454.mastEl = "-47.5353";
 	Image454.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10922,6 +11377,7 @@ function getImageDataArray()
 	Image455.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071109EDR_F0040000NCAM00408M_.JPG";
 	Image455.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image455.cameraPosition = new THREE.Vector3(0.908353,0.792123,-1.87865);
+	Image455.cameraVector = new THREE.Vector3(-0.38554386882747677,0.5581622012843742,0.734718233247905);
 	Image455.mastAz = "124.599";
 	Image455.mastEl = "-47.2606";
 	Image455.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10946,6 +11402,7 @@ function getImageDataArray()
 	Image456.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071177EDR_F0040000NCAM00302M_.JPG";
 	Image456.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image456.cameraPosition = new THREE.Vector3(0.683453,0.337049,-1.86627);
+	Image456.cameraVector = new THREE.Vector3(0.3105194351394702,-0.5214300521411892,0.7947882618186437);
 	Image456.mastAz = "300.735";
 	Image456.mastEl = "-52.6124";
 	Image456.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10970,6 +11427,7 @@ function getImageDataArray()
 	Image457.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071177EDR_F0040000NCAM00302M_.JPG";
 	Image457.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image457.cameraPosition = new THREE.Vector3(1.05268,0.544665,-1.86609);
+	Image457.cameraVector = new THREE.Vector3(0.2997238172833587,-0.5233084384979007,0.7976928679322519);
 	Image457.mastAz = "299.763";
 	Image457.mastEl = "-52.887";
 	Image457.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -10994,6 +11452,7 @@ function getImageDataArray()
 	Image458.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071212EDR_F0040000NCAM00302M_.JPG";
 	Image458.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image458.cameraPosition = new THREE.Vector3(1.0277,0.668976,-1.86622);
+	Image458.cameraVector = new THREE.Vector3(0.5192084354732025,-0.3073537862363169,0.7974686518100067);
 	Image458.mastAz = "329.337";
 	Image458.mastEl = "-52.8656";
 	Image458.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11018,6 +11477,7 @@ function getImageDataArray()
 	Image459.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071212EDR_F0040000NCAM00302M_.JPG";
 	Image459.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image459.cameraPosition = new THREE.Vector3(0.808879,0.30628,-1.86625);
+	Image459.cameraVector = new THREE.Vector3(0.5276741790655955,-0.3003961762392365,0.7945578003193319);
 	Image459.mastAz = "330.308";
 	Image459.mastEl = "-52.5906";
 	Image459.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11042,6 +11502,7 @@ function getImageDataArray()
 	Image460.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071247EDR_F0040000NCAM00302M_.JPG";
 	Image460.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image460.cameraPosition = new THREE.Vector3(0.935486,0.34278,-1.86614);
+	Image460.cameraVector = new THREE.Vector3(0.6071736168815692,0.005826204694900229,0.7945478300906789);
 	Image460.mastAz = "0.51023";
 	Image460.mastEl = "-52.59";
 	Image460.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11066,6 +11527,7 @@ function getImageDataArray()
 	Image461.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071247EDR_F0040000NCAM00302M_.JPG";
 	Image461.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image461.cameraPosition = new THREE.Vector3(0.942426,0.766315,-1.86632);
+	Image461.cameraVector = new THREE.Vector3(0.6033459689695254,-0.0044418994263368435,0.7974671850663893);
 	Image461.mastAz = "359.539";
 	Image461.mastEl = "-52.8654";
 	Image461.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11090,6 +11552,7 @@ function getImageDataArray()
 	Image462.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071303EDR_F0040000NCAM00409M_.JPG";
 	Image462.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image462.cameraPosition = new THREE.Vector3(0.79605,0.810741,-1.95564);
+	Image462.cameraVector = new THREE.Vector3(-0.8462420707597624,0.4615439688941776,0.2661794929246794);
 	Image462.mastAz = "151.367";
 	Image462.mastEl = "-15.414";
 	Image462.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11114,6 +11577,7 @@ function getImageDataArray()
 	Image463.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071303EDR_F0040000NCAM00409M_.JPG";
 	Image463.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image463.cameraPosition = new THREE.Vector3(0.587262,0.442179,-1.95578);
+	Image463.cameraVector = new THREE.Vector3(-0.840147264501284,0.46996431321652316,0.27071408950021664);
 	Image463.mastAz = "150.754";
 	Image463.mastEl = "-15.6832";
 	Image463.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11138,6 +11602,7 @@ function getImageDataArray()
 	Image464.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071397EDR_F0040000NCAM00409M_.JPG";
 	Image464.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image464.cameraPosition = new THREE.Vector3(0.673021,0.772924,-1.95918);
+	Image464.cameraVector = new THREE.Vector3(-0.9703041100287623,-0.02264156351246761,0.24082627278393504);
 	Image464.mastAz = "181.312";
 	Image464.mastEl = "-13.9122";
 	Image464.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11162,6 +11627,7 @@ function getImageDataArray()
 	Image465.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071397EDR_F0040000NCAM00409M_.JPG";
 	Image465.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image465.cameraPosition = new THREE.Vector3(0.676187,0.349344,-1.9591);
+	Image465.cameraVector = new THREE.Vector3(-0.9693477866556466,-0.012303711376882588,0.24538436623418627);
 	Image465.mastAz = "180.703";
 	Image465.mastEl = "-14.1809";
 	Image465.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11186,6 +11652,7 @@ function getImageDataArray()
 	Image466.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071431EDR_F0040000NCAM00409M_.JPG";
 	Image466.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image466.cameraPosition = new THREE.Vector3(0.586524,0.682531,-1.96103);
+	Image466.cameraVector = new THREE.Vector3(-0.8399862057693058,-0.4924973099936934,0.22774892703646518);
 	Image466.mastAz = "210.359";
 	Image466.mastEl = "-13.1415";
 	Image466.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11210,6 +11677,7 @@ function getImageDataArray()
 	Image467.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071431EDR_F0040000NCAM00409M_.JPG";
 	Image467.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image467.cameraPosition = new THREE.Vector3(0.795011,0.3138,-1.96074);
+	Image467.cameraVector = new THREE.Vector3(-0.8442259142081184,-0.48302384544609894,0.2323156699620793);
 	Image467.mastAz = "209.752";
 	Image467.mastEl = "-13.4098";
 	Image467.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11234,6 +11702,7 @@ function getImageDataArray()
 	Image468.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071465EDR_F0040000NCAM00409M_.JPG";
 	Image468.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image468.cameraPosition = new THREE.Vector3(0.554081,0.557923,-1.96064);
+	Image468.cameraVector = new THREE.Vector3(-0.48441086141606016,-0.8437126551690756,0.23129001891499515);
 	Image468.mastAz = "240.114";
 	Image468.mastEl = "-13.3499";
 	Image468.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11258,6 +11727,7 @@ function getImageDataArray()
 	Image469.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071465EDR_F0040000NCAM00409M_.JPG";
 	Image469.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image469.cameraPosition = new THREE.Vector3(0.918094,0.341303,-1.9602);
+	Image469.cameraVector = new THREE.Vector3(-0.4927836878235937,-0.8375793693468565,0.2358496068673872);
 	Image469.mastAz = "239.506";
 	Image469.mastEl = "-13.618";
 	Image469.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11282,6 +11752,7 @@ function getImageDataArray()
 	Image470.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071499EDR_F0040000NCAM00409M_.JPG";
 	Image470.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image470.cameraPosition = new THREE.Vector3(0.587354,0.433598,-1.95808);
+	Image470.cameraVector = new THREE.Vector3(-0.005407454359083785,-0.9680733087361446,0.2506089151447079);
 	Image470.mastAz = "269.656";
 	Image470.mastEl = "-14.4905";
 	Image470.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11306,6 +11777,7 @@ function getImageDataArray()
 	Image471.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071499EDR_F0040000NCAM00409M_.JPG";
 	Image471.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image471.cameraPosition = new THREE.Vector3(1.01085,0.424607,-1.95758);
+	Image471.cameraVector = new THREE.Vector3(-0.015716950011804464,-0.966774775431847,0.25514605830980125);
 	Image471.mastAz = "269.044";
 	Image471.mastEl = "-14.7586";
 	Image471.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11330,6 +11802,7 @@ function getImageDataArray()
 	Image472.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071534EDR_F0040000NCAM00419M_.JPG";
 	Image472.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image472.cameraPosition = new THREE.Vector3(0.678661,0.341343,-1.95396);
+	Image472.cameraVector = new THREE.Vector3(0.4699182486842086,-0.8369404530664775,0.28054860109158497);
 	Image472.mastAz = "299.288";
 	Image472.mastEl = "-16.2699";
 	Image472.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11354,6 +11827,7 @@ function getImageDataArray()
 	Image473.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071534EDR_F0040000NCAM00419M_.JPG";
 	Image473.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image473.cameraPosition = new THREE.Vector3(1.05124,0.542869,-1.95354);
+	Image473.cameraVector = new THREE.Vector3(0.4602456672014784,-0.8407848074005093,0.2850523346102507);
 	Image473.mastAz = "298.672";
 	Image473.mastEl = "-16.5383";
 	Image473.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11378,6 +11852,7 @@ function getImageDataArray()
 	Image474.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071562EDR_F0040000NCAM00419M_.JPG";
 	Image474.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image474.cameraPosition = new THREE.Vector3(1.02763,0.667913,-1.94909);
+	Image474.cameraVector = new THREE.Vector3(0.8109112248562075,-0.49154739159816646,0.31749668851067464);
 	Image474.mastAz = "328.752";
 	Image474.mastEl = "-18.488";
 	Image474.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11402,6 +11877,7 @@ function getImageDataArray()
 	Image475.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071562EDR_F0040000NCAM00419M_.JPG";
 	Image475.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image475.cameraPosition = new THREE.Vector3(0.806185,0.306815,-1.94936);
+	Image475.cameraVector = new THREE.Vector3(0.8174819010395707,-0.48345857487302163,0.31303537795986636);
 	Image475.mastAz = "329.375";
 	Image475.mastEl = "-18.2191";
 	Image475.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11426,6 +11902,7 @@ function getImageDataArray()
 	Image476.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071597EDR_F0040000NCAM00419M_.JPG";
 	Image476.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image476.cameraPosition = new THREE.Vector3(0.934624,0.342174,-1.94554);
+	Image476.cameraVector = new THREE.Vector3(0.9407240086125349,-0.004266290433495605,0.3391461902865787);
 	Image476.mastAz = "359.715";
 	Image476.mastEl = "-19.8018";
 	Image476.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11450,6 +11927,7 @@ function getImageDataArray()
 	Image477.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071597EDR_F0040000NCAM00419M_.JPG";
 	Image477.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image477.cameraPosition = new THREE.Vector3(0.943479,0.765673,-1.9455);
+	Image477.cameraVector = new THREE.Vector3(0.9390119156078064,-0.014563410657500029,0.3435760897044188);
 	Image477.mastAz = "359.086";
 	Image477.mastEl = "-20.0712";
 	Image477.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11474,6 +11952,7 @@ function getImageDataArray()
 	Image478.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071632EDR_F0040000NCAM00419M_.JPG";
 	Image478.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image478.cameraPosition = new THREE.Vector3(1.02732,0.438451,-1.94354);
+	Image478.cameraVector = new THREE.Vector3(0.8085845410161643,0.471317726051585,0.3522082354790159);
 	Image478.mastAz = "30.2123";
 	Image478.mastEl = "-20.5994";
 	Image478.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11498,6 +11977,7 @@ function getImageDataArray()
 	Image479.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071632EDR_F0040000NCAM00419M_.JPG";
 	Image479.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image479.cameraPosition = new THREE.Vector3(0.820127,0.807912,-1.94372);
+	Image479.cameraVector = new THREE.Vector3(0.8122786475470036,0.46154520061372484,0.3566222462629713);
 	Image479.mastAz = "29.5806";
 	Image479.mastEl = "-20.8693";
 	Image479.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11522,6 +12002,7 @@ function getImageDataArray()
 	Image480.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071660EDR_F0040000NCAM00419M_.JPG";
 	Image480.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image480.cameraPosition = new THREE.Vector3(0.690708,0.780773,-1.94434);
+	Image480.cameraVector = new THREE.Vector3(0.46227627060246546,0.8134813730921577,0.3529145863661261);
 	Image480.mastAz = "60.3665";
 	Image480.mastEl = "-20.6421";
 	Image480.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11546,6 +12027,7 @@ function getImageDataArray()
 	Image481.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071660EDR_F0040000NCAM00419M_.JPG";
 	Image481.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image481.cameraPosition = new THREE.Vector3(1.05778,0.569374,-1.944);
+	Image481.cameraVector = new THREE.Vector3(0.4540986845658321,0.8199679394953149,0.3484924143728073);
 	Image481.mastAz = "60.9971";
 	Image481.mastEl = "-20.372";
 	Image481.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11570,6 +12052,7 @@ function getImageDataArray()
 	Image482.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071695EDR_F0040000NCAM00419M_.JPG";
 	Image482.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image482.cameraPosition = new THREE.Vector3(1.01782,0.695527,-1.94677);
+	Image482.cameraVector = new THREE.Vector3(-0.024107769015372857,0.944029131907335,0.32897995924278634);
 	Image482.mastAz = "91.4378";
 	Image482.mastEl = "-19.1838";
 	Image482.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11594,6 +12077,7 @@ function getImageDataArray()
 	Image483.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071695EDR_F0040000NCAM00419M_.JPG";
 	Image483.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image483.cameraPosition = new THREE.Vector3(0.594249,0.69177,-1.94716);
+	Image483.cameraVector = new THREE.Vector3(-0.013769485415979601,0.9426729520677862,0.33343381158962354);
 	Image483.mastAz = "90.8119";
 	Image483.mastEl = "-19.4538";
 	Image483.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11618,6 +12102,7 @@ function getImageDataArray()
 	Image484.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071730EDR_F0040000NCAM00419M_.JPG";
 	Image484.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image484.cameraPosition = new THREE.Vector3(0.92129,0.783096,-1.951);
+	Image484.cameraVector = new THREE.Vector3(-0.49995289474504556,0.8127283880778934,0.2991983794213434);
 	Image484.mastAz = "121.573";
 	Image484.mastEl = "-17.3864";
 	Image484.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11642,6 +12127,7 @@ function getImageDataArray()
 	Image485.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071730EDR_F0040000NCAM00419M_.JPG";
 	Image485.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image485.cameraPosition = new THREE.Vector3(0.556905,0.567103,-1.95132);
+	Image485.cameraVector = new THREE.Vector3(-0.4904032063605673,0.8168686904894279,0.30369431619535164);
 	Image485.mastAz = "120.954";
 	Image485.mastEl = "-17.656";
 	Image485.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11666,6 +12152,7 @@ function getImageDataArray()
 	Image486.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071772EDR_F0040000NCAM00418M_.JPG";
 	Image486.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image486.cameraPosition = new THREE.Vector3(0.586462,0.435478,-1.88362);
+	Image486.cameraVector = new THREE.Vector3(-0.6257948702453546,0.31079408829140553,0.715393468699368);
 	Image486.mastAz = "153.555";
 	Image486.mastEl = "-45.6521";
 	Image486.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11690,6 +12177,7 @@ function getImageDataArray()
 	Image487.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071772EDR_F0040000NCAM00418M_.JPG";
 	Image487.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image487.cameraPosition = new THREE.Vector3(0.777949,0.813317,-1.88328);
+	Image487.cameraVector = new THREE.Vector3(-0.6333710527113312,0.30305628150409475,0.712037920217913);
 	Image487.mastAz = "154.396";
 	Image487.mastEl = "-45.3781";
 	Image487.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11714,6 +12202,7 @@ function getImageDataArray()
 	Image488.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071866EDR_F0040000NCAM00418M_.JPG";
 	Image488.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image488.cameraPosition = new THREE.Vector3(0.65865,0.769314,-1.8871);
+	Image488.cameraVector = new THREE.Vector3(-0.7198157267679348,-0.0388438992572675,0.6930775360578648);
 	Image488.mastAz = "183.056";
 	Image488.mastEl = "-43.8515";
 	Image488.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11738,6 +12227,7 @@ function getImageDataArray()
 	Image489.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071866EDR_F0040000NCAM00418M_.JPG";
 	Image489.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image489.cameraPosition = new THREE.Vector3(0.6723,0.345942,-1.88722);
+	Image489.cameraVector = new THREE.Vector3(-0.7169762131947178,-0.028418252527738087,0.6965181351811538);
 	Image489.mastAz = "182.237";
 	Image489.mastEl = "-44.1247";
 	Image489.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11762,6 +12252,7 @@ function getImageDataArray()
 	Image490.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071900EDR_F0040000NCAM00418M_.JPG";
 	Image490.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image490.cameraPosition = new THREE.Vector3(0.577301,0.676786,-1.88896);
+	Image490.cameraVector = new THREE.Vector3(-0.6260639259394489,-0.3745816350867929,0.6839097596123254);
 	Image490.mastAz = "210.86";
 	Image490.mastEl = "-43.1271";
 	Image490.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11786,6 +12277,7 @@ function getImageDataArray()
 	Image491.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071900EDR_F0040000NCAM00418M_.JPG";
 	Image491.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image491.cameraPosition = new THREE.Vector3(0.787114,0.308807,-1.88888);
+	Image491.cameraVector = new THREE.Vector3(-0.6284628549388558,-0.3640577672750347,0.687383722566093);
 	Image491.mastAz = "210.05";
 	Image491.mastEl = "-43.3998";
 	Image491.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11810,6 +12302,7 @@ function getImageDataArray()
 	Image492.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071934EDR_F0040000NCAM00418M_.JPG";
 	Image492.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image492.cameraPosition = new THREE.Vector3(0.9083,0.330696,-1.8883);
+	Image492.cameraVector = new THREE.Vector3(-0.3789184205024386,-0.6166854063004295,0.6900144493124847);
 	Image492.mastAz = "238.399";
 	Image492.mastEl = "-43.6076";
 	Image492.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11834,6 +12327,7 @@ function getImageDataArray()
 	Image493.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071934EDR_F0040000NCAM00418M_.JPG";
 	Image493.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image493.cameraPosition = new THREE.Vector3(0.54885,0.554807,-1.88853);
+	Image493.cameraVector = new THREE.Vector3(-0.3718127009322123,-0.6248162725263029,0.6865565825274929);
 	Image493.mastAz = "239.211";
 	Image493.mastEl = "-43.3351";
 	Image493.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11858,6 +12352,7 @@ function getImageDataArray()
 	Image494.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400071968EDR_F0040000NCAM00418M_.JPG";
 	Image494.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image494.cameraPosition = new THREE.Vector3(1.00466,0.408022,-1.88558);
+	Image494.cameraVector = new THREE.Vector3(-0.03905892042531569,-0.7092306497371718,0.7038936611510277);
 	Image494.mastAz = "266.815";
 	Image494.mastEl = "-44.7168";
 	Image494.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11882,6 +12377,7 @@ function getImageDataArray()
 	Image495.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400071968EDR_F0040000NCAM00418M_.JPG";
 	Image495.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image495.cameraPosition = new THREE.Vector3(0.58187,0.43407,-1.88587);
+	Image495.cameraVector = new THREE.Vector3(-0.028943093051651943,-0.7130644739998958,0.7005007874969557);
 	Image495.mastAz = "267.642";
 	Image495.mastEl = "-44.4443";
 	Image495.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11906,6 +12402,7 @@ function getImageDataArray()
 	Image496.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400072002EDR_F0040000NCAM00418M_.JPG";
 	Image496.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image496.cameraPosition = new THREE.Vector3(0.669972,0.342652,-1.88161);
+	Image496.cameraVector = new THREE.Vector3(0.3102924892859668,-0.6184793795309346,0.7219430920701078);
 	Image496.mastAz = "296.609";
 	Image496.mastEl = "-46.1922";
 	Image496.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11930,6 +12427,7 @@ function getImageDataArray()
 	Image497.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400072002EDR_F0040000NCAM00418M_.JPG";
 	Image497.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image497.cameraPosition = new THREE.Vector3(1.05262,0.524333,-1.88138);
+	Image497.cameraVector = new THREE.Vector3(0.2995398916728729,-0.6199221008811565,0.7252395756821995);
 	Image497.mastAz = "295.755";
 	Image497.mastEl = "-46.4652";
 	Image497.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11954,6 +12452,7 @@ function getImageDataArray()
 	Image498.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NLA_400072037EDR_F0040000NCAM00418M_.JPG";
 	Image498.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image498.cameraPosition = new THREE.Vector3(0.795679,0.304959,-1.87682);
+	Image498.cameraVector = new THREE.Vector3(0.5575240413871947,-0.36589531282532595,0.7451761961628582);
 	Image498.mastAz = "326.688";
 	Image498.mastEl = "-48.1515";
 	Image498.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -11978,6 +12477,7 @@ function getImageDataArray()
 	Image499.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00029/opgs/edr/ncam/NRA_400072037EDR_F0040000NCAM00418M_.JPG";
 	Image499.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image499.cameraPosition = new THREE.Vector3(1.03615,0.653674,-1.87674);
+	Image499.cameraVector = new THREE.Vector3(0.5488420471013432,-0.3724567926086505,0.7483637785016615);
 	Image499.mastAz = "325.803";
 	Image499.mastEl = "-48.4253";
 	Image499.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12002,6 +12502,7 @@ function getImageDataArray()
 	Image500.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ccam/CR0_400154475EDR_F0040000CCAM01030M_.JPG";
 	Image500.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image500.cameraPosition = new THREE.Vector3;
+	Image500.cameraVector = new THREE.Vector3;
 	Image500.mastAz = "";
 	Image500.mastEl = "";
 	Image500.xyz = new THREE.Vector3;
@@ -12026,6 +12527,7 @@ function getImageDataArray()
 	Image501.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ccam/CR0_400155651EDR_F0040000CCAM03030M_.JPG";
 	Image501.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image501.cameraPosition = new THREE.Vector3;
+	Image501.cameraVector = new THREE.Vector3;
 	Image501.mastAz = "";
 	Image501.mastEl = "";
 	Image501.xyz = new THREE.Vector3;
@@ -12050,6 +12552,7 @@ function getImageDataArray()
 	Image502.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ccam/CR0_400155720EDR_F0040000CCAM03030M_.JPG";
 	Image502.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image502.cameraPosition = new THREE.Vector3;
+	Image502.cameraVector = new THREE.Vector3;
 	Image502.mastAz = "";
 	Image502.mastEl = "";
 	Image502.xyz = new THREE.Vector3;
@@ -12074,6 +12577,7 @@ function getImageDataArray()
 	Image503.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ccam/CR0_400155789EDR_F0040000CCAM03030M_.JPG";
 	Image503.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image503.cameraPosition = new THREE.Vector3;
+	Image503.cameraVector = new THREE.Vector3;
 	Image503.mastAz = "";
 	Image503.mastEl = "";
 	Image503.xyz = new THREE.Vector3;
@@ -12098,6 +12602,7 @@ function getImageDataArray()
 	Image504.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ccam/CR0_400155859EDR_F0040000CCAM03030M_.JPG";
 	Image504.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image504.cameraPosition = new THREE.Vector3;
+	Image504.cameraVector = new THREE.Vector3;
 	Image504.mastAz = "";
 	Image504.mastEl = "";
 	Image504.xyz = new THREE.Vector3;
@@ -12122,6 +12627,7 @@ function getImageDataArray()
 	Image505.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ccam/CR0_400155929EDR_F0040000CCAM03030M_.JPG";
 	Image505.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image505.cameraPosition = new THREE.Vector3;
+	Image505.cameraVector = new THREE.Vector3;
 	Image505.mastAz = "";
 	Image505.mastEl = "";
 	Image505.xyz = new THREE.Vector3;
@@ -12146,6 +12652,7 @@ function getImageDataArray()
 	Image506.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ccam/CR0_400155998EDR_F0040000CCAM03030M_.JPG";
 	Image506.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image506.cameraPosition = new THREE.Vector3;
+	Image506.cameraVector = new THREE.Vector3;
 	Image506.mastAz = "";
 	Image506.mastEl = "";
 	Image506.xyz = new THREE.Vector3;
@@ -12170,6 +12677,7 @@ function getImageDataArray()
 	Image507.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ccam/CR0_400156136EDR_F0040000CCAM04030M_.JPG";
 	Image507.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image507.cameraPosition = new THREE.Vector3;
+	Image507.cameraVector = new THREE.Vector3;
 	Image507.mastAz = "";
 	Image507.mastEl = "";
 	Image507.xyz = new THREE.Vector3;
@@ -12194,6 +12702,7 @@ function getImageDataArray()
 	Image508.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ccam/CR0_400156184EDR_F0040000CCAM04030M_.JPG";
 	Image508.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image508.cameraPosition = new THREE.Vector3;
+	Image508.cameraVector = new THREE.Vector3;
 	Image508.mastAz = "";
 	Image508.mastEl = "";
 	Image508.xyz = new THREE.Vector3;
@@ -12218,6 +12727,7 @@ function getImageDataArray()
 	Image509.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ccam/CR0_400156694EDR_F0040000CCAM04030M_.JPG";
 	Image509.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image509.cameraPosition = new THREE.Vector3;
+	Image509.cameraVector = new THREE.Vector3;
 	Image509.mastAz = "";
 	Image509.mastEl = "";
 	Image509.xyz = new THREE.Vector3;
@@ -12242,6 +12752,7 @@ function getImageDataArray()
 	Image510.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/fcam/FLA_400161925EDR_F0040000FHAZ00201M_.JPG";
 	Image510.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image510.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image510.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image510.mastAz = "1.03995";
 	Image510.mastEl = "-43.4728";
 	Image510.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12266,6 +12777,7 @@ function getImageDataArray()
 	Image511.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/fcam/FRA_400161925EDR_F0040000FHAZ00201M_.JPG";
 	Image511.attitude = new THREE.Quaternion(0.498537,0.0120958,0.0306292,-0.866243);
 	Image511.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image511.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image511.mastAz = "359.974";
 	Image511.mastEl = "-43.7598";
 	Image511.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12290,6 +12802,7 @@ function getImageDataArray()
 	Image512.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/fcam/FLA_400162288EDR_F0040000FHAZ00201M_.JPG";
 	Image512.attitude = new THREE.Quaternion(0.497636,0.0115526,0.0311279,-0.86675);
 	Image512.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image512.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image512.mastAz = "1.03995";
 	Image512.mastEl = "-43.4728";
 	Image512.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12314,6 +12827,7 @@ function getImageDataArray()
 	Image513.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/fcam/FRA_400162288EDR_F0040000FHAZ00201M_.JPG";
 	Image513.attitude = new THREE.Quaternion(0.497636,0.0115526,0.0311279,-0.86675);
 	Image513.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image513.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image513.mastAz = "359.974";
 	Image513.mastEl = "-43.7598";
 	Image513.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12338,6 +12852,7 @@ function getImageDataArray()
 	Image514.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ncam/NLA_400163518EDR_F0040000NCAM00105M_.JPG";
 	Image514.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image514.cameraPosition = new THREE.Vector3(0.649026,0.405986,-2.04023);
+	Image514.cameraVector = new THREE.Vector3(0.457984149662872,-0.6647031770432086,-0.5902712978675491);
 	Image514.mastAz = "304.538";
 	Image514.mastEl = "36.1998";
 	Image514.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12362,6 +12877,7 @@ function getImageDataArray()
 	Image515.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ncam/NRA_400163518EDR_F0040000NCAM00105M_.JPG";
 	Image515.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image515.cameraPosition = new THREE.Vector3(1.00265,0.639175,-2.03952);
+	Image515.cameraVector = new THREE.Vector3(0.4509163763849103,-0.67276103532012,-0.5865722554493199);
 	Image515.mastAz = "303.803";
 	Image515.mastEl = "35.9379";
 	Image515.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12386,6 +12902,7 @@ function getImageDataArray()
 	Image516.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ncam/NLA_400163559EDR_F0040000NCAM00105M_.JPG";
 	Image516.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image516.cameraPosition = new THREE.Vector3(0.733167,0.314643,-1.93215);
+	Image516.cameraVector = new THREE.Vector3(0.6036696536094185,-0.6709985899886075,0.43051578547642744);
 	Image516.mastAz = "311.95";
 	Image516.mastEl = "-25.4773";
 	Image516.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12410,6 +12927,7 @@ function getImageDataArray()
 	Image517.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ncam/NRA_400163559EDR_F0040000NCAM00105M_.JPG";
 	Image517.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image517.cameraPosition = new THREE.Vector3(1.05277,0.592637,-1.93184);
+	Image517.cameraVector = new THREE.Vector3(0.5946095820922801,-0.6763267582913327,0.4347660990730315);
 	Image517.mastAz = "311.295";
 	Image517.mastEl = "-25.7469";
 	Image517.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12434,6 +12952,7 @@ function getImageDataArray()
 	Image518.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ncam/NLA_400163590EDR_F0040000NCAM00105M_.JPG";
 	Image518.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image518.cameraPosition = new THREE.Vector3(0.734866,0.313,-1.89548);
+	Image518.cameraVector = new THREE.Vector3(0.5112359421523006,-0.5628422615986804,0.6494970361827159);
 	Image518.mastAz = "312.218";
 	Image518.mastEl = "-40.4808";
 	Image518.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12458,6 +12977,7 @@ function getImageDataArray()
 	Image519.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ncam/NRA_400163590EDR_F0040000NCAM00105M_.JPG";
 	Image519.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image519.cameraPosition = new THREE.Vector3(1.05402,0.591516,-1.89527);
+	Image519.cameraVector = new THREE.Vector3(0.5015026103246559,-0.567403967817565,0.6531063229998927);
 	Image519.mastAz = "311.441";
 	Image519.mastEl = "-40.7528";
 	Image519.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12482,6 +13002,7 @@ function getImageDataArray()
 	Image520.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ncam/NLA_400165599EDR_F0040000NCAM00106M_.JPG";
 	Image520.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image520.cameraPosition = new THREE.Vector3(0.776191,0.316672,-1.98329);
+	Image520.cameraVector = new THREE.Vector3(0.8236023319756081,-0.5649397936356667,0.05022179139806006);
 	Image520.mastAz = "325.529";
 	Image520.mastEl = "-2.85552";
 	Image520.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12506,6 +13027,7 @@ function getImageDataArray()
 	Image521.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ncam/NRA_400165599EDR_F0040000NCAM00106M_.JPG";
 	Image521.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image521.cameraPosition = new THREE.Vector3(1.02115,0.662252,-1.9829);
+	Image521.cameraVector = new THREE.Vector3(0.817511281934084,-0.5732912743516978,0.05488550503272535);
 	Image521.mastAz = "324.936";
 	Image521.mastEl = "-3.12263";
 	Image521.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12530,6 +13052,7 @@ function getImageDataArray()
 	Image522.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ncam/NLA_400165633EDR_F0040000NCAM00106M_.JPG";
 	Image522.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image522.cameraPosition = new THREE.Vector3(0.734267,0.31432,-1.93211);
+	Image522.cameraVector = new THREE.Vector3(0.6065733481102905,-0.6681929937490105,0.4307979763961373);
 	Image522.mastAz = "312.206";
 	Image522.mastEl = "-25.4952";
 	Image522.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12554,6 +13077,7 @@ function getImageDataArray()
 	Image523.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00030/opgs/edr/ncam/NRA_400165633EDR_F0040000NCAM00106M_.JPG";
 	Image523.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image523.cameraPosition = new THREE.Vector3(1.05263,0.593741,-1.9318);
+	Image523.cameraVector = new THREE.Vector3(0.59753813840964,-0.6735587093115586,0.4350480872920708);
 	Image523.mastAz = "311.551";
 	Image523.mastEl = "-25.7648";
 	Image523.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12578,6 +13102,7 @@ function getImageDataArray()
 	Image524.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ccam/CR0_400331511EDR_F0040000CCAM02032M_.JPG";
 	Image524.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image524.cameraPosition = new THREE.Vector3;
+	Image524.cameraVector = new THREE.Vector3;
 	Image524.mastAz = "";
 	Image524.mastEl = "";
 	Image524.xyz = new THREE.Vector3;
@@ -12602,6 +13127,7 @@ function getImageDataArray()
 	Image525.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ccam/CR0_400332160EDR_F0040000CCAM02032M_.JPG";
 	Image525.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image525.cameraPosition = new THREE.Vector3;
+	Image525.cameraVector = new THREE.Vector3;
 	Image525.mastAz = "";
 	Image525.mastEl = "";
 	Image525.xyz = new THREE.Vector3;
@@ -12626,6 +13152,7 @@ function getImageDataArray()
 	Image526.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ccam/CR0_400332589EDR_F0040000CCAM03032M_.JPG";
 	Image526.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image526.cameraPosition = new THREE.Vector3;
+	Image526.cameraVector = new THREE.Vector3;
 	Image526.mastAz = "";
 	Image526.mastEl = "";
 	Image526.xyz = new THREE.Vector3;
@@ -12650,6 +13177,7 @@ function getImageDataArray()
 	Image527.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ccam/CR0_400333211EDR_F0040000CCAM03032M_.JPG";
 	Image527.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image527.cameraPosition = new THREE.Vector3;
+	Image527.cameraVector = new THREE.Vector3;
 	Image527.mastAz = "";
 	Image527.mastEl = "";
 	Image527.xyz = new THREE.Vector3;
@@ -12674,6 +13202,7 @@ function getImageDataArray()
 	Image528.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ncam/NLA_400335692EDR_F0040000NCAM00107M_.JPG";
 	Image528.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image528.cameraPosition = new THREE.Vector3(0.681729,0.341675,-1.96266);
+	Image528.cameraVector = new THREE.Vector3(0.4962390063017524,-0.840872819159943,0.21605497129818393);
 	Image528.mastAz = "300.523";
 	Image528.mastEl = "-12.4543";
 	Image528.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12698,6 +13227,7 @@ function getImageDataArray()
 	Image529.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ncam/NRA_400335692EDR_F0040000NCAM00107M_.JPG";
 	Image529.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image529.cameraPosition = new THREE.Vector3(1.04984,0.551256,-1.96221);
+	Image529.cameraVector = new THREE.Vector3(0.48680279405549254,-0.8451901410881474,0.22062788832593871);
 	Image529.mastAz = "299.917";
 	Image529.mastEl = "-12.7223";
 	Image529.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12722,6 +13252,7 @@ function getImageDataArray()
 	Image530.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ncam/NLA_400336719EDR_F0040000NCAM00107M_.JPG";
 	Image530.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image530.cameraPosition = new THREE.Vector3(0.675426,0.351749,-1.98291);
+	Image530.cameraVector = new THREE.Vector3(0.5034732628005566,-0.8623206786558946,0.05401593105185801);
 	Image530.mastAz = "300.255";
 	Image530.mastEl = "-3.07319";
 	Image530.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12746,6 +13277,7 @@ function getImageDataArray()
 	Image531.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ncam/NRA_400336719EDR_F0040000NCAM00107M_.JPG";
 	Image531.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image531.cameraPosition = new THREE.Vector3(1.04448,0.559673,-1.98239);
+	Image531.cameraVector = new THREE.Vector3(0.4943899659813719,-0.8672575617509651,0.0586760864638107);
 	Image531.mastAz = "299.662";
 	Image531.mastEl = "-3.34015";
 	Image531.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12770,6 +13302,7 @@ function getImageDataArray()
 	Image532.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ncam/NRA_400336838EDR_F0040000NCAM00107M_.JPG";
 	Image532.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image532.cameraPosition = new THREE.Vector3(1.04448,0.559642,-1.98238);
+	Image532.cameraVector = new THREE.Vector3(0.4943042744499012,-0.8672983848410007,0.05879452281248701);
 	Image532.mastAz = "299.657";
 	Image532.mastEl = "-3.34699";
 	Image532.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12794,6 +13327,7 @@ function getImageDataArray()
 	Image533.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ncam/NLA_400336838EDR_F0040000NCAM00107M_.JPG";
 	Image533.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image533.cameraPosition = new THREE.Vector3(0.675411,0.351753,-1.98289);
+	Image533.cameraVector = new THREE.Vector3(0.5033894082314493,-0.8623621909395307,0.0541346037056123);
 	Image533.mastAz = "300.25";
 	Image533.mastEl = "-3.08002";
 	Image533.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12818,6 +13352,7 @@ function getImageDataArray()
 	Image534.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ncam/NRA_400337922EDR_F0040000NCAM00107M_.JPG";
 	Image534.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image534.cameraPosition = new THREE.Vector3(1.04783,0.555221,-1.97075);
+	Image534.cameraVector = new THREE.Vector3(0.4945254930733753,-0.8553557453662279,0.15430841055989034);
 	Image534.mastAz = "300.011";
 	Image534.mastEl = "-8.85303";
 	Image534.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12842,6 +13377,7 @@ function getImageDataArray()
 	Image535.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ncam/NLA_400337922EDR_F0040000NCAM00107M_.JPG";
 	Image535.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image535.cameraPosition = new THREE.Vector3(0.680065,0.345037,-1.97123);
+	Image535.cameraVector = new THREE.Vector3(0.5037975915964783,-0.8507540988825657,0.14968450132228645);
 	Image535.mastAz = "300.609";
 	Image535.mastEl = "-8.58545";
 	Image535.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12866,6 +13402,7 @@ function getImageDataArray()
 	Image536.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ncam/NLA_400338463EDR_F0040000NCAM00107M_.JPG";
 	Image536.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image536.cameraPosition = new THREE.Vector3(0.679259,0.345508,-1.97123);
+	Image536.cameraVector = new THREE.Vector3(0.5005971271089086,-0.8526459266604967,0.14965774313268884);
 	Image536.mastAz = "300.394";
 	Image536.mastEl = "-8.5839";
 	Image536.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12890,6 +13427,7 @@ function getImageDataArray()
 	Image537.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ncam/NRA_400338463EDR_F0040000NCAM00107M_.JPG";
 	Image537.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image537.cameraPosition = new THREE.Vector3(1.04781,0.554308,-1.97075);
+	Image537.cameraVector = new THREE.Vector3(0.49130629328489006,-0.8572136143775071,0.1542820323450267);
 	Image537.mastAz = "299.795";
 	Image537.mastEl = "-8.85147";
 	Image537.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -12914,6 +13452,7 @@ function getImageDataArray()
 	Image538.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ccam/CR0_400349083EDR_F0040000CCAM05032M_.JPG";
 	Image538.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image538.cameraPosition = new THREE.Vector3;
+	Image538.cameraVector = new THREE.Vector3;
 	Image538.mastAz = "";
 	Image538.mastEl = "";
 	Image538.xyz = new THREE.Vector3;
@@ -12938,6 +13477,7 @@ function getImageDataArray()
 	Image539.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00032/opgs/edr/ccam/CR0_400349161EDR_F0040000CCAM05032M_.JPG";
 	Image539.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image539.cameraPosition = new THREE.Vector3;
+	Image539.cameraVector = new THREE.Vector3;
 	Image539.mastAz = "";
 	Image539.mastEl = "";
 	Image539.xyz = new THREE.Vector3;
@@ -12962,6 +13502,7 @@ function getImageDataArray()
 	Image540.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00033/opgs/edr/ccam/CR0_400420752EDR_F0040000CCAM01033M_.JPG";
 	Image540.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image540.cameraPosition = new THREE.Vector3;
+	Image540.cameraVector = new THREE.Vector3;
 	Image540.mastAz = "";
 	Image540.mastEl = "";
 	Image540.xyz = new THREE.Vector3;
@@ -12986,6 +13527,7 @@ function getImageDataArray()
 	Image541.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00033/opgs/edr/ccam/CR0_400420881EDR_F0040000CCAM01033M_.JPG";
 	Image541.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image541.cameraPosition = new THREE.Vector3;
+	Image541.cameraVector = new THREE.Vector3;
 	Image541.mastAz = "";
 	Image541.mastEl = "";
 	Image541.xyz = new THREE.Vector3;
@@ -13010,6 +13552,7 @@ function getImageDataArray()
 	Image542.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00033/opgs/edr/ccam/CR0_400420918EDR_F0040000CCAM01033M_.JPG";
 	Image542.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image542.cameraPosition = new THREE.Vector3;
+	Image542.cameraVector = new THREE.Vector3;
 	Image542.mastAz = "";
 	Image542.mastEl = "";
 	Image542.xyz = new THREE.Vector3;
@@ -13034,6 +13577,7 @@ function getImageDataArray()
 	Image543.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00033/opgs/edr/ccam/CR0_400420955EDR_F0040000CCAM01033M_.JPG";
 	Image543.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image543.cameraPosition = new THREE.Vector3;
+	Image543.cameraVector = new THREE.Vector3;
 	Image543.mastAz = "";
 	Image543.mastEl = "";
 	Image543.xyz = new THREE.Vector3;
@@ -13058,6 +13602,7 @@ function getImageDataArray()
 	Image544.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00033/opgs/edr/ccam/CR0_400420992EDR_F0040000CCAM01033M_.JPG";
 	Image544.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image544.cameraPosition = new THREE.Vector3;
+	Image544.cameraVector = new THREE.Vector3;
 	Image544.mastAz = "";
 	Image544.mastEl = "";
 	Image544.xyz = new THREE.Vector3;
@@ -13082,6 +13627,7 @@ function getImageDataArray()
 	Image545.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00033/opgs/edr/ccam/CR0_400421029EDR_F0040000CCAM01033M_.JPG";
 	Image545.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image545.cameraPosition = new THREE.Vector3;
+	Image545.cameraVector = new THREE.Vector3;
 	Image545.mastAz = "";
 	Image545.mastEl = "";
 	Image545.xyz = new THREE.Vector3;
@@ -13106,6 +13652,7 @@ function getImageDataArray()
 	Image546.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00033/opgs/edr/ccam/CR0_400421066EDR_F0040000CCAM01033M_.JPG";
 	Image546.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image546.cameraPosition = new THREE.Vector3;
+	Image546.cameraVector = new THREE.Vector3;
 	Image546.mastAz = "";
 	Image546.mastEl = "";
 	Image546.xyz = new THREE.Vector3;
@@ -13130,6 +13677,7 @@ function getImageDataArray()
 	Image547.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00033/opgs/edr/ccam/CR0_400422060EDR_F0040000CCAM04033M_.JPG";
 	Image547.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image547.cameraPosition = new THREE.Vector3;
+	Image547.cameraVector = new THREE.Vector3;
 	Image547.mastAz = "";
 	Image547.mastEl = "";
 	Image547.xyz = new THREE.Vector3;
@@ -13154,6 +13702,7 @@ function getImageDataArray()
 	Image548.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00033/opgs/edr/ccam/CR0_400422710EDR_F0040000CCAM04033M_.JPG";
 	Image548.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image548.cameraPosition = new THREE.Vector3;
+	Image548.cameraVector = new THREE.Vector3;
 	Image548.mastAz = "";
 	Image548.mastEl = "";
 	Image548.xyz = new THREE.Vector3;
@@ -13178,6 +13727,7 @@ function getImageDataArray()
 	Image549.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00034/opgs/edr/ccam/CR0_400508405EDR_F0040000CCAM01034M_.JPG";
 	Image549.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image549.cameraPosition = new THREE.Vector3;
+	Image549.cameraVector = new THREE.Vector3;
 	Image549.mastAz = "";
 	Image549.mastEl = "";
 	Image549.xyz = new THREE.Vector3;
@@ -13202,6 +13752,7 @@ function getImageDataArray()
 	Image550.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400686469EDR_F0040000NCAM00420M_.JPG";
 	Image550.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image550.cameraPosition = new THREE.Vector3(0.686897,0.779356,-1.87133);
+	Image550.cameraVector = new THREE.Vector3(0.2994145909683611,0.5559345035149801,0.775427450195569);
 	Image550.mastAz = "61.6566";
 	Image550.mastEl = "-50.8204";
 	Image550.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13226,6 +13777,7 @@ function getImageDataArray()
 	Image551.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400686469EDR_F0040000NCAM00420M_.JPG";
 	Image551.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image551.cameraPosition = new THREE.Vector3(1.05788,0.574903,-1.87078);
+	Image551.cameraVector = new THREE.Vector3(0.29208308066742966,0.5640268865942666,0.7723737082440093);
 	Image551.mastAz = "62.5847";
 	Image551.mastEl = "-50.5447";
 	Image551.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13250,6 +13802,7 @@ function getImageDataArray()
 	Image552.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400686490EDR_F0040000NCAM00420M_.JPG";
 	Image552.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image552.cameraPosition = new THREE.Vector3(1.05803,0.573369,-1.87119);
+	Image552.cameraVector = new THREE.Vector3(0.2968332268240541,0.5641647323154108,0.7704597265689497);
 	Image552.mastAz = "62.2115";
 	Image552.mastEl = "-50.3724";
 	Image552.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13274,6 +13827,7 @@ function getImageDataArray()
 	Image553.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400686490EDR_F0040000NCAM00420M_.JPG";
 	Image553.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image553.cameraPosition = new THREE.Vector3(0.688361,0.780197,-1.87174);
+	Image553.cameraVector = new THREE.Vector3(0.30411701210802916,0.5560348323747177,0.7735231787946013);
 	Image553.mastAz = "61.2867";
 	Image553.mastEl = "-50.648";
 	Image553.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13298,6 +13852,7 @@ function getImageDataArray()
 	Image554.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400686503EDR_F0040000NCAM00420M_.JPG";
 	Image554.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image554.cameraPosition = new THREE.Vector3(1.05803,0.573369,-1.87119);
+	Image554.cameraVector = new THREE.Vector3(0.2968332268240541,0.5641647323154108,0.7704597265689497);
 	Image554.mastAz = "62.2115";
 	Image554.mastEl = "-50.3724";
 	Image554.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13322,6 +13877,7 @@ function getImageDataArray()
 	Image555.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400686503EDR_F0040000NCAM00420M_.JPG";
 	Image555.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image555.cameraPosition = new THREE.Vector3(0.688361,0.780197,-1.87174);
+	Image555.cameraVector = new THREE.Vector3(0.30411701210802916,0.5560348323747177,0.7735231787946013);
 	Image555.mastAz = "61.2867";
 	Image555.mastEl = "-50.648";
 	Image555.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13346,6 +13902,7 @@ function getImageDataArray()
 	Image556.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400695138EDR_F0040000NCAM00109M_.JPG";
 	Image556.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image556.cameraPosition = new THREE.Vector3(0.572041,0.478437,-1.83469);
+	Image556.cameraVector = new THREE.Vector3(-0.0548688474979532,-0.39153923646266364,0.9185240529700247);
 	Image556.mastAz = "261.961";
 	Image556.mastEl = "-66.6889";
 	Image556.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13370,6 +13927,7 @@ function getImageDataArray()
 	Image557.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400695138EDR_F0040000NCAM00109M_.JPG";
 	Image557.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image557.cameraPosition = new THREE.Vector3(0.988981,0.403663,-1.83454);
+	Image557.cameraVector = new THREE.Vector3(-0.06428575179637759,-0.38552626852116795,0.9204546911152766);
 	Image557.mastAz = "260.472";
 	Image557.mastEl = "-66.9692";
 	Image557.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13394,6 +13952,7 @@ function getImageDataArray()
 	Image558.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400695183EDR_F0040000NCAM00120M_.JPG";
 	Image558.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image558.cameraPosition = new THREE.Vector3(0.572041,0.478437,-1.83469);
+	Image558.cameraVector = new THREE.Vector3(-0.0548688474979532,-0.39153923646266364,0.9185240529700247);
 	Image558.mastAz = "261.961";
 	Image558.mastEl = "-66.6889";
 	Image558.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13418,6 +13977,7 @@ function getImageDataArray()
 	Image559.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400695183EDR_F0040000NCAM00120M_.JPG";
 	Image559.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image559.cameraPosition = new THREE.Vector3(0.988981,0.403663,-1.83454);
+	Image559.cameraVector = new THREE.Vector3(-0.06428575179637759,-0.38552626852116795,0.9204546911152766);
 	Image559.mastAz = "260.472";
 	Image559.mastEl = "-66.9692";
 	Image559.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13442,6 +14002,7 @@ function getImageDataArray()
 	Image560.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400695227EDR_F0040000NCAM00120M_.JPG";
 	Image560.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image560.cameraPosition = new THREE.Vector3(0.572041,0.478437,-1.83469);
+	Image560.cameraVector = new THREE.Vector3(-0.0548688474979532,-0.39153923646266364,0.9185240529700247);
 	Image560.mastAz = "261.961";
 	Image560.mastEl = "-66.6889";
 	Image560.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13466,6 +14027,7 @@ function getImageDataArray()
 	Image561.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400695227EDR_F0040000NCAM00120M_.JPG";
 	Image561.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image561.cameraPosition = new THREE.Vector3(0.988981,0.403663,-1.83454);
+	Image561.cameraVector = new THREE.Vector3(-0.06428575179637759,-0.38552626852116795,0.9204546911152766);
 	Image561.mastAz = "260.472";
 	Image561.mastEl = "-66.9692";
 	Image561.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13490,6 +14052,7 @@ function getImageDataArray()
 	Image562.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400695273EDR_F0040000NCAM00120M_.JPG";
 	Image562.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image562.cameraPosition = new THREE.Vector3(0.572041,0.478437,-1.83469);
+	Image562.cameraVector = new THREE.Vector3(-0.0548688474979532,-0.39153923646266364,0.9185240529700247);
 	Image562.mastAz = "261.961";
 	Image562.mastEl = "-66.6889";
 	Image562.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13514,6 +14077,7 @@ function getImageDataArray()
 	Image563.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400695273EDR_F0040000NCAM00120M_.JPG";
 	Image563.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image563.cameraPosition = new THREE.Vector3(0.988981,0.403663,-1.83454);
+	Image563.cameraVector = new THREE.Vector3(-0.06428575179637759,-0.38552626852116795,0.9204546911152766);
 	Image563.mastAz = "260.472";
 	Image563.mastEl = "-66.9692";
 	Image563.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13538,6 +14102,7 @@ function getImageDataArray()
 	Image564.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400695985EDR_F0040000NCAM00110M_.JPG";
 	Image564.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image564.cameraPosition = new THREE.Vector3(0.859011,0.321913,-1.82664);
+	Image564.cameraVector = new THREE.Vector3(0.3252791490233446,-0.0733494221937082,0.9427689735425631);
 	Image564.mastAz = "347.219";
 	Image564.mastEl = "-70.4997";
 	Image564.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13562,6 +14127,7 @@ function getImageDataArray()
 	Image565.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400695985EDR_F0040000NCAM00110M_.JPG";
 	Image565.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image565.cameraPosition = new THREE.Vector3(0.971687,0.730244,-1.82682);
+	Image565.cameraVector = new THREE.Vector3(0.31831422934338777,-0.08214286771966768,0.9444197163763123);
 	Image565.mastAz = "345.458";
 	Image565.mastEl = "-70.7843";
 	Image565.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13586,6 +14152,7 @@ function getImageDataArray()
 	Image566.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400696022EDR_F0040000NCAM00110M_.JPG";
 	Image566.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image566.cameraPosition = new THREE.Vector3(0.971687,0.730244,-1.82682);
+	Image566.cameraVector = new THREE.Vector3(0.31831422934338777,-0.08214286771966768,0.9444197163763123);
 	Image566.mastAz = "345.458";
 	Image566.mastEl = "-70.7843";
 	Image566.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13610,6 +14177,7 @@ function getImageDataArray()
 	Image567.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400696022EDR_F0040000NCAM00110M_.JPG";
 	Image567.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image567.cameraPosition = new THREE.Vector3(0.859011,0.321913,-1.82664);
+	Image567.cameraVector = new THREE.Vector3(0.3252791490233446,-0.0733494221937082,0.9427689735425631);
 	Image567.mastAz = "347.219";
 	Image567.mastEl = "-70.4997";
 	Image567.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13634,6 +14202,7 @@ function getImageDataArray()
 	Image568.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400696360EDR_F0040000NCAM00110M_.JPG";
 	Image568.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image568.cameraPosition = new THREE.Vector3(0.859875,0.322114,-1.82664);
+	Image568.cameraVector = new THREE.Vector3(0.32554409942601187,-0.07216160467610643,0.9427691881576722);
 	Image568.mastAz = "347.428";
 	Image568.mastEl = "-70.4998";
 	Image568.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13658,6 +14227,7 @@ function getImageDataArray()
 	Image569.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400696360EDR_F0040000NCAM00110M_.JPG";
 	Image569.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image569.cameraPosition = new THREE.Vector3(0.971064,0.730852,-1.82682);
+	Image569.cameraVector = new THREE.Vector3(0.3186113659513884,-0.0809801511493942,0.9444199344605195);
 	Image569.mastAz = "345.667";
 	Image569.mastEl = "-70.7843";
 	Image569.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13682,6 +14252,7 @@ function getImageDataArray()
 	Image570.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400696436EDR_F0040000NCAM00111M_.JPG";
 	Image570.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image570.cameraPosition = new THREE.Vector3(0.971064,0.730852,-1.82682);
+	Image570.cameraVector = new THREE.Vector3(0.3186113659513884,-0.0809801511493942,0.9444199344605195);
 	Image570.mastAz = "345.667";
 	Image570.mastEl = "-70.7843";
 	Image570.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13706,6 +14277,7 @@ function getImageDataArray()
 	Image571.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400696436EDR_F0040000NCAM00111M_.JPG";
 	Image571.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image571.cameraPosition = new THREE.Vector3(0.859875,0.322114,-1.82664);
+	Image571.cameraVector = new THREE.Vector3(0.32554409942601187,-0.07216160467610643,0.9427691881576722);
 	Image571.mastAz = "347.428";
 	Image571.mastEl = "-70.4998";
 	Image571.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13730,6 +14302,7 @@ function getImageDataArray()
 	Image572.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400696493EDR_F0040000NCAM00111M_.JPG";
 	Image572.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image572.cameraPosition = new THREE.Vector3(0.971064,0.730852,-1.82682);
+	Image572.cameraVector = new THREE.Vector3(0.3186113659513884,-0.0809801511493942,0.9444199344605195);
 	Image572.mastAz = "345.667";
 	Image572.mastEl = "-70.7843";
 	Image572.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13754,6 +14327,7 @@ function getImageDataArray()
 	Image573.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400696493EDR_F0040000NCAM00111M_.JPG";
 	Image573.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image573.cameraPosition = new THREE.Vector3(0.859875,0.322114,-1.82664);
+	Image573.cameraVector = new THREE.Vector3(0.32554409942601187,-0.07216160467610643,0.9427691881576722);
 	Image573.mastAz = "347.428";
 	Image573.mastEl = "-70.4998";
 	Image573.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13778,6 +14352,7 @@ function getImageDataArray()
 	Image574.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NLA_400703573EDR_F0040000NCAM00514M_.JPG";
 	Image574.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image574.cameraPosition = new THREE.Vector3(0.664781,0.729327,-2.03769);
+	Image574.cameraVector = new THREE.Vector3(-0.7426337382550893,-0.38689466785206483,-0.546633009241952);
 	Image574.mastAz = "207.491";
 	Image574.mastEl = "33.1598";
 	Image574.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13802,6 +14377,7 @@ function getImageDataArray()
 	Image575.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00036/opgs/edr/ncam/NRA_400703573EDR_F0040000NCAM00514M_.JPG";
 	Image575.attitude = new THREE.Quaternion(0.497617,0.0107942,0.0307803,-0.866783);
 	Image575.cameraPosition = new THREE.Vector3(0.853228,0.349963,-2.03716);
+	Image575.cameraVector = new THREE.Vector3(-0.7495919893662433,-0.3788102919375763,-0.542784130387142);
 	Image575.mastAz = "206.782";
 	Image575.mastEl = "32.8971";
 	Image575.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13826,6 +14402,7 @@ function getImageDataArray()
 	Image576.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00037/opgs/edr/fcam/FRA_400781141EDR_F0040000FHAZ00302M_.JPG";
 	Image576.attitude = new THREE.Quaternion(0.496827,0.0114881,0.0298713,-0.867259);
 	Image576.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image576.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image576.mastAz = "359.974";
 	Image576.mastEl = "-43.7598";
 	Image576.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13850,6 +14427,7 @@ function getImageDataArray()
 	Image577.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00037/opgs/edr/fcam/FLA_400781141EDR_F0040000FHAZ00302M_.JPG";
 	Image577.attitude = new THREE.Quaternion(0.496827,0.0114881,0.0298713,-0.867259);
 	Image577.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image577.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image577.mastAz = "1.03995";
 	Image577.mastEl = "-43.4728";
 	Image577.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13874,6 +14452,7 @@ function getImageDataArray()
 	Image578.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00037/opgs/edr/rcam/RRA_400781167EDR_F0040000RHAZ00303M_.JPG";
 	Image578.attitude = new THREE.Quaternion(0.496827,0.0114881,0.0298713,-0.867259);
 	Image578.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image578.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image578.mastAz = "182.044";
 	Image578.mastEl = "-43.5257";
 	Image578.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13898,6 +14477,7 @@ function getImageDataArray()
 	Image579.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00037/opgs/edr/rcam/RLA_400781167EDR_F0040000RHAZ00303M_.JPG";
 	Image579.attitude = new THREE.Quaternion(0.496827,0.0114881,0.0298713,-0.867259);
 	Image579.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image579.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image579.mastAz = "182.571";
 	Image579.mastEl = "-44.9097";
 	Image579.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13922,6 +14502,7 @@ function getImageDataArray()
 	Image580.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00037/opgs/edr/ncam/NLA_400791104EDR_F0040000NCAM00514M_.JPG";
 	Image580.attitude = new THREE.Quaternion(0.496827,0.0114881,0.0298713,-0.867259);
 	Image580.cameraPosition = new THREE.Vector3(0.66415,0.728834,-2.03766);
+	Image580.cameraVector = new THREE.Vector3(-0.7417382472129517,-0.38946285125356245,-0.5460247797626989);
 	Image580.mastAz = "207.675";
 	Image580.mastEl = "33.1182";
 	Image580.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13946,6 +14527,7 @@ function getImageDataArray()
 	Image581.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00037/opgs/edr/ncam/NRA_400791104EDR_F0040000NCAM00514M_.JPG";
 	Image581.attitude = new THREE.Quaternion(0.496827,0.0114881,0.0298713,-0.867259);
 	Image581.cameraPosition = new THREE.Vector3(0.853817,0.350078,-2.03712);
+	Image581.cameraVector = new THREE.Vector3(-0.7487204122339566,-0.3813984123545775,-0.5421743219275713);
 	Image581.mastAz = "206.967";
 	Image581.mastEl = "32.8555";
 	Image581.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -13970,6 +14552,7 @@ function getImageDataArray()
 	Image582.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/fcam/FLA_400871396EDR_F0040404FHAZ00302M_.JPG";
 	Image582.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image582.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image582.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image582.mastAz = "1.03995";
 	Image582.mastEl = "-43.4728";
 	Image582.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -13994,6 +14577,7 @@ function getImageDataArray()
 	Image583.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/fcam/FRA_400871396EDR_F0040404FHAZ00302M_.JPG";
 	Image583.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image583.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image583.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image583.mastAz = "359.974";
 	Image583.mastEl = "-43.7598";
 	Image583.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14018,6 +14602,7 @@ function getImageDataArray()
 	Image584.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/rcam/RLA_400871423EDR_F0040404RHAZ00304M_.JPG";
 	Image584.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image584.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image584.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image584.mastAz = "182.571";
 	Image584.mastEl = "-44.9097";
 	Image584.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14042,6 +14627,7 @@ function getImageDataArray()
 	Image585.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/rcam/RRA_400871423EDR_F0040404RHAZ00304M_.JPG";
 	Image585.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image585.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image585.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image585.mastAz = "182.044";
 	Image585.mastEl = "-43.5257";
 	Image585.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14066,6 +14652,7 @@ function getImageDataArray()
 	Image586.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871482EDR_F0040404NCAM00409M_.JPG";
 	Image586.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image586.cameraPosition = new THREE.Vector3(1.05031,0.544741,-1.9587);
+	Image586.cameraVector = new THREE.Vector3(0.465695592608596,-0.8497745049574167,0.2470038577619913);
 	Image586.mastAz = "298.7";
 	Image586.mastEl = "-14.2767";
 	Image586.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14090,6 +14677,7 @@ function getImageDataArray()
 	Image587.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871482EDR_F0040404NCAM00409M_.JPG";
 	Image587.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image587.cameraPosition = new THREE.Vector3(0.677833,0.343028,-1.95915);
+	Image587.cameraVector = new THREE.Vector3(0.47527878200524953,-0.8457685151953148,0.24245762120403436);
 	Image587.mastAz = "299.31";
 	Image587.mastEl = "-14.0085";
 	Image587.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14114,6 +14702,7 @@ function getImageDataArray()
 	Image588.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871510EDR_F0040404NCAM00409M_.JPG";
 	Image588.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image588.cameraPosition = new THREE.Vector3(0.801625,0.308204,-1.95676);
+	Image588.cameraVector = new THREE.Vector3(0.8265040764369803,-0.49949864509287056,0.25959991368149715);
 	Image588.mastAz = "328.829";
 	Image588.mastEl = "-15.0232";
 	Image588.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14138,6 +14727,7 @@ function getImageDataArray()
 	Image589.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871510EDR_F0040404NCAM00409M_.JPG";
 	Image589.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image589.cameraPosition = new THREE.Vector3(1.02642,0.667227,-1.95647);
+	Image589.cameraVector = new THREE.Vector3(0.8200685647737299,-0.5076636639731185,0.2641309397843114);
 	Image589.mastAz = "328.216";
 	Image589.mastEl = "-15.2917";
 	Image589.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14162,6 +14752,7 @@ function getImageDataArray()
 	Image590.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871538EDR_F0040404NCAM00409M_.JPG";
 	Image590.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image590.cameraPosition = new THREE.Vector3(0.94404,0.76369,-1.95311);
+	Image590.cameraVector = new THREE.Vector3(0.9567647573444109,-0.029090198620870953,0.28940449106378596);
 	Image590.mastAz = "358.234";
 	Image590.mastEl = "-16.7986";
 	Image590.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14186,6 +14777,7 @@ function getImageDataArray()
 	Image591.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871538EDR_F0040404NCAM00409M_.JPG";
 	Image591.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image591.cameraPosition = new THREE.Vector3(0.928932,0.340368,-1.95318);
+	Image591.cameraVector = new THREE.Vector3(0.958373738720239,-0.01880987715904628,0.28489641179322056);
 	Image591.mastAz = "358.851";
 	Image591.mastEl = "-16.5296";
 	Image591.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14210,6 +14802,7 @@ function getImageDataArray()
 	Image592.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871566EDR_F0040404NCAM00409M_.JPG";
 	Image592.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image592.cameraPosition = new THREE.Vector3(0.82473,0.806636,-1.9495);
+	Image592.cameraVector = new THREE.Vector3(0.8362625112387977,0.44804577905594684,0.31610123721163985);
 	Image592.mastAz = "28.1565";
 	Image592.mastEl = "-18.4037";
 	Image592.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14234,6 +14827,7 @@ function getImageDataArray()
 	Image593.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871566EDR_F0040404NCAM00409M_.JPG";
 	Image593.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image593.cameraPosition = new THREE.Vector3(1.02272,0.432163,-1.94934);
+	Image593.cameraVector = new THREE.Vector3(0.8326421857794449,0.45781682381500155,0.3116259717872885);
 	Image593.mastAz = "28.7787";
 	Image593.mastEl = "-18.1342";
 	Image593.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14258,6 +14852,7 @@ function getImageDataArray()
 	Image594.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871594EDR_F0040404NCAM00409M_.JPG";
 	Image594.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image594.cameraPosition = new THREE.Vector3(1.05761,0.560712,-1.94631);
+	Image594.cameraVector = new THREE.Vector3(0.4831280192836118,0.8099953600685406,0.3324076317573488);
 	Image594.mastAz = "59.1605";
 	Image594.mastEl = "-19.392";
 	Image594.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14282,6 +14877,7 @@ function getImageDataArray()
 	Image595.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871594EDR_F0040404NCAM00409M_.JPG";
 	Image595.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image595.cameraPosition = new THREE.Vector3(0.697479,0.783722,-1.94664);
+	Image595.cameraVector = new THREE.Vector3(0.4911402548914232,0.8033120117164859,0.33685465984189733);
 	Image595.mastAz = "58.5337";
 	Image595.mastEl = "-19.6619";
 	Image595.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14306,6 +14902,7 @@ function getImageDataArray()
 	Image596.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871629EDR_F0040404NCAM00421M_.JPG";
 	Image596.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image596.cameraPosition = new THREE.Vector3(1.0219,0.689485,-1.94491);
+	Image596.cameraVector = new THREE.Vector3(0.004682512392137381,0.9396948032601635,0.341982091349152);
 	Image596.mastAz = "89.6893";
 	Image596.mastEl = "-19.9746";
 	Image596.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14330,6 +14927,7 @@ function getImageDataArray()
 	Image597.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871629EDR_F0040404NCAM00421M_.JPG";
 	Image597.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image597.cameraPosition = new THREE.Vector3(0.598409,0.698695,-1.9453);
+	Image597.cameraVector = new THREE.Vector3(0.01497280066087622,0.9379616892899553,0.3464154798283456);
 	Image597.mastAz = "89.0603";
 	Image597.mastEl = "-20.2447";
 	Image597.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14354,6 +14952,7 @@ function getImageDataArray()
 	Image598.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871664EDR_F0040404NCAM00421M_.JPG";
 	Image598.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image598.cameraPosition = new THREE.Vector3(0.556344,0.57492,-1.94591);
+	Image598.cameraVector = new THREE.Vector3(-0.46304990355797904,0.8177038939959018,0.34197240906085624);
 	Image598.mastAz = "119.497";
 	Image598.mastEl = "-19.9735";
 	Image598.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14378,6 +14977,7 @@ function getImageDataArray()
 	Image599.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871664EDR_F0040404NCAM00421M_.JPG";
 	Image599.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image599.cameraPosition = new THREE.Vector3(0.926127,0.781536,-1.94557);
+	Image599.cameraVector = new THREE.Vector3(-0.4727899177070956,0.813966740148797,0.33753198314538785);
 	Image599.mastAz = "120.125";
 	Image599.mastEl = "-19.7035";
 	Image599.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14402,6 +15002,7 @@ function getImageDataArray()
 	Image600.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871699EDR_F0040404NCAM00421M_.JPG";
 	Image600.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image600.cameraPosition = new THREE.Vector3(0.797188,0.812147,-1.94809);
+	Image600.cameraVector = new THREE.Vector3(-0.8255769394754,0.46446787592314415,0.3204564077091831);
 	Image600.mastAz = "150.613";
 	Image600.mastEl = "-18.6675";
 	Image600.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14426,6 +15027,7 @@ function getImageDataArray()
 	Image601.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871699EDR_F0040404NCAM00421M_.JPG";
 	Image601.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image601.cameraPosition = new THREE.Vector3(0.583452,0.446433,-1.94826);
+	Image601.cameraVector = new THREE.Vector3(-0.8191499562262067,0.47267356342699907,0.32492006963532777);
 	Image601.mastAz = "149.989";
 	Image601.mastEl = "-18.9371";
 	Image601.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14450,6 +15052,7 @@ function getImageDataArray()
 	Image602.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871733EDR_F0040404NCAM00421M_.JPG";
 	Image602.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image602.cameraPosition = new THREE.Vector3(0.672553,0.774349,-1.95174);
+	Image602.cameraVector = new THREE.Vector3(-0.9553504670736771,-0.012192391005191476,0.2952233572461427);
 	Image602.mastAz = "180.706";
 	Image602.mastEl = "-17.1478";
 	Image602.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14474,6 +15077,7 @@ function getImageDataArray()
 	Image603.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871733EDR_F0040404NCAM00421M_.JPG";
 	Image603.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image603.cameraPosition = new THREE.Vector3(0.671131,0.350759,-1.95169);
+	Image603.cameraVector = new THREE.Vector3(-0.9540269946680903,-0.001866175109186662,0.2997148825718092);
 	Image603.mastAz = "180.087";
 	Image603.mastEl = "-17.4169";
 	Image603.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14498,6 +15102,7 @@ function getImageDataArray()
 	Image604.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871821EDR_F0040404NCAM00421M_.JPG";
 	Image604.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image604.cameraPosition = new THREE.Vector3(0.58385,0.680073,-1.95553);
+	Image604.cameraVector = new THREE.Vector3(-0.827818342607725,-0.49254518018594634,0.2685442926554071);
 	Image604.mastAz = "210.728";
 	Image604.mastEl = "-15.5545";
 	Image604.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14522,6 +15127,7 @@ function getImageDataArray()
 	Image605.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871821EDR_F0040404NCAM00421M_.JPG";
 	Image605.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image605.cameraPosition = new THREE.Vector3(0.794649,0.312658,-1.95526);
+	Image605.cameraVector = new THREE.Vector3(-0.8319520569004999,-0.48300334859495697,0.2730632532309797);
 	Image605.mastAz = "210.114";
 	Image605.mastEl = "-15.8231";
 	Image605.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14546,6 +15152,7 @@ function getImageDataArray()
 	Image606.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871855EDR_F0040404NCAM00421M_.JPG";
 	Image606.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image606.cameraPosition = new THREE.Vector3(0.553612,0.557282,-1.95842);
+	Image606.cameraVector = new THREE.Vector3(-0.48278762022812544,-0.8399321567613569,0.24785093462135388);
 	Image606.mastAz = "240.086";
 	Image606.mastEl = "-14.3272";
 	Image606.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14570,6 +15177,7 @@ function getImageDataArray()
 	Image607.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871855EDR_F0040404NCAM00421M_.JPG";
 	Image607.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image607.cameraPosition = new THREE.Vector3(0.917507,0.340462,-1.95798);
+	Image607.cameraVector = new THREE.Vector3(-0.4911207914309393,-0.8337258530059038,0.2523917000493988);
 	Image607.mastAz = "239.475";
 	Image607.mastEl = "-14.5954";
 	Image607.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14594,6 +15202,7 @@ function getImageDataArray()
 	Image608.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400871890EDR_F0040404NCAM00421M_.JPG";
 	Image608.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image608.cameraPosition = new THREE.Vector3(0.587776,0.433565,-1.95973);
+	Image608.cameraVector = new THREE.Vector3(-0.002325211734616242,-0.9711923239291094,0.23828567588414779);
 	Image608.mastAz = "269.839";
 	Image608.mastEl = "-13.7622";
 	Image608.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14618,6 +15227,7 @@ function getImageDataArray()
 	Image609.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400871890EDR_F0040404NCAM00421M_.JPG";
 	Image609.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image609.cameraPosition = new THREE.Vector3(1.0113,0.425942,-1.95924);
+	Image609.cameraVector = new THREE.Vector3(-0.012640755038304594,-0.9699850654011691,0.2428357144465181);
 	Image609.mastAz = "269.229";
 	Image609.mastEl = "-14.0303";
 	Image609.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14642,6 +15252,7 @@ function getImageDataArray()
 	Image610.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NLA_400877335EDR_F0040404NCAM00514M_.JPG";
 	Image610.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image610.cameraPosition = new THREE.Vector3(0.85384,0.343221,-2.03465);
+	Image610.cameraVector = new THREE.Vector3(0.8662075513838331,-0.013903964873603434,-0.49949089850208267);
 	Image610.mastAz = "359.053";
 	Image610.mastEl = "29.9898";
 	Image610.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14666,6 +15277,7 @@ function getImageDataArray()
 	Image611.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00038/opgs/edr/ncam/NRA_400877335EDR_F0040404NCAM00514M_.JPG";
 	Image611.attitude = new THREE.Quaternion(0.703368,-0.0174252,-0.020961,0.710303);
 	Image611.cameraPosition = new THREE.Vector3(0.868381,0.766563,-2.0343);
+	Image611.cameraVector = new THREE.Vector3(0.868268921289672,-0.024313430800785137,-0.4954976663972943);
 	Image611.mastAz = "358.369";
 	Image611.mastEl = "29.7263";
 	Image611.xyz = new THREE.Vector3(-5.81365,31.5345,1.4476);
@@ -14690,6 +15302,7 @@ function getImageDataArray()
 	Image612.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/rcam/RLA_400953731EDR_F0040416RHAZ00305M_.JPG";
 	Image612.attitude = new THREE.Quaternion(0.496208,-0.01259,-0.00299569,0.868107);
 	Image612.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image612.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image612.mastAz = "182.571";
 	Image612.mastEl = "-44.9097";
 	Image612.xyz = new THREE.Vector3(-8.15253,35.4957,1.3855);
@@ -14714,6 +15327,7 @@ function getImageDataArray()
 	Image613.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/rcam/RRA_400953731EDR_F0040416RHAZ00305M_.JPG";
 	Image613.attitude = new THREE.Quaternion(0.496208,-0.01259,-0.00299569,0.868107);
 	Image613.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image613.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image613.mastAz = "182.044";
 	Image613.mastEl = "-43.5257";
 	Image613.xyz = new THREE.Vector3(-8.15253,35.4957,1.3855);
@@ -14738,6 +15352,7 @@ function getImageDataArray()
 	Image614.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NLA_400958457EDR_F0040468SAPP07712M_.JPG";
 	Image614.attitude = new THREE.Quaternion(0.734105,-0.0527039,-0.0223709,0.676618);
 	Image614.cameraPosition = new THREE.Vector3(0.689207,0.742163,-2.04408);
+	Image614.cameraVector = new THREE.Vector3(-0.3114855136901511,-0.2801630437506266,-0.9080118081157134);
 	Image614.mastAz = "221.916";
 	Image614.mastEl = "65.2561";
 	Image614.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -14762,6 +15377,7 @@ function getImageDataArray()
 	Image615.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NLA_400958515EDR_F0040468SAPP07712M_.JPG";
 	Image615.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image615.cameraPosition = new THREE.Vector3(0.962253,0.366891,-1.84497);
+	Image615.cameraVector = new THREE.Vector3(0.46348222072328665,0.08816878238017797,0.8817088504075522);
 	Image615.mastAz = "10.7195";
 	Image615.mastEl = "-61.8268";
 	Image615.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -14786,6 +15402,7 @@ function getImageDataArray()
 	Image616.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/fcam/FLA_400958554EDR_F0040468FHAZ00304M_.JPG";
 	Image616.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image616.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image616.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image616.mastAz = "1.03995";
 	Image616.mastEl = "-43.4728";
 	Image616.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -14810,6 +15427,7 @@ function getImageDataArray()
 	Image617.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/fcam/FRA_400958554EDR_F0040468FHAZ00304M_.JPG";
 	Image617.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image617.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image617.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image617.mastAz = "359.974";
 	Image617.mastEl = "-43.7598";
 	Image617.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -14834,6 +15452,7 @@ function getImageDataArray()
 	Image618.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/rcam/RRA_400958581EDR_F0040468RHAZ00304M_.JPG";
 	Image618.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image618.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image618.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image618.mastAz = "182.044";
 	Image618.mastEl = "-43.5257";
 	Image618.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -14858,6 +15477,7 @@ function getImageDataArray()
 	Image619.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/rcam/RLA_400958581EDR_F0040468RHAZ00304M_.JPG";
 	Image619.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image619.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image619.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image619.mastAz = "182.571";
 	Image619.mastEl = "-44.9097";
 	Image619.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -14882,6 +15502,7 @@ function getImageDataArray()
 	Image620.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NLA_400958632EDR_F0040468NCAM00422M_.JPG";
 	Image620.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image620.cameraPosition = new THREE.Vector3(0.639774,0.370271,-1.95876);
+	Image620.cameraVector = new THREE.Vector3(0.3090718834091036,-0.9188114854506274,0.24547917445266285);
 	Image620.mastAz = "288.568";
 	Image620.mastEl = "-14.187";
 	Image620.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -14906,6 +15527,7 @@ function getImageDataArray()
 	Image621.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NRA_400958632EDR_F0040468NCAM00422M_.JPG";
 	Image621.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image621.cameraPosition = new THREE.Vector3(1.04332,0.49903,-1.95828);
+	Image621.cameraVector = new THREE.Vector3(0.29890483167830223,-0.920947719435069,0.2500223983300519);
 	Image621.mastAz = "287.957";
 	Image621.mastEl = "-14.4552";
 	Image621.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -14930,6 +15552,7 @@ function getImageDataArray()
 	Image622.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NLA_400958669EDR_F0040468NCAM00422M_.JPG";
 	Image622.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image622.cameraPosition = new THREE.Vector3(0.818833,0.307099,-1.94867);
+	Image622.cameraVector = new THREE.Vector3(0.8389272470329315,-0.4417657916754659,0.31787428252549027);
 	Image622.mastAz = "332.205";
 	Image622.mastEl = "-18.5113";
 	Image622.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -14954,6 +15577,7 @@ function getImageDataArray()
 	Image623.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NRA_400958669EDR_F0040468NCAM00422M_.JPG";
 	Image623.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image623.cameraPosition = new THREE.Vector3(1.0222,0.678679,-1.94842);
+	Image623.cameraVector = new THREE.Vector3(0.8327429107862279,-0.45015898019264994,0.322329237096472);
 	Image623.mastAz = "331.581";
 	Image623.mastEl = "-18.7803";
 	Image623.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -14978,6 +15602,7 @@ function getImageDataArray()
 	Image624.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NLA_400958694EDR_F0040468NCAM00422M_.JPG";
 	Image624.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image624.cameraPosition = new THREE.Vector3(0.884949,0.319145,-1.94456);
+	Image624.cameraVector = new THREE.Vector3(0.9150878804307023,-0.20669061499292754,0.3462559180182917);
 	Image624.mastAz = "347.247";
 	Image624.mastEl = "-20.2355";
 	Image624.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -15002,6 +15627,7 @@ function getImageDataArray()
 	Image625.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NRA_400958694EDR_F0040468NCAM00422M_.JPG";
 	Image625.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image625.cameraPosition = new THREE.Vector3(0.985012,0.730749,-1.94443);
+	Image625.cameraVector = new THREE.Vector3(0.9111607102053657,-0.21636695695565086,0.35067292469736683);
 	Image625.mastAz = "346.617";
 	Image625.mastEl = "-20.5048";
 	Image625.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -15026,6 +15652,7 @@ function getImageDataArray()
 	Image626.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NLA_400958722EDR_F0040468NCAM00422M_.JPG";
 	Image626.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image626.cameraPosition = new THREE.Vector3(0.997327,0.393437,-1.93694);
+	Image626.cameraVector = new THREE.Vector3(0.8741449238766102,0.27915972855627375,0.3974172844921856);
 	Image626.mastAz = "17.6851";
 	Image626.mastEl = "-23.3937";
 	Image626.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -15050,6 +15677,7 @@ function getImageDataArray()
 	Image627.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NRA_400958722EDR_F0040468NCAM00422M_.JPG";
 	Image627.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image627.cameraPosition = new THREE.Vector3(0.875316,0.799076,-1.93705);
+	Image627.cameraVector = new THREE.Vector3(0.8754251564510463,0.26875849706641575,0.4017457724821285);
 	Image627.mastAz = "17.0409";
 	Image627.mastEl = "-23.6638";
 	Image627.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -15074,6 +15702,7 @@ function getImageDataArray()
 	Image628.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NLA_400958750EDR_F0040468NCAM00422M_.JPG";
 	Image628.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image628.cameraPosition = new THREE.Vector3(1.05592,0.516901,-1.93183);
+	Image628.cameraVector = new THREE.Vector3(0.5960707767047421,0.6777626824421059,0.4305082757015093);
 	Image628.mastAz = "48.643";
 	Image628.mastEl = "-25.4768";
 	Image628.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -15098,6 +15727,7 @@ function getImageDataArray()
 	Image629.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NRA_400958750EDR_F0040468NCAM00422M_.JPG";
 	Image629.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image629.cameraPosition = new THREE.Vector3(0.742778,0.802154,-1.93215);
+	Image629.cameraVector = new THREE.Vector3(0.6024087457927972,0.6693827661857212,0.43477628192658024);
 	Image629.mastAz = "47.9883";
 	Image629.mastEl = "-25.7475";
 	Image629.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -15122,6 +15752,7 @@ function getImageDataArray()
 	Image630.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NLA_400967395EDR_F0040468NCAM00420M_.JPG";
 	Image630.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image630.cameraPosition = new THREE.Vector3(1.00133,0.718469,-1.86547);
+	Image630.cameraVector = new THREE.Vector3(-0.08867710826070778,0.5980295232950991,0.7965532372277168);
 	Image630.mastAz = "98.3948";
 	Image630.mastEl = "-52.7796";
 	Image630.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -15146,6 +15777,7 @@ function getImageDataArray()
 	Image631.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NRA_400967395EDR_F0040468NCAM00420M_.JPG";
 	Image631.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image631.cameraPosition = new THREE.Vector3(0.580776,0.667852,-1.86608);
+	Image631.cameraVector = new THREE.Vector3(-0.07798706361608568,0.5956221229819804,0.7994700147741498);
 	Image631.mastAz = "97.4201";
 	Image631.mastEl = "-53.056";
 	Image631.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -15170,6 +15802,7 @@ function getImageDataArray()
 	Image632.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NLA_400967424EDR_F0040468NCAM00420M_.JPG";
 	Image632.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image632.cameraPosition = new THREE.Vector3(1.00133,0.718469,-1.86547);
+	Image632.cameraVector = new THREE.Vector3(-0.08867710826070778,0.5980295232950991,0.7965532372277168);
 	Image632.mastAz = "98.3948";
 	Image632.mastEl = "-52.7796";
 	Image632.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -15194,6 +15827,7 @@ function getImageDataArray()
 	Image633.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00039/opgs/edr/ncam/NRA_400967424EDR_F0040468NCAM00420M_.JPG";
 	Image633.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image633.cameraPosition = new THREE.Vector3(0.580776,0.667852,-1.86608);
+	Image633.cameraVector = new THREE.Vector3(-0.07798706361608568,0.5956221229819804,0.7994700147741498);
 	Image633.mastAz = "97.4201";
 	Image633.mastEl = "-53.056";
 	Image633.xyz = new THREE.Vector3(-11.9001,51.9694,1.16472);
@@ -15218,6 +15852,7 @@ function getImageDataArray()
 	Image634.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ccam/CR0_401041726EDR_F0040468CCAM01040M_.JPG";
 	Image634.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image634.cameraPosition = new THREE.Vector3;
+	Image634.cameraVector = new THREE.Vector3;
 	Image634.mastAz = "";
 	Image634.mastEl = "";
 	Image634.xyz = new THREE.Vector3;
@@ -15242,6 +15877,7 @@ function getImageDataArray()
 	Image635.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ccam/CR0_401042276EDR_F0040468CCAM01040M_.JPG";
 	Image635.attitude = new THREE.Quaternion(0.732222,-0.0526415,-0.0225173,0.678655);
 	Image635.cameraPosition = new THREE.Vector3;
+	Image635.cameraVector = new THREE.Vector3;
 	Image635.mastAz = "";
 	Image635.mastEl = "";
 	Image635.xyz = new THREE.Vector3;
@@ -15266,6 +15902,7 @@ function getImageDataArray()
 	Image636.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/fcam/FLA_401051057EDR_F0040916FHAZ00304M_.JPG";
 	Image636.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image636.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image636.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image636.mastAz = "1.03995";
 	Image636.mastEl = "-43.4728";
 	Image636.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15290,6 +15927,7 @@ function getImageDataArray()
 	Image637.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/fcam/FRA_401051057EDR_F0040916FHAZ00304M_.JPG";
 	Image637.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image637.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image637.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image637.mastAz = "359.974";
 	Image637.mastEl = "-43.7598";
 	Image637.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15314,6 +15952,7 @@ function getImageDataArray()
 	Image638.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/rcam/RRA_401051091EDR_F0040916RHAZ00304M_.JPG";
 	Image638.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image638.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image638.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image638.mastAz = "182.044";
 	Image638.mastEl = "-43.5257";
 	Image638.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15338,6 +15977,7 @@ function getImageDataArray()
 	Image639.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/rcam/RLA_401051091EDR_F0040916RHAZ00304M_.JPG";
 	Image639.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image639.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image639.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image639.mastAz = "182.571";
 	Image639.mastEl = "-44.9097";
 	Image639.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15362,6 +16002,7 @@ function getImageDataArray()
 	Image640.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051138EDR_F0040916NCAM00423M_.JPG";
 	Image640.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image640.cameraPosition = new THREE.Vector3(0.686206,0.33653,-1.95094);
+	Image640.cameraVector = new THREE.Vector3(0.4930159781289255,-0.8157988316917428,0.302336751851253);
 	Image640.mastAz = "301.121";
 	Image640.mastEl = "-17.575";
 	Image640.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15386,6 +16027,7 @@ function getImageDataArray()
 	Image641.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051138EDR_F0040916NCAM00423M_.JPG";
 	Image641.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image641.cameraPosition = new THREE.Vector3(1.05217,0.549835,-1.95052);
+	Image641.cameraVector = new THREE.Vector3(0.4834217836987993,-0.8198592694832971,0.3068129027400664);
 	Image641.mastAz = "300.501";
 	Image641.mastEl = "-17.8436";
 	Image641.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15410,6 +16052,7 @@ function getImageDataArray()
 	Image642.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051166EDR_F0040916NCAM00423M_.JPG";
 	Image642.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image642.cameraPosition = new THREE.Vector3(0.813399,0.307348,-1.95153);
+	Image642.cameraVector = new THREE.Vector3(0.8364192927516966,-0.4603099925696879,0.2975188690709301);
 	Image642.mastAz = "331.15";
 	Image642.mastEl = "-17.2856";
 	Image642.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15434,6 +16077,7 @@ function getImageDataArray()
 	Image643.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051166EDR_F0040916NCAM00423M_.JPG";
 	Image643.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image643.cameraPosition = new THREE.Vector3(1.02353,0.675144,-1.95127);
+	Image643.cameraVector = new THREE.Vector3(0.8301656080192081,-0.4686341043746845,0.3020051977682433);
 	Image643.mastAz = "330.53";
 	Image643.mastEl = "-17.5544";
 	Image643.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15458,6 +16102,7 @@ function getImageDataArray()
 	Image644.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051194EDR_F0040916NCAM00423M_.JPG";
 	Image644.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image644.cameraPosition = new THREE.Vector3(0.938448,0.345889,-1.95242);
+	Image644.cameraVector = new THREE.Vector3(0.9566786486042063,0.022189264406779378,0.2902991557857441);
 	Image644.mastAz = "1.304";
 	Image644.mastEl = "-16.8529";
 	Image644.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15482,6 +16127,7 @@ function getImageDataArray()
 	Image645.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051194EDR_F0040916NCAM00423M_.JPG";
 	Image645.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image645.cameraPosition = new THREE.Vector3(0.935442,0.76947,-1.95237);
+	Image645.cameraVector = new THREE.Vector3(0.9554853706805563,0.011850050485297747,0.2948004116668353);
 	Image645.mastAz = "0.685933";
 	Image645.mastEl = "-17.1219";
 	Image645.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15506,6 +16152,7 @@ function getImageDataArray()
 	Image646.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051222EDR_F0040916NCAM00423M_.JPG";
 	Image646.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image646.cameraPosition = new THREE.Vector3(1.02682,0.440978,-1.95331);
+	Image646.cameraVector = new THREE.Vector3(0.8198545538329384,0.49766517829715007,0.28313933119554247);
 	Image646.mastAz = "31.2339";
 	Image646.mastEl = "-16.4246";
 	Image646.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15530,6 +16177,7 @@ function getImageDataArray()
 	Image647.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051222EDR_F0040916NCAM00423M_.JPG";
 	Image647.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image647.cameraPosition = new THREE.Vector3(0.812916,0.806593,-1.95347);
+	Image647.cameraVector = new THREE.Vector3(0.8240066138207478,0.4881281961668579,0.28765250648404683);
 	Image647.mastAz = "30.6173";
 	Image647.mastEl = "-16.6939";
 	Image647.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15554,6 +16202,7 @@ function getImageDataArray()
 	Image648.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051257EDR_F0040916NCAM00423M_.JPG";
 	Image648.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image648.cameraPosition = new THREE.Vector3(1.05615,0.567751,-1.95394);
+	Image648.cameraVector = new THREE.Vector3(0.46193326292933445,0.8422246879879806,0.27798423614120127);
 	Image648.mastAz = "61.2322";
 	Image648.mastEl = "-16.1169";
 	Image648.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15578,6 +16227,7 @@ function getImageDataArray()
 	Image649.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051257EDR_F0040916NCAM00423M_.JPG";
 	Image649.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image649.cameraPosition = new THREE.Vector3(0.688116,0.777468,-1.95425);
+	Image649.cameraVector = new THREE.Vector3(0.47030872630888115,0.8360615291777317,0.28250809083406964);
 	Image649.mastAz = "60.6167";
 	Image649.mastEl = "-16.3864";
 	Image649.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15602,6 +16252,7 @@ function getImageDataArray()
 	Image650.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051628EDR_F0040916NCAM00424M_.JPG";
 	Image650.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image650.cameraPosition = new THREE.Vector3(1.01854,0.691919,-1.95423);
+	Image650.cameraVector = new THREE.Vector3(-0.019193811165946106,0.9610569404615816,0.2756830694902209);
 	Image650.mastAz = "91.1195";
 	Image650.mastEl = "-15.9796";
 	Image650.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15626,6 +16277,7 @@ function getImageDataArray()
 	Image651.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051628EDR_F0040916NCAM00424M_.JPG";
 	Image651.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image651.cameraPosition = new THREE.Vector3(0.594954,0.690366,-1.95459);
+	Image651.cameraVector = new THREE.Vector3(-0.00886310235684167,0.959897250502398,0.28021190890921976);
 	Image651.mastAz = "90.5045";
 	Image651.mastEl = "-16.2492";
 	Image651.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15650,6 +16302,7 @@ function getImageDataArray()
 	Image652.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051663EDR_F0040916NCAM00424M_.JPG";
 	Image652.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image652.cameraPosition = new THREE.Vector3(0.924498,0.780782,-1.95392);
+	Image652.cameraVector = new THREE.Vector3(-0.49324851456624746,0.8242243140842217,0.2781369859450276);
 	Image652.mastAz = "120.873";
 	Image652.mastEl = "-16.1259";
 	Image652.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15674,6 +16327,7 @@ function getImageDataArray()
 	Image653.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051663EDR_F0040916NCAM00424M_.JPG";
 	Image653.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image653.cameraPosition = new THREE.Vector3(0.557528,0.569209,-1.95423);
+	Image653.cameraVector = new THREE.Vector3(-0.48369911753067163,0.8283347464671165,0.28266006349554873);
 	Image653.mastAz = "120.258";
 	Image653.mastEl = "-16.3954";
 	Image653.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15698,6 +16352,7 @@ function getImageDataArray()
 	Image654.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051698EDR_F0040916NCAM00424M_.JPG";
 	Image654.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image654.cameraPosition = new THREE.Vector3(0.797443,0.81124,-1.95326);
+	Image654.cameraVector = new THREE.Vector3(-0.8379921889909643,0.4662762972034646,0.2834704673442339);
 	Image654.mastAz = "150.883";
 	Image654.mastEl = "-16.4444";
 	Image654.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15722,6 +16377,7 @@ function getImageDataArray()
 	Image655.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051698EDR_F0040916NCAM00424M_.JPG";
 	Image655.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image655.cameraPosition = new THREE.Vector3(0.585514,0.444476,-1.95342);
+	Image655.cameraVector = new THREE.Vector3(-0.8317551595786131,0.47460380198559055,0.28798365518754365);
 	Image655.mastAz = "150.266";
 	Image655.mastEl = "-16.7137";
 	Image655.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15746,6 +16402,7 @@ function getImageDataArray()
 	Image656.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051733EDR_F0040916NCAM00424M_.JPG";
 	Image656.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image656.cameraPosition = new THREE.Vector3(0.672441,0.774144,-1.95238);
+	Image656.cameraVector = new THREE.Vector3(-0.9567320244726129,-0.013663128160922442,0.29064953514050923);
 	Image656.mastAz = "180.794";
 	Image656.mastEl = "-16.8737";
 	Image656.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15770,6 +16427,7 @@ function getImageDataArray()
 	Image657.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051733EDR_F0040916NCAM00424M_.JPG";
 	Image657.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image657.cameraPosition = new THREE.Vector3(0.671673,0.350553,-1.95233);
+	Image657.cameraVector = new THREE.Vector3(-0.9554456796045409,-0.0033353711747559187,0.2951481469095535);
 	Image657.mastAz = "180.175";
 	Image657.mastEl = "-17.1428";
 	Image657.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15794,6 +16452,7 @@ function getImageDataArray()
 	Image658.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051813EDR_F0040916NCAM00424M_.JPG";
 	Image658.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image658.cameraPosition = new THREE.Vector3(0.582066,0.678375,-1.95149);
+	Image658.cameraVector = new THREE.Vector3(-0.8181534178341835,-0.4918553152066602,0.29783104906842844);
 	Image658.mastAz = "210.989";
 	Image658.mastEl = "-17.3043";
 	Image658.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15818,6 +16477,7 @@ function getImageDataArray()
 	Image659.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051813EDR_F0040916NCAM00424M_.JPG";
 	Image659.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image659.cameraPosition = new THREE.Vector3(0.794489,0.311896,-1.95122);
+	Image659.cameraVector = new THREE.Vector3(-0.8222106639822613,-0.4822614162274592,0.3023136623643304);
 	Image659.mastAz = "210.369";
 	Image659.mastEl = "-17.5731";
 	Image659.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15842,6 +16502,7 @@ function getImageDataArray()
 	Image660.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051848EDR_F0040916NCAM00424M_.JPG";
 	Image660.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image660.cameraPosition = new THREE.Vector3(0.918694,0.339423,-1.95044);
+	Image660.cameraVector = new THREE.Vector3(-0.47319062249436056,-0.8255783048806348,0.3074265721986586);
 	Image660.mastAz = "240.156";
 	Image660.mastEl = "-17.8806";
 	Image660.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15866,6 +16527,7 @@ function getImageDataArray()
 	Image661.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051848EDR_F0040916NCAM00424M_.JPG";
 	Image661.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image661.cameraPosition = new THREE.Vector3(0.552256,0.551915,-1.95085);
+	Image661.cameraVector = new THREE.Vector3(-0.4649158656917552,-0.8319085903421687,0.3029543449812059);
 	Image661.mastAz = "240.776";
 	Image661.mastEl = "-17.612";
 	Image661.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15890,6 +16552,7 @@ function getImageDataArray()
 	Image662.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NRA_401051883EDR_F0040916NCAM00424M_.JPG";
 	Image662.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image662.cameraPosition = new THREE.Vector3(1.01408,0.426982,-1.95014);
+	Image662.cameraVector = new THREE.Vector3(0.00783727984871089,-0.9509274370391597,0.3093147046790822);
 	Image662.mastAz = "270.448";
 	Image662.mastEl = "-17.9943";
 	Image662.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15914,6 +16577,7 @@ function getImageDataArray()
 	Image663.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00040/opgs/edr/ncam/NLA_401051883EDR_F0040916NCAM00424M_.JPG";
 	Image663.attitude = new THREE.Quaternion(0.711723,0.00533552,0.00526578,0.70242);
 	Image663.cameraPosition = new THREE.Vector3(0.590495,0.425611,-1.95061);
+	Image663.cameraVector = new THREE.Vector3(0.018176734513602813,-0.9522279896368891,0.30484662057255973);
 	Image663.mastAz = "271.069";
 	Image663.mastEl = "-17.7258";
 	Image663.xyz = new THREE.Vector3(5.99001,84.5319,0.854814);
@@ -15938,6 +16602,7 @@ function getImageDataArray()
 	Image664.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/rcam/RLA_401131684EDR_F0041042RHAZ00305M_.JPG";
 	Image664.attitude = new THREE.Quaternion(0.840636,-0.00966757,0.00414998, 0.541498);
 	Image664.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image664.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image664.mastAz = "182.571";
 	Image664.mastEl = "-44.9097";
 	Image664.xyz = new THREE.Vector3(10.2614,93.5576,1.07382);
@@ -15962,6 +16627,7 @@ function getImageDataArray()
 	Image665.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/rcam/RRA_401131684EDR_F0041042RHAZ00305M_.JPG";
 	Image665.attitude = new THREE.Quaternion(0.840636,-0.00966757,0.00414998, 0.541498);
 	Image665.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image665.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image665.mastAz = "182.044";
 	Image665.mastEl = "-43.5257";
 	Image665.xyz = new THREE.Vector3(10.2614,93.5576,1.07382);
@@ -15986,6 +16652,7 @@ function getImageDataArray()
 	Image666.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/rcam/RLA_401132626EDR_F0041162RHAZ00305M_.JPG";
 	Image666.attitude = new THREE.Quaternion(0.851342,-0.0147454,-0.00370851, 0.524391);
 	Image666.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image666.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image666.mastAz = "182.571";
 	Image666.mastEl = "-44.9097";
 	Image666.xyz = new THREE.Vector3(14.5099,102.608,1.22187);
@@ -16010,6 +16677,7 @@ function getImageDataArray()
 	Image667.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/rcam/RRA_401132626EDR_F0041162RHAZ00305M_.JPG";
 	Image667.attitude = new THREE.Quaternion(0.851342,-0.0147454,-0.00370851, 0.524391);
 	Image667.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image667.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image667.mastAz = "182.044";
 	Image667.mastEl = "-43.5257";
 	Image667.xyz = new THREE.Vector3(14.5099,102.608,1.22187);
@@ -16034,6 +16702,7 @@ function getImageDataArray()
 	Image668.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NLA_401136867EDR_F0041238SAPP07712M_.JPG";
 	Image668.attitude = new THREE.Quaternion(0.710079,-0.00509219,-0.0168656, 0.703902);
 	Image668.cameraPosition = new THREE.Vector3(0.691705,0.741749,-2.04665);
+	Image668.cameraVector = new THREE.Vector3(-0.4473083472688857,-0.31790283294139293,-0.8359743006046387);
 	Image668.mastAz = "215.36";
 	Image668.mastEl = "56.7413";
 	Image668.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16058,6 +16727,7 @@ function getImageDataArray()
 	Image669.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NLA_401136927EDR_F0041238SAPP07712M_.JPG";
 	Image669.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image669.cameraPosition = new THREE.Vector3(0.971867,0.370385,-1.86203);
+	Image669.cameraVector = new THREE.Vector3(0.5716919987065929,0.11355604388219935,0.8125720174314921);
 	Image669.mastAz = "11.1933";
 	Image669.mastEl = "-54.3255";
 	Image669.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16082,6 +16752,7 @@ function getImageDataArray()
 	Image670.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/fcam/FLA_401137864EDR_F0041238FHAZ00304M_.JPG";
 	Image670.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image670.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image670.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image670.mastAz = "1.03995";
 	Image670.mastEl = "-43.4728";
 	Image670.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16106,6 +16777,7 @@ function getImageDataArray()
 	Image671.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/fcam/FRA_401137864EDR_F0041238FHAZ00304M_.JPG";
 	Image671.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image671.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image671.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image671.mastAz = "359.974";
 	Image671.mastEl = "-43.7598";
 	Image671.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16130,6 +16802,7 @@ function getImageDataArray()
 	Image672.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/rcam/RLA_401137891EDR_F0041238RHAZ00304M_.JPG";
 	Image672.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image672.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image672.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image672.mastAz = "182.571";
 	Image672.mastEl = "-44.9097";
 	Image672.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16154,6 +16827,7 @@ function getImageDataArray()
 	Image673.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/rcam/RRA_401137891EDR_F0041238RHAZ00304M_.JPG";
 	Image673.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image673.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image673.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image673.mastAz = "182.044";
 	Image673.mastEl = "-43.5257";
 	Image673.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16178,6 +16852,7 @@ function getImageDataArray()
 	Image674.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NLA_401137937EDR_F0041238NCAM00425M_.JPG";
 	Image674.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image674.cameraPosition = new THREE.Vector3(0.745996,0.315152,-1.95704);
+	Image674.cameraVector = new THREE.Vector3(0.6956576292324022,-0.6705183611673438,0.25780921284588254);
 	Image674.mastAz = "316.03";
 	Image674.mastEl = "-14.917";
 	Image674.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16202,6 +16877,7 @@ function getImageDataArray()
 	Image675.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NRA_401137937EDR_F0041238NCAM00425M_.JPG";
 	Image675.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image675.cameraPosition = new THREE.Vector3(1.04472,0.615472,-1.95667);
+	Image675.cameraVector = new THREE.Vector3(0.6875818425594573,-0.6770580159881419,0.2623426247652918);
 	Image675.mastAz = "315.417";
 	Image675.mastEl = "-15.1854";
 	Image675.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16226,6 +16902,7 @@ function getImageDataArray()
 	Image676.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NLA_401137965EDR_F0041238NCAM00425M_.JPG";
 	Image676.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image676.cameraPosition = new THREE.Vector3(0.873748,0.317689,-1.95565);
+	Image676.cameraVector = new THREE.Vector3(0.9325874444262547,-0.24251174957840746,0.2673363234110299);
 	Image676.mastAz = "345.399";
 	Image676.mastEl = "-15.4828";
 	Image676.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16250,6 +16927,7 @@ function getImageDataArray()
 	Image677.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NRA_401137965EDR_F0041238NCAM00425M_.JPG";
 	Image677.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image677.cameraPosition = new THREE.Vector3(0.986859,0.7259,-1.95547);
+	Image677.cameraVector = new THREE.Vector3(0.9287118398107519,-0.25216009103370474,0.2718632139242118);
 	Image677.mastAz = "344.785";
 	Image677.mastEl = "-15.7515";
 	Image677.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16274,6 +16952,7 @@ function getImageDataArray()
 	Image678.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NLA_401137993EDR_F0041238NCAM00425M_.JPG";
 	Image678.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image678.cameraPosition = new THREE.Vector3(0.986441,0.385227,-1.95341);
+	Image678.cameraVector = new THREE.Vector3(0.9240733061792714,0.25711889932328336,0.282804519797145);
 	Image678.mastAz = "15.5243";
 	Image678.mastEl = "-16.4046";
 	Image678.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16298,6 +16977,7 @@ function getImageDataArray()
 	Image679.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NRA_401137993EDR_F0041238NCAM00425M_.JPG";
 	Image679.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image679.cameraPosition = new THREE.Vector3(0.879488,0.795094,-1.95346);
+	Image679.cameraVector = new THREE.Vector3(0.9254906296894798,0.24681415244620228,0.28731492914436735);
 	Image679.mastAz = "14.9077";
 	Image679.mastEl = "-16.6737";
 	Image679.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16322,6 +17002,7 @@ function getImageDataArray()
 	Image680.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NRA_401138021EDR_F0041238NCAM00425M_.JPG";
 	Image680.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image680.cameraPosition = new THREE.Vector3(0.752485,0.801652,-1.95112);
+	Image680.cameraVector = new THREE.Vector3(0.6748441813828475,0.6720461817231071,0.30485941101613834);
 	Image680.mastAz = "44.8562";
 	Image680.mastEl = "-17.7261";
 	Image680.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16346,6 +17027,7 @@ function getImageDataArray()
 	Image681.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NLA_401138021EDR_F0041238NCAM00425M_.JPG";
 	Image681.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image681.cameraPosition = new THREE.Vector3(1.04972,0.499852,-1.95087);
+	Image681.cameraVector = new THREE.Vector3(0.6685350972358141,0.6803237820499091,0.30036706767088917);
 	Image681.mastAz = "45.4761";
 	Image681.mastEl = "-17.4566";
 	Image681.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16370,6 +17052,7 @@ function getImageDataArray()
 	Image682.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NLA_401138049EDR_F0041238NCAM00425M_.JPG";
 	Image682.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image682.cameraPosition = new THREE.Vector3(1.04671,0.631536,-1.94875);
+	Image682.cameraVector = new THREE.Vector3(0.23576919783758918,0.9193212692506861,0.31505759672530825);
 	Image682.mastAz = "75.591";
 	Image682.mastEl = "-18.3412";
 	Image682.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16394,6 +17077,7 @@ function getImageDataArray()
 	Image683.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NRA_401138049EDR_F0041238NCAM00425M_.JPG";
 	Image683.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image683.cameraPosition = new THREE.Vector3(0.638195,0.74354,-1.94912);
+	Image683.cameraVector = new THREE.Vector3(0.2453630981799396,0.9152570029125868,0.31953336081074557);
 	Image683.mastAz = "74.9682";
 	Image683.mastEl = "-18.6111";
 	Image683.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16418,6 +17102,7 @@ function getImageDataArray()
 	Image684.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NLA_401138349EDR_F0041238NCAM00516M_.JPG";
 	Image684.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image684.cameraPosition = new THREE.Vector3(0.771975,0.341011,-2.03637);
+	Image684.cameraVector = new THREE.Vector3(0.23993780018722755,0.03906276330276258,-0.9700020374022246);
 	Image684.mastAz = "9.15642";
 	Image684.mastEl = "75.9553";
 	Image684.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16442,6 +17127,7 @@ function getImageDataArray()
 	Image685.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00041/opgs/edr/ncam/NLA_401138383EDR_F0041238NCAM00516M_.JPG";
 	Image685.attitude = new THREE.Quaternion(0.711726,-0.0051317,-0.0168536,0.702236);
 	Image685.cameraPosition = new THREE.Vector3(0.82841,0.34553,-2.04535);
+	Image685.cameraVector = new THREE.Vector3(0.6950150248912799,0.031187891087482763,-0.7183184743725368);
 	Image685.mastAz = "2.53611";
 	Image685.mastEl = "45.9393";
 	Image685.xyz = new THREE.Vector3(17.5466,108.763,1.39658);
@@ -16466,6 +17152,7 @@ function getImageDataArray()
 	Image686.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/rcam/RLA_401222008EDR_F0041364RHAZ00305M_.JPG";
 	Image686.attitude = new THREE.Quaternion(0.658286,0.010831,-0.0403421,0.751608);
 	Image686.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image686.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image686.mastAz = "182.571";
 	Image686.mastEl = "-44.9097";
 	Image686.xyz = new THREE.Vector3(16.3603,118.658,2.03428);
@@ -16490,6 +17177,7 @@ function getImageDataArray()
 	Image687.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/rcam/RRA_401222008EDR_F0041364RHAZ00305M_.JPG";
 	Image687.attitude = new THREE.Quaternion(0.658286,0.010831,-0.0403421,0.751608);
 	Image687.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image687.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image687.mastAz = "182.044";
 	Image687.mastEl = "-43.5257";
 	Image687.xyz = new THREE.Vector3(16.3603,118.658,2.03428);
@@ -16514,6 +17202,7 @@ function getImageDataArray()
 	Image688.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/rcam/RLA_401223087EDR_F0041496RHAZ00305M_.JPG";
 	Image688.attitude = new THREE.Quaternion(0.416466,0.00810814,-0.037311,0.908349);
 	Image688.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image688.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image688.mastAz = "182.571";
 	Image688.mastEl = "-44.9097";
 	Image688.xyz = new THREE.Vector3(12.7114,127.978,2.90285);
@@ -16538,6 +17227,7 @@ function getImageDataArray()
 	Image689.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/rcam/RRA_401223087EDR_F0041496RHAZ00305M_.JPG";
 	Image689.attitude = new THREE.Quaternion(0.416466,0.00810814,-0.037311,0.908349);
 	Image689.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image689.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image689.mastAz = "182.044";
 	Image689.mastEl = "-43.5257";
 	Image689.xyz = new THREE.Vector3(12.7114,127.978,2.90285);
@@ -16562,6 +17252,7 @@ function getImageDataArray()
 	Image690.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401225800EDR_F0041632NCAM00426M_.JPG";
 	Image690.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image690.cameraPosition = new THREE.Vector3(1.02872,0.438104,-1.87972);
+	Image690.cameraVector = new THREE.Vector3(0.5908466141896149,0.34388597339246996,0.7298237566731997);
 	Image690.mastAz = "30.1654";
 	Image690.mastEl = "-46.8489";
 	Image690.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16586,6 +17277,7 @@ function getImageDataArray()
 	Image691.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401225800EDR_F0041632NCAM00426M_.JPG";
 	Image691.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image691.cameraPosition = new THREE.Vector3(0.824291,0.809103,-1.88008);
+	Image691.cameraVector = new THREE.Vector3(0.5928995259322388,0.33322546732133407,0.7330968149417952);
 	Image691.mastAz = "29.3024";
 	Image691.mastEl = "-47.1232";
 	Image691.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16610,6 +17302,7 @@ function getImageDataArray()
 	Image692.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401225829EDR_F0041632NCAM00426M_.JPG";
 	Image692.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image692.cameraPosition = new THREE.Vector3(0.695733,0.785044,-1.88014);
+	Image692.cameraVector = new THREE.Vector3(0.34381356460387497,0.5866850193726131,0.7332072836777698);
 	Image692.mastAz = "59.5937";
 	Image692.mastEl = "-47.1324";
 	Image692.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16634,6 +17327,7 @@ function getImageDataArray()
 	Image693.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401225829EDR_F0041632NCAM00426M_.JPG";
 	Image693.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image693.cameraPosition = new THREE.Vector3(1.05929,0.56766,-1.87962);
+	Image693.cameraVector = new THREE.Vector3(0.3366685070791524,0.5948566722253568,0.7299314048936852);
 	Image693.mastAz = "60.4566";
 	Image693.mastEl = "-46.8577";
 	Image693.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16658,6 +17352,7 @@ function getImageDataArray()
 	Image694.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401225856EDR_F0041632NCAM00426M_.JPG";
 	Image694.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image694.cameraPosition = new THREE.Vector3(1.02107,0.693897,-1.87958);
+	Image694.cameraVector = new THREE.Vector3(-0.005800202155328696,0.683444256503288,0.7299796612972345);
 	Image694.mastAz = "90.4512";
 	Image694.mastEl = "-46.8619";
 	Image694.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16682,6 +17377,7 @@ function getImageDataArray()
 	Image695.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401225856EDR_F0041632NCAM00426M_.JPG";
 	Image695.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image695.cameraPosition = new THREE.Vector3(0.597526,0.700482,-1.88015);
+	Image695.cameraVector = new THREE.Vector3(0.004472035783506735,0.679935645465179,0.7332581529869283);
 	Image695.mastAz = "89.5884";
 	Image695.mastEl = "-47.1367";
 	Image695.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16706,6 +17402,7 @@ function getImageDataArray()
 	Image696.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401225884EDR_F0041632NCAM00426M_.JPG";
 	Image696.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image696.cameraPosition = new THREE.Vector3(0.554753,0.578412,-1.88012);
+	Image696.cameraVector = new THREE.Vector3(-0.33526359295085784,0.5915293209478157,0.7332744272785581);
 	Image696.mastAz = "119.509";
 	Image696.mastEl = "-47.1382";
 	Image696.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16730,6 +17427,7 @@ function getImageDataArray()
 	Image697.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401225884EDR_F0041632NCAM00426M_.JPG";
 	Image697.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image697.cameraPosition = new THREE.Vector3(0.925101,0.784014,-1.8796);
+	Image697.cameraVector = new THREE.Vector3(-0.3459174761262176,0.5894435732527803,0.7299982011357711);
 	Image697.mastAz = "120.372";
 	Image697.mastEl = "-46.8635";
 	Image697.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16754,6 +17452,7 @@ function getImageDataArray()
 	Image698.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401225927EDR_F0041632NCAM00426M_.JPG";
 	Image698.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image698.cameraPosition = new THREE.Vector3(0.79616,0.814218,-1.87968);
+	Image698.cameraVector = new THREE.Vector3(-0.5948189725352682,0.33659668545402077,0.7299952474184026);
 	Image698.mastAz = "150.46";
 	Image698.mastEl = "-46.8632";
 	Image698.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16778,6 +17477,7 @@ function getImageDataArray()
 	Image699.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401225927EDR_F0041632NCAM00426M_.JPG";
 	Image699.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image699.cameraPosition = new THREE.Vector3(0.578933,0.450567,-1.88005);
+	Image699.cameraVector = new THREE.Vector3(-0.5866514889024514,0.34374786929068996,0.7332649131975754);
 	Image699.mastAz = "149.597";
 	Image699.mastEl = "-47.1375";
 	Image699.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16802,6 +17502,7 @@ function getImageDataArray()
 	Image700.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/fcam/FLA_401232778EDR_F0041632FHAZ00302M_.JPG";
 	Image700.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image700.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image700.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image700.mastAz = "1.03995";
 	Image700.mastEl = "-43.4728";
 	Image700.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16826,6 +17527,7 @@ function getImageDataArray()
 	Image701.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/fcam/FRA_401232778EDR_F0041632FHAZ00302M_.JPG";
 	Image701.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image701.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image701.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image701.mastAz = "359.974";
 	Image701.mastEl = "-43.7598";
 	Image701.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16850,6 +17552,7 @@ function getImageDataArray()
 	Image702.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/rcam/RRA_401232832EDR_F0041632RHAZ00304M_.JPG";
 	Image702.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image702.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image702.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image702.mastAz = "182.044";
 	Image702.mastEl = "-43.5257";
 	Image702.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16874,6 +17577,7 @@ function getImageDataArray()
 	Image703.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/rcam/RLA_401232832EDR_F0041632RHAZ00304M_.JPG";
 	Image703.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image703.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image703.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image703.mastAz = "182.571";
 	Image703.mastEl = "-44.9097";
 	Image703.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16898,6 +17602,7 @@ function getImageDataArray()
 	Image704.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401232890EDR_F0041632NCAM00427M_.JPG";
 	Image704.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image704.cameraPosition = new THREE.Vector3(0.684855,0.339471,-1.9608);
+	Image704.cameraVector = new THREE.Vector3(0.5050559024023463,-0.831856904963971,0.2300709132252807);
 	Image704.mastAz = "301.24";
 	Image704.mastEl = "-13.2781";
 	Image704.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16922,6 +17627,7 @@ function getImageDataArray()
 	Image705.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401232890EDR_F0041632NCAM00427M_.JPG";
 	Image705.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image705.cameraPosition = new THREE.Vector3(1.05032,0.553628,-1.96036);
+	Image705.cameraVector = new THREE.Vector3(0.4956442759573892,-0.8362324976040871,0.23463154447240406);
 	Image705.mastAz = "300.632";
 	Image705.mastEl = "-13.5463";
 	Image705.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16946,6 +17652,7 @@ function getImageDataArray()
 	Image706.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401232925EDR_F0041632NCAM00427M_.JPG";
 	Image706.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image706.cameraPosition = new THREE.Vector3(0.80693,0.309356,-1.96219);
+	Image706.cameraVector = new THREE.Vector3(0.8491681272065077,-0.4805727204187311,0.2190053700846911);
 	Image706.mastAz = "330.469";
 	Image706.mastEl = "-12.6275";
 	Image706.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16970,6 +17677,7 @@ function getImageDataArray()
 	Image707.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401232925EDR_F0041632NCAM00427M_.JPG";
 	Image707.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image707.cameraPosition = new THREE.Vector3(1.02131,0.674694,-1.9619);
+	Image707.cameraVector = new THREE.Vector3(0.8431343015359103,-0.4890161834288435,0.22357934143887384);
 	Image707.mastAz = "329.862";
 	Image707.mastEl = "-12.8957";
 	Image707.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -16994,6 +17702,7 @@ function getImageDataArray()
 	Image708.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401232953EDR_F0041632NCAM00427M_.JPG";
 	Image708.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image708.cameraPosition = new THREE.Vector3(0.930486,0.343109,-1.96107);
+	Image708.cameraVector = new THREE.Vector3(0.9739637275288472,0.0013378642407037957,0.22669995054561995);
 	Image708.mastAz = "0.0544964";
 	Image708.mastEl = "-13.0797";
 	Image708.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -17018,6 +17727,7 @@ function getImageDataArray()
 	Image709.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401232953EDR_F0041632NCAM00427M_.JPG";
 	Image709.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image709.cameraPosition = new THREE.Vector3(0.936596,0.766657,-1.96098);
+	Image709.cameraVector = new THREE.Vector3(0.9728479172884557,-0.008977707818206037,0.23127111922988755);
 	Image709.mastAz = "359.447";
 	Image709.mastEl = "-13.3483";
 	Image709.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -17042,6 +17752,7 @@ function getImageDataArray()
 	Image710.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401232988EDR_F0041632NCAM00427M_.JPG";
 	Image710.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image710.cameraPosition = new THREE.Vector3(1.02173,0.433573,-1.95766);
+	Image710.cameraVector = new THREE.Vector3(0.842192850333094,0.47702171397760396,0.2513194923631828);
 	Image710.mastAz = "29.5031";
 	Image710.mastEl = "-14.5325";
 	Image710.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -17066,6 +17777,7 @@ function getImageDataArray()
 	Image711.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401232988EDR_F0041632NCAM00427M_.JPG";
 	Image711.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image711.cameraPosition = new THREE.Vector3(0.8189,0.805447,-1.95779);
+	Image711.cameraVector = new THREE.Vector3(0.8461873725045641,0.46743696457954725,0.2558703084738066);
 	Image711.mastAz = "28.8921";
 	Image711.mastEl = "-14.8016";
 	Image711.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -17090,6 +17802,7 @@ function getImageDataArray()
 	Image712.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401233023EDR_F0041632NCAM00427M_.JPG";
 	Image712.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image712.cameraPosition = new THREE.Vector3(1.0565,0.559582,-1.95281);
+	Image712.cameraVector = new THREE.Vector3(0.4888799146008558,0.8240799143145657,0.28616205884630813);
 	Image712.mastAz = "59.297";
 	Image712.mastEl = "-16.6052";
 	Image712.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -17114,6 +17827,7 @@ function getImageDataArray()
 	Image713.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401233023EDR_F0041632NCAM00427M_.JPG";
 	Image713.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image713.cameraPosition = new THREE.Vector3(0.695766,0.781624,-1.95312);
+	Image713.cameraVector = new THREE.Vector3(0.49701849016366434,0.8176069252517262,0.29067427855909395);
 	Image713.mastAz = "58.68";
 	Image713.mastEl = "-16.8748";
 	Image713.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -17138,6 +17852,7 @@ function getImageDataArray()
 	Image714.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NRA_401233329EDR_F0041632NCAM00428M_.JPG";
 	Image714.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image714.cameraPosition = new THREE.Vector3(0.579256,0.449922,-1.87996);
+	Image714.cameraVector = new THREE.Vector3(-0.5871814914105642,0.3418335774992358,0.7337354437663071);
 	Image714.mastAz = "149.759";
 	Image714.mastEl = "-47.1771";
 	Image714.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -17162,6 +17877,7 @@ function getImageDataArray()
 	Image715.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00042/opgs/edr/ncam/NLA_401233329EDR_F0041632NCAM00428M_.JPG";
 	Image715.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image715.cameraPosition = new THREE.Vector3(0.795458,0.814184,-1.87959);
+	Image715.cameraVector = new THREE.Vector3(-0.5953332482097122,0.33466242076616476,0.7304651858254461);
 	Image715.mastAz = "150.623";
 	Image715.mastEl = "-46.9027";
 	Image715.xyz = new THREE.Vector3(5.23301,136.671,3.61328);
@@ -17186,6 +17902,7 @@ function getImageDataArray()
 	Image716.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ccam/CR0_401306913EDR_F0041632CCAM01043M_.JPG";
 	Image716.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image716.cameraPosition = new THREE.Vector3;
+	Image716.cameraVector = new THREE.Vector3;
 	Image716.mastAz = "";
 	Image716.mastEl = "";
 	Image716.xyz = new THREE.Vector3;
@@ -17210,6 +17927,7 @@ function getImageDataArray()
 	Image717.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ccam/CR0_401307450EDR_F0041632CCAM02043M_.JPG";
 	Image717.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image717.cameraPosition = new THREE.Vector3;
+	Image717.cameraVector = new THREE.Vector3;
 	Image717.mastAz = "";
 	Image717.mastEl = "";
 	Image717.xyz = new THREE.Vector3;
@@ -17234,6 +17952,7 @@ function getImageDataArray()
 	Image718.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ccam/CR0_401307580EDR_F0041632CCAM02043M_.JPG";
 	Image718.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image718.cameraPosition = new THREE.Vector3;
+	Image718.cameraVector = new THREE.Vector3;
 	Image718.mastAz = "";
 	Image718.mastEl = "";
 	Image718.xyz = new THREE.Vector3;
@@ -17258,6 +17977,7 @@ function getImageDataArray()
 	Image719.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ccam/CR0_401307710EDR_F0041632CCAM02043M_.JPG";
 	Image719.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image719.cameraPosition = new THREE.Vector3;
+	Image719.cameraVector = new THREE.Vector3;
 	Image719.mastAz = "";
 	Image719.mastEl = "";
 	Image719.xyz = new THREE.Vector3;
@@ -17282,6 +18002,7 @@ function getImageDataArray()
 	Image720.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ccam/CR0_401307839EDR_F0041632CCAM03043M_.JPG";
 	Image720.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image720.cameraPosition = new THREE.Vector3;
+	Image720.cameraVector = new THREE.Vector3;
 	Image720.mastAz = "";
 	Image720.mastEl = "";
 	Image720.xyz = new THREE.Vector3;
@@ -17306,6 +18027,7 @@ function getImageDataArray()
 	Image721.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ccam/CR0_401308772EDR_F0041632CCAM03043M_.JPG";
 	Image721.attitude = new THREE.Quaternion(0.575063,0.0173016,-0.0327506,0.81727);
 	Image721.cameraPosition = new THREE.Vector3;
+	Image721.cameraVector = new THREE.Vector3;
 	Image721.mastAz = "";
 	Image721.mastEl = "";
 	Image721.xyz = new THREE.Vector3;
@@ -17330,6 +18052,7 @@ function getImageDataArray()
 	Image722.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/rcam/RLA_401312656EDR_F0041758RHAZ00305M_.JPG";
 	Image722.attitude = new THREE.Quaternion(0.252987,-0.0151172,-0.0336468,0.966766);
 	Image722.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image722.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image722.mastAz = "182.571";
 	Image722.mastEl = "-44.9097";
 	Image722.xyz = new THREE.Vector3(-3.51794,141.484,3.8213);
@@ -17354,6 +18077,7 @@ function getImageDataArray()
 	Image723.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/rcam/RRA_401312656EDR_F0041758RHAZ00305M_.JPG";
 	Image723.attitude = new THREE.Quaternion(0.252987,-0.0151172,-0.0336468,0.966766);
 	Image723.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image723.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image723.mastAz = "182.044";
 	Image723.mastEl = "-43.5257";
 	Image723.xyz = new THREE.Vector3(-3.51794,141.484,3.8213);
@@ -17378,6 +18102,7 @@ function getImageDataArray()
 	Image724.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/rcam/RLA_401313586EDR_F0041878RHAZ00305M_.JPG";
 	Image724.attitude = new THREE.Quaternion(0.251282,0.000822523,-0.0486708, 0.966689);
 	Image724.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image724.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image724.mastAz = "182.571";
 	Image724.mastEl = "-44.9097";
 	Image724.xyz = new THREE.Vector3(-12.2342,146.39,3.99717);
@@ -17402,6 +18127,7 @@ function getImageDataArray()
 	Image725.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/rcam/RRA_401313586EDR_F0041878RHAZ00305M_.JPG";
 	Image725.attitude = new THREE.Quaternion(0.251282,0.000822523,-0.0486708, 0.966689);
 	Image725.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image725.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image725.mastAz = "182.044";
 	Image725.mastEl = "-43.5257";
 	Image725.xyz = new THREE.Vector3(-12.2342,146.39,3.99717);
@@ -17426,6 +18152,7 @@ function getImageDataArray()
 	Image726.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316500EDR_F0042002SAPP07612M_.JPG";
 	Image726.attitude = new THREE.Quaternion(0.75405,0.0138159,-0.0279076,0.656079);
 	Image726.cameraPosition = new THREE.Vector3(0.667577,0.725587,-2.04522);
+	Image726.cameraVector = new THREE.Vector3(-0.5755286393134583,-0.4065193760679385,-0.7095835272970569);
 	Image726.mastAz = "215.202";
 	Image726.mastEl = "45.2245";
 	Image726.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17450,6 +18177,7 @@ function getImageDataArray()
 	Image727.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/fcam/FLA_401316557EDR_F0042002FHAZ00302M_.JPG";
 	Image727.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image727.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image727.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image727.mastAz = "1.03995";
 	Image727.mastEl = "-43.4728";
 	Image727.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17474,6 +18202,7 @@ function getImageDataArray()
 	Image728.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/fcam/FRA_401316557EDR_F0042002FHAZ00302M_.JPG";
 	Image728.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image728.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image728.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image728.mastAz = "359.974";
 	Image728.mastEl = "-43.7598";
 	Image728.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17498,6 +18227,7 @@ function getImageDataArray()
 	Image729.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/rcam/RLA_401316584EDR_F0042002RHAZ00304M_.JPG";
 	Image729.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image729.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image729.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image729.mastAz = "182.571";
 	Image729.mastEl = "-44.9097";
 	Image729.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17522,6 +18252,7 @@ function getImageDataArray()
 	Image730.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/rcam/RRA_401316584EDR_F0042002RHAZ00304M_.JPG";
 	Image730.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image730.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image730.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image730.mastAz = "182.044";
 	Image730.mastEl = "-43.5257";
 	Image730.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17546,6 +18277,7 @@ function getImageDataArray()
 	Image731.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316636EDR_F0042002NCAM00429M_.JPG";
 	Image731.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image731.cameraPosition = new THREE.Vector3(1.05075,0.550695,-1.95797);
+	Image731.cameraVector = new THREE.Vector3(0.48630074787265415,-0.8365235485265874,0.25246769175279327);
 	Image731.mastAz = "300.147";
 	Image731.mastEl = "-14.6";
 	Image731.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17570,6 +18302,7 @@ function getImageDataArray()
 	Image732.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316636EDR_F0042002NCAM00429M_.JPG";
 	Image732.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image732.cameraPosition = new THREE.Vector3(0.683483,0.339641,-1.95841);
+	Image732.cameraVector = new THREE.Vector3(0.4957933582067576,-0.8322988037193872,0.24792669740337117);
 	Image732.mastAz = "300.757";
 	Image732.mastEl = "-14.3318";
 	Image732.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17594,6 +18327,7 @@ function getImageDataArray()
 	Image733.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316664EDR_F0042002NCAM00429M_.JPG";
 	Image733.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image733.cameraPosition = new THREE.Vector3(0.808167,0.308974,-1.96039);
+	Image733.cameraVector = new THREE.Vector3(0.84755074560377,-0.47703898311952686,0.23257588484359562);
 	Image733.mastAz = "330.603";
 	Image733.mastEl = "-13.4257";
 	Image733.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17618,6 +18352,7 @@ function getImageDataArray()
 	Image734.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316664EDR_F0042002NCAM00429M_.JPG";
 	Image734.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image734.cameraPosition = new THREE.Vector3(1.02171,0.674804,-1.9601);
+	Image734.cameraVector = new THREE.Vector3(0.8414832559198037,-0.4854612616161863,0.2371356014533188);
 	Image734.mastAz = "329.995";
 	Image734.mastEl = "-13.694";
 	Image734.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17642,6 +18377,7 @@ function getImageDataArray()
 	Image735.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316692EDR_F0042002NCAM00429M_.JPG";
 	Image735.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image735.cameraPosition = new THREE.Vector3(0.930824,0.343116,-1.96031);
+	Image735.cameraVector = new THREE.Vector3(0.9726307867770505,0.001452404338125581,0.23235155074820166);
 	Image735.mastAz = "0.0612696";
 	Image735.mastEl = "-13.4125";
 	Image735.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17666,6 +18402,7 @@ function getImageDataArray()
 	Image736.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316692EDR_F0042002NCAM00429M_.JPG";
 	Image736.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image736.cameraPosition = new THREE.Vector3(0.936893,0.766665,-1.96023);
+	Image736.cameraVector = new THREE.Vector3(0.9714890175814508,-0.00886363408792042,0.23691881459559777);
 	Image736.mastAz = "359.453";
 	Image736.mastEl = "-13.6811";
 	Image736.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17690,6 +18427,7 @@ function getImageDataArray()
 	Image737.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316724EDR_F0042002NCAM00429M_.JPG";
 	Image737.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image737.cameraPosition = new THREE.Vector3(1.02163,0.433616,-1.95818);
+	Image737.cameraVector = new THREE.Vector3(0.8427481995514073,0.47804232570926525,0.24748940782049259);
 	Image737.mastAz = "29.5394";
 	Image737.mastEl = "-14.3059";
 	Image737.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17714,6 +18452,7 @@ function getImageDataArray()
 	Image738.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316724EDR_F0042002NCAM00429M_.JPG";
 	Image738.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image738.cameraPosition = new THREE.Vector3(0.818559,0.805358,-1.95831);
+	Image738.cameraVector = new THREE.Vector3(0.8467661352340068,0.4684660515497602,0.25204497766518064);
 	Image738.mastAz = "28.929";
 	Image738.mastEl = "-14.5749";
 	Image738.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17738,6 +18477,7 @@ function getImageDataArray()
 	Image739.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316753EDR_F0042002NCAM00429M_.JPG";
 	Image739.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image739.cameraPosition = new THREE.Vector3(0.695381,0.781074,-1.95479);
+	Image739.cameraVector = new THREE.Vector3(0.498672772050355,0.8208272087081386,0.2785106099595139);
 	Image739.mastAz = "58.6959";
 	Image739.mastEl = "-16.1478";
 	Image739.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17762,6 +18502,7 @@ function getImageDataArray()
 	Image740.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316753EDR_F0042002NCAM00429M_.JPG";
 	Image740.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image740.cameraPosition = new THREE.Vector3(1.05618,0.559144,-1.95449);
+	Image740.cameraVector = new THREE.Vector3(0.4904989281319344,0.8272515049188301,0.2739812933595173);
 	Image740.mastAz = "59.3106";
 	Image740.mastEl = "-15.8783";
 	Image740.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17786,6 +18527,7 @@ function getImageDataArray()
 	Image741.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316780EDR_F0042002NCAM00430M_.JPG";
 	Image741.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image741.cameraPosition = new THREE.Vector3(0.599382,0.698558,-1.95054);
+	Image741.cameraVector = new THREE.Vector3(0.02220003650680683,0.950651420530544,0.30946572511726594);
 	Image741.mastAz = "88.6375";
 	Image741.mastEl = "-18.0035";
 	Image741.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17810,6 +18552,7 @@ function getImageDataArray()
 	Image742.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316780EDR_F0042002NCAM00430M_.JPG";
 	Image742.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image742.cameraPosition = new THREE.Vector3(1.0228,0.686274,-1.95016);
+	Image742.cameraVector = new THREE.Vector3(0.011917392940276316,0.9522858578673816,0.3049747869108066);
 	Image742.mastAz = "89.2582";
 	Image742.mastEl = "-17.7337";
 	Image742.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17834,6 +18577,7 @@ function getImageDataArray()
 	Image743.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316808EDR_F0042002NCAM00430M_.JPG";
 	Image743.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image743.cameraPosition = new THREE.Vector3(0.929017,0.779779,-1.9464);
+	Image743.cameraVector = new THREE.Vector3(-0.46353939468880806,0.8216356590071876,0.3317319300570239);
 	Image743.mastAz = "119.405";
 	Image743.mastEl = "-19.3508";
 	Image743.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17858,6 +18602,7 @@ function getImageDataArray()
 	Image744.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316808EDR_F0042002NCAM00430M_.JPG";
 	Image744.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image744.cameraPosition = new THREE.Vector3(0.556675,0.577809,-1.94674);
+	Image744.cameraVector = new THREE.Vector3(-0.45376643918857623,0.8252748359124495,0.3361807012245042);
 	Image744.mastAz = "118.779";
 	Image744.mastEl = "-19.6208";
 	Image744.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17882,6 +18627,7 @@ function getImageDataArray()
 	Image745.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316843EDR_F0042002NCAM00430M_.JPG";
 	Image745.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image745.cameraPosition = new THREE.Vector3(0.581291,0.449354,-1.94443);
+	Image745.cameraVector = new THREE.Vector3(-0.8058490042144357,0.4762803603988395,0.3518016496620702);
 	Image745.mastAz = "149.391";
 	Image745.mastEl = "-20.5741";
 	Image745.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17906,6 +18652,7 @@ function getImageDataArray()
 	Image746.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316843EDR_F0042002NCAM00430M_.JPG";
 	Image746.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image746.cameraPosition = new THREE.Vector3(0.798862,0.8128,-1.94424);
+	Image746.cameraVector = new THREE.Vector3(-0.8124694764931377,0.4682076455709346,0.34738300245678166);
 	Image746.mastAz = "150.021";
 	Image746.mastEl = "-20.3042";
 	Image746.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17930,6 +18677,7 @@ function getImageDataArray()
 	Image747.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316878EDR_F0042002NCAM00430M_.JPG";
 	Image747.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image747.cameraPosition = new THREE.Vector3(0.668506,0.350969,-1.94429);
+	Image747.cameraVector = new THREE.Vector3(-0.9360043457366638,-5.666153445895981E-4,0.3519879880182435);
 	Image747.mastAz = "180.01";
 	Image747.mastEl = "-20.5853";
 	Image747.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17954,6 +18702,7 @@ function getImageDataArray()
 	Image748.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316878EDR_F0042002NCAM00430M_.JPG";
 	Image748.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image748.cameraPosition = new THREE.Vector3(0.670549,0.774556,-1.94432);
+	Image748.cameraVector = new THREE.Vector3(-0.9375899919300075,-0.010889233925965781,0.34757219626603414);
 	Image748.mastAz = "180.64";
 	Image748.mastEl = "-20.3158";
 	Image748.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -17978,6 +18727,7 @@ function getImageDataArray()
 	Image749.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316958EDR_F0042002NCAM00430M_.JPG";
 	Image749.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image749.cameraPosition = new THREE.Vector3(0.794401,0.311064,-1.94637);
+	Image749.cameraVector = new THREE.Vector3(-0.8097328716104206,-0.4805438619720243,0.33676441818362285);
 	Image749.mastAz = "210.663";
 	Image749.mastEl = "-19.6563";
 	Image749.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18002,6 +18752,7 @@ function getImageDataArray()
 	Image750.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316958EDR_F0042002NCAM00430M_.JPG";
 	Image750.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image750.cameraPosition = new THREE.Vector3(0.580119,0.676458,-1.94662);
+	Image750.cameraVector = new THREE.Vector3(-0.8057683267295207,-0.49019803589357847,0.3323300907916498);
 	Image750.mastAz = "211.29";
 	Image750.mastEl = "-19.3872";
 	Image750.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18026,6 +18777,7 @@ function getImageDataArray()
 	Image751.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401316993EDR_F0042002NCAM00430M_.JPG";
 	Image751.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image751.cameraPosition = new THREE.Vector3(0.55226,0.549761,-1.95045);
+	Image751.cameraVector = new THREE.Vector3(-0.45772428285537403,-0.8348580703764722,0.3057784871631864);
 	Image751.mastAz = "241.241";
 	Image751.mastEl = "-17.7819";
 	Image751.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18050,6 +18802,7 @@ function getImageDataArray()
 	Image752.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401316993EDR_F0042002NCAM00430M_.JPG";
 	Image752.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image752.cameraPosition = new THREE.Vector3(0.920405,0.34024,-1.95004);
+	Image752.cameraVector = new THREE.Vector3(-0.46604494183287415,-0.8285823511275144,0.31024732003998584);
 	Image752.mastAz = "240.619";
 	Image752.mastEl = "-18.0505";
 	Image752.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18074,6 +18827,7 @@ function getImageDataArray()
 	Image753.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401317028EDR_F0042002NCAM00430M_.JPG";
 	Image753.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image753.cameraPosition = new THREE.Vector3(1.01467,0.429368,-1.95428);
+	Image753.cameraVector = new THREE.Vector3(0.012171110637089795,-0.9600903529486595,0.2794250852031333);
 	Image753.mastAz = "270.702";
 	Image753.mastEl = "-16.2023";
 	Image753.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18098,6 +18852,7 @@ function getImageDataArray()
 	Image754.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401317028EDR_F0042002NCAM00430M_.JPG";
 	Image754.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image754.cameraPosition = new THREE.Vector3(0.591088,0.426109,-1.95477);
+	Image754.cameraVector = new THREE.Vector3(0.022515460355375768,-0.9612043479279829,0.27491681572673343);
 	Image754.mastAz = "271.317";
 	Image754.mastEl = "-15.934";
 	Image754.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18122,6 +18877,7 @@ function getImageDataArray()
 	Image755.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401317063EDR_F0042002NCAM00431M_.JPG";
 	Image755.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image755.cameraPosition = new THREE.Vector3(0.882814,0.318183,-1.94291);
+	Image755.cameraVector = new THREE.Vector3(0.9086537672834047,-0.21542544851451317,0.3576873038479239);
 	Image755.mastAz = "346.637";
 	Image755.mastEl = "-20.9353";
 	Image755.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18146,6 +18902,7 @@ function getImageDataArray()
 	Image756.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401317063EDR_F0042002NCAM00431M_.JPG";
 	Image756.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image756.cameraPosition = new THREE.Vector3(0.987282,0.728691,-1.94278);
+	Image756.cameraVector = new THREE.Vector3(0.904570512107234,-0.22504669793610696,0.36208586326189374);
 	Image756.mastAz = "346.004";
 	Image756.mastEl = "-21.2047";
 	Image756.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18170,6 +18927,7 @@ function getImageDataArray()
 	Image757.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401317091EDR_F0042002NCAM00431M_.JPG";
 	Image757.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image757.cameraPosition = new THREE.Vector3(0.881458,0.796523,-1.9417);
+	Image757.cameraVector = new THREE.Vector3(0.8959362661804384,0.24545500704353504,0.37020270995754834);
 	Image757.mastAz = "15.2957";
 	Image757.mastEl = "-21.7046";
 	Image757.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18194,6 +18952,7 @@ function getImageDataArray()
 	Image758.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401317091EDR_F0042002NCAM00431M_.JPG";
 	Image758.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image758.cameraPosition = new THREE.Vector3(0.991102,0.387368,-1.94161);
+	Image758.cameraVector = new THREE.Vector3(0.8948290971129088,0.2558510191403581,0.36581572268689677);
 	Image758.mastAz = "15.931";
 	Image758.mastEl = "-21.4348";
 	Image758.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18218,6 +18977,7 @@ function getImageDataArray()
 	Image759.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401317134EDR_F0042002NCAM00432M_.JPG";
 	Image759.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image759.cameraPosition = new THREE.Vector3(0.597242,0.700054,-1.8801);
+	Image759.cameraVector = new THREE.Vector3(0.0030959135364820884,0.6796493835573316,0.7335305929199638);
 	Image759.mastAz = "89.7042";
 	Image759.mastEl = "-47.1598";
 	Image759.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18242,6 +19002,7 @@ function getImageDataArray()
 	Image760.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401317134EDR_F0042002NCAM00432M_.JPG";
 	Image760.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image760.cameraPosition = new THREE.Vector3(1.02079,0.694323,-1.87952);
+	Image760.cameraVector = new THREE.Vector3(-0.007183675016276032,0.6831359265958067,0.7302559144624227);
 	Image760.mastAz = "90.5675";
 	Image760.mastEl = "-46.8851";
 	Image760.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18266,6 +19027,7 @@ function getImageDataArray()
 	Image761.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401317162EDR_F0042002NCAM00432M_.JPG";
 	Image761.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image761.cameraPosition = new THREE.Vector3(0.925133,0.783997,-1.8796);
+	Image761.cameraVector = new THREE.Vector3(-0.34583279469502537,0.5894932828686336,0.7299981832622531);
 	Image761.mastAz = "120.363";
 	Image761.mastEl = "-46.8635";
 	Image761.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18290,6 +19052,7 @@ function getImageDataArray()
 	Image762.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401317162EDR_F0042002NCAM00432M_.JPG";
 	Image762.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image762.cameraPosition = new THREE.Vector3(0.554756,0.578448,-1.88012);
+	Image762.cameraVector = new THREE.Vector3(-0.3351783759175032,0.5915777100766505,0.7332743478792719);
 	Image762.mastAz = "119.5";
 	Image762.mastEl = "-47.1382";
 	Image762.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18314,6 +19077,7 @@ function getImageDataArray()
 	Image763.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NLA_401317197EDR_F0042002NCAM00432M_.JPG";
 	Image763.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image763.cameraPosition = new THREE.Vector3(0.796148,0.814218,-1.87968);
+	Image763.cameraVector = new THREE.Vector3(-0.5948524904521866,0.3365788354630643,0.7299761654473101);
 	Image763.mastAz = "150.463";
 	Image763.mastEl = "-46.8618";
 	Image763.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18338,6 +19102,7 @@ function getImageDataArray()
 	Image764.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00043/opgs/edr/ncam/NRA_401317197EDR_F0042002NCAM00432M_.JPG";
 	Image764.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image764.cameraPosition = new THREE.Vector3(0.578938,0.450557,-1.88005);
+	Image764.cameraVector = new THREE.Vector3(-0.5866819766187402,0.3437272023130143,0.7332502087969671);
 	Image764.mastAz = "149.6";
 	Image764.mastEl = "-47.1361";
 	Image764.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18362,6 +19127,7 @@ function getImageDataArray()
 	Image765.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401372390EDR_F0042002NCAM00517M_.JPG";
 	Image765.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image765.cameraPosition = new THREE.Vector3(0.55911,0.620335,-1.94804);
+	Image765.cameraVector = new THREE.Vector3(-0.6693757403049359,-0.6692302072471975,0.3225942466924852);
 	Image765.mastAz = "224.969";
 	Image765.mastEl = "-18.7968";
 	Image765.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18386,6 +19152,7 @@ function getImageDataArray()
 	Image766.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401372432EDR_F0042002NCAM00517M_.JPG";
 	Image766.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image766.cameraPosition = new THREE.Vector3(0.570247,0.466641,-1.95304);
+	Image766.cameraVector = new THREE.Vector3(-0.15247098366532255,-0.9455861339668052,0.28743601442728073);
 	Image766.mastAz = "260.816";
 	Image766.mastEl = "-16.6814";
 	Image766.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18410,6 +19177,7 @@ function getImageDataArray()
 	Image767.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401372477EDR_F0042002NCAM00517M_.JPG";
 	Image767.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image767.cameraPosition = new THREE.Vector3(0.668615,0.348324,-1.95766);
+	Image767.cameraVector = new THREE.Vector3(0.43602672909647033,-0.8634738352080265,0.2535618808586483);
 	Image767.mastAz = "296.768";
 	Image767.mastEl = "-14.6653";
 	Image767.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18434,6 +19202,7 @@ function getImageDataArray()
 	Image768.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401372525EDR_F0042002NCAM00517M_.JPG";
 	Image768.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image768.cameraPosition = new THREE.Vector3(0.815502,0.309134,-1.96014);
+	Image768.cameraVector = new THREE.Vector3(0.8606116858248931,-0.45209979641033526,0.2344212027683688);
 	Image768.mastAz = "332.262";
 	Image768.mastEl = "-13.5344";
 	Image768.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18458,6 +19227,7 @@ function getImageDataArray()
 	Image769.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401372570EDR_F0042002NCAM00517M_.JPG";
 	Image769.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image769.cameraPosition = new THREE.Vector3(0.958278,0.361504,-1.95963);
+	Image769.cameraVector = new THREE.Vector3(0.9629239572650803,0.12843900412103257,0.2372359052617359);
 	Image769.mastAz = "7.57325";
 	Image769.mastEl = "-13.7003";
 	Image769.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18482,6 +19252,7 @@ function getImageDataArray()
 	Image770.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401372605EDR_F0042002NCAM00517M_.JPG";
 	Image770.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image770.cameraPosition = new THREE.Vector3(1.0457,0.488806,-1.95629);
+	Image770.cameraVector = new THREE.Vector3(0.7036695545764399,0.6608191263426474,0.2610885677733423);
 	Image770.mastAz = "43.1767";
 	Image770.mastEl = "-15.1116";
 	Image770.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18506,6 +19277,7 @@ function getImageDataArray()
 	Image771.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401372650EDR_F0042002NCAM00517M_.JPG";
 	Image771.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image771.cameraPosition = new THREE.Vector3(1.04205,0.64435,-1.95129);
+	Image771.cameraVector = new THREE.Vector3(0.1844250888471614,0.9369187198468737,0.29693551320819095);
 	Image771.mastAz = "78.8394";
 	Image771.mastEl = "-17.2506";
 	Image771.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18530,6 +19302,7 @@ function getImageDataArray()
 	Image772.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401372700EDR_F0042002NCAM00517M_.JPG";
 	Image772.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image772.cameraPosition = new THREE.Vector3(0.945075,0.769876,-1.94652);
+	Image772.cameraVector = new THREE.Vector3(-0.40129451024889795,0.8541086119364952,0.33084920290067266);
 	Image772.mastAz = "115.141";
 	Image772.mastEl = "-19.2973";
 	Image772.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18554,6 +19327,7 @@ function getImageDataArray()
 	Image773.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401372736EDR_F0042002NCAM00517M_.JPG";
 	Image773.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image773.cameraPosition = new THREE.Vector3(0.791169,0.81257,-1.94384);
+	Image773.cameraVector = new THREE.Vector3(-0.8252497501567986,0.44314189488907224,0.35012585003147617);
 	Image773.mastAz = "151.74";
 	Image773.mastEl = "-20.472";
 	Image773.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18578,6 +19352,7 @@ function getImageDataArray()
 	Image774.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401372839EDR_F0042002NCAM00517M_.JPG";
 	Image774.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image774.cameraPosition = new THREE.Vector3(0.641967,0.753848,-1.94442);
+	Image774.cameraVector = new THREE.Vector3(-0.927152525138619,-0.14107355739719765,0.3471115764885721);
 	Image774.mastAz = "188.626";
 	Image774.mastEl = "-20.2876";
 	Image774.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18602,6 +19377,7 @@ function getImageDataArray()
 	Image775.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NRA_401399597EDR_F0042002NCAM00200M_.JPG";
 	Image775.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image775.cameraPosition = new THREE.Vector3(0.944386,0.766406,-1.87449);
+	Image775.cameraVector = new THREE.Vector3(0.6502609941105908,-0.004653043403683811,0.7596966425655636);
 	Image775.mastAz = "359.554";
 	Image775.mastEl = "-49.414";
 	Image775.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18626,6 +19402,7 @@ function getImageDataArray()
 	Image776.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401399597EDR_F0042002NCAM00200M_.JPG";
 	Image776.attitude = new THREE.Quaternion(0.75434,0.0138035,-0.0279137,0.655745);
 	Image776.cameraPosition = new THREE.Vector3(0.937844,0.342865,-1.87433);
+	Image776.cameraVector = new THREE.Vector3(0.6538943588846208,0.005620885878766045,0.7565649827085634);
 	Image776.mastAz = "0.455893";
 	Image776.mastEl = "-49.1395";
 	Image776.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18650,6 +19427,7 @@ function getImageDataArray()
 	Image777.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NRA_401399955EDR_F0042002NCAM00201M_.JPG";
 	Image777.attitude = new THREE.Quaternion(0.755023,0.0149332,-0.0286963,0.6549);
 	Image777.cameraPosition = new THREE.Vector3(0.944386,0.766406,-1.87449);
+	Image777.cameraVector = new THREE.Vector3(0.6502609941105908,-0.004653043403683811,0.7596966425655636);
 	Image777.mastAz = "359.554";
 	Image777.mastEl = "-49.414";
 	Image777.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18674,6 +19452,7 @@ function getImageDataArray()
 	Image778.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401399955EDR_F0042002NCAM00201M_.JPG";
 	Image778.attitude = new THREE.Quaternion(0.755023,0.0149332,-0.0286963,0.6549);
 	Image778.cameraPosition = new THREE.Vector3(0.937844,0.342865,-1.87433);
+	Image778.cameraVector = new THREE.Vector3(0.6538943588846208,0.005620885878766045,0.7565649827085634);
 	Image778.mastAz = "0.455893";
 	Image778.mastEl = "-49.1395";
 	Image778.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18698,6 +19477,7 @@ function getImageDataArray()
 	Image779.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401400251EDR_F0042002NCAM00202M_.JPG";
 	Image779.attitude = new THREE.Quaternion(0.755585,0.0149685,-0.0302769,0.654179);
 	Image779.cameraPosition = new THREE.Vector3(0.937844,0.342865,-1.87433);
+	Image779.cameraVector = new THREE.Vector3(0.6538943588846208,0.005620885878766045,0.7565649827085634);
 	Image779.mastAz = "0.455893";
 	Image779.mastEl = "-49.1395";
 	Image779.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18722,6 +19502,7 @@ function getImageDataArray()
 	Image780.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NRA_401400251EDR_F0042002NCAM00202M_.JPG";
 	Image780.attitude = new THREE.Quaternion(0.755585,0.0149685,-0.0302769,0.654179);
 	Image780.cameraPosition = new THREE.Vector3(0.944386,0.766406,-1.87449);
+	Image780.cameraVector = new THREE.Vector3(0.6502609941105908,-0.004653043403683811,0.7596966425655636);
 	Image780.mastAz = "359.554";
 	Image780.mastEl = "-49.414";
 	Image780.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18746,6 +19527,7 @@ function getImageDataArray()
 	Image781.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401400334EDR_F0042002NCAM00203M_.JPG";
 	Image781.attitude = new THREE.Quaternion(0.755786,0.0124347,-0.0287485,0.654069);
 	Image781.cameraPosition = new THREE.Vector3(0.937844,0.342865,-1.87433);
+	Image781.cameraVector = new THREE.Vector3(0.6538943588846208,0.005620885878766045,0.7565649827085634);
 	Image781.mastAz = "0.455893";
 	Image781.mastEl = "-49.1395";
 	Image781.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18770,6 +19552,7 @@ function getImageDataArray()
 	Image782.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NRA_401400334EDR_F0042002NCAM00203M_.JPG";
 	Image782.attitude = new THREE.Quaternion(0.755786,0.0124347,-0.0287485,0.654069);
 	Image782.cameraPosition = new THREE.Vector3(0.944386,0.766406,-1.87449);
+	Image782.cameraVector = new THREE.Vector3(0.6502609941105908,-0.004653043403683811,0.7596966425655636);
 	Image782.mastAz = "359.554";
 	Image782.mastEl = "-49.414";
 	Image782.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18794,6 +19577,7 @@ function getImageDataArray()
 	Image783.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NRA_401400705EDR_F0042002NCAM00203M_.JPG";
 	Image783.attitude = new THREE.Quaternion(0.756648,0.0144717,-0.026925,0.653108);
 	Image783.cameraPosition = new THREE.Vector3(0.944386,0.766406,-1.87449);
+	Image783.cameraVector = new THREE.Vector3(0.6502609941105908,-0.004653043403683811,0.7596966425655636);
 	Image783.mastAz = "359.554";
 	Image783.mastEl = "-49.414";
 	Image783.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18818,6 +19602,7 @@ function getImageDataArray()
 	Image784.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00044/opgs/edr/ncam/NLA_401400705EDR_F0042002NCAM00203M_.JPG";
 	Image784.attitude = new THREE.Quaternion(0.756648,0.0144717,-0.026925,0.653108);
 	Image784.cameraPosition = new THREE.Vector3(0.937844,0.342865,-1.87433);
+	Image784.cameraVector = new THREE.Vector3(0.6538943588846208,0.005620885878766045,0.7565649827085634);
 	Image784.mastAz = "0.455893";
 	Image784.mastEl = "-49.1395";
 	Image784.xyz = new THREE.Vector3(-20.9203,151.274,4.24749);
@@ -18842,6 +19627,7 @@ function getImageDataArray()
 	Image785.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ccam/CR0_401484069EDR_F0042002CCAM01045M_.JPG";
 	Image785.attitude = new THREE.Quaternion(0.756624,0.0162248,-0.0289284,0.653009);
 	Image785.cameraPosition = new THREE.Vector3;
+	Image785.cameraVector = new THREE.Vector3;
 	Image785.mastAz = "";
 	Image785.mastEl = "";
 	Image785.xyz = new THREE.Vector3;
@@ -18866,6 +19652,7 @@ function getImageDataArray()
 	Image786.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ccam/CR0_401484786EDR_F0042002CCAM01045M_.JPG";
 	Image786.attitude = new THREE.Quaternion(0.756624,0.0162248,-0.0289284,0.653009);
 	Image786.cameraPosition = new THREE.Vector3;
+	Image786.cameraVector = new THREE.Vector3;
 	Image786.mastAz = "";
 	Image786.mastEl = "";
 	Image786.xyz = new THREE.Vector3;
@@ -18890,6 +19677,7 @@ function getImageDataArray()
 	Image787.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ccam/CR0_401485256EDR_F0042002CCAM02045M_.JPG";
 	Image787.attitude = new THREE.Quaternion(0.756624,0.0162248,-0.0289284,0.653009);
 	Image787.cameraPosition = new THREE.Vector3;
+	Image787.cameraVector = new THREE.Vector3;
 	Image787.mastAz = "";
 	Image787.mastEl = "";
 	Image787.xyz = new THREE.Vector3;
@@ -18914,6 +19702,7 @@ function getImageDataArray()
 	Image788.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ccam/CR0_401485598EDR_F0042002CCAM02045M_.JPG";
 	Image788.attitude = new THREE.Quaternion(0.756624,0.0162248,-0.0289284,0.653009);
 	Image788.cameraPosition = new THREE.Vector3;
+	Image788.cameraVector = new THREE.Vector3;
 	Image788.mastAz = "";
 	Image788.mastEl = "";
 	Image788.xyz = new THREE.Vector3;
@@ -18938,6 +19727,7 @@ function getImageDataArray()
 	Image789.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/fcam/FLA_401490207EDR_F0042080FHAZ00306M_.JPG";
 	Image789.attitude = new THREE.Quaternion(0.455682,-0.000686569,-0.0405078, 0.88922);
 	Image789.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image789.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image789.mastAz = "1.03995";
 	Image789.mastEl = "-43.4728";
 	Image789.xyz = new THREE.Vector3(-17.8558,152.449,4.41566);
@@ -18962,6 +19752,7 @@ function getImageDataArray()
 	Image790.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/fcam/FRA_401490207EDR_F0042080FHAZ00306M_.JPG";
 	Image790.attitude = new THREE.Quaternion(0.455682,-0.000686569,-0.0405078, 0.88922);
 	Image790.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image790.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image790.mastAz = "359.974";
 	Image790.mastEl = "-43.7598";
 	Image790.xyz = new THREE.Vector3(-17.8558,152.449,4.41566);
@@ -18986,6 +19777,7 @@ function getImageDataArray()
 	Image791.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/fcam/FLA_401490495EDR_F0042086FHAZ00306M_.JPG";
 	Image791.attitude = new THREE.Quaternion(0.457041,-0.000716699,-0.0383646, 0.888618);
 	Image791.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image791.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image791.mastAz = "1.03995";
 	Image791.mastEl = "-43.4728";
 	Image791.xyz = new THREE.Vector3(-18.3975,153.258,4.46115);
@@ -19010,6 +19802,7 @@ function getImageDataArray()
 	Image792.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/fcam/FRA_401490495EDR_F0042086FHAZ00306M_.JPG";
 	Image792.attitude = new THREE.Quaternion(0.457041,-0.000716699,-0.0383646, 0.888618);
 	Image792.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image792.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image792.mastAz = "359.974";
 	Image792.mastEl = "-43.7598";
 	Image792.xyz = new THREE.Vector3(-18.3975,153.258,4.46115);
@@ -19034,6 +19827,7 @@ function getImageDataArray()
 	Image793.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/fcam/FRA_401490757EDR_F0042092FHAZ00306M_.JPG";
 	Image793.attitude = new THREE.Quaternion(0.457501,-0.0021514,-0.0375136,0.888415);
 	Image793.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image793.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image793.mastAz = "359.974";
 	Image793.mastEl = "-43.7598";
 	Image793.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19058,6 +19852,7 @@ function getImageDataArray()
 	Image794.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/fcam/FLA_401490757EDR_F0042092FHAZ00306M_.JPG";
 	Image794.attitude = new THREE.Quaternion(0.457501,-0.0021514,-0.0375136,0.888415);
 	Image794.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image794.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image794.mastAz = "1.03995";
 	Image794.mastEl = "-43.4728";
 	Image794.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19082,6 +19877,7 @@ function getImageDataArray()
 	Image795.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401492582EDR_F0042100NCAM00306M_.JPG";
 	Image795.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image795.cameraPosition = new THREE.Vector3(0.884122,0.316453,-1.88844);
+	Image795.cameraVector = new THREE.Vector3(0.7068061613097874,-0.17121295462236635,0.6863753889119294);
 	Image795.mastAz = "346.35";
 	Image795.mastEl = "-43.3212";
 	Image795.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19106,6 +19902,7 @@ function getImageDataArray()
 	Image796.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NRA_401492582EDR_F0042100NCAM00306M_.JPG";
 	Image796.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image796.cameraPosition = new THREE.Vector3(0.992579,0.725924,-1.88846);
+	Image796.cameraVector = new THREE.Vector3(0.701123591874494,-0.18039386548067876,0.689843288156047);
 	Image796.mastAz = "345.539";
 	Image796.mastEl = "-43.5941";
 	Image796.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19130,6 +19927,7 @@ function getImageDataArray()
 	Image797.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401492610EDR_F0042100NCAM00306M_.JPG";
 	Image797.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image797.cameraPosition = new THREE.Vector3(0.994396,0.388222,-1.88833);
+	Image797.cameraVector = new THREE.Vector3(0.6982729677421703,0.20325670567544388,0.6863683953377426);
 	Image797.mastAz = "16.1967";
 	Image797.mastEl = "-43.3205";
 	Image797.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19154,6 +19952,7 @@ function getImageDataArray()
 	Image798.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NRA_401492610EDR_F0042100NCAM00306M_.JPG";
 	Image798.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image798.cameraPosition = new THREE.Vector3(0.884883,0.797413,-1.88856);
+	Image798.cameraVector = new THREE.Vector3(0.6979116460386781,0.1924685973471348,0.689837062906024);
 	Image798.mastAz = "15.385";
 	Image798.mastEl = "-43.5938";
 	Image798.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19178,6 +19977,7 @@ function getImageDataArray()
 	Image799.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401492650EDR_F0042100NCAM00306M_.JPG";
 	Image799.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image799.cameraPosition = new THREE.Vector3(0.752263,0.309125,-1.88853);
+	Image799.cameraVector = new THREE.Vector3(0.5268855610267337,-0.5012606894842524,0.6863886120553837);
 	Image799.mastAz = "316.395";
 	Image799.mastEl = "-43.3221";
 	Image799.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19202,6 +20002,7 @@ function getImageDataArray()
 	Image800.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NRA_401492650EDR_F0042100NCAM00306M_.JPG";
 	Image800.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image800.cameraPosition = new THREE.Vector3(1.05057,0.609867,-1.88836);
+	Image800.cameraVector = new THREE.Vector3(0.5173818307343302,-0.5063840982466848,0.6898486691071343);
 	Image800.mastAz = "315.583";
 	Image800.mastEl = "-43.5947";
 	Image800.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19226,6 +20027,7 @@ function getImageDataArray()
 	Image801.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/fcam/FLA_401492677EDR_F0042100FHAZ00103M_.JPG";
 	Image801.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image801.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image801.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image801.mastAz = "1.03995";
 	Image801.mastEl = "-43.4728";
 	Image801.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19250,6 +20052,7 @@ function getImageDataArray()
 	Image802.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/fcam/FRA_401492677EDR_F0042100FHAZ00103M_.JPG";
 	Image802.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image802.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image802.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image802.mastAz = "359.974";
 	Image802.mastEl = "-43.7598";
 	Image802.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19274,6 +20077,7 @@ function getImageDataArray()
 	Image803.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/rcam/RLA_401492704EDR_F0042100RHAZ00306M_.JPG";
 	Image803.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image803.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image803.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image803.mastAz = "182.571";
 	Image803.mastEl = "-44.9097";
 	Image803.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19298,6 +20102,7 @@ function getImageDataArray()
 	Image804.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/rcam/RRA_401492704EDR_F0042100RHAZ00306M_.JPG";
 	Image804.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image804.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image804.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image804.mastAz = "182.044";
 	Image804.mastEl = "-43.5257";
 	Image804.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19322,6 +20127,7 @@ function getImageDataArray()
 	Image805.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NRA_401504010EDR_F0042100NCAM00433M_.JPG";
 	Image805.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image805.cameraPosition = new THREE.Vector3(0.975126,0.382078,-1.95941);
+	Image805.cameraVector = new THREE.Vector3(-0.23516445228985278,-0.941450680210574,0.24159531682187294);
 	Image805.mastAz = "255.951";
 	Image805.mastEl = "-13.9571";
 	Image805.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19346,6 +20152,7 @@ function getImageDataArray()
 	Image806.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401504010EDR_F0042100NCAM00433M_.JPG";
 	Image806.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image806.cameraPosition = new THREE.Vector3(0.564677,0.486775,-1.95989);
+	Image806.cameraVector = new THREE.Vector3(-0.22540137237895955,-0.9449891788001107,0.23704361050316086);
 	Image806.mastAz = "256.56";
 	Image806.mastEl = "-13.689";
 	Image806.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19370,6 +20177,7 @@ function getImageDataArray()
 	Image807.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NRA_401504049EDR_F0042100NCAM00433M_.JPG";
 	Image807.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image807.cameraPosition = new THREE.Vector3(1.04006,0.48939,-1.96099);
+	Image807.cameraVector = new THREE.Vector3(0.25831230604406713,-0.9383578828290542,0.22969378807179655);
 	Image807.mastAz = "285.367";
 	Image807.mastEl = "-13.2553";
 	Image807.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19394,6 +20202,7 @@ function getImageDataArray()
 	Image808.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401504049EDR_F0042100NCAM00433M_.JPG";
 	Image808.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image808.cameraPosition = new THREE.Vector3(0.631107,0.378996,-1.96148);
+	Image808.cameraVector = new THREE.Vector3(0.26854105040452964,-0.9365907527131608,0.22512988735356004);
 	Image808.mastAz = "285.975";
 	Image808.mastEl = "-12.9873";
 	Image808.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19418,6 +20227,7 @@ function getImageDataArray()
 	Image809.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401504079EDR_F0042100NCAM00433M_.JPG";
 	Image809.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image809.cameraPosition = new THREE.Vector3(0.743096,0.316674,-1.96076);
+	Image809.cameraVector = new THREE.Vector3(0.6954816398567059,-0.6806975845052354,0.23012189611370076);
 	Image809.mastAz = "315.591";
 	Image809.mastEl = "-13.2811";
 	Image809.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19442,6 +20252,7 @@ function getImageDataArray()
 	Image810.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NRA_401504079EDR_F0042100NCAM00433M_.JPG";
 	Image810.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image810.cameraPosition = new THREE.Vector3(1.04409,0.614725,-1.96038);
+	Image810.cameraVector = new THREE.Vector3(0.6874456118730641,-0.6872718949554075,0.23468249427869958);
 	Image810.mastAz = "314.983";
 	Image810.mastEl = "-13.5493";
 	Image810.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19466,6 +20277,7 @@ function getImageDataArray()
 	Image811.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401504128EDR_F0042100NCAM00433M_.JPG";
 	Image811.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image811.cameraPosition = new THREE.Vector3(0.87156,0.317532,-1.95784);
+	Image811.cameraVector = new THREE.Vector3(0.9353677792658762,-0.2489866927328263,0.25118269118948533);
 	Image811.mastAz = "345.07";
 	Image811.mastEl = "-14.5244";
 	Image811.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19490,6 +20302,7 @@ function getImageDataArray()
 	Image812.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NRA_401504128EDR_F0042100NCAM00433M_.JPG";
 	Image812.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image812.cameraPosition = new THREE.Vector3(0.986988,0.725094,-1.95766);
+	Image812.cameraVector = new THREE.Vector3(0.9315112045164389,-0.25863357514967444,0.25572553581062396);
 	Image812.mastAz = "344.458";
 	Image812.mastEl = "-14.793";
 	Image812.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19514,6 +20327,7 @@ function getImageDataArray()
 	Image813.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401504170EDR_F0042100NCAM00433M_.JPG";
 	Image813.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image813.cameraPosition = new THREE.Vector3(0.98447,0.383194,-1.95342);
+	Image813.cameraVector = new THREE.Vector3(0.9269230490593648,0.2467248386596433,0.282737537498761);
 	Image813.mastAz = "14.8806";
 	Image813.mastEl = "-16.4006";
 	Image813.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19538,6 +20352,7 @@ function getImageDataArray()
 	Image814.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NRA_401504170EDR_F0042100NCAM00433M_.JPG";
 	Image814.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image814.cameraPosition = new THREE.Vector3(0.882127,0.794237,-1.95347);
+	Image814.cameraVector = new THREE.Vector3(0.9282247983276982,0.23640494584595895,0.28724802061819943);
 	Image814.mastAz = "14.264";
 	Image814.mastEl = "-16.6697";
 	Image814.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19562,6 +20377,7 @@ function getImageDataArray()
 	Image815.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401505042EDR_F0042100NCAM00518M_.JPG";
 	Image815.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image815.cameraPosition = new THREE.Vector3(0.662859,0.768658,-1.94905);
+	Image815.cameraVector = new THREE.Vector3(-0.9478618362895302,-0.05155426090666249,0.31448385886752195);
 	Image815.mastAz = "183.088";
 	Image815.mastEl = "-18.3065";
 	Image815.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19586,6 +20402,7 @@ function getImageDataArray()
 	Image816.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401505079EDR_F0042100NCAM00518M_.JPG";
 	Image816.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image816.cameraPosition = new THREE.Vector3(0.569118,0.648384,-1.95476);
+	Image816.cameraVector = new THREE.Vector3(-0.7509065176756182,-0.60072464083893,0.2743525243208362);
 	Image816.mastAz = "218.635";
 	Image816.mastEl = "-15.9003";
 	Image816.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19610,6 +20427,7 @@ function getImageDataArray()
 	Image817.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401505119EDR_F0042100NCAM00518M_.JPG";
 	Image817.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image817.cameraPosition = new THREE.Vector3(0.561942,0.496045,-1.95935);
+	Image817.cameraVector = new THREE.Vector3(-0.2620884958296868,-0.9344421504355275,0.24109642851597668);
 	Image817.mastAz = "254.308";
 	Image817.mastEl = "-13.9281";
 	Image817.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19634,6 +20452,7 @@ function getImageDataArray()
 	Image818.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401505163EDR_F0042100NCAM00518M_.JPG";
 	Image818.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image818.cameraPosition = new THREE.Vector3(0.643575,0.367719,-1.96122);
+	Image818.cameraVector = new THREE.Vector3(0.33033877671949113,-0.9161503950807915,0.22703468058598383);
 	Image818.mastAz = "289.804";
 	Image818.mastEl = "-13.0994";
 	Image818.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19658,6 +20477,7 @@ function getImageDataArray()
 	Image819.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401505197EDR_F0042100NCAM00518M_.JPG";
 	Image819.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image819.cameraPosition = new THREE.Vector3(0.78417,0.309625,-1.9597);
+	Image819.cameraVector = new THREE.Vector3(0.7963994016769291,-0.5560324020601161,0.23785701769736925);
 	Image819.mastAz = "325.054";
 	Image819.mastEl = "-13.737";
 	Image819.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19682,6 +20502,7 @@ function getImageDataArray()
 	Image820.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401505243EDR_F0042100NCAM00518M_.JPG";
 	Image820.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image820.cameraPosition = new THREE.Vector3(0.93512,0.344477,-1.95531);
+	Image820.cameraVector = new THREE.Vector3(0.9629629979481824,0.011949029655434096,0.26936867908675355);
 	Image820.mastAz = "0.686378";
 	Image820.mastEl = "-15.6036";
 	Image820.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19706,6 +20527,7 @@ function getImageDataArray()
 	Image821.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401505294EDR_F0042100NCAM00518M_.JPG";
 	Image821.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image821.cameraPosition = new THREE.Vector3(1.03774,0.462506,-1.94958);
+	Image821.cameraVector = new THREE.Vector3(0.7642426625014275,0.5656643142620967,0.3097693276990497);
 	Image821.mastAz = "36.4826";
 	Image821.mastEl = "-18.0223";
 	Image821.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19730,6 +20552,7 @@ function getImageDataArray()
 	Image822.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401505358EDR_F0042100NCAM00518M_.JPG";
 	Image822.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image822.cameraPosition = new THREE.Vector3(1.05023,0.621125,-1.94473);
+	Image822.cameraVector = new THREE.Vector3(0.2760411862154903,0.8977588750855756,0.34326413403941114);
 	Image822.mastAz = "72.8833";
 	Image822.mastEl = "-20.0528";
 	Image822.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19754,6 +20577,7 @@ function getImageDataArray()
 	Image823.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401505400EDR_F0042100NCAM00518M_.JPG";
 	Image823.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image823.cameraPosition = new THREE.Vector3(0.964091,0.756591,-1.94271);
+	Image823.cameraVector = new THREE.Vector3(-0.31521955803751406,0.879209920022886,0.35724857839323093);
 	Image823.mastAz = "109.699";
 	Image823.mastEl = "-20.9083";
 	Image823.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19778,6 +20602,7 @@ function getImageDataArray()
 	Image824.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00045/opgs/edr/ncam/NLA_401505444EDR_F0042100NCAM00518M_.JPG";
 	Image824.attitude = new THREE.Quaternion(0.466946,-0.00355905,-0.0339142, 0.883628);
 	Image824.cameraPosition = new THREE.Vector3(0.815039,0.812619,-1.94439);
+	Image824.cameraVector = new THREE.Vector3(-0.7813974227223573,0.519195491557429,0.3461995223990022);
 	Image824.mastAz = "146.373";
 	Image824.mastEl = "-20.232";
 	Image824.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19802,6 +20627,7 @@ function getImageDataArray()
 	Image825.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ncam/NLA_401573345EDR_F0042100NCAM00307M_.JPG";
 	Image825.attitude = new THREE.Quaternion(0.46667,-0.00246835,-0.0354509,0.883717);
 	Image825.cameraPosition = new THREE.Vector3(0.887987,0.317963,-1.88577);
+	Image825.cameraVector = new THREE.Vector3(0.6968108314427971,-0.15569015078749046,0.7001537274997301);
 	Image825.mastAz = "347.372";
 	Image825.mastEl = "-44.4163";
 	Image825.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19826,6 +20652,7 @@ function getImageDataArray()
 	Image826.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ncam/NRA_401573345EDR_F0042100NCAM00307M_.JPG";
 	Image826.attitude = new THREE.Quaternion(0.46667,-0.00246835,-0.0354509,0.883717);
 	Image826.cameraPosition = new THREE.Vector3(0.989301,0.72926,-1.8858);
+	Image826.cameraVector = new THREE.Vector3(0.6912313378694028,-0.1649542006121817,0.703554794772711);
 	Image826.mastAz = "346.545";
 	Image826.mastEl = "-44.6895";
 	Image826.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19850,6 +20677,7 @@ function getImageDataArray()
 	Image827.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ncam/NLA_401578433EDR_F0042100NCAM00308M_.JPG";
 	Image827.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image827.cameraPosition = new THREE.Vector3(0.887987,0.317963,-1.88577);
+	Image827.cameraVector = new THREE.Vector3(0.6968108314427971,-0.15569015078749046,0.7001537274997301);
 	Image827.mastAz = "347.372";
 	Image827.mastEl = "-44.4163";
 	Image827.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19874,6 +20702,7 @@ function getImageDataArray()
 	Image828.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ncam/NRA_401578433EDR_F0042100NCAM00308M_.JPG";
 	Image828.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image828.cameraPosition = new THREE.Vector3(0.989301,0.72926,-1.8858);
+	Image828.cameraVector = new THREE.Vector3(0.6912313378694028,-0.1649542006121817,0.703554794772711);
 	Image828.mastAz = "346.545";
 	Image828.mastEl = "-44.6895";
 	Image828.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19898,6 +20727,7 @@ function getImageDataArray()
 	Image829.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ncam/NLA_401578690EDR_F0042100NCAM00308M_.JPG";
 	Image829.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image829.cameraPosition = new THREE.Vector3(0.887987,0.317963,-1.88577);
+	Image829.cameraVector = new THREE.Vector3(0.6968108314427971,-0.15569015078749046,0.7001537274997301);
 	Image829.mastAz = "347.372";
 	Image829.mastEl = "-44.4163";
 	Image829.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19922,6 +20752,7 @@ function getImageDataArray()
 	Image830.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ncam/NRA_401578690EDR_F0042100NCAM00308M_.JPG";
 	Image830.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image830.cameraPosition = new THREE.Vector3(0.989301,0.72926,-1.8858);
+	Image830.cameraVector = new THREE.Vector3(0.6912313378694028,-0.1649542006121817,0.703554794772711);
 	Image830.mastAz = "346.545";
 	Image830.mastEl = "-44.6895";
 	Image830.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -19946,6 +20777,7 @@ function getImageDataArray()
 	Image831.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ccam/CR0_401581309EDR_F0042100CCAM01046M_.JPG";
 	Image831.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image831.cameraPosition = new THREE.Vector3;
+	Image831.cameraVector = new THREE.Vector3;
 	Image831.mastAz = "";
 	Image831.mastEl = "";
 	Image831.xyz = new THREE.Vector3;
@@ -19970,6 +20802,7 @@ function getImageDataArray()
 	Image832.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ccam/CR0_401581470EDR_F0042100CCAM01046M_.JPG";
 	Image832.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image832.cameraPosition = new THREE.Vector3;
+	Image832.cameraVector = new THREE.Vector3;
 	Image832.mastAz = "";
 	Image832.mastEl = "";
 	Image832.xyz = new THREE.Vector3;
@@ -19994,6 +20827,7 @@ function getImageDataArray()
 	Image833.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ccam/CR0_401581658EDR_F0042100CCAM01046M_.JPG";
 	Image833.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image833.cameraPosition = new THREE.Vector3;
+	Image833.cameraVector = new THREE.Vector3;
 	Image833.mastAz = "";
 	Image833.mastEl = "";
 	Image833.xyz = new THREE.Vector3;
@@ -20018,6 +20852,7 @@ function getImageDataArray()
 	Image834.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ccam/CR0_401581827EDR_F0042100CCAM01046M_.JPG";
 	Image834.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image834.cameraPosition = new THREE.Vector3;
+	Image834.cameraVector = new THREE.Vector3;
 	Image834.mastAz = "";
 	Image834.mastEl = "";
 	Image834.xyz = new THREE.Vector3;
@@ -20042,6 +20877,7 @@ function getImageDataArray()
 	Image835.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ccam/CR0_401581956EDR_F0042100CCAM01046M_.JPG";
 	Image835.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image835.cameraPosition = new THREE.Vector3;
+	Image835.cameraVector = new THREE.Vector3;
 	Image835.mastAz = "";
 	Image835.mastEl = "";
 	Image835.xyz = new THREE.Vector3;
@@ -20066,6 +20902,7 @@ function getImageDataArray()
 	Image836.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ncam/NLA_401582090EDR_F0042100NCAM15001M_.JPG";
 	Image836.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image836.cameraPosition = new THREE.Vector3(0.90073,0.323358,-1.87964);
+	Image836.cameraVector = new THREE.Vector3(0.673588697503131,-0.10949118096908818,0.7309513991272127);
 	Image836.mastAz = "350.732";
 	Image836.mastEl = "-46.9435";
 	Image836.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20090,6 +20927,7 @@ function getImageDataArray()
 	Image837.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00046/opgs/edr/ncam/NRA_401582090EDR_F0042100NCAM15001M_.JPG";
 	Image837.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image837.cameraPosition = new THREE.Vector3(0.97821,0.739804,-1.87971);
+	Image837.cameraVector = new THREE.Vector3(0.6684020646666644,-0.11903273071881164,0.7342137896872839);
 	Image837.mastAz = "349.867";
 	Image837.mastEl = "-47.2173";
 	Image837.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20114,6 +20952,7 @@ function getImageDataArray()
 	Image838.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00047/opgs/edr/ncam/NLA_401662358EDR_F0042100NCAM00307M_.JPG";
 	Image838.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image838.cameraPosition = new THREE.Vector3(0.889409,0.318454,-1.88583);
+	Image838.cameraVector = new THREE.Vector3(0.6980096855662308,-0.15167376914876918,0.6998410866817819);
 	Image838.mastAz = "347.707";
 	Image838.mastEl = "-44.3915";
 	Image838.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20138,6 +20977,7 @@ function getImageDataArray()
 	Image839.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00047/opgs/edr/ncam/NRA_401662358EDR_F0042100NCAM00307M_.JPG";
 	Image839.attitude = new THREE.Quaternion(0.466752,-0.000759476,-0.0340916, 0.883731);
 	Image839.cameraPosition = new THREE.Vector3(0.988311,0.730338,-1.88587);
+	Image839.cameraVector = new THREE.Vector3(0.6924830924661202,-0.16097058226893846,0.703246498955066);
 	Image839.mastAz = "346.881";
 	Image839.mastEl = "-44.6647";
 	Image839.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20162,6 +21002,7 @@ function getImageDataArray()
 	Image840.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00047/opgs/edr/ncam/NLA_401662727EDR_F0042100NCAM00308M_.JPG";
 	Image840.attitude = new THREE.Quaternion(0.466743,-0.00209676,-0.0345843, 0.883714);
 	Image840.cameraPosition = new THREE.Vector3(0.889409,0.318454,-1.88583);
+	Image840.cameraVector = new THREE.Vector3(0.6980096855662308,-0.15167376914876918,0.6998410866817819);
 	Image840.mastAz = "347.707";
 	Image840.mastEl = "-44.3915";
 	Image840.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20186,6 +21027,7 @@ function getImageDataArray()
 	Image841.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00047/opgs/edr/ncam/NRA_401662727EDR_F0042100NCAM00308M_.JPG";
 	Image841.attitude = new THREE.Quaternion(0.466743,-0.00209676,-0.0345843, 0.883714);
 	Image841.cameraPosition = new THREE.Vector3(0.988311,0.730338,-1.88587);
+	Image841.cameraVector = new THREE.Vector3(0.6924830924661202,-0.16097058226893846,0.703246498955066);
 	Image841.mastAz = "346.881";
 	Image841.mastEl = "-44.6647";
 	Image841.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20210,6 +21052,7 @@ function getImageDataArray()
 	Image842.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00047/opgs/edr/ncam/NRA_401665939EDR_F0042100NCAM00309M_.JPG";
 	Image842.attitude = new THREE.Quaternion(0.466689,-0.00203126,-0.0345288, 0.883745);
 	Image842.cameraPosition = new THREE.Vector3(0.988311,0.730338,-1.88587);
+	Image842.cameraVector = new THREE.Vector3(0.6924830924661202,-0.16097058226893846,0.703246498955066);
 	Image842.mastAz = "346.881";
 	Image842.mastEl = "-44.6647";
 	Image842.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20234,6 +21077,7 @@ function getImageDataArray()
 	Image843.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00047/opgs/edr/ncam/NLA_401665939EDR_F0042100NCAM00309M_.JPG";
 	Image843.attitude = new THREE.Quaternion(0.466689,-0.00203126,-0.0345288, 0.883745);
 	Image843.cameraPosition = new THREE.Vector3(0.889409,0.318454,-1.88583);
+	Image843.cameraVector = new THREE.Vector3(0.6980096855662308,-0.15167376914876918,0.6998410866817819);
 	Image843.mastAz = "347.707";
 	Image843.mastEl = "-44.3915";
 	Image843.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20258,6 +21102,7 @@ function getImageDataArray()
 	Image844.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00047/opgs/edr/ncam/NLA_401666309EDR_F0042100NCAM00309M_.JPG";
 	Image844.attitude = new THREE.Quaternion(0.466551,-0.00156811,-0.0337979, 0.883847);
 	Image844.cameraPosition = new THREE.Vector3(0.889409,0.318454,-1.88583);
+	Image844.cameraVector = new THREE.Vector3(0.6980096855662308,-0.15167376914876918,0.6998410866817819);
 	Image844.mastAz = "347.707";
 	Image844.mastEl = "-44.3915";
 	Image844.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20282,6 +21127,7 @@ function getImageDataArray()
 	Image845.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00047/opgs/edr/ncam/NRA_401666309EDR_F0042100NCAM00309M_.JPG";
 	Image845.attitude = new THREE.Quaternion(0.466551,-0.00156811,-0.0337979, 0.883847);
 	Image845.cameraPosition = new THREE.Vector3(0.988311,0.730338,-1.88587);
+	Image845.cameraVector = new THREE.Vector3(0.6924830924661202,-0.16097058226893846,0.703246498955066);
 	Image845.mastAz = "346.881";
 	Image845.mastEl = "-44.6647";
 	Image845.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20306,6 +21152,7 @@ function getImageDataArray()
 	Image846.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00047/opgs/edr/ccam/CR0_401669750EDR_F0042100CCAM01047M_.JPG";
 	Image846.attitude = new THREE.Quaternion(0.466522,-0.00154964,-0.0357508, 0.883785);
 	Image846.cameraPosition = new THREE.Vector3;
+	Image846.cameraVector = new THREE.Vector3;
 	Image846.mastAz = "";
 	Image846.mastEl = "";
 	Image846.xyz = new THREE.Vector3;
@@ -20330,6 +21177,7 @@ function getImageDataArray()
 	Image847.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00047/opgs/edr/ccam/CR0_401669791EDR_F0042100CCAM01047M_.JPG";
 	Image847.attitude = new THREE.Quaternion(0.466522,-0.00154964,-0.0357508, 0.883785);
 	Image847.cameraPosition = new THREE.Vector3;
+	Image847.cameraVector = new THREE.Vector3;
 	Image847.mastAz = "";
 	Image847.mastEl = "";
 	Image847.xyz = new THREE.Vector3;
@@ -20354,6 +21202,7 @@ function getImageDataArray()
 	Image848.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401751359EDR_F0042100NCAM00307M_.JPG";
 	Image848.attitude = new THREE.Quaternion(0.466465,-0.00364791,-0.0336552, 0.883892);
 	Image848.cameraPosition = new THREE.Vector3(0.888843,0.317688,-1.89443);
+	Image848.cameraVector = new THREE.Vector3(0.7375169838189441,-0.16609596522595785,0.6545844704194138);
 	Image848.mastAz = "347.277";
 	Image848.mastEl = "-40.8654";
 	Image848.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20378,6 +21227,7 @@ function getImageDataArray()
 	Image849.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401751359EDR_F0042100NCAM00307M_.JPG";
 	Image849.attitude = new THREE.Quaternion(0.466465,-0.00364791,-0.0336552, 0.883892);
 	Image849.cameraPosition = new THREE.Vector3(0.990335,0.728942,-1.89444);
+	Image849.cameraVector = new THREE.Vector3(0.7321408868348906,-0.1754080288551787,0.6581806326820628);
 	Image849.mastAz = "346.496";
 	Image849.mastEl = "-41.1378";
 	Image849.xyz = new THREE.Vector3(-18.4758,153.368,4.46038);
@@ -20402,6 +21252,7 @@ function getImageDataArray()
 	Image850.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ccam/CR0_401752266EDR_F0042106CCAM01048M_.JPG";
 	Image850.attitude = new THREE.Quaternion(0.463589,-0.00547262,-0.0377278,0.88523);
 	Image850.cameraPosition = new THREE.Vector3;
+	Image850.cameraVector = new THREE.Vector3;
 	Image850.mastAz = "";
 	Image850.mastEl = "";
 	Image850.xyz = new THREE.Vector3;
@@ -20426,6 +21277,7 @@ function getImageDataArray()
 	Image851.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ccam/CR0_401753418EDR_F0042106CCAM01048M_.JPG";
 	Image851.attitude = new THREE.Quaternion(0.463589,-0.00547262,-0.0377278,0.88523);
 	Image851.cameraPosition = new THREE.Vector3;
+	Image851.cameraVector = new THREE.Vector3;
 	Image851.mastAz = "";
 	Image851.mastEl = "";
 	Image851.xyz = new THREE.Vector3;
@@ -20450,6 +21302,7 @@ function getImageDataArray()
 	Image852.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401754690EDR_F0042154NCAM00307M_.JPG";
 	Image852.attitude = new THREE.Quaternion(0.644176,0.0429151,0.0185389,-0.763447);
 	Image852.cameraPosition = new THREE.Vector3(0.885861,0.325619,-1.95217);
+	Image852.cameraVector = new THREE.Vector3(-0.5905774017902358,-0.7510801381265912,0.2951219385380137);
 	Image852.mastAz = "231.797";
 	Image852.mastEl = "-17.1412";
 	Image852.xyz = new THREE.Vector3(-16.8554,152.424,4.43969);
@@ -20474,6 +21327,7 @@ function getImageDataArray()
 	Image853.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401754690EDR_F0042154NCAM00307M_.JPG";
 	Image853.attitude = new THREE.Quaternion(0.644176,0.0429151,0.0185389,-0.763447);
 	Image853.cameraPosition = new THREE.Vector3(0.554208,0.589126,-1.95255);
+	Image853.cameraVector = new THREE.Vector3(-0.5832778253345562,-0.7584990012455374,0.29063076847180713);
 	Image853.mastAz = "232.416";
 	Image853.mastEl = "-16.8726";
 	Image853.xyz = new THREE.Vector3(-16.8554,152.424,4.43969);
@@ -20498,6 +21352,7 @@ function getImageDataArray()
 	Image854.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401755662EDR_F0042274NCAM00307M_.JPG";
 	Image854.attitude = new THREE.Quaternion(0.644066,0.0638393,0.0404045,-0.76123);
 	Image854.cameraPosition = new THREE.Vector3(1.03145,0.657854,-1.95313);
+	Image854.cameraVector = new THREE.Vector3(0.7940032928467268,-0.535119186912723,0.28845489551474324);
 	Image854.mastAz = "325.998";
 	Image854.mastEl = "-16.7418";
 	Image854.xyz = new THREE.Vector3(-15.1588,162.135,5.07627);
@@ -20522,6 +21377,7 @@ function getImageDataArray()
 	Image855.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401755662EDR_F0042274NCAM00307M_.JPG";
 	Image855.attitude = new THREE.Quaternion(0.644066,0.0638393,0.0404045,-0.76123);
 	Image855.cameraPosition = new THREE.Vector3(0.79292,0.307806,-1.95343);
+	Image855.cameraVector = new THREE.Vector3(0.800845787594496,-0.5272727079271781,0.28395336935365273);
 	Image855.mastAz = "326.615";
 	Image855.mastEl = "-16.4732";
 	Image855.xyz = new THREE.Vector3(-15.1588,162.135,5.07627);
@@ -20546,6 +21402,7 @@ function getImageDataArray()
 	Image856.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401756635EDR_F0042394NCAM00307M_.JPG";
 	Image856.attitude = new THREE.Quaternion(0.642217,0.0261787,0.0166311,-0.765895);
 	Image856.cameraPosition = new THREE.Vector3(0.974305,0.730992,-1.97779);
+	Image856.cameraVector = new THREE.Vector3(0.9636339668983975,-0.24848039544695813,0.09832126381501242);
 	Image856.mastAz = "345.517";
 	Image856.mastEl = "-5.61886";
 	Image856.xyz = new THREE.Vector3(-13.5228,171.914,5.6481);
@@ -20570,6 +21427,7 @@ function getImageDataArray()
 	Image857.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401756635EDR_F0042394NCAM00307M_.JPG";
 	Image857.attitude = new THREE.Quaternion(0.642217,0.0261787,0.0166311,-0.765895);
 	Image857.cameraPosition = new THREE.Vector3(0.866459,0.321359,-1.97803);
+	Image857.cameraVector = new THREE.Vector3(0.9665964212619129,-0.2385755913563198,0.09366453764709799);
 	Image857.mastAz = "346.112";
 	Image857.mastEl = "-5.35127";
 	Image857.xyz = new THREE.Vector3(-13.5228,171.914,5.6481);
@@ -20594,6 +21452,7 @@ function getImageDataArray()
 	Image858.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/rcam/RLA_401756668EDR_F0042394RHAZ00305M_.JPG";
 	Image858.attitude = new THREE.Quaternion(0.642217,0.0261787,0.0166311,-0.765895);
 	Image858.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image858.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image858.mastAz = "182.571";
 	Image858.mastEl = "-44.9097";
 	Image858.xyz = new THREE.Vector3(-13.5228,171.914,5.6481);
@@ -20618,6 +21477,7 @@ function getImageDataArray()
 	Image859.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/rcam/RRA_401756668EDR_F0042394RHAZ00305M_.JPG";
 	Image859.attitude = new THREE.Quaternion(0.642217,0.0261787,0.0166311,-0.765895);
 	Image859.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image859.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image859.mastAz = "182.044";
 	Image859.mastEl = "-43.5257";
 	Image859.xyz = new THREE.Vector3(-13.5228,171.914,5.6481);
@@ -20642,6 +21502,7 @@ function getImageDataArray()
 	Image860.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401758063EDR_F0042514NCAM00307M_.JPG";
 	Image860.attitude = new THREE.Quaternion(0.651928,0.0360488,0.00125732,-0.757423);
 	Image860.cameraPosition = new THREE.Vector3(0.960278,0.742305,-1.98158);
+	Image860.cameraVector = new THREE.Vector3(0.9805444826175816,-0.18458288774642834,0.06679577201746024);
 	Image860.mastAz = "349.316";
 	Image860.mastEl = "-3.80631";
 	Image860.xyz = new THREE.Vector3(-11.8712,181.639,6.15859);
@@ -20666,6 +21527,7 @@ function getImageDataArray()
 	Image861.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401758063EDR_F0042514NCAM00307M_.JPG";
 	Image861.attitude = new THREE.Quaternion(0.651928,0.0360488,0.00125732,-0.757423);
 	Image861.cameraPosition = new THREE.Vector3(0.879802,0.326428,-1.9818);
+	Image861.cameraVector = new THREE.Vector3(0.9826993295588107,-0.174476007103865,0.06213011049206396);
 	Image861.mastAz = "349.909";
 	Image861.mastEl = "-3.53889";
 	Image861.xyz = new THREE.Vector3(-11.8712,181.639,6.15859);
@@ -20690,6 +21552,7 @@ function getImageDataArray()
 	Image862.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401759030EDR_F0042634NCAM00307M_.JPG";
 	Image862.attitude = new THREE.Quaternion(0.648191,0.0217783,0.00779811,-0.761127);
 	Image862.cameraPosition = new THREE.Vector3(0.890758,0.331447,-1.98531);
+	Image862.cameraVector = new THREE.Vector3(0.992503951772525,-0.11791184142233387,0.032135702393376035);
 	Image862.mastAz = "353.201";
 	Image862.mastEl = "-1.81837";
 	Image862.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20714,6 +21577,7 @@ function getImageDataArray()
 	Image863.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401759030EDR_F0042634NCAM00307M_.JPG";
 	Image863.attitude = new THREE.Quaternion(0.648191,0.0217783,0.00779811,-0.761127);
 	Image863.cameraPosition = new THREE.Vector3(0.947213,0.75126,-1.9851);
+	Image863.cameraVector = new THREE.Vector3(0.991072315918049,-0.12814457628628695,0.036805328272451525);
 	Image863.mastAz = "352.609";
 	Image863.mastEl = "-2.08563";
 	Image863.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20738,6 +21602,7 @@ function getImageDataArray()
 	Image864.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/rcam/RRA_401759082EDR_F0042634RHAZ00307M_.JPG";
 	Image864.attitude = new THREE.Quaternion(0.648191,0.0217783,0.00779811,-0.761127);
 	Image864.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image864.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image864.mastAz = "182.044";
 	Image864.mastEl = "-43.5257";
 	Image864.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20762,6 +21627,7 @@ function getImageDataArray()
 	Image865.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/rcam/RLA_401759082EDR_F0042634RHAZ00307M_.JPG";
 	Image865.attitude = new THREE.Quaternion(0.648191,0.0217783,0.00779811,-0.761127);
 	Image865.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image865.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image865.mastAz = "182.571";
 	Image865.mastEl = "-44.9097";
 	Image865.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20786,6 +21652,7 @@ function getImageDataArray()
 	Image866.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401761194EDR_F0042644SAPP07612M_.JPG";
 	Image866.attitude = new THREE.Quaternion(0.0859497,-0.0200991,-0.0268008, 0.995736);
 	Image866.cameraPosition = new THREE.Vector3(0.972149,0.696125,-2.04364);
+	Image866.cameraVector = new THREE.Vector3(-0.40231380339563544,0.6214430130116226,-0.6722738914879663);
 	Image866.mastAz = "122.887";
 	Image866.mastEl = "42.2664";
 	Image866.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20810,6 +21677,7 @@ function getImageDataArray()
 	Image867.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/fcam/FRA_401761250EDR_F0042644FHAZ00304M_.JPG";
 	Image867.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image867.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image867.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image867.mastAz = "359.974";
 	Image867.mastEl = "-43.7598";
 	Image867.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20834,6 +21702,7 @@ function getImageDataArray()
 	Image868.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/fcam/FLA_401761250EDR_F0042644FHAZ00304M_.JPG";
 	Image868.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image868.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image868.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image868.mastAz = "1.03995";
 	Image868.mastEl = "-43.4728";
 	Image868.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20858,6 +21727,7 @@ function getImageDataArray()
 	Image869.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/rcam/RLA_401761277EDR_F0042644RHAZ00304M_.JPG";
 	Image869.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image869.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image869.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image869.mastAz = "182.571";
 	Image869.mastEl = "-44.9097";
 	Image869.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20882,6 +21752,7 @@ function getImageDataArray()
 	Image870.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/rcam/RRA_401761277EDR_F0042644RHAZ00304M_.JPG";
 	Image870.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image870.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image870.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image870.mastAz = "182.044";
 	Image870.mastEl = "-43.5257";
 	Image870.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20906,6 +21777,7 @@ function getImageDataArray()
 	Image871.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401761361EDR_F0042644NCAM00429M_.JPG";
 	Image871.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image871.cameraPosition = new THREE.Vector3(0.799719,0.313513,-1.96006);
+	Image871.cameraVector = new THREE.Vector3(-0.8332624484324522,-0.499310180021569,0.23740900606165619);
 	Image871.mastAz = "210.907";
 	Image871.mastEl = "-13.71";
 	Image871.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20930,6 +21802,7 @@ function getImageDataArray()
 	Image872.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401761361EDR_F0042644NCAM00429M_.JPG";
 	Image872.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image872.cameraPosition = new THREE.Vector3(0.583841,0.677967,-1.96035);
+	Image872.cameraVector = new THREE.Vector3(-0.8288541409136213,-0.5087073488736779,0.2328468301099602);
 	Image872.mastAz = "211.515";
 	Image872.mastEl = "-13.4416";
 	Image872.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20954,6 +21827,7 @@ function getImageDataArray()
 	Image873.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401761424EDR_F0042644NCAM00429M_.JPG";
 	Image873.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image873.cameraPosition = new THREE.Vector3(0.92066,0.342836,-1.9609);
+	Image873.cameraVector = new THREE.Vector3(-0.48409154077406746,-0.8441081620000087,0.23051418827472728);
 	Image873.mastAz = "240.142";
 	Image873.mastEl = "-13.3037";
 	Image873.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -20978,6 +21852,7 @@ function getImageDataArray()
 	Image874.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401761424EDR_F0042644NCAM00429M_.JPG";
 	Image874.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image874.cameraPosition = new THREE.Vector3(0.554265,0.555402,-1.96135);
+	Image874.cameraVector = new THREE.Vector3(-0.4756411659483665,-0.8501248331171188,0.2259496611479412);
 	Image874.mastAz = "240.749";
 	Image874.mastEl = "-13.0356";
 	Image874.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -21002,6 +21877,7 @@ function getImageDataArray()
 	Image875.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401761461EDR_F0042644NCAM00429M_.JPG";
 	Image875.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image875.cameraPosition = new THREE.Vector3(1.01257,0.428076,-1.95957);
+	Image875.cameraVector = new THREE.Vector3(-0.0033137555551177966,-0.9706876746981751,0.24032157042839608);
 	Image875.mastAz = "269.78";
 	Image875.mastEl = "-13.8819";
 	Image875.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -21026,6 +21902,7 @@ function getImageDataArray()
 	Image876.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401761461EDR_F0042644NCAM00429M_.JPG";
 	Image876.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image876.cameraPosition = new THREE.Vector3(0.588998,0.431625,-1.96007);
+	Image876.cameraVector = new THREE.Vector3(0.007012753981877595,-0.9717839501909842,0.23576847845459814);
 	Image876.mastAz = "270.389";
 	Image876.mastEl = "-13.6139";
 	Image876.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -21050,6 +21927,7 @@ function getImageDataArray()
 	Image877.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401761488EDR_F0042644NCAM00429M_.JPG";
 	Image877.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image877.cameraPosition = new THREE.Vector3(1.05091,0.546546,-1.95632);
+	Image877.cameraVector = new THREE.Vector3(0.47248402132805317,-0.8406490227126047,0.2647037404382762);
 	Image877.mastAz = "299.314";
 	Image877.mastEl = "-15.3257";
 	Image877.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -21074,6 +21952,7 @@ function getImageDataArray()
 	Image878.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401761488EDR_F0042644NCAM00429M_.JPG";
 	Image878.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image878.cameraPosition = new THREE.Vector3(0.680613,0.340855,-1.95675);
+	Image878.cameraVector = new THREE.Vector3(0.48206500200060615,-0.8366133118698891,0.2601759025126098);
 	Image878.mastAz = "299.926";
 	Image878.mastEl = "-15.0574";
 	Image878.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -21098,6 +21977,7 @@ function getImageDataArray()
 	Image879.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NLA_401761523EDR_F0042644NCAM00429M_.JPG";
 	Image879.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image879.cameraPosition = new THREE.Vector3(0.807336,0.30733,-1.95221);
+	Image879.cameraVector = new THREE.Vector3(0.826773200605983,-0.48041094820066166,0.29266259687339663);
 	Image879.mastAz = "329.816";
 	Image879.mastEl = "-16.9943";
 	Image879.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -21122,6 +22002,7 @@ function getImageDataArray()
 	Image880.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00048/opgs/edr/ncam/NRA_401761523EDR_F0042644NCAM00429M_.JPG";
 	Image880.attitude = new THREE.Quaternion(0.0753696,-0.0198133,-0.0270127, 0.996593);
 	Image880.cameraPosition = new THREE.Vector3(1.02597,0.67014,-1.95194);
+	Image880.cameraVector = new THREE.Vector3(0.8203452644455127,-0.48860442804153326,0.2971520822744269);
 	Image880.mastAz = "329.197";
 	Image880.mastEl = "-17.2631";
 	Image880.xyz = new THREE.Vector3(-10.2662,191.357,6.53785);
@@ -21146,6 +22027,7 @@ function getImageDataArray()
 	Image881.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/rcam/RLA_401844887EDR_F0042704RHAZ00305M_.JPG";
 	Image881.attitude = new THREE.Quaternion(0.703674,0.00988817,-0.0414979,0.709241);
 	Image881.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image881.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image881.mastAz = "182.571";
 	Image881.mastEl = "-44.9097";
 	Image881.xyz = new THREE.Vector3(-10.7148,207.802,7.77558);
@@ -21170,6 +22052,7 @@ function getImageDataArray()
 	Image882.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/rcam/RRA_401844887EDR_F0042704RHAZ00305M_.JPG";
 	Image882.attitude = new THREE.Quaternion(0.703674,0.00988817,-0.0414979,0.709241);
 	Image882.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image882.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image882.mastAz = "182.044";
 	Image882.mastEl = "-43.5257";
 	Image882.xyz = new THREE.Vector3(-10.7148,207.802,7.77558);
@@ -21194,6 +22077,7 @@ function getImageDataArray()
 	Image883.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/fcam/FLA_401848200EDR_F0042778FHAZ00302M_.JPG";
 	Image883.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image883.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image883.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image883.mastAz = "1.03995";
 	Image883.mastEl = "-43.4728";
 	Image883.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21218,6 +22102,7 @@ function getImageDataArray()
 	Image884.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/fcam/FRA_401848200EDR_F0042778FHAZ00302M_.JPG";
 	Image884.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image884.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image884.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image884.mastAz = "359.974";
 	Image884.mastEl = "-43.7598";
 	Image884.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21242,6 +22127,7 @@ function getImageDataArray()
 	Image885.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/rcam/RLA_401848227EDR_F0042778RHAZ00308M_.JPG";
 	Image885.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image885.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image885.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image885.mastAz = "182.571";
 	Image885.mastEl = "-44.9097";
 	Image885.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21266,6 +22152,7 @@ function getImageDataArray()
 	Image886.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/rcam/RRA_401848227EDR_F0042778RHAZ00308M_.JPG";
 	Image886.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image886.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image886.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image886.mastAz = "182.044";
 	Image886.mastEl = "-43.5257";
 	Image886.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21290,6 +22177,7 @@ function getImageDataArray()
 	Image887.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401848285EDR_F0042778NCAM00409M_.JPG";
 	Image887.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image887.cameraPosition = new THREE.Vector3(0.683712,0.340968,-1.96418);
+	Image887.cameraVector = new THREE.Vector3(0.5064212192460495,-0.8376958365124327,0.20445839231266585);
 	Image887.mastAz = "301.13";
 	Image887.mastEl = "-11.7747";
 	Image887.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21314,6 +22202,7 @@ function getImageDataArray()
 	Image888.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401848285EDR_F0042778NCAM00409M_.JPG";
 	Image888.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image888.cameraPosition = new THREE.Vector3(1.04957,0.554452,-1.96373);
+	Image888.cameraVector = new THREE.Vector3(0.4970580201188721,-0.8421603407305273,0.20904373976789864);
 	Image888.mastAz = "300.526";
 	Image888.mastEl = "-12.0426";
 	Image888.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21338,6 +22227,7 @@ function getImageDataArray()
 	Image889.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401848313EDR_F0042778NCAM00409M_.JPG";
 	Image889.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image889.cameraPosition = new THREE.Vector3(0.806431,0.309461,-1.96268);
+	Image889.cameraVector = new THREE.Vector3(0.8492567209138,-0.4820639597446129,0.21535403571348344);
 	Image889.mastAz = "330.395";
 	Image889.mastEl = "-12.4132";
 	Image889.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21362,6 +22252,7 @@ function getImageDataArray()
 	Image890.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401848313EDR_F0042778NCAM00409M_.JPG";
 	Image890.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image890.cameraPosition = new THREE.Vector3(1.02128,0.674525,-1.96238);
+	Image890.cameraVector = new THREE.Vector3(0.84322788024266,-0.49050667662693703,0.21993167613117445);
 	Image890.mastAz = "329.789";
 	Image890.mastEl = "-12.6814";
 	Image890.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21386,6 +22277,7 @@ function getImageDataArray()
 	Image891.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401848341EDR_F0042778NCAM00409M_.JPG";
 	Image891.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image891.cameraPosition = new THREE.Vector3(0.937925,0.766477,-1.95838);
+	Image891.cameraVector = new THREE.Vector3(0.9680025452169408,-0.010090401873672274,0.2507374248961498);
 	Image891.mastAz = "359.378";
 	Image891.mastEl = "-14.4975";
 	Image891.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21410,6 +22302,7 @@ function getImageDataArray()
 	Image892.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401848341EDR_F0042778NCAM00409M_.JPG";
 	Image892.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image892.cameraPosition = new THREE.Vector3(0.931298,0.342937,-1.95846);
+	Image892.cameraVector = new THREE.Vector3(0.969222351802142,2.2282540516307262E-4,0.24618688656377238);
 	Image892.mastAz = "359.989";
 	Image892.mastEl = "-14.2288";
 	Image892.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21434,6 +22327,7 @@ function getImageDataArray()
 	Image893.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401848369EDR_F0042778NCAM00409M_.JPG";
 	Image893.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image893.cameraPosition = new THREE.Vector3(1.02356,0.434773,-1.95257);
+	Image893.cameraVector = new THREE.Vector3(0.832395061432602,0.47315811643848277,0.2885131860955434);
 	Image893.mastAz = "29.5905";
 	Image893.mastEl = "-16.7459";
 	Image893.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21458,6 +22352,7 @@ function getImageDataArray()
 	Image894.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401848369EDR_F0042778NCAM00409M_.JPG";
 	Image894.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image894.cameraPosition = new THREE.Vector3(0.820237,0.806377,-1.95272);
+	Image894.cameraVector = new THREE.Vector3(0.83624934915904,0.46349304668189006,0.29302085541582384);
 	Image894.mastAz = "28.9729";
 	Image894.mastEl = "-17.0153";
 	Image894.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21482,6 +22377,7 @@ function getImageDataArray()
 	Image895.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401848397EDR_F0042778NCAM00409M_.JPG";
 	Image895.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image895.cameraPosition = new THREE.Vector3(0.69505,0.782516,-1.94681);
+	Image895.cameraVector = new THREE.Vector3(0.4827051334278182,0.8089069533404754,0.3356565134179022);
 	Image895.mastAz = "59.1489";
 	Image895.mastEl = "-19.5889";
 	Image895.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21506,6 +22402,7 @@ function getImageDataArray()
 	Image896.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401848397EDR_F0042778NCAM00409M_.JPG";
 	Image896.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image896.cameraPosition = new THREE.Vector3(1.05756,0.563386,-1.94648);
+	Image896.cameraVector = new THREE.Vector3(0.4746192897632006,0.8154986514723811,0.3312076074479613);
 	Image896.mastAz = "59.7754";
 	Image896.mastEl = "-19.319";
 	Image896.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21530,6 +22427,7 @@ function getImageDataArray()
 	Image897.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401855249EDR_F0042778NCAM00434M_.JPG";
 	Image897.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image897.cameraPosition = new THREE.Vector3(0.597483,0.698107,-1.9424);
+	Image897.cameraVector = new THREE.Vector3(0.008494614545784984,0.9303740182926346,0.3665133389247044);
 	Image897.mastAz = "89.4516";
 	Image897.mastEl = "-21.4771";
 	Image897.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21554,6 +22452,7 @@ function getImageDataArray()
 	Image898.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401855249EDR_F0042778NCAM00434M_.JPG";
 	Image898.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image898.cameraPosition = new THREE.Vector3(1.02103,0.691759,-1.94199);
+	Image898.cameraVector = new THREE.Vector3(-0.0018057890095680349,0.9321337326618594,0.3621097120486031);
 	Image898.mastAz = "90.0856";
 	Image898.mastEl = "-21.2069";
 	Image898.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21578,6 +22477,7 @@ function getImageDataArray()
 	Image899.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401855285EDR_F0042778NCAM00434M_.JPG";
 	Image899.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image899.cameraPosition = new THREE.Vector3(0.921481,0.784891,-1.94023);
+	Image899.cameraVector = new THREE.Vector3(-0.47995939449523756,0.7934182332150963,0.37433472566354276);
 	Image899.mastAz = "121.145";
 	Image899.mastEl = "-21.9602";
 	Image899.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21602,6 +22502,7 @@ function getImageDataArray()
 	Image900.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401855285EDR_F0042778NCAM00434M_.JPG";
 	Image900.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image900.cameraPosition = new THREE.Vector3(0.555374,0.571828,-1.94058);
+	Image900.cameraVector = new THREE.Vector3(-0.4701983076673398,0.7971758609387106,0.3787138737931253);
 	Image900.mastAz = "120.508";
 	Image900.mastEl = "-22.2305";
 	Image900.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21626,6 +22527,7 @@ function getImageDataArray()
 	Image901.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401855321EDR_F0042778NCAM00434M_.JPG";
 	Image901.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image901.cameraPosition = new THREE.Vector3(0.584999,0.441403,-1.94211);
+	Image901.cameraVector = new THREE.Vector3(-0.8176830743019411,0.44291414591521566,0.36772469232881466);
 	Image901.mastAz = "151.532";
 	Image901.mastEl = "-21.5519";
 	Image901.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21650,6 +22552,7 @@ function getImageDataArray()
 	Image902.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401855321EDR_F0042778NCAM00434M_.JPG";
 	Image902.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image902.cameraPosition = new THREE.Vector3(0.788853,0.812716,-1.94193);
+	Image902.cameraVector = new THREE.Vector3(-0.8240648917876997,0.4346349428774205,0.3633311444851215);
 	Image902.mastAz = "152.166";
 	Image902.mastEl = "-21.2819";
 	Image902.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21674,6 +22577,7 @@ function getImageDataArray()
 	Image903.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401855408EDR_F0042778NCAM00434M_.JPG";
 	Image903.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image903.cameraPosition = new THREE.Vector3(0.662956,0.769227,-1.94652);
+	Image903.cameraVector = new THREE.Vector3(-0.9419738322245554,-0.04735613680938315,0.3323291978004282);
 	Image903.mastAz = "182.853";
 	Image903.mastEl = "-19.3871";
 	Image903.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21698,6 +22602,7 @@ function getImageDataArray()
 	Image904.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401855408EDR_F0042778NCAM00434M_.JPG";
 	Image904.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image904.cameraPosition = new THREE.Vector3(0.677317,0.345879,-1.94647);
+	Image904.cameraVector = new THREE.Vector3(-0.940861021490114,-0.03698183000544065,0.3367682919902469);
 	Image904.mastAz = "182.226";
 	Image904.mastEl = "-19.6565";
 	Image904.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21722,6 +22627,7 @@ function getImageDataArray()
 	Image905.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401855443EDR_F0042778NCAM00434M_.JPG";
 	Image905.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image905.cameraPosition = new THREE.Vector3(0.579265,0.672543,-1.95257);
+	Image905.cameraVector = new THREE.Vector3(-0.8066625297417442,-0.5149237812456683,0.290084578387602);
 	Image905.mastAz = "212.527";
 	Image905.mastEl = "-16.8399";
 	Image905.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21746,6 +22652,7 @@ function getImageDataArray()
 	Image906.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401855443EDR_F0042778NCAM00434M_.JPG";
 	Image906.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image906.cameraPosition = new THREE.Vector3(0.801467,0.311909,-1.95229);
+	Image906.cameraVector = new THREE.Vector3(-0.8110039708201382,-0.5054663306698983,0.29457825424338013);
 	Image906.mastAz = "211.909";
 	Image906.mastEl = "-17.1086";
 	Image906.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21770,6 +22677,7 @@ function getImageDataArray()
 	Image907.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401855478EDR_F0042778NCAM00434M_.JPG";
 	Image907.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image907.cameraPosition = new THREE.Vector3(0.553931,0.546761,-1.95845);
+	Image907.cameraVector = new THREE.Vector3(-0.4471302374276342,-0.8595144786383161,0.24760737426217994);
 	Image907.mastAz = "242.492";
 	Image907.mastEl = "-14.3129";
 	Image907.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21794,6 +22702,7 @@ function getImageDataArray()
 	Image908.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401855478EDR_F0042778NCAM00434M_.JPG";
 	Image908.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image908.cameraPosition = new THREE.Vector3(0.926608,0.345411,-1.95801);
+	Image908.cameraVector = new THREE.Vector3(-0.4557158127283399,-0.8536646332977568,0.2521503358830903);
 	Image908.mastAz = "241.881";
 	Image908.mastEl = "-14.5811";
 	Image908.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21818,6 +22727,7 @@ function getImageDataArray()
 	Image909.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NLA_401855513EDR_F0042778NCAM00434M_.JPG";
 	Image909.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image909.cameraPosition = new THREE.Vector3(0.592325,0.427254,-1.96266);
+	Image909.cameraVector = new THREE.Vector3(0.031977737445672484,-0.9758099507607803,0.21626919407095238);
 	Image909.mastAz = "271.853";
 	Image909.mastEl = "-12.4668";
 	Image909.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21842,6 +22752,7 @@ function getImageDataArray()
 	Image910.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00049/opgs/edr/ncam/NRA_401855513EDR_F0042778NCAM00434M_.JPG";
 	Image910.attitude = new THREE.Quaternion(0.711936,-0.0108796,-0.0431044,0.700835);
 	Image910.cameraPosition = new THREE.Vector3(1.01585,0.434546,-1.96215);
+	Image910.cameraVector = new THREE.Vector3(0.02162749225907255,-0.9750700440556886,0.22084080411876178);
 	Image910.mastAz = "271.247";
 	Image910.mastEl = "-12.7348";
 	Image910.xyz = new THREE.Vector3(-10.9641,222.005,8.30643);
@@ -21866,6 +22777,7 @@ function getImageDataArray()
 	Image911.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/rcam/RLA_401933077EDR_F0042862RHAZ00305M_.JPG";
 	Image911.attitude = new THREE.Quaternion(0.774865,0.0203456,-0.0173826,0.631561);
 	Image911.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image911.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image911.mastAz = "182.571";
 	Image911.mastEl = "-44.9097";
 	Image911.xyz = new THREE.Vector3(-7.67452,247.495,10.4913);
@@ -21890,6 +22802,7 @@ function getImageDataArray()
 	Image912.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/rcam/RRA_401933077EDR_F0042862RHAZ00305M_.JPG";
 	Image912.attitude = new THREE.Quaternion(0.774865,0.0203456,-0.0173826,0.631561);
 	Image912.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image912.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image912.mastAz = "182.044";
 	Image912.mastEl = "-43.5257";
 	Image912.xyz = new THREE.Vector3(-7.67452,247.495,10.4913);
@@ -21914,6 +22827,7 @@ function getImageDataArray()
 	Image913.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/fcam/FRA_401936576EDR_F0042956FHAZ00305M_.JPG";
 	Image913.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image913.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image913.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image913.mastAz = "359.974";
 	Image913.mastEl = "-43.7598";
 	Image913.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -21938,6 +22852,7 @@ function getImageDataArray()
 	Image914.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/fcam/FLA_401936576EDR_F0042956FHAZ00305M_.JPG";
 	Image914.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image914.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image914.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image914.mastAz = "1.03995";
 	Image914.mastEl = "-43.4728";
 	Image914.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -21962,6 +22877,7 @@ function getImageDataArray()
 	Image915.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/rcam/RLA_401936603EDR_F0042956RHAZ00306M_.JPG";
 	Image915.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image915.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image915.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image915.mastAz = "182.571";
 	Image915.mastEl = "-44.9097";
 	Image915.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -21986,6 +22902,7 @@ function getImageDataArray()
 	Image916.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/rcam/RRA_401936603EDR_F0042956RHAZ00306M_.JPG";
 	Image916.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image916.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image916.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image916.mastAz = "182.044";
 	Image916.mastEl = "-43.5257";
 	Image916.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22010,6 +22927,7 @@ function getImageDataArray()
 	Image917.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936677EDR_F0042956NCAM00435M_.JPG";
 	Image917.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image917.cameraPosition = new THREE.Vector3(0.855876,0.315902,-1.94436);
+	Image917.cameraVector = new THREE.Vector3(-0.6618221846531516,-0.6626841161707336,0.3504870298255607);
 	Image917.mastAz = "225.012";
 	Image917.mastEl = "-20.4935";
 	Image917.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22034,6 +22952,7 @@ function getImageDataArray()
 	Image918.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936677EDR_F0042956NCAM00435M_.JPG";
 	Image918.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image918.cameraPosition = new THREE.Vector3(0.557706,0.616775,-1.94469);
+	Image918.cameraVector = new THREE.Vector3(-0.65563318144836,-0.6711003311405306,0.34607727016805395);
 	Image918.mastAz = "225.643";
 	Image918.mastEl = "-20.2245";
 	Image918.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22058,6 +22977,7 @@ function getImageDataArray()
 	Image919.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936713EDR_F0042956NCAM00435M_.JPG";
 	Image919.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image919.cameraPosition = new THREE.Vector3(0.562655,0.485603,-1.9479);
+	Image919.cameraVector = new THREE.Vector3(-0.23062687208700663,-0.9175075744478735,0.32402329654230666);
 	Image919.mastAz = "255.865";
 	Image919.mastEl = "-18.8833";
 	Image919.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22082,6 +23002,7 @@ function getImageDataArray()
 	Image920.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936713EDR_F0042956NCAM00435M_.JPG";
 	Image920.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image920.cameraPosition = new THREE.Vector3(0.971768,0.375801,-1.94745);
+	Image920.cameraVector = new THREE.Vector3(-0.24023867482250452,-0.9134528701654354,0.32846496480759607);
 	Image920.mastAz = "255.24";
 	Image920.mastEl = "-19.152";
 	Image920.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22106,6 +23027,7 @@ function getImageDataArray()
 	Image921.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936747EDR_F0042956NCAM00435M_.JPG";
 	Image921.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image921.cameraPosition = new THREE.Vector3(1.04132,0.487147,-1.95191);
+	Image921.cameraVector = new THREE.Vector3(0.25798461208034323,-0.9194689610420408,0.2966829445890424);
 	Image921.mastAz = "285.648";
 	Image921.mastEl = "-17.2349";
 	Image921.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22130,6 +23052,7 @@ function getImageDataArray()
 	Image922.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936747EDR_F0042956NCAM00435M_.JPG";
 	Image922.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image922.cameraPosition = new THREE.Vector3(0.63291,0.374757,-1.95237);
+	Image922.cameraVector = new THREE.Vector3(0.2682880370598976,-0.9179558033567176,0.2921962906237351);
 	Image922.mastAz = "286.267";
 	Image922.mastEl = "-16.9664";
 	Image922.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22154,6 +23077,7 @@ function getImageDataArray()
 	Image923.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936782EDR_F0042956NCAM00435M_.JPG";
 	Image923.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image923.cameraPosition = new THREE.Vector3(1.0448,0.615361,-1.95642);
+	Image923.cameraVector = new THREE.Vector3(0.6870997756754359,-0.67681426430078,0.2642278371136539);
 	Image923.mastAz = "315.408";
 	Image923.mastEl = "-15.2974";
 	Image923.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22178,6 +23102,7 @@ function getImageDataArray()
 	Image924.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936782EDR_F0042956NCAM00435M_.JPG";
 	Image924.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image924.cameraPosition = new THREE.Vector3(0.746025,0.315092,-1.95678);
+	Image924.cameraVector = new THREE.Vector3(0.6951848213082368,-0.6702795067329517,0.2596987621773848);
 	Image924.mastAz = "316.021";
 	Image924.mastEl = "-15.029";
 	Image924.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22202,6 +23127,7 @@ function getImageDataArray()
 	Image925.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936810EDR_F0042956NCAM00435M_.JPG";
 	Image925.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image925.cameraPosition = new THREE.Vector3(0.984766,0.726846,-1.95977);
+	Image925.cameraVector = new THREE.Vector3(0.9375366975639379,-0.25187675581206326,0.23996466532074187);
 	Image925.mastAz = "344.938";
 	Image925.mastEl = "-13.8609";
 	Image925.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22226,6 +23152,7 @@ function getImageDataArray()
 	Image926.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936810EDR_F0042956NCAM00435M_.JPG";
 	Image926.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image926.cameraPosition = new THREE.Vector3(0.872758,0.318331,-1.95996);
+	Image926.cameraVector = new THREE.Vector3(0.9412403975692736,-0.2421797704604588,0.23540491236028832);
 	Image926.mastAz = "345.547";
 	Image926.mastEl = "-13.5924";
 	Image926.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22250,6 +23177,7 @@ function getImageDataArray()
 	Image927.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936838EDR_F0042956NCAM00435M_.JPG";
 	Image927.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image927.cameraPosition = new THREE.Vector3(0.982279,0.383216,-1.96116);
+	Image927.cameraVector = new THREE.Vector3(0.9404397536488805,0.2543270191916208,0.22558997554398943);
 	Image927.mastAz = "15.1085";
 	Image927.mastEl = "-13.0145";
 	Image927.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22274,6 +23202,7 @@ function getImageDataArray()
 	Image928.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936838EDR_F0042956NCAM00435M_.JPG";
 	Image928.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image928.cameraPosition = new THREE.Vector3(0.878194,0.793821,-1.96118);
+	Image928.cameraVector = new THREE.Vector3(0.9420458974482451,0.244076350063913,0.23016572820558867);
 	Image928.mastAz = "14.5014";
 	Image928.mastEl = "-13.2832";
 	Image928.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22298,6 +23227,7 @@ function getImageDataArray()
 	Image929.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936866EDR_F0042956NCAM00435M_.JPG";
 	Image929.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image929.cameraPosition = new THREE.Vector3(1.04625,0.493646,-1.96009);
+	Image929.cameraVector = new THREE.Vector3(0.6925925166665954,0.6826924999089307,0.2329089015592288);
 	Image929.mastAz = "44.5632";
 	Image929.mastEl = "-13.4453";
 	Image929.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22322,6 +23252,7 @@ function getImageDataArray()
 	Image930.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936866EDR_F0042956NCAM00435M_.JPG";
 	Image930.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image930.cameraPosition = new THREE.Vector3(0.753754,0.800036,-1.9603);
+	Image930.cameraVector = new THREE.Vector3(0.6990060531696876,0.6745314590491645,0.23748231173108741);
 	Image930.mastAz = "43.9551";
 	Image930.mastEl = "-13.7144";
 	Image930.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22346,6 +23277,7 @@ function getImageDataArray()
 	Image931.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936894EDR_F0042956NCAM00435M_.JPG";
 	Image931.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image931.cameraPosition = new THREE.Vector3(1.04768,0.622351,-1.95698);
+	Image931.cameraVector = new THREE.Vector3(0.26505051919284284,0.9297447353379316,0.25558354678461565);
 	Image931.mastAz = "74.0638";
 	Image931.mastEl = "-14.7851";
 	Image931.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22370,6 +23302,7 @@ function getImageDataArray()
 	Image932.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936894EDR_F0042956NCAM00435M_.JPG";
 	Image932.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image932.cameraPosition = new THREE.Vector3(0.642251,0.745055,-1.95732);
+	Image932.cameraVector = new THREE.Vector3(0.27461488821900837,0.9256976987338079,0.2601354142122781);
 	Image932.mastAz = "73.4522";
 	Image932.mastEl = "-15.0545";
 	Image932.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22394,6 +23327,7 @@ function getImageDataArray()
 	Image933.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936922EDR_F0042956NCAM00435M_.JPG";
 	Image933.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image933.cameraPosition = new THREE.Vector3(0.983855,0.736495,-1.95261);
+	Image933.cameraVector = new THREE.Vector3(-0.2302430376651819,0.9297096906146787,0.2874509258706048);
 	Image933.mastAz = "103.885";
 	Image933.mastEl = "-16.6824";
 	Image933.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22418,6 +23352,7 @@ function getImageDataArray()
 	Image934.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936922EDR_F0042956NCAM00435M_.JPG";
 	Image934.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image934.cameraPosition = new THREE.Vector3(0.571073,0.641412,-1.95297);
+	Image934.cameraVector = new THREE.Vector3(-0.219898747603473,0.9308066424073463,0.2919649555216972);
 	Image934.mastAz = "103.268";
 	Image934.mastEl = "-16.952";
 	Image934.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22442,6 +23377,7 @@ function getImageDataArray()
 	Image935.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936950EDR_F0042956NCAM00435M_.JPG";
 	Image935.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image935.cameraPosition = new THREE.Vector3(0.560384,0.514401,-1.94837);
+	Image935.cameraVector = new THREE.Vector3(-0.649802403563898,0.6873640738707224,0.3244803018280546);
 	Image935.mastAz = "133.366";
 	Image935.mastEl = "-18.9105";
 	Image935.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22466,6 +23402,7 @@ function getImageDataArray()
 	Image936.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936950EDR_F0042956NCAM00435M_.JPG";
 	Image936.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image936.cameraPosition = new THREE.Vector3(0.869829,0.803664,-1.9481);
+	Image936.cameraVector = new THREE.Vector3(-0.6583058879478604,0.6813394834213219,0.32001541560422603);
 	Image936.mastAz = "133.99";
 	Image936.mastEl = "-18.6408";
 	Image936.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22490,6 +23427,7 @@ function getImageDataArray()
 	Image937.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401936992EDR_F0042956NCAM00435M_.JPG";
 	Image937.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image937.cameraPosition = new THREE.Vector3(0.736663,0.80354,-1.94471);
+	Image937.cameraVector = new THREE.Vector3(-0.9038712323935064,0.2537622403332434,0.34441475089272394);
 	Image937.mastAz = "164.293";
 	Image937.mastEl = "-20.1231";
 	Image937.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22514,6 +23452,7 @@ function getImageDataArray()
 	Image938.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401936992EDR_F0042956NCAM00435M_.JPG";
 	Image938.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image938.cameraPosition = new THREE.Vector3(0.615445,0.397663,-1.9448);
+	Image938.cameraVector = new THREE.Vector3(-0.8994574228302632,0.26322529366680025,0.348839202627182);
 	Image938.mastAz = "163.663";
 	Image938.mastEl = "-20.3927";
 	Image938.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22538,6 +23477,7 @@ function getImageDataArray()
 	Image939.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NLA_401937086EDR_F0042956NCAM00435M_.JPG";
 	Image939.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image939.cameraPosition = new THREE.Vector3(0.620349,0.73373,-1.94341);
+	Image939.cameraVector = new THREE.Vector3(-0.9021098786691695,-0.2463638922623915,0.35426346043138746);
 	Image939.mastAz = "195.25";
 	Image939.mastEl = "-20.7253";
 	Image939.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22562,6 +23502,7 @@ function getImageDataArray()
 	Image940.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00050/opgs/edr/ncam/NRA_401937086EDR_F0042956NCAM00435M_.JPG";
 	Image940.attitude = new THREE.Quaternion(0.922484,0.0213493,-0.0260465,0.384564);
 	Image940.cameraPosition = new THREE.Vector3(0.725234,0.323328,-1.94327);
+	Image940.cameraVector = new THREE.Vector3(-0.9031489150833085,-0.23596698468164476,0.35866644577391843);
 	Image940.mastAz = "194.617";
 	Image940.mastEl = "-20.9947";
 	Image940.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22586,6 +23527,7 @@ function getImageDataArray()
 	Image941.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00051/opgs/edr/ncam/NRA_402033374EDR_F0042956NCAM00107M_.JPG";
 	Image941.attitude = new THREE.Quaternion(0.922393,0.0225952,-0.0285606,0.384533);
 	Image941.cameraPosition = new THREE.Vector3(1.04987,0.552113,-1.96218);
+	Image941.cameraVector = new THREE.Vector3(0.4897691406139032,-0.8434065437312273,0.22088818640584737);
 	Image941.mastAz = "300.12";
 	Image941.mastEl = "-12.7376";
 	Image941.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22610,6 +23552,7 @@ function getImageDataArray()
 	Image942.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00051/opgs/edr/ncam/NLA_402033374EDR_F0042956NCAM00107M_.JPG";
 	Image942.attitude = new THREE.Quaternion(0.922393,0.0225952,-0.0285606,0.384533);
 	Image942.cameraPosition = new THREE.Vector3(0.682509,0.341228,-1.96263);
+	Image942.cameraVector = new THREE.Vector3(0.4991891449374009,-0.8390576842626329,0.21631551043902156);
 	Image942.mastAz = "300.726";
 	Image942.mastEl = "-12.4696";
 	Image942.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22634,6 +23577,7 @@ function getImageDataArray()
 	Image943.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00051/opgs/edr/ncam/NLA_402033984EDR_F0042956NCAM00107M_.JPG";
 	Image943.attitude = new THREE.Quaternion(0.922393,0.0225952,-0.0285606,0.384533);
 	Image943.cameraPosition = new THREE.Vector3(0.680659,0.344649,-1.97108);
+	Image943.cameraVector = new THREE.Vector3(0.5059089012730428,-0.8492913812385874,0.1508652821776928);
 	Image943.mastAz = "300.758";
 	Image943.mastEl = "-8.65392";
 	Image943.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22658,6 +23602,7 @@ function getImageDataArray()
 	Image944.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00051/opgs/edr/ncam/NRA_402033984EDR_F0042956NCAM00107M_.JPG";
 	Image944.attitude = new THREE.Quaternion(0.922393,0.0225952,-0.0285606,0.384533);
 	Image944.cameraPosition = new THREE.Vector3(1.04788,0.555784,-1.9706);
+	Image944.cameraVector = new THREE.Vector3(0.49664241243024493,-0.8539141251424566,0.15548948857610717);
 	Image944.mastAz = "300.159";
 	Image944.mastEl = "-8.92151";
 	Image944.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22682,6 +23627,7 @@ function getImageDataArray()
 	Image945.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00051/opgs/edr/ncam/NLA_402034422EDR_F0042956NCAM00107M_.JPG";
 	Image945.attitude = new THREE.Quaternion(0.922393,0.0225952,-0.0285606,0.384533);
 	Image945.cameraPosition = new THREE.Vector3(0.680844,0.344541,-1.97107);
+	Image945.cameraVector = new THREE.Vector3(0.5066363438258185,-0.8488533464959227,0.15088940074597704);
 	Image945.mastAz = "300.807";
 	Image945.mastEl = "-8.65533";
 	Image945.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22706,6 +23652,7 @@ function getImageDataArray()
 	Image946.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00051/opgs/edr/ncam/NRA_402034422EDR_F0042956NCAM00107M_.JPG";
 	Image946.attitude = new THREE.Quaternion(0.922393,0.0225952,-0.0285606,0.384533);
 	Image946.cameraPosition = new THREE.Vector3(1.04788,0.555992,-1.9706);
+	Image946.cameraVector = new THREE.Vector3(0.4973765934335075,-0.853482289660427,0.15551368280789427);
 	Image946.mastAz = "300.208";
 	Image946.mastEl = "-8.92292";
 	Image946.xyz = new THREE.Vector3(-3.79179,270.01,11.9266);
@@ -22730,6 +23677,7 @@ function getImageDataArray()
 	Image947.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402115185EDR_F0043200SAPP07612M_.JPG";
 	Image947.attitude = new THREE.Quaternion(0.64546,-0.019531,-0.0124599,0.763443);
 	Image947.cameraPosition = new THREE.Vector3(0.743834,0.76514,-2.04651);
+	Image947.cameraVector = new THREE.Vector3(-0.612398164254824,-0.17256730570834608,-0.7714849404997376);
 	Image947.mastAz = "195.701";
 	Image947.mastEl = "50.5111";
 	Image947.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22754,6 +23702,7 @@ function getImageDataArray()
 	Image948.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/fcam/FRA_402116846EDR_F0043200FHAZ00304M_.JPG";
 	Image948.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image948.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image948.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image948.mastAz = "359.974";
 	Image948.mastEl = "-43.7598";
 	Image948.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22778,6 +23727,7 @@ function getImageDataArray()
 	Image949.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/fcam/FLA_402116846EDR_F0043200FHAZ00304M_.JPG";
 	Image949.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image949.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image949.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image949.mastAz = "1.03995";
 	Image949.mastEl = "-43.4728";
 	Image949.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22802,6 +23752,7 @@ function getImageDataArray()
 	Image950.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/rcam/RLA_402116880EDR_F0043200RHAZ00304M_.JPG";
 	Image950.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image950.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image950.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image950.mastAz = "182.571";
 	Image950.mastEl = "-44.9097";
 	Image950.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22826,6 +23777,7 @@ function getImageDataArray()
 	Image951.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/rcam/RRA_402116880EDR_F0043200RHAZ00304M_.JPG";
 	Image951.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image951.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image951.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image951.mastAz = "182.044";
 	Image951.mastEl = "-43.5257";
 	Image951.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22850,6 +23802,7 @@ function getImageDataArray()
 	Image952.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402116930EDR_F0043200NCAM00440M_.JPG";
 	Image952.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image952.cameraPosition = new THREE.Vector3(0.614133,0.395883,-1.95807);
+	Image952.cameraVector = new THREE.Vector3(0.17234571889960337,-0.9526191412779527,0.2506266642794312);
 	Image952.mastAz = "280.231";
 	Image952.mastEl = "-14.4914";
 	Image952.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22874,6 +23827,7 @@ function getImageDataArray()
 	Image953.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402116930EDR_F0043200NCAM00440M_.JPG";
 	Image953.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image953.cameraPosition = new THREE.Vector3(1.03209,0.464765,-1.95758);
+	Image953.cameraVector = new THREE.Vector3(0.16197324758902373,-0.9532345363783755,0.2551638409355216);
 	Image953.mastAz = "279.619";
 	Image953.mastEl = "-14.7596";
 	Image953.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22898,6 +23852,7 @@ function getImageDataArray()
 	Image954.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402116958EDR_F0043200NCAM00440M_.JPG";
 	Image954.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image954.cameraPosition = new THREE.Vector3(1.04969,0.588487,-1.95552);
+	Image954.cameraVector = new THREE.Vector3(0.607821708552122,-0.7464938047905153,0.27073930269201635);
 	Image954.mastAz = "309.129";
 	Image954.mastEl = "-15.6846";
 	Image954.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22922,6 +23877,7 @@ function getImageDataArray()
 	Image955.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402116958EDR_F0043200NCAM00440M_.JPG";
 	Image955.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image955.cameraPosition = new THREE.Vector3(0.719873,0.322689,-1.95591);
+	Image955.cameraVector = new THREE.Vector3(0.6165914362462824,-0.7409074044631369,0.2662164885191081);
 	Image955.mastAz = "309.743";
 	Image955.mastEl = "-15.4162";
 	Image955.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22946,6 +23902,7 @@ function getImageDataArray()
 	Image956.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402116986EDR_F0043200NCAM00440M_.JPG";
 	Image956.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image956.cameraPosition = new THREE.Vector3(0.85042,0.311641,-1.9528);
+	Image956.cameraVector = new THREE.Vector3(0.8983252492679705,-0.331601988934534,0.288187209053941);
 	Image956.mastAz = "339.715";
 	Image956.mastEl = "-16.7264";
 	Image956.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22970,6 +23927,7 @@ function getImageDataArray()
 	Image957.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402116986EDR_F0043200NCAM00440M_.JPG";
 	Image957.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image957.cameraPosition = new THREE.Vector3(1.00344,0.706631,-1.95259);
+	Image957.cameraVector = new THREE.Vector3(0.8934216113225973,-0.34078319342098484,0.29268522255749346);
 	Image957.mastAz = "339.097";
 	Image957.mastEl = "-16.9952";
 	Image957.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -22994,6 +23952,7 @@ function getImageDataArray()
 	Image958.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402117014EDR_F0043200NCAM00440M_.JPG";
 	Image958.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image958.cameraPosition = new THREE.Vector3(0.969257,0.367978,-1.94956);
+	Image958.cameraVector = new THREE.Vector3(0.9367627948035796,0.16130006147851228,0.3105764904799058);
 	Image958.mastAz = "9.745";
 	Image958.mastEl = "-18.071";
 	Image958.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23018,6 +23977,7 @@ function getImageDataArray()
 	Image959.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402117014EDR_F0043200NCAM00440M_.JPG";
 	Image959.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image959.cameraPosition = new THREE.Vector3(0.904171,0.78654,-1.94958);
+	Image959.cameraVector = new THREE.Vector3(0.9370041137176243,0.15088373674285802,0.31505140669859144);
 	Image959.mastAz = "9.12287";
 	Image959.mastEl = "-18.3403";
 	Image959.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23042,6 +24002,7 @@ function getImageDataArray()
 	Image960.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402117042EDR_F0043200NCAM00440M_.JPG";
 	Image960.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image960.cameraPosition = new THREE.Vector3(1.04404,0.47803,-1.94707);
+	Image960.cameraVector = new THREE.Vector3(0.7221030940792998,0.6093746275485794,0.32745943996338195);
 	Image960.mastAz = "40.1356";
 	Image960.mastEl = "-19.0915";
 	Image960.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23066,6 +24027,7 @@ function getImageDataArray()
 	Image961.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402117042EDR_F0043200NCAM00440M_.JPG";
 	Image961.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image961.cameraPosition = new THREE.Vector3(0.776243,0.806225,-1.9473);
+	Image961.cameraVector = new THREE.Vector3(0.7275164668761877,0.6004626446051413,0.3319102331320752);
 	Image961.mastAz = "39.5099";
 	Image961.mastEl = "-19.3613";
 	Image961.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23090,6 +24052,7 @@ function getImageDataArray()
 	Image962.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402117087EDR_F0043200NCAM00436M_.JPG";
 	Image962.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image962.cameraPosition = new THREE.Vector3(1.04356,0.517406,-1.82374);
+	Image962.cameraVector = new THREE.Vector3(0.1779542024352044,0.2556381719697908,0.9502533487799946);
 	Image962.mastAz = "55.0784";
 	Image962.mastEl = "-71.8297";
 	Image962.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23114,6 +24077,7 @@ function getImageDataArray()
 	Image963.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402117087EDR_F0043200NCAM00436M_.JPG";
 	Image963.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image963.cameraPosition = new THREE.Vector3(0.709493,0.777852,-1.82436);
+	Image963.cameraVector = new THREE.Vector3(0.18338601714790312,0.2458078182269777,0.9518130516089396);
 	Image963.mastAz = "53.197";
 	Image963.mastEl = "-72.1176";
 	Image963.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23138,6 +24102,7 @@ function getImageDataArray()
 	Image964.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402117134EDR_F0043200NCAM00436M_.JPG";
 	Image964.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image964.cameraPosition = new THREE.Vector3(0.790271,0.813156,-1.87284);
+	Image964.cameraVector = new THREE.Vector3(-0.5716299838936891,0.3015030024044092,0.7631088395863512);
 	Image964.mastAz = "152.154";
 	Image964.mastEl = "-49.7162";
 	Image964.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23162,6 +24127,7 @@ function getImageDataArray()
 	Image965.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402117134EDR_F0043200NCAM00436M_.JPG";
 	Image965.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image965.cameraPosition = new THREE.Vector3(0.583374,0.44353,-1.87322);
+	Image965.cameraVector = new THREE.Vector3(-0.5635268268086642,0.30880287419593894,0.7662103499400702);
 	Image965.mastAz = "151.241";
 	Image965.mastEl = "-49.9912";
 	Image965.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23186,6 +24152,7 @@ function getImageDataArray()
 	Image966.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402117478EDR_F0043200NCAM00439M_.JPG";
 	Image966.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image966.cameraPosition = new THREE.Vector3(1.02949,0.439554,-1.87971);
+	Image966.cameraVector = new THREE.Vector3(0.588538072261,0.3476582614096653,0.7299018226946103);
 	Image966.mastAz = "30.536";
 	Image966.mastEl = "-46.8555";
 	Image966.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23210,6 +24177,7 @@ function getImageDataArray()
 	Image967.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402117478EDR_F0043200NCAM00439M_.JPG";
 	Image967.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image967.cameraPosition = new THREE.Vector3(0.822675,0.809224,-1.88006);
+	Image967.cameraVector = new THREE.Vector3(0.5906592540364313,0.3370113414647658,0.73317460495113);
 	Image967.mastAz = "29.6729";
 	Image967.mastEl = "-47.1298";
 	Image967.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23234,6 +24202,7 @@ function getImageDataArray()
 	Image968.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402117506EDR_F0043200NCAM00439M_.JPG";
 	Image968.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image968.cameraPosition = new THREE.Vector3(1.05929,0.567706,-1.87961);
+	Image968.cameraVector = new THREE.Vector3(0.33652015842430316,0.5948614820615618,0.7299958904909014);
 	Image968.mastAz = "60.4677";
 	Image968.mastEl = "-46.8632";
 	Image968.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23258,6 +24227,7 @@ function getImageDataArray()
 	Image969.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402117506EDR_F0043200NCAM00439M_.JPG";
 	Image969.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image969.cameraPosition = new THREE.Vector3(0.695688,0.785021,-1.88012);
+	Image969.cameraVector = new THREE.Vector3(0.3436664420535421,0.5866907738136187,0.7332716498871592);
 	Image969.mastAz = "59.6047";
 	Image969.mastEl = "-47.1378";
 	Image969.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23282,6 +24252,7 @@ function getImageDataArray()
 	Image970.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402117534EDR_F0043200NCAM00439M_.JPG";
 	Image970.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image970.cameraPosition = new THREE.Vector3(1.02107,0.693887,-1.87958);
+	Image970.cameraVector = new THREE.Vector3(-0.00576715368396553,0.683460657485278,0.7299645673648666);
 	Image970.mastAz = "90.4484";
 	Image970.mastEl = "-46.8605";
 	Image970.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23306,6 +24277,7 @@ function getImageDataArray()
 	Image971.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402117534EDR_F0043200NCAM00439M_.JPG";
 	Image971.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image971.cameraPosition = new THREE.Vector3(0.597533,0.700493,-1.88016);
+	Image971.cameraVector = new THREE.Vector3(0.004505553598891398,0.6799559465531448,0.7332391224790071);
 	Image971.mastAz = "89.5856";
 	Image971.mastEl = "-47.1353";
 	Image971.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23330,6 +24302,7 @@ function getImageDataArray()
 	Image972.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402117562EDR_F0043200NCAM00439M_.JPG";
 	Image972.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image972.cameraPosition = new THREE.Vector3(0.925117,0.784005,-1.8796);
+	Image972.cameraVector = new THREE.Vector3(-0.345875152417197,0.5894682005421503,0.729998369511864);
 	Image972.mastAz = "120.368";
 	Image972.mastEl = "-46.8635";
 	Image972.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23354,6 +24327,7 @@ function getImageDataArray()
 	Image973.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402117562EDR_F0043200NCAM00439M_.JPG";
 	Image973.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image973.cameraPosition = new THREE.Vector3(0.554754,0.57843,-1.88012);
+	Image973.cameraVector = new THREE.Vector3(-0.33522090879863825,0.5915534906463157,0.7332744438533052);
 	Image973.mastAz = "119.505";
 	Image973.mastEl = "-47.1382";
 	Image973.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23378,6 +24352,7 @@ function getImageDataArray()
 	Image974.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NLA_402117597EDR_F0043200NCAM00439M_.JPG";
 	Image974.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image974.cameraPosition = new THREE.Vector3(0.796154,0.814218,-1.87968);
+	Image974.cameraVector = new THREE.Vector3(-0.5948271350451624,0.3365824855932166,0.7299951436864878);
 	Image974.mastAz = "150.462";
 	Image974.mastEl = "-46.8632";
 	Image974.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23402,6 +24377,7 @@ function getImageDataArray()
 	Image975.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00052/opgs/edr/ncam/NRA_402117597EDR_F0043200NCAM00439M_.JPG";
 	Image975.attitude = new THREE.Quaternion(0.644169,-0.0195099,-0.0124929,0.764532);
 	Image975.cameraPosition = new THREE.Vector3(0.578936,0.450562,-1.88005);
+	Image975.cameraVector = new THREE.Vector3(-0.5866595555754457,0.343733877678697,0.7332650183855677);
 	Image975.mastAz = "149.599";
 	Image975.mastEl = "-47.1375";
 	Image975.xyz = new THREE.Vector3(3.31742,305.345,12.6964);
@@ -23426,6 +24402,7 @@ function getImageDataArray()
 	Image976.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/ncam/NLA_402200516EDR_F0043212NCAM00315M_.JPG";
 	Image976.attitude = new THREE.Quaternion(0.762959,-0.019081,-0.0143619,0.646006);
 	Image976.cameraPosition = new THREE.Vector3(0.892449,0.318932,-1.91677);
+	Image976.cameraVector = new THREE.Vector3(0.8315769374047888,-0.17656804567252307,0.5265961663588692);
 	Image976.mastAz = "347.985";
 	Image976.mastEl = "-31.7527";
 	Image976.xyz = new THREE.Vector3(3.49437,306.27,12.7056);
@@ -23450,6 +24427,7 @@ function getImageDataArray()
 	Image977.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/ncam/NRA_402200516EDR_F0043212NCAM00315M_.JPG";
 	Image977.attitude = new THREE.Quaternion(0.762959,-0.019081,-0.0143619,0.646006);
 	Image977.cameraPosition = new THREE.Vector3(0.987909,0.731628,-1.91673);
+	Image977.cameraVector = new THREE.Vector3(0.8269284648359939,-0.18609726517823832,0.5306195642239049);
 	Image977.mastAz = "347.289";
 	Image977.mastEl = "-32.0236";
 	Image977.xyz = new THREE.Vector3(3.49437,306.27,12.7056);
@@ -23474,6 +24452,7 @@ function getImageDataArray()
 	Image978.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/fcam/FLA_402204165EDR_F0043232FHAZ00302M_.JPG";
 	Image978.attitude = new THREE.Quaternion(0.757119,-0.0366932,-0.00917801, 0.652181);
 	Image978.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image978.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image978.mastAz = "1.03995";
 	Image978.mastEl = "-43.4728";
 	Image978.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23498,6 +24477,7 @@ function getImageDataArray()
 	Image979.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/fcam/FRA_402204165EDR_F0043232FHAZ00302M_.JPG";
 	Image979.attitude = new THREE.Quaternion(0.757119,-0.0366932,-0.00917801, 0.652181);
 	Image979.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image979.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image979.mastAz = "359.974";
 	Image979.mastEl = "-43.7598";
 	Image979.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23522,6 +24502,7 @@ function getImageDataArray()
 	Image980.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/ncam/NLA_402204219EDR_F0043232NCAM00316M_.JPG";
 	Image980.attitude = new THREE.Quaternion(0.757119,-0.0366932,-0.00917801, 0.652181);
 	Image980.cameraPosition = new THREE.Vector3(0.884122,0.319798,-1.94998);
+	Image980.cameraVector = new THREE.Vector3(0.9285750225675736,-0.20677519395358765,0.30820844671923986);
 	Image980.mastAz = "347.421";
 	Image980.mastEl = "-17.9282";
 	Image980.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23546,6 +24527,7 @@ function getImageDataArray()
 	Image981.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/ncam/NRA_402204219EDR_F0043232NCAM00316M_.JPG";
 	Image981.attitude = new THREE.Quaternion(0.757119,-0.0366932,-0.00917801, 0.652181);
 	Image981.cameraPosition = new THREE.Vector3(0.982842,0.731726,-1.94983);
+	Image981.cameraVector = new THREE.Vector3(0.9248542051153436,-0.2165078233023655,0.31268044666933925);
 	Image981.mastAz = "346.8";
 	Image981.mastEl = "-18.1972";
 	Image981.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23570,6 +24552,7 @@ function getImageDataArray()
 	Image982.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/ncam/NLA_402204246EDR_F0043232NCAM00316M_.JPG";
 	Image982.attitude = new THREE.Quaternion(0.757119,-0.0366932,-0.00917801, 0.652181);
 	Image982.cameraPosition = new THREE.Vector3(0.995279,0.392817,-1.94522);
+	Image982.cameraVector = new THREE.Vector3(0.8956842568170863,0.2855750800672837,0.3408762029455687);
 	Image982.mastAz = "17.659";
 	Image982.mastEl = "-19.9071";
 	Image982.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23594,6 +24577,7 @@ function getImageDataArray()
 	Image983.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/ncam/NRA_402204246EDR_F0043232NCAM00316M_.JPG";
 	Image983.attitude = new THREE.Quaternion(0.757119,-0.0366932,-0.00917801, 0.652181);
 	Image983.cameraPosition = new THREE.Vector3(0.873278,0.79846,-1.94531);
+	Image983.cameraVector = new THREE.Vector3(0.8972194551417234,0.2752509401357252,0.3453030108029592);
 	Image983.mastAz = "17.03";
 	Image983.mastEl = "-20.1768";
 	Image983.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23618,6 +24602,7 @@ function getImageDataArray()
 	Image984.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/ncam/NLA_402204274EDR_F0043232NCAM00316M_.JPG";
 	Image984.attitude = new THREE.Quaternion(0.757119,-0.0366932,-0.00917801, 0.652181);
 	Image984.cameraPosition = new THREE.Vector3(1.05416,0.514284,-1.94241);
+	Image984.cameraVector = new THREE.Vector3(0.619008609211245,0.6982038881689572,0.35963825195341803);
 	Image984.mastAz = "48.4151";
 	Image984.mastEl = "-21.0549";
 	Image984.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23642,6 +24627,7 @@ function getImageDataArray()
 	Image985.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/ncam/NRA_402204274EDR_F0043232NCAM00316M_.JPG";
 	Image985.attitude = new THREE.Quaternion(0.757119,-0.0366932,-0.00917801, 0.652181);
 	Image985.cameraPosition = new THREE.Vector3(0.741964,0.800579,-1.9427);
+	Image985.cameraVector = new THREE.Vector3(0.6255441234536225,0.6900499096489291,0.36404075569384253);
 	Image985.mastAz = "47.7816";
 	Image985.mastEl = "-21.3249";
 	Image985.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23666,6 +24652,7 @@ function getImageDataArray()
 	Image986.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/ncam/NLA_402204316EDR_F0043232NCAM00314M_.JPG";
 	Image986.attitude = new THREE.Quaternion(0.757119,-0.0366932,-0.00917801, 0.652181);
 	Image986.cameraPosition = new THREE.Vector3(0.854978,0.309301,-1.88206);
+	Image986.cameraVector = new THREE.Vector3(0.6525097751118971,-0.23900862339566206,0.7191007379539613);
 	Image986.mastAz = "339.848";
 	Image986.mastEl = "-45.9575";
 	Image986.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23690,6 +24677,7 @@ function getImageDataArray()
 	Image987.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00053/opgs/edr/ncam/NRA_402204316EDR_F0043232NCAM00314M_.JPG";
 	Image987.attitude = new THREE.Quaternion(0.757119,-0.0366932,-0.00917801, 0.652181);
 	Image987.cameraPosition = new THREE.Vector3(1.00946,0.703719,-1.88205);
+	Image987.cameraVector = new THREE.Vector3(0.6456742046797088,-0.24742554381670193,0.722416376944927);
 	Image987.mastAz = "338.999";
 	Image987.mastEl = "-46.2309";
 	Image987.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23714,6 +24702,7 @@ function getImageDataArray()
 	Image988.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/fcam/FLA_402284021EDR_F0043232FHAZ00202M_.JPG";
 	Image988.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image988.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image988.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image988.mastAz = "1.03995";
 	Image988.mastEl = "-43.4728";
 	Image988.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23738,6 +24727,7 @@ function getImageDataArray()
 	Image989.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/fcam/FRA_402284021EDR_F0043232FHAZ00202M_.JPG";
 	Image989.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image989.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image989.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image989.mastAz = "359.974";
 	Image989.mastEl = "-43.7598";
 	Image989.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23762,6 +24752,7 @@ function getImageDataArray()
 	Image990.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/ncam/NLA_402284057EDR_F0043232NCAM00204M_.JPG";
 	Image990.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image990.cameraPosition = new THREE.Vector3(0.874609,0.313087,-1.89668);
+	Image990.cameraVector = new THREE.Vector3(0.7363310244197231,-0.21239353575170922,0.6424216749518097);
 	Image990.mastAz = "343.879";
 	Image990.mastEl = "-39.9498";
 	Image990.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23786,6 +24777,7 @@ function getImageDataArray()
 	Image991.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/ncam/NRA_402284057EDR_F0043232NCAM00204M_.JPG";
 	Image991.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image991.cameraPosition = new THREE.Vector3(1.00016,0.717643,-1.89666);
+	Image991.cameraVector = new THREE.Vector3(0.7304697698575531,-0.22139117732045635,0.6460649053531042);
 	Image991.mastAz = "343.108";
 	Image991.mastEl = "-40.222";
 	Image991.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23810,6 +24802,7 @@ function getImageDataArray()
 	Image992.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/ncam/NLA_402286667EDR_F0043232NCAM00204M_.JPG";
 	Image992.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image992.cameraPosition = new THREE.Vector3(0.874609,0.313087,-1.89668);
+	Image992.cameraVector = new THREE.Vector3(0.7363310244197231,-0.21239353575170922,0.6424216749518097);
 	Image992.mastAz = "343.879";
 	Image992.mastEl = "-39.9498";
 	Image992.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23834,6 +24827,7 @@ function getImageDataArray()
 	Image993.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/ncam/NRA_402286667EDR_F0043232NCAM00204M_.JPG";
 	Image993.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image993.cameraPosition = new THREE.Vector3(1.00016,0.717643,-1.89666);
+	Image993.cameraVector = new THREE.Vector3(0.7304697698575531,-0.22139117732045635,0.6460649053531042);
 	Image993.mastAz = "343.108";
 	Image993.mastEl = "-40.222";
 	Image993.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23858,6 +24852,7 @@ function getImageDataArray()
 	Image994.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/fcam/FRA_402286687EDR_F0043232FHAZ00202M_.JPG";
 	Image994.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image994.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image994.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image994.mastAz = "359.974";
 	Image994.mastEl = "-43.7598";
 	Image994.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23882,6 +24877,7 @@ function getImageDataArray()
 	Image995.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/fcam/FLA_402286687EDR_F0043232FHAZ00202M_.JPG";
 	Image995.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image995.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image995.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image995.mastAz = "1.03995";
 	Image995.mastEl = "-43.4728";
 	Image995.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23906,6 +24902,7 @@ function getImageDataArray()
 	Image996.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/fcam/FLA_402287146EDR_F0043232FHAZ00202M_.JPG";
 	Image996.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image996.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image996.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image996.mastAz = "1.03995";
 	Image996.mastEl = "-43.4728";
 	Image996.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23930,6 +24927,7 @@ function getImageDataArray()
 	Image997.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/fcam/FRA_402287146EDR_F0043232FHAZ00202M_.JPG";
 	Image997.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image997.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image997.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image997.mastAz = "359.974";
 	Image997.mastEl = "-43.7598";
 	Image997.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23954,6 +24952,7 @@ function getImageDataArray()
 	Image998.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/ncam/NLA_402287166EDR_F0043232NCAM00204M_.JPG";
 	Image998.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image998.cameraPosition = new THREE.Vector3(0.874609,0.313087,-1.89668);
+	Image998.cameraVector = new THREE.Vector3(0.7363310244197231,-0.21239353575170922,0.6424216749518097);
 	Image998.mastAz = "343.879";
 	Image998.mastEl = "-39.9498";
 	Image998.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -23978,6 +24977,7 @@ function getImageDataArray()
 	Image999.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/ncam/NRA_402287166EDR_F0043232NCAM00204M_.JPG";
 	Image999.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image999.cameraPosition = new THREE.Vector3(1.00016,0.717643,-1.89666);
+	Image999.cameraVector = new THREE.Vector3(0.7304697698575531,-0.22139117732045635,0.6460649053531042);
 	Image999.mastAz = "343.108";
 	Image999.mastEl = "-40.222";
 	Image999.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -24002,6 +25002,7 @@ function getImageDataArray()
 	Image1000.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/ncam/NRA_402289723EDR_F0043232NCAM00204M_.JPG";
 	Image1000.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image1000.cameraPosition = new THREE.Vector3(1.00016,0.717643,-1.89666);
+	Image1000.cameraVector = new THREE.Vector3(0.7304697698575531,-0.22139117732045635,0.6460649053531042);
 	Image1000.mastAz = "343.108";
 	Image1000.mastEl = "-40.222";
 	Image1000.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -24026,6 +25027,7 @@ function getImageDataArray()
 	Image1001.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/ncam/NLA_402289723EDR_F0043232NCAM00204M_.JPG";
 	Image1001.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image1001.cameraPosition = new THREE.Vector3(0.874609,0.313087,-1.89668);
+	Image1001.cameraVector = new THREE.Vector3(0.7363310244197231,-0.21239353575170922,0.6424216749518097);
 	Image1001.mastAz = "343.879";
 	Image1001.mastEl = "-39.9498";
 	Image1001.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -24050,6 +25052,7 @@ function getImageDataArray()
 	Image1002.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/fcam/FLA_402289743EDR_F0043232FHAZ00202M_.JPG";
 	Image1002.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image1002.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1002.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1002.mastAz = "1.03995";
 	Image1002.mastEl = "-43.4728";
 	Image1002.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -24074,6 +25077,7 @@ function getImageDataArray()
 	Image1003.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/fcam/FRA_402289743EDR_F0043232FHAZ00202M_.JPG";
 	Image1003.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image1003.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1003.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1003.mastAz = "359.974";
 	Image1003.mastEl = "-43.7598";
 	Image1003.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -24098,6 +25102,7 @@ function getImageDataArray()
 	Image1004.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/fcam/FLA_402290334EDR_F0043232FHAZ00202M_.JPG";
 	Image1004.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image1004.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1004.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1004.mastAz = "1.03995";
 	Image1004.mastEl = "-43.4728";
 	Image1004.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -24122,6 +25127,7 @@ function getImageDataArray()
 	Image1005.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/fcam/FRA_402290334EDR_F0043232FHAZ00202M_.JPG";
 	Image1005.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image1005.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1005.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1005.mastAz = "359.974";
 	Image1005.mastEl = "-43.7598";
 	Image1005.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -24146,6 +25152,7 @@ function getImageDataArray()
 	Image1006.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/ncam/NLA_402290376EDR_F0043232NCAM00205M_.JPG";
 	Image1006.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image1006.cameraPosition = new THREE.Vector3(0.885084,0.316513,-1.89244);
+	Image1006.cameraVector = new THREE.Vector3(0.7258880230191048,-0.17460129906919797,0.6652826199449103);
 	Image1006.mastAz = "346.443";
 	Image1006.mastEl = "-41.6812";
 	Image1006.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -24170,6 +25177,7 @@ function getImageDataArray()
 	Image1007.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00054/opgs/edr/ncam/NRA_402290376EDR_F0043232NCAM00205M_.JPG";
 	Image1007.attitude = new THREE.Quaternion(0.757163,-0.0342734,-0.0105091,0.652241);
 	Image1007.cameraPosition = new THREE.Vector3(0.992648,0.72622,-1.89245);
+	Image1007.cameraVector = new THREE.Vector3(0.7203257904050182,-0.1838206021861217,0.6688353623196945);
 	Image1007.mastAz = "345.652";
 	Image1007.mastEl = "-41.9537";
 	Image1007.xyz = new THREE.Vector3(3.69422,307.368,12.7019);
@@ -24194,6 +25202,7 @@ function getImageDataArray()
 	Image1008.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/fcam/FLA_402378017EDR_F0043394FHAZ00304M_.JPG";
 	Image1008.attitude = new THREE.Quaternion(0.707791,0.011672,-0.0456418,0.704849);
 	Image1008.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1008.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1008.mastAz = "1.03995";
 	Image1008.mastEl = "-43.4728";
 	Image1008.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24218,6 +25227,7 @@ function getImageDataArray()
 	Image1009.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/fcam/FRA_402378017EDR_F0043394FHAZ00304M_.JPG";
 	Image1009.attitude = new THREE.Quaternion(0.707791,0.011672,-0.0456418,0.704849);
 	Image1009.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1009.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1009.mastAz = "359.974";
 	Image1009.mastEl = "-43.7598";
 	Image1009.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24242,6 +25252,7 @@ function getImageDataArray()
 	Image1010.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/fcam/FLA_402380707EDR_F0043416FHAZ00304M_.JPG";
 	Image1010.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1010.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1010.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1010.mastAz = "1.03995";
 	Image1010.mastEl = "-43.4728";
 	Image1010.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24266,6 +25277,7 @@ function getImageDataArray()
 	Image1011.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/fcam/FRA_402380707EDR_F0043416FHAZ00304M_.JPG";
 	Image1011.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1011.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1011.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1011.mastAz = "359.974";
 	Image1011.mastEl = "-43.7598";
 	Image1011.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24290,6 +25302,7 @@ function getImageDataArray()
 	Image1012.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/rcam/RRA_402380727EDR_F0043416RHAZ00307M_.JPG";
 	Image1012.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1012.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1012.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1012.mastAz = "182.044";
 	Image1012.mastEl = "-43.5257";
 	Image1012.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24314,6 +25327,7 @@ function getImageDataArray()
 	Image1013.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/rcam/RLA_402380727EDR_F0043416RHAZ00307M_.JPG";
 	Image1013.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1013.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1013.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1013.mastAz = "182.571";
 	Image1013.mastEl = "-44.9097";
 	Image1013.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24338,6 +25352,7 @@ function getImageDataArray()
 	Image1014.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402380767EDR_F0043416NCAM00441M_.JPG";
 	Image1014.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1014.cameraPosition = new THREE.Vector3(0.986866,0.732065,-1.92463);
+	Image1014.cameraVector = new THREE.Vector3(0.8551398206681508,-0.19141582208426614,0.4817632926691775);
 	Image1014.mastAz = "347.356";
 	Image1014.mastEl = "-28.7771";
 	Image1014.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24362,6 +25377,7 @@ function getImageDataArray()
 	Image1015.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402380767EDR_F0043416NCAM00441M_.JPG";
 	Image1015.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1015.cameraPosition = new THREE.Vector3(0.891969,0.31924,-1.9247);
+	Image1015.cameraVector = new THREE.Vector3(0.8595485579161166,-0.1818292407042793,0.4776132366352813);
 	Image1015.mastAz = "348.029";
 	Image1015.mastEl = "-28.5067";
 	Image1015.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24386,6 +25402,7 @@ function getImageDataArray()
 	Image1016.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402380795EDR_F0043416NCAM00441M_.JPG";
 	Image1016.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1016.cameraPosition = new THREE.Vector3(0.997563,0.392761,-1.93129);
+	Image1016.cameraVector = new THREE.Vector3(0.8592302613708492,0.26979931632745047,0.4346627277025514);
 	Image1016.mastAz = "17.406";
 	Image1016.mastEl = "-25.7407";
 	Image1016.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24410,6 +25427,7 @@ function getImageDataArray()
 	Image1017.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402380795EDR_F0043416NCAM00441M_.JPG";
 	Image1017.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1017.cameraPosition = new THREE.Vector3(0.877668,0.79903,-1.93142);
+	Image1017.cameraVector = new THREE.Vector3(0.8602879231091666,0.2593412521299388,0.43891548650758777);
 	Image1017.mastAz = "16.7497";
 	Image1017.mastEl = "-26.0111";
 	Image1017.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24434,6 +25452,7 @@ function getImageDataArray()
 	Image1018.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402380830EDR_F0043416NCAM00441M_.JPG";
 	Image1018.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1018.cameraPosition = new THREE.Vector3(1.05352,0.506723,-1.93604);
+	Image1018.cameraVector = new THREE.Vector3(0.6304640743101596,0.6635476299634044,0.4027649361279882);
 	Image1018.mastAz = "46.4388";
 	Image1018.mastEl = "-23.7282";
 	Image1018.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24458,6 +25477,7 @@ function getImageDataArray()
 	Image1019.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402380830EDR_F0043416NCAM00441M_.JPG";
 	Image1019.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1019.cameraPosition = new THREE.Vector3(0.751491,0.803723,-1.93634);
+	Image1019.cameraVector = new THREE.Vector3(0.6365646249790359,0.6550288032034008,0.40709058598697623);
 	Image1019.mastAz = "45.7931";
 	Image1019.mastEl = "-23.9986";
 	Image1019.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24482,6 +25502,7 @@ function getImageDataArray()
 	Image1020.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402380858EDR_F0043416NCAM00441M_.JPG";
 	Image1020.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1020.cameraPosition = new THREE.Vector3(1.04821,0.632137,-1.93778);
+	Image1020.cameraVector = new THREE.Vector3(0.2366122722579594,0.8895690740869999,0.39074479528833506);
 	Image1020.mastAz = "75.0793";
 	Image1020.mastEl = "-22.9778";
 	Image1020.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24506,6 +25527,7 @@ function getImageDataArray()
 	Image1021.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402380858EDR_F0043416NCAM00441M_.JPG";
 	Image1021.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1021.cameraPosition = new THREE.Vector3(0.640779,0.748031,-1.93818);
+	Image1021.cameraVector = new THREE.Vector3(0.24606794507072063,0.885070608347268,0.39509566518562284);
 	Image1021.mastAz = "74.4373";
 	Image1021.mastEl = "-23.2483";
 	Image1021.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24530,6 +25552,7 @@ function getImageDataArray()
 	Image1022.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402380886EDR_F0043416NCAM00441M_.JPG";
 	Image1022.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1022.cameraPosition = new THREE.Vector3(0.983106,0.737639,-1.9511);
+	Image1022.cameraVector = new THREE.Vector3(-0.23279123867958368,0.9256407386558185,0.2983244243013568);
 	Image1022.mastAz = "104.092";
 	Image1022.mastEl = "-17.334";
 	Image1022.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24554,6 +25577,7 @@ function getImageDataArray()
 	Image1023.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402380886EDR_F0043416NCAM00441M_.JPG";
 	Image1023.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1023.cameraPosition = new THREE.Vector3(0.570663,0.641092,-1.95146);
+	Image1023.cameraVector = new THREE.Vector3(-0.22243909816544705,0.9267248071613622,0.3028233468527128);
 	Image1023.mastAz = "103.473";
 	Image1023.mastEl = "-17.6037";
 	Image1023.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24578,6 +25602,7 @@ function getImageDataArray()
 	Image1024.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402388552EDR_F0043416NCAM00442M_.JPG";
 	Image1024.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1024.cameraPosition = new THREE.Vector3(0.874386,0.800264,-1.959);
+	Image1024.cameraVector = new THREE.Vector3(-0.6685918589303452,0.7034972618890453,0.24099072323780776);
 	Image1024.mastAz = "133.519";
 	Image1024.mastEl = "-13.9219";
 	Image1024.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24602,6 +25627,7 @@ function getImageDataArray()
 	Image1025.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402388552EDR_F0043416NCAM00442M_.JPG";
 	Image1025.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1025.cameraPosition = new THREE.Vector3(0.5627,0.513416,-1.95923);
+	Image1025.cameraVector = new THREE.Vector3(-0.6602943515506532,0.7097281624367076,0.24555509515079682);
 	Image1025.mastAz = "132.909";
 	Image1025.mastEl = "-14.191";
 	Image1025.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24626,6 +25652,7 @@ function getImageDataArray()
 	Image1026.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402388588EDR_F0043416NCAM00442M_.JPG";
 	Image1026.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1026.cameraPosition = new THREE.Vector3(0.743233,0.803852,-1.95287);
+	Image1026.cameraVector = new THREE.Vector3(-0.9178215279061552,0.2746572662592379,0.28664791819061364);
 	Image1026.mastAz = "163.316";
 	Image1026.mastEl = "-16.6343";
 	Image1026.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24650,6 +25677,7 @@ function getImageDataArray()
 	Image1027.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402388588EDR_F0043416NCAM00442M_.JPG";
 	Image1027.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1027.cameraPosition = new THREE.Vector3(0.615252,0.400056,-1.95294);
+	Image1027.cameraVector = new THREE.Vector3(-0.913510100443722,0.2841262014303325,0.29115562513554677);
 	Image1027.mastAz = "162.698";
 	Image1027.mastEl = "-16.9035";
 	Image1027.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24674,6 +25702,7 @@ function getImageDataArray()
 	Image1028.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402388676EDR_F0043416NCAM00442M_.JPG";
 	Image1028.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1028.cameraPosition = new THREE.Vector3(0.626132,0.738991,-1.94642);
+	Image1028.cameraVector = new THREE.Vector3(-0.9161358067838445,-0.22280011043012782,0.3332495976304206);
 	Image1028.mastAz = "193.644";
 	Image1028.mastEl = "-19.4431";
 	Image1028.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24698,6 +25727,7 @@ function getImageDataArray()
 	Image1029.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402388676EDR_F0043416NCAM00442M_.JPG";
 	Image1029.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1029.cameraPosition = new THREE.Vector3(0.719523,0.325823,-1.9463);
+	Image1029.cameraVector = new THREE.Vector3(-0.91698165312047,-0.2123999975134825,0.33768459973283166);
 	Image1029.mastAz = "193.016";
 	Image1029.mastEl = "-19.7123";
 	Image1029.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24722,6 +25752,7 @@ function getImageDataArray()
 	Image1030.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402388712EDR_F0043416NCAM00442M_.JPG";
 	Image1030.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1030.cameraPosition = new THREE.Vector3(0.558945,0.623732,-1.9415);
+	Image1030.cameraVector = new THREE.Vector3(-0.6697821730193209,-0.64495261964859,0.36800537919157866);
 	Image1030.mastAz = "223.893";
 	Image1030.mastEl = "-21.5695";
 	Image1030.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24746,6 +25777,7 @@ function getImageDataArray()
 	Image1031.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402388712EDR_F0043416NCAM00442M_.JPG";
 	Image1031.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1031.cameraPosition = new THREE.Vector3(0.847745,0.313854,-1.94119);
+	Image1031.cameraVector = new THREE.Vector3(-0.6756358842246301,-0.6362790927670788,0.3723775880145116);
 	Image1031.mastAz = "223.256";
 	Image1031.mastEl = "-21.8387";
 	Image1031.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24770,6 +25802,7 @@ function getImageDataArray()
 	Image1032.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402388758EDR_F0043416NCAM00442M_.JPG";
 	Image1032.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1032.cameraPosition = new THREE.Vector3(0.560834,0.487375,-1.93959);
+	Image1032.cameraVector = new THREE.Vector3(-0.23973153526759558,-0.8927825078775011,0.3814029163839748);
 	Image1032.mastAz = "254.944";
 	Image1032.mastEl = "-22.3976";
 	Image1032.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24794,6 +25827,7 @@ function getImageDataArray()
 	Image1033.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402388758EDR_F0043416NCAM00442M_.JPG";
 	Image1033.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1033.cameraPosition = new THREE.Vector3(0.968091,0.370875,-1.93917);
+	Image1033.cameraVector = new THREE.Vector3(-0.2492025591905501,-0.888310135960627,0.38575016116975575);
 	Image1033.mastAz = "254.304";
 	Image1033.mastEl = "-22.6667";
 	Image1033.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24818,6 +25852,7 @@ function getImageDataArray()
 	Image1034.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402388793EDR_F0043416NCAM00442M_.JPG";
 	Image1034.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1034.cameraPosition = new THREE.Vector3(0.633002,0.372236,-1.94124);
+	Image1034.cameraVector = new THREE.Vector3(0.2572374756125469,-0.8926290187089232,0.37019226909705855);
 	Image1034.mastAz = "286.05";
 	Image1034.mastEl = "-21.7043";
 	Image1034.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24842,6 +25877,7 @@ function getImageDataArray()
 	Image1035.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402388793EDR_F0043416NCAM00442M_.JPG";
 	Image1035.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1035.cameraPosition = new THREE.Vector3(1.04188,0.48292,-1.94081);
+	Image1035.cameraVector = new THREE.Vector3(0.2468333101752088,-0.8937450608341109,0.3745571828473997);
 	Image1035.mastAz = "285.414";
 	Image1035.mastEl = "-21.9734";
 	Image1035.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24866,6 +25902,7 @@ function getImageDataArray()
 	Image1036.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NLA_402388828EDR_F0043416NCAM00442M_.JPG";
 	Image1036.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1036.cameraPosition = new THREE.Vector3(0.75118,0.311931,-1.94597);
+	Image1036.cameraVector = new THREE.Vector3(0.6847179988006868,-0.6461389015190817,0.33714356298481635);
 	Image1036.mastAz = "316.635";
 	Image1036.mastEl = "-19.6798";
 	Image1036.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24890,6 +25927,7 @@ function getImageDataArray()
 	Image1037.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00055/opgs/edr/ncam/NRA_402388828EDR_F0043416NCAM00442M_.JPG";
 	Image1037.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1037.cameraPosition = new THREE.Vector3(1.04683,0.615284,-1.94564);
+	Image1037.cameraVector = new THREE.Vector3(0.6764426053990131,-0.6525001819808617,0.3415683154450034);
 	Image1037.mastAz = "316.007";
 	Image1037.mastEl = "-19.9488";
 	Image1037.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24914,6 +25952,7 @@ function getImageDataArray()
 	Image1038.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NLA_402461301EDR_F0043416NCAM00443M_.JPG";
 	Image1038.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1038.cameraPosition = new THREE.Vector3(0.997492,0.392677,-1.93128);
+	Image1038.cameraVector = new THREE.Vector3(0.8593194983367392,0.26941388925138454,0.4347253800466881);
 	Image1038.mastAz = "17.3809";
 	Image1038.mastEl = "-25.7448";
 	Image1038.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24938,6 +25977,7 @@ function getImageDataArray()
 	Image1039.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NRA_402461301EDR_F0043416NCAM00443M_.JPG";
 	Image1039.attitude = new THREE.Quaternion(0.998831,0.0468913,-0.011496,0.00223778);
 	Image1039.cameraPosition = new THREE.Vector3(0.877775,0.798999,-1.93141);
+	Image1039.cameraVector = new THREE.Vector3(0.8603719846193908,0.25895621036758704,0.4389780509252696);
 	Image1039.mastAz = "16.7246";
 	Image1039.mastEl = "-26.0152";
 	Image1039.xyz = new THREE.Vector3(3.27665,327.622,14.2198);
@@ -24962,6 +26002,7 @@ function getImageDataArray()
 	Image1040.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NLA_402463490EDR_F0043422NCAM00444M_.JPG";
 	Image1040.attitude = new THREE.Quaternion(0.999351,0.0346573,-0.00956675, 0.0021615);
 	Image1040.cameraPosition = new THREE.Vector3(1.02877,0.437908,-1.8811);
+	Image1040.cameraVector = new THREE.Vector3(0.5976560700545948,0.34650705163263823,0.7230076660006819);
 	Image1040.mastAz = "30.0696";
 	Image1040.mastEl = "-46.2806";
 	Image1040.xyz = new THREE.Vector3(2.31203,327.632,14.1917);
@@ -24986,6 +26027,7 @@ function getImageDataArray()
 	Image1041.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NRA_402463490EDR_F0043422NCAM00444M_.JPG";
 	Image1041.attitude = new THREE.Quaternion(0.999351,0.0346573,-0.00956675, 0.0021615);
 	Image1041.cameraPosition = new THREE.Vector3(0.824867,0.809195,-1.88145);
+	Image1041.cameraVector = new THREE.Vector3(0.5997224362042421,0.3358589232130672,0.7263138324522037);
 	Image1041.mastAz = "29.2156";
 	Image1041.mastEl = "-46.5547";
 	Image1041.xyz = new THREE.Vector3(2.31203,327.632,14.1917);
@@ -25010,6 +26052,7 @@ function getImageDataArray()
 	Image1042.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/fcam/FLA_402468252EDR_F0043474FHAZ00308M_.JPG";
 	Image1042.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1042.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1042.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1042.mastAz = "1.03995";
 	Image1042.mastEl = "-43.4728";
 	Image1042.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25034,6 +26077,7 @@ function getImageDataArray()
 	Image1043.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/fcam/FRA_402468252EDR_F0043474FHAZ00308M_.JPG";
 	Image1043.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1043.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1043.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1043.mastAz = "359.974";
 	Image1043.mastEl = "-43.7598";
 	Image1043.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25058,6 +26102,7 @@ function getImageDataArray()
 	Image1044.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/rcam/RLA_402468279EDR_F0043474RHAZ00304M_.JPG";
 	Image1044.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1044.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1044.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1044.mastAz = "182.571";
 	Image1044.mastEl = "-44.9097";
 	Image1044.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25082,6 +26127,7 @@ function getImageDataArray()
 	Image1045.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/rcam/RRA_402468279EDR_F0043474RHAZ00304M_.JPG";
 	Image1045.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1045.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1045.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1045.mastAz = "182.044";
 	Image1045.mastEl = "-43.5257";
 	Image1045.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25106,6 +26152,7 @@ function getImageDataArray()
 	Image1046.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NRA_402468334EDR_F0043474NCAM00317M_.JPG";
 	Image1046.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1046.cameraPosition = new THREE.Vector3(1.03719,0.651007,-1.8765);
+	Image1046.cameraVector = new THREE.Vector3(0.5434322369091499,-0.37806975051984665,0.7494962759278917);
 	Image1046.mastAz = "325.138";
 	Image1046.mastEl = "-48.5231";
 	Image1046.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25130,6 +26177,7 @@ function getImageDataArray()
 	Image1047.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NLA_402468334EDR_F0043474NCAM00317M_.JPG";
 	Image1047.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1047.cameraPosition = new THREE.Vector3(0.792684,0.305107,-1.87658);
+	Image1047.cameraVector = new THREE.Vector3(0.5521932442718214,-0.37161233568251867,0.7463155451611225);
 	Image1047.mastAz = "326.025";
 	Image1047.mastEl = "-48.2494";
 	Image1047.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25154,6 +26202,7 @@ function getImageDataArray()
 	Image1048.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NLA_402468369EDR_F0043474NCAM00317M_.JPG";
 	Image1048.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1048.cameraPosition = new THREE.Vector3(0.92299,0.334262,-1.87528);
+	Image1048.cameraVector = new THREE.Vector3(0.6578968602483227,-0.03943687785675496,0.7520747661903769);
 	Image1048.mastAz = "356.533";
 	Image1048.mastEl = "-48.7477";
 	Image1048.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25178,6 +26227,7 @@ function getImageDataArray()
 	Image1049.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NRA_402468369EDR_F0043474NCAM00317M_.JPG";
 	Image1049.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1049.cameraPosition = new THREE.Vector3(0.958377,0.756373,-1.87541);
+	Image1049.cameraVector = new THREE.Vector3(0.6535907634299725,-0.04944140903250825,0.7552315280971169);
 	Image1049.mastAz = "355.638";
 	Image1049.mastEl = "-49.022";
 	Image1049.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25202,6 +26252,7 @@ function getImageDataArray()
 	Image1050.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NLA_402468397EDR_F0043474NCAM00317M_.JPG";
 	Image1050.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1050.cameraPosition = new THREE.Vector3(1.02171,0.427006,-1.87488);
+	Image1050.cameraVector = new THREE.Vector3(0.583230850484106,0.3035373297382111,0.7534632469463809);
 	Image1050.mastAz = "27.4579";
 	Image1050.mastEl = "-48.8684";
 	Image1050.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25226,6 +26277,7 @@ function getImageDataArray()
 	Image1051.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NRA_402468397EDR_F0043474NCAM00317M_.JPG";
 	Image1051.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1051.cameraPosition = new THREE.Vector3(0.835386,0.80742,-1.87523);
+	Image1051.cameraVector = new THREE.Vector3(0.5846678653894601,0.2927406381888899,0.7566150976115226);
 	Image1051.mastAz = "26.5608";
 	Image1051.mastEl = "-49.1432";
 	Image1051.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25250,6 +26302,7 @@ function getImageDataArray()
 	Image1052.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NLA_402468425EDR_F0043474NCAM00317M_.JPG";
 	Image1052.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1052.cameraPosition = new THREE.Vector3(1.05895,0.557042,-1.87546);
+	Image1052.cameraVector = new THREE.Vector3(0.34726915516221923,0.5625865094078906,0.7502669880150424);
 	Image1052.mastAz = "58.2779";
 	Image1052.mastEl = "-48.5909";
 	Image1052.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25274,6 +26327,7 @@ function getImageDataArray()
 	Image1053.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NRA_402468425EDR_F0043474NCAM00317M_.JPG";
 	Image1053.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1053.cameraPosition = new THREE.Vector3(0.704108,0.788385,-1.87597);
+	Image1053.cameraVector = new THREE.Vector3(0.35403679537101607,0.5540607330747385,0.753441870078976);
 	Image1053.mastAz = "57.386";
 	Image1053.mastEl = "-48.866";
 	Image1053.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25298,6 +26352,7 @@ function getImageDataArray()
 	Image1054.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NLA_402468453EDR_F0043474NCAM00317M_.JPG";
 	Image1054.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1054.cameraPosition = new THREE.Vector3(1.02474,0.687204,-1.87685);
+	Image1054.cameraVector = new THREE.Vector3(0.012769197518711804,0.6687901784345449,0.7433415398215129);
 	Image1054.mastAz = "88.8704";
 	Image1054.mastEl = "-47.9942";
 	Image1054.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25322,6 +26377,7 @@ function getImageDataArray()
 	Image1055.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00056/opgs/edr/ncam/NRA_402468453EDR_F0043474NCAM00317M_.JPG";
 	Image1055.attitude = new THREE.Quaternion(0.779955,0.00384265,0.0121178,-0.625707);
 	Image1055.cameraPosition = new THREE.Vector3(0.60155,0.705707,-1.87744);
+	Image1055.cameraVector = new THREE.Vector3(0.022935559192470024,0.6649282458299842,0.7465550133928434);
 	Image1055.mastAz = "87.9889";
 	Image1055.mastEl = "-48.2692";
 	Image1055.xyz = new THREE.Vector3(6.07327,330.8,14.4297);
@@ -25346,6 +26402,7 @@ function getImageDataArray()
 	Image1056.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/fcam/FLA_402556211EDR_F0043492FHAZ00310M_.JPG";
 	Image1056.attitude = new THREE.Quaternion(0.581522,0.0149147,0.0272175,-0.812938);
 	Image1056.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1056.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1056.mastAz = "1.03995";
 	Image1056.mastEl = "-43.4728";
 	Image1056.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25370,6 +26427,7 @@ function getImageDataArray()
 	Image1057.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/fcam/FRA_402556211EDR_F0043492FHAZ00310M_.JPG";
 	Image1057.attitude = new THREE.Quaternion(0.581522,0.0149147,0.0272175,-0.812938);
 	Image1057.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1057.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1057.mastAz = "359.974";
 	Image1057.mastEl = "-43.7598";
 	Image1057.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25394,6 +26452,7 @@ function getImageDataArray()
 	Image1058.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402556263EDR_F0043492NCAM00319M_.JPG";
 	Image1058.attitude = new THREE.Quaternion(0.581522,0.0149147,0.0272175,-0.812938);
 	Image1058.cameraPosition = new THREE.Vector3(1.03758,0.498068,-1.81888);
+	Image1058.cameraVector = new THREE.Vector3(0.1676745359330054,0.21172177237395054,0.9628391044730601);
 	Image1058.mastAz = "51.5303";
 	Image1058.mastEl = "-74.3095";
 	Image1058.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25418,6 +26477,7 @@ function getImageDataArray()
 	Image1059.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402556263EDR_F0043492NCAM00319M_.JPG";
 	Image1059.attitude = new THREE.Quaternion(0.581522,0.0149147,0.0272175,-0.812938);
 	Image1059.cameraPosition = new THREE.Vector3(0.722552,0.781243,-1.8195);
+	Image1059.cameraVector = new THREE.Vector3(0.17236396589059472,0.20148901227337238,0.9642058085261499);
 	Image1059.mastAz = "49.3641";
 	Image1059.mastEl = "-74.6007";
 	Image1059.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25442,6 +26502,7 @@ function getImageDataArray()
 	Image1060.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/fcam/FLA_402556301EDR_F0043496FHAZ00310M_.JPG";
 	Image1060.attitude = new THREE.Quaternion(0.581614,0.0137889,0.0247796,-0.812971);
 	Image1060.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1060.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1060.mastAz = "1.03995";
 	Image1060.mastEl = "-43.4728";
 	Image1060.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25466,6 +26527,7 @@ function getImageDataArray()
 	Image1061.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/fcam/FRA_402556301EDR_F0043496FHAZ00310M_.JPG";
 	Image1061.attitude = new THREE.Quaternion(0.581614,0.0137889,0.0247796,-0.812971);
 	Image1061.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1061.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1061.mastAz = "359.974";
 	Image1061.mastEl = "-43.7598";
 	Image1061.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25490,6 +26552,7 @@ function getImageDataArray()
 	Image1062.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/fcam/FLA_402556325EDR_F0043500FHAZ00310M_.JPG";
 	Image1062.attitude = new THREE.Quaternion(0.581931,0.0130938,0.023354,-0.812797);
 	Image1062.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1062.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1062.mastAz = "1.03995";
 	Image1062.mastEl = "-43.4728";
 	Image1062.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25514,6 +26577,7 @@ function getImageDataArray()
 	Image1063.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/fcam/FRA_402556325EDR_F0043500FHAZ00310M_.JPG";
 	Image1063.attitude = new THREE.Quaternion(0.581931,0.0130938,0.023354,-0.812797);
 	Image1063.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1063.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1063.mastAz = "359.974";
 	Image1063.mastEl = "-43.7598";
 	Image1063.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25538,6 +26602,7 @@ function getImageDataArray()
 	Image1064.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/fcam/FLA_402556346EDR_F0043504FHAZ00310M_.JPG";
 	Image1064.attitude = new THREE.Quaternion(0.582161,0.0126994,0.0225112,-0.812663);
 	Image1064.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1064.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1064.mastAz = "1.03995";
 	Image1064.mastEl = "-43.4728";
 	Image1064.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25562,6 +26627,7 @@ function getImageDataArray()
 	Image1065.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/fcam/FRA_402556346EDR_F0043504FHAZ00310M_.JPG";
 	Image1065.attitude = new THREE.Quaternion(0.582161,0.0126994,0.0225112,-0.812663);
 	Image1065.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1065.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1065.mastAz = "359.974";
 	Image1065.mastEl = "-43.7598";
 	Image1065.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25586,6 +26652,7 @@ function getImageDataArray()
 	Image1066.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402556366EDR_F0043504NCAM00206M_.JPG";
 	Image1066.attitude = new THREE.Quaternion(0.582161,0.0126994,0.0225112,-0.812663);
 	Image1066.cameraPosition = new THREE.Vector3(1.03758,0.498068,-1.81888);
+	Image1066.cameraVector = new THREE.Vector3(0.1676745359330054,0.21172177237395054,0.9628391044730601);
 	Image1066.mastAz = "51.5303";
 	Image1066.mastEl = "-74.3095";
 	Image1066.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25610,6 +26677,7 @@ function getImageDataArray()
 	Image1067.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402556366EDR_F0043504NCAM00206M_.JPG";
 	Image1067.attitude = new THREE.Quaternion(0.582161,0.0126994,0.0225112,-0.812663);
 	Image1067.cameraPosition = new THREE.Vector3(0.722552,0.781243,-1.8195);
+	Image1067.cameraVector = new THREE.Vector3(0.17236396589059472,0.20148901227337238,0.9642058085261499);
 	Image1067.mastAz = "49.3641";
 	Image1067.mastEl = "-74.6007";
 	Image1067.xyz = new THREE.Vector3(5.67219,329.657,14.3975);
@@ -25634,6 +26702,7 @@ function getImageDataArray()
 	Image1068.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562341EDR_F0043520SAPP07612M_.JPG";
 	Image1068.attitude = new THREE.Quaternion(0.776172,0.0028285,0.0117031,-0.630406);
 	Image1068.cameraPosition = new THREE.Vector3(0.877184,0.352567,-2.03889);
+	Image1068.cameraVector = new THREE.Vector3(0.8132749411055881,0.11973182203140313,-0.5694279242913388);
 	Image1068.mastAz = "8.34673";
 	Image1068.mastEl = "34.7338";
 	Image1068.xyz = new THREE.Vector3(5.84996,330.198,14.4115);
@@ -25658,6 +26727,7 @@ function getImageDataArray()
 	Image1069.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562447EDR_F0050000NCAM00445M_.JPG";
 	Image1069.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1069.cameraPosition = new THREE.Vector3(0.781344,0.313595,-1.95548);
+	Image1069.cameraVector = new THREE.Vector3(-0.857325473025716,-0.4373562903530691,0.27150047622395485);
 	Image1069.mastAz = "207.004";
 	Image1069.mastEl = "-15.73";
 	Image1069.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25682,6 +26752,7 @@ function getImageDataArray()
 	Image1070.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562447EDR_F0050000NCAM00445M_.JPG";
 	Image1070.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1070.cameraPosition = new THREE.Vector3(0.590793,0.691907,-1.95573);
+	Image1070.cameraVector = new THREE.Vector3(-0.8537101814949393,-0.44710338626310336,0.2669784410845643);
 	Image1070.mastAz = "207.617";
 	Image1070.mastEl = "-15.4614";
 	Image1070.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25706,6 +26777,7 @@ function getImageDataArray()
 	Image1071.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562484EDR_F0050000NCAM00445M_.JPG";
 	Image1071.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1071.cameraPosition = new THREE.Vector3(0.553165,0.569319,-1.95528);
+	Image1071.cameraVector = new THREE.Vector3(-0.5223398856636889,-0.8085714000316714,0.27087512786460693);
 	Image1071.mastAz = "237.113";
 	Image1071.mastEl = "-15.6932";
 	Image1071.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25730,6 +26802,7 @@ function getImageDataArray()
 	Image1072.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562484EDR_F0050000NCAM00445M_.JPG";
 	Image1072.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1072.cameraPosition = new THREE.Vector3(0.905305,0.333888,-1.95487);
+	Image1072.cameraVector = new THREE.Vector3(-0.5302778116808025,-0.8018510141940766,0.2753913460422282);
 	Image1072.mastAz = "236.498";
 	Image1072.mastEl = "-15.9616";
 	Image1072.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25754,6 +26827,7 @@ function getImageDataArray()
 	Image1073.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562518EDR_F0050000NCAM00445M_.JPG";
 	Image1073.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1073.cameraPosition = new THREE.Vector3(0.582124,0.44141,-1.95414);
+	Image1073.cameraVector = new THREE.Vector3(-0.04588388046136877,-0.9590540920156143,0.2794815165657866);
 	Image1073.mastAz = "267.236";
 	Image1073.mastEl = "-16.2061";
 	Image1073.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25778,6 +26852,7 @@ function getImageDataArray()
 	Image1074.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562518EDR_F0050000NCAM00445M_.JPG";
 	Image1074.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1074.cameraPosition = new THREE.Vector3(1.00486,0.414509,-1.95366);
+	Image1074.cameraVector = new THREE.Vector3(-0.05612169065139167,-0.957185480712796,0.28398294200716184);
 	Image1074.mastAz = "266.62";
 	Image1074.mastEl = "-16.4745";
 	Image1074.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25802,6 +26877,7 @@ function getImageDataArray()
 	Image1075.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562553EDR_F0050000NCAM00445M_.JPG";
 	Image1075.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1075.cameraPosition = new THREE.Vector3(0.670456,0.345966,-1.95251);
+	Image1075.cameraVector = new THREE.Vector3(0.4354225341574993,-0.8518552201823323,0.29111836183238526);
 	Image1075.mastAz = "297.049";
 	Image1075.mastEl = "-16.9018";
 	Image1075.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25826,6 +26902,7 @@ function getImageDataArray()
 	Image1076.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562553EDR_F0050000NCAM00445M_.JPG";
 	Image1076.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1076.cameraPosition = new THREE.Vector3(1.05063,0.532766,-1.95207);
+	Image1076.cameraVector = new THREE.Vector3(0.42558781257059264,-0.8552727047969747,0.29560719582013734);
 	Image1076.mastAz = "296.431";
 	Image1076.mastEl = "-17.1703";
 	Image1076.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25850,6 +26927,7 @@ function getImageDataArray()
 	Image1077.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562588EDR_F0050000NCAM00445M_.JPG";
 	Image1077.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1077.cameraPosition = new THREE.Vector3(0.79602,0.307211,-1.95084);
+	Image1077.cameraVector = new THREE.Vector3(0.8010213699267229,-0.5165779128773351,0.30250954505273486);
 	Image1077.mastAz = "327.157";
 	Image1077.mastEl = "-17.5853";
 	Image1077.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25874,6 +26952,7 @@ function getImageDataArray()
 	Image1078.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562588EDR_F0050000NCAM00445M_.JPG";
 	Image1078.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1078.cameraPosition = new THREE.Vector3(1.03125,0.659482,-1.95056);
+	Image1078.cameraVector = new THREE.Vector3(0.794180528981003,-0.5244400585130793,0.3069851990149564);
 	Image1078.mastAz = "326.536";
 	Image1078.mastEl = "-17.8541";
 	Image1078.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25898,6 +26977,7 @@ function getImageDataArray()
 	Image1079.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562623EDR_F0050000NCAM00445M_.JPG";
 	Image1079.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1079.cameraPosition = new THREE.Vector3(0.924473,0.337162,-1.94959);
+	Image1079.cameraVector = new THREE.Vector3(0.9495341337112791,-0.04298608010197051,0.3107042417390487);
 	Image1079.mastAz = "357.383";
 	Image1079.mastEl = "-18.0786";
 	Image1079.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25922,6 +27002,7 @@ function getImageDataArray()
 	Image1080.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562623EDR_F0050000NCAM00445M_.JPG";
 	Image1080.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1080.cameraPosition = new THREE.Vector3(0.950475,0.759955,-1.94952);
+	Image1080.cameraVector = new THREE.Vector3(0.9475403742716618,-0.05321347393330723,0.31517545164093647);
 	Image1080.mastAz = "356.761";
 	Image1080.mastEl = "-18.3478";
 	Image1080.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25946,6 +27027,7 @@ function getImageDataArray()
 	Image1081.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562658EDR_F0050000NCAM00445M_.JPG";
 	Image1081.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1081.cameraPosition = new THREE.Vector3(1.01988,0.427328,-1.94909);
+	Image1081.cameraVector = new THREE.Vector3(0.8421933534405763,0.4387210169472582,0.31342339528069746);
 	Image1081.mastAz = "27.4912";
 	Image1081.mastEl = "-18.2425";
 	Image1081.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25970,6 +27052,7 @@ function getImageDataArray()
 	Image1082.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562658EDR_F0050000NCAM00445M_.JPG";
 	Image1082.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1082.cameraPosition = new THREE.Vector3(0.830353,0.806156,-1.94924);
+	Image1082.cameraVector = new THREE.Vector3(0.8455860994470573,0.4288679715353972,0.3178937108736583);
 	Image1082.mastAz = "26.8686";
 	Image1082.mastEl = "-18.512";
 	Image1082.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -25994,6 +27077,7 @@ function getImageDataArray()
 	Image1083.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562693EDR_F0050000NCAM00445M_.JPG";
 	Image1083.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1083.cameraPosition = new THREE.Vector3(1.05703,0.553696,-1.94948);
+	Image1083.cameraVector = new THREE.Vector3(0.5069504355364091,0.8042798085462148,0.3100568423278372);
 	Image1083.mastAz = "57.751";
 	Image1083.mastEl = "-18.0396";
 	Image1083.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26018,6 +27102,7 @@ function getImageDataArray()
 	Image1084.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562693EDR_F0050000NCAM00445M_.JPG";
 	Image1084.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1084.cameraPosition = new THREE.Vector3(0.702451,0.78544,-1.94979);
+	Image1084.cameraVector = new THREE.Vector3(0.5148556145141888,0.7974898053111801,0.31453728972564327);
 	Image1084.mastAz = "57.1292";
 	Image1084.mastEl = "-18.3093";
 	Image1084.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26042,6 +27127,7 @@ function getImageDataArray()
 	Image1085.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562728EDR_F0050000NCAM00445M_.JPG";
 	Image1085.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1085.cameraPosition = new THREE.Vector3(1.02557,0.681188,-1.95066);
+	Image1085.cameraVector = new THREE.Vector3(0.033297419641669684,0.9529168437898297,0.30139802697900336);
 	Image1085.mastAz = "87.974";
 	Image1085.mastEl = "-17.5186";
 	Image1085.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26066,6 +27152,7 @@ function getImageDataArray()
 	Image1086.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562728EDR_F0050000NCAM00445M_.JPG";
 	Image1086.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1086.cameraPosition = new THREE.Vector3(0.602539,0.702949,-1.95104);
+	Image1086.cameraVector = new THREE.Vector3(0.043542197945978876,0.9510695755138725,0.3058933466584316);
 	Image1086.mastAz = "87.354";
 	Image1086.mastEl = "-17.7883";
 	Image1086.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26090,6 +27177,7 @@ function getImageDataArray()
 	Image1087.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562756EDR_F0050000NCAM00445M_.JPG";
 	Image1087.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1087.cameraPosition = new THREE.Vector3(0.935625,0.774729,-1.95231);
+	Image1087.cameraVector = new THREE.Vector3(-0.44803392312552537,0.8457684944166872,0.2897261768996388);
 	Image1087.mastAz = "117.887";
 	Image1087.mastEl = "-16.8186";
 	Image1087.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26114,6 +27202,7 @@ function getImageDataArray()
 	Image1088.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562756EDR_F0050000NCAM00445M_.JPG";
 	Image1088.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1088.cameraPosition = new THREE.Vector3(0.558117,0.582589,-1.95264);
+	Image1088.cameraVector = new THREE.Vector3(-0.4382580433145342,0.8493262621776018,0.29423593907872564);
 	Image1088.mastAz = "117.269";
 	Image1088.mastEl = "-17.0882";
 	Image1088.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26138,6 +27227,7 @@ function getImageDataArray()
 	Image1089.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562784EDR_F0050000NCAM00445M_.JPG";
 	Image1089.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1089.cameraPosition = new THREE.Vector3(0.810902,0.811127,-1.95396);
+	Image1089.cameraVector = new THREE.Vector3(-0.8135818445234169,0.5104854216219842,0.27836884986165306);
 	Image1089.mastAz = "147.869";
 	Image1089.mastEl = "-16.1398";
 	Image1089.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26162,6 +27252,7 @@ function getImageDataArray()
 	Image1090.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562784EDR_F0050000NCAM00445M_.JPG";
 	Image1090.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1090.cameraPosition = new THREE.Vector3(0.579988,0.456009,-1.95413);
+	Image1090.cameraVector = new THREE.Vector3(-0.8069388680366277,0.5184830375791152,0.28288690848906306);
 	Image1090.mastAz = "147.253";
 	Image1090.mastEl = "-16.4091";
 	Image1090.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26186,6 +27277,7 @@ function getImageDataArray()
 	Image1091.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402562826EDR_F0050000NCAM00445M_.JPG";
 	Image1091.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1091.cameraPosition = new THREE.Vector3(0.684926,0.780734,-1.95519);
+	Image1091.cameraVector = new THREE.Vector3(-0.962106192227421,0.03695728198794206,0.27015890543477633);
 	Image1091.mastAz = "177.776";
 	Image1091.mastEl = "-15.6506";
 	Image1091.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26210,6 +27302,7 @@ function getImageDataArray()
 	Image1092.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402562826EDR_F0050000NCAM00445M_.JPG";
 	Image1092.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1092.cameraPosition = new THREE.Vector3(0.661895,0.357769,-1.95515);
+	Image1092.cameraVector = new THREE.Vector3(-0.9603749372768163,0.04720845263913407,0.27468407644049797);
 	Image1092.mastAz = "177.161";
 	Image1092.mastEl = "-15.9196";
 	Image1092.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26234,6 +27327,7 @@ function getImageDataArray()
 	Image1093.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NLA_402563129EDR_F0050000NCAM00446M_.JPG";
 	Image1093.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1093.cameraPosition = new THREE.Vector3(0.812742,0.304808,-1.87798);
+	Image1093.cameraVector = new THREE.Vector3(0.5859837847020881,-0.33143784007534444,0.7394403033595122);
 	Image1093.mastAz = "330.472";
 	Image1093.mastEl = "-47.661";
 	Image1093.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26258,6 +27352,7 @@ function getImageDataArray()
 	Image1094.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00057/opgs/edr/ncam/NRA_402563129EDR_F0050000NCAM00446M_.JPG";
 	Image1094.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1094.cameraPosition = new THREE.Vector3(1.02962,0.668666,-1.87792);
+	Image1094.cameraVector = new THREE.Vector3(0.5777819254209161,-0.33857500294884685,0.74265403387788);
 	Image1094.mastAz = "329.595";
 	Image1094.mastEl = "-47.9346";
 	Image1094.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26282,6 +27377,7 @@ function getImageDataArray()
 	Image1095.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FLA_402642395EDR_F0050000FHAZ00202M_.JPG";
 	Image1095.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1095.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1095.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1095.mastAz = "1.03995";
 	Image1095.mastEl = "-43.4728";
 	Image1095.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26306,6 +27402,7 @@ function getImageDataArray()
 	Image1096.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FRA_402642395EDR_F0050000FHAZ00202M_.JPG";
 	Image1096.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1096.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1096.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1096.mastAz = "359.974";
 	Image1096.mastEl = "-43.7598";
 	Image1096.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26330,6 +27427,7 @@ function getImageDataArray()
 	Image1097.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NLA_402642446EDR_F0050000NCAM00320M_.JPG";
 	Image1097.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1097.cameraPosition = new THREE.Vector3(0.852615,0.3129,-1.8551);
+	Image1097.cameraVector = new THREE.Vector3(0.5104570858619902,-0.1724035364559087,0.8424432230784344);
 	Image1097.mastAz = "341.293";
 	Image1097.mastEl = "-57.3764";
 	Image1097.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26354,6 +27452,7 @@ function getImageDataArray()
 	Image1098.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NRA_402642446EDR_F0050000NCAM00320M_.JPG";
 	Image1098.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1098.cameraPosition = new THREE.Vector3(0.9997,0.710136,-1.85516);
+	Image1098.cameraVector = new THREE.Vector3(0.5032251305846364,-0.1807399260750201,0.8450429261703052);
 	Image1098.mastAz = "340.199";
 	Image1098.mastEl = "-57.653";
 	Image1098.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26378,6 +27477,7 @@ function getImageDataArray()
 	Image1099.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FLA_402646855EDR_F0050000FHAZ00202M_.JPG";
 	Image1099.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1099.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1099.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1099.mastAz = "1.03995";
 	Image1099.mastEl = "-43.4728";
 	Image1099.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26402,6 +27502,7 @@ function getImageDataArray()
 	Image1100.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FRA_402646855EDR_F0050000FHAZ00202M_.JPG";
 	Image1100.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1100.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1100.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1100.mastAz = "359.974";
 	Image1100.mastEl = "-43.7598";
 	Image1100.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26426,6 +27527,7 @@ function getImageDataArray()
 	Image1101.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NLA_402646906EDR_F0050000NCAM00320M_.JPG";
 	Image1101.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1101.cameraPosition = new THREE.Vector3(0.910017,0.331372,-1.85562);
+	Image1101.cameraVector = new THREE.Vector3(0.5404529660032455,-0.04644201894997848,0.8400915012152812);
 	Image1101.mastAz = "355.044";
 	Image1101.mastEl = "-57.1272";
 	Image1101.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26450,6 +27552,7 @@ function getImageDataArray()
 	Image1102.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NRA_402646906EDR_F0050000NCAM00320M_.JPG";
 	Image1102.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1102.cameraPosition = new THREE.Vector3(0.958532,0.752176,-1.85578);
+	Image1102.cameraVector = new THREE.Vector3(0.5354212154483099,-0.056259681839869936,0.8427093035247275);
 	Image1102.mastAz = "353.958";
 	Image1102.mastEl = "-57.4041";
 	Image1102.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26474,6 +27577,7 @@ function getImageDataArray()
 	Image1103.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FLA_402647752EDR_F0050000FHAZ00202M_.JPG";
 	Image1103.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1103.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1103.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1103.mastAz = "1.03995";
 	Image1103.mastEl = "-43.4728";
 	Image1103.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26498,6 +27602,7 @@ function getImageDataArray()
 	Image1104.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FRA_402647752EDR_F0050000FHAZ00202M_.JPG";
 	Image1104.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1104.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1104.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1104.mastAz = "359.974";
 	Image1104.mastEl = "-43.7598";
 	Image1104.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26522,6 +27627,7 @@ function getImageDataArray()
 	Image1105.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FLA_402648013EDR_F0050000FHAZ00202M_.JPG";
 	Image1105.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1105.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1105.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1105.mastAz = "1.03995";
 	Image1105.mastEl = "-43.4728";
 	Image1105.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26546,6 +27652,7 @@ function getImageDataArray()
 	Image1106.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FRA_402648013EDR_F0050000FHAZ00202M_.JPG";
 	Image1106.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1106.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1106.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1106.mastAz = "359.974";
 	Image1106.mastEl = "-43.7598";
 	Image1106.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26570,6 +27677,7 @@ function getImageDataArray()
 	Image1107.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FRA_402648027EDR_F0050000FHAZ00309M_.JPG";
 	Image1107.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1107.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1107.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1107.mastAz = "359.974";
 	Image1107.mastEl = "-43.7598";
 	Image1107.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26594,6 +27702,7 @@ function getImageDataArray()
 	Image1108.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FLA_402648027EDR_F0050000FHAZ00309M_.JPG";
 	Image1108.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1108.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1108.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1108.mastAz = "1.03995";
 	Image1108.mastEl = "-43.4728";
 	Image1108.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26618,6 +27727,7 @@ function getImageDataArray()
 	Image1109.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FLA_402648473EDR_F0050000FHAZ00202M_.JPG";
 	Image1109.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1109.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1109.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1109.mastAz = "1.03995";
 	Image1109.mastEl = "-43.4728";
 	Image1109.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26642,6 +27752,7 @@ function getImageDataArray()
 	Image1110.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FRA_402648473EDR_F0050000FHAZ00202M_.JPG";
 	Image1110.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1110.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1110.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1110.mastAz = "359.974";
 	Image1110.mastEl = "-43.7598";
 	Image1110.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26666,6 +27777,7 @@ function getImageDataArray()
 	Image1111.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FLA_402648735EDR_F0050000FHAZ00202M_.JPG";
 	Image1111.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1111.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1111.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1111.mastAz = "1.03995";
 	Image1111.mastEl = "-43.4728";
 	Image1111.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26690,6 +27802,7 @@ function getImageDataArray()
 	Image1112.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FRA_402648735EDR_F0050000FHAZ00202M_.JPG";
 	Image1112.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1112.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1112.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1112.mastAz = "359.974";
 	Image1112.mastEl = "-43.7598";
 	Image1112.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26714,6 +27827,7 @@ function getImageDataArray()
 	Image1113.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NLA_402648938EDR_F0050000NCAM00321M_.JPG";
 	Image1113.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1113.cameraPosition = new THREE.Vector3(0.940458,0.344146,-1.8768);
+	Image1113.cameraVector = new THREE.Vector3(0.6673172407324295,0.011789334476344088,0.7446802748924275);
 	Image1113.mastAz = "0.976288";
 	Image1113.mastEl = "-48.109";
 	Image1113.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26738,6 +27852,7 @@ function getImageDataArray()
 	Image1114.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NRA_402648938EDR_F0050000NCAM00321M_.JPG";
 	Image1114.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1114.cameraPosition = new THREE.Vector3(0.942946,0.767731,-1.87695);
+	Image1114.cameraVector = new THREE.Vector3(0.663835492552119,0.0014807515987375279,0.747877159834948);
 	Image1114.mastAz = "0.0922111";
 	Image1114.mastEl = "-48.3832";
 	Image1114.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26762,6 +27877,7 @@ function getImageDataArray()
 	Image1115.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NRA_402648966EDR_F0050000NCAM00321M_.JPG";
 	Image1115.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1115.cameraPosition = new THREE.Vector3(0.816922,0.809212,-1.87676);
+	Image1115.cameraVector = new THREE.Vector3(0.5681633026589593,0.34017592141136593,0.749313555198084);
 	Image1115.mastAz = "30.8746";
 	Image1115.mastEl = "-48.5076";
 	Image1115.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26786,6 +27902,7 @@ function getImageDataArray()
 	Image1116.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NLA_402648966EDR_F0050000NCAM00321M_.JPG";
 	Image1116.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1116.cameraPosition = new THREE.Vector3(1.03135,0.4439,-1.87639);
+	Image1116.cameraVector = new THREE.Vector3(0.5658886167842971,0.35081635124291183,0.7461219478708321);
 	Image1116.mastAz = "31.7605";
 	Image1116.mastEl = "-48.2329";
 	Image1116.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26810,6 +27927,7 @@ function getImageDataArray()
 	Image1117.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NRA_402648994EDR_F0050000NCAM00321M_.JPG";
 	Image1117.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1117.cameraPosition = new THREE.Vector3(0.687205,0.7804,-1.87745);
+	Image1117.cameraVector = new THREE.Vector3(0.31490790134261565,0.5863530200941245,0.7463398351277309);
 	Image1117.mastAz = "61.7259";
 	Image1117.mastEl = "-48.2507";
 	Image1117.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26834,6 +27952,7 @@ function getImageDataArray()
 	Image1118.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NLA_402648994EDR_F0050000NCAM00321M_.JPG";
 	Image1118.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1118.cameraPosition = new THREE.Vector3(1.05855,0.576603,-1.87692);
+	Image1118.cameraVector = new THREE.Vector3(0.3074962370440117,0.5943109645690158,0.743128886261878);
 	Image1118.mastAz = "62.6072";
 	Image1118.mastEl = "-47.9758";
 	Image1118.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26858,6 +27977,7 @@ function getImageDataArray()
 	Image1119.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FLA_402654171EDR_F0050000FHAZ00202M_.JPG";
 	Image1119.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1119.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1119.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1119.mastAz = "1.03995";
 	Image1119.mastEl = "-43.4728";
 	Image1119.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26882,6 +28002,7 @@ function getImageDataArray()
 	Image1120.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/fcam/FRA_402654171EDR_F0050000FHAZ00202M_.JPG";
 	Image1120.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1120.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1120.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1120.mastAz = "359.974";
 	Image1120.mastEl = "-43.7598";
 	Image1120.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26906,6 +28027,7 @@ function getImageDataArray()
 	Image1121.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NLA_402654215EDR_F0050000NCAM00318M_.JPG";
 	Image1121.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1121.cameraPosition = new THREE.Vector3(0.875866,0.317894,-1.85856);
+	Image1121.cameraVector = new THREE.Vector3(0.5452346478834232,-0.131482335959075,0.8279079502445814);
 	Image1121.mastAz = "346.399";
 	Image1121.mastEl = "-55.8618";
 	Image1121.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26930,6 +28052,7 @@ function getImageDataArray()
 	Image1122.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00058/opgs/edr/ncam/NRA_402654215EDR_F0050000NCAM00318M_.JPG";
 	Image1122.attitude = new THREE.Quaternion(0.781335,0.00273207,0.011726,-0.623996);
 	Image1122.cameraPosition = new THREE.Vector3(0.986599,0.726756,-1.85866);
+	Image1122.cameraVector = new THREE.Vector3(0.5388520961209893,-0.14045479722231963,0.8306087336666124);
 	Image1122.mastAz = "345.348";
 	Image1122.mastEl = "-56.138";
 	Image1122.xyz = new THREE.Vector3(0.0,0.0,0.0);
@@ -26954,6 +28077,7 @@ function getImageDataArray()
 	Image1123.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/fcam/FRA_402732930EDR_F0050036FHAZ00302M_.JPG";
 	Image1123.attitude = new THREE.Quaternion(0.875817,0.0114524,0.0204854,-0.482072);
 	Image1123.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1123.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1123.mastAz = "359.974";
 	Image1123.mastEl = "-43.7598";
 	Image1123.xyz = new THREE.Vector3(0.041266,2.48637,0.0436624);
@@ -26978,6 +28102,7 @@ function getImageDataArray()
 	Image1124.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/fcam/FLA_402732930EDR_F0050036FHAZ00302M_.JPG";
 	Image1124.attitude = new THREE.Quaternion(0.875817,0.0114524,0.0204854,-0.482072);
 	Image1124.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1124.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1124.mastAz = "1.03995";
 	Image1124.mastEl = "-43.4728";
 	Image1124.xyz = new THREE.Vector3(0.041266,2.48637,0.0436624);
@@ -27002,6 +28127,7 @@ function getImageDataArray()
 	Image1125.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402732976EDR_F0050036NCAM00448M_.JPG";
 	Image1125.attitude = new THREE.Quaternion(0.875817,0.0114524,0.0204854,-0.482072);
 	Image1125.cameraPosition = new THREE.Vector3(0.908407,0.327419,-1.87346);
+	Image1125.cameraVector = new THREE.Vector3(0.6441766095096806,-0.07865165848437018,0.7608221949826849);
 	Image1125.mastAz = "353.002";
 	Image1125.mastEl = "-49.5138";
 	Image1125.xyz = new THREE.Vector3(0.041266,2.48637,0.0436624);
@@ -27026,6 +28152,7 @@ function getImageDataArray()
 	Image1126.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402732976EDR_F0050036NCAM00448M_.JPG";
 	Image1126.attitude = new THREE.Quaternion(0.875817,0.0114524,0.0204854,-0.482072);
 	Image1126.cameraPosition = new THREE.Vector3(0.969854,0.746531,-1.87357);
+	Image1126.cameraVector = new THREE.Vector3(0.6392208235365716,-0.08836438792331196,0.7639296261463916);
 	Image1126.mastAz = "352.093";
 	Image1126.mastEl = "-49.7883";
 	Image1126.xyz = new THREE.Vector3(0.041266,2.48637,0.0436624);
@@ -27050,6 +28177,7 @@ function getImageDataArray()
 	Image1127.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402733011EDR_F0050036NCAM00448M_.JPG";
 	Image1127.attitude = new THREE.Quaternion(0.875817,0.0114524,0.0204854,-0.482072);
 	Image1127.cameraPosition = new THREE.Vector3(0.849325,0.805148,-1.87417);
+	Image1127.cameraVector = new THREE.Vector3(0.5951245432656257,0.2564651424478239,0.7616117178143322);
 	Image1127.mastAz = "23.2768";
 	Image1127.mastEl = "-49.5829";
 	Image1127.xyz = new THREE.Vector3(0.041266,2.48637,0.0436624);
@@ -27074,6 +28202,7 @@ function getImageDataArray()
 	Image1128.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402733011EDR_F0050036NCAM00448M_.JPG";
 	Image1128.attitude = new THREE.Quaternion(0.875817,0.0114524,0.0204854,-0.482072);
 	Image1128.cameraPosition = new THREE.Vector3(1.01354,0.414681,-1.87384);
+	Image1128.cameraVector = new THREE.Vector3(0.5943324535198427,0.26733477470929196,0.7584860268483634);
 	Image1128.mastAz = "24.1818";
 	Image1128.mastEl = "-49.308";
 	Image1128.xyz = new THREE.Vector3(0.041266,2.48637,0.0436624);
@@ -27098,6 +28227,7 @@ function getImageDataArray()
 	Image1129.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/fcam/FLA_402736648EDR_F0050104FHAZ00302M_.JPG";
 	Image1129.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1129.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1129.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1129.mastAz = "1.03995";
 	Image1129.mastEl = "-43.4728";
 	Image1129.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27122,6 +28252,7 @@ function getImageDataArray()
 	Image1130.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/fcam/FRA_402736648EDR_F0050104FHAZ00302M_.JPG";
 	Image1130.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1130.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1130.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1130.mastAz = "359.974";
 	Image1130.mastEl = "-43.7598";
 	Image1130.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27146,6 +28277,7 @@ function getImageDataArray()
 	Image1131.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/rcam/RLA_402736675EDR_F0050104RHAZ00309M_.JPG";
 	Image1131.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1131.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1131.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1131.mastAz = "182.571";
 	Image1131.mastEl = "-44.9097";
 	Image1131.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27170,6 +28302,7 @@ function getImageDataArray()
 	Image1132.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/rcam/RRA_402736675EDR_F0050104RHAZ00309M_.JPG";
 	Image1132.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1132.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1132.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1132.mastAz = "182.044";
 	Image1132.mastEl = "-43.5257";
 	Image1132.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27194,6 +28327,7 @@ function getImageDataArray()
 	Image1133.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402736715EDR_F0050104NCAM00449M_.JPG";
 	Image1133.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1133.cameraPosition = new THREE.Vector3(0.920924,0.332535,-1.93163);
+	Image1133.cameraVector = new THREE.Vector3(0.8984830590677916,-0.07236771974714117,0.4330024315252543);
 	Image1133.mastAz = "355.369";
 	Image1133.mastEl = "-25.6353";
 	Image1133.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27218,6 +28352,7 @@ function getImageDataArray()
 	Image1134.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402736715EDR_F0050104NCAM00449M_.JPG";
 	Image1134.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1134.cameraPosition = new THREE.Vector3(0.96214,0.754117,-1.9316);
+	Image1134.cameraVector = new THREE.Vector3(0.8955480173650892,-0.08246013764437428,0.4372574462409173);
 	Image1134.mastAz = "354.713";
 	Image1134.mastEl = "-25.9054";
 	Image1134.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27242,6 +28377,7 @@ function getImageDataArray()
 	Image1135.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402736743EDR_F0050104NCAM00449M_.JPG";
 	Image1135.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1135.cameraPosition = new THREE.Vector3(1.02009,0.42229,-1.9261);
+	Image1135.cameraVector = new THREE.Vector3(0.796766310489879,0.3824398649340566,0.46787091828576616);
 	Image1135.mastAz = "25.6137";
 	Image1135.mastEl = "-27.8732";
 	Image1135.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27266,6 +28402,7 @@ function getImageDataArray()
 	Image1136.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402736743EDR_F0050104NCAM00449M_.JPG";
 	Image1136.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1136.cameraPosition = new THREE.Vector3(0.843585,0.807356,-1.9263);
+	Image1136.cameraVector = new THREE.Vector3(0.7991575201749379,0.37217606916343243,0.47205108991495787);
 	Image1136.mastAz = "24.9451";
 	Image1136.mastEl = "-28.144";
 	Image1136.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27290,6 +28427,7 @@ function getImageDataArray()
 	Image1137.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402736771EDR_F0050104NCAM00449M_.JPG";
 	Image1137.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1137.cameraPosition = new THREE.Vector3(0.709752,0.792104,-1.9231);
+	Image1137.cameraVector = new THREE.Vector3(0.4842058199946276,0.7230166670006335,0.4927388995427754);
 	Image1137.mastAz = "56.1624";
 	Image1137.mastEl = "-29.4971";
 	Image1137.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27314,6 +28452,7 @@ function getImageDataArray()
 	Image1138.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402736771EDR_F0050104NCAM00449M_.JPG";
 	Image1138.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1138.cameraPosition = new THREE.Vector3(1.0602,0.554158,-1.92272);
+	Image1138.cameraVector = new THREE.Vector3(0.47690216769785776,0.7306383252510698,0.48860204678183283);
 	Image1138.mastAz = "56.8395";
 	Image1138.mastEl = "-29.2259";
 	Image1138.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27338,6 +28477,7 @@ function getImageDataArray()
 	Image1139.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402736799EDR_F0050104NCAM00449M_.JPG";
 	Image1139.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1139.cameraPosition = new THREE.Vector3(1.02553,0.688132,-1.92243);
+	Image1139.cameraVector = new THREE.Vector3(0.026448075851364924,0.8712521858631559,0.49012256417393557);
 	Image1139.mastAz = "88.234";
 	Image1139.mastEl = "-29.3258";
 	Image1139.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27362,6 +28502,7 @@ function getImageDataArray()
 	Image1140.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402736799EDR_F0050104NCAM00449M_.JPG";
 	Image1140.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1140.cameraPosition = new THREE.Vector3(0.602435,0.708736,-1.92289);
+	Image1140.cameraVector = new THREE.Vector3(0.03665388612764688,0.8685442965031156,0.4942542843958457);
 	Image1140.mastAz = "87.5563";
 	Image1140.mastEl = "-29.5972";
 	Image1140.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27386,6 +28527,7 @@ function getImageDataArray()
 	Image1141.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402736827EDR_F0050104NCAM00449M_.JPG";
 	Image1141.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1141.cameraPosition = new THREE.Vector3(0.927986,0.783176,-1.92537);
+	Image1141.cameraVector = new THREE.Vector3(-0.43023956846315164,0.7695861293025047,0.4718380053724261);
 	Image1141.mastAz = "119.181";
 	Image1141.mastEl = "-28.1307";
 	Image1141.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27410,6 +28552,7 @@ function getImageDataArray()
 	Image1142.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402736827EDR_F0050104NCAM00449M_.JPG";
 	Image1142.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1142.cameraPosition = new THREE.Vector3(0.554588,0.583165,-1.92577);
+	Image1142.cameraVector = new THREE.Vector3(-0.42013631897946463,0.7725898813239165,0.4760150719780648);
 	Image1142.mastAz = "118.511";
 	Image1142.mastEl = "-28.4018";
 	Image1142.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27434,6 +28577,7 @@ function getImageDataArray()
 	Image1143.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402736862EDR_F0050104NCAM00449M_.JPG";
 	Image1143.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1143.cameraPosition = new THREE.Vector3(0.797349,0.814435,-1.93066);
+	Image1143.cameraVector = new THREE.Vector3(-0.7770160592878179,0.4516759097338261,0.43844602424352175);
 	Image1143.mastAz = "149.804";
 	Image1143.mastEl = "-25.9818";
 	Image1143.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27458,6 +28602,7 @@ function getImageDataArray()
 	Image1144.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402736862EDR_F0050104NCAM00449M_.JPG";
 	Image1144.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1144.cameraPosition = new THREE.Vector3(0.578116,0.45199,-1.93089);
+	Image1144.cameraVector = new THREE.Vector3(-0.7699884626251523,0.45949828543090915,0.4426952598686925);
 	Image1144.mastAz = "149.147";
 	Image1144.mastEl = "-26.2524";
 	Image1144.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27482,6 +28627,7 @@ function getImageDataArray()
 	Image1145.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402736904EDR_F0050104NCAM00449M_.JPG";
 	Image1145.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1145.cameraPosition = new THREE.Vector3(0.672235,0.776798,-1.93676);
+	Image1145.cameraVector = new THREE.Vector3(-0.9169400180513715,0.004237024808545151,0.39900257006280315);
 	Image1145.mastAz = "179.709";
 	Image1145.mastEl = "-23.4927";
 	Image1145.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27506,6 +28652,7 @@ function getImageDataArray()
 	Image1146.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402736904EDR_F0050104NCAM00449M_.JPG";
 	Image1146.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1146.cameraPosition = new THREE.Vector3(0.663147,0.353303,-1.93676);
+	Image1146.cameraVector = new THREE.Vector3(-0.9149413921038524,0.014526602398913806,0.40332521225161305);
 	Image1146.mastAz = "179.065";
 	Image1146.mastEl = "-23.7626";
 	Image1146.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27530,6 +28677,7 @@ function getImageDataArray()
 	Image1147.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402736984EDR_F0050104NCAM00449M_.JPG";
 	Image1147.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1147.cameraPosition = new THREE.Vector3(0.58339,0.683967,-1.94195);
+	Image1147.cameraVector = new THREE.Vector3(-0.8125752640812552,-0.45471908760144336,0.3646258240637781);
 	Image1147.mastAz = "209.206";
 	Image1147.mastEl = "-21.3615";
 	Image1147.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27554,6 +28702,7 @@ function getImageDataArray()
 	Image1148.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402736984EDR_F0050104NCAM00449M_.JPG";
 	Image1148.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1148.cameraPosition = new THREE.Vector3(0.784168,0.310981,-1.94172);
+	Image1148.cameraVector = new THREE.Vector3(-0.8160488136599737,-0.4448564165759788,0.3690082686815145);
 	Image1148.mastAz = "208.571";
 	Image1148.mastEl = "-21.6308";
 	Image1148.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27578,6 +28727,7 @@ function getImageDataArray()
 	Image1149.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402737018EDR_F0050104NCAM00449M_.JPG";
 	Image1149.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1149.cameraPosition = new THREE.Vector3(0.551208,0.562845,-1.94505);
+	Image1149.cameraVector = new THREE.Vector3(-0.497759418255757,-0.7962786006312399,0.3437672929678512);
 	Image1149.mastAz = "237.965";
 	Image1149.mastEl = "-20.0835";
 	Image1149.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27602,6 +28752,7 @@ function getImageDataArray()
 	Image1150.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402737018EDR_F0050104NCAM00449M_.JPG";
 	Image1150.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1150.cameraPosition = new THREE.Vector3(0.906735,0.332561,-1.94466);
+	Image1150.cameraVector = new THREE.Vector3(-0.5056058049413472,-0.7893877227766734,0.3481806903592875);
 	Image1150.mastAz = "237.335";
 	Image1150.mastEl = "-20.3524";
 	Image1150.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27626,6 +28777,7 @@ function getImageDataArray()
 	Image1151.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402737052EDR_F0050104NCAM00449M_.JPG";
 	Image1151.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1151.cameraPosition = new THREE.Vector3(0.581843,0.438703,-1.94529);
+	Image1151.cameraVector = new THREE.Vector3(-0.045295086074453116,-0.9384854175487835,0.3423353271659143);
 	Image1151.mastAz = "267.212";
 	Image1151.mastEl = "-19.9962";
 	Image1151.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27650,6 +28802,7 @@ function getImageDataArray()
 	Image1152.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402737052EDR_F0050104NCAM00449M_.JPG";
 	Image1152.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1152.cameraPosition = new THREE.Vector3(1.00456,0.411501,-1.94484);
+	Image1152.cameraVector = new THREE.Vector3(-0.05551169328730846,-0.9363140752603502,0.34674833002875627);
 	Image1152.mastAz = "266.582";
 	Image1152.mastEl = "-20.265";
 	Image1152.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27674,6 +28827,7 @@ function getImageDataArray()
 	Image1153.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402737087EDR_F0050104NCAM00449M_.JPG";
 	Image1153.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1153.cameraPosition = new THREE.Vector3(0.668503,0.345283,-1.94262);
+	Image1153.cameraVector = new THREE.Vector3(0.41208998186465157,-0.8367308730884732,0.36064288828062685);
 	Image1153.mastAz = "296.195";
 	Image1153.mastEl = "-21.1165";
 	Image1153.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27698,6 +28852,7 @@ function getImageDataArray()
 	Image1154.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402737087EDR_F0050104NCAM00449M_.JPG";
 	Image1154.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1154.cameraPosition = new THREE.Vector3(1.05149,0.526264,-1.94221);
+	Image1154.cameraVector = new THREE.Vector3(0.40206180342247544,-0.8397032153166017,0.36502714476546494);
 	Image1154.mastAz = "295.561";
 	Image1154.mastEl = "-21.3856";
 	Image1154.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27722,6 +28877,7 @@ function getImageDataArray()
 	Image1155.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402737115EDR_F0050104NCAM00449M_.JPG";
 	Image1155.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1155.cameraPosition = new THREE.Vector3(0.791773,0.305401,-1.93765);
+	Image1155.cameraVector = new THREE.Vector3(0.7580707597909864,-0.5198068809464818,0.39386486219337596);
 	Image1155.mastAz = "325.536";
 	Image1155.mastEl = "-23.1722";
 	Image1155.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27746,6 +28902,7 @@ function getImageDataArray()
 	Image1156.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402737115EDR_F0050104NCAM00449M_.JPG";
 	Image1156.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1156.cameraPosition = new THREE.Vector3(1.03707,0.650744,-1.9374);
+	Image1156.cameraVector = new THREE.Vector3(0.7506550194439232,-0.5272180873452058,0.3981935837751612);
 	Image1156.mastAz = "324.892";
 	Image1156.mastEl = "-23.4417";
 	Image1156.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27770,6 +28927,7 @@ function getImageDataArray()
 	Image1157.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NLA_402737150EDR_F0050104NCAM00447M_.JPG";
 	Image1157.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1157.cameraPosition = new THREE.Vector3(0.832124,0.309306,-1.85743);
+	Image1157.cameraVector = new THREE.Vector3(0.507170771376612,-0.22185516105404754,0.8328013545707852);
 	Image1157.mastAz = "336.33";
 	Image1157.mastEl = "-56.3648";
 	Image1157.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27794,6 +28952,7 @@ function getImageDataArray()
 	Image1158.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00059/opgs/edr/ncam/NRA_402737150EDR_F0050104NCAM00447M_.JPG";
 	Image1158.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1158.cameraPosition = new THREE.Vector3(1.01268,0.692489,-1.85746);
+	Image1158.cameraVector = new THREE.Vector3(0.49929479390858955,-0.22956285260786252,0.8354672976713812);
 	Image1158.mastAz = "335.265";
 	Image1158.mastEl = "-56.641";
 	Image1158.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27818,6 +28977,7 @@ function getImageDataArray()
 	Image1159.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FLA_402808856EDR_F0050104FHAZ00311M_.JPG";
 	Image1159.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1159.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1159.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1159.mastAz = "1.03995";
 	Image1159.mastEl = "-43.4728";
 	Image1159.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27842,6 +29002,7 @@ function getImageDataArray()
 	Image1160.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FRA_402808856EDR_F0050104FHAZ00311M_.JPG";
 	Image1160.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1160.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1160.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1160.mastAz = "359.974";
 	Image1160.mastEl = "-43.7598";
 	Image1160.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27866,6 +29027,7 @@ function getImageDataArray()
 	Image1161.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/rcam/RLA_402808876EDR_F0050104RHAZ00309M_.JPG";
 	Image1161.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1161.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1161.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1161.mastAz = "182.571";
 	Image1161.mastEl = "-44.9097";
 	Image1161.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27890,6 +29052,7 @@ function getImageDataArray()
 	Image1162.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/rcam/RRA_402808876EDR_F0050104RHAZ00309M_.JPG";
 	Image1162.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1162.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1162.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1162.mastAz = "182.044";
 	Image1162.mastEl = "-43.5257";
 	Image1162.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27914,6 +29077,7 @@ function getImageDataArray()
 	Image1163.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815567EDR_F0050104NCAM00452M_.JPG";
 	Image1163.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1163.cameraPosition = new THREE.Vector3(1.02018,0.431542,-1.88295);
+	Image1163.cameraVector = new THREE.Vector3(0.039094743848812605,-0.6957134756424611,0.7172547391358822);
 	Image1163.mastAz = "273.182";
 	Image1163.mastEl = "-45.8047";
 	Image1163.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27938,6 +29102,7 @@ function getImageDataArray()
 	Image1164.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815567EDR_F0050104NCAM00452M_.JPG";
 	Image1164.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1164.cameraPosition = new THREE.Vector3(0.597107,0.410586,-1.88323);
+	Image1164.cameraVector = new THREE.Vector3(0.04957696719077444,-0.6984707496202681,0.7139192785245859);
 	Image1164.mastAz = "274.026";
 	Image1164.mastEl = "-45.532";
 	Image1164.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27962,6 +29127,7 @@ function getImageDataArray()
 	Image1165.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815600EDR_F0050104NCAM00452M_.JPG";
 	Image1165.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1165.cameraPosition = new THREE.Vector3(1.05462,0.546309,-1.88013);
+	Image1165.cameraVector = new THREE.Vector3(0.3491438407229312,-0.5856916167331264,0.7314806276134569);
 	Image1165.mastAz = "300.766";
 	Image1165.mastEl = "-46.9871";
 	Image1165.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -27986,6 +29152,7 @@ function getImageDataArray()
 	Image1166.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815600EDR_F0050104NCAM00452M_.JPG";
 	Image1166.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1166.cameraPosition = new THREE.Vector3(0.689278,0.331942,-1.88034);
+	Image1166.cameraVector = new THREE.Vector3(0.35974605127932296,-0.583342765736636,0.7282128783890509);
 	Image1166.mastAz = "301.627";
 	Image1166.mastEl = "-46.714";
 	Image1166.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28010,6 +29177,7 @@ function getImageDataArray()
 	Image1167.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815635EDR_F0050104NCAM00452M_.JPG";
 	Image1167.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1167.cameraPosition = new THREE.Vector3(0.811201,0.305104,-1.87504);
+	Image1167.cameraVector = new THREE.Vector3(0.5709946296628731,-0.3254910839028977,0.7536714716611445);
 	Image1167.mastAz = "330.279";
 	Image1167.mastEl = "-48.8865";
 	Image1167.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28034,6 +29202,7 @@ function getImageDataArray()
 	Image1168.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815635EDR_F0050104NCAM00452M_.JPG";
 	Image1168.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1168.cameraPosition = new THREE.Vector3(1.02951,0.668109,-1.87499);
+	Image1168.cameraVector = new THREE.Vector3(0.5627078031211401,-0.3325625488739433,0.7568104646429292);
 	Image1168.mastAz = "329.381";
 	Image1168.mastEl = "-49.1604";
 	Image1168.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28058,6 +29227,7 @@ function getImageDataArray()
 	Image1169.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815670EDR_F0050104NCAM00452M_.JPG";
 	Image1169.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1169.cameraPosition = new THREE.Vector3(0.944207,0.765661,-1.86925);
+	Image1169.cameraVector = new THREE.Vector3(0.6204941499189675,-0.00759271045135254,0.7841743177791146);
 	Image1169.mastAz = "359.261";
 	Image1169.mastEl = "-51.621";
 	Image1169.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28082,6 +29252,7 @@ function getImageDataArray()
 	Image1170.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815670EDR_F0050104NCAM00452M_.JPG";
 	Image1170.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1170.cameraPosition = new THREE.Vector3(0.935325,0.342162,-1.86908);
+	Image1170.cameraVector = new THREE.Vector3(0.6243020891505914,0.002658861862877813,0.7811784891660812);
 	Image1170.mastAz = "0.205637";
 	Image1170.mastEl = "-51.346";
 	Image1170.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28106,6 +29277,7 @@ function getImageDataArray()
 	Image1171.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815705EDR_F0050104NCAM00452M_.JPG";
 	Image1171.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1171.cameraPosition = new THREE.Vector3(0.815041,0.807535,-1.86439);
+	Image1171.cameraVector = new THREE.Vector3(0.507968738913394,0.3023804731071865,0.8065567616542619);
 	Image1171.mastAz = "30.7242";
 	Image1171.mastEl = "-53.7375";
 	Image1171.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28130,6 +29302,7 @@ function getImageDataArray()
 	Image1172.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815705EDR_F0050104NCAM00452M_.JPG";
 	Image1172.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1172.cameraPosition = new THREE.Vector3(1.02808,0.441416,-1.86398);
+	Image1172.cameraVector = new THREE.Vector3(0.5059712437069558,0.3131676132312455,0.8036909521480762);
 	Image1172.mastAz = "31.7147";
 	Image1172.mastEl = "-53.4613";
 	Image1172.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28154,6 +29327,7 @@ function getImageDataArray()
 	Image1173.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815759EDR_F0050104NCAM00451M_.JPG";
 	Image1173.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1173.cameraPosition = new THREE.Vector3(0.669485,0.373144,-2.0085);
+	Image1173.cameraVector = new THREE.Vector3(-0.9652610363983818,0.18778765314518886,-0.18167809151723338);
 	Image1173.mastAz = "168.967";
 	Image1173.mastEl = "10.4912";
 	Image1173.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28178,6 +29352,7 @@ function getImageDataArray()
 	Image1174.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815759EDR_F0050104NCAM00451M_.JPG";
 	Image1174.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1174.cameraPosition = new THREE.Vector3(0.75256,0.788509,-2.00864);
+	Image1174.cameraVector = new THREE.Vector3(-0.9663420114075065,0.17746775910518683,-0.18624798379332294);
 	Image1174.mastAz = "169.57";
 	Image1174.mastEl = "10.7572";
 	Image1174.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28202,6 +29377,7 @@ function getImageDataArray()
 	Image1175.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815839EDR_F0050104NCAM00451M_.JPG";
 	Image1175.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1175.cameraPosition = new THREE.Vector3(0.647297,0.731772,-2.0123);
+	Image1175.cameraVector = new THREE.Vector3(-0.9155897865241531,-0.3346097711125147,-0.2230059279227485);
 	Image1175.mastAz = "200.051";
 	Image1175.mastEl = "12.9089";
 	Image1175.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28226,6 +29402,7 @@ function getImageDataArray()
 	Image1176.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815839EDR_F0050104NCAM00451M_.JPG";
 	Image1176.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1176.cameraPosition = new THREE.Vector3(0.786297,0.331636,-2.01191);
+	Image1176.cameraVector = new THREE.Vector3(-0.9200536680571108,-0.32521975761522304,-0.21847964928420988);
 	Image1176.mastAz = "199.443";
 	Image1176.mastEl = "12.6435";
 	Image1176.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28250,6 +29427,7 @@ function getImageDataArray()
 	Image1177.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815867EDR_F0050104NCAM00451M_.JPG";
 	Image1177.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1177.cameraPosition = new THREE.Vector3(0.584376,0.632945,-2.01489);
+	Image1177.cameraVector = new THREE.Vector3(-0.6234738566022519,-0.7408698042470219,-0.24978447367379342);
 	Image1177.mastAz = "229.894";
 	Image1177.mastEl = "14.4881";
 	Image1177.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28274,6 +29452,7 @@ function getImageDataArray()
 	Image1178.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815867EDR_F0050104NCAM00451M_.JPG";
 	Image1178.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1178.cameraPosition = new THREE.Vector3(0.903991,0.354959,-2.01432);
+	Image1178.cameraVector = new THREE.Vector3(-0.6320986304162628,-0.7350377210304023,-0.24529751341649908);
 	Image1178.mastAz = "229.282";
 	Image1178.mastEl = "14.2231";
 	Image1178.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28298,6 +29477,7 @@ function getImageDataArray()
 	Image1179.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815895EDR_F0050104NCAM00451M_.JPG";
 	Image1179.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1179.cameraPosition = new THREE.Vector3(0.577917,0.510719,-2.01557);
+	Image1179.cameraVector = new THREE.Vector3(-0.15623093554867098,-0.9538018008884082,-0.25662037993818054);
 	Image1179.mastAz = "260.673";
 	Image1179.mastEl = "14.893";
 	Image1179.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28322,6 +29502,7 @@ function getImageDataArray()
 	Image1180.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815895EDR_F0050104NCAM00451M_.JPG";
 	Image1180.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1180.cameraPosition = new THREE.Vector3(0.99476,0.435406,-2.0149);
+	Image1180.cameraVector = new THREE.Vector3(-0.16663333452862536,-0.9532348403001396,-0.25214414738763735);
 	Image1180.mastAz = "260.06";
 	Image1180.mastEl = "14.6281";
 	Image1180.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28346,6 +29527,7 @@ function getImageDataArray()
 	Image1181.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815923EDR_F0050104NCAM00451M_.JPG";
 	Image1181.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1181.cameraPosition = new THREE.Vector3(1.03197,0.547762,-2.01352);
+	Image1181.cameraVector = new THREE.Vector3(0.3423970693764814,-0.9091679652738126,-0.23701868660987988);
 	Image1181.mastAz = "290.612";
 	Image1181.mastEl = "13.7343";
 	Image1181.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28370,6 +29552,7 @@ function getImageDataArray()
 	Image1182.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815923EDR_F0050104NCAM00451M_.JPG";
 	Image1182.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1182.cameraPosition = new THREE.Vector3(0.634721,0.400704,-2.01416);
+	Image1182.cameraVector = new THREE.Vector3(0.3516671592669111,-0.9044341357729719,-0.2415141882824657);
 	Image1182.mastAz = "291.223";
 	Image1182.mastEl = "13.9993";
 	Image1182.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28394,6 +29577,7 @@ function getImageDataArray()
 	Image1183.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815958EDR_F0050104NCAM00451M_.JPG";
 	Image1183.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1183.cameraPosition = new THREE.Vector3(0.740199,0.334573,-2.01099);
+	Image1183.cameraVector = new THREE.Vector3(0.7642732722984563,-0.6102393428352993,-0.20855289426462464);
 	Image1183.mastAz = "321.37";
 	Image1183.mastEl = "12.0609";
 	Image1183.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28418,6 +29602,7 @@ function getImageDataArray()
 	Image1184.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815958EDR_F0050104NCAM00451M_.JPG";
 	Image1184.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1184.cameraPosition = new THREE.Vector3(1.00978,0.661309,-2.01048);
+	Image1184.cameraVector = new THREE.Vector3(0.75851765696874,-0.6188933586557868,-0.20401464329408464);
 	Image1184.mastAz = "320.764";
 	Image1184.mastEl = "11.7955";
 	Image1184.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28442,6 +29627,7 @@ function getImageDataArray()
 	Image1185.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402815986EDR_F0050104NCAM00451M_.JPG";
 	Image1185.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1185.cameraPosition = new THREE.Vector3(0.865705,0.331811,-2.00679);
+	Image1185.cameraVector = new THREE.Vector3(0.9749716070072121,-0.14712296620421916,-0.1666889268819221);
 	Image1185.mastAz = "351.395";
 	Image1185.mastEl = "9.61862";
 	Image1185.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28466,6 +29652,7 @@ function getImageDataArray()
 	Image1186.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402815986EDR_F0050104NCAM00451M_.JPG";
 	Image1186.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1186.cameraPosition = new THREE.Vector3(0.935506,0.749612,-2.0065);
+	Image1186.cameraVector = new THREE.Vector3(0.9741301464165022,-0.15745768179871172,-0.16210347400700456);
 	Image1186.mastAz = "350.794";
 	Image1186.mastEl = "9.35266";
 	Image1186.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28490,6 +29677,7 @@ function getImageDataArray()
 	Image1187.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816014EDR_F0050104NCAM00451M_.JPG";
 	Image1187.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1187.cameraPosition = new THREE.Vector3(0.974468,0.393667,-2.00268);
+	Image1187.cameraVector = new THREE.Vector3(0.9246558030169848,0.35894533136672424,-0.1271609021556834);
 	Image1187.mastAz = "21.1922";
 	Image1187.mastEl = "7.32879";
 	Image1187.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28514,6 +29702,7 @@ function getImageDataArray()
 	Image1188.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816014EDR_F0050104NCAM00451M_.JPG";
 	Image1188.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1188.cameraPosition = new THREE.Vector3(0.827347,0.790889,-2.00261);
+	Image1188.cameraVector = new THREE.Vector3(0.9288897042936439,0.3494973608336536,-0.12253779836269954);
 	Image1188.mastAz = "20.5952";
 	Image1188.mastEl = "7.06226";
 	Image1188.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28538,6 +29727,7 @@ function getImageDataArray()
 	Image1189.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816042EDR_F0050104NCAM00451M_.JPG";
 	Image1189.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1189.cameraPosition = new THREE.Vector3(1.03586,0.501198,-1.99977);
+	Image1189.cameraVector = new THREE.Vector3(0.6287542441103678,0.771132531618032,-0.10011353152079401);
 	Image1189.mastAz = "50.7838";
 	Image1189.mastEl = "5.76891";
 	Image1189.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28562,6 +29752,7 @@ function getImageDataArray()
 	Image1190.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816042EDR_F0050104NCAM00451M_.JPG";
 	Image1190.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1190.cameraPosition = new THREE.Vector3(0.711747,0.773929,-1.99989);
+	Image1190.cameraVector = new THREE.Vector3(0.6370174893984722,0.7649145802303324,-0.09546938332010875);
 	Image1190.mastAz = "50.1889";
 	Image1190.mastEl = "5.50196";
 	Image1190.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28586,6 +29777,7 @@ function getImageDataArray()
 	Image1191.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816070EDR_F0050104NCAM00451M_.JPG";
 	Image1191.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1191.cameraPosition = new THREE.Vector3(1.03443,0.624188,-1.999);
+	Image1191.cameraVector = new THREE.Vector3(0.16388210231210468,0.9820635148904141,-0.09324113503626033);
 	Image1191.mastAz = "80.5024";
 	Image1191.mastEl = "5.37335";
 	Image1191.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28610,6 +29802,7 @@ function getImageDataArray()
 	Image1192.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816070EDR_F0050104NCAM00451M_.JPG";
 	Image1192.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1192.cameraPosition = new THREE.Vector3(0.61774,0.700359,-1.99921);
+	Image1192.cameraVector = new THREE.Vector3(0.17413583810919556,0.9807284138438498,-0.08859169354592103);
 	Image1192.mastAz = "79.908";
 	Image1192.mastEl = "5.10622";
 	Image1192.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28634,6 +29827,7 @@ function getImageDataArray()
 	Image1193.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816098EDR_F0050104NCAM00451M_.JPG";
 	Image1193.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1193.cameraPosition = new THREE.Vector3(0.572899,0.587866,-2.00078);
+	Image1193.cameraVector = new THREE.Vector3(-0.3346012883257537,0.9366434537862566,-0.10363888425730032);
 	Image1193.mastAz = "109.635";
 	Image1193.mastEl = "5.97237";
 	Image1193.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28658,6 +29852,7 @@ function getImageDataArray()
 	Image1194.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816098EDR_F0050104NCAM00451M_.JPG";
 	Image1194.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1194.cameraPosition = new THREE.Vector3(0.972521,0.728338,-2.00059);
+	Image1194.cameraVector = new THREE.Vector3(-0.3441433895224459,0.932652684361053,-0.10827879664146701);
 	Image1194.mastAz = "110.23";
 	Image1194.mastEl = "6.23937";
 	Image1194.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28682,6 +29877,7 @@ function getImageDataArray()
 	Image1195.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816126EDR_F0050104NCAM00451M_.JPG";
 	Image1195.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1195.cameraPosition = new THREE.Vector3(0.869554,0.78717,-2.00404);
+	Image1195.cameraVector = new THREE.Vector3(-0.7567884420870077,0.6382499585889827,-0.1410965778631133);
 	Image1195.mastAz = "139.833";
 	Image1195.mastEl = "8.13455";
 	Image1195.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28706,6 +29902,7 @@ function getImageDataArray()
 	Image1196.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816126EDR_F0050104NCAM00451M_.JPG";
 	Image1196.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1196.cameraPosition = new THREE.Vector3(0.591456,0.467652,-2.0041);
+	Image1196.cameraVector = new THREE.Vector3(-0.7505768789121247,0.6465348009789356,-0.13648113410161158);
 	Image1196.mastAz = "139.235";
 	Image1196.mastEl = "7.86792";
 	Image1196.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28730,6 +29927,7 @@ function getImageDataArray()
 	Image1197.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816168EDR_F0050104NCAM00450M_.JPG";
 	Image1197.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1197.cameraPosition = new THREE.Vector3(1.05564,0.583304,-1.86086);
+	Image1197.cameraVector = new THREE.Vector3(0.24111538118288384,0.5238320371697784,0.8169843142873627);
 	Image1197.mastAz = "65.2421";
 	Image1197.mastEl = "-54.7615";
 	Image1197.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28754,6 +29952,7 @@ function getImageDataArray()
 	Image1198.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816168EDR_F0050104NCAM00450M_.JPG";
 	Image1198.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1198.cameraPosition = new THREE.Vector3(0.676098,0.771389,-1.86144);
+	Image1198.cameraVector = new THREE.Vector3(0.24869496758178558,0.5158717985882276,0.8197725907352854);
 	Image1198.mastAz = "64.2205";
 	Image1198.mastEl = "-55.0385";
 	Image1198.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28778,6 +29977,7 @@ function getImageDataArray()
 	Image1199.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816196EDR_F0050104NCAM00450M_.JPG";
 	Image1199.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1199.cameraPosition = new THREE.Vector3(1.00319,0.715183,-1.86192);
+	Image1199.cameraVector = new THREE.Vector3(-0.07981293794824339,0.5777720572501255,0.8122864918223296);
 	Image1199.mastAz = "97.8237";
 	Image1199.mastEl = "-54.2972";
 	Image1199.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28802,6 +30002,7 @@ function getImageDataArray()
 	Image1200.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816196EDR_F0050104NCAM00450M_.JPG";
 	Image1200.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1200.cameraPosition = new THREE.Vector3(0.582098,0.6692,-1.86254);
+	Image1200.cameraVector = new THREE.Vector3(-0.06914183789330781,0.5751761643443581,0.815102316413619);
 	Image1200.mastAz = "96.8137";
 	Image1200.mastEl = "-54.5742";
 	Image1200.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28826,6 +30027,7 @@ function getImageDataArray()
 	Image1201.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816231EDR_F0050104NCAM00450M_.JPG";
 	Image1201.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1201.cameraPosition = new THREE.Vector3(0.886206,0.798959,-1.86565);
+	Image1201.cameraVector = new THREE.Vector3(-0.3942202755628951,0.45936179193101817,0.7959755765405362);
 	Image1201.mastAz = "130.596";
 	Image1201.mastEl = "-52.7248";
 	Image1201.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28850,6 +30052,7 @@ function getImageDataArray()
 	Image1202.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816231EDR_F0050104NCAM00450M_.JPG";
 	Image1202.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1202.cameraPosition = new THREE.Vector3(0.557399,0.531908,-1.86617);
+	Image1202.cameraVector = new THREE.Vector3(-0.3838946282793708,0.4630300398179578,0.7988917928007673);
 	Image1202.mastAz = "129.623";
 	Image1202.mastEl = "-53.001";
 	Image1202.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28874,6 +30077,7 @@ function getImageDataArray()
 	Image1203.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816266EDR_F0050104NCAM00450M_.JPG";
 	Image1203.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1203.cameraPosition = new THREE.Vector3(0.605255,0.409358,-1.87159);
+	Image1203.cameraVector = new THREE.Vector3(-0.5972868464748414,0.21119355430138528,0.7737219821419624);
 	Image1203.mastAz = "160.49";
 	Image1203.mastEl = "-50.6659";
 	Image1203.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28898,6 +30102,7 @@ function getImageDataArray()
 	Image1204.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816266EDR_F0050104NCAM00450M_.JPG";
 	Image1204.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1204.cameraPosition = new THREE.Vector3(0.750044,0.807436,-1.87127);
+	Image1204.cameraVector = new THREE.Vector3(-0.6041442721666104,0.20269881383854882,0.7706639275823942);
 	Image1204.mastAz = "161.415";
 	Image1204.mastEl = "-50.3908";
 	Image1204.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28922,6 +30127,7 @@ function getImageDataArray()
 	Image1205.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816354EDR_F0050104NCAM00450M_.JPG";
 	Image1205.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1205.cameraPosition = new THREE.Vector3(0.70406,0.330312,-1.87732);
+	Image1205.cameraVector = new THREE.Vector3(-0.6557560962266674,-0.1164521401199726,0.7459375585952487);
 	Image1205.mastAz = "190.034";
 	Image1205.mastEl = "-48.2162";
 	Image1205.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28946,6 +30152,7 @@ function getImageDataArray()
 	Image1206.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816354EDR_F0050104NCAM00450M_.JPG";
 	Image1206.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1206.cameraPosition = new THREE.Vector3(0.633291,0.74795,-1.87723);
+	Image1206.cameraVector = new THREE.Vector3(-0.6573883085866351,-0.12720585353751798,0.7427376943170411);
 	Image1206.mastAz = "190.916";
 	Image1206.mastEl = "-47.9422";
 	Image1206.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28970,6 +30177,7 @@ function getImageDataArray()
 	Image1207.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816381EDR_F0050104NCAM00450M_.JPG";
 	Image1207.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1207.cameraPosition = new THREE.Vector3(0.564196,0.64519,-1.88189);
+	Image1207.cameraVector = new THREE.Vector3(-0.5404847651246107,-0.4349683504822986,0.720193552280845);
 	Image1207.mastAz = "218.792";
 	Image1207.mastEl = "-46.0477";
 	Image1207.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -28994,6 +30202,7 @@ function getImageDataArray()
 	Image1208.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816381EDR_F0050104NCAM00450M_.JPG";
 	Image1208.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1208.cameraPosition = new THREE.Vector3(0.822457,0.309435,-1.88178);
+	Image1208.cameraVector = new THREE.Vector3(-0.5441670312786828,-0.4247676453590626,0.7235016859174986);
 	Image1208.mastAz = "217.941";
 	Image1208.mastEl = "-46.3209";
 	Image1208.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29018,6 +30227,7 @@ function getImageDataArray()
 	Image1209.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816408EDR_F0050104NCAM00450M_.JPG";
 	Image1209.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1209.cameraPosition = new THREE.Vector3(0.936572,0.346177,-1.88395);
+	Image1209.cameraVector = new THREE.Vector3(-0.2890008593705917,-0.6396258829925285,0.7122901326630096);
 	Image1209.mastAz = "245.652";
 	Image1209.mastEl = "-45.398";
 	Image1209.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29042,6 +30252,7 @@ function getImageDataArray()
 	Image1210.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816408EDR_F0050104NCAM00450M_.JPG";
 	Image1210.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1210.cameraPosition = new THREE.Vector3(0.551729,0.523168,-1.88419);
+	Image1210.cameraVector = new THREE.Vector3(-0.2809705072525176,-0.646892028521568,0.7089331967749245);
 	Image1210.mastAz = "246.489";
 	Image1210.mastEl = "-45.1252";
 	Image1210.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29066,6 +30277,7 @@ function getImageDataArray()
 	Image1211.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816651EDR_F0050104NCAM00323M_.JPG";
 	Image1211.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1211.cameraPosition = new THREE.Vector3(0.723949,0.801164,-1.93364);
+	Image1211.cameraVector = new THREE.Vector3(-0.8836162094817838,0.20825225377728193,0.41934877266748616);
 	Image1211.mastAz = "166.712";
 	Image1211.mastEl = "-24.7705";
 	Image1211.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29090,6 +30302,7 @@ function getImageDataArray()
 	Image1212.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816651EDR_F0050104NCAM00323M_.JPG";
 	Image1212.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1212.cameraPosition = new THREE.Vector3(0.619736,0.390592,-1.93375);
+	Image1212.cameraVector = new THREE.Vector3(-0.8792587299984522,0.2178020980684858,0.4236346678430302);
 	Image1212.mastAz = "166.061";
 	Image1212.mastEl = "-25.0407";
 	Image1212.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29114,6 +30327,7 @@ function getImageDataArray()
 	Image1213.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402816960EDR_F0050104NCAM00322M_.JPG";
 	Image1213.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1213.cameraPosition = new THREE.Vector3(0.897154,0.321912,-1.93233);
+	Image1213.cameraVector = new THREE.Vector3(0.8885563857538921,-0.16371060024095901,0.4285631676949451);
 	Image1213.mastAz = "349.535";
 	Image1213.mastEl = "-25.3534";
 	Image1213.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29138,6 +30352,7 @@ function getImageDataArray()
 	Image1214.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402816960EDR_F0050104NCAM00322M_.JPG";
 	Image1214.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1214.cameraPosition = new THREE.Vector3(0.980974,0.737128,-1.93225);
+	Image1214.cameraVector = new THREE.Vector3(0.8846327384143652,-0.17345791172148475,0.4328247578255231);
 	Image1214.mastAz = "348.88";
 	Image1214.mastEl = "-25.6234";
 	Image1214.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29162,6 +30377,7 @@ function getImageDataArray()
 	Image1215.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402820687EDR_F0050104NCAM00318M_.JPG";
 	Image1215.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1215.cameraPosition = new THREE.Vector3(1.03701,0.64383,-1.85893);
+	Image1215.cameraVector = new THREE.Vector3(0.44505254350614976,-0.3383417647614465,0.8291279055349763);
 	Image1215.mastAz = "322.715";
 	Image1215.mastEl = "-55.9859";
 	Image1215.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29186,6 +30402,7 @@ function getImageDataArray()
 	Image1216.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402820687EDR_F0050104NCAM00318M_.JPG";
 	Image1216.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1216.cameraPosition = new THREE.Vector3(0.777649,0.308925,-1.85899);
+	Image1216.cameraVector = new THREE.Vector3(0.45438811285284164,-0.33250552748648177,0.8264209079452006);
 	Image1216.mastAz = "323.762";
 	Image1216.mastEl = "-55.7102";
 	Image1216.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29210,6 +30427,7 @@ function getImageDataArray()
 	Image1217.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FLA_402820707EDR_F0050104FHAZ00202M_.JPG";
 	Image1217.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1217.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1217.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1217.mastAz = "1.03995";
 	Image1217.mastEl = "-43.4728";
 	Image1217.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29234,6 +30452,7 @@ function getImageDataArray()
 	Image1218.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FRA_402820707EDR_F0050104FHAZ00202M_.JPG";
 	Image1218.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1218.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1218.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1218.mastAz = "359.974";
 	Image1218.mastEl = "-43.7598";
 	Image1218.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29258,6 +30477,7 @@ function getImageDataArray()
 	Image1219.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402821229EDR_F0050104NCAM00318M_.JPG";
 	Image1219.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1219.cameraPosition = new THREE.Vector3(0.771527,0.308301,-1.86687);
+	Image1219.cameraVector = new THREE.Vector3(0.4800743146436852,-0.377423695051917,0.7918838341781913);
 	Image1219.mastAz = "321.787";
 	Image1219.mastEl = "-52.339";
 	Image1219.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29282,6 +30502,7 @@ function getImageDataArray()
 	Image1220.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402821229EDR_F0050104NCAM00318M_.JPG";
 	Image1220.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1220.cameraPosition = new THREE.Vector3(1.04158,0.634651,-1.86678);
+	Image1220.cameraVector = new THREE.Vector3(0.4706799563340649,-0.383060555169347,0.7948112919295462);
 	Image1220.mastAz = "320.821";
 	Image1220.mastEl = "-52.6138";
 	Image1220.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29306,6 +30527,7 @@ function getImageDataArray()
 	Image1221.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FLA_402821249EDR_F0050104FHAZ00202M_.JPG";
 	Image1221.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1221.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1221.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1221.mastAz = "1.03995";
 	Image1221.mastEl = "-43.4728";
 	Image1221.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29330,6 +30552,7 @@ function getImageDataArray()
 	Image1222.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FRA_402821249EDR_F0050104FHAZ00202M_.JPG";
 	Image1222.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1222.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1222.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1222.mastAz = "359.974";
 	Image1222.mastEl = "-43.7598";
 	Image1222.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29354,6 +30577,7 @@ function getImageDataArray()
 	Image1223.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402821774EDR_F0050104NCAM00318M_.JPG";
 	Image1223.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1223.cameraPosition = new THREE.Vector3(1.02682,0.669402,-1.86266);
+	Image1223.cameraVector = new THREE.Vector3(0.5007043102953938,-0.2966169932039722,0.8132118746023382);
 	Image1223.mastAz = "329.317";
 	Image1223.mastEl = "-54.3874";
 	Image1223.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29378,6 +30602,7 @@ function getImageDataArray()
 	Image1224.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402821774EDR_F0050104NCAM00318M_.JPG";
 	Image1224.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1224.cameraPosition = new THREE.Vector3(0.807766,0.30685,-1.86268);
+	Image1224.cameraVector = new THREE.Vector3(0.5092400339107366,-0.2897054152772193,0.8103982725929553);
 	Image1224.mastAz = "330.324";
 	Image1224.mastEl = "-54.112";
 	Image1224.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29402,6 +30627,7 @@ function getImageDataArray()
 	Image1225.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FLA_402821794EDR_F0050104FHAZ00202M_.JPG";
 	Image1225.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1225.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1225.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1225.mastAz = "1.03995";
 	Image1225.mastEl = "-43.4728";
 	Image1225.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29426,6 +30652,7 @@ function getImageDataArray()
 	Image1226.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FRA_402821794EDR_F0050104FHAZ00202M_.JPG";
 	Image1226.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1226.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1226.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1226.mastAz = "359.974";
 	Image1226.mastEl = "-43.7598";
 	Image1226.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29450,6 +30677,7 @@ function getImageDataArray()
 	Image1227.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402822312EDR_F0050104NCAM00318M_.JPG";
 	Image1227.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1227.cameraPosition = new THREE.Vector3(0.842859,0.311766,-1.85239);
+	Image1227.cameraVector = new THREE.Vector3(0.4877163258683413,-0.18365415865199536,0.8534658373311224);
 	Image1227.mastAz = "339.319";
 	Image1227.mastEl = "-58.5681";
 	Image1227.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29474,6 +30702,7 @@ function getImageDataArray()
 	Image1228.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402822312EDR_F0050104NCAM00318M_.JPG";
 	Image1228.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1228.cameraPosition = new THREE.Vector3(1.0039,0.703551,-1.85245);
+	Image1228.cameraVector = new THREE.Vector3(0.4801448733886375,-0.19170948282447411,0.8559838636059574);
 	Image1228.mastAz = "338.189";
 	Image1228.mastEl = "-58.8452";
 	Image1228.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29498,6 +30727,7 @@ function getImageDataArray()
 	Image1229.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FLA_402822331EDR_F0050104FHAZ00202M_.JPG";
 	Image1229.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1229.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1229.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1229.mastAz = "1.03995";
 	Image1229.mastEl = "-43.4728";
 	Image1229.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29522,6 +30752,7 @@ function getImageDataArray()
 	Image1230.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FRA_402822331EDR_F0050104FHAZ00202M_.JPG";
 	Image1230.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1230.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1230.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1230.mastAz = "359.974";
 	Image1230.mastEl = "-43.7598";
 	Image1230.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29546,6 +30777,7 @@ function getImageDataArray()
 	Image1231.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402822733EDR_F0050104NCAM00318M_.JPG";
 	Image1231.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1231.cameraPosition = new THREE.Vector3(0.835725,0.307409,-1.87143);
+	Image1231.cameraVector = new THREE.Vector3(0.582497381157351,-0.25834557827823945,0.770684347271248);
 	Image1231.mastAz = "336.044";
 	Image1231.mastEl = "-50.3925";
 	Image1231.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29570,6 +30802,7 @@ function getImageDataArray()
 	Image1232.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402822733EDR_F0050104NCAM00318M_.JPG";
 	Image1232.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1232.cameraPosition = new THREE.Vector3(1.01678,0.690357,-1.87142);
+	Image1232.cameraVector = new THREE.Vector3(0.5748823493230488,-0.26617227434996493,0.7737329027540311);
 	Image1232.mastAz = "335.118";
 	Image1232.mastEl = "-50.6669";
 	Image1232.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29594,6 +30827,7 @@ function getImageDataArray()
 	Image1233.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FLA_402822752EDR_F0050104FHAZ00202M_.JPG";
 	Image1233.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1233.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1233.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1233.mastAz = "1.03995";
 	Image1233.mastEl = "-43.4728";
 	Image1233.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29618,6 +30852,7 @@ function getImageDataArray()
 	Image1234.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/fcam/FRA_402822752EDR_F0050104FHAZ00202M_.JPG";
 	Image1234.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1234.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1234.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1234.mastAz = "359.974";
 	Image1234.mastEl = "-43.7598";
 	Image1234.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29642,6 +30877,7 @@ function getImageDataArray()
 	Image1235.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402832750EDR_F0050104NCAM00323M_.JPG";
 	Image1235.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1235.cameraPosition = new THREE.Vector3(0.723972,0.801172,-1.93364);
+	Image1235.cameraVector = new THREE.Vector3(-0.8835963639262443,0.20833612013308095,0.4193489319221099);
 	Image1235.mastAz = "166.707";
 	Image1235.mastEl = "-24.7705";
 	Image1235.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29666,6 +30902,7 @@ function getImageDataArray()
 	Image1236.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402832750EDR_F0050104NCAM00323M_.JPG";
 	Image1236.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1236.cameraPosition = new THREE.Vector3(0.61972,0.39061,-1.93375);
+	Image1236.cameraVector = new THREE.Vector3(-0.8792380892170701,0.21788554728783716,0.4236345957933502);
 	Image1236.mastAz = "166.056";
 	Image1236.mastEl = "-25.0407";
 	Image1236.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29690,6 +30927,7 @@ function getImageDataArray()
 	Image1237.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NLA_402833090EDR_F0050104NCAM00322M_.JPG";
 	Image1237.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1237.cameraPosition = new THREE.Vector3(0.897153,0.321912,-1.93233);
+	Image1237.cameraVector = new THREE.Vector3(0.8885661630753726,-0.16371242379607612,0.428542198776648);
 	Image1237.mastAz = "349.535";
 	Image1237.mastEl = "-25.352";
 	Image1237.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29714,6 +30952,7 @@ function getImageDataArray()
 	Image1238.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00060/opgs/edr/ncam/NRA_402833090EDR_F0050104NCAM00322M_.JPG";
 	Image1238.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1238.cameraPosition = new THREE.Vector3(0.980974,0.737128,-1.93226);
+	Image1238.cameraVector = new THREE.Vector3(0.8846426757271268,-0.1734596990798196,0.4328037304338859);
 	Image1238.mastAz = "348.88";
 	Image1238.mastEl = "-25.622";
 	Image1238.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29738,6 +30977,7 @@ function getImageDataArray()
 	Image1239.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FLA_402895937EDR_F0050104FHAZ00311M_.JPG";
 	Image1239.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1239.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1239.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1239.mastAz = "1.03995";
 	Image1239.mastEl = "-43.4728";
 	Image1239.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29762,6 +31002,7 @@ function getImageDataArray()
 	Image1240.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FRA_402895937EDR_F0050104FHAZ00311M_.JPG";
 	Image1240.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1240.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1240.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1240.mastAz = "359.974";
 	Image1240.mastEl = "-43.7598";
 	Image1240.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29786,6 +31027,7 @@ function getImageDataArray()
 	Image1241.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/rcam/RLA_402895964EDR_F0050104RHAZ00309M_.JPG";
 	Image1241.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1241.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1241.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1241.mastAz = "182.571";
 	Image1241.mastEl = "-44.9097";
 	Image1241.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29810,6 +31052,7 @@ function getImageDataArray()
 	Image1242.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/rcam/RRA_402895964EDR_F0050104RHAZ00309M_.JPG";
 	Image1242.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1242.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1242.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1242.mastAz = "182.044";
 	Image1242.mastEl = "-43.5257";
 	Image1242.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29834,6 +31077,7 @@ function getImageDataArray()
 	Image1243.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FLA_402905126EDR_F0050104FHAZ00202M_.JPG";
 	Image1243.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1243.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1243.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1243.mastAz = "1.03995";
 	Image1243.mastEl = "-43.4728";
 	Image1243.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29858,6 +31102,7 @@ function getImageDataArray()
 	Image1244.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FRA_402905126EDR_F0050104FHAZ00202M_.JPG";
 	Image1244.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1244.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1244.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1244.mastAz = "359.974";
 	Image1244.mastEl = "-43.7598";
 	Image1244.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29882,6 +31127,7 @@ function getImageDataArray()
 	Image1245.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NLA_402905175EDR_F0050104NCAM00324M_.JPG";
 	Image1245.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1245.cameraPosition = new THREE.Vector3(0.767467,0.305992,-1.89676);
+	Image1245.cameraVector = new THREE.Vector3(0.5844097372951824,-0.4957483127312341,0.642416429879179);
 	Image1245.mastAz = "319.661";
 	Image1245.mastEl = "-39.9494";
 	Image1245.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29906,6 +31152,7 @@ function getImageDataArray()
 	Image1246.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NRA_402905175EDR_F0050104NCAM00324M_.JPG";
 	Image1246.attitude = new THREE.Quaternion(0.746728,-0.0226242,0.0350849,-0.663818);
 	Image1246.cameraPosition = new THREE.Vector3(1.04782,0.623529,-1.89659);
+	Image1246.cameraVector = new THREE.Vector3(0.5753757432704564,-0.5015505117370316,0.6460571478068264);
 	Image1246.mastAz = "318.891";
 	Image1246.mastEl = "-40.2214";
 	Image1246.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29930,6 +31177,7 @@ function getImageDataArray()
 	Image1247.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FLA_402905597EDR_F0050104FHAZ00202M_.JPG";
 	Image1247.attitude = new THREE.Quaternion(0.746807,-0.0210475,0.0352661,-0.663772);
 	Image1247.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1247.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1247.mastAz = "1.03995";
 	Image1247.mastEl = "-43.4728";
 	Image1247.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29954,6 +31202,7 @@ function getImageDataArray()
 	Image1248.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FRA_402905597EDR_F0050104FHAZ00202M_.JPG";
 	Image1248.attitude = new THREE.Quaternion(0.746807,-0.0210475,0.0352661,-0.663772);
 	Image1248.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1248.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1248.mastAz = "359.974";
 	Image1248.mastEl = "-43.7598";
 	Image1248.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -29978,6 +31227,7 @@ function getImageDataArray()
 	Image1249.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NLA_402905624EDR_F0050104NCAM00324M_.JPG";
 	Image1249.attitude = new THREE.Quaternion(0.746774,-0.0217495,0.0359408,-0.66375);
 	Image1249.cameraPosition = new THREE.Vector3(0.767467,0.305992,-1.89676);
+	Image1249.cameraVector = new THREE.Vector3(0.5844097372951824,-0.4957483127312341,0.642416429879179);
 	Image1249.mastAz = "319.661";
 	Image1249.mastEl = "-39.9494";
 	Image1249.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30002,6 +31252,7 @@ function getImageDataArray()
 	Image1250.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NRA_402905624EDR_F0050104NCAM00324M_.JPG";
 	Image1250.attitude = new THREE.Quaternion(0.746774,-0.0217495,0.0359408,-0.66375);
 	Image1250.cameraPosition = new THREE.Vector3(1.04782,0.623529,-1.89659);
+	Image1250.cameraVector = new THREE.Vector3(0.5753757432704564,-0.5015505117370316,0.6460571478068264);
 	Image1250.mastAz = "318.891";
 	Image1250.mastEl = "-40.2214";
 	Image1250.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30026,6 +31277,7 @@ function getImageDataArray()
 	Image1251.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FLA_402905730EDR_F0050104FHAZ00202M_.JPG";
 	Image1251.attitude = new THREE.Quaternion(0.746774,-0.0223378,0.035135,-0.663774);
 	Image1251.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1251.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1251.mastAz = "1.03995";
 	Image1251.mastEl = "-43.4728";
 	Image1251.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30050,6 +31302,7 @@ function getImageDataArray()
 	Image1252.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FRA_402905730EDR_F0050104FHAZ00202M_.JPG";
 	Image1252.attitude = new THREE.Quaternion(0.746774,-0.0223378,0.035135,-0.663774);
 	Image1252.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1252.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1252.mastAz = "359.974";
 	Image1252.mastEl = "-43.7598";
 	Image1252.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30074,6 +31327,7 @@ function getImageDataArray()
 	Image1253.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NLA_402905750EDR_F0050104NCAM00325M_.JPG";
 	Image1253.attitude = new THREE.Quaternion(0.746764,-0.0223373,0.0351353,-0.663784);
 	Image1253.cameraPosition = new THREE.Vector3(0.767467,0.305992,-1.89676);
+	Image1253.cameraVector = new THREE.Vector3(0.5844097372951824,-0.4957483127312341,0.642416429879179);
 	Image1253.mastAz = "319.661";
 	Image1253.mastEl = "-39.9494";
 	Image1253.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30098,6 +31352,7 @@ function getImageDataArray()
 	Image1254.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NRA_402905750EDR_F0050104NCAM00325M_.JPG";
 	Image1254.attitude = new THREE.Quaternion(0.746764,-0.0223373,0.0351353,-0.663784);
 	Image1254.cameraPosition = new THREE.Vector3(1.04782,0.623529,-1.89659);
+	Image1254.cameraVector = new THREE.Vector3(0.5753757432704564,-0.5015505117370316,0.6460571478068264);
 	Image1254.mastAz = "318.891";
 	Image1254.mastEl = "-40.2214";
 	Image1254.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30122,6 +31377,7 @@ function getImageDataArray()
 	Image1255.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NRA_402906079EDR_F0050104NCAM00326M_.JPG";
 	Image1255.attitude = new THREE.Quaternion(0.746814,-0.021899,0.0360604,-0.663694);
 	Image1255.cameraPosition = new THREE.Vector3(1.01368,0.690903,-1.85742);
+	Image1255.cameraVector = new THREE.Vector3(0.4972729268848698,-0.23325248886132047,0.8356511907652346);
 	Image1255.mastAz = "334.827";
 	Image1255.mastEl = "-56.6603";
 	Image1255.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30146,6 +31402,7 @@ function getImageDataArray()
 	Image1256.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NLA_402906079EDR_F0050104NCAM00326M_.JPG";
 	Image1256.attitude = new THREE.Quaternion(0.746814,-0.021899,0.0360604,-0.663694);
 	Image1256.cameraPosition = new THREE.Vector3(0.830198,0.309109,-1.85739);
+	Image1256.cameraVector = new THREE.Vector3(0.505210715424082,-0.22560648018840795,0.8329849032951825);
 	Image1256.mastAz = "335.893";
 	Image1256.mastEl = "-56.3841";
 	Image1256.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30170,6 +31427,7 @@ function getImageDataArray()
 	Image1257.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FLA_402906098EDR_F0050104FHAZ00202M_.JPG";
 	Image1257.attitude = new THREE.Quaternion(0.746814,-0.021899,0.0360604,-0.663694);
 	Image1257.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1257.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1257.mastAz = "1.03995";
 	Image1257.mastEl = "-43.4728";
 	Image1257.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30194,6 +31452,7 @@ function getImageDataArray()
 	Image1258.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FRA_402906098EDR_F0050104FHAZ00202M_.JPG";
 	Image1258.attitude = new THREE.Quaternion(0.746814,-0.021899,0.0360604,-0.663694);
 	Image1258.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1258.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1258.mastAz = "359.974";
 	Image1258.mastEl = "-43.7598";
 	Image1258.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30218,6 +31477,7 @@ function getImageDataArray()
 	Image1259.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NRA_402906670EDR_F0050104NCAM00324M_.JPG";
 	Image1259.attitude = new THREE.Quaternion(0.746814,-0.021899,0.0360604,-0.663694);
 	Image1259.cameraPosition = new THREE.Vector3(1.04804,0.622712,-1.89661);
+	Image1259.cameraVector = new THREE.Vector3(0.57376045166901,-0.5035425873338321,0.6459441205257027);
 	Image1259.mastAz = "318.698";
 	Image1259.mastEl = "-40.213";
 	Image1259.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30242,6 +31502,7 @@ function getImageDataArray()
 	Image1260.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NLA_402906670EDR_F0050104NCAM00324M_.JPG";
 	Image1260.attitude = new THREE.Quaternion(0.746814,-0.021899,0.0360604,-0.663694);
 	Image1260.cameraPosition = new THREE.Vector3(0.766619,0.306117,-1.89678);
+	Image1260.cameraVector = new THREE.Vector3(0.5828129512699994,-0.4977646481210076,0.6423078848285473);
 	Image1260.mastAz = "319.469";
 	Image1260.mastEl = "-39.9411";
 	Image1260.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30266,6 +31527,7 @@ function getImageDataArray()
 	Image1261.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FLA_402907131EDR_F0050104FHAZ00202M_.JPG";
 	Image1261.attitude = new THREE.Quaternion(0.746814,-0.021899,0.0360604,-0.663694);
 	Image1261.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1261.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1261.mastAz = "1.03995";
 	Image1261.mastEl = "-43.4728";
 	Image1261.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30290,6 +31552,7 @@ function getImageDataArray()
 	Image1262.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/fcam/FRA_402907131EDR_F0050104FHAZ00202M_.JPG";
 	Image1262.attitude = new THREE.Quaternion(0.746814,-0.021899,0.0360604,-0.663694);
 	Image1262.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1262.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1262.mastAz = "359.974";
 	Image1262.mastEl = "-43.7598";
 	Image1262.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30314,6 +31577,7 @@ function getImageDataArray()
 	Image1263.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NLA_402907166EDR_F0050104NCAM00324M_.JPG";
 	Image1263.attitude = new THREE.Quaternion(0.746814,-0.021899,0.0360604,-0.663694);
 	Image1263.cameraPosition = new THREE.Vector3(0.767415,0.306002,-1.89669);
+	Image1263.cameraVector = new THREE.Vector3(0.5840862951436993,-0.4956536580321595,0.6427835180717116);
 	Image1263.mastAz = "319.651";
 	Image1263.mastEl = "-39.9769";
 	Image1263.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30338,6 +31602,7 @@ function getImageDataArray()
 	Image1264.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00061/opgs/edr/ncam/NRA_402907166EDR_F0050104NCAM00324M_.JPG";
 	Image1264.attitude = new THREE.Quaternion(0.746814,-0.021899,0.0360604,-0.663694);
 	Image1264.cameraPosition = new THREE.Vector3(1.04783,0.623486,-1.89652);
+	Image1264.cameraVector = new THREE.Vector3(0.5750483009099288,-0.5014578590229579,0.6464205034222812);
 	Image1264.mastAz = "318.88";
 	Image1264.mastEl = "-40.2488";
 	Image1264.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30362,6 +31627,7 @@ function getImageDataArray()
 	Image1265.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00062/opgs/edr/fcam/FLA_402986405EDR_F0050104FHAZ00311M_.JPG";
 	Image1265.attitude = new THREE.Quaternion(0.746832,-0.0218778,0.0357928,-0.663688);
 	Image1265.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1265.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1265.mastAz = "1.03995";
 	Image1265.mastEl = "-43.4728";
 	Image1265.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30386,6 +31652,7 @@ function getImageDataArray()
 	Image1266.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00062/opgs/edr/fcam/FRA_402986405EDR_F0050104FHAZ00311M_.JPG";
 	Image1266.attitude = new THREE.Quaternion(0.746832,-0.0218778,0.0357928,-0.663688);
 	Image1266.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1266.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1266.mastAz = "359.974";
 	Image1266.mastEl = "-43.7598";
 	Image1266.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30410,6 +31677,7 @@ function getImageDataArray()
 	Image1267.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00062/opgs/edr/rcam/RLA_402986432EDR_F0050104RHAZ00309M_.JPG";
 	Image1267.attitude = new THREE.Quaternion(0.746832,-0.0218778,0.0357928,-0.663688);
 	Image1267.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1267.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1267.mastAz = "182.571";
 	Image1267.mastEl = "-44.9097";
 	Image1267.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30434,6 +31702,7 @@ function getImageDataArray()
 	Image1268.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00062/opgs/edr/rcam/RRA_402986432EDR_F0050104RHAZ00309M_.JPG";
 	Image1268.attitude = new THREE.Quaternion(0.746832,-0.0218778,0.0357928,-0.663688);
 	Image1268.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1268.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1268.mastAz = "182.044";
 	Image1268.mastEl = "-43.5257";
 	Image1268.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30458,6 +31727,7 @@ function getImageDataArray()
 	Image1269.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00063/opgs/edr/fcam/FLA_403075179EDR_F0050104FHAZ00311M_.JPG";
 	Image1269.attitude = new THREE.Quaternion(0.746867,-0.0214984,0.034677,-0.66372);
 	Image1269.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1269.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1269.mastAz = "1.03995";
 	Image1269.mastEl = "-43.4728";
 	Image1269.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30482,6 +31752,7 @@ function getImageDataArray()
 	Image1270.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00063/opgs/edr/fcam/FRA_403075179EDR_F0050104FHAZ00311M_.JPG";
 	Image1270.attitude = new THREE.Quaternion(0.746867,-0.0214984,0.034677,-0.66372);
 	Image1270.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1270.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1270.mastAz = "359.974";
 	Image1270.mastEl = "-43.7598";
 	Image1270.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30506,6 +31777,7 @@ function getImageDataArray()
 	Image1271.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00063/opgs/edr/rcam/RLA_403075199EDR_F0050104RHAZ00309M_.JPG";
 	Image1271.attitude = new THREE.Quaternion(0.746867,-0.0214984,0.034677,-0.66372);
 	Image1271.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1271.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1271.mastAz = "182.571";
 	Image1271.mastEl = "-44.9097";
 	Image1271.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30530,6 +31802,7 @@ function getImageDataArray()
 	Image1272.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00063/opgs/edr/rcam/RRA_403075199EDR_F0050104RHAZ00309M_.JPG";
 	Image1272.attitude = new THREE.Quaternion(0.746867,-0.0214984,0.034677,-0.66372);
 	Image1272.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1272.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1272.mastAz = "182.044";
 	Image1272.mastEl = "-43.5257";
 	Image1272.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30554,6 +31827,7 @@ function getImageDataArray()
 	Image1273.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00064/opgs/edr/fcam/FRA_403163953EDR_F0050104FHAZ00311M_.JPG";
 	Image1273.attitude = new THREE.Quaternion(0.746875,-0.0215016,0.0346813,-0.663711);
 	Image1273.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1273.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1273.mastAz = "359.974";
 	Image1273.mastEl = "-43.7598";
 	Image1273.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30578,6 +31852,7 @@ function getImageDataArray()
 	Image1274.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00064/opgs/edr/fcam/FLA_403163953EDR_F0050104FHAZ00311M_.JPG";
 	Image1274.attitude = new THREE.Quaternion(0.746875,-0.0215016,0.0346813,-0.663711);
 	Image1274.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1274.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1274.mastAz = "1.03995";
 	Image1274.mastEl = "-43.4728";
 	Image1274.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30602,6 +31877,7 @@ function getImageDataArray()
 	Image1275.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00064/opgs/edr/rcam/RLA_403163979EDR_F0050104RHAZ00309M_.JPG";
 	Image1275.attitude = new THREE.Quaternion(0.746875,-0.0215016,0.0346813,-0.663711);
 	Image1275.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1275.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1275.mastAz = "182.571";
 	Image1275.mastEl = "-44.9097";
 	Image1275.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30626,6 +31902,7 @@ function getImageDataArray()
 	Image1276.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00064/opgs/edr/rcam/RRA_403163979EDR_F0050104RHAZ00309M_.JPG";
 	Image1276.attitude = new THREE.Quaternion(0.746875,-0.0215016,0.0346813,-0.663711);
 	Image1276.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1276.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1276.mastAz = "182.044";
 	Image1276.mastEl = "-43.5257";
 	Image1276.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30650,6 +31927,7 @@ function getImageDataArray()
 	Image1277.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/fcam/FLA_403252730EDR_F0050104FHAZ00311M_.JPG";
 	Image1277.attitude = new THREE.Quaternion(0.746848,-0.0216438,0.0365371,-0.663638);
 	Image1277.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1277.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1277.mastAz = "1.03995";
 	Image1277.mastEl = "-43.4728";
 	Image1277.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30674,6 +31952,7 @@ function getImageDataArray()
 	Image1278.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/fcam/FRA_403252730EDR_F0050104FHAZ00311M_.JPG";
 	Image1278.attitude = new THREE.Quaternion(0.746848,-0.0216438,0.0365371,-0.663638);
 	Image1278.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1278.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1278.mastAz = "359.974";
 	Image1278.mastEl = "-43.7598";
 	Image1278.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30698,6 +31977,7 @@ function getImageDataArray()
 	Image1279.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/rcam/RLA_403252756EDR_F0050104RHAZ00309M_.JPG";
 	Image1279.attitude = new THREE.Quaternion(0.746848,-0.0216438,0.0365371,-0.663638);
 	Image1279.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1279.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1279.mastAz = "182.571";
 	Image1279.mastEl = "-44.9097";
 	Image1279.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30722,6 +32002,7 @@ function getImageDataArray()
 	Image1280.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/rcam/RRA_403252756EDR_F0050104RHAZ00309M_.JPG";
 	Image1280.attitude = new THREE.Quaternion(0.746848,-0.0216438,0.0365371,-0.663638);
 	Image1280.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1280.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1280.mastAz = "182.044";
 	Image1280.mastEl = "-43.5257";
 	Image1280.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30746,6 +32027,7 @@ function getImageDataArray()
 	Image1281.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/ncam/NRA_403263156EDR_F0050104NCAM00107M_.JPG";
 	Image1281.attitude = new THREE.Quaternion(0.746772,-0.0235733,0.0352471,-0.663727);
 	Image1281.cameraPosition = new THREE.Vector3(1.04985,0.551471,-1.96219);
+	Image1281.cameraVector = new THREE.Vector3(0.4875528868667129,-0.8447147748873663,0.22079205509918184);
 	Image1281.mastAz = "299.969";
 	Image1281.mastEl = "-12.7319";
 	Image1281.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30770,6 +32052,7 @@ function getImageDataArray()
 	Image1282.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/ncam/NLA_403263156EDR_F0050104NCAM00107M_.JPG";
 	Image1282.attitude = new THREE.Quaternion(0.746772,-0.0235733,0.0352471,-0.663727);
 	Image1282.cameraPosition = new THREE.Vector3(0.681932,0.341555,-1.96264);
+	Image1282.cameraVector = new THREE.Vector3(0.4969867387634498,-0.8403888641029515,0.21621919106550505);
 	Image1282.mastAz = "300.575";
 	Image1282.mastEl = "-12.4639";
 	Image1282.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30794,6 +32077,7 @@ function getImageDataArray()
 	Image1283.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/ncam/NLA_403263869EDR_F0050104NCAM00107M_.JPG";
 	Image1283.attitude = new THREE.Quaternion(0.746772,-0.0235733,0.0352471,-0.663727);
 	Image1283.cameraPosition = new THREE.Vector3(0.679384,0.345378,-1.97104);
+	Image1283.cameraVector = new THREE.Vector3(0.5007937117029695,-0.8522682962406007,0.15114367185531297);
 	Image1283.mastAz = "300.415";
 	Image1283.mastEl = "-8.67003";
 	Image1283.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30818,6 +32102,7 @@ function getImageDataArray()
 	Image1284.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/ncam/NRA_403263869EDR_F0050104NCAM00107M_.JPG";
 	Image1284.attitude = new THREE.Quaternion(0.746772,-0.0235733,0.0352471,-0.663727);
 	Image1284.cameraPosition = new THREE.Vector3(1.04786,0.554311,-1.97056);
+	Image1284.cameraVector = new THREE.Vector3(0.4915005339978395,-0.8568336013521003,0.15576714889163448);
 	Image1284.mastAz = "299.816";
 	Image1284.mastEl = "-8.93762";
 	Image1284.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30842,6 +32127,7 @@ function getImageDataArray()
 	Image1285.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/ncam/NLA_403264327EDR_F0050104NCAM00107M_.JPG";
 	Image1285.attitude = new THREE.Quaternion(0.746772,-0.0235733,0.0352471,-0.663727);
 	Image1285.cameraPosition = new THREE.Vector3(0.679344,0.345394,-1.97102);
+	Image1285.cameraVector = new THREE.Vector3(0.5005930918783338,-0.8523527429710966,0.15133194610966202);
 	Image1285.mastAz = "300.402";
 	Image1285.mastEl = "-8.68096";
 	Image1285.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30866,6 +32152,7 @@ function getImageDataArray()
 	Image1286.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/ncam/NRA_403264327EDR_F0050104NCAM00107M_.JPG";
 	Image1286.attitude = new THREE.Quaternion(0.746772,-0.0235733,0.0352471,-0.663727);
 	Image1286.cameraPosition = new THREE.Vector3(1.04787,0.554247,-1.97054);
+	Image1286.cameraVector = new THREE.Vector3(0.49129988496449534,-0.8569143923646536,0.15595559365470166);
 	Image1286.mastAz = "299.803";
 	Image1286.mastEl = "-8.94855";
 	Image1286.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30890,6 +32177,7 @@ function getImageDataArray()
 	Image1287.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/fcam/FLA_403266291EDR_F0050104FHAZ00312M_.JPG";
 	Image1287.attitude = new THREE.Quaternion(0.746772,-0.0235733,0.0352471,-0.663727);
 	Image1287.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1287.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1287.mastAz = "1.03995";
 	Image1287.mastEl = "-43.4728";
 	Image1287.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30914,6 +32202,7 @@ function getImageDataArray()
 	Image1288.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/fcam/FRA_403266291EDR_F0050104FHAZ00312M_.JPG";
 	Image1288.attitude = new THREE.Quaternion(0.746772,-0.0235733,0.0352471,-0.663727);
 	Image1288.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1288.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1288.mastAz = "359.974";
 	Image1288.mastEl = "-43.7598";
 	Image1288.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30938,6 +32227,7 @@ function getImageDataArray()
 	Image1289.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/rcam/RLA_403268596EDR_F0050104RHAZ00309M_.JPG";
 	Image1289.attitude = new THREE.Quaternion(0.74684,-0.0215448,0.0366161,-0.663646);
 	Image1289.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1289.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1289.mastAz = "182.571";
 	Image1289.mastEl = "-44.9097";
 	Image1289.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30962,6 +32252,7 @@ function getImageDataArray()
 	Image1290.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/rcam/RRA_403268596EDR_F0050104RHAZ00309M_.JPG";
 	Image1290.attitude = new THREE.Quaternion(0.74684,-0.0215448,0.0366161,-0.663646);
 	Image1290.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1290.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1290.mastAz = "182.044";
 	Image1290.mastEl = "-43.5257";
 	Image1290.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -30986,6 +32277,7 @@ function getImageDataArray()
 	Image1291.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/rcam/RLA_403272756EDR_F0050104RHAZ00309M_.JPG";
 	Image1291.attitude = new THREE.Quaternion(0.74684,-0.0215448,0.0366161,-0.663646);
 	Image1291.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1291.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1291.mastAz = "182.571";
 	Image1291.mastEl = "-44.9097";
 	Image1291.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31010,6 +32302,7 @@ function getImageDataArray()
 	Image1292.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00065/opgs/edr/rcam/RRA_403272756EDR_F0050104RHAZ00309M_.JPG";
 	Image1292.attitude = new THREE.Quaternion(0.74684,-0.0215448,0.0366161,-0.663646);
 	Image1292.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1292.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1292.mastAz = "182.044";
 	Image1292.mastEl = "-43.5257";
 	Image1292.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31034,6 +32327,7 @@ function getImageDataArray()
 	Image1293.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FLA_403340259EDR_F0050104FHAZ00311M_.JPG";
 	Image1293.attitude = new THREE.Quaternion(0.74684,-0.0215448,0.0366161,-0.663646);
 	Image1293.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1293.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1293.mastAz = "1.03995";
 	Image1293.mastEl = "-43.4728";
 	Image1293.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31058,6 +32352,7 @@ function getImageDataArray()
 	Image1294.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FRA_403340259EDR_F0050104FHAZ00311M_.JPG";
 	Image1294.attitude = new THREE.Quaternion(0.74684,-0.0215448,0.0366161,-0.663646);
 	Image1294.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1294.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1294.mastAz = "359.974";
 	Image1294.mastEl = "-43.7598";
 	Image1294.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31082,6 +32377,7 @@ function getImageDataArray()
 	Image1295.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NLA_403351691EDR_F0050104NCAM00318M_.JPG";
 	Image1295.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1295.cameraPosition = new THREE.Vector3(0.771035,0.309367,-1.86092);
+	Image1295.cameraVector = new THREE.Vector3(0.45392827803629365,-0.35291919666202703,0.8181669505830913);
 	Image1295.mastAz = "322.094";
 	Image1295.mastEl = "-54.879";
 	Image1295.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31106,6 +32402,7 @@ function getImageDataArray()
 	Image1296.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NRA_403351691EDR_F0050104NCAM00318M_.JPG";
 	Image1296.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1296.cameraPosition = new THREE.Vector3(1.03984,0.636741,-1.86085);
+	Image1296.cameraVector = new THREE.Vector3(0.4444594940641532,-0.35850872523283,0.8209307230626518);
 	Image1296.mastAz = "321.068";
 	Image1296.mastEl = "-55.1545";
 	Image1296.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31130,6 +32427,7 @@ function getImageDataArray()
 	Image1297.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NLA_403351704EDR_F0050104NCAM00330M_.JPG";
 	Image1297.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1297.cameraPosition = new THREE.Vector3(0.771035,0.309367,-1.86092);
+	Image1297.cameraVector = new THREE.Vector3(0.45392827803629365,-0.35291919666202703,0.8181669505830913);
 	Image1297.mastAz = "322.094";
 	Image1297.mastEl = "-54.879";
 	Image1297.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31154,6 +32452,7 @@ function getImageDataArray()
 	Image1298.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NRA_403351704EDR_F0050104NCAM00330M_.JPG";
 	Image1298.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1298.cameraPosition = new THREE.Vector3(1.03984,0.636741,-1.86085);
+	Image1298.cameraVector = new THREE.Vector3(0.4444594940641532,-0.35850872523283,0.8209307230626518);
 	Image1298.mastAz = "321.068";
 	Image1298.mastEl = "-55.1545";
 	Image1298.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31178,6 +32477,7 @@ function getImageDataArray()
 	Image1299.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NLA_403351717EDR_F0050104NCAM00331M_.JPG";
 	Image1299.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1299.cameraPosition = new THREE.Vector3(0.771035,0.309367,-1.86092);
+	Image1299.cameraVector = new THREE.Vector3(0.45392827803629365,-0.35291919666202703,0.8181669505830913);
 	Image1299.mastAz = "322.094";
 	Image1299.mastEl = "-54.879";
 	Image1299.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31202,6 +32502,7 @@ function getImageDataArray()
 	Image1300.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NRA_403351717EDR_F0050104NCAM00331M_.JPG";
 	Image1300.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1300.cameraPosition = new THREE.Vector3(1.03984,0.636741,-1.86085);
+	Image1300.cameraVector = new THREE.Vector3(0.4444594940641532,-0.35850872523283,0.8209307230626518);
 	Image1300.mastAz = "321.068";
 	Image1300.mastEl = "-55.1545";
 	Image1300.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31226,6 +32527,7 @@ function getImageDataArray()
 	Image1301.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FRA_403351737EDR_F0050104FHAZ00202M_.JPG";
 	Image1301.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1301.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1301.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1301.mastAz = "359.974";
 	Image1301.mastEl = "-43.7598";
 	Image1301.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31250,6 +32552,7 @@ function getImageDataArray()
 	Image1302.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FLA_403351737EDR_F0050104FHAZ00202M_.JPG";
 	Image1302.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1302.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1302.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1302.mastAz = "1.03995";
 	Image1302.mastEl = "-43.4728";
 	Image1302.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31274,6 +32577,7 @@ function getImageDataArray()
 	Image1303.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FRA_403351750EDR_F0050104FHAZ00203M_.JPG";
 	Image1303.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1303.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1303.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1303.mastAz = "359.974";
 	Image1303.mastEl = "-43.7598";
 	Image1303.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31298,6 +32602,7 @@ function getImageDataArray()
 	Image1304.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FLA_403351750EDR_F0050104FHAZ00203M_.JPG";
 	Image1304.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1304.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1304.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1304.mastAz = "1.03995";
 	Image1304.mastEl = "-43.4728";
 	Image1304.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31322,6 +32627,7 @@ function getImageDataArray()
 	Image1305.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FLA_403351763EDR_F0050104FHAZ00204M_.JPG";
 	Image1305.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1305.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1305.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1305.mastAz = "1.03995";
 	Image1305.mastEl = "-43.4728";
 	Image1305.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31346,6 +32652,7 @@ function getImageDataArray()
 	Image1306.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FRA_403351763EDR_F0050104FHAZ00204M_.JPG";
 	Image1306.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1306.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1306.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1306.mastAz = "359.974";
 	Image1306.mastEl = "-43.7598";
 	Image1306.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31370,6 +32677,7 @@ function getImageDataArray()
 	Image1307.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FLA_403352624EDR_F0050104FHAZ00202M_.JPG";
 	Image1307.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1307.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1307.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1307.mastAz = "1.03995";
 	Image1307.mastEl = "-43.4728";
 	Image1307.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31394,6 +32702,7 @@ function getImageDataArray()
 	Image1308.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FRA_403352624EDR_F0050104FHAZ00202M_.JPG";
 	Image1308.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1308.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1308.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1308.mastAz = "359.974";
 	Image1308.mastEl = "-43.7598";
 	Image1308.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31418,6 +32727,7 @@ function getImageDataArray()
 	Image1309.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NLA_403352663EDR_F0050104NCAM00324M_.JPG";
 	Image1309.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1309.cameraPosition = new THREE.Vector3(0.767516,0.305984,-1.89678);
+	Image1309.cameraVector = new THREE.Vector3(0.5845735640817173,-0.49569434527019374,0.6423090099352119);
 	Image1309.mastAz = "319.672";
 	Image1309.mastEl = "-39.9412";
 	Image1309.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31442,6 +32752,7 @@ function getImageDataArray()
 	Image1310.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NRA_403352663EDR_F0050104NCAM00324M_.JPG";
 	Image1310.attitude = new THREE.Quaternion(0.746814,-0.0223888,0.0353783,-0.663714);
 	Image1310.cameraPosition = new THREE.Vector3(1.04781,0.623575,-1.89661);
+	Image1310.cameraVector = new THREE.Vector3(0.5755424694548907,-0.5015024830918915,0.645945915155776);
 	Image1310.mastAz = "318.901";
 	Image1310.mastEl = "-40.2132";
 	Image1310.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31466,6 +32777,7 @@ function getImageDataArray()
 	Image1311.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FLA_403353089EDR_F0050104FHAZ00202M_.JPG";
 	Image1311.attitude = new THREE.Quaternion(0.74686,-0.0213346,0.0352963,-0.663701);
 	Image1311.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1311.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1311.mastAz = "1.03995";
 	Image1311.mastEl = "-43.4728";
 	Image1311.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31490,6 +32802,7 @@ function getImageDataArray()
 	Image1312.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FRA_403353089EDR_F0050104FHAZ00202M_.JPG";
 	Image1312.attitude = new THREE.Quaternion(0.74686,-0.0213346,0.0352963,-0.663701);
 	Image1312.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1312.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1312.mastAz = "359.974";
 	Image1312.mastEl = "-43.7598";
 	Image1312.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31514,6 +32827,7 @@ function getImageDataArray()
 	Image1313.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NLA_403353108EDR_F0050104NCAM00324M_.JPG";
 	Image1313.attitude = new THREE.Quaternion(0.746848,-0.0219048,0.0357878,-0.663669);
 	Image1313.cameraPosition = new THREE.Vector3(0.767516,0.305984,-1.89678);
+	Image1313.cameraVector = new THREE.Vector3(0.5845735640817173,-0.49569434527019374,0.6423090099352119);
 	Image1313.mastAz = "319.672";
 	Image1313.mastEl = "-39.9412";
 	Image1313.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31538,6 +32852,7 @@ function getImageDataArray()
 	Image1314.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NRA_403353108EDR_F0050104NCAM00324M_.JPG";
 	Image1314.attitude = new THREE.Quaternion(0.746848,-0.0219048,0.0357878,-0.663669);
 	Image1314.cameraPosition = new THREE.Vector3(1.04781,0.623575,-1.89661);
+	Image1314.cameraVector = new THREE.Vector3(0.5755424694548907,-0.5015024830918915,0.645945915155776);
 	Image1314.mastAz = "318.901";
 	Image1314.mastEl = "-40.2132";
 	Image1314.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31562,6 +32877,7 @@ function getImageDataArray()
 	Image1315.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FLA_403353215EDR_F0050104FHAZ00202M_.JPG";
 	Image1315.attitude = new THREE.Quaternion(0.746827,-0.0227431,0.0365212,-0.663625);
 	Image1315.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1315.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1315.mastAz = "1.03995";
 	Image1315.mastEl = "-43.4728";
 	Image1315.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31586,6 +32902,7 @@ function getImageDataArray()
 	Image1316.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FRA_403353215EDR_F0050104FHAZ00202M_.JPG";
 	Image1316.attitude = new THREE.Quaternion(0.746827,-0.0227431,0.0365212,-0.663625);
 	Image1316.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1316.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1316.mastAz = "359.974";
 	Image1316.mastEl = "-43.7598";
 	Image1316.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31610,6 +32927,7 @@ function getImageDataArray()
 	Image1317.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NLA_403353234EDR_F0050104NCAM00325M_.JPG";
 	Image1317.attitude = new THREE.Quaternion(0.746877,-0.0218972,0.0346004,-0.663701);
 	Image1317.cameraPosition = new THREE.Vector3(0.767516,0.305984,-1.89678);
+	Image1317.cameraVector = new THREE.Vector3(0.5845735640817173,-0.49569434527019374,0.6423090099352119);
 	Image1317.mastAz = "319.672";
 	Image1317.mastEl = "-39.9412";
 	Image1317.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31634,6 +32952,7 @@ function getImageDataArray()
 	Image1318.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NRA_403353234EDR_F0050104NCAM00325M_.JPG";
 	Image1318.attitude = new THREE.Quaternion(0.746877,-0.0218972,0.0346004,-0.663701);
 	Image1318.cameraPosition = new THREE.Vector3(1.04781,0.623575,-1.89661);
+	Image1318.cameraVector = new THREE.Vector3(0.5755424694548907,-0.5015024830918915,0.645945915155776);
 	Image1318.mastAz = "318.901";
 	Image1318.mastEl = "-40.2132";
 	Image1318.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31658,6 +32977,7 @@ function getImageDataArray()
 	Image1319.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NRA_403353568EDR_F0050104NCAM00326M_.JPG";
 	Image1319.attitude = new THREE.Quaternion(0.746878,-0.0220223,0.035855,-0.663628);
 	Image1319.cameraPosition = new THREE.Vector3(1.01371,0.690871,-1.85746);
+	Image1319.cameraVector = new THREE.Vector3(0.49748377926007525,-0.23342685192061088,0.8354769860238798);
 	Image1319.mastAz = "334.82";
 	Image1319.mastEl = "-56.6422";
 	Image1319.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31682,6 +33002,7 @@ function getImageDataArray()
 	Image1320.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NLA_403353568EDR_F0050104NCAM00326M_.JPG";
 	Image1320.attitude = new THREE.Quaternion(0.746878,-0.0220223,0.035855,-0.663628);
 	Image1320.cameraPosition = new THREE.Vector3(0.830182,0.3091,-1.85743);
+	Image1320.cameraVector = new THREE.Vector3(0.5054194196875346,-0.22578051681443334,0.8328111241030123);
 	Image1320.mastAz = "335.885";
 	Image1320.mastEl = "-56.366";
 	Image1320.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31706,6 +33027,7 @@ function getImageDataArray()
 	Image1321.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FLA_403353588EDR_F0050104FHAZ00202M_.JPG";
 	Image1321.attitude = new THREE.Quaternion(0.746878,-0.0220223,0.035855,-0.663628);
 	Image1321.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1321.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1321.mastAz = "1.03995";
 	Image1321.mastEl = "-43.4728";
 	Image1321.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31730,6 +33052,7 @@ function getImageDataArray()
 	Image1322.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FRA_403353588EDR_F0050104FHAZ00202M_.JPG";
 	Image1322.attitude = new THREE.Quaternion(0.746878,-0.0220223,0.035855,-0.663628);
 	Image1322.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1322.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1322.mastAz = "359.974";
 	Image1322.mastEl = "-43.7598";
 	Image1322.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31754,6 +33077,7 @@ function getImageDataArray()
 	Image1323.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NLA_403354156EDR_F0050104NCAM00324M_.JPG";
 	Image1323.attitude = new THREE.Quaternion(0.746878,-0.0220223,0.035855,-0.663628);
 	Image1323.cameraPosition = new THREE.Vector3(0.766625,0.306116,-1.89678);
+	Image1323.cameraVector = new THREE.Vector3(0.582823299703743,-0.49775281339581595,0.6423076662153357);
 	Image1323.mastAz = "319.47";
 	Image1323.mastEl = "-39.9411";
 	Image1323.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31778,6 +33102,7 @@ function getImageDataArray()
 	Image1324.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NRA_403354156EDR_F0050104NCAM00324M_.JPG";
 	Image1324.attitude = new THREE.Quaternion(0.746878,-0.0220223,0.035855,-0.663628);
 	Image1324.cameraPosition = new THREE.Vector3(1.04804,0.622718,-1.89661);
+	Image1324.cameraVector = new THREE.Vector3(0.5737739050166277,-0.5035274070830367,0.6459440039494164);
 	Image1324.mastAz = "318.7";
 	Image1324.mastEl = "-40.213";
 	Image1324.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31802,6 +33127,7 @@ function getImageDataArray()
 	Image1325.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FLA_403354613EDR_F0050104FHAZ00202M_.JPG";
 	Image1325.attitude = new THREE.Quaternion(0.746878,-0.0220223,0.035855,-0.663628);
 	Image1325.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1325.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1325.mastAz = "1.03995";
 	Image1325.mastEl = "-43.4728";
 	Image1325.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31826,6 +33152,7 @@ function getImageDataArray()
 	Image1326.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/fcam/FRA_403354613EDR_F0050104FHAZ00202M_.JPG";
 	Image1326.attitude = new THREE.Quaternion(0.746878,-0.0220223,0.035855,-0.663628);
 	Image1326.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1326.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1326.mastAz = "359.974";
 	Image1326.mastEl = "-43.7598";
 	Image1326.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31850,6 +33177,7 @@ function getImageDataArray()
 	Image1327.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NLA_403354645EDR_F0050104NCAM00324M_.JPG";
 	Image1327.attitude = new THREE.Quaternion(0.746878,-0.0220223,0.035855,-0.663628);
 	Image1327.cameraPosition = new THREE.Vector3(0.767408,0.306004,-1.89668);
+	Image1327.cameraVector = new THREE.Vector3(0.584039282958758,-0.4956368347668317,0.6428392053875807);
 	Image1327.mastAz = "319.65";
 	Image1327.mastEl = "-39.981";
 	Image1327.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31874,6 +33202,7 @@ function getImageDataArray()
 	Image1328.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00066/opgs/edr/ncam/NRA_403354645EDR_F0050104NCAM00324M_.JPG";
 	Image1328.attitude = new THREE.Quaternion(0.746878,-0.0220223,0.035855,-0.663628);
 	Image1328.cameraPosition = new THREE.Vector3(1.04783,0.62348,-1.89651);
+	Image1328.cameraVector = new THREE.Vector3(0.5749999067229331,-0.5014415191541033,0.6464762255002447);
 	Image1328.mastAz = "318.878";
 	Image1328.mastEl = "-40.2529";
 	Image1328.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31898,6 +33227,7 @@ function getImageDataArray()
 	Image1329.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FLA_403429841EDR_F0050104FHAZ00311M_.JPG";
 	Image1329.attitude = new THREE.Quaternion(0.746852,-0.0216118,0.0366051,-0.66363);
 	Image1329.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1329.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1329.mastAz = "1.03995";
 	Image1329.mastEl = "-43.4728";
 	Image1329.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31922,6 +33252,7 @@ function getImageDataArray()
 	Image1330.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FRA_403429841EDR_F0050104FHAZ00311M_.JPG";
 	Image1330.attitude = new THREE.Quaternion(0.746852,-0.0216118,0.0366051,-0.66363);
 	Image1330.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1330.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1330.mastAz = "359.974";
 	Image1330.mastEl = "-43.7598";
 	Image1330.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31946,6 +33277,7 @@ function getImageDataArray()
 	Image1331.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NRA_403437126EDR_F0050104NCAM00318M_.JPG";
 	Image1331.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1331.cameraPosition = new THREE.Vector3(1.04656,0.626453,-1.88821);
+	Image1331.cameraVector = new THREE.Vector3(0.549941578567599,-0.46957497898261946,0.690697907392262);
 	Image1331.mastAz = "319.475";
 	Image1331.mastEl = "-43.6619";
 	Image1331.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31970,6 +33302,7 @@ function getImageDataArray()
 	Image1332.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NLA_403437126EDR_F0050104NCAM00318M_.JPG";
 	Image1332.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1332.cameraPosition = new THREE.Vector3(0.769343,0.306173,-1.88836);
+	Image1332.cameraVector = new THREE.Vector3(0.5590806799098356,-0.4638200465111478,0.6872406840445003);
 	Image1332.mastAz = "320.288";
 	Image1332.mastEl = "-43.3893";
 	Image1332.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -31994,6 +33327,7 @@ function getImageDataArray()
 	Image1333.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FLA_403437146EDR_F0050104FHAZ00202M_.JPG";
 	Image1333.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1333.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1333.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1333.mastAz = "1.03995";
 	Image1333.mastEl = "-43.4728";
 	Image1333.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32018,6 +33352,7 @@ function getImageDataArray()
 	Image1334.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FRA_403437146EDR_F0050104FHAZ00202M_.JPG";
 	Image1334.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1334.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1334.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1334.mastAz = "359.974";
 	Image1334.mastEl = "-43.7598";
 	Image1334.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32042,6 +33377,7 @@ function getImageDataArray()
 	Image1335.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FLA_403437658EDR_F0050104FHAZ00202M_.JPG";
 	Image1335.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1335.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1335.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1335.mastAz = "1.03995";
 	Image1335.mastEl = "-43.4728";
 	Image1335.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32066,6 +33402,7 @@ function getImageDataArray()
 	Image1336.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FRA_403437658EDR_F0050104FHAZ00202M_.JPG";
 	Image1336.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1336.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1336.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1336.mastAz = "359.974";
 	Image1336.mastEl = "-43.7598";
 	Image1336.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32090,6 +33427,7 @@ function getImageDataArray()
 	Image1337.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NLA_403437692EDR_F0050104NCAM00318M_.JPG";
 	Image1337.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1337.cameraPosition = new THREE.Vector3(0.772261,0.308253,-1.86657);
+	Image1337.cameraVector = new THREE.Vector3(0.479920109525985,-0.3747699544493216,0.7932365156210472);
 	Image1337.mastAz = "321.974";
 	Image1337.mastEl = "-52.4661";
 	Image1337.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32114,6 +33452,7 @@ function getImageDataArray()
 	Image1338.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NRA_403437692EDR_F0050104NCAM00318M_.JPG";
 	Image1338.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1338.cameraPosition = new THREE.Vector3(1.04127,0.635463,-1.86648);
+	Image1338.cameraVector = new THREE.Vector3(0.4705405402694808,-0.38043345146803476,0.7961545006887946);
 	Image1338.mastAz = "321.005";
 	Image1338.mastEl = "-52.7409";
 	Image1338.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32138,6 +33477,7 @@ function getImageDataArray()
 	Image1339.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NRA_403439631EDR_F0050104NCAM00318M_.JPG";
 	Image1339.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1339.cameraPosition = new THREE.Vector3(1.04127,0.635463,-1.86648);
+	Image1339.cameraVector = new THREE.Vector3(0.4705405402694808,-0.38043345146803476,0.7961545006887946);
 	Image1339.mastAz = "321.005";
 	Image1339.mastEl = "-52.7409";
 	Image1339.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32162,6 +33502,7 @@ function getImageDataArray()
 	Image1340.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NLA_403439631EDR_F0050104NCAM00318M_.JPG";
 	Image1340.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1340.cameraPosition = new THREE.Vector3(0.772261,0.308253,-1.86657);
+	Image1340.cameraVector = new THREE.Vector3(0.479920109525985,-0.3747699544493216,0.7932365156210472);
 	Image1340.mastAz = "321.974";
 	Image1340.mastEl = "-52.4661";
 	Image1340.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32186,6 +33527,7 @@ function getImageDataArray()
 	Image1341.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FLA_403439651EDR_F0050104FHAZ00202M_.JPG";
 	Image1341.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1341.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1341.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1341.mastAz = "1.03995";
 	Image1341.mastEl = "-43.4728";
 	Image1341.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32210,6 +33552,7 @@ function getImageDataArray()
 	Image1342.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FRA_403439651EDR_F0050104FHAZ00202M_.JPG";
 	Image1342.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1342.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1342.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1342.mastAz = "359.974";
 	Image1342.mastEl = "-43.7598";
 	Image1342.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32234,6 +33577,7 @@ function getImageDataArray()
 	Image1343.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NLA_403440177EDR_F0050104NCAM00318M_.JPG";
 	Image1343.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1343.cameraPosition = new THREE.Vector3(0.807733,0.306848,-1.86269);
+	Image1343.cameraVector = new THREE.Vector3(0.5092485824627802,-0.2898082296477768,0.810356138551483);
 	Image1343.mastAz = "330.315";
 	Image1343.mastEl = "-54.1079";
 	Image1343.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32258,6 +33602,7 @@ function getImageDataArray()
 	Image1344.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NRA_403440177EDR_F0050104NCAM00318M_.JPG";
 	Image1344.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1344.cameraPosition = new THREE.Vector3(1.02684,0.669369,-1.86267);
+	Image1344.cameraVector = new THREE.Vector3(0.5007129789165436,-0.2967197825806941,0.8131690373900045);
 	Image1344.mastAz = "329.309";
 	Image1344.mastEl = "-54.3832";
 	Image1344.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32282,6 +33627,7 @@ function getImageDataArray()
 	Image1345.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FRA_403440197EDR_F0050104FHAZ00202M_.JPG";
 	Image1345.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1345.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1345.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1345.mastAz = "359.974";
 	Image1345.mastEl = "-43.7598";
 	Image1345.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32306,6 +33652,7 @@ function getImageDataArray()
 	Image1346.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FLA_403440197EDR_F0050104FHAZ00202M_.JPG";
 	Image1346.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1346.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1346.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1346.mastAz = "1.03995";
 	Image1346.mastEl = "-43.4728";
 	Image1346.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32330,6 +33677,7 @@ function getImageDataArray()
 	Image1347.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NRA_403440714EDR_F0050104NCAM00318M_.JPG";
 	Image1347.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1347.cameraPosition = new THREE.Vector3(1.00393,0.703515,-1.85246);
+	Image1347.cameraVector = new THREE.Vector3(0.4802060893639306,-0.1918295617938727,0.8559226197266732);
 	Image1347.mastAz = "338.179";
 	Image1347.mastEl = "-58.8384";
 	Image1347.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32354,6 +33702,7 @@ function getImageDataArray()
 	Image1348.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NLA_403440714EDR_F0050104NCAM00318M_.JPG";
 	Image1348.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1348.cameraPosition = new THREE.Vector3(0.842823,0.311757,-1.8524);
+	Image1348.cameraVector = new THREE.Vector3(0.4877780532442411,-0.1837742570530406,0.8534047065829092);
 	Image1348.mastAz = "339.31";
 	Image1348.mastEl = "-58.5613";
 	Image1348.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32378,6 +33727,7 @@ function getImageDataArray()
 	Image1349.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FLA_403440734EDR_F0050104FHAZ00202M_.JPG";
 	Image1349.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1349.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1349.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1349.mastAz = "1.03995";
 	Image1349.mastEl = "-43.4728";
 	Image1349.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32402,6 +33752,7 @@ function getImageDataArray()
 	Image1350.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/fcam/FRA_403440734EDR_F0050104FHAZ00202M_.JPG";
 	Image1350.attitude = new THREE.Quaternion(0.746836,-0.0222701,0.0353063,-0.663697);
 	Image1350.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1350.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1350.mastAz = "359.974";
 	Image1350.mastEl = "-43.7598";
 	Image1350.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32426,6 +33777,7 @@ function getImageDataArray()
 	Image1351.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NLA_403441127EDR_F0050104NCAM00326M_.JPG";
 	Image1351.attitude = new THREE.Quaternion(0.746913,-0.0206429,0.0347582,-0.663692);
 	Image1351.cameraPosition = new THREE.Vector3(0.829982,0.309088,-1.85739);
+	Image1351.cameraVector = new THREE.Vector3(0.5049785151133305,-0.22602062698808167,0.8330134305338962);
 	Image1351.mastAz = "335.844";
 	Image1351.mastEl = "-56.3869";
 	Image1351.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32450,6 +33802,7 @@ function getImageDataArray()
 	Image1352.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/ncam/NRA_403441127EDR_F0050104NCAM00326M_.JPG";
 	Image1352.attitude = new THREE.Quaternion(0.746913,-0.0206429,0.0347582,-0.663692);
 	Image1352.cameraPosition = new THREE.Vector3(1.01379,0.690725,-1.85741);
+	Image1352.cameraVector = new THREE.Vector3(0.49703410756503136,-0.23365986094624083,0.8356794632510818);
 	Image1352.mastAz = "334.778";
 	Image1352.mastEl = "-56.6631";
 	Image1352.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32474,6 +33827,7 @@ function getImageDataArray()
 	Image1353.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/rcam/RLA_403444777EDR_F0050104RHAZ00310M_.JPG";
 	Image1353.attitude = new THREE.Quaternion(0.746913,-0.0206429,0.0347582,-0.663692);
 	Image1353.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1353.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1353.mastAz = "182.571";
 	Image1353.mastEl = "-44.9097";
 	Image1353.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32498,6 +33852,7 @@ function getImageDataArray()
 	Image1354.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/rcam/RRA_403444777EDR_F0050104RHAZ00310M_.JPG";
 	Image1354.attitude = new THREE.Quaternion(0.746913,-0.0206429,0.0347582,-0.663692);
 	Image1354.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1354.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1354.mastAz = "182.044";
 	Image1354.mastEl = "-43.5257";
 	Image1354.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32522,6 +33877,7 @@ function getImageDataArray()
 	Image1355.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/rcam/RLA_403447698EDR_F0050104RHAZ00310M_.JPG";
 	Image1355.attitude = new THREE.Quaternion(0.746913,-0.0206429,0.0347582,-0.663692);
 	Image1355.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1355.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1355.mastAz = "182.571";
 	Image1355.mastEl = "-44.9097";
 	Image1355.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32546,6 +33902,7 @@ function getImageDataArray()
 	Image1356.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00067/opgs/edr/rcam/RRA_403447698EDR_F0050104RHAZ00310M_.JPG";
 	Image1356.attitude = new THREE.Quaternion(0.746913,-0.0206429,0.0347582,-0.663692);
 	Image1356.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1356.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1356.mastAz = "182.044";
 	Image1356.mastEl = "-43.5257";
 	Image1356.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32570,6 +33927,7 @@ function getImageDataArray()
 	Image1357.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00068/opgs/edr/fcam/FLA_403517811EDR_F0050104FHAZ00311M_.JPG";
 	Image1357.attitude = new THREE.Quaternion(0.746913,-0.0206429,0.0347582,-0.663692);
 	Image1357.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1357.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1357.mastAz = "1.03995";
 	Image1357.mastEl = "-43.4728";
 	Image1357.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32594,6 +33952,7 @@ function getImageDataArray()
 	Image1358.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00068/opgs/edr/fcam/FRA_403517811EDR_F0050104FHAZ00311M_.JPG";
 	Image1358.attitude = new THREE.Quaternion(0.746913,-0.0206429,0.0347582,-0.663692);
 	Image1358.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1358.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1358.mastAz = "359.974";
 	Image1358.mastEl = "-43.7598";
 	Image1358.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32618,6 +33977,7 @@ function getImageDataArray()
 	Image1359.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00068/opgs/edr/rcam/RLA_403517837EDR_F0050104RHAZ00310M_.JPG";
 	Image1359.attitude = new THREE.Quaternion(0.746913,-0.0206429,0.0347582,-0.663692);
 	Image1359.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1359.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1359.mastAz = "182.571";
 	Image1359.mastEl = "-44.9097";
 	Image1359.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32642,6 +34002,7 @@ function getImageDataArray()
 	Image1360.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00068/opgs/edr/rcam/RRA_403517837EDR_F0050104RHAZ00310M_.JPG";
 	Image1360.attitude = new THREE.Quaternion(0.746913,-0.0206429,0.0347582,-0.663692);
 	Image1360.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1360.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1360.mastAz = "182.044";
 	Image1360.mastEl = "-43.5257";
 	Image1360.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32666,6 +34027,7 @@ function getImageDataArray()
 	Image1361.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/rcam/RLA_403616645EDR_F0050104RHAZ00310M_.JPG";
 	Image1361.attitude = new THREE.Quaternion(0.74683,-0.0223662,0.0353407,-0.663698);
 	Image1361.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1361.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1361.mastAz = "182.571";
 	Image1361.mastEl = "-44.9097";
 	Image1361.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32690,6 +34052,7 @@ function getImageDataArray()
 	Image1362.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/rcam/RRA_403616645EDR_F0050104RHAZ00310M_.JPG";
 	Image1362.attitude = new THREE.Quaternion(0.74683,-0.0223662,0.0353407,-0.663698);
 	Image1362.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1362.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1362.mastAz = "182.044";
 	Image1362.mastEl = "-43.5257";
 	Image1362.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32714,6 +34077,7 @@ function getImageDataArray()
 	Image1363.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FLA_403617264EDR_F0050104FHAZ00202M_.JPG";
 	Image1363.attitude = new THREE.Quaternion(0.74683,-0.0223662,0.0353407,-0.663698);
 	Image1363.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1363.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1363.mastAz = "1.03995";
 	Image1363.mastEl = "-43.4728";
 	Image1363.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32738,6 +34102,7 @@ function getImageDataArray()
 	Image1364.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FRA_403617264EDR_F0050104FHAZ00202M_.JPG";
 	Image1364.attitude = new THREE.Quaternion(0.74683,-0.0223662,0.0353407,-0.663698);
 	Image1364.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1364.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1364.mastAz = "359.974";
 	Image1364.mastEl = "-43.7598";
 	Image1364.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32762,6 +34127,7 @@ function getImageDataArray()
 	Image1365.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FLA_403617820EDR_F0050104FHAZ00202M_.JPG";
 	Image1365.attitude = new THREE.Quaternion(0.74683,-0.0223662,0.0353407,-0.663698);
 	Image1365.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1365.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1365.mastAz = "1.03995";
 	Image1365.mastEl = "-43.4728";
 	Image1365.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32786,6 +34152,7 @@ function getImageDataArray()
 	Image1366.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FRA_403617820EDR_F0050104FHAZ00202M_.JPG";
 	Image1366.attitude = new THREE.Quaternion(0.74683,-0.0223662,0.0353407,-0.663698);
 	Image1366.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1366.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1366.mastAz = "359.974";
 	Image1366.mastEl = "-43.7598";
 	Image1366.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32810,6 +34177,7 @@ function getImageDataArray()
 	Image1367.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FLA_403618256EDR_F0050104FHAZ00202M_.JPG";
 	Image1367.attitude = new THREE.Quaternion(0.74683,-0.0223662,0.0353407,-0.663698);
 	Image1367.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1367.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1367.mastAz = "1.03995";
 	Image1367.mastEl = "-43.4728";
 	Image1367.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32834,6 +34202,7 @@ function getImageDataArray()
 	Image1368.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FRA_403618256EDR_F0050104FHAZ00202M_.JPG";
 	Image1368.attitude = new THREE.Quaternion(0.74683,-0.0223662,0.0353407,-0.663698);
 	Image1368.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1368.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1368.mastAz = "359.974";
 	Image1368.mastEl = "-43.7598";
 	Image1368.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32858,6 +34227,7 @@ function getImageDataArray()
 	Image1369.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FLA_403618855EDR_F0050104FHAZ00205M_.JPG";
 	Image1369.attitude = new THREE.Quaternion(0.74682,-0.0218828,0.0358388,-0.663699);
 	Image1369.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1369.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1369.mastAz = "1.03995";
 	Image1369.mastEl = "-43.4728";
 	Image1369.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32882,6 +34252,7 @@ function getImageDataArray()
 	Image1370.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FRA_403618855EDR_F0050104FHAZ00205M_.JPG";
 	Image1370.attitude = new THREE.Quaternion(0.74682,-0.0218828,0.0358388,-0.663699);
 	Image1370.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1370.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1370.mastAz = "359.974";
 	Image1370.mastEl = "-43.7598";
 	Image1370.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32906,6 +34277,7 @@ function getImageDataArray()
 	Image1371.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/ncam/NRA_403618888EDR_F0050104NCAM00324M_.JPG";
 	Image1371.attitude = new THREE.Quaternion(0.746828,-0.0212191,0.0353059,-0.663741);
 	Image1371.cameraPosition = new THREE.Vector3(0.992679,0.721262,-1.86359);
+	Image1371.cameraVector = new THREE.Vector3(0.5639995825147577,-0.1638542964242717,0.8093554475423551);
 	Image1371.mastAz = "343.76";
 	Image1371.mastEl = "-54.0096";
 	Image1371.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32930,6 +34302,7 @@ function getImageDataArray()
 	Image1372.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/ncam/NLA_403618888EDR_F0050104NCAM00324M_.JPG";
 	Image1372.attitude = new THREE.Quaternion(0.746828,-0.0212191,0.0353059,-0.663741);
 	Image1372.cameraPosition = new THREE.Vector3(0.870876,0.31556,-1.86351);
+	Image1372.cameraVector = new THREE.Vector3(0.5705270765814768,-0.1550293644168981,0.8065139496970193);
 	Image1372.mastAz = "344.758";
 	Image1372.mastEl = "-53.7341";
 	Image1372.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32954,6 +34327,7 @@ function getImageDataArray()
 	Image1373.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FLA_403618996EDR_F0050104FHAZ00205M_.JPG";
 	Image1373.attitude = new THREE.Quaternion(0.74665,-0.0219398,0.0371969,-0.663814);
 	Image1373.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1373.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1373.mastAz = "1.03995";
 	Image1373.mastEl = "-43.4728";
 	Image1373.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -32978,6 +34352,7 @@ function getImageDataArray()
 	Image1374.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FRA_403618996EDR_F0050104FHAZ00205M_.JPG";
 	Image1374.attitude = new THREE.Quaternion(0.74665,-0.0219398,0.0371969,-0.663814);
 	Image1374.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1374.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1374.mastAz = "359.974";
 	Image1374.mastEl = "-43.7598";
 	Image1374.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33002,6 +34377,7 @@ function getImageDataArray()
 	Image1375.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/ncam/NLA_403619016EDR_F0050104NCAM00325M_.JPG";
 	Image1375.attitude = new THREE.Quaternion(0.746658,-0.0214247,0.0367188,-0.663848);
 	Image1375.cameraPosition = new THREE.Vector3(0.870876,0.31556,-1.86351);
+	Image1375.cameraVector = new THREE.Vector3(0.5705270765814768,-0.1550293644168981,0.8065139496970193);
 	Image1375.mastAz = "344.758";
 	Image1375.mastEl = "-53.7341";
 	Image1375.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33026,6 +34402,7 @@ function getImageDataArray()
 	Image1376.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/ncam/NRA_403619016EDR_F0050104NCAM00325M_.JPG";
 	Image1376.attitude = new THREE.Quaternion(0.746658,-0.0214247,0.0367188,-0.663848);
 	Image1376.cameraPosition = new THREE.Vector3(0.992679,0.721262,-1.86359);
+	Image1376.cameraVector = new THREE.Vector3(0.5639995825147577,-0.1638542964242717,0.8093554475423551);
 	Image1376.mastAz = "343.76";
 	Image1376.mastEl = "-54.0096";
 	Image1376.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33050,6 +34427,7 @@ function getImageDataArray()
 	Image1377.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/ncam/NRA_403619371EDR_F0050104NCAM00326M_.JPG";
 	Image1377.attitude = new THREE.Quaternion(0.746611,-0.0211958,0.0340015,-0.664053);
 	Image1377.cameraPosition = new THREE.Vector3(1.0133,0.691524,-1.85749);
+	Image1377.cameraVector = new THREE.Vector3(0.498361534593303,-0.23193080923328765,0.8353705049654316);
 	Image1377.mastAz = "335.0";
 	Image1377.mastEl = "-56.6312";
 	Image1377.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33074,6 +34452,7 @@ function getImageDataArray()
 	Image1378.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/ncam/NLA_403619371EDR_F0050104NCAM00326M_.JPG";
 	Image1378.attitude = new THREE.Quaternion(0.746611,-0.0211958,0.0340015,-0.664053);
 	Image1378.cameraPosition = new THREE.Vector3(0.830977,0.309178,-1.85746);
+	Image1378.cameraVector = new THREE.Vector3(0.5062712819813043,-0.22425758308813049,0.8327051852057107);
 	Image1378.mastAz = "336.065";
 	Image1378.mastEl = "-56.355";
 	Image1378.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33098,6 +34477,7 @@ function getImageDataArray()
 	Image1379.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FLA_403619390EDR_F0050104FHAZ00205M_.JPG";
 	Image1379.attitude = new THREE.Quaternion(0.746611,-0.0211958,0.0340015,-0.664053);
 	Image1379.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1379.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1379.mastAz = "1.03995";
 	Image1379.mastEl = "-43.4728";
 	Image1379.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33122,6 +34502,7 @@ function getImageDataArray()
 	Image1380.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FRA_403619390EDR_F0050104FHAZ00205M_.JPG";
 	Image1380.attitude = new THREE.Quaternion(0.746611,-0.0211958,0.0340015,-0.664053);
 	Image1380.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1380.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1380.mastAz = "359.974";
 	Image1380.mastEl = "-43.7598";
 	Image1380.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33146,6 +34527,7 @@ function getImageDataArray()
 	Image1381.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/ncam/NLA_403619961EDR_F0050104NCAM00324M_.JPG";
 	Image1381.attitude = new THREE.Quaternion(0.746611,-0.0211958,0.0340015,-0.664053);
 	Image1381.cameraPosition = new THREE.Vector3(0.871064,0.315605,-1.86355);
+	Image1381.cameraVector = new THREE.Vector3(0.5708427239091343,-0.15467400752717364,0.8063588134047295);
 	Image1381.mastAz = "344.799";
 	Image1381.mastEl = "-53.719";
 	Image1381.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33170,6 +34552,7 @@ function getImageDataArray()
 	Image1382.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/ncam/NRA_403619961EDR_F0050104NCAM00324M_.JPG";
 	Image1382.attitude = new THREE.Quaternion(0.746611,-0.0211958,0.0340015,-0.664053);
 	Image1382.cameraPosition = new THREE.Vector3(0.992572,0.721395,-1.86362);
+	Image1382.cameraVector = new THREE.Vector3(0.564323607378169,-0.16350541022720508,0.8092001278930471);
 	Image1382.mastAz = "343.802";
 	Image1382.mastEl = "-53.9945";
 	Image1382.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33194,6 +34577,7 @@ function getImageDataArray()
 	Image1383.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FRA_403620422EDR_F0050104FHAZ00205M_.JPG";
 	Image1383.attitude = new THREE.Quaternion(0.746611,-0.0211958,0.0340015,-0.664053);
 	Image1383.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1383.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1383.mastAz = "359.974";
 	Image1383.mastEl = "-43.7598";
 	Image1383.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33218,6 +34602,7 @@ function getImageDataArray()
 	Image1384.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/fcam/FLA_403620422EDR_F0050104FHAZ00205M_.JPG";
 	Image1384.attitude = new THREE.Quaternion(0.746611,-0.0211958,0.0340015,-0.664053);
 	Image1384.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1384.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1384.mastAz = "1.03995";
 	Image1384.mastEl = "-43.4728";
 	Image1384.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33242,6 +34627,7 @@ function getImageDataArray()
 	Image1385.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/ncam/NRA_403620456EDR_F0050104NCAM00324M_.JPG";
 	Image1385.attitude = new THREE.Quaternion(0.746611,-0.0211958,0.0340015,-0.664053);
 	Image1385.cameraPosition = new THREE.Vector3(0.992554,0.72139,-1.86353);
+	Image1385.cameraVector = new THREE.Vector3(0.5637525930024976,-0.16337776154067893,0.8096238144452751);
 	Image1385.mastAz = "343.798";
 	Image1385.mastEl = "-54.0355";
 	Image1385.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33266,6 +34652,7 @@ function getImageDataArray()
 	Image1386.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/ncam/NLA_403620456EDR_F0050104NCAM00324M_.JPG";
 	Image1386.attitude = new THREE.Quaternion(0.746611,-0.0211958,0.0340015,-0.664053);
 	Image1386.cameraPosition = new THREE.Vector3(0.871017,0.315609,-1.86345);
+	Image1386.cameraVector = new THREE.Vector3(0.5702782368090485,-0.15455027235914792,0.8067818453185942);
 	Image1386.mastAz = "344.796";
 	Image1386.mastEl = "-53.76";
 	Image1386.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33290,6 +34677,7 @@ function getImageDataArray()
 	Image1387.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/rcam/RLA_403625551EDR_F0050104RHAZ00310M_.JPG";
 	Image1387.attitude = new THREE.Quaternion(0.746533,-0.0226847,0.0363936,-0.663964);
 	Image1387.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1387.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1387.mastAz = "182.571";
 	Image1387.mastEl = "-44.9097";
 	Image1387.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33314,6 +34702,7 @@ function getImageDataArray()
 	Image1388.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00069/opgs/edr/rcam/RRA_403625551EDR_F0050104RHAZ00310M_.JPG";
 	Image1388.attitude = new THREE.Quaternion(0.746533,-0.0226847,0.0363936,-0.663964);
 	Image1388.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1388.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1388.mastAz = "182.044";
 	Image1388.mastEl = "-43.5257";
 	Image1388.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33338,6 +34727,7 @@ function getImageDataArray()
 	Image1389.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00070/opgs/edr/fcam/FRA_403694921EDR_F0050104FHAZ00311M_.JPG";
 	Image1389.attitude = new THREE.Quaternion(0.746533,-0.0226847,0.0363936,-0.663964);
 	Image1389.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1389.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1389.mastAz = "359.974";
 	Image1389.mastEl = "-43.7598";
 	Image1389.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33362,6 +34752,7 @@ function getImageDataArray()
 	Image1390.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00070/opgs/edr/fcam/FLA_403694921EDR_F0050104FHAZ00311M_.JPG";
 	Image1390.attitude = new THREE.Quaternion(0.746533,-0.0226847,0.0363936,-0.663964);
 	Image1390.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1390.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1390.mastAz = "1.03995";
 	Image1390.mastEl = "-43.4728";
 	Image1390.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33386,6 +34777,7 @@ function getImageDataArray()
 	Image1391.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00070/opgs/edr/rcam/RLA_403694947EDR_F0050104RHAZ00309M_.JPG";
 	Image1391.attitude = new THREE.Quaternion(0.746533,-0.0226847,0.0363936,-0.663964);
 	Image1391.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1391.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1391.mastAz = "182.571";
 	Image1391.mastEl = "-44.9097";
 	Image1391.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33410,6 +34802,7 @@ function getImageDataArray()
 	Image1392.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00070/opgs/edr/rcam/RRA_403694947EDR_F0050104RHAZ00309M_.JPG";
 	Image1392.attitude = new THREE.Quaternion(0.746533,-0.0226847,0.0363936,-0.663964);
 	Image1392.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1392.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1392.mastAz = "182.044";
 	Image1392.mastEl = "-43.5257";
 	Image1392.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33434,6 +34827,7 @@ function getImageDataArray()
 	Image1393.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00070/opgs/edr/rcam/RRA_403703469EDR_F0050104RHAZ00310M_.JPG";
 	Image1393.attitude = new THREE.Quaternion(0.746585,-0.0217417,0.0348269,-0.664023);
 	Image1393.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1393.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1393.mastAz = "182.044";
 	Image1393.mastEl = "-43.5257";
 	Image1393.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33458,6 +34852,7 @@ function getImageDataArray()
 	Image1394.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00070/opgs/edr/rcam/RLA_403703469EDR_F0050104RHAZ00310M_.JPG";
 	Image1394.attitude = new THREE.Quaternion(0.746585,-0.0217417,0.0348269,-0.664023);
 	Image1394.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1394.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1394.mastAz = "182.571";
 	Image1394.mastEl = "-44.9097";
 	Image1394.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33482,6 +34877,7 @@ function getImageDataArray()
 	Image1395.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00070/opgs/edr/ncam/NLA_403711630EDR_F0050104NCAM00332M_.JPG";
 	Image1395.attitude = new THREE.Quaternion(0.746567,-0.0217316,0.0366807,-0.663943);
 	Image1395.cameraPosition = new THREE.Vector3(0.988231,0.400615,-1.82413);
+	Image1395.cameraVector = new THREE.Vector3(0.2864895946996994,0.1284372696793728,0.9494354005861114);
 	Image1395.mastAz = "24.069";
 	Image1395.mastEl = "-71.6798";
 	Image1395.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33506,6 +34902,7 @@ function getImageDataArray()
 	Image1396.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00070/opgs/edr/rcam/RLA_403712469EDR_F0050104RHAZ00310M_.JPG";
 	Image1396.attitude = new THREE.Quaternion(0.746567,-0.0217316,0.0366807,-0.663943);
 	Image1396.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1396.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1396.mastAz = "182.571";
 	Image1396.mastEl = "-44.9097";
 	Image1396.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33530,6 +34927,7 @@ function getImageDataArray()
 	Image1397.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00070/opgs/edr/rcam/RRA_403712469EDR_F0050104RHAZ00310M_.JPG";
 	Image1397.attitude = new THREE.Quaternion(0.746567,-0.0217316,0.0366807,-0.663943);
 	Image1397.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1397.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1397.mastAz = "182.044";
 	Image1397.mastEl = "-43.5257";
 	Image1397.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33554,6 +34952,7 @@ function getImageDataArray()
 	Image1398.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/fcam/FRA_403785368EDR_F0050104FHAZ00311M_.JPG";
 	Image1398.attitude = new THREE.Quaternion(0.746567,-0.0217316,0.0366807,-0.663943);
 	Image1398.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1398.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1398.mastAz = "359.974";
 	Image1398.mastEl = "-43.7598";
 	Image1398.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33578,6 +34977,7 @@ function getImageDataArray()
 	Image1399.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/fcam/FLA_403785368EDR_F0050104FHAZ00311M_.JPG";
 	Image1399.attitude = new THREE.Quaternion(0.746567,-0.0217316,0.0366807,-0.663943);
 	Image1399.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1399.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1399.mastAz = "1.03995";
 	Image1399.mastEl = "-43.4728";
 	Image1399.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33602,6 +35002,7 @@ function getImageDataArray()
 	Image1400.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/rcam/RLA_403785421EDR_F0050104RHAZ00309M_.JPG";
 	Image1400.attitude = new THREE.Quaternion(0.746567,-0.0217316,0.0366807,-0.663943);
 	Image1400.cameraPosition = new THREE.Vector3(-0.976174,-0.455344,-0.779765);
+	Image1400.cameraVector = new THREE.Vector3(-0.7067019356881864,-0.03287751731294454,0.7067468215892216);
 	Image1400.mastAz = "182.571";
 	Image1400.mastEl = "-44.9097";
 	Image1400.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33626,6 +35027,7 @@ function getImageDataArray()
 	Image1401.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/rcam/RRA_403785421EDR_F0050104RHAZ00309M_.JPG";
 	Image1401.attitude = new THREE.Quaternion(0.746567,-0.0217316,0.0366807,-0.663943);
 	Image1401.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1401.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1401.mastAz = "182.044";
 	Image1401.mastEl = "-43.5257";
 	Image1401.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33650,6 +35052,7 @@ function getImageDataArray()
 	Image1402.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/ncam/NLA_403797280EDR_F0050104NCAM00526M_.JPG";
 	Image1402.attitude = new THREE.Quaternion(0.746596,-0.0205091,0.0374678,-0.663905);
 	Image1402.cameraPosition = new THREE.Vector3(0.672847,0.779168,-1.9142);
+	Image1402.cameraVector = new THREE.Vector3(-0.8403581251540289,0.01698641143100531,0.5417653397129631);
 	Image1402.mastAz = "178.814";
 	Image1402.mastEl = "-32.7809";
 	Image1402.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33674,6 +35077,7 @@ function getImageDataArray()
 	Image1403.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/ncam/NRA_403797280EDR_F0050104NCAM00526M_.JPG";
 	Image1403.attitude = new THREE.Quaternion(0.746596,-0.0205091,0.0374678,-0.663905);
 	Image1403.cameraPosition = new THREE.Vector3(0.656463,0.355893,-1.91427);
+	Image1403.cameraVector = new THREE.Vector3(-0.8375081363516782,0.027212511054915525,0.5457468284716137);
 	Image1403.mastAz = "178.111";
 	Image1403.mastEl = "-33.0522";
 	Image1403.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33698,6 +35102,7 @@ function getImageDataArray()
 	Image1404.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/ncam/NLA_403797481EDR_F0050104NCAM00322M_.JPG";
 	Image1404.attitude = new THREE.Quaternion(0.746596,-0.0205091,0.0374678,-0.663905);
 	Image1404.cameraPosition = new THREE.Vector3(0.89651,0.321567,-1.93146);
+	Image1404.cameraVector = new THREE.Vector3(0.88535092642733,-0.1661657278083575,0.43421502504656323);
 	Image1404.mastAz = "349.344";
 	Image1404.mastEl = "-25.7124";
 	Image1404.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33722,6 +35127,7 @@ function getImageDataArray()
 	Image1405.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/ncam/NRA_403797481EDR_F0050104NCAM00322M_.JPG";
 	Image1405.attitude = new THREE.Quaternion(0.746596,-0.0205091,0.0374678,-0.663905);
 	Image1405.cameraPosition = new THREE.Vector3(0.981732,0.736498,-1.93139);
+	Image1405.cameraVector = new THREE.Vector3(0.8813670265234556,-0.17589492379783594,0.4384668064282125);
 	Image1405.mastAz = "348.688";
 	Image1405.mastEl = "-25.9825";
 	Image1405.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33746,6 +35152,7 @@ function getImageDataArray()
 	Image1406.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/ncam/NLA_403797677EDR_F0050104NCAM00323M_.JPG";
 	Image1406.attitude = new THREE.Quaternion(0.746596,-0.0205091,0.0374678,-0.663905);
 	Image1406.cameraPosition = new THREE.Vector3(0.724176,0.80114,-1.9345);
+	Image1406.cameraVector = new THREE.Vector3(-0.8860797079968227,0.20910356019890958,0.41368883498156706);
 	Image1406.mastAz = "166.696";
 	Image1406.mastEl = "-24.4137";
 	Image1406.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33770,6 +35177,7 @@ function getImageDataArray()
 	Image1407.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/ncam/NRA_403797677EDR_F0050104NCAM00323M_.JPG";
 	Image1407.attitude = new THREE.Quaternion(0.746596,-0.0205091,0.0374678,-0.663905);
 	Image1407.cameraPosition = new THREE.Vector3(0.619865,0.390593,-1.9346);
+	Image1407.cameraVector = new THREE.Vector3(-0.8817463994758421,0.21865952583202372,0.4179848068701819);
 	Image1407.mastAz = "166.047";
 	Image1407.mastEl = "-24.6839";
 	Image1407.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33794,6 +35202,7 @@ function getImageDataArray()
 	Image1408.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/ncam/NLA_403799133EDR_F0050104NCAM00527M_.JPG";
 	Image1408.attitude = new THREE.Quaternion(0.746596,-0.0205091,0.0374678,-0.663905);
 	Image1408.cameraPosition = new THREE.Vector3(0.924019,0.378981,-2.04345);
+	Image1408.cameraVector = new THREE.Vector3(0.6658500722316356,0.3379285232694657,-0.6651676438838886);
 	Image1408.mastAz = "26.8773";
 	Image1408.mastEl = "41.7188";
 	Image1408.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33818,6 +35227,7 @@ function getImageDataArray()
 	Image1409.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00071/opgs/edr/ncam/NLA_403799249EDR_F0050104NCAM00528M_.JPG";
 	Image1409.attitude = new THREE.Quaternion(0.746596,-0.0205091,0.0374678,-0.663905);
 	Image1409.cameraPosition = new THREE.Vector3(0.975768,0.399566,-2.01005);
+	Image1409.cameraVector = new THREE.Vector3(0.8938535061272661,0.40070030269325657,-0.20115958094390157);
 	Image1409.mastAz = "24.122";
 	Image1409.mastEl = "11.6281";
 	Image1409.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33842,6 +35252,7 @@ function getImageDataArray()
 	Image1410.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00072/opgs/edr/fcam/FLA_403874141EDR_F0050104FHAZ00311M_.JPG";
 	Image1410.attitude = new THREE.Quaternion(0.746483,-0.0234743,0.0369017,-0.663966);
 	Image1410.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1410.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1410.mastAz = "1.03995";
 	Image1410.mastEl = "-43.4728";
 	Image1410.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33866,6 +35277,7 @@ function getImageDataArray()
 	Image1411.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00072/opgs/edr/rcam/RRA_403874166EDR_F0050104RHAZ00309M_.JPG";
 	Image1411.attitude = new THREE.Quaternion(0.746483,-0.0234743,0.0369017,-0.663966);
 	Image1411.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1411.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1411.mastAz = "182.044";
 	Image1411.mastEl = "-43.5257";
 	Image1411.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33890,6 +35302,7 @@ function getImageDataArray()
 	Image1412.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00073/opgs/edr/fcam/FLA_403962917EDR_F0050104FHAZ00311M_.JPG";
 	Image1412.attitude = new THREE.Quaternion(0.746521,-0.0229709,0.0359732,-0.663991);
 	Image1412.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1412.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1412.mastAz = "1.03995";
 	Image1412.mastEl = "-43.4728";
 	Image1412.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33914,6 +35327,7 @@ function getImageDataArray()
 	Image1413.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00073/opgs/edr/rcam/RRA_403962942EDR_F0050104RHAZ00309M_.JPG";
 	Image1413.attitude = new THREE.Quaternion(0.746521,-0.0229709,0.0359732,-0.663991);
 	Image1413.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1413.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1413.mastAz = "182.044";
 	Image1413.mastEl = "-43.5257";
 	Image1413.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33938,6 +35352,7 @@ function getImageDataArray()
 	Image1414.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00073/opgs/edr/ncam/NRA_403976448EDR_F0050104NCAM00107M_.JPG";
 	Image1414.attitude = new THREE.Quaternion(0.746583,-0.020462,0.0375122,-0.663919);
 	Image1414.cameraPosition = new THREE.Vector3(1.04987,0.551891,-1.96218);
+	Image1414.cameraVector = new THREE.Vector3(0.489002746909445,-0.8438576610603797,0.2208632187230871);
 	Image1414.mastAz = "300.068";
 	Image1414.mastEl = "-12.7362";
 	Image1414.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33962,6 +35377,7 @@ function getImageDataArray()
 	Image1415.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00073/opgs/edr/ncam/NLA_403976448EDR_F0050104NCAM00107M_.JPG";
 	Image1415.attitude = new THREE.Quaternion(0.746583,-0.020462,0.0375122,-0.663919);
 	Image1415.cameraPosition = new THREE.Vector3(0.68231,0.34134,-1.96263);
+	Image1415.cameraVector = new THREE.Vector3(0.4984263223887688,-0.8395175444313985,0.21629029969437388);
 	Image1415.mastAz = "300.674";
 	Image1415.mastEl = "-12.4681";
 	Image1415.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -33986,6 +35402,7 @@ function getImageDataArray()
 	Image1416.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00073/opgs/edr/ncam/NLA_403977159EDR_F0050104NCAM00107M_.JPG";
 	Image1416.attitude = new THREE.Quaternion(0.746583,-0.020462,0.0375122,-0.663919);
 	Image1416.cameraPosition = new THREE.Vector3(0.679336,0.345403,-1.97103);
+	Image1416.cameraVector = new THREE.Vector3(0.5005823458837716,-0.8523758130852545,0.1512375226481554);
 	Image1416.mastAz = "300.401";
 	Image1416.mastEl = "-8.67549";
 	Image1416.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34010,6 +35427,7 @@ function getImageDataArray()
 	Image1417.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00073/opgs/edr/ncam/NRA_403977159EDR_F0050104NCAM00107M_.JPG";
 	Image1417.attitude = new THREE.Quaternion(0.746583,-0.020462,0.0375122,-0.663919);
 	Image1417.cameraPosition = new THREE.Vector3(1.04787,0.554247,-1.97055);
+	Image1417.cameraVector = new THREE.Vector3(0.49128560723945086,-0.8569397662473105,0.15586112133360516);
 	Image1417.mastAz = "299.802";
 	Image1417.mastEl = "-8.94308";
 	Image1417.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34034,6 +35452,7 @@ function getImageDataArray()
 	Image1418.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00073/opgs/edr/ncam/NLA_403977615EDR_F0050104NCAM00107M_.JPG";
 	Image1418.attitude = new THREE.Quaternion(0.746583,-0.020462,0.0375122,-0.663919);
 	Image1418.cameraPosition = new THREE.Vector3(0.67933,0.345401,-1.97101);
+	Image1418.cameraVector = new THREE.Vector3(0.5005287652964825,-0.8523823243069927,0.15137809722607615);
 	Image1418.mastAz = "300.398";
 	Image1418.mastEl = "-8.68369";
 	Image1418.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34058,6 +35477,7 @@ function getImageDataArray()
 	Image1419.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00073/opgs/edr/ncam/NRA_403977615EDR_F0050104NCAM00107M_.JPG";
 	Image1419.attitude = new THREE.Quaternion(0.746583,-0.020462,0.0375122,-0.663919);
 	Image1419.cameraPosition = new THREE.Vector3(1.04787,0.554227,-1.97053);
+	Image1419.cameraVector = new THREE.Vector3(0.4912343885903499,-0.8569434261525327,0.1560023712647457);
 	Image1419.mastAz = "299.799";
 	Image1419.mastEl = "-8.95128";
 	Image1419.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34082,6 +35502,7 @@ function getImageDataArray()
 	Image1420.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FLA_404051690EDR_F0050104FHAZ00311M_.JPG";
 	Image1420.attitude = new THREE.Quaternion(0.746567,-0.0215128,0.0353083,-0.664024);
 	Image1420.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1420.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1420.mastAz = "1.03995";
 	Image1420.mastEl = "-43.4728";
 	Image1420.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34106,6 +35527,7 @@ function getImageDataArray()
 	Image1421.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/rcam/RRA_404051715EDR_F0050104RHAZ00309M_.JPG";
 	Image1421.attitude = new THREE.Quaternion(0.746567,-0.0215128,0.0353083,-0.664024);
 	Image1421.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1421.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1421.mastAz = "182.044";
 	Image1421.mastEl = "-43.5257";
 	Image1421.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34130,6 +35552,7 @@ function getImageDataArray()
 	Image1422.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FLA_404064494EDR_F0050104FHAZ00313M_.JPG";
 	Image1422.attitude = new THREE.Quaternion(0.746554,-0.0215904,0.0360298,-0.663997);
 	Image1422.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1422.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1422.mastAz = "1.03995";
 	Image1422.mastEl = "-43.4728";
 	Image1422.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34154,6 +35577,7 @@ function getImageDataArray()
 	Image1423.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FRA_404064494EDR_F0050104FHAZ00313M_.JPG";
 	Image1423.attitude = new THREE.Quaternion(0.746554,-0.0215904,0.0360298,-0.663997);
 	Image1423.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1423.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1423.mastAz = "359.974";
 	Image1423.mastEl = "-43.7598";
 	Image1423.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34178,6 +35602,7 @@ function getImageDataArray()
 	Image1424.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NLA_404064541EDR_F0050104NCAM00336M_.JPG";
 	Image1424.attitude = new THREE.Quaternion(0.746554,-0.0215904,0.0360298,-0.663997);
 	Image1424.cameraPosition = new THREE.Vector3(0.822574,0.306124,-1.87145);
+	Image1424.cameraVector = new THREE.Vector3(0.5682854682706112,-0.2883449673548559,0.7706547906511573);
 	Image1424.mastAz = "333.059";
 	Image1424.mastEl = "-50.3898";
 	Image1424.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34202,6 +35627,7 @@ function getImageDataArray()
 	Image1425.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NRA_404064541EDR_F0050104NCAM00336M_.JPG";
 	Image1425.attitude = new THREE.Quaternion(0.746554,-0.0215904,0.0360298,-0.663997);
 	Image1425.cameraPosition = new THREE.Vector3(1.02331,0.679135,-1.87142);
+	Image1425.cameraVector = new THREE.Vector3(0.560274812755763,-0.29576502295179363,0.7737022588759966);
 	Image1425.mastAz = "332.133";
 	Image1425.mastEl = "-50.6642";
 	Image1425.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34226,6 +35652,7 @@ function getImageDataArray()
 	Image1426.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FLA_404065095EDR_F0050104FHAZ00205M_.JPG";
 	Image1426.attitude = new THREE.Quaternion(0.746554,-0.0215904,0.0360298,-0.663997);
 	Image1426.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1426.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1426.mastAz = "1.03995";
 	Image1426.mastEl = "-43.4728";
 	Image1426.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34250,6 +35677,7 @@ function getImageDataArray()
 	Image1427.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FRA_404065095EDR_F0050104FHAZ00205M_.JPG";
 	Image1427.attitude = new THREE.Quaternion(0.746554,-0.0215904,0.0360298,-0.663997);
 	Image1427.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1427.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1427.mastAz = "359.974";
 	Image1427.mastEl = "-43.7598";
 	Image1427.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34274,6 +35702,7 @@ function getImageDataArray()
 	Image1428.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NLA_404065134EDR_F0050104NCAM00324M_.JPG";
 	Image1428.attitude = new THREE.Quaternion(0.746554,-0.0215904,0.0360298,-0.663997);
 	Image1428.cameraPosition = new THREE.Vector3(0.870954,0.315573,-1.86355);
+	Image1428.cameraVector = new THREE.Vector3(0.5708068214793788,-0.1549477250741474,0.8063316780624181);
 	Image1428.mastAz = "344.772";
 	Image1428.mastEl = "-53.7163";
 	Image1428.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34298,6 +35727,7 @@ function getImageDataArray()
 	Image1429.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NRA_404065134EDR_F0050104NCAM00324M_.JPG";
 	Image1429.attitude = new THREE.Quaternion(0.746554,-0.0215904,0.0360298,-0.663997);
 	Image1429.cameraPosition = new THREE.Vector3(0.992648,0.721308,-1.86363);
+	Image1429.cameraVector = new THREE.Vector3(0.564284786902156,-0.16377553911988707,0.8091725724817782);
 	Image1429.mastAz = "343.775";
 	Image1429.mastEl = "-53.9918";
 	Image1429.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34322,6 +35752,7 @@ function getImageDataArray()
 	Image1430.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FLA_404065885EDR_F0050104FHAZ00205M_.JPG";
 	Image1430.attitude = new THREE.Quaternion(0.746572,-0.021515,0.036639,-0.663946);
 	Image1430.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1430.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1430.mastAz = "1.03995";
 	Image1430.mastEl = "-43.4728";
 	Image1430.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34346,6 +35777,7 @@ function getImageDataArray()
 	Image1431.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FRA_404065885EDR_F0050104FHAZ00205M_.JPG";
 	Image1431.attitude = new THREE.Quaternion(0.746572,-0.021515,0.036639,-0.663946);
 	Image1431.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1431.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1431.mastAz = "359.974";
 	Image1431.mastEl = "-43.7598";
 	Image1431.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34370,6 +35802,7 @@ function getImageDataArray()
 	Image1432.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NLA_404065912EDR_F0050104NCAM00324M_.JPG";
 	Image1432.attitude = new THREE.Quaternion(0.746519,-0.0225769,0.0351201,-0.664053);
 	Image1432.cameraPosition = new THREE.Vector3(0.87109,0.315617,-1.86352);
+	Image1432.cameraVector = new THREE.Vector3(0.5706826689360465,-0.15453545495344923,0.8064986574932169);
 	Image1432.mastAz = "344.808";
 	Image1432.mastEl = "-53.7327";
 	Image1432.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34394,6 +35827,7 @@ function getImageDataArray()
 	Image1433.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NRA_404065912EDR_F0050104NCAM00324M_.JPG";
 	Image1433.attitude = new THREE.Quaternion(0.746519,-0.0225769,0.0351201,-0.664053);
 	Image1433.cameraPosition = new THREE.Vector3(0.992538,0.721426,-1.86359);
+	Image1433.cameraVector = new THREE.Vector3(0.5641628203369776,-0.16336703089592766,0.8093401790135444);
 	Image1433.mastAz = "343.81";
 	Image1433.mastEl = "-54.0082";
 	Image1433.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34418,6 +35852,7 @@ function getImageDataArray()
 	Image1434.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FLA_404066019EDR_F0050104FHAZ00205M_.JPG";
 	Image1434.attitude = new THREE.Quaternion(0.746576,-0.0211014,0.0362965,-0.663974);
 	Image1434.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1434.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1434.mastAz = "1.03995";
 	Image1434.mastEl = "-43.4728";
 	Image1434.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34442,6 +35877,7 @@ function getImageDataArray()
 	Image1435.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FRA_404066019EDR_F0050104FHAZ00205M_.JPG";
 	Image1435.attitude = new THREE.Quaternion(0.746576,-0.0211014,0.0362965,-0.663974);
 	Image1435.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1435.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1435.mastAz = "359.974";
 	Image1435.mastEl = "-43.7598";
 	Image1435.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34466,6 +35902,7 @@ function getImageDataArray()
 	Image1436.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NLA_404066038EDR_F0050104NCAM00325M_.JPG";
 	Image1436.attitude = new THREE.Quaternion(0.746553,-0.0219212,0.034524,-0.664068);
 	Image1436.cameraPosition = new THREE.Vector3(0.87109,0.315617,-1.86352);
+	Image1436.cameraVector = new THREE.Vector3(0.5706826689360465,-0.15453545495344923,0.8064986574932169);
 	Image1436.mastAz = "344.808";
 	Image1436.mastEl = "-53.7327";
 	Image1436.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34490,6 +35927,7 @@ function getImageDataArray()
 	Image1437.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NRA_404066038EDR_F0050104NCAM00325M_.JPG";
 	Image1437.attitude = new THREE.Quaternion(0.746553,-0.0219212,0.034524,-0.664068);
 	Image1437.cameraPosition = new THREE.Vector3(0.992538,0.721426,-1.86359);
+	Image1437.cameraVector = new THREE.Vector3(0.5641628203369776,-0.16336703089592766,0.8093401790135444);
 	Image1437.mastAz = "343.81";
 	Image1437.mastEl = "-54.0082";
 	Image1437.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34514,6 +35952,7 @@ function getImageDataArray()
 	Image1438.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NRA_404066368EDR_F0050104NCAM00326M_.JPG";
 	Image1438.attitude = new THREE.Quaternion(0.746528,-0.022012,0.0358808,-0.664021);
 	Image1438.cameraPosition = new THREE.Vector3(1.01355,0.691094,-1.85737);
+	Image1438.cameraVector = new THREE.Vector3(0.4972195987446936,-0.2326909951811218,0.8358394411522975);
 	Image1438.mastAz = "334.878";
 	Image1438.mastEl = "-56.6798";
 	Image1438.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34538,6 +35977,7 @@ function getImageDataArray()
 	Image1439.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NLA_404066368EDR_F0050104NCAM00326M_.JPG";
 	Image1439.attitude = new THREE.Quaternion(0.746528,-0.022012,0.0358808,-0.664021);
 	Image1439.cameraPosition = new THREE.Vector3(0.830403,0.309139,-1.85735);
+	Image1439.cameraVector = new THREE.Vector3(0.505153648980037,-0.22503891956901817,0.8331730166066125);
 	Image1439.mastAz = "335.944";
 	Image1439.mastEl = "-56.4036";
 	Image1439.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34562,6 +36002,7 @@ function getImageDataArray()
 	Image1440.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FRA_404066919EDR_F0050104FHAZ00205M_.JPG";
 	Image1440.attitude = new THREE.Quaternion(0.746528,-0.022012,0.0358808,-0.664021);
 	Image1440.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1440.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1440.mastAz = "359.974";
 	Image1440.mastEl = "-43.7598";
 	Image1440.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34586,6 +36027,7 @@ function getImageDataArray()
 	Image1441.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FLA_404066919EDR_F0050104FHAZ00205M_.JPG";
 	Image1441.attitude = new THREE.Quaternion(0.746528,-0.022012,0.0358808,-0.664021);
 	Image1441.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1441.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1441.mastAz = "1.03995";
 	Image1441.mastEl = "-43.4728";
 	Image1441.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34610,6 +36052,7 @@ function getImageDataArray()
 	Image1442.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NLA_404066962EDR_F0050104NCAM00324M_.JPG";
 	Image1442.attitude = new THREE.Quaternion(0.746528,-0.022012,0.0358808,-0.664021);
 	Image1442.cameraPosition = new THREE.Vector3(0.87107,0.315606,-1.86355);
+	Image1442.cameraVector = new THREE.Vector3(0.5708462534600621,-0.15466050764287217,0.8063589041402467);
 	Image1442.mastAz = "344.8";
 	Image1442.mastEl = "-53.719";
 	Image1442.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34634,6 +36077,7 @@ function getImageDataArray()
 	Image1443.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NRA_404066962EDR_F0050104NCAM00324M_.JPG";
 	Image1443.attitude = new THREE.Quaternion(0.746528,-0.022012,0.0358808,-0.664021);
 	Image1443.cameraPosition = new THREE.Vector3(0.992568,0.7214,-1.86362);
+	Image1443.cameraVector = new THREE.Vector3(0.5643280301031642,-0.1634912254368509,0.8091999095681112);
 	Image1443.mastAz = "343.803";
 	Image1443.mastEl = "-53.9945";
 	Image1443.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34658,6 +36102,7 @@ function getImageDataArray()
 	Image1444.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FLA_404067417EDR_F0050104FHAZ00205M_.JPG";
 	Image1444.attitude = new THREE.Quaternion(0.746528,-0.022012,0.0358808,-0.664021);
 	Image1444.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1444.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1444.mastAz = "1.03995";
 	Image1444.mastEl = "-43.4728";
 	Image1444.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34682,6 +36127,7 @@ function getImageDataArray()
 	Image1445.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/fcam/FRA_404067417EDR_F0050104FHAZ00205M_.JPG";
 	Image1445.attitude = new THREE.Quaternion(0.746528,-0.022012,0.0358808,-0.664021);
 	Image1445.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1445.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1445.mastAz = "359.974";
 	Image1445.mastEl = "-43.7598";
 	Image1445.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34706,6 +36152,7 @@ function getImageDataArray()
 	Image1446.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NLA_404067450EDR_F0050104NCAM00324M_.JPG";
 	Image1446.attitude = new THREE.Quaternion(0.746528,-0.022012,0.0358808,-0.664021);
 	Image1446.cameraPosition = new THREE.Vector3(0.871029,0.315612,-1.86345);
+	Image1446.cameraVector = new THREE.Vector3(0.570286076461897,-0.1545224064058419,0.8067816414075392);
 	Image1446.mastAz = "344.799";
 	Image1446.mastEl = "-53.76";
 	Image1446.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34730,6 +36177,7 @@ function getImageDataArray()
 	Image1447.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00074/opgs/edr/ncam/NRA_404067450EDR_F0050104NCAM00324M_.JPG";
 	Image1447.attitude = new THREE.Quaternion(0.746528,-0.022012,0.0358808,-0.664021);
 	Image1447.cameraPosition = new THREE.Vector3(0.992546,0.721399,-1.86353);
+	Image1447.cameraVector = new THREE.Vector3(0.5637604648824098,-0.16335102280888592,0.80962372839663);
 	Image1447.mastAz = "343.801";
 	Image1447.mastEl = "-54.0355";
 	Image1447.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34754,6 +36202,7 @@ function getImageDataArray()
 	Image1448.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00075/opgs/edr/fcam/FLA_404139991EDR_F0050104FHAZ00311M_.JPG";
 	Image1448.attitude = new THREE.Quaternion(0.746518,-0.0221904,0.0359067,-0.664025);
 	Image1448.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1448.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1448.mastAz = "1.03995";
 	Image1448.mastEl = "-43.4728";
 	Image1448.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34778,6 +36227,7 @@ function getImageDataArray()
 	Image1449.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00075/opgs/edr/rcam/RRA_404140016EDR_F0050104RHAZ00309M_.JPG";
 	Image1449.attitude = new THREE.Quaternion(0.746518,-0.0221904,0.0359067,-0.664025);
 	Image1449.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1449.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1449.mastAz = "182.044";
 	Image1449.mastEl = "-43.5257";
 	Image1449.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34802,6 +36252,7 @@ function getImageDataArray()
 	Image1450.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00076/opgs/edr/fcam/FLA_404229240EDR_F0050104FHAZ00311M_.JPG";
 	Image1450.attitude = new THREE.Quaternion(0.746589,-0.0208069,0.0359527,-0.663988);
 	Image1450.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1450.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1450.mastAz = "1.03995";
 	Image1450.mastEl = "-43.4728";
 	Image1450.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34826,6 +36277,7 @@ function getImageDataArray()
 	Image1451.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00076/opgs/edr/rcam/RRA_404229265EDR_F0050104RHAZ00309M_.JPG";
 	Image1451.attitude = new THREE.Quaternion(0.746589,-0.0208069,0.0359527,-0.663988);
 	Image1451.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1451.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1451.mastAz = "182.044";
 	Image1451.mastEl = "-43.5257";
 	Image1451.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34850,6 +36302,7 @@ function getImageDataArray()
 	Image1452.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00076/opgs/edr/ncam/NLA_404245553EDR_F0050104NCAM00322M_.JPG";
 	Image1452.attitude = new THREE.Quaternion(0.746541,-0.022613,0.0351923,-0.664024);
 	Image1452.cameraPosition = new THREE.Vector3(0.896623,0.321704,-1.93232);
+	Image1452.cameraVector = new THREE.Vector3(0.8881464682362159,-0.16569485285037358,0.42865028484585094);
 	Image1452.mastAz = "349.406";
 	Image1452.mastEl = "-25.3588";
 	Image1452.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34874,6 +36327,7 @@ function getImageDataArray()
 	Image1453.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00076/opgs/edr/ncam/NRA_404245553EDR_F0050104NCAM00322M_.JPG";
 	Image1453.attitude = new THREE.Quaternion(0.746541,-0.022613,0.0351923,-0.664024);
 	Image1453.cameraPosition = new THREE.Vector3(0.981375,0.736731,-1.93224);
+	Image1453.cameraVector = new THREE.Vector3(0.8842003772594332,-0.17543396262842878,0.4329117896416806);
 	Image1453.mastAz = "348.752";
 	Image1453.mastEl = "-25.6288";
 	Image1453.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34898,6 +36352,7 @@ function getImageDataArray()
 	Image1454.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00076/opgs/edr/ncam/NLA_404245748EDR_F0050104NCAM00323M_.JPG";
 	Image1454.attitude = new THREE.Quaternion(0.746541,-0.022613,0.0351923,-0.664024);
 	Image1454.cameraPosition = new THREE.Vector3(0.724086,0.801207,-1.93366);
+	Image1454.cameraVector = new THREE.Vector3(-0.8835703241237638,0.20875272000652315,0.4191965937572791);
 	Image1454.mastAz = "166.681";
 	Image1454.mastEl = "-24.7609";
 	Image1454.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34922,6 +36377,7 @@ function getImageDataArray()
 	Image1455.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00076/opgs/edr/ncam/NRA_404245748EDR_F0050104NCAM00323M_.JPG";
 	Image1455.attitude = new THREE.Quaternion(0.746541,-0.022613,0.0351923,-0.664024);
 	Image1455.cameraPosition = new THREE.Vector3(0.619648,0.390692,-1.93377);
+	Image1455.cameraVector = new THREE.Vector3(-0.879207955700686,0.2183018455114433,0.4234827917152225);
 	Image1455.mastAz = "166.03";
 	Image1455.mastEl = "-25.0312";
 	Image1455.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34946,6 +36402,7 @@ function getImageDataArray()
 	Image1456.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00077/opgs/edr/fcam/FLA_404318013EDR_F0050104FHAZ00311M_.JPG";
 	Image1456.attitude = new THREE.Quaternion(0.746541,-0.022613,0.0351923,-0.664024);
 	Image1456.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1456.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1456.mastAz = "1.03995";
 	Image1456.mastEl = "-43.4728";
 	Image1456.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34970,6 +36427,7 @@ function getImageDataArray()
 	Image1457.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00077/opgs/edr/rcam/RRA_404318057EDR_F0050104RHAZ00309M_.JPG";
 	Image1457.attitude = new THREE.Quaternion(0.746541,-0.022613,0.0351923,-0.664024);
 	Image1457.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1457.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1457.mastAz = "182.044";
 	Image1457.mastEl = "-43.5257";
 	Image1457.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -34994,6 +36452,7 @@ function getImageDataArray()
 	Image1458.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00078/opgs/edr/ncam/NLA_404405935EDR_F0050104NCAM00323M_.JPG";
 	Image1458.attitude = new THREE.Quaternion(0.746531,-0.0221847,0.0369794,-0.663951);
 	Image1458.cameraPosition = new THREE.Vector3(0.723274,0.800892,-1.93404);
+	Image1458.cameraVector = new THREE.Vector3(-0.8854294787716344,0.20579141816673766,0.416730764800386);
 	Image1458.mastAz = "166.89";
 	Image1458.mastEl = "-24.6053";
 	Image1458.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35018,6 +36477,7 @@ function getImageDataArray()
 	Image1459.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00078/opgs/edr/ncam/NRA_404405935EDR_F0050104NCAM00323M_.JPG";
 	Image1459.attitude = new THREE.Quaternion(0.746531,-0.0221847,0.0369794,-0.663951);
 	Image1459.cameraPosition = new THREE.Vector3(0.620341,0.389997,-1.93414);
+	Image1459.cameraVector = new THREE.Vector3(-0.8811146351841598,0.21535882656249192,0.42101968539002016);
 	Image1459.mastAz = "166.239";
 	Image1459.mastEl = "-24.8755";
 	Image1459.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35042,6 +36502,7 @@ function getImageDataArray()
 	Image1460.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00078/opgs/edr/ncam/NLA_404406128EDR_F0050104NCAM00322M_.JPG";
 	Image1460.attitude = new THREE.Quaternion(0.746531,-0.0221847,0.0369794,-0.663951);
 	Image1460.cameraPosition = new THREE.Vector3(0.896361,0.321557,-1.93191);
+	Image1460.cameraVector = new THREE.Vector3(0.8866561654369245,-0.1667012322671712,0.43133692567793896);
 	Image1460.mastAz = "349.326";
 	Image1460.mastEl = "-25.5293";
 	Image1460.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35066,6 +36527,7 @@ function getImageDataArray()
 	Image1461.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00078/opgs/edr/ncam/NRA_404406128EDR_F0050104NCAM00322M_.JPG";
 	Image1461.attitude = new THREE.Quaternion(0.746531,-0.0221847,0.0369794,-0.663951);
 	Image1461.cameraPosition = new THREE.Vector3(0.981703,0.736463,-1.93183);
+	Image1461.cameraVector = new THREE.Vector3(0.882684036174877,-0.1764319852605865,0.4355922943063117);
 	Image1461.mastAz = "348.671";
 	Image1461.mastEl = "-25.7994";
 	Image1461.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35090,6 +36552,7 @@ function getImageDataArray()
 	Image1462.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00078/opgs/edr/fcam/FLA_404406167EDR_F0050104FHAZ00311M_.JPG";
 	Image1462.attitude = new THREE.Quaternion(0.746531,-0.0221847,0.0369794,-0.663951);
 	Image1462.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1462.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1462.mastAz = "1.03995";
 	Image1462.mastEl = "-43.4728";
 	Image1462.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35114,6 +36577,7 @@ function getImageDataArray()
 	Image1463.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00078/opgs/edr/rcam/RRA_404406192EDR_F0050104RHAZ00309M_.JPG";
 	Image1463.attitude = new THREE.Quaternion(0.746531,-0.0221847,0.0369794,-0.663951);
 	Image1463.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1463.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1463.mastAz = "182.044";
 	Image1463.mastEl = "-43.5257";
 	Image1463.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35138,6 +36602,7 @@ function getImageDataArray()
 	Image1464.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00079/opgs/edr/fcam/FLA_404495562EDR_F0050104FHAZ00311M_.JPG";
 	Image1464.attitude = new THREE.Quaternion(0.746555,-0.021514,0.0366396,-0.663966);
 	Image1464.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1464.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1464.mastAz = "1.03995";
 	Image1464.mastEl = "-43.4728";
 	Image1464.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35162,6 +36627,7 @@ function getImageDataArray()
 	Image1465.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00079/opgs/edr/rcam/RRA_404495587EDR_F0050104RHAZ00309M_.JPG";
 	Image1465.attitude = new THREE.Quaternion(0.746555,-0.021514,0.0366396,-0.663966);
 	Image1465.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1465.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1465.mastAz = "182.044";
 	Image1465.mastEl = "-43.5257";
 	Image1465.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35186,6 +36652,7 @@ function getImageDataArray()
 	Image1466.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00080/opgs/edr/fcam/FLA_404584310EDR_F0050104FHAZ00311M_.JPG";
 	Image1466.attitude = new THREE.Quaternion(0.746468,-0.02286,0.036375,-0.664033);
 	Image1466.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1466.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1466.mastAz = "1.03995";
 	Image1466.mastEl = "-43.4728";
 	Image1466.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35210,6 +36677,7 @@ function getImageDataArray()
 	Image1467.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00080/opgs/edr/rcam/RRA_404584335EDR_F0050104RHAZ00309M_.JPG";
 	Image1467.attitude = new THREE.Quaternion(0.746468,-0.02286,0.036375,-0.664033);
 	Image1467.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1467.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1467.mastAz = "182.044";
 	Image1467.mastEl = "-43.5257";
 	Image1467.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35234,6 +36702,7 @@ function getImageDataArray()
 	Image1468.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00081/opgs/edr/fcam/FLA_404673112EDR_F0050104FHAZ00311M_.JPG";
 	Image1468.attitude = new THREE.Quaternion(0.746534,-0.0216564,0.0346967,-0.664089);
 	Image1468.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1468.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1468.mastAz = "1.03995";
 	Image1468.mastEl = "-43.4728";
 	Image1468.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35258,6 +36727,7 @@ function getImageDataArray()
 	Image1469.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00081/opgs/edr/rcam/RRA_404673137EDR_F0050104RHAZ00309M_.JPG";
 	Image1469.attitude = new THREE.Quaternion(0.746534,-0.0216564,0.0346967,-0.664089);
 	Image1469.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1469.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1469.mastAz = "182.044";
 	Image1469.mastEl = "-43.5257";
 	Image1469.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35282,6 +36752,7 @@ function getImageDataArray()
 	Image1470.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00081/opgs/edr/ncam/NRA_404683547EDR_F0050104NCAM00107M_.JPG";
 	Image1470.attitude = new THREE.Quaternion(0.746502,-0.0223698,0.0366397,-0.663997);
 	Image1470.cameraPosition = new THREE.Vector3(1.04986,0.551515,-1.96218);
+	Image1470.cameraVector = new THREE.Vector3(0.48770826647638676,-0.8446067334789034,0.22086220268007456);
 	Image1470.mastAz = "299.98";
 	Image1470.mastEl = "-12.7361";
 	Image1470.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35306,6 +36777,7 @@ function getImageDataArray()
 	Image1471.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00081/opgs/edr/ncam/NLA_404683547EDR_F0050104NCAM00107M_.JPG";
 	Image1471.attitude = new THREE.Quaternion(0.746502,-0.0223698,0.0366397,-0.663997);
 	Image1471.cameraPosition = new THREE.Vector3(0.681976,0.341528,-1.96263);
+	Image1471.cameraVector = new THREE.Vector3(0.49713958352188786,-0.8402805922351216,0.21628860536023864);
 	Image1471.mastAz = "300.586";
 	Image1471.mastEl = "-12.4681";
 	Image1471.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35330,6 +36802,7 @@ function getImageDataArray()
 	Image1472.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00081/opgs/edr/ncam/NRA_404684268EDR_F0050104NCAM00107M_.JPG";
 	Image1472.attitude = new THREE.Quaternion(0.746502,-0.0223698,0.0366397,-0.663997);
 	Image1472.cameraPosition = new THREE.Vector3(1.04786,0.554296,-1.97057);
+	Image1472.cameraVector = new THREE.Vector3(0.49144333207974134,-0.8568750767374024,0.1557194728369966);
 	Image1472.mastAz = "299.812";
 	Image1472.mastEl = "-8.93488";
 	Image1472.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35354,6 +36827,7 @@ function getImageDataArray()
 	Image1473.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00081/opgs/edr/ncam/NLA_404684268EDR_F0050104NCAM00107M_.JPG";
 	Image1473.attitude = new THREE.Quaternion(0.746502,-0.0223698,0.0366397,-0.663997);
 	Image1473.cameraPosition = new THREE.Vector3(0.679367,0.34539,-1.97105);
+	Image1473.cameraVector = new THREE.Vector3(0.5007341835752006,-0.8523115887479484,0.15109676728912882);
 	Image1473.mastAz = "300.41";
 	Image1473.mastEl = "-8.66729";
 	Image1473.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35378,6 +36852,7 @@ function getImageDataArray()
 	Image1474.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00081/opgs/edr/ncam/NRA_404684725EDR_F0050104NCAM00107M_.JPG";
 	Image1474.attitude = new THREE.Quaternion(0.746502,-0.0223698,0.0366397,-0.663997);
 	Image1474.cameraPosition = new THREE.Vector3(1.04787,0.554271,-1.97054);
+	Image1474.cameraVector = new THREE.Vector3(0.4913837477980993,-0.8568663607654892,0.15595528906837539);
 	Image1474.mastAz = "299.809";
 	Image1474.mastEl = "-8.94855";
 	Image1474.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35402,6 +36877,7 @@ function getImageDataArray()
 	Image1475.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00081/opgs/edr/ncam/NLA_404684725EDR_F0050104NCAM00107M_.JPG";
 	Image1475.attitude = new THREE.Quaternion(0.746502,-0.0223698,0.0366397,-0.663997);
 	Image1475.cameraPosition = new THREE.Vector3(0.679364,0.345382,-1.97102);
+	Image1475.cameraVector = new THREE.Vector3(0.500675420933884,-0.8523044341467261,0.15133167020325647);
 	Image1475.mastAz = "300.408";
 	Image1475.mastEl = "-8.68096";
 	Image1475.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35426,6 +36902,7 @@ function getImageDataArray()
 	Image1476.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00082/opgs/edr/fcam/FLA_404760397EDR_F0050104FHAZ00311M_.JPG";
 	Image1476.attitude = new THREE.Quaternion(0.746614,-0.0201253,0.0341872,-0.664074);
 	Image1476.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1476.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1476.mastAz = "1.03995";
 	Image1476.mastEl = "-43.4728";
 	Image1476.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35450,6 +36927,7 @@ function getImageDataArray()
 	Image1477.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00082/opgs/edr/rcam/RRA_404760421EDR_F0050104RHAZ00309M_.JPG";
 	Image1477.attitude = new THREE.Quaternion(0.746614,-0.0201253,0.0341872,-0.664074);
 	Image1477.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1477.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
 	Image1477.mastAz = "182.044";
 	Image1477.mastEl = "-43.5257";
 	Image1477.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35474,6 +36952,7 @@ function getImageDataArray()
 	Image1478.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00082/opgs/edr/ncam/NLA_404772633EDR_F0050104NCAM00207M_.JPG";
 	Image1478.attitude = new THREE.Quaternion(0.746533,-0.0216543,0.035859,-0.664028);
 	Image1478.cameraPosition = new THREE.Vector3(0.668278,0.342495,-1.91452);
+	Image1478.cameraVector = new THREE.Vector3(0.36539789344943335,-0.7574382339413621,0.5410838208877685);
 	Image1478.mastAz = "295.725";
 	Image1478.mastEl = "-32.7344";
 	Image1478.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35498,6 +36977,7 @@ function getImageDataArray()
 	Image1479.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00082/opgs/edr/ncam/NRA_404772633EDR_F0050104NCAM00207M_.JPG";
 	Image1479.attitude = new THREE.Quaternion(0.746533,-0.0216543,0.035859,-0.664028);
 	Image1479.cameraPosition = new THREE.Vector3(1.05302,0.519703,-1.91419);
+	Image1479.cameraVector = new THREE.Vector3(0.3549878386446292,-0.7595371844481256,0.5450567858994408);
 	Image1479.mastAz = "295.022";
 	Image1479.mastEl = "-33.0049";
 	Image1479.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35522,6 +37002,7 @@ function getImageDataArray()
 	Image1480.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00082/opgs/edr/fcam/FLA_404772660EDR_F0050104FHAZ00206M_.JPG";
 	Image1480.attitude = new THREE.Quaternion(0.746533,-0.0216543,0.035859,-0.664028);
 	Image1480.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1480.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1480.mastAz = "1.03995";
 	Image1480.mastEl = "-43.4728";
 	Image1480.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35546,6 +37027,7 @@ function getImageDataArray()
 	Image1481.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00082/opgs/edr/fcam/FRA_404772660EDR_F0050104FHAZ00206M_.JPG";
 	Image1481.attitude = new THREE.Quaternion(0.746533,-0.0216543,0.035859,-0.664028);
 	Image1481.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1481.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1481.mastAz = "359.974";
 	Image1481.mastEl = "-43.7598";
 	Image1481.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35570,6 +37052,7 @@ function getImageDataArray()
 	Image1482.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00082/opgs/edr/ncam/NLA_404773610EDR_F0050104NCAM00207M_.JPG";
 	Image1482.attitude = new THREE.Quaternion(0.746533,-0.0216543,0.035859,-0.664028);
 	Image1482.cameraPosition = new THREE.Vector3(0.665324,0.344311,-1.89958);
+	Image1482.cameraVector = new THREE.Vector3(0.32969043240758117,-0.7056110554539313,0.6272298280535544);
 	Image1482.mastAz = "295.013";
 	Image1482.mastEl = "-38.8229";
 	Image1482.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35594,6 +37077,7 @@ function getImageDataArray()
 	Image1483.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00082/opgs/edr/ncam/NRA_404773610EDR_F0050104NCAM00207M_.JPG";
 	Image1483.attitude = new THREE.Quaternion(0.746533,-0.0216543,0.035859,-0.664028);
 	Image1483.cameraPosition = new THREE.Vector3(1.05247,0.516195,-1.89929);
+	Image1483.cameraVector = new THREE.Vector3(0.3190878422763492,-0.7071915900706677,0.6309223437513878);
 	Image1483.mastAz = "294.255";
 	Image1483.mastEl = "-39.0945";
 	Image1483.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35618,6 +37102,7 @@ function getImageDataArray()
 	Image1484.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00082/opgs/edr/fcam/FLA_404773629EDR_F0050104FHAZ00206M_.JPG";
 	Image1484.attitude = new THREE.Quaternion(0.746533,-0.0216543,0.035859,-0.664028);
 	Image1484.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1484.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
 	Image1484.mastAz = "1.03995";
 	Image1484.mastEl = "-43.4728";
 	Image1484.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35642,6 +37127,7 @@ function getImageDataArray()
 	Image1485.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00082/opgs/edr/fcam/FRA_404773629EDR_F0050104FHAZ00206M_.JPG";
 	Image1485.attitude = new THREE.Quaternion(0.746533,-0.0216543,0.035859,-0.664028);
 	Image1485.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1485.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
 	Image1485.mastAz = "359.974";
 	Image1485.mastEl = "-43.7598";
 	Image1485.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
@@ -35654,5 +37140,1655 @@ function getImageDataArray()
 	else
 	{
 		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1485;
+	}
+
+	var Image1486 = new ImageInfo();
+	Image1486.itemName = "NLA_404949217EDR_F0050104NCAM00208M_";
+	Image1486.site = 00005;
+	Image1486.drive = 00104;
+	Image1486.sol = 00084;
+	Image1486.utc = "2012-10-31T09:56:58.23045";
+	Image1486.instrument = "NAV_LEFT_A";
+	Image1486.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00084/opgs/edr/ncam/NLA_404949217EDR_F0050104NCAM00208M_.JPG";
+	Image1486.attitude = new THREE.Quaternion(0.746497,-0.0217717,0.0360571,-0.664054);
+	Image1486.cameraPosition = new THREE.Vector3(0.66675,0.34686,-1.94518);
+	Image1486.cameraVector = new THREE.Vector3(0.409183013650891,-0.8455420737204759,0.34296918652854536);
+	Image1486.mastAz = "295.799";
+	Image1486.mastEl = "-20.0348";
+	Image1486.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1486;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1486;
+	}
+
+	var Image1487 = new ImageInfo();
+	Image1487.itemName = "NRA_404949217EDR_F0050104NCAM00208M_";
+	Image1487.site = 00005;
+	Image1487.drive = 00104;
+	Image1487.sol = 00084;
+	Image1487.utc = "2012-10-31T09:56:58.23045";
+	Image1487.instrument = "NAV_RIGHT_A";
+	Image1487.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00084/opgs/edr/ncam/NRA_404949217EDR_F0050104NCAM00208M_.JPG";
+	Image1487.attitude = new THREE.Quaternion(0.746497,-0.0217717,0.0360571,-0.664054);
+	Image1487.cameraPosition = new THREE.Vector3(1.05096,0.525227,-1.94477);
+	Image1487.cameraVector = new THREE.Vector3(0.399171716601715,-0.848520385506798,0.34738321209384143);
+	Image1487.mastAz = "295.169";
+	Image1487.mastEl = "-20.3037";
+	Image1487.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1487;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1487;
+	}
+
+	var Image1488 = new ImageInfo();
+	Image1488.itemName = "NLA_404949551EDR_F0050104NCAM00208M_";
+	Image1488.site = 00005;
+	Image1488.drive = 00104;
+	Image1488.sol = 00084;
+	Image1488.utc = "2012-10-31T10:02:32.15689";
+	Image1488.instrument = "NAV_LEFT_A";
+	Image1488.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00084/opgs/edr/ncam/NLA_404949551EDR_F0050104NCAM00208M_.JPG";
+	Image1488.attitude = new THREE.Quaternion(0.746497,-0.0217717,0.0360571,-0.664054);
+	Image1488.cameraPosition = new THREE.Vector3(0.661311,0.352925,-1.95651);
+	Image1488.cameraVector = new THREE.Vector3(0.40385779756109846,-0.8764920286175398,0.26203168342589495);
+	Image1488.mastAz = "294.714";
+	Image1488.mastEl = "-15.1676";
+	Image1488.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1488;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1488;
+	}
+
+	var Image1489 = new ImageInfo();
+	Image1489.itemName = "NRA_404949551EDR_F0050104NCAM00208M_";
+	Image1489.site = 00005;
+	Image1489.drive = 00104;
+	Image1489.sol = 00084;
+	Image1489.utc = "2012-10-31T10:02:32.15689";
+	Image1489.instrument = "NAV_RIGHT_A";
+	Image1489.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00084/opgs/edr/ncam/NRA_404949551EDR_F0050104NCAM00208M_.JPG";
+	Image1489.attitude = new THREE.Quaternion(0.746497,-0.0217717,0.0360571,-0.664054);
+	Image1489.cameraPosition = new THREE.Vector3(1.04876,0.524127,-1.95606);
+	Image1489.cameraVector = new THREE.Vector3(0.3939467578862878,-0.8796327080864745,0.2665562807651281);
+	Image1489.mastAz = "294.101";
+	Image1489.mastEl = "-15.4359";
+	Image1489.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1489;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1489;
+	}
+
+	var Image1490 = new ImageInfo();
+	Image1490.itemName = "NRA_404949966EDR_F0050104NCAM00208M_";
+	Image1490.site = 00005;
+	Image1490.drive = 00104;
+	Image1490.sol = 00084;
+	Image1490.utc = "2012-10-31T10:09:27.21506";
+	Image1490.instrument = "NAV_RIGHT_A";
+	Image1490.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00084/opgs/edr/ncam/NRA_404949966EDR_F0050104NCAM00208M_.JPG";
+	Image1490.attitude = new THREE.Quaternion(0.746497,-0.0217717,0.0360571,-0.664054);
+	Image1490.cameraPosition = new THREE.Vector3(0.998691,0.719468,-1.91513);
+	Image1490.cameraVector = new THREE.Vector3(0.8074752467638259,-0.2370808312757771,0.5401633135499717);
+	Image1490.mastAz = "343.609";
+	Image1490.mastEl = "-32.6711";
+	Image1490.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1490;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1490;
+	}
+
+	var Image1491 = new ImageInfo();
+	Image1491.itemName = "NLA_404949966EDR_F0050104NCAM00208M_";
+	Image1491.site = 00005;
+	Image1491.drive = 00104;
+	Image1491.sol = 00084;
+	Image1491.utc = "2012-10-31T10:09:27.21506";
+	Image1491.instrument = "NAV_LEFT_A";
+	Image1491.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00084/opgs/edr/ncam/NLA_404949966EDR_F0050104NCAM00208M_.JPG";
+	Image1491.attitude = new THREE.Quaternion(0.746497,-0.0217717,0.0360571,-0.664054);
+	Image1491.cameraPosition = new THREE.Vector3(0.876938,0.313751,-1.9152);
+	Image1491.cameraVector = new THREE.Vector3(0.8127678969994508,-0.22788383820726618,0.5361690982246313);
+	Image1491.mastAz = "344.309";
+	Image1491.mastEl = "-32.4002";
+	Image1491.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1491;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1491;
+	}
+
+	var Image1492 = new ImageInfo();
+	Image1492.itemName = "NLA_405126639EDR_F0050104NCAM00320M_";
+	Image1492.site = 00005;
+	Image1492.drive = 00104;
+	Image1492.sol = 00086;
+	Image1492.utc = "2012-11-02T11:14:01.32903";
+	Image1492.instrument = "NAV_LEFT_A";
+	Image1492.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00086/opgs/edr/ncam/NLA_405126639EDR_F0050104NCAM00320M_.JPG";
+	Image1492.attitude = new THREE.Quaternion(0.746376,-0.0240156,0.035206,-0.664159);
+	Image1492.cameraPosition = new THREE.Vector3(0.671055,0.340699,-1.91221);
+	Image1492.cameraVector = new THREE.Vector3(0.37100763726419556,-0.7447001621331119,0.5547747305082992);
+	Image1492.mastAz = "296.454";
+	Image1492.mastEl = "-33.6721";
+	Image1492.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1492;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1492;
+	}
+
+	var Image1493 = new ImageInfo();
+	Image1493.itemName = "NRA_405126639EDR_F0050104NCAM00320M_";
+	Image1493.site = 00005;
+	Image1493.drive = 00104;
+	Image1493.sol = 00086;
+	Image1493.utc = "2012-11-02T11:14:01.32903";
+	Image1493.instrument = "NAV_RIGHT_A";
+	Image1493.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00086/opgs/edr/ncam/NRA_405126639EDR_F0050104NCAM00320M_.JPG";
+	Image1493.attitude = new THREE.Quaternion(0.746376,-0.0240156,0.035206,-0.664159);
+	Image1493.cameraPosition = new THREE.Vector3(1.05355,0.522714,-1.9119);
+	Image1493.cameraVector = new THREE.Vector3(0.36059483975027096,-0.7468713332856078,0.5587079497032906);
+	Image1493.mastAz = "295.743";
+	Image1493.mastEl = "-33.9428";
+	Image1493.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1493;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1493;
+	}
+
+	var Image1494 = new ImageInfo();
+	Image1494.itemName = "NLA_405127162EDR_F0050104NCAM00207M_";
+	Image1494.site = 00005;
+	Image1494.drive = 00104;
+	Image1494.sol = 00086;
+	Image1494.utc = "2012-11-02T11:22:44.33338";
+	Image1494.instrument = "NAV_LEFT_A";
+	Image1494.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00086/opgs/edr/ncam/NLA_405127162EDR_F0050104NCAM00207M_.JPG";
+	Image1494.attitude = new THREE.Quaternion(0.746376,-0.0240156,0.035206,-0.664159);
+	Image1494.cameraPosition = new THREE.Vector3(0.671055,0.340699,-1.91221);
+	Image1494.cameraVector = new THREE.Vector3(0.37100763726419556,-0.7447001621331119,0.5547747305082992);
+	Image1494.mastAz = "296.454";
+	Image1494.mastEl = "-33.6721";
+	Image1494.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1494;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1494;
+	}
+
+	var Image1495 = new ImageInfo();
+	Image1495.itemName = "NRA_405127162EDR_F0050104NCAM00207M_";
+	Image1495.site = 00005;
+	Image1495.drive = 00104;
+	Image1495.sol = 00086;
+	Image1495.utc = "2012-11-02T11:22:44.33338";
+	Image1495.instrument = "NAV_RIGHT_A";
+	Image1495.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00086/opgs/edr/ncam/NRA_405127162EDR_F0050104NCAM00207M_.JPG";
+	Image1495.attitude = new THREE.Quaternion(0.746376,-0.0240156,0.035206,-0.664159);
+	Image1495.cameraPosition = new THREE.Vector3(1.05355,0.522714,-1.9119);
+	Image1495.cameraVector = new THREE.Vector3(0.36059483975027096,-0.7468713332856078,0.5587079497032906);
+	Image1495.mastAz = "295.743";
+	Image1495.mastEl = "-33.9428";
+	Image1495.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1495;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1495;
+	}
+
+	var Image1496 = new ImageInfo();
+	Image1496.itemName = "NLA_405127598EDR_F0050104NCAM00207M_";
+	Image1496.site = 00005;
+	Image1496.drive = 00104;
+	Image1496.sol = 00086;
+	Image1496.utc = "2012-11-02T11:30:00.94421";
+	Image1496.instrument = "NAV_LEFT_A";
+	Image1496.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00086/opgs/edr/ncam/NLA_405127598EDR_F0050104NCAM00207M_.JPG";
+	Image1496.attitude = new THREE.Quaternion(0.746376,-0.0240156,0.035206,-0.664159);
+	Image1496.cameraPosition = new THREE.Vector3(0.671055,0.340699,-1.91221);
+	Image1496.cameraVector = new THREE.Vector3(0.37100763726419556,-0.7447001621331119,0.5547747305082992);
+	Image1496.mastAz = "296.454";
+	Image1496.mastEl = "-33.6721";
+	Image1496.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1496;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1496;
+	}
+
+	var Image1497 = new ImageInfo();
+	Image1497.itemName = "NRA_405127598EDR_F0050104NCAM00207M_";
+	Image1497.site = 00005;
+	Image1497.drive = 00104;
+	Image1497.sol = 00086;
+	Image1497.utc = "2012-11-02T11:30:00.94421";
+	Image1497.instrument = "NAV_RIGHT_A";
+	Image1497.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00086/opgs/edr/ncam/NRA_405127598EDR_F0050104NCAM00207M_.JPG";
+	Image1497.attitude = new THREE.Quaternion(0.746376,-0.0240156,0.035206,-0.664159);
+	Image1497.cameraPosition = new THREE.Vector3(1.05355,0.522714,-1.9119);
+	Image1497.cameraVector = new THREE.Vector3(0.36059483975027096,-0.7468713332856078,0.5587079497032906);
+	Image1497.mastAz = "295.743";
+	Image1497.mastEl = "-33.9428";
+	Image1497.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1497;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1497;
+	}
+
+	var Image1498 = new ImageInfo();
+	Image1498.itemName = "NLA_405141307EDR_F0050104NCAM00534M_";
+	Image1498.site = 00005;
+	Image1498.drive = 00104;
+	Image1498.sol = 00086;
+	Image1498.utc = "2012-11-02T15:18:29.72014";
+	Image1498.instrument = "NAV_LEFT_A";
+	Image1498.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00086/opgs/edr/ncam/NLA_405141307EDR_F0050104NCAM00534M_.JPG";
+	Image1498.attitude = new THREE.Quaternion(0.746473,-0.0212997,0.0353686,-0.664133);
+	Image1498.cameraPosition = new THREE.Vector3(0.795873,0.777822,-2.04002);
+	Image1498.cameraVector = new THREE.Vector3(-0.7996786596322077,0.10995067053193577,-0.5902752674629126);
+	Image1498.mastAz = "172.142";
+	Image1498.mastEl = "36.2001";
+	Image1498.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1498;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1498;
+	}
+
+	var Image1499 = new ImageInfo();
+	Image1499.itemName = "NRA_405141307EDR_F0050104NCAM00534M_";
+	Image1499.site = 00005;
+	Image1499.drive = 00104;
+	Image1499.sol = 00086;
+	Image1499.utc = "2012-11-02T15:18:29.72014";
+	Image1499.instrument = "NAV_RIGHT_A";
+	Image1499.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00086/opgs/edr/ncam/NRA_405141307EDR_F0050104NCAM00534M_.JPG";
+	Image1499.attitude = new THREE.Quaternion(0.746473,-0.0212997,0.0353686,-0.664133);
+	Image1499.cameraPosition = new THREE.Vector3(0.729955,0.359391,-2.03973);
+	Image1499.cameraVector = new THREE.Vector3(-0.8008708154162221,0.12059882358932068,-0.5865678654370928);
+	Image1499.mastAz = "171.408";
+	Image1499.mastEl = "35.9375";
+	Image1499.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1499;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1499;
+	}
+
+	var Image1500 = new ImageInfo();
+	Image1500.itemName = "FRA_405305667EDR_F0050104FHAZ00205M_";
+	Image1500.site = 00005;
+	Image1500.drive = 00104;
+	Image1500.sol = 00088;
+	Image1500.utc = "2012-11-04T12:57:51.34892";
+	Image1500.instrument = "FHAZ_RIGHT_A";
+	Image1500.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/fcam/FRA_405305667EDR_F0050104FHAZ00205M_.JPG";
+	Image1500.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1500.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1500.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
+	Image1500.mastAz = "359.974";
+	Image1500.mastEl = "-43.7598";
+	Image1500.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1500;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1500;
+	}
+
+	var Image1501 = new ImageInfo();
+	Image1501.itemName = "FLA_405305667EDR_F0050104FHAZ00205M_";
+	Image1501.site = 00005;
+	Image1501.drive = 00104;
+	Image1501.sol = 00088;
+	Image1501.utc = "2012-11-04T12:57:51.34892";
+	Image1501.instrument = "FHAZ_LEFT_A";
+	Image1501.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/fcam/FLA_405305667EDR_F0050104FHAZ00205M_.JPG";
+	Image1501.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1501.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1501.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1501.mastAz = "1.03995";
+	Image1501.mastEl = "-43.4728";
+	Image1501.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1501;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1501;
+	}
+
+	var Image1502 = new ImageInfo();
+	Image1502.itemName = "NLA_405305717EDR_F0050104NCAM00324M_";
+	Image1502.site = 00005;
+	Image1502.drive = 00104;
+	Image1502.sol = 00088;
+	Image1502.utc = "2012-11-04T12:58:40.71268";
+	Image1502.instrument = "NAV_LEFT_A";
+	Image1502.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/ncam/NLA_405305717EDR_F0050104NCAM00324M_.JPG";
+	Image1502.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1502.cameraPosition = new THREE.Vector3(0.871395,0.315702,-1.86351);
+	Image1502.cameraVector = new THREE.Vector3(0.5708212693204425,-0.15379910780610706,0.8065413274776713);
+	Image1502.mastAz = "344.88";
+	Image1502.mastEl = "-53.7368";
+	Image1502.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1502;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1502;
+	}
+
+	var Image1503 = new ImageInfo();
+	Image1503.itemName = "NRA_405305717EDR_F0050104NCAM00324M_";
+	Image1503.site = 00005;
+	Image1503.drive = 00104;
+	Image1503.sol = 00088;
+	Image1503.utc = "2012-11-04T12:58:40.71268";
+	Image1503.instrument = "NAV_RIGHT_A";
+	Image1503.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/ncam/NRA_405305717EDR_F0050104NCAM00324M_.JPG";
+	Image1503.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1503.cameraPosition = new THREE.Vector3(0.992331,0.721663,-1.86358);
+	Image1503.cameraVector = new THREE.Vector3(0.5643125404902244,-0.16263741084750563,0.8093827458244267);
+	Image1503.mastAz = "343.882";
+	Image1503.mastEl = "-54.0123";
+	Image1503.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1503;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1503;
+	}
+
+	var Image1504 = new ImageInfo();
+	Image1504.itemName = "FRA_405306179EDR_F0050104FHAZ00206M_";
+	Image1504.site = 00005;
+	Image1504.drive = 00104;
+	Image1504.sol = 00088;
+	Image1504.utc = "2012-11-04T13:06:23.06422";
+	Image1504.instrument = "FHAZ_RIGHT_A";
+	Image1504.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/fcam/FRA_405306179EDR_F0050104FHAZ00206M_.JPG";
+	Image1504.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1504.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1504.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
+	Image1504.mastAz = "359.974";
+	Image1504.mastEl = "-43.7598";
+	Image1504.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1504;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1504;
+	}
+
+	var Image1505 = new ImageInfo();
+	Image1505.itemName = "FLA_405306179EDR_F0050104FHAZ00206M_";
+	Image1505.site = 00005;
+	Image1505.drive = 00104;
+	Image1505.sol = 00088;
+	Image1505.utc = "2012-11-04T13:06:23.06422";
+	Image1505.instrument = "FHAZ_LEFT_A";
+	Image1505.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/fcam/FLA_405306179EDR_F0050104FHAZ00206M_.JPG";
+	Image1505.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1505.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1505.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1505.mastAz = "1.03995";
+	Image1505.mastEl = "-43.4728";
+	Image1505.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1505;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1505;
+	}
+
+	var Image1506 = new ImageInfo();
+	Image1506.itemName = "NLA_405306220EDR_F0050104NCAM00207M_";
+	Image1506.site = 00005;
+	Image1506.drive = 00104;
+	Image1506.sol = 00088;
+	Image1506.utc = "2012-11-04T13:07:04.1351";
+	Image1506.instrument = "NAV_LEFT_A";
+	Image1506.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/ncam/NLA_405306220EDR_F0050104NCAM00207M_.JPG";
+	Image1506.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1506.cameraPosition = new THREE.Vector3(0.778673,0.310447,-1.85101);
+	Image1506.cameraVector = new THREE.Vector3(0.4179944356286602,-0.2952041993813388,0.8591479106947187);
+	Image1506.mastAz = "324.722";
+	Image1506.mastEl = "-59.1985";
+	Image1506.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1506;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1506;
+	}
+
+	var Image1507 = new ImageInfo();
+	Image1507.itemName = "NRA_405306220EDR_F0050104NCAM00207M_";
+	Image1507.site = 00005;
+	Image1507.drive = 00104;
+	Image1507.sol = 00088;
+	Image1507.utc = "2012-11-04T13:07:04.1351";
+	Image1507.instrument = "NAV_RIGHT_A";
+	Image1507.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/ncam/NRA_405306220EDR_F0050104NCAM00207M_.JPG";
+	Image1507.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1507.cameraPosition = new THREE.Vector3(1.03332,0.648952,-1.85098);
+	Image1507.cameraVector = new THREE.Vector3(0.4086154712599906,-0.30107484109371885,0.8616190206276597);
+	Image1507.mastAz = "323.57";
+	Image1507.mastEl = "-59.4756";
+	Image1507.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1507;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1507;
+	}
+
+	var Image1508 = new ImageInfo();
+	Image1508.itemName = "FLA_405306929EDR_F0050104FHAZ00206M_";
+	Image1508.site = 00005;
+	Image1508.drive = 00104;
+	Image1508.sol = 00088;
+	Image1508.utc = "2012-11-04T13:18:53.1575";
+	Image1508.instrument = "FHAZ_LEFT_A";
+	Image1508.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/fcam/FLA_405306929EDR_F0050104FHAZ00206M_.JPG";
+	Image1508.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1508.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1508.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1508.mastAz = "1.03995";
+	Image1508.mastEl = "-43.4728";
+	Image1508.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1508;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1508;
+	}
+
+	var Image1509 = new ImageInfo();
+	Image1509.itemName = "FRA_405306929EDR_F0050104FHAZ00206M_";
+	Image1509.site = 00005;
+	Image1509.drive = 00104;
+	Image1509.sol = 00088;
+	Image1509.utc = "2012-11-04T13:18:53.1575";
+	Image1509.instrument = "FHAZ_RIGHT_A";
+	Image1509.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/fcam/FRA_405306929EDR_F0050104FHAZ00206M_.JPG";
+	Image1509.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1509.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1509.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
+	Image1509.mastAz = "359.974";
+	Image1509.mastEl = "-43.7598";
+	Image1509.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1509;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1509;
+	}
+
+	var Image1510 = new ImageInfo();
+	Image1510.itemName = "NLA_405306966EDR_F0050104NCAM00208M_";
+	Image1510.site = 00005;
+	Image1510.drive = 00104;
+	Image1510.sol = 00088;
+	Image1510.utc = "2012-11-04T13:19:30.1441";
+	Image1510.instrument = "NAV_LEFT_A";
+	Image1510.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/ncam/NLA_405306966EDR_F0050104NCAM00208M_.JPG";
+	Image1510.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1510.cameraPosition = new THREE.Vector3(0.705564,0.323038,-1.90169);
+	Image1510.cameraVector = new THREE.Vector3(0.45448803352557665,-0.6440416107768435,0.6153462691607245);
+	Image1510.mastAz = "305.18";
+	Image1510.mastEl = "-37.954";
+	Image1510.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1510;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1510;
+	}
+
+	var Image1511 = new ImageInfo();
+	Image1511.itemName = "NRA_405306966EDR_F0050104NCAM00208M_";
+	Image1511.site = 00005;
+	Image1511.drive = 00104;
+	Image1511.sol = 00088;
+	Image1511.utc = "2012-11-04T13:19:30.1441";
+	Image1511.instrument = "NAV_RIGHT_A";
+	Image1511.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00088/opgs/edr/ncam/NRA_405306966EDR_F0050104NCAM00208M_.JPG";
+	Image1511.attitude = new THREE.Quaternion(0.746425,-0.0216986,0.036066,-0.664137);
+	Image1511.cameraPosition = new THREE.Vector3(1.05626,0.560614,-1.90143);
+	Image1511.cameraVector = new THREE.Vector3(0.4443651576555728,-0.6475157830943253,0.6190823186826454);
+	Image1511.mastAz = "304.43";
+	Image1511.mastEl = "-38.2255";
+	Image1511.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1511;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1511;
+	}
+
+	var Image1512 = new ImageInfo();
+	Image1512.itemName = "FLA_405379355EDR_F0050104FHAZ00311M_";
+	Image1512.site = 00005;
+	Image1512.drive = 00104;
+	Image1512.sol = 00089;
+	Image1512.utc = "2012-11-05T09:25:59.98409";
+	Image1512.instrument = "FHAZ_LEFT_A";
+	Image1512.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00089/opgs/edr/fcam/FLA_405379355EDR_F0050104FHAZ00311M_.JPG";
+	Image1512.attitude = new THREE.Quaternion(0.746433,-0.0215224,0.0366293,-0.664102);
+	Image1512.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1512.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1512.mastAz = "1.03995";
+	Image1512.mastEl = "-43.4728";
+	Image1512.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1512;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1512;
+	}
+
+	var Image1513 = new ImageInfo();
+	Image1513.itemName = "RRA_405379380EDR_F0050104RHAZ00309M_";
+	Image1513.site = 00005;
+	Image1513.drive = 00104;
+	Image1513.sol = 00089;
+	Image1513.utc = "2012-11-05T09:26:24.611";
+	Image1513.instrument = "RHAZ_RIGHT_A";
+	Image1513.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00089/opgs/edr/rcam/RRA_405379380EDR_F0050104RHAZ00309M_.JPG";
+	Image1513.attitude = new THREE.Quaternion(0.746433,-0.0215224,0.0366293,-0.664102);
+	Image1513.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1513.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
+	Image1513.mastAz = "182.044";
+	Image1513.mastEl = "-43.5257";
+	Image1513.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1513;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1513;
+	}
+
+	var Image1514 = new ImageInfo();
+	Image1514.itemName = "FLA_405392925EDR_F0050104FHAZ00206M_";
+	Image1514.site = 00005;
+	Image1514.drive = 00104;
+	Image1514.sol = 00089;
+	Image1514.utc = "2012-11-05T13:12:10.08672";
+	Image1514.instrument = "FHAZ_LEFT_A";
+	Image1514.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00089/opgs/edr/fcam/FLA_405392925EDR_F0050104FHAZ00206M_.JPG";
+	Image1514.attitude = new THREE.Quaternion(0.746379,-0.0228908,0.0371864,-0.664087);
+	Image1514.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1514.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1514.mastAz = "1.03995";
+	Image1514.mastEl = "-43.4728";
+	Image1514.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1514;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1514;
+	}
+
+	var Image1515 = new ImageInfo();
+	Image1515.itemName = "FRA_405392925EDR_F0050104FHAZ00206M_";
+	Image1515.site = 00005;
+	Image1515.drive = 00104;
+	Image1515.sol = 00089;
+	Image1515.utc = "2012-11-05T13:12:10.08672";
+	Image1515.instrument = "FHAZ_RIGHT_A";
+	Image1515.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00089/opgs/edr/fcam/FRA_405392925EDR_F0050104FHAZ00206M_.JPG";
+	Image1515.attitude = new THREE.Quaternion(0.746379,-0.0228908,0.0371864,-0.664087);
+	Image1515.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1515.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
+	Image1515.mastAz = "359.974";
+	Image1515.mastEl = "-43.7598";
+	Image1515.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1515;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1515;
+	}
+
+	var Image1516 = new ImageInfo();
+	Image1516.itemName = "NRA_405392969EDR_F0050104NCAM00207M_";
+	Image1516.site = 00005;
+	Image1516.drive = 00104;
+	Image1516.sol = 00089;
+	Image1516.utc = "2012-11-05T13:12:54.24624";
+	Image1516.instrument = "NAV_RIGHT_A";
+	Image1516.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00089/opgs/edr/ncam/NRA_405392969EDR_F0050104NCAM00207M_.JPG";
+	Image1516.attitude = new THREE.Quaternion(0.746379,-0.0228908,0.0371864,-0.664087);
+	Image1516.cameraPosition = new THREE.Vector3(1.05582,0.563854,-1.8911);
+	Image1516.cameraVector = new THREE.Vector3(0.4239247545969657,-0.6034620212290766,0.6753675972194847);
+	Image1516.mastAz = "305.056";
+	Image1516.mastEl = "-42.4591";
+	Image1516.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1516;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1516;
+	}
+
+	var Image1517 = new ImageInfo();
+	Image1517.itemName = "NLA_405392969EDR_F0050104NCAM00207M_";
+	Image1517.site = 00005;
+	Image1517.drive = 00104;
+	Image1517.sol = 00089;
+	Image1517.utc = "2012-11-05T13:12:54.24624";
+	Image1517.instrument = "NAV_LEFT_A";
+	Image1517.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00089/opgs/edr/ncam/NLA_405392969EDR_F0050104NCAM00207M_.JPG";
+	Image1517.attitude = new THREE.Quaternion(0.746379,-0.0228908,0.0371864,-0.664087);
+	Image1517.cameraPosition = new THREE.Vector3(0.707649,0.322594,-1.89132);
+	Image1517.cameraVector = new THREE.Vector3(0.4341685131188711,-0.6001000809902498,0.6718464073072387);
+	Image1517.mastAz = "305.853";
+	Image1517.mastEl = "-42.1869";
+	Image1517.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1517;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1517;
+	}
+
+	var Image1518 = new ImageInfo();
+	Image1518.itemName = "FLA_405393458EDR_F0050104FHAZ00206M_";
+	Image1518.site = 00005;
+	Image1518.drive = 00104;
+	Image1518.sol = 00089;
+	Image1518.utc = "2012-11-05T13:21:03.29303";
+	Image1518.instrument = "FHAZ_LEFT_A";
+	Image1518.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00089/opgs/edr/fcam/FLA_405393458EDR_F0050104FHAZ00206M_.JPG";
+	Image1518.attitude = new THREE.Quaternion(0.746379,-0.0228908,0.0371864,-0.664087);
+	Image1518.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1518.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1518.mastAz = "1.03995";
+	Image1518.mastEl = "-43.4728";
+	Image1518.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1518;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1518;
+	}
+
+	var Image1519 = new ImageInfo();
+	Image1519.itemName = "FRA_405393458EDR_F0050104FHAZ00206M_";
+	Image1519.site = 00005;
+	Image1519.drive = 00104;
+	Image1519.sol = 00089;
+	Image1519.utc = "2012-11-05T13:21:03.29303";
+	Image1519.instrument = "FHAZ_RIGHT_A";
+	Image1519.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00089/opgs/edr/fcam/FRA_405393458EDR_F0050104FHAZ00206M_.JPG";
+	Image1519.attitude = new THREE.Quaternion(0.746379,-0.0228908,0.0371864,-0.664087);
+	Image1519.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1519.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
+	Image1519.mastAz = "359.974";
+	Image1519.mastEl = "-43.7598";
+	Image1519.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1519;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1519;
+	}
+
+	var Image1520 = new ImageInfo();
+	Image1520.itemName = "NLA_405393975EDR_F0050104NCAM00307M_";
+	Image1520.site = 00005;
+	Image1520.drive = 00104;
+	Image1520.sol = 00089;
+	Image1520.utc = "2012-11-05T13:29:40.0903";
+	Image1520.instrument = "NAV_LEFT_A";
+	Image1520.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00089/opgs/edr/ncam/NLA_405393975EDR_F0050104NCAM00307M_.JPG";
+	Image1520.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1520.cameraPosition = new THREE.Vector3(0.830729,0.309185,-1.85729);
+	Image1520.cameraVector = new THREE.Vector3(0.505112048604522,-0.22417167096795346,0.8334319890008894);
+	Image1520.mastAz = "336.025";
+	Image1520.mastEl = "-56.4301";
+	Image1520.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1520;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1520;
+	}
+
+	var Image1521 = new ImageInfo();
+	Image1521.itemName = "NRA_405393975EDR_F0050104NCAM00307M_";
+	Image1521.site = 00005;
+	Image1521.drive = 00104;
+	Image1521.sol = 00089;
+	Image1521.utc = "2012-11-05T13:29:40.0903";
+	Image1521.instrument = "NAV_RIGHT_A";
+	Image1521.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00089/opgs/edr/ncam/NRA_405393975EDR_F0050104NCAM00307M_.JPG";
+	Image1521.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1521.cameraPosition = new THREE.Vector3(1.01334,0.691392,-1.85731);
+	Image1521.cameraVector = new THREE.Vector3(0.4971949703082421,-0.23183786318480945,0.836091123439358);
+	Image1521.mastAz = "334.958";
+	Image1521.mastEl = "-56.7063";
+	Image1521.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1521;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1521;
+	}
+
+	var Image1522 = new ImageInfo();
+	Image1522.itemName = "FLA_405470528EDR_F0050104FHAZ00311M_";
+	Image1522.site = 00005;
+	Image1522.drive = 00104;
+	Image1522.sol = 00090;
+	Image1522.utc = "2012-11-06T10:45:34.36158";
+	Image1522.instrument = "FHAZ_LEFT_A";
+	Image1522.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/fcam/FLA_405470528EDR_F0050104FHAZ00311M_.JPG";
+	Image1522.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1522.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1522.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1522.mastAz = "1.03995";
+	Image1522.mastEl = "-43.4728";
+	Image1522.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1522;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1522;
+	}
+
+	var Image1523 = new ImageInfo();
+	Image1523.itemName = "RRA_405470553EDR_F0050104RHAZ00309M_";
+	Image1523.site = 00005;
+	Image1523.drive = 00104;
+	Image1523.sol = 00090;
+	Image1523.utc = "2012-11-06T10:45:58.07916";
+	Image1523.instrument = "RHAZ_RIGHT_A";
+	Image1523.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/rcam/RRA_405470553EDR_F0050104RHAZ00309M_.JPG";
+	Image1523.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1523.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1523.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
+	Image1523.mastAz = "182.044";
+	Image1523.mastEl = "-43.5257";
+	Image1523.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1523;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1523;
+	}
+
+	var Image1524 = new ImageInfo();
+	Image1524.itemName = "NLA_405479038EDR_F0050104NCAM00328M_";
+	Image1524.site = 00005;
+	Image1524.drive = 00104;
+	Image1524.sol = 00090;
+	Image1524.utc = "2012-11-06T13:07:24.04";
+	Image1524.instrument = "NAV_LEFT_A";
+	Image1524.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NLA_405479038EDR_F0050104NCAM00328M_.JPG";
+	Image1524.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1524.cameraPosition = new THREE.Vector3(0.680861,0.35091,-1.82284);
+	Image1524.cameraVector = new THREE.Vector3(0.17034966984875738,-0.24805945103604277,0.9536495680983224);
+	Image1524.mastAz = "304.397";
+	Image1524.mastEl = "-72.4651";
+	Image1524.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1524;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1524;
+	}
+
+	var Image1525 = new ImageInfo();
+	Image1525.itemName = "NRA_405479085EDR_F0050104NCAM00328M_";
+	Image1525.site = 00005;
+	Image1525.drive = 00104;
+	Image1525.sol = 00090;
+	Image1525.utc = "2012-11-06T13:08:10.34595";
+	Image1525.instrument = "NAV_RIGHT_A";
+	Image1525.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NRA_405479085EDR_F0050104NCAM00328M_.JPG";
+	Image1525.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1525.cameraPosition = new THREE.Vector3(0.916143,0.349711,-1.82259);
+	Image1525.cameraVector = new THREE.Vector3(-0.158949799382964,-0.24798576267071779,0.9556348794329024);
+	Image1525.mastAz = "237.261";
+	Image1525.mastEl = "-72.8459";
+	Image1525.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1525;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1525;
+	}
+
+	var Image1526 = new ImageInfo();
+	Image1526.itemName = "NLA_405479117EDR_F0050104NCAM00329M_";
+	Image1526.site = 00005;
+	Image1526.drive = 00104;
+	Image1526.sol = 00090;
+	Image1526.utc = "2012-11-06T13:08:43.1671";
+	Image1526.instrument = "NAV_LEFT_A";
+	Image1526.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NLA_405479117EDR_F0050104NCAM00329M_.JPG";
+	Image1526.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1526.cameraPosition = new THREE.Vector3(0.576333,0.465319,-1.83697);
+	Image1526.cameraVector = new THREE.Vector3(-0.03689359493160343,-0.410830300797871,0.9109650523479775);
+	Image1526.mastAz = "264.81";
+	Image1526.mastEl = "-65.6167";
+	Image1526.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1526;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1526;
+	}
+
+	var Image1527 = new ImageInfo();
+	Image1527.itemName = "NRA_405479117EDR_F0050104NCAM00329M_";
+	Image1527.site = 00005;
+	Image1527.drive = 00104;
+	Image1527.sol = 00090;
+	Image1527.utc = "2012-11-06T13:08:43.1671";
+	Image1527.instrument = "NAV_RIGHT_A";
+	Image1527.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NRA_405479117EDR_F0050104NCAM00329M_.JPG";
+	Image1527.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1527.cameraPosition = new THREE.Vector3(0.996558,0.41202,-1.83682);
+	Image1527.cameraVector = new THREE.Vector3(-0.04661198339753905,-0.405344851525015,0.9129747391608987);
+	Image1527.mastAz = "263.382";
+	Image1527.mastEl = "-65.8964";
+	Image1527.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1527;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1527;
+	}
+
+	var Image1528 = new ImageInfo();
+	Image1528.itemName = "NLA_405481687EDR_F0050104NCAM00328M_";
+	Image1528.site = 00005;
+	Image1528.drive = 00104;
+	Image1528.sol = 00090;
+	Image1528.utc = "2012-11-06T13:51:32.9556";
+	Image1528.instrument = "NAV_LEFT_A";
+	Image1528.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NLA_405481687EDR_F0050104NCAM00328M_.JPG";
+	Image1528.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1528.cameraPosition = new THREE.Vector3(0.680869,0.350908,-1.82283);
+	Image1528.cameraVector = new THREE.Vector3(0.1703363451200838,-0.24801310319232375,0.9536640027682943);
+	Image1528.mastAz = "304.4";
+	Image1528.mastEl = "-72.4679";
+	Image1528.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1528;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1528;
+	}
+
+	var Image1529 = new ImageInfo();
+	Image1529.itemName = "NRA_405481728EDR_F0050104NCAM00328M_";
+	Image1529.site = 00005;
+	Image1529.drive = 00104;
+	Image1529.sol = 00090;
+	Image1529.utc = "2012-11-06T13:52:14.02751";
+	Image1529.instrument = "NAV_RIGHT_A";
+	Image1529.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NRA_405481728EDR_F0050104NCAM00328M_.JPG";
+	Image1529.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1529.cameraPosition = new THREE.Vector3(0.916148,0.349714,-1.82259);
+	Image1529.cameraVector = new THREE.Vector3(-0.15894389026339228,-0.24798959565563802,0.9556348676113131);
+	Image1529.mastAz = "237.262";
+	Image1529.mastEl = "-72.8459";
+	Image1529.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1529;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1529;
+	}
+
+	var Image1530 = new ImageInfo();
+	Image1530.itemName = "NRA_405481760EDR_F0050104NCAM00329M_";
+	Image1530.site = 00005;
+	Image1530.drive = 00104;
+	Image1530.sol = 00090;
+	Image1530.utc = "2012-11-06T13:52:45.92083";
+	Image1530.instrument = "NAV_RIGHT_A";
+	Image1530.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NRA_405481760EDR_F0050104NCAM00329M_.JPG";
+	Image1530.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1530.cameraPosition = new THREE.Vector3(0.996558,0.412017,-1.83682);
+	Image1530.cameraVector = new THREE.Vector3(-0.04661735356371126,-0.4053877923116985,0.9129553987963284);
+	Image1530.mastAz = "263.382";
+	Image1530.mastEl = "-65.8936";
+	Image1530.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1530;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1530;
+	}
+
+	var Image1531 = new ImageInfo();
+	Image1531.itemName = "NLA_405481760EDR_F0050104NCAM00329M_";
+	Image1531.site = 00005;
+	Image1531.drive = 00104;
+	Image1531.sol = 00090;
+	Image1531.utc = "2012-11-06T13:52:45.92083";
+	Image1531.instrument = "NAV_LEFT_A";
+	Image1531.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NLA_405481760EDR_F0050104NCAM00329M_.JPG";
+	Image1531.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1531.cameraPosition = new THREE.Vector3(0.576333,0.465315,-1.83698);
+	Image1531.cameraVector = new THREE.Vector3(-0.036899780706630275,-0.4108733149773035,0.9109454018893581);
+	Image1531.mastAz = "264.809";
+	Image1531.mastEl = "-65.6139";
+	Image1531.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1531;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1531;
+	}
+
+	var Image1532 = new ImageInfo();
+	Image1532.itemName = "NLA_405482382EDR_F0050104NCAM00208M_";
+	Image1532.site = 00005;
+	Image1532.drive = 00104;
+	Image1532.sol = 00090;
+	Image1532.utc = "2012-11-06T14:03:08.51888";
+	Image1532.instrument = "NAV_LEFT_A";
+	Image1532.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NLA_405482382EDR_F0050104NCAM00208M_.JPG";
+	Image1532.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1532.cameraPosition = new THREE.Vector3(0.662452,0.346757,-1.92284);
+	Image1532.cameraVector = new THREE.Vector3(0.357880735667079,-0.7947580344540648,0.4901847057070445);
+	Image1532.mastAz = "294.215";
+	Image1532.mastEl = "-29.3298";
+	Image1532.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1532;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1532;
+	}
+
+	var Image1533 = new ImageInfo();
+	Image1533.itemName = "NRA_405482382EDR_F0050104NCAM00208M_";
+	Image1533.site = 00005;
+	Image1533.drive = 00104;
+	Image1533.sol = 00090;
+	Image1533.utc = "2012-11-06T14:03:08.51888";
+	Image1533.instrument = "NAV_RIGHT_A";
+	Image1533.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NRA_405482382EDR_F0050104NCAM00208M_.JPG";
+	Image1533.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1533.cameraPosition = new THREE.Vector3(1.05163,0.513998,-1.92249);
+	Image1533.cameraVector = new THREE.Vector3(0.3475145079331599,-0.7968080573815137,0.49429807451362);
+	Image1533.mastAz = "293.537";
+	Image1533.mastEl = "-29.5999";
+	Image1533.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1533;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1533;
+	}
+
+	var Image1534 = new ImageInfo();
+	Image1534.itemName = "FLA_405482409EDR_F0050104FHAZ00206M_";
+	Image1534.site = 00005;
+	Image1534.drive = 00104;
+	Image1534.sol = 00090;
+	Image1534.utc = "2012-11-06T14:03:34.29966";
+	Image1534.instrument = "FHAZ_LEFT_A";
+	Image1534.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/fcam/FLA_405482409EDR_F0050104FHAZ00206M_.JPG";
+	Image1534.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1534.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1534.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1534.mastAz = "1.03995";
+	Image1534.mastEl = "-43.4728";
+	Image1534.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1534;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1534;
+	}
+
+	var Image1535 = new ImageInfo();
+	Image1535.itemName = "FRA_405482409EDR_F0050104FHAZ00206M_";
+	Image1535.site = 00005;
+	Image1535.drive = 00104;
+	Image1535.sol = 00090;
+	Image1535.utc = "2012-11-06T14:03:34.29966";
+	Image1535.instrument = "FHAZ_RIGHT_A";
+	Image1535.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/fcam/FRA_405482409EDR_F0050104FHAZ00206M_.JPG";
+	Image1535.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1535.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1535.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
+	Image1535.mastAz = "359.974";
+	Image1535.mastEl = "-43.7598";
+	Image1535.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1535;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1535;
+	}
+
+	var Image1536 = new ImageInfo();
+	Image1536.itemName = "NLA_405482754EDR_F0050104NCAM00320M_";
+	Image1536.site = 00005;
+	Image1536.drive = 00104;
+	Image1536.sol = 00090;
+	Image1536.utc = "2012-11-06T14:09:19.51001";
+	Image1536.instrument = "NAV_LEFT_A";
+	Image1536.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NLA_405482754EDR_F0050104NCAM00320M_.JPG";
+	Image1536.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1536.cameraPosition = new THREE.Vector3(0.671234,0.340581,-1.91187);
+	Image1536.cameraVector = new THREE.Vector3(0.37099814619450666,-0.7431603465393949,0.5568420555702362);
+	Image1536.mastAz = "296.501";
+	Image1536.mastEl = "-33.8147";
+	Image1536.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1536;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1536;
+	}
+
+	var Image1537 = new ImageInfo();
+	Image1537.itemName = "NRA_405482754EDR_F0050104NCAM00320M_";
+	Image1537.site = 00005;
+	Image1537.drive = 00104;
+	Image1537.sol = 00090;
+	Image1537.utc = "2012-11-06T14:09:19.51001";
+	Image1537.instrument = "NAV_RIGHT_A";
+	Image1537.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/ncam/NRA_405482754EDR_F0050104NCAM00320M_.JPG";
+	Image1537.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1537.cameraPosition = new THREE.Vector3(1.05358,0.522897,-1.91155);
+	Image1537.cameraVector = new THREE.Vector3(0.36058625180509685,-0.7453285257478063,0.5607699561457913);
+	Image1537.mastAz = "295.789";
+	Image1537.mastEl = "-34.0854";
+	Image1537.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1537;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1537;
+	}
+
+	var Image1538 = new ImageInfo();
+	Image1538.itemName = "FLA_405482774EDR_F0050104FHAZ00206M_";
+	Image1538.site = 00005;
+	Image1538.drive = 00104;
+	Image1538.sol = 00090;
+	Image1538.utc = "2012-11-06T14:09:39.04981";
+	Image1538.instrument = "FHAZ_LEFT_A";
+	Image1538.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/fcam/FLA_405482774EDR_F0050104FHAZ00206M_.JPG";
+	Image1538.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1538.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1538.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1538.mastAz = "1.03995";
+	Image1538.mastEl = "-43.4728";
+	Image1538.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1538;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1538;
+	}
+
+	var Image1539 = new ImageInfo();
+	Image1539.itemName = "FRA_405482774EDR_F0050104FHAZ00206M_";
+	Image1539.site = 00005;
+	Image1539.drive = 00104;
+	Image1539.sol = 00090;
+	Image1539.utc = "2012-11-06T14:09:39.04981";
+	Image1539.instrument = "FHAZ_RIGHT_A";
+	Image1539.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00090/opgs/edr/fcam/FRA_405482774EDR_F0050104FHAZ00206M_.JPG";
+	Image1539.attitude = new THREE.Quaternion(0.74644,-0.0220527,0.0359687,-0.664114);
+	Image1539.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1539.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
+	Image1539.mastAz = "359.974";
+	Image1539.mastEl = "-43.7598";
+	Image1539.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1539;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1539;
+	}
+
+	var Image1540 = new ImageInfo();
+	Image1540.itemName = "FLA_405559796EDR_F0050104FHAZ00314M_";
+	Image1540.site = 00005;
+	Image1540.drive = 00104;
+	Image1540.sol = 00091;
+	Image1540.utc = "2012-11-07T11:33:22.85377";
+	Image1540.instrument = "FHAZ_LEFT_A";
+	Image1540.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00091/opgs/edr/fcam/FLA_405559796EDR_F0050104FHAZ00314M_.JPG";
+	Image1540.attitude = new THREE.Quaternion(0.746402,-0.0227156,0.0365425,-0.664103);
+	Image1540.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1540.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1540.mastAz = "1.03995";
+	Image1540.mastEl = "-43.4728";
+	Image1540.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1540;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1540;
+	}
+
+	var Image1541 = new ImageInfo();
+	Image1541.itemName = "RRA_405559823EDR_F0050104RHAZ00314M_";
+	Image1541.site = 00005;
+	Image1541.drive = 00104;
+	Image1541.sol = 00091;
+	Image1541.utc = "2012-11-07T11:33:49.54593";
+	Image1541.instrument = "RHAZ_RIGHT_A";
+	Image1541.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00091/opgs/edr/rcam/RRA_405559823EDR_F0050104RHAZ00314M_.JPG";
+	Image1541.attitude = new THREE.Quaternion(0.746402,-0.0227156,0.0365425,-0.664103);
+	Image1541.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1541.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
+	Image1541.mastAz = "182.044";
+	Image1541.mastEl = "-43.5257";
+	Image1541.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1541;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1541;
+	}
+
+	var Image1542 = new ImageInfo();
+	Image1542.itemName = "NLA_405576916EDR_F0050104NCAM00208M_";
+	Image1542.site = 00005;
+	Image1542.drive = 00104;
+	Image1542.sol = 00091;
+	Image1542.utc = "2012-11-07T16:18:41.91117";
+	Image1542.instrument = "NAV_LEFT_A";
+	Image1542.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00091/opgs/edr/ncam/NLA_405576916EDR_F0050104NCAM00208M_.JPG";
+	Image1542.attitude = new THREE.Quaternion(0.746402,-0.0227156,0.0365425,-0.664103);
+	Image1542.cameraPosition = new THREE.Vector3(0.903155,0.329058,-1.85235);
+	Image1542.cameraVector = new THREE.Vector3(0.518139008184398,-0.05661176012400138,0.8534208087534254);
+	Image1542.mastAz = "353.718";
+	Image1542.mastEl = "-58.5633";
+	Image1542.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1542;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1542;
+	}
+
+	var Image1543 = new ImageInfo();
+	Image1543.itemName = "NRA_405576916EDR_F0050104NCAM00208M_";
+	Image1543.site = 00005;
+	Image1543.drive = 00104;
+	Image1543.sol = 00091;
+	Image1543.utc = "2012-11-07T16:18:41.91117";
+	Image1543.instrument = "NAV_RIGHT_A";
+	Image1543.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00091/opgs/edr/ncam/NRA_405576916EDR_F0050104NCAM00208M_.JPG";
+	Image1543.attitude = new THREE.Quaternion(0.746402,-0.0227156,0.0365425,-0.664103);
+	Image1543.cameraPosition = new THREE.Vector3(0.961878,0.74856,-1.85251);
+	Image1543.cameraVector = new THREE.Vector3(0.5128032309796748,-0.06629482823069927,0.855942662826587);
+	Image1543.mastAz = "352.588";
+	Image1543.mastEl = "-58.8407";
+	Image1543.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1543;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1543;
+	}
+
+	var Image1544 = new ImageInfo();
+	Image1544.itemName = "FLA_405649374EDR_F0050104FHAZ00311M_";
+	Image1544.site = 00005;
+	Image1544.drive = 00104;
+	Image1544.sol = 00092;
+	Image1544.utc = "2012-11-08T12:26:21.57433";
+	Image1544.instrument = "FHAZ_LEFT_A";
+	Image1544.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00092/opgs/edr/fcam/FLA_405649374EDR_F0050104FHAZ00311M_.JPG";
+	Image1544.attitude = new THREE.Quaternion(0.746472,-0.0209889,0.0359912,-0.664111);
+	Image1544.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1544.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1544.mastAz = "1.03995";
+	Image1544.mastEl = "-43.4728";
+	Image1544.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1544;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1544;
+	}
+
+	var Image1545 = new ImageInfo();
+	Image1545.itemName = "RRA_405649398EDR_F0050104RHAZ00309M_";
+	Image1545.site = 00005;
+	Image1545.drive = 00104;
+	Image1545.sol = 00092;
+	Image1545.utc = "2012-11-08T12:26:46.19816";
+	Image1545.instrument = "RHAZ_RIGHT_A";
+	Image1545.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00092/opgs/edr/rcam/RRA_405649398EDR_F0050104RHAZ00309M_.JPG";
+	Image1545.attitude = new THREE.Quaternion(0.746472,-0.0209889,0.0359912,-0.664111);
+	Image1545.cameraPosition = new THREE.Vector3(-0.976811,-0.555458,-0.779633);
+	Image1545.cameraVector = new THREE.Vector3(-0.7238245777278739,-0.02697200172680264,0.6894565785265323);
+	Image1545.mastAz = "182.044";
+	Image1545.mastEl = "-43.5257";
+	Image1545.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1545;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1545;
+	}
+
+	var Image1546 = new ImageInfo();
+	Image1546.itemName = "FLA_405746155EDR_F0050104FHAZ00206M_";
+	Image1546.site = 00005;
+	Image1546.drive = 00104;
+	Image1546.sol = 00093;
+	Image1546.utc = "2012-11-09T15:19:23.03116";
+	Image1546.instrument = "FHAZ_LEFT_A";
+	Image1546.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00093/opgs/edr/fcam/FLA_405746155EDR_F0050104FHAZ00206M_.JPG";
+	Image1546.attitude = new THREE.Quaternion(0.746472,-0.0209889,0.0359912,-0.664111);
+	Image1546.cameraPosition = new THREE.Vector3(1.03282,-0.088715,-0.708463);
+	Image1546.cameraVector = new THREE.Vector3(0.724813342951321,0.014267781135956295,0.6887967095825015);
+	Image1546.mastAz = "1.03995";
+	Image1546.mastEl = "-43.4728";
+	Image1546.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1546;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1546;
+	}
+
+	var Image1547 = new ImageInfo();
+	Image1547.itemName = "FRA_405746155EDR_F0050104FHAZ00206M_";
+	Image1547.site = 00005;
+	Image1547.drive = 00104;
+	Image1547.sol = 00093;
+	Image1547.utc = "2012-11-09T15:19:23.03116";
+	Image1547.instrument = "FHAZ_RIGHT_A";
+	Image1547.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00093/opgs/edr/fcam/FRA_405746155EDR_F0050104FHAZ00206M_.JPG";
+	Image1547.attitude = new THREE.Quaternion(0.746472,-0.0209889,0.0359912,-0.664111);
+	Image1547.cameraPosition = new THREE.Vector3(1.03263,0.077859,-0.708165);
+	Image1547.cameraVector = new THREE.Vector3(0.7214842674393372,7.733757501896206E-4,0.6924305537231512);
+	Image1547.mastAz = "359.974";
+	Image1547.mastEl = "-43.7598";
+	Image1547.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1547;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1547;
+	}
+
+	var Image1548 = new ImageInfo();
+	Image1548.itemName = "NRA_405747385EDR_F0050104NCAM00325M_";
+	Image1548.site = 00005;
+	Image1548.drive = 00104;
+	Image1548.sol = 00093;
+	Image1548.utc = "2012-11-09T15:39:52.9464";
+	Image1548.instrument = "NAV_RIGHT_A";
+	Image1548.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00093/opgs/edr/ncam/NRA_405747385EDR_F0050104NCAM00325M_.JPG";
+	Image1548.attitude = new THREE.Quaternion(0.746417,-0.0223684,0.0351073,-0.664175);
+	Image1548.cameraPosition = new THREE.Vector3(0.99154,0.722581,-1.8636);
+	Image1548.cameraVector = new THREE.Vector3(0.5652318457371097,-0.15990242371018978,0.8092862135587305);
+	Image1548.mastAz = "344.164";
+	Image1548.mastEl = "-54.0028";
+	Image1548.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1548;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1548;
+	}
+
+	var Image1549 = new ImageInfo();
+	Image1549.itemName = "NLA_405747385EDR_F0050104NCAM00325M_";
+	Image1549.site = 00005;
+	Image1549.drive = 00104;
+	Image1549.sol = 00093;
+	Image1549.utc = "2012-11-09T15:39:52.9464";
+	Image1549.instrument = "NAV_LEFT_A";
+	Image1549.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00093/opgs/edr/ncam/NLA_405747385EDR_F0050104NCAM00325M_.JPG";
+	Image1549.attitude = new THREE.Quaternion(0.746417,-0.0223684,0.0351073,-0.664175);
+	Image1549.cameraPosition = new THREE.Vector3(0.872596,0.316032,-1.86353);
+	Image1549.cameraVector = new THREE.Vector3(0.571696259611379,-0.15103043507841607,0.8064447869670824);
+	Image1549.mastAz = "345.161";
+	Image1549.mastEl = "-53.7273";
+	Image1549.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1549;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1549;
+	}
+
+	var Image1550 = new ImageInfo();
+	Image1550.itemName = "NRA_405747690EDR_F0050104NCAM00326M_";
+	Image1550.site = 00005;
+	Image1550.drive = 00104;
+	Image1550.sol = 00093;
+	Image1550.utc = "2012-11-09T15:44:58.13905";
+	Image1550.instrument = "NAV_RIGHT_A";
+	Image1550.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00093/opgs/edr/ncam/NRA_405747690EDR_F0050104NCAM00326M_.JPG";
+	Image1550.attitude = new THREE.Quaternion(0.746497,-0.0198045,0.0353918,-0.664152);
+	Image1550.cameraPosition = new THREE.Vector3(1.01351,0.691119,-1.85728);
+	Image1550.cameraVector = new THREE.Vector3(0.49668035446048836,-0.23240277695502826,0.8362401417993489);
+	Image1550.mastAz = "334.881";
+	Image1550.mastEl = "-56.7216";
+	Image1550.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1550;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1550;
+	}
+
+	var Image1551 = new ImageInfo();
+	Image1551.itemName = "NLA_405747690EDR_F0050104NCAM00326M_";
+	Image1551.site = 00005;
+	Image1551.drive = 00104;
+	Image1551.sol = 00093;
+	Image1551.utc = "2012-11-09T15:44:58.13905";
+	Image1551.instrument = "NAV_LEFT_A";
+	Image1551.urlList = "http://msl-raws.s3.amazonaws.com/msl-raw-images/proj/msl/redops/ods/surface/sol/00093/opgs/edr/ncam/NLA_405747690EDR_F0050104NCAM00326M_.JPG";
+	Image1551.attitude = new THREE.Quaternion(0.746497,-0.0198045,0.0353918,-0.664152);
+	Image1551.cameraPosition = new THREE.Vector3(0.830383,0.309156,-1.85725);
+	Image1551.cameraVector = new THREE.Vector3(0.5046151606504602,-0.22475214351161563,0.8335766393251699);
+	Image1551.mastAz = "335.949";
+	Image1551.mastEl = "-56.4454";
+	Image1551.xyz = new THREE.Vector3(1.37636,0.164033,-0.0887201);
+
+	if(!SiteLocation[00005][00104].images)
+	{
+		SiteLocation[00005][00104].images = new Array();
+		SiteLocation[00005][00104].images[0] = Image1551;
+	}
+	else
+	{
+		SiteLocation[00005][00104].images[SiteLocation[00005][00104].images.length] = Image1551;
 	}
 }

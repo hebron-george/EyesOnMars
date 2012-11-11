@@ -87,8 +87,8 @@ Scene.prototype.init = function(param)
     // Tell the framework about our object
     this.setObject3D(group);
 
-    this.createWalls();
-    this.createFloor();
+    //this.createWalls();
+    //this.createFloor();
 	this.addCuriosityPics();
 	this.addStars();
 
@@ -175,11 +175,11 @@ Scene.prototype.addCuriosityPics = function()
 		// console.log("Site number from URL is: " + targetSite)
 	}
 
-	if (!targetDrive || !targetSite)
-	{
-		alert("Please add ?site=#&drive=# to the URL.  I suggest ?site=5&drive=68 ");
-		AbortJavaScript()
-	}
+	// if (!targetDrive || !targetSite)
+	// {
+	// 	alert("Please add ?site=#&drive=# to the URL.  I suggest ?site=5&drive=68 ");
+	// 	AbortJavaScript()
+	// }
 	
 	var MyMapArray = new Array();
 
@@ -238,18 +238,53 @@ Scene.prototype.addCuriosityPics = function()
 									// 	// setTimeout(function() {$(this).src = ""; console.log("set img object src to empty string.")},1250); 
 										
 									// };
-									var MyMaterial = new THREE.MeshBasicMaterial({ map: MyMapArray[tempMapIndex], transparent: true, opacity: 0.9 });
-									var MyGeometry = new THREE.PlaneGeometry(1,1);
+									var MyMaterial = new THREE.MeshBasicMaterial({ 	map: MyMapArray[tempMapIndex], 
+																					transparent: true, 
+																					opacity: 0.9 });
+
+									if ( SiteLocation[i][j].images[k].instrument == "FHAZ_LEFT_A" || SiteLocation[i][j].images[k].instrument == "FHAZ_RIGHT_A")
+									{
+										var MyGeometry = new THREE.PlaneGeometry(2.5,1);	
+									}
+									else
+									{
+										var MyGeometry = new THREE.PlaneGeometry(1,1);	
+									}
+									
+
 									var MyPlane = new THREE.Mesh(MyGeometry, MyMaterial);
 									var MyQuaternion = SiteLocation[i][j].images[k].attitude;
+									var MyCameraPosition = SiteLocation[i][j].images[k].cameraPosition;
+									var tempNumberX = MyCameraPosition.x;
+									var tempNumberY = MyCameraPosition.y;
+									var tempNumberZ = MyCameraPosition.z;
+									MyCameraPosition.x = tempNumberY;
+									MyCameraPosition.y = -1*tempNumberZ;
+									MyCameraPosition.z = -1*tempNumberX;
+
+									var MyCameraVector =  SiteLocation[i][j].images[k].cameraVector;
+									tempNumberX = MyCameraVector.x;
+									tempNumberY = MyCameraVector.y;
+									tempNumberZ = MyCameraVector.z;
+									MyCameraVector.x = tempNumberY;
+									MyCameraVector.y = -1*tempNumberZ;
+									MyCameraVector.z = -1*tempNumberX;
+									MyCameraVector.setLength(3);
+
 									// console.log(MyQuaternion);
-									MyVector = new THREE.Vector3( 3, 3, 3);
-									MyQuaternion.multiplyVector3(MyVector);
-									MyVector.addSelf(SiteLocation[i][j].images[k].cameraPosition);
-									
+									MyVector = new THREE.Vector3( MyCameraPosition.x, MyCameraPosition.y, MyCameraPosition.z);
+									// MyQuaternion.multiplyVector3(MyVector);
+									MyVector.addSelf(MyCameraVector);
+									var MyMarsLocation = new THREE.Vector3( 
+																		SiteLocation[i][j].y/100,
+																		(-1)*SiteLocation[i][j].z/100,
+																		(-1)*SiteLocation[i][j].x/100
+																		)
+									MyVector.addSelf(MyMarsLocation);
+
 									MyPlane.position.set(MyVector.x, MyVector.y, MyVector.z);
 									
-									var MyLookVector = new THREE.Vector3( 0, 0, 0);
+									var MyLookVector = MyCameraPosition;
 									MyPlane.rotationAutSoUpdate = true;
 									MyPlane.lookAt(MyLookVector);
 									MyPlane.EOMsrcForImage = SiteLocation[i][j].images[k].urlList;
@@ -260,6 +295,7 @@ Scene.prototype.addCuriosityPics = function()
 									this.object3D.add(MyPlane);
 									// MyPlane.visible = false;
 									planeArr[planeArr.length] = MyPlane;
+									planeArr[planeArr.length-1].marsLocation = MyMarsLocation;
 
 									
 									// var MyText = new THREE.TextGeometry("Testing i=" + i + ", j =" + j);
