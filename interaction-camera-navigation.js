@@ -26,7 +26,7 @@ SceneViewer.prototype.init = function(param)
 	var amb = new THREE.AmbientLight( 0x808080, 1);
 	this.scene.add(amb);
 	
-	this.camera.position.set(0, 0, 0);	
+	this.camera.position.set(1, 1, 1);	
 	this.camera.lookAt(this.root.position);
 	this.camera.near = 0.001;
 	
@@ -47,7 +47,7 @@ SceneViewer.prototype.createCameraControls = function()
 	// Set up the FP controls
 	var controls = new THREE.FirstPersonControls( this.camera );
 
-	controls.movementSpeed = 2;
+	controls.movementSpeed = 10;
 	controls.lookSpeed = 0.05;
 	
 	// Allow tilt up/down
@@ -259,7 +259,13 @@ Scene.prototype.addCuriosityPics = function()
 									 	continue;
 									}*/
 									
-									if ( SiteLocation[i][j].images[k].instrument == "FHAZ_LEFT_A" )
+									if ( SiteLocation[i][j].images[k].instrument == "FHAZ_LEFT_A" 
+										||
+										SiteLocation[i][j].images[k].instrument == "FHAZ_RIGHT_A" 
+										||
+										SiteLocation[i][j].images[k].instrument == "RHAZ_LEFT_A" 
+										||
+										SiteLocation[i][j].images[k].instrument == "RHAZ_RIGHT_A" )
 									{
 										var MyGeometry = new THREE.PlaneGeometry(2.5,1);	
 									}
@@ -286,23 +292,23 @@ Scene.prototype.addCuriosityPics = function()
 									MyCameraVector.x = tempNumberY;
 									MyCameraVector.y = -1*tempNumberZ;
 									MyCameraVector.z = -1*tempNumberX;
-									MyCameraVector.setLength(3);
+									MyCameraVector.setLength(1.35);
 
 									// console.log(MyQuaternion);
 									MyVector = new THREE.Vector3( MyCameraPosition.x, MyCameraPosition.y, MyCameraPosition.z);
 									// MyQuaternion.multiplyVector3(MyVector);
 									MyVector.addSelf(MyCameraVector);
 									var MyMarsLocation = new THREE.Vector3( 
-																		SiteLocation[i][j].y/100,
-																		(-1)*SiteLocation[i][j].z/100,
-																		(-1)*SiteLocation[i][j].x/100
+																		SiteLocation[i][j].x/100,
+																		(-1)*SiteLocation[i][j].y/100,
+																		(-1)*SiteLocation[i][j].z/100
 																		)
-									MyVector.addSelf(MyMarsLocation);
+									// MyVector.addSelf(MyMarsLocation);
 
 									MyPlane.position.set(MyVector.x, MyVector.y, MyVector.z);
 									
 									var MyLookVector = MyCameraPosition;
-									MyPlane.rotationAutSoUpdate = true;
+									MyPlane.rotationAutoUpdate = true;
 									MyPlane.lookAt(MyLookVector);
 									MyPlane.EOMsrcForImage = SiteLocation[i][j].images[k].urlList;
 									MyPlane.EOMsite = i;
@@ -312,7 +318,7 @@ Scene.prototype.addCuriosityPics = function()
 									this.object3D.add(MyPlane);
 									// MyPlane.visible = false;
 									planeArr[planeArr.length] = MyPlane;
-									planeArr[planeArr.length-1].marsLocation = MyMarsLocation;
+									planeArr[planeArr.length-1].EOMmarsLocation = MyMarsLocation;
 
 									
 									// var MyText = new THREE.TextGeometry("Testing i=" + i + ", j =" + j);

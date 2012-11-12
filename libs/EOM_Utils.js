@@ -19,11 +19,10 @@ function driveSwitching(desiredSite, desiredDrive)
 	for (var i = 0; i < planeArr.length; i++)
 	{
 		planeArr[i].visible = false;
-		if(planeArr[i].EOMsite == desiredSite 
-			&& 
-			planeArr[i].EOMdrive == desiredDrive
-			&&
-			somebodyStopMe <= 10)
+		if(		(planeArr[i].EOMsite == desiredSite 
+				&& 
+				planeArr[i].EOMdrive == desiredDrive)
+			)
 		{
 			var MyImage = new Image();
 			MyImage.crossOrigin = '';
@@ -38,12 +37,16 @@ function driveSwitching(desiredSite, desiredDrive)
 			planeArr[i].material = MyMaterial;
 			planeArr[i].visible = true;
 
-			console.log(planeArr[i].marsLocation)
-			app.camera.position.set(
-									planeArr[i].marsLocation.x,
-									planeArr[i].marsLocation.y,
-									planeArr[i].marsLocation.z
-									);
+			// planeArr[i].lookAt(planeArr[i].EOMmarsLocation);
+
+			// app.camera.position = planeArr[i].EOMmarsLocation;
+
+
+			// app.camera.position.set(
+			// 						planeArr[i].marsLocation.x,
+			// 						planeArr[i].marsLocation.y,
+			// 						planeArr[i].marsLocation.z
+			// 						);
 			
 			// console.log("Adding image to array");
 			somebodyStopMe++;
@@ -56,7 +59,12 @@ function driveSwitching(desiredSite, desiredDrive)
 			planeArr[i].material.map.needsUpdate = true;
 		}
 
-		if (somebodyStopMe >= 30) {break;}
+
+
+
+
+
+		if (somebodyStopMe >= 50) {break;}
 
 	}
 	// console.log("driveSwitching finished with site: "+desiredSite+" and drive: "+desiredDrive);
