@@ -26,7 +26,7 @@ SceneViewer.prototype.init = function(param)
 	var amb = new THREE.AmbientLight( 0x808080, 1);
 	this.scene.add(amb);
 	
-	this.camera.position.set(1, 1, 1);	
+	this.camera.position.set(0.5, 1.5, 0.5);	
 	this.camera.lookAt(this.root.position);
 	this.camera.near = 0.001;
 	
@@ -292,7 +292,7 @@ Scene.prototype.addCuriosityPics = function()
 									MyCameraVector.x = tempNumberY;
 									MyCameraVector.y = -1*tempNumberZ;
 									MyCameraVector.z = -1*tempNumberX;
-									MyCameraVector.setLength(1.35);
+									MyCameraVector.setLength(1);
 
 									// console.log(MyQuaternion);
 									MyVector = new THREE.Vector3( MyCameraPosition.x, MyCameraPosition.y, MyCameraPosition.z);
