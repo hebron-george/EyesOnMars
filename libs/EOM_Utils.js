@@ -64,7 +64,7 @@ function driveSwitching(desiredSite, desiredDrive)
 
 
 
-		if (somebodyStopMe >= 50) {break;}
+		if (somebodyStopMe >= 30) {break;}
 
 	}
 	// console.log("driveSwitching finished with site: "+desiredSite+" and drive: "+desiredDrive);
@@ -211,4 +211,45 @@ function whichStartDrive()
 
 	driveSwitching(site,drive);
 	return this;
+}
+
+
+
+
+
+
+/// Zoom out camera
+function zoomOutCamera()
+{
+	var position, target;
+
+	// app.camera.position.z = 10;
+
+	position = 0.5;
+	target = 10.00;
+	myTween = new TWEEN.Tween(position).to(target, 10000);
+
+	myTween.onUpdate(function(){
+		// alert(position);
+		app.camera.position.z = position;
+	});
+
+	myTween.onComplete(bananaphone(position));
+
+	myTween.start();
+
+
+
+
+	// var myTween = new TWEEN.Tween(app.camera.position)
+	// .to( {
+	// 	z: newpos},
+	// 	2000).easing(easefn).start();
+	
+	// myTween.onUpdate(function)
+}
+
+function bananaphone(pos)
+{
+	__alert(pos);
 }
