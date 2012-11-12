@@ -47,7 +47,7 @@ SceneViewer.prototype.createCameraControls = function()
 	// Set up the FP controls
 	var controls = new THREE.FirstPersonControls( this.camera );
 
-	controls.movementSpeed = 10;
+	controls.movementSpeed = 2;
 	controls.lookSpeed = 0.05;
 	
 	// Allow tilt up/down
@@ -158,13 +158,13 @@ Scene.prototype.addCuriosityPics = function()
 
 	//targetDate = "2012-09-17";
 
-	// var targetDrive = null;
+	var targetDrive = null;
 	
-	// if (getUrlVars()["drive"])
-	// {
-	// 	targetDrive = getUrlVars()["drive"];
-	// 	// console.log("Drive number from URL is: " + targetDrive)
-	// }
+	if (getUrlVars()["drive"])
+	{
+		targetDrive = getUrlVars()["drive"];
+		// console.log("Drive number from URL is: " + targetDrive)
+	}
 
 
 	var targetSite = null;
@@ -204,6 +204,23 @@ Scene.prototype.addCuriosityPics = function()
 
 						for (var k=0; k < SiteLocation[i][j].images.length; k++)
 						{
+							/*if ( SiteLocation[i][j].images[k].instrument != "FHAZ_RIGHT_A" && SiteLocation[i][j].images[k].instrument != "RHAZ_RIGHT_A" )
+							{
+								continue;
+							}
+							else
+							{
+								for (var andy = 0; andy < SiteLocation[i][j].images.length; andy++)
+								{
+									if (SiteLocation[i][j].images[k].itemName.slice(4,35) == SiteLocation[i][j].images[andy].itemName.slice(4,35))
+									{
+										SiteLocation[i][j].images[andy] == null;
+									}
+								}
+							}*/
+						//}
+						//for (var k=0; k < SiteLocation[i][j].images.length; k++)
+						//{
 							if (true)// if (i == targetSite && j == targetDrive) 
 							{
 								// console.log("Length of Drives["+i+"] is: "+Drives[i].length);
@@ -213,13 +230,7 @@ Scene.prototype.addCuriosityPics = function()
 								// console.log(							SiteLocation[i][j].images[k].utc.indexOf(targetDate) != -1
 								// 		 || //or
 								// 		i == targetDrive);
-								if ( 
-										// SiteLocation[i][j].images[k].utc.indexOf(targetDate) != -1
-										//  || //or
-										// i == targetDrive
-										// ||
-										1
-									)
+								if ( SiteLocation[i][j].images[k].instrument != "FHAZ_RIGHT_A" && SiteLocation[i][j].images[k].instrument != "RHAZ_RIGHT_A" && SiteLocation[i][j].images[k].instrument != "NAV_RIGHT_A" )
 								{
 									counter++;
 									// var MyImage = new Image();
@@ -241,8 +252,14 @@ Scene.prototype.addCuriosityPics = function()
 									var MyMaterial = new THREE.MeshBasicMaterial({ 	map: MyMapArray[tempMapIndex], 
 																					transparent: true, 
 																					opacity: 0.9 });
+									// Finds duplicate images and keeps only the left one
+									/*if (SiteLocation[i][j].images[k].itemName.slice(4,35) == SiteLocation[i][j].images[k].itemName.slice(4,35))
+									{
 
-									if ( SiteLocation[i][j].images[k].instrument == "FHAZ_LEFT_A" || SiteLocation[i][j].images[k].instrument == "FHAZ_RIGHT_A")
+									 	continue;
+									}*/
+									
+									if ( SiteLocation[i][j].images[k].instrument == "FHAZ_LEFT_A" )
 									{
 										var MyGeometry = new THREE.PlaneGeometry(2.5,1);	
 									}
@@ -302,6 +319,7 @@ Scene.prototype.addCuriosityPics = function()
 									// var MyTextPlane = new THREE.Mesh(MyText, MyMaterial);
 									// MyTextPlane.position.set(counter, counter, counter);
 									// this.object3D.add(MyTextPlane);
+
 								}
 							}
 							// else
