@@ -236,7 +236,7 @@ function zoomOutCamera()
 
     // myTween.onComplete(bananaphone(position));
 
-    myTween.start();
+    myTween.start(+new Date());
 }
 
 function zoomOutCamera2()
@@ -256,7 +256,7 @@ function zoomOutCamera2()
 
     // myTween.onComplete(bananaphone(position));
 
-    myTween2.start();
+    myTween2.start(+new Date());
 }
 
 
@@ -268,7 +268,7 @@ function myAnimate()
     {
     requestAnimationFrame( myAnimate);
     }
-    myTween.update();
+    myTween.update(+new Date());
 } 
 
 
@@ -280,7 +280,7 @@ function myAnimate2()
     {
     requestAnimationFrame( myAnimate2);
     }
-    myTween2.update();
+    myTween2.update(+new Date());
 } 
 
 function bananaphone(pos)
