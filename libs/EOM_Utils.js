@@ -221,22 +221,42 @@ function whichStartDrive()
 /// Zoom out camera
 function zoomOutCamera()
 {
-	var position, target;
+    var position, target;
 
-	// app.camera.position.z = 10;
+    // app.camera.position.z = 10;
 
-	position = -3.0;
-	target = -10.0;
-	myTween = new TWEEN.Tween(position).to(target, 3000);
+    position = -3.0;
+    target = -10.0;
+    myTween = new TWEEN.Tween(position).to(target, 3000);
 
-	myTween.onUpdate(function(){
-		// alert(position);
-		app.camera.position.x = position;
-	});
+    myTween.onUpdate(function(){
+        // alert(position);
+        app.camera.position.x = position;
+    });
 
-	// myTween.onComplete(bananaphone(position));
+    // myTween.onComplete(bananaphone(position));
 
-	myTween.start();
+    myTween.start();
+}
+
+function zoomOutCamera2()
+{
+    var position, target;
+
+    // app.camera.position.z = 10;
+
+    position = { x:-3.0};
+    target = {x:-10.0};
+    myTween2 = new TWEEN.Tween(position).to(target, 3000);
+
+    myTween2.onUpdate(function(){
+        // alert(position);
+        app.camera.position.x = this.x;
+    });
+
+    // myTween.onComplete(bananaphone(position));
+
+    myTween2.start();
 }
 
 
@@ -244,15 +264,24 @@ function myAnimate()
 {
 
 
-	if(!myTween.onComplete())
-	{
-	requestAnimationFrame( myAnimate);
-	}
-	myTween.update();
+    if(!myTween.onComplete())
+    {
+    requestAnimationFrame( myAnimate);
+    }
+    myTween.update();
+} 
 
 
-}
+function myAnimate2()
+{
 
+
+    if(!myTween2.onComplete())
+    {
+    requestAnimationFrame( myAnimate2);
+    }
+    myTween2.update();
+} 
 
 function bananaphone(pos)
 {
