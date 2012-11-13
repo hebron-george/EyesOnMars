@@ -64,7 +64,7 @@ function driveSwitching(desiredSite, desiredDrive)
 
 
 
-		if (somebodyStopMe >= 30) {break;}
+		if (somebodyStopMe >= 50) {break;}
 
 	}
 	// console.log("driveSwitching finished with site: "+desiredSite+" and drive: "+desiredDrive);
@@ -136,10 +136,12 @@ function gotoNextDrive()
 	}
 	else
 	{
+		myAnimate2();
 		driveSwitching(
 			extractSite(ValidSiteDrive[index]),
 			extractDrive(ValidSiteDrive[index])
 			);
+		myAnimate3();
 		return true;
 	}
 }
@@ -163,10 +165,12 @@ function gotoPrevDrive()
 	}
 	else
 	{
+		myAnimate2();
 		driveSwitching(
 			extractSite(ValidSiteDrive[index]),
 			extractDrive(ValidSiteDrive[index])
 			);
+		myAnimate3();
 		return true;
 	}
 }
@@ -269,18 +273,6 @@ function zoomOutCamera2()
 }
 
 
-function myAnimate()
-{
-
-
-    if(!myEnded)
-    {
-    requestAnimationFrame( myAnimate);
-    }
-    myTween.update(+new Date());
-} 
-
-
 function myAnimate2()
 {
 
@@ -290,6 +282,44 @@ function myAnimate2()
     requestAnimationFrame( myAnimate2);
     }
     myTween2.update(+new Date());
+} 
+
+
+function zoomOutCamera3()
+{
+    var position, target;
+
+    // app.camera.position.z = 10;
+
+    position = { x:-10.0};
+    target = {x:0.5};
+    myTween3 = new TWEEN.Tween(position).to(target, 10000);
+    myTween3.easing(TWEEN.Easing.Sinusoidal.InOut);
+
+    myTween3.onUpdate(function(){
+        // alert(position);
+        app.camera.position.x = this.x;
+    });
+
+    myTween3.onComplete(function() {
+    	myEnded = true;
+    });
+
+    // myTween.onComplete(bananaphone(position));
+
+    myTween3.start(+new Date());
+}
+
+
+function myAnimate3()
+{
+
+
+    if(!myEnded)
+    {
+    requestAnimationFrame( myAnimate3);
+    }
+    myTween3.update(+new Date());
 } 
 
 function bananaphone(pos)
