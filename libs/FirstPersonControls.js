@@ -288,6 +288,8 @@ THREE.FirstPersonControls = function ( object, domElement ) {
 
 		this.object.lookAt( targetPosition );
 
+		
+
 	};
 
 

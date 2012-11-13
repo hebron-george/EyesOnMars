@@ -225,29 +225,34 @@ function zoomOutCamera()
 
 	// app.camera.position.z = 10;
 
-	position = 0.5;
-	target = 10.00;
-	myTween = new TWEEN.Tween(position).to(target, 10000);
+	position = -3.0;
+	target = -10.0;
+	myTween = new TWEEN.Tween(position).to(target, 3000);
 
 	myTween.onUpdate(function(){
 		// alert(position);
-		app.camera.position.z = position;
+		app.camera.position.x = position;
 	});
 
-	myTween.onComplete(bananaphone(position));
+	// myTween.onComplete(bananaphone(position));
 
 	myTween.start();
-
-
-
-
-	// var myTween = new TWEEN.Tween(app.camera.position)
-	// .to( {
-	// 	z: newpos},
-	// 	2000).easing(easefn).start();
-	
-	// myTween.onUpdate(function)
 }
+
+
+function myAnimate()
+{
+
+
+	if(!myTween.onComplete())
+	{
+	requestAnimationFrame( myAnimate);
+	}
+	myTween.update();
+
+
+}
+
 
 function bananaphone(pos)
 {

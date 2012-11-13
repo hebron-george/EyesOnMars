@@ -135,7 +135,7 @@ Sim.App.prototype.run = function()
 {
 	this.update();
 	this.renderer.render( this.scene, this.camera );
-	myTween.update();
+	
 	var that = this;
 	requestAnimationFrame(function() { that.run(); });	
 }
