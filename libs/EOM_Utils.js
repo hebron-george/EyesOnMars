@@ -136,10 +136,12 @@ function gotoNextDrive()
 	}
 	else
 	{
+		myAnimate2();
 		driveSwitching(
 			extractSite(ValidSiteDrive[index]),
 			extractDrive(ValidSiteDrive[index])
 			);
+		myAnimate3();
 		return true;
 	}
 }
@@ -163,10 +165,12 @@ function gotoPrevDrive()
 	}
 	else
 	{
+		myAnimate2();
 		driveSwitching(
 			extractSite(ValidSiteDrive[index]),
 			extractDrive(ValidSiteDrive[index])
 			);
+		myAnimate3();
 		return true;
 	}
 }
@@ -212,3 +216,145 @@ function whichStartDrive()
 	driveSwitching(site,drive);
 	return this;
 }
+
+
+
+var myEnded = false;
+
+
+/// Zoom out camera
+function zoomOutCamera()
+{
+    var position, target;
+
+    // app.camera.position.z = 10;
+
+    position = -3.0;
+    target = -10.0;
+    myTween = new TWEEN.Tween(position).to(target, 30000);
+
+    myTween.onUpdate(function(){
+        // alert(position);
+        app.camera.position.x = position;
+    });
+
+    myTween.onComplete(function() {
+    	myEnded = true;
+    });
+
+    // myTween.onComplete(bananaphone(position));
+
+    myTween.start(+new Date());
+}
+
+function zoomOutCamera2()
+{
+    var position, target;
+
+    // app.camera.position.z = 10;
+
+    position = { x:0.5};
+    target = {x:-10.0};
+    myTween2 = new TWEEN.Tween(position).to(target, 10000);
+    myTween2.easing(TWEEN.Easing.Sinusoidal.InOut);
+
+    myTween2.onUpdate(function(){
+        // alert(position);
+        app.camera.position.x = this.x;
+    });
+
+    myTween2.onComplete(function() {
+    	myEnded = true;
+    });
+
+    // myTween.onComplete(bananaphone(position));
+
+    myTween2.start(+new Date());
+}
+
+
+function myAnimate2()
+{
+
+
+    if(!myEnded)
+    {
+    requestAnimationFrame( myAnimate2);
+    }
+    myTween2.update(+new Date());
+} 
+
+
+function zoomOutCamera3()
+{
+    var position, target;
+
+    // app.camera.position.z = 10;
+
+    position = { x:-10.0};
+    target = {x:0.5};
+    myTween3 = new TWEEN.Tween(position).to(target, 10000);
+    myTween3.easing(TWEEN.Easing.Sinusoidal.InOut);
+
+    myTween3.onUpdate(function(){
+        // alert(position);
+        app.camera.position.x = this.x;
+    });
+
+    myTween3.onComplete(function() {
+    	myEnded = true;
+    });
+
+    // myTween.onComplete(bananaphone(position));
+
+    myTween3.start(+new Date());
+}
+
+
+function myAnimate3()
+{
+
+
+    if(!myEnded)
+    {
+    requestAnimationFrame( myAnimate3);
+    }
+    myTween3.update(+new Date());
+} 
+
+function bananaphone(pos)
+{
+	__alert(pos);
+}
+
+
+
+( function () {
+
+    var lastTime = 0;
+    var vendors = [ 'ms', 'moz', 'webkit', 'o' ];
+
+    for ( var x = 0; x < vendors.length && !window.requestAnimationFrame; ++ x ) {
+
+        window.requestAnimationFrame = window[ vendors[ x ] + 'RequestAnimationFrame' ];
+        window.cancelAnimationFrame = window[ vendors[ x ] + 'CancelAnimationFrame' ] || window[ vendors[ x ] + 'CancelRequestAnimationFrame' ];
+
+    }
+
+    if ( window.requestAnimationFrame === undefined ) {
+
+        window.requestAnimationFrame = function ( callback, element ) {
+
+            var currTime = Date.now(), timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) );
+            var id = window.setTimeout( function() { callback( currTime + timeToCall ); }, timeToCall );
+            lastTime = currTime + timeToCall;
+            return id;
+
+        };
+
+    }
+
+    window.cancelAnimationFrame = window.cancelAnimationFrame || function ( id ) { window.clearTimeout( id ) };
+
+                                                                                   
+}() );

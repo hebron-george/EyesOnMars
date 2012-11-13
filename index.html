@@ -50,13 +50,20 @@
 	var currentSite = 1;
 	var currentDrive = 0;
 	var app = null;
+	var myTween = null;
+	var myTween2 = null;
+	var mySequencer;
 
 	
 	$(document).ready(
 		function() {
 			var container = document.getElementById("container");
 			app = new SceneViewer();
+			// splineOutCamera();
 			app.init({ container: container });
+			zoomOutCamera2();
+			zoomOutCamera3();
+
 			app.run();
 			// console.log(planeArr);
 			// console.log(SiteLocation);
