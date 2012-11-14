@@ -33,7 +33,22 @@ function driveSwitching(desiredSite, desiredDrive)
 				planeArr[$(this).data("index")].material.map.needsUpdate = true;
 			}
 			var MyMap = new THREE.Texture( MyImage );
-			var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 0.9 });
+
+					if ( planeArr[i].instrument == "FHAZ_LEFT_A" 
+										||
+										planeArr[i].instrument == "FHAZ_RIGHT_A" 
+										||
+										planeArr[i].instrument == "RHAZ_LEFT_A" 
+										||
+										planeArr[i].instrument == "RHAZ_RIGHT_A" )
+					{
+						var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 0.9 });
+					}
+					else
+					{
+						var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 0.1 });						
+					}
+			
 			planeArr[i].material = MyMaterial;
 			planeArr[i].visible = true;
 
@@ -156,6 +171,7 @@ function gotoPrevDrive()
 			+"How did the currentSite and CurrentDrive get set to some"
 			+"thing that doesn't exist in the first place? Hummm....");
 		return false;
+
 	}
 	index--;
 	if (index == -1)

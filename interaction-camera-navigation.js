@@ -140,6 +140,7 @@ Scene.prototype.addCuriosityPics = function()
 	
 	if (getUrlVars()["id"])
 	{
+
 		var first = getUrlVars()["id"];
 		alert(first);
 	}
@@ -249,9 +250,11 @@ Scene.prototype.addCuriosityPics = function()
 									// 	// setTimeout(function() {$(this).src = ""; console.log("set img object src to empty string.")},1250); 
 										
 									// };
-									var MyMaterial = new THREE.MeshBasicMaterial({ 	map: MyMapArray[tempMapIndex], 
-																					transparent: true, 
-																					opacity: 0.9 });
+
+
+									// var MyMaterial = new THREE.MeshBasicMaterial({ 	map: MyMapArray[tempMapIndex], 
+									// 												transparent: true, 
+									// 												opacity: 0.9 });
 									// Finds duplicate images and keeps only the left one
 									/*if (SiteLocation[i][j].images[k].itemName.slice(4,35) == SiteLocation[i][j].images[k].itemName.slice(4,35))
 									{
@@ -267,10 +270,16 @@ Scene.prototype.addCuriosityPics = function()
 										||
 										SiteLocation[i][j].images[k].instrument == "RHAZ_RIGHT_A" )
 									{
-										var MyGeometry = new THREE.PlaneGeometry(2.5,1);	
+										var MyMaterial = new THREE.MeshBasicMaterial({ 	map: MyMapArray[tempMapIndex], 
+																					transparent: true, 
+																					opacity: 0.9 });										
+										var MyGeometry = new THREE.PlaneGeometry(2.5,2.5);	
 									}
 									else
 									{
+										var MyMaterial = new THREE.MeshBasicMaterial({ 	map: MyMapArray[tempMapIndex], 
+																					transparent: true, 
+																					opacity: 0.2 });
 										var MyGeometry = new THREE.PlaneGeometry(1,1);	
 									}
 									
@@ -319,6 +328,7 @@ Scene.prototype.addCuriosityPics = function()
 									// MyPlane.visible = false;
 									planeArr[planeArr.length] = MyPlane;
 									planeArr[planeArr.length-1].EOMmarsLocation = MyMarsLocation;
+									planeArr[planeArr.length-1].EOMinstrument = SiteLocation[i][j].images[k].instrument;
 
 									
 									// var MyText = new THREE.TextGeometry("Testing i=" + i + ", j =" + j);
