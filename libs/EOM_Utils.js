@@ -42,11 +42,11 @@ function driveSwitching(desiredSite, desiredDrive)
 										||
 										planeArr[i].instrument == "RHAZ_RIGHT_A" )
 					{
-						var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 0.9 });
+						var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 1 });
 					}
 					else
 					{
-						var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 0.1 });						
+						var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 1 });						
 					}
 			
 			planeArr[i].material = MyMaterial;
@@ -79,7 +79,7 @@ function driveSwitching(desiredSite, desiredDrive)
 
 
 
-		if (somebodyStopMe >= 50) {break;}
+		if (somebodyStopMe >= 15) {break;}
 
 	}
 	// console.log("driveSwitching finished with site: "+desiredSite+" and drive: "+desiredDrive);
@@ -102,14 +102,17 @@ function createValidSiteDriveIndex()
 			{
 				if (SiteLocation[i][j].images != null)
 				{
-					// Multiply site by 100000 and add to drive
-					// example, site is 2 and drive 837 then
-					// 200000 + 837 = 200837
-					// to extract site do
-					//   Math.floor(200837 / 100000)
-					// to extract drive do
-					//   200837 - (Math.floor(200837 / 100000) * 100000)
-					ValidSiteDrive[ValidSiteDrive.length] = combineSiteDriveNums(i,j);
+					if (SiteLocation[i][j].images.length > 10)
+					{
+						// Multiply site by 100000 and add to drive
+						// example, site is 2 and drive 837 then
+						// 200000 + 837 = 200837
+						// to extract site do
+						//   Math.floor(200837 / 100000)
+						// to extract drive do
+						//   200837 - (Math.floor(200837 / 100000) * 100000)
+						ValidSiteDrive[ValidSiteDrive.length] = combineSiteDriveNums(i,j);
+					}
 				}
 			}
 		}
@@ -151,12 +154,14 @@ function gotoNextDrive()
 	}
 	else
 	{
+		myEnded2 = false; 
+		myEnded3 = false;
 		myAnimate2();
 		driveSwitching(
 			extractSite(ValidSiteDrive[index]),
 			extractDrive(ValidSiteDrive[index])
 			);
-		myAnimate3();
+		// myAnimate3();
 		return true;
 	}
 }
@@ -181,12 +186,13 @@ function gotoPrevDrive()
 	}
 	else
 	{
+		myEnded2 = false; 
+		myEnded3 = false;
 		myAnimate2();
 		driveSwitching(
 			extractSite(ValidSiteDrive[index]),
 			extractDrive(ValidSiteDrive[index])
 			);
-		myAnimate3();
 		return true;
 	}
 }
@@ -235,7 +241,7 @@ function whichStartDrive()
 
 
 
-var myEnded = false;
+var myEnded2, myEnded3 = false;
 
 
 /// Zoom out camera
@@ -280,8 +286,10 @@ function zoomOutCamera2()
     });
 
     myTween2.onComplete(function() {
-    	myEnded = true;
+    	myEnded2 = true;
     });
+
+    myTween2.chain(myTween3);
 
     // myTween.onComplete(bananaphone(position));
 
@@ -293,7 +301,7 @@ function myAnimate2()
 {
 
 
-    if(!myEnded)
+    if(!myEnded2)
     {
     requestAnimationFrame( myAnimate2);
     }
@@ -318,7 +326,7 @@ function zoomOutCamera3()
     });
 
     myTween3.onComplete(function() {
-    	myEnded = true;
+    	myEnded3 = true;
     });
 
     // myTween.onComplete(bananaphone(position));
@@ -331,7 +339,7 @@ function myAnimate3()
 {
 
 
-    if(!myEnded)
+    if(!myEnded3)
     {
     requestAnimationFrame( myAnimate3);
     }
