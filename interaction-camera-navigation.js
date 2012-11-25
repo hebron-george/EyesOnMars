@@ -44,30 +44,38 @@ SceneViewer.prototype.init = function(param)
 
 SceneViewer.prototype.createCameraControls = function()
 {
-	// Set up the FP controls
-	var controls = new THREE.FirstPersonControls( this.camera );
+	var controls = new THREE.TrackballControls( this.camera, this.renderer.domElement );
+	var radius = SceneViewer.CAMERA_RADIUS;
+	
+	controls.rotateSpeed = SceneViewer.ROTATE_SPEED;
+	controls.zoomSpeed = SceneViewer.ZOOM_SPEED;
+	controls.panSpeed = SceneViewer.PAN_SPEED;
+	controls.dynamicDampingFactor = SceneViewer.DAMPING_FACTOR;
+	controls.noZoom = false;
+	controls.noPan = true;
+	controls.staticMoving = false;
 
-	controls.movementSpeed = 10;
-	controls.lookSpeed = 0.05;
-	
-	// Allow tilt up/down
-	controls.lookVertical = true;
-	
-	// Don't move camera without click
-	controls.activeLook = false;
+	controls.minDistance = radius * SceneViewer.MIN_DISTANCE_FACTOR;
+	controls.maxDistance = radius * SceneViewer.MAX_DISTANCE_FACTOR;
 
-	// var controls = new THREE.DragControls( this.camera );
-	
-	
-	
 	this.controls = controls;
-	
-	this.clock = new THREE.Clock();
 }
+
+SceneViewer.CAMERA_START_Z = 1;
+SceneViewer.CAMERA_RADIUS = 0.1;
+SceneViewer.MIN_DISTANCE_FACTOR = 0.1;
+SceneViewer.MAX_DISTANCE_FACTOR = 0.1;
+SceneViewer.ROTATE_SPEED = 0.1;
+SceneViewer.ZOOM_SPEED = 0;
+SceneViewer.PAN_SPEED = 0.2;
+SceneViewer.DAMPING_FACTOR = 0.8;
 
 SceneViewer.prototype.update = function()
 {
-	this.controls.update(this.clock.getDelta());
+	//this.controls.update(this.clock.getDelta());
+    //Sim.App.prototype.update.call(this);
+
+    this.controls.update();
     Sim.App.prototype.update.call(this);
 }
 
