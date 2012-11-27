@@ -79,7 +79,7 @@ function driveSwitching(desiredSite, desiredDrive)
 
 
 
-		if (somebodyStopMe >= 15) {break;}
+		if (somebodyStopMe >= 20) {break;}
 
 	}
 	// console.log("driveSwitching finished with site: "+desiredSite+" and drive: "+desiredDrive);
@@ -188,7 +188,7 @@ function gotoPrevDrive()
 	{
 		myEnded2 = false; 
 		myEnded3 = false;
-		myAnimate2();
+		//myAnimate2();
 		driveSwitching(
 			extractSite(ValidSiteDrive[index]),
 			extractDrive(ValidSiteDrive[index])
