@@ -86,8 +86,8 @@ THREE.TrackballControls = function ( object, domElement ) {
 	this.getMouseOnScreen = function ( clientX, clientY ) {
 
 		return new THREE.Vector2(
-			( clientX - _this.screen.offsetLeft ) / _this.radius * 0.5,
-			( clientY - _this.screen.offsetTop ) / _this.radius * 0.5
+			( clientX - _this.screen.offsetLeft ) / _this.radius * -0.5,
+			( clientY - _this.screen.offsetTop ) / _this.radius * -0.5
 		);
 
 	};
