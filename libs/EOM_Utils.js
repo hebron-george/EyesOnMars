@@ -14,6 +14,8 @@ return vars;
 // Switch between drives by loading and unloading
 function driveSwitching(desiredSite, desiredDrive)
 {
+	planeArrVisible.length = 0;
+
 	var somebodyStopMe = 0;
 	// console.log("driveSwitching called with site: "+desiredSite+" and drive: "+desiredDrive);
 	for (var i = 0; i < planeArr.length; i++)
@@ -50,20 +52,23 @@ function driveSwitching(desiredSite, desiredDrive)
 					}
 			
 			planeArr[i].material = MyMaterial;
+			planeArrVisible[planeArrVisible.length] = planeArr[i];
 			planeArr[i].visible = true;
 
-			// planeArr[i].lookAt(planeArr[i].EOMmarsLocation);
+			for (var i_vis = 0; i_vis < planeArrVisible.length; i_vis++)
+			{
+				if (!(planeArrVisible[i_vis] === planeArr[i]) 
+					&& 
+					(planeArrVisible[i_vis].position.distanceTo(planeArr[i].position)) < 0.1)
+				{
+					planeArr[i].visible = false;
+					var MyMap = new THREE.Texture();
+					planeArr[i].material.map = new THREE.MeshBasicMaterial( {map:MyMap, transparent: true, opacity: 0.9});
+					planeArr[i].material.map.needsUpdate = true;					
+				}
+			}
 
-			// app.camera.position = planeArr[i].EOMmarsLocation;
 
-
-			// app.camera.position.set(
-			// 						planeArr[i].marsLocation.x,
-			// 						planeArr[i].marsLocation.y,
-			// 						planeArr[i].marsLocation.z
-			// 						);
-			
-			// console.log("Adding image to array");
 			somebodyStopMe++;
 		}
 		else
@@ -156,7 +161,7 @@ function gotoNextDrive()
 	{
 		myEnded2 = false; 
 		myEnded3 = false;
-		myAnimate2();
+		// myAnimate2();
 		driveSwitching(
 			extractSite(ValidSiteDrive[index]),
 			extractDrive(ValidSiteDrive[index])
