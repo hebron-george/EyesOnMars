@@ -1,12 +1,24 @@
 <html>
 	<head>
 		<title>Hello World -- Andrew was here!</title>
+		<meta property="og:title" content="The Red Planet" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.eyesonmars.com/" />
+		<meta property="og:image" content="http://www.nasa.gov/images/content/703573main_pia16239-43_1600-1200.jpg" />
+		<meta property="og:site_name" content="Eyes On Mars" />
+		<meta property="fb:admins" content="5036389" />
 	</head>
 
 	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<h2>Hey there folks!</h2>
-		<iframe src="https://www.facebook.com/plugins/like.php?href=YOUR_URL"
-        		scrolling="no" frameborder="0"
-        		style="border:none; width:450px; height:80px"></iframe>
+		<div class="fb-like" data-href="http://eyesonmars.com/ares/" data-send="true" data-width="450" data-show-faces="false"></div>
 	</body>
 </html>
