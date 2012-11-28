@@ -246,6 +246,23 @@ function whichStartDrive()
 
 
 
+
+function whichStartCamera()
+{
+	var lat = getUrlVars()["looklat"];
+	var lon = getUrlVars()["looklon"];
+
+	if (lat & lon)
+	{
+		app.controls.lat = parseFloat(lat);
+		app.controls.lon = parseFloat(lon);
+	}
+
+	return this;
+}
+
+
+
 var myEnded2, myEnded3 = false;
 
 
