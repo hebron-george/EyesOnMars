@@ -42,6 +42,8 @@ SceneViewer.prototype.init = function(param)
     this.content = content;    
 	
     this.createCameraControls();
+	document.addEventListener( 'dblclick', ondblclick, false );
+
 }
 
 SceneViewer.prototype.createCameraControls = function()
@@ -383,4 +385,48 @@ Model.prototype.handleLoaded = function(data)
 		
 		this.object3D.scale.copy(this.scale);
 	}
+}
+
+
+function ondblclick( event )
+{
+
+	var vector = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1, - ( event.clientY / window.innerHeight ) * 2 + 1, 0.5 );
+	var projector = new THREE.Projector();
+	projector.unprojectVector( vector, camera );
+
+	var ray = new THREE.Ray( camera.position, vector.subSelf( camera.position ).normalize() );
+
+	 intersects = ray.intersectObjects( planeArr );
+
+	if ( intersects.length > 0 ) {
+
+		// intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );
+
+		// var particle = new THREE.Particle( particleMaterial );
+		// particle.position = intersects[ 0 ].point;
+		// particle.scale.x = particle.scale.y = 8;
+		// app.scene.add( particle );	
+
+		var src = intersects[0].object.EOMsrcForImage;
+		
+		$("#container").after('<div class="lightbox"><div class="img_container"><img src="' + src + '" /></div></div>');
+
+		/* Close the grey area */
+		var mouse_is_inside = true;
+		$(".img_container").hover(function () {
+			mouse_is_inside = true;
+		}, function () {
+			mouse_is_inside = false;
+		});
+		if (!$.browser.msie) {
+			$("body").mouseup(function () {
+				if (!mouse_is_inside) {
+					$(".lightbox").remove();
+				}
+			});
+		}
+
+	}
+
 }
