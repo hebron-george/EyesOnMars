@@ -84,7 +84,7 @@ function driveSwitching(desiredSite, desiredDrive)
 
 
 
-		if (somebodyStopMe >= 20) {break;}
+		if (somebodyStopMe >= 60) {break;}
 
 	}
 	// console.log("driveSwitching finished with site: "+desiredSite+" and drive: "+desiredDrive);
