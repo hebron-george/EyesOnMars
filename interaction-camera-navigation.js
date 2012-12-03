@@ -175,11 +175,11 @@ Scene.prototype.addCuriosityPics = function()
 	
 	var counter = 0;
 	
-	for ( var i=SiteLocation.length; i > 0; i--)
+	for ( var i=SiteLocation.length - 1; i >= 0; i--)
 	{
 		if (SiteLocation[i])
 		{
-			for (var j=SiteLocation[i].length; j > 0; j--) 
+			for (var j=SiteLocation[i].length - 1; j >= 0; j--) 
 			{
 				if ( SiteLocation[i][j])
 				{
