@@ -127,7 +127,6 @@ Scene.prototype.addCuriosityPics = function()
 {
 	getLocationDataArray();
 	getImageDataArray();
-	console.log(SiteLocation[00001][0].images[0].urlList);
 	
 	if (getUrlVars()["id"])
 	{

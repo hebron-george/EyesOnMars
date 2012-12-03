@@ -35,14 +35,22 @@
 	<script>
 		function getNext()
 		{
-			gotoNextDrive();
+			fadeOutImages();
+			window.setTimeout(stopFadeOut,2000);
+			window.setTimeout(gotoNextDrive,2000);
+			window.setTimeout(fadeInImages,3000);
+			window.setTimeout(stopFadeIn,5000);
 		}
 	</script>
 	
 	<script>
 		function getPrev()
 		{
-			gotoPrevDrive();
+			fadeOutImages();
+			window.setTimeout(stopFadeOut,2000);
+			window.setTimeout(gotoPrevDrive,2000);
+			window.setTimeout(fadeInImages,3000);
+			window.setTimeout(stopFadeIn,5000);			
 		}
 	</script>
 
@@ -62,6 +70,8 @@
 	var myTween2 = null;
 	var mySequencer;
 	var objects = [];
+	var fadeInID = 0;
+	var fadeOutID = 0;
 
 	
 	$(document).ready(

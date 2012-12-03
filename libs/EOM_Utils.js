@@ -251,9 +251,6 @@ function whichStartCamera()
 {
 	var lat = getUrlVars()["vertical"];
 	var lon = getUrlVars()["horizontal"];
-	console.log("called whichStartCamera")
-	console.log("vertical = " + lat);
-	console.log("horizontal = " + lon);
 	if (lat & lon)
 	{
 		app.controls.lat = parseFloat(lat);
@@ -263,12 +260,45 @@ function whichStartCamera()
 	return this;
 }
 
-
-function fadeOutImages(newOpacity, seconds)
+function fadeOutImages()
 {
+	fadeOutID = window.setInterval(fadeOut,10);
+}
+
+
+function fadeOut()
+{
+	var newOpacity = planeArr[0].material.opacity - 0.005;
 	for (var i = 0; i < planeArr.length; i++)
 	{
 		planeArr[i].material.opacity = newOpacity;
 		planeArr[i].material.needsUpdate = true;
 	}
+}
+
+function stopFadeOut()
+{
+	window.clearInterval(fadeInID);
+}
+
+
+function fadeInImages()
+{
+	fadeInID = window.setInterval(fadeIn,10);
+}
+
+
+function fadeIn()
+{
+	var newOpacity = planeArr[0].material.opacity + 0.005;
+	for (var i = 0; i < planeArr.length; i++)
+	{
+		planeArr[i].material.opacity = newOpacity;
+		planeArr[i].material.needsUpdate = true;
+	}
+}
+
+function stopFadeIn()
+{
+	window.clearInterval(fadeOutID);
 }
