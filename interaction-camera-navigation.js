@@ -209,14 +209,14 @@ Scene.prototype.addCuriosityPics = function()
 									{
 										var MyMaterial = new THREE.MeshBasicMaterial({ 	map: MyMapArray[tempMapIndex], 
 																					transparent: true, 
-																					opacity: 0.9 });										
+																					opacity: 0.0 });										
 										var MyGeometry = new THREE.PlaneGeometry(2.5,2.5);	
 									}
 									else
 									{
 										var MyMaterial = new THREE.MeshBasicMaterial({ 	map: MyMapArray[tempMapIndex], 
 																					transparent: true, 
-																					opacity: 0.2 });
+																					opacity: 0.0 });
 										var MyGeometry = new THREE.PlaneGeometry(1,1);	
 									}
 									

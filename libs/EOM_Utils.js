@@ -44,11 +44,11 @@ function driveSwitching(desiredSite, desiredDrive)
 										||
 										planeArr[i].instrument == "RHAZ_RIGHT_A" )
 					{
-						var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 1 });
+						var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 0.0 });
 					}
 					else
 					{
-						var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 1 });						
+						var MyMaterial = new THREE.MeshBasicMaterial({ map:MyMap, transparent: true, opacity: 0.0 });						
 					}
 			
 			planeArr[i].material = MyMaterial;
@@ -63,7 +63,7 @@ function driveSwitching(desiredSite, desiredDrive)
 				{
 					planeArr[i].visible = false;
 					var MyMap = new THREE.Texture();
-					planeArr[i].material.map = new THREE.MeshBasicMaterial( {map:MyMap, transparent: true, opacity: 0.9});
+					planeArr[i].material.map = new THREE.MeshBasicMaterial( {map:MyMap, transparent: true, opacity: 0.0});
 					planeArr[i].material.map.needsUpdate = true;					
 				}
 			}
@@ -166,7 +166,7 @@ function gotoNextDrive()
 			extractSite(ValidSiteDrive[index]),
 			extractDrive(ValidSiteDrive[index])
 			);
-		// myAnimate3();
+		fadeInImages();
 		return true;
 	}
 }
@@ -198,6 +198,7 @@ function gotoPrevDrive()
 			extractSite(ValidSiteDrive[index]),
 			extractDrive(ValidSiteDrive[index])
 			);
+		fadeInImages();
 		return true;
 	}
 }
@@ -241,6 +242,7 @@ function whichStartDrive()
 	}
 
 	driveSwitching(site,drive);
+	fadeInImages();
 	return this;
 }
 
@@ -260,15 +262,33 @@ function whichStartCamera()
 	return this;
 }
 
-function fadeOutImages()
+
+var fadeOutID = -1;
+
+function fadeOutImages(next)
 {
-	fadeOutID = window.setInterval(fadeOut,10);
+
+	if(next)
+	{
+		fadeOutID = window.setInterval(fadeOutNEXT,10);
+	}
+	else
+	{
+		fadeOutID = window.setInterval(fadeOutPREV,10);
+	}
 }
 
-
-function fadeOut()
+function fadeOutNEXT()
 {
 	var newOpacity = planeArr[0].material.opacity - 0.005;
+
+	if(newOpacity <= 0.01)
+	{
+		gotoNextDrive();
+		window.clearInterval(fadeOutID);
+		fadeOutID = -1;
+	}
+
 	for (var i = 0; i < planeArr.length; i++)
 	{
 		planeArr[i].material.opacity = newOpacity;
@@ -276,29 +296,54 @@ function fadeOut()
 	}
 }
 
-function stopFadeOut()
+function fadeOutPREV()
 {
-	window.clearInterval(fadeInID);
+	var newOpacity = planeArr[0].material.opacity - 0.005;
+
+	if(newOpacity <= 0.01)
+	{
+		gotoPrevDrive();
+		window.clearInterval(fadeOutID);
+		fadeOutID = -1;
+	}
+	else
+	{
+		for (var i = 0; i < planeArr.length; i++)
+		{
+			planeArr[i].material.opacity = newOpacity;
+			planeArr[i].material.needsUpdate = true;
+		}
+	}
 }
 
+
+var fadeInID = -1;
 
 function fadeInImages()
 {
+	if(fadeOutID != -1)
+	{
+		window.clearInterval(fadeOutID);
+		fadeOutID = -1;
+	}
+
 	fadeInID = window.setInterval(fadeIn,10);
 }
-
 
 function fadeIn()
 {
 	var newOpacity = planeArr[0].material.opacity + 0.005;
-	for (var i = 0; i < planeArr.length; i++)
+	if(newOpacity >= 1)
 	{
-		planeArr[i].material.opacity = newOpacity;
-		planeArr[i].material.needsUpdate = true;
+		window.clearInterval(fadeInID);
+		fadeInID = -1;
 	}
-}
-
-function stopFadeIn()
-{
-	window.clearInterval(fadeOutID);
+	else
+	{
+		for (var i = 0; i < planeArr.length; i++)
+		{
+			planeArr[i].material.opacity = newOpacity;
+			planeArr[i].material.needsUpdate = true;
+		}		
+	}
 }
