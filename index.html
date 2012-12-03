@@ -23,6 +23,7 @@
 	<script src="interaction-camera-navigation.js"></script>
 	<Script src="/alpha/images.js"></script>
 	<Script src="/alpha/locations.js"></script>
+	<script type="text/javascript" src="http://www.shawnolson.net/scripts/public_smo_scripts.js"></script>
 	<meta property="og:title" content="The Red Planet" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://www.eyesonmars.com/" />
@@ -67,15 +68,8 @@
 		function() {
 			var container = document.getElementById("container");
 			app = new SceneViewer();
-			// splineOutCamera();
 			app.init({ container: container });
-			// zoomOutCamera3();
-			// zoomOutCamera2();
-
 			app.run();
-			// console.log(planeArr);
-			// console.log(SiteLocation);
-			// console.log(ValidSiteDrive);
 			createValidSiteDriveIndex();
 			whichStartDrive();
 			whichStartCamera();
