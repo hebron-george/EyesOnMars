@@ -18,7 +18,7 @@ body {
 }
 .lightbox .img_container {
 	width: 350px;
-	height: auto;
+	height: 400px;
 	top: 50%;
 	left: 50%;
 	margin-top: -175px;

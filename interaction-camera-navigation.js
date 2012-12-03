@@ -410,8 +410,10 @@ function ondblclick( event )
 
 		var src = intersects[0].object.EOMsrcForImage;
 		
-		$("#container").after('<div class="lightbox"><div class="img_container"><img src="' + src + '" /></div></div>');
-
+		$("#container").after('<div class="lightbox"><div class="img_container"><img src="' + src + '" /><div class="fb-like" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="verdana"></div></div></div>');
+		/*$("#container").after('<div class="fb-like" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" 
+			data-width="90" data-show-faces="false" data-font="verdana"></div>');*/
+		//
 		/* Close the grey area */
 		var mouse_is_inside = true;
 		$(".img_container").hover(function () {
@@ -423,6 +425,7 @@ function ondblclick( event )
 			$("body").mouseup(function () {
 				if (!mouse_is_inside) {
 					$(".lightbox").remove();
+					$(".fb-like").remove();
 				}
 			});
 		}
