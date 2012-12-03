@@ -396,7 +396,7 @@ function ondblclick( event )
 
 	var ray = new THREE.Ray( camera.position, vector.subSelf( camera.position ).normalize() );
 
-	 intersects = ray.intersectObjects( planeArr );
+	intersects = ray.intersectObjects( planeArrVisible );
 
 	if ( intersects.length > 0 ) {
 
@@ -406,9 +406,8 @@ function ondblclick( event )
 		// particle.position = intersects[ 0 ].point;
 		// particle.scale.x = particle.scale.y = 8;
 		// app.scene.add( particle );	
-
 		var src = intersects[0].object.EOMsrcForImage;
-		
+
 		$("#container").after('<div class="lightbox"><div class="img_container"><img src="' + src + '" /><div class="fb-like" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="verdana"></div></div></div>');
 		/*$("#container").after('<div class="fb-like" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" 
 			data-width="90" data-show-faces="false" data-font="verdana"></div>');*/
@@ -422,10 +421,8 @@ function ondblclick( event )
 		});
 		if (!$.browser.msie) {
 			$("body").mouseup(function () {
-				if (!mouse_is_inside) {
-					$(".lightbox").remove();
-					$(".fb-like").remove();
-				}
+				$(".lightbox").remove();
+				$(".fb-like").remove();
 			});
 		}
 
