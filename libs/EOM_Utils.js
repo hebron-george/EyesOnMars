@@ -109,13 +109,7 @@ function createValidSiteDriveIndex()
 				{
 					if (SiteLocation[i][j].images.length > 10)
 					{
-						// Multiply site by 100000 and add to drive
-						// example, site is 2 and drive 837 then
-						// 200000 + 837 = 200837
-						// to extract site do
-						//   Math.floor(200837 / 100000)
-						// to extract drive do
-						//   200837 - (Math.floor(200837 / 100000) * 100000)
+
 						ValidSiteDrive[ValidSiteDrive.length] = combineSiteDriveNums(i,j);
 					}
 				}
@@ -155,6 +149,7 @@ function gotoNextDrive()
 	if (index == ValidSiteDrive.length)
 	{
 		__alert("There are no more \"Next Drives\"");
+		fadeInImages();
 		return false;
 	}
 	else
@@ -187,6 +182,7 @@ function gotoPrevDrive()
 	if (index == -1)
 	{
 		__alert("There are no more \"Prev Drives\"");
+		fadeInImages();
 		return false;
 	}
 	else
@@ -344,6 +340,6 @@ function fadeIn()
 		{
 			planeArr[i].material.opacity = newOpacity;
 			planeArr[i].material.needsUpdate = true;
-		}		
+		}
 	}
 }
