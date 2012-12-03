@@ -36,14 +36,14 @@ function getLocationDataArray()
 	location1.x = 374.7524015454619;
 	location1.y = 1813.2579113727406;
 	location1.z = 0.0;
-	if(!SiteLocation[00000])
+	if(!SiteLocation[0])
 	{
-		SiteLocation[00000] = new Array();
-		SiteLocation[00000][00000] = location1;
+		SiteLocation[0] = new Array();
+		SiteLocation[0][0] = location1;
 	}
 	else
 	{
-		SiteLocation[00000][00000] = location1;
+		SiteLocation[0][0] = location1;
 	}
 
 	var location2 = new LocationInfo();
@@ -61,14 +61,14 @@ function getLocationDataArray()
 	location2.x = 374.7524015454619;
 	location2.y = 1813.2579113727406;
 	location2.z = 0.0;
-	if(!SiteLocation[00001])
+	if(!SiteLocation[1])
 	{
-		SiteLocation[00001] = new Array();
-		SiteLocation[00001][00000] = location2;
+		SiteLocation[1] = new Array();
+		SiteLocation[1][0] = location2;
 	}
 	else
 	{
-		SiteLocation[00001][00000] = location2;
+		SiteLocation[1][0] = location2;
 	}
 
 	var location3 = new LocationInfo();
@@ -86,14 +86,14 @@ function getLocationDataArray()
 	location3.x = 374.7529237314411;
 	location3.y = 1813.2574315370002;
 	location3.z = 0.0;
-	if(!SiteLocation[00001])
+	if(!SiteLocation[1])
 	{
-		SiteLocation[00001] = new Array();
-		SiteLocation[00001][00008] = location3;
+		SiteLocation[1] = new Array();
+		SiteLocation[1][8] = location3;
 	}
 	else
 	{
-		SiteLocation[00001][00008] = location3;
+		SiteLocation[1][8] = location3;
 	}
 
 	var location4 = new LocationInfo();
@@ -111,14 +111,14 @@ function getLocationDataArray()
 	location4.x = 374.7534459174203;
 	location4.y = 1813.2569517012635;
 	location4.z = 0.0;
-	if(!SiteLocation[00002])
+	if(!SiteLocation[2])
 	{
-		SiteLocation[00002] = new Array();
-		SiteLocation[00002][00000] = location4;
+		SiteLocation[2] = new Array();
+		SiteLocation[2][0] = location4;
 	}
 	else
 	{
-		SiteLocation[00002][00000] = location4;
+		SiteLocation[2][0] = location4;
 	}
 
 	var location5 = new LocationInfo();
@@ -136,14 +136,14 @@ function getLocationDataArray()
 	location5.x = 374.7503696779422;
 	location5.y = 1813.2571997901032;
 	location5.z = 0.0;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00000] = location5;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][0] = location5;
 	}
 	else
 	{
-		SiteLocation[00003][00000] = location5;
+		SiteLocation[3][0] = location5;
 	}
 
 	var location6 = new LocationInfo();
@@ -161,14 +161,14 @@ function getLocationDataArray()
 	location6.x = 374.7494473901097;
 	location6.y = 1813.260704465938;
 	location6.z = 0.0;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00004] = location6;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][4] = location6;
 	}
 	else
 	{
-		SiteLocation[00003][00004] = location6;
+		SiteLocation[3][4] = location6;
 	}
 
 	var location7 = new LocationInfo();
@@ -186,14 +186,14 @@ function getLocationDataArray()
 	location7.x = 374.7494473901097;
 	location7.y = 1813.260704465938;
 	location7.z = 0.0;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00008] = location7;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][8] = location7;
 	}
 	else
 	{
-		SiteLocation[00003][00008] = location7;
+		SiteLocation[3][8] = location7;
 	}
 
 	var location8 = new LocationInfo();
@@ -211,14 +211,14 @@ function getLocationDataArray()
 	location8.x = 374.7494473901097;
 	location8.y = 1813.260704465938;
 	location8.z = 0.0;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00016] = location8;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][16] = location8;
 	}
 	else
 	{
-		SiteLocation[00003][00016] = location8;
+		SiteLocation[3][16] = location8;
 	}
 
 	var location9 = new LocationInfo();
@@ -236,14 +236,14 @@ function getLocationDataArray()
 	location9.x = 374.7494473901097;
 	location9.y = 1813.260704465938;
 	location9.z = 0.0;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00024] = location9;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][24] = location9;
 	}
 	else
 	{
-		SiteLocation[00003][00024] = location9;
+		SiteLocation[3][24] = location9;
 	}
 
 	var location10 = new LocationInfo();
@@ -261,14 +261,14 @@ function getLocationDataArray()
 	location10.x = 374.7494473901097;
 	location10.y = 1813.260704465938;
 	location10.z = 0.0;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00028] = location10;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][28] = location10;
 	}
 	else
 	{
-		SiteLocation[00003][00028] = location10;
+		SiteLocation[3][28] = location10;
 	}
 
 	var location11 = new LocationInfo();
@@ -286,14 +286,14 @@ function getLocationDataArray()
 	location11.x = 374.7494473901097;
 	location11.y = 1813.260704465938;
 	location11.z = 0.0;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00036] = location11;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][36] = location11;
 	}
 	else
 	{
-		SiteLocation[00003][00036] = location11;
+		SiteLocation[3][36] = location11;
 	}
 
 	var location12 = new LocationInfo();
@@ -311,14 +311,14 @@ function getLocationDataArray()
 	location12.x = 374.7494473901097;
 	location12.y = 1813.260704465938;
 	location12.z = 0.0;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00040] = location12;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][40] = location12;
 	}
 	else
 	{
-		SiteLocation[00003][00040] = location12;
+		SiteLocation[3][40] = location12;
 	}
 
 	var location13 = new LocationInfo();
@@ -336,14 +336,14 @@ function getLocationDataArray()
 	location13.x = 374.7494473901097;
 	location13.y = 1813.260704465938;
 	location13.z = 0.0;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00044] = location13;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][44] = location13;
 	}
 	else
 	{
-		SiteLocation[00003][00044] = location13;
+		SiteLocation[3][44] = location13;
 	}
 
 	var location14 = new LocationInfo();
@@ -361,14 +361,14 @@ function getLocationDataArray()
 	location14.x = 374.4651746882846;
 	location14.y = 1814.164222348747;
 	location14.z = 0.0620359;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00054] = location14;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][54] = location14;
 	}
 	else
 	{
-		SiteLocation[00003][00054] = location14;
+		SiteLocation[3][54] = location14;
 	}
 
 	var location15 = new LocationInfo();
@@ -386,14 +386,14 @@ function getLocationDataArray()
 	location15.x = 373.2727894299642;
 	location15.y = 1817.7512455397045;
 	location15.z = 0.209189;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00060] = location15;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][60] = location15;
 	}
 	else
 	{
-		SiteLocation[00003][00060] = location15;
+		SiteLocation[3][60] = location15;
 	}
 
 	var location16 = new LocationInfo();
@@ -411,14 +411,14 @@ function getLocationDataArray()
 	location16.x = 373.2727894299642;
 	location16.y = 1817.7512455397045;
 	location16.z = 0.209189;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00066] = location16;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][66] = location16;
 	}
 	else
 	{
-		SiteLocation[00003][00066] = location16;
+		SiteLocation[3][66] = location16;
 	}
 
 	var location17 = new LocationInfo();
@@ -436,14 +436,14 @@ function getLocationDataArray()
 	location17.x = 375.0197219080692;
 	location17.y = 1819.7188776782277;
 	location17.z = 0.39717;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00078] = location17;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][78] = location17;
 	}
 	else
 	{
-		SiteLocation[00003][00078] = location17;
+		SiteLocation[3][78] = location17;
 	}
 
 	var location18 = new LocationInfo();
@@ -461,14 +461,14 @@ function getLocationDataArray()
 	location18.x = 378.3711657694075;
 	location18.y = 1815.9990573234572;
 	location18.z = 0.323847;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00100] = location18;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][100] = location18;
 	}
 	else
 	{
-		SiteLocation[00003][00100] = location18;
+		SiteLocation[3][100] = location18;
 	}
 
 	var location19 = new LocationInfo();
@@ -486,14 +486,14 @@ function getLocationDataArray()
 	location19.x = 381.6261030336718;
 	location19.y = 1816.9014752404837;
 	location19.z = 0.58318;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00106] = location19;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][106] = location19;
 	}
 	else
 	{
-		SiteLocation[00003][00106] = location19;
+		SiteLocation[3][106] = location19;
 	}
 
 	var location20 = new LocationInfo();
@@ -511,14 +511,14 @@ function getLocationDataArray()
 	location20.x = 378.4740281574959;
 	location20.y = 1828.9168610465458;
 	location20.z = 1.0857;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00260] = location20;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][260] = location20;
 	}
 	else
 	{
-		SiteLocation[00003][00260] = location20;
+		SiteLocation[3][260] = location20;
 	}
 
 	var location21 = new LocationInfo();
@@ -536,14 +536,14 @@ function getLocationDataArray()
 	location21.x = 378.4740281574959;
 	location21.y = 1828.9168610465458;
 	location21.z = 1.0857;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00266] = location21;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][266] = location21;
 	}
 	else
 	{
-		SiteLocation[00003][00266] = location21;
+		SiteLocation[3][266] = location21;
 	}
 
 	var location22 = new LocationInfo();
@@ -561,14 +561,14 @@ function getLocationDataArray()
 	location22.x = 378.4740281574959;
 	location22.y = 1828.9168610465458;
 	location22.z = 1.0857;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00272] = location22;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][272] = location22;
 	}
 	else
 	{
-		SiteLocation[00003][00272] = location22;
+		SiteLocation[3][272] = location22;
 	}
 
 	var location23 = new LocationInfo();
@@ -586,14 +586,14 @@ function getLocationDataArray()
 	location23.x = 378.6118583343996;
 	location23.y = 1829.4451350131676;
 	location23.z = 1.12669;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00284] = location23;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][284] = location23;
 	}
 	else
 	{
-		SiteLocation[00003][00284] = location23;
+		SiteLocation[3][284] = location23;
 	}
 
 	var location24 = new LocationInfo();
@@ -611,14 +611,14 @@ function getLocationDataArray()
 	location24.x = 378.8848290966889;
 	location24.y = 1830.5024282226805;
 	location24.z = 1.20241;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00290] = location24;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][290] = location24;
 	}
 	else
 	{
-		SiteLocation[00003][00290] = location24;
+		SiteLocation[3][290] = location24;
 	}
 
 	var location25 = new LocationInfo();
@@ -636,14 +636,14 @@ function getLocationDataArray()
 	location25.x = 379.3015318950311;
 	location25.y = 1832.0892062696403;
 	location25.z = 1.29825;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00296] = location25;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][296] = location25;
 	}
 	else
 	{
-		SiteLocation[00003][00296] = location25;
+		SiteLocation[3][296] = location25;
 	}
 
 	var location26 = new LocationInfo();
@@ -661,14 +661,14 @@ function getLocationDataArray()
 	location26.x = 379.71193984542697;
 	location26.y = 1833.677105946881;
 	location26.z = 1.38351;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00302] = location26;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][302] = location26;
 	}
 	else
 	{
-		SiteLocation[00003][00302] = location26;
+		SiteLocation[3][302] = location26;
 	}
 
 	var location27 = new LocationInfo();
@@ -686,14 +686,14 @@ function getLocationDataArray()
 	location27.x = 380.1114781643955;
 	location27.y = 1835.2658130981436;
 	location27.z = 1.45895;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00308] = location27;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][308] = location27;
 	}
 	else
 	{
-		SiteLocation[00003][00308] = location27;
+		SiteLocation[3][308] = location27;
 	}
 
 	var location28 = new LocationInfo();
@@ -711,14 +711,14 @@ function getLocationDataArray()
 	location28.x = 380.62634836141297;
 	location28.y = 1837.3828623685076;
 	location28.z = 1.58657;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00314] = location28;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][314] = location28;
 	}
 	else
 	{
-		SiteLocation[00003][00314] = location28;
+		SiteLocation[3][314] = location28;
 	}
 
 	var location29 = new LocationInfo();
@@ -736,14 +736,14 @@ function getLocationDataArray()
 	location29.x = 381.14807718834345;
 	location29.y = 1839.5014014548178;
 	location29.z = 1.68497;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00320] = location29;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][320] = location29;
 	}
 	else
 	{
-		SiteLocation[00003][00320] = location29;
+		SiteLocation[3][320] = location29;
 	}
 
 	var location30 = new LocationInfo();
@@ -761,14 +761,14 @@ function getLocationDataArray()
 	location30.x = 381.7051055571719;
 	location30.y = 1841.6210555343896;
 	location30.z = 1.72196;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00326] = location30;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][326] = location30;
 	}
 	else
 	{
-		SiteLocation[00003][00326] = location30;
+		SiteLocation[3][326] = location30;
 	}
 
 	var location31 = new LocationInfo();
@@ -786,14 +786,14 @@ function getLocationDataArray()
 	location31.x = 381.47168005766434;
 	location31.y = 1843.4878224124222;
 	location31.z = 1.63277;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00332] = location31;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][332] = location31;
 	}
 	else
 	{
-		SiteLocation[00003][00332] = location31;
+		SiteLocation[3][332] = location31;
 	}
 
 	var location32 = new LocationInfo();
@@ -811,14 +811,14 @@ function getLocationDataArray()
 	location32.x = 381.47168005766434;
 	location32.y = 1843.4878224124222;
 	location32.z = 1.63277;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00338] = location32;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][338] = location32;
 	}
 	else
 	{
-		SiteLocation[00003][00338] = location32;
+		SiteLocation[3][338] = location32;
 	}
 
 	var location33 = new LocationInfo();
@@ -836,14 +836,14 @@ function getLocationDataArray()
 	location33.x = 381.47168005766434;
 	location33.y = 1843.4878224124222;
 	location33.z = 1.63277;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00350] = location33;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][350] = location33;
 	}
 	else
 	{
-		SiteLocation[00003][00350] = location33;
+		SiteLocation[3][350] = location33;
 	}
 
 	var location34 = new LocationInfo();
@@ -861,14 +861,14 @@ function getLocationDataArray()
 	location34.x = 375.8886882762745;
 	location34.y = 1845.7146331868535;
 	location34.z = 1.26995;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00372] = location34;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][372] = location34;
 	}
 	else
 	{
-		SiteLocation[00003][00372] = location34;
+		SiteLocation[3][372] = location34;
 	}
 
 	var location35 = new LocationInfo();
@@ -886,14 +886,14 @@ function getLocationDataArray()
 	location35.x = 374.53042532040854;
 	location35.y = 1847.035674968869;
 	location35.z = 1.32141;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00382] = location35;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][382] = location35;
 	}
 	else
 	{
-		SiteLocation[00003][00382] = location35;
+		SiteLocation[3][382] = location35;
 	}
 
 	var location36 = new LocationInfo();
@@ -911,14 +911,14 @@ function getLocationDataArray()
 	location36.x = 374.53042532040854;
 	location36.y = 1847.035674968869;
 	location36.z = 1.32141;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00386] = location36;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][386] = location36;
 	}
 	else
 	{
-		SiteLocation[00003][00386] = location36;
+		SiteLocation[3][386] = location36;
 	}
 
 	var location37 = new LocationInfo();
@@ -936,14 +936,14 @@ function getLocationDataArray()
 	location37.x = 374.1165653850294;
 	location37.y = 1847.129315281425;
 	location37.z = 1.32272;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00392] = location37;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][392] = location37;
 	}
 	else
 	{
-		SiteLocation[00003][00392] = location37;
+		SiteLocation[3][392] = location37;
 	}
 
 	var location38 = new LocationInfo();
@@ -961,14 +961,14 @@ function getLocationDataArray()
 	location38.x = 373.7019783906435;
 	location38.y = 1847.2180802663243;
 	location38.z = 1.33059;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00398] = location38;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][398] = location38;
 	}
 	else
 	{
-		SiteLocation[00003][00398] = location38;
+		SiteLocation[3][398] = location38;
 	}
 
 	var location39 = new LocationInfo();
@@ -986,14 +986,14 @@ function getLocationDataArray()
 	location39.x = 372.873262015175;
 	location39.y = 1847.398658653743;
 	location39.z = 1.34129;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00404] = location39;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][404] = location39;
 	}
 	else
 	{
-		SiteLocation[00003][00404] = location39;
+		SiteLocation[3][404] = location39;
 	}
 
 	var location40 = new LocationInfo();
@@ -1011,14 +1011,14 @@ function getLocationDataArray()
 	location40.x = 372.044969103983;
 	location40.y = 1847.5822711890432;
 	location40.z = 1.34751;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00410] = location40;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][410] = location40;
 	}
 	else
 	{
-		SiteLocation[00003][00410] = location40;
+		SiteLocation[3][410] = location40;
 	}
 
 	var location41 = new LocationInfo();
@@ -1036,14 +1036,14 @@ function getLocationDataArray()
 	location41.x = 372.87356663374885;
 	location41.y = 1847.4003574013113;
 	location41.z = 1.34185;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00416] = location41;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][416] = location41;
 	}
 	else
 	{
-		SiteLocation[00003][00416] = location41;
+		SiteLocation[3][416] = location41;
 	}
 
 	var location42 = new LocationInfo();
@@ -1061,14 +1061,14 @@ function getLocationDataArray()
 	location42.x = 372.87356663374885;
 	location42.y = 1847.4003574013113;
 	location42.z = 1.34185;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00422] = location42;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][422] = location42;
 	}
 	else
 	{
-		SiteLocation[00003][00422] = location42;
+		SiteLocation[3][422] = location42;
 	}
 
 	var location43 = new LocationInfo();
@@ -1086,14 +1086,14 @@ function getLocationDataArray()
 	location43.x = 372.87356663374885;
 	location43.y = 1847.4003574013113;
 	location43.z = 1.34185;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00428] = location43;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][428] = location43;
 	}
 	else
 	{
-		SiteLocation[00003][00428] = location43;
+		SiteLocation[3][428] = location43;
 	}
 
 	var location44 = new LocationInfo();
@@ -1111,14 +1111,14 @@ function getLocationDataArray()
 	location44.x = 372.87356663374885;
 	location44.y = 1847.4003574013113;
 	location44.z = 1.34185;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00432] = location44;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][432] = location44;
 	}
 	else
 	{
-		SiteLocation[00003][00432] = location44;
+		SiteLocation[3][432] = location44;
 	}
 
 	var location45 = new LocationInfo();
@@ -1136,14 +1136,14 @@ function getLocationDataArray()
 	location45.x = 372.87356663374885;
 	location45.y = 1847.4003574013113;
 	location45.z = 1.34185;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00436] = location45;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][436] = location45;
 	}
 	else
 	{
-		SiteLocation[00003][00436] = location45;
+		SiteLocation[3][436] = location45;
 	}
 
 	var location46 = new LocationInfo();
@@ -1161,14 +1161,14 @@ function getLocationDataArray()
 	location46.x = 372.4835655328243;
 	location46.y = 1847.6068265513968;
 	location46.z = 1.34836;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00442] = location46;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][442] = location46;
 	}
 	else
 	{
-		SiteLocation[00003][00442] = location46;
+		SiteLocation[3][442] = location46;
 	}
 
 	var location47 = new LocationInfo();
@@ -1186,14 +1186,14 @@ function getLocationDataArray()
 	location47.x = 372.0929149033691;
 	location47.y = 1847.810738529537;
 	location47.z = 1.35681;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00448] = location47;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][448] = location47;
 	}
 	else
 	{
-		SiteLocation[00003][00448] = location47;
+		SiteLocation[3][448] = location47;
 	}
 
 	var location48 = new LocationInfo();
@@ -1211,14 +1211,14 @@ function getLocationDataArray()
 	location48.x = 371.3141475554585;
 	location48.y = 1848.2281929057535;
 	location48.z = 1.37628;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00454] = location48;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][454] = location48;
 	}
 	else
 	{
-		SiteLocation[00003][00454] = location48;
+		SiteLocation[3][454] = location48;
 	}
 
 	var location49 = new LocationInfo();
@@ -1236,14 +1236,14 @@ function getLocationDataArray()
 	location49.x = 370.53455753832895;
 	location49.y = 1848.6421606016265;
 	location49.z = 1.39889;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00460] = location49;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][460] = location49;
 	}
 	else
 	{
-		SiteLocation[00003][00460] = location49;
+		SiteLocation[3][460] = location49;
 	}
 
 	var location50 = new LocationInfo();
@@ -1261,14 +1261,14 @@ function getLocationDataArray()
 	location50.x = 371.31368072852274;
 	location50.y = 1848.2264263774523;
 	location50.z = 1.3763;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00466] = location50;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][466] = location50;
 	}
 	else
 	{
-		SiteLocation[00003][00466] = location50;
+		SiteLocation[3][466] = location50;
 	}
 
 	var location51 = new LocationInfo();
@@ -1286,14 +1286,14 @@ function getLocationDataArray()
 	location51.x = 371.31368072852274;
 	location51.y = 1848.2264263774523;
 	location51.z = 1.3763;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00472] = location51;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][472] = location51;
 	}
 	else
 	{
-		SiteLocation[00003][00472] = location51;
+		SiteLocation[3][472] = location51;
 	}
 
 	var location52 = new LocationInfo();
@@ -1311,14 +1311,14 @@ function getLocationDataArray()
 	location52.x = 371.31368072852274;
 	location52.y = 1848.2264263774523;
 	location52.z = 1.3763;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00478] = location52;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][478] = location52;
 	}
 	else
 	{
-		SiteLocation[00003][00478] = location52;
+		SiteLocation[3][478] = location52;
 	}
 
 	var location53 = new LocationInfo();
@@ -1336,14 +1336,14 @@ function getLocationDataArray()
 	location53.x = 367.98281449272326;
 	location53.y = 1851.930254707917;
 	location53.z = 1.5205;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00496] = location53;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][496] = location53;
 	}
 	else
 	{
-		SiteLocation[00003][00496] = location53;
+		SiteLocation[3][496] = location53;
 	}
 
 	var location54 = new LocationInfo();
@@ -1361,14 +1361,14 @@ function getLocationDataArray()
 	location54.x = 358.1628391153208;
 	location54.y = 1863.4770384625663;
 	location54.z = 1.68217;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00530] = location54;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][530] = location54;
 	}
 	else
 	{
-		SiteLocation[00003][00530] = location54;
+		SiteLocation[3][530] = location54;
 	}
 
 	var location55 = new LocationInfo();
@@ -1386,14 +1386,14 @@ function getLocationDataArray()
 	location55.x = 358.1628391153208;
 	location55.y = 1863.4770384625663;
 	location55.z = 1.68217;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00872] = location55;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][872] = location55;
 	}
 	else
 	{
-		SiteLocation[00003][00872] = location55;
+		SiteLocation[3][872] = location55;
 	}
 
 	var location56 = new LocationInfo();
@@ -1411,14 +1411,14 @@ function getLocationDataArray()
 	location56.x = 346.12699758626695;
 	location56.y = 1871.7692473270145;
 	location56.z = 0.841085;
-	if(!SiteLocation[00003])
+	if(!SiteLocation[3])
 	{
-		SiteLocation[00003] = new Array();
-		SiteLocation[00003][00888] = location56;
+		SiteLocation[3] = new Array();
+		SiteLocation[3][888] = location56;
 	}
 	else
 	{
-		SiteLocation[00003][00888] = location56;
+		SiteLocation[3][888] = location56;
 	}
 
 	var location57 = new LocationInfo();
@@ -1436,14 +1436,14 @@ function getLocationDataArray()
 	location57.x = 334.0943503628987;
 	location57.y = 1880.0715325585734;
 	location57.z = 0.0;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00000] = location57;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][0] = location57;
 	}
 	else
 	{
-		SiteLocation[00004][00000] = location57;
+		SiteLocation[4][0] = location57;
 	}
 
 	var location58 = new LocationInfo();
@@ -1461,14 +1461,14 @@ function getLocationDataArray()
 	location58.x = 331.5732895513611;
 	location58.y = 1889.8522870708584;
 	location58.z = 0.354871;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00126] = location58;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][126] = location58;
 	}
 	else
 	{
-		SiteLocation[00004][00126] = location58;
+		SiteLocation[4][126] = location58;
 	}
 
 	var location59 = new LocationInfo();
@@ -1486,14 +1486,14 @@ function getLocationDataArray()
 	location59.x = 331.4631724769606;
 	location59.y = 1890.353992738379;
 	location59.z = 0.404663;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00132] = location59;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][132] = location59;
 	}
 	else
 	{
-		SiteLocation[00004][00132] = location59;
+		SiteLocation[4][132] = location59;
 	}
 
 	var location60 = new LocationInfo();
@@ -1511,14 +1511,14 @@ function getLocationDataArray()
 	location60.x = 329.20123612159296;
 	location60.y = 1899.183253896168;
 	location60.z = 0.844383;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00240] = location60;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][240] = location60;
 	}
 	else
 	{
-		SiteLocation[00004][00240] = location60;
+		SiteLocation[4][240] = location60;
 	}
 
 	var location61 = new LocationInfo();
@@ -1536,14 +1536,14 @@ function getLocationDataArray()
 	location61.x = 329.0974447903718;
 	location61.y = 1899.6621100811499;
 	location61.z = 0.892976;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00246] = location61;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][246] = location61;
 	}
 	else
 	{
-		SiteLocation[00004][00246] = location61;
+		SiteLocation[4][246] = location61;
 	}
 
 	var location62 = new LocationInfo();
@@ -1561,14 +1561,14 @@ function getLocationDataArray()
 	location62.x = 328.80560449508994;
 	location62.y = 1910.284139176969;
 	location62.z = 1.39319;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00378] = location62;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][378] = location62;
 	}
 	else
 	{
-		SiteLocation[00004][00378] = location62;
+		SiteLocation[4][378] = location62;
 	}
 
 	var location63 = new LocationInfo();
@@ -1586,14 +1586,14 @@ function getLocationDataArray()
 	location63.x = 328.8048127620168;
 	location63.y = 1910.7853498181066;
 	location63.z = 1.40941;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00384] = location63;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][384] = location63;
 	}
 	else
 	{
-		SiteLocation[00004][00384] = location63;
+		SiteLocation[4][384] = location63;
 	}
 
 	var location64 = new LocationInfo();
@@ -1611,14 +1611,14 @@ function getLocationDataArray()
 	location64.x = 328.78013438826383;
 	location64.y = 1912.0898572145124;
 	location64.z = 1.4476;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00404] = location64;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][404] = location64;
 	}
 	else
 	{
-		SiteLocation[00004][00404] = location64;
+		SiteLocation[4][404] = location64;
 	}
 
 	var location65 = new LocationInfo();
@@ -1636,14 +1636,14 @@ function getLocationDataArray()
 	location65.x = 326.74747331455364;
 	location65.y = 1916.3556027942723;
 	location65.z = 1.3855;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00416] = location65;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][416] = location65;
 	}
 	else
 	{
-		SiteLocation[00004][00416] = location65;
+		SiteLocation[4][416] = location65;
 	}
 
 	var location66 = new LocationInfo();
@@ -1661,14 +1661,14 @@ function getLocationDataArray()
 	location66.x = 325.4726263162702;
 	location66.y = 1921.3219553954696;
 	location66.z = 1.26044;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00428] = location66;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][428] = location66;
 	}
 	else
 	{
-		SiteLocation[00004][00428] = location66;
+		SiteLocation[4][428] = location66;
 	}
 
 	var location67 = new LocationInfo();
@@ -1686,14 +1686,14 @@ function getLocationDataArray()
 	location67.x = 325.39077240135157;
 	location67.y = 1921.7965302768753;
 	location67.z = 1.24649;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00434] = location67;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][434] = location67;
 	}
 	else
 	{
-		SiteLocation[00004][00434] = location67;
+		SiteLocation[4][434] = location67;
 	}
 
 	var location68 = new LocationInfo();
@@ -1711,14 +1711,14 @@ function getLocationDataArray()
 	location68.x = 323.9234833662449;
 	location68.y = 1929.371203266899;
 	location68.z = 1.24358;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00440] = location68;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][440] = location68;
 	}
 	else
 	{
-		SiteLocation[00004][00440] = location68;
+		SiteLocation[4][440] = location68;
 	}
 
 	var location69 = new LocationInfo();
@@ -1736,14 +1736,14 @@ function getLocationDataArray()
 	location69.x = 323.82875760511524;
 	location69.y = 1929.8772436037507;
 	location69.z = 1.24018;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00446] = location69;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][446] = location69;
 	}
 	else
 	{
-		SiteLocation[00004][00446] = location69;
+		SiteLocation[4][446] = location69;
 	}
 
 	var location70 = new LocationInfo();
@@ -1761,14 +1761,14 @@ function getLocationDataArray()
 	location70.x = 324.26099882102426;
 	location70.y = 1933.5707521700424;
 	location70.z = 1.16472;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00468] = location70;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][468] = location70;
 	}
 	else
 	{
-		SiteLocation[00004][00468] = location70;
+		SiteLocation[4][468] = location70;
 	}
 
 	var location71 = new LocationInfo();
@@ -1786,14 +1786,14 @@ function getLocationDataArray()
 	location71.x = 328.81799598098223;
 	location71.y = 1941.8039002053993;
 	location71.z = 1.22939;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00594] = location71;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][594] = location71;
 	}
 	else
 	{
-		SiteLocation[00004][00594] = location71;
+		SiteLocation[4][594] = location71;
 	}
 
 	var location72 = new LocationInfo();
@@ -1811,14 +1811,14 @@ function getLocationDataArray()
 	location72.x = 329.0359485848021;
 	location72.y = 1942.1782781865477;
 	location72.z = 1.21029;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00600] = location72;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][600] = location72;
 	}
 	else
 	{
-		SiteLocation[00004][00600] = location72;
+		SiteLocation[4][600] = location72;
 	}
 
 	var location73 = new LocationInfo();
@@ -1836,14 +1836,14 @@ function getLocationDataArray()
 	location73.x = 333.4835844851186;
 	location73.y = 1950.469914698977;
 	location73.z = 1.25672;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00720] = location73;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][720] = location73;
 	}
 	else
 	{
-		SiteLocation[00004][00720] = location73;
+		SiteLocation[4][720] = location73;
 	}
 
 	var location74 = new LocationInfo();
@@ -1861,14 +1861,14 @@ function getLocationDataArray()
 	location74.x = 333.7007991989012;
 	location74.y = 1950.884281335253;
 	location74.z = 1.2619;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00726] = location74;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][726] = location74;
 	}
 	else
 	{
-		SiteLocation[00004][00726] = location74;
+		SiteLocation[4][726] = location74;
 	}
 
 	var location75 = new LocationInfo();
@@ -1886,14 +1886,14 @@ function getLocationDataArray()
 	location75.x = 338.22439533384386;
 	location75.y = 1959.1271062622072;
 	location75.z = 1.07652;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00846] = location75;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][846] = location75;
 	}
 	else
 	{
-		SiteLocation[00004][00846] = location75;
+		SiteLocation[4][846] = location75;
 	}
 
 	var location76 = new LocationInfo();
@@ -1911,14 +1911,14 @@ function getLocationDataArray()
 	location76.x = 338.4465598586612;
 	location76.y = 1959.5304103202834;
 	location76.z = 1.05785;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00852] = location76;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][852] = location76;
 	}
 	else
 	{
-		SiteLocation[00004][00852] = location76;
+		SiteLocation[4][852] = location76;
 	}
 
 	var location77 = new LocationInfo();
@@ -1936,14 +1936,14 @@ function getLocationDataArray()
 	location77.x = 340.9708488859942;
 	location77.y = 1964.330491257664;
 	location77.z = 0.854814;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][00916] = location77;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][916] = location77;
 	}
 	else
 	{
-		SiteLocation[00004][00916] = location77;
+		SiteLocation[4][916] = location77;
 	}
 
 	var location78 = new LocationInfo();
@@ -1961,14 +1961,14 @@ function getLocationDataArray()
 	location78.x = 345.2022347249076;
 	location78.y = 1973.1488158523716;
 	location78.z = 1.07382;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01042] = location78;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1042] = location78;
 	}
 	else
 	{
-		SiteLocation[00004][01042] = location78;
+		SiteLocation[4][1042] = location78;
 	}
 
 	var location79 = new LocationInfo();
@@ -1986,14 +1986,14 @@ function getLocationDataArray()
 	location79.x = 345.40182357847516;
 	location79.y = 1973.5763510293036;
 	location79.z = 1.09046;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01048] = location79;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1048] = location79;
 	}
 	else
 	{
-		SiteLocation[00004][01048] = location79;
+		SiteLocation[4][1048] = location79;
 	}
 
 	var location80 = new LocationInfo();
@@ -2011,14 +2011,14 @@ function getLocationDataArray()
 	location80.x = 349.41079544322565;
 	location80.y = 1981.991816783946;
 	location80.z = 1.22187;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01162] = location80;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1162] = location80;
 	}
 	else
 	{
-		SiteLocation[00004][01162] = location80;
+		SiteLocation[4][1162] = location80;
 	}
 
 	var location81 = new LocationInfo();
@@ -2036,14 +2036,14 @@ function getLocationDataArray()
 	location81.x = 349.6210641045873;
 	location81.y = 1982.4029399717365;
 	location81.z = 1.22295;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01168] = location81;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1168] = location81;
 	}
 	else
 	{
-		SiteLocation[00004][01168] = location81;
+		SiteLocation[4][1168] = location81;
 	}
 
 	var location82 = new LocationInfo();
@@ -2061,14 +2061,14 @@ function getLocationDataArray()
 	location82.x = 349.8419542617994;
 	location82.y = 1982.8257084777506;
 	location82.z = 1.23093;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01174] = location82;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1174] = location82;
 	}
 	else
 	{
-		SiteLocation[00004][01174] = location82;
+		SiteLocation[4][1174] = location82;
 	}
 
 	var location83 = new LocationInfo();
@@ -2086,14 +2086,14 @@ function getLocationDataArray()
 	location83.x = 352.41959040549773;
 	location83.y = 1988.0034508344288;
 	location83.z = 1.39658;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01238] = location83;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1238] = location83;
 	}
 	else
 	{
-		SiteLocation[00004][01238] = location83;
+		SiteLocation[4][1238] = location83;
 	}
 
 	var location84 = new LocationInfo();
@@ -2111,14 +2111,14 @@ function getLocationDataArray()
 	location84.x = 351.4379501291296;
 	location84.y = 1997.830662861761;
 	location84.z = 2.03428;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01364] = location84;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1364] = location84;
 	}
 	else
 	{
-		SiteLocation[00004][01364] = location84;
+		SiteLocation[4][1364] = location84;
 	}
 
 	var location85 = new LocationInfo();
@@ -2136,14 +2136,14 @@ function getLocationDataArray()
 	location85.x = 351.39017842789326;
 	location85.y = 1998.307376352459;
 	location85.z = 2.08232;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01370] = location85;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1370] = location85;
 	}
 	else
 	{
-		SiteLocation[00004][01370] = location85;
+		SiteLocation[4][1370] = location85;
 	}
 
 	var location86 = new LocationInfo();
@@ -2161,14 +2161,14 @@ function getLocationDataArray()
 	location86.x = 348.61890897863486;
 	location86.y = 2006.3606881222768;
 	location86.z = 2.83547;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01484] = location86;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1484] = location86;
 	}
 	else
 	{
-		SiteLocation[00004][01484] = location86;
+		SiteLocation[4][1484] = location86;
 	}
 
 	var location87 = new LocationInfo();
@@ -2186,14 +2186,14 @@ function getLocationDataArray()
 	location87.x = 348.30600707771737;
 	location87.y = 2006.7384211541394;
 	location87.z = 2.87539;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01490] = location87;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1490] = location87;
 	}
 	else
 	{
-		SiteLocation[00004][01490] = location87;
+		SiteLocation[4][1490] = location87;
 	}
 
 	var location88 = new LocationInfo();
@@ -2211,14 +2211,14 @@ function getLocationDataArray()
 	location88.x = 347.98823798413287;
 	location88.y = 2007.1172047196887;
 	location88.z = 2.90285;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01496] = location88;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1496] = location88;
 	}
 	else
 	{
-		SiteLocation[00004][01496] = location88;
+		SiteLocation[4][1496] = location88;
 	}
 
 	var location89 = new LocationInfo();
@@ -2236,14 +2236,14 @@ function getLocationDataArray()
 	location89.x = 340.70597121310857;
 	location89.y = 2015.82791676934;
 	location89.z = 3.61328;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01632] = location89;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1632] = location89;
 	}
 	else
 	{
-		SiteLocation[00004][01632] = location89;
+		SiteLocation[4][1632] = location89;
 	}
 
 	var location90 = new LocationInfo();
@@ -2261,14 +2261,14 @@ function getLocationDataArray()
 	location90.x = 332.0491192367881;
 	location90.y = 2020.9340555439303;
 	location90.z = 3.8213;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01758] = location90;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1758] = location90;
 	}
 	else
 	{
-		SiteLocation[00004][01758] = location90;
+		SiteLocation[4][1758] = location90;
 	}
 
 	var location91 = new LocationInfo();
@@ -2286,14 +2286,14 @@ function getLocationDataArray()
 	location91.x = 331.639025360153;
 	location91.y = 2021.2010526544145;
 	location91.z = 3.82757;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01764] = location91;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1764] = location91;
 	}
 	else
 	{
-		SiteLocation[00004][01764] = location91;
+		SiteLocation[4][1764] = location91;
 	}
 
 	var location92 = new LocationInfo();
@@ -2311,14 +2311,14 @@ function getLocationDataArray()
 	location92.x = 323.4292286790296;
 	location92.y = 2026.1324446192812;
 	location92.z = 3.99717;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01878] = location92;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1878] = location92;
 	}
 	else
 	{
-		SiteLocation[00004][01878] = location92;
+		SiteLocation[4][1878] = location92;
 	}
 
 	var location93 = new LocationInfo();
@@ -2336,14 +2336,14 @@ function getLocationDataArray()
 	location93.x = 323.02136766624244;
 	location93.y = 2026.3732566872968;
 	location93.z = 4.01378;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01884] = location93;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1884] = location93;
 	}
 	else
 	{
-		SiteLocation[00004][01884] = location93;
+		SiteLocation[4][1884] = location93;
 	}
 
 	var location94 = new LocationInfo();
@@ -2361,14 +2361,14 @@ function getLocationDataArray()
 	location94.x = 322.61357180493724;
 	location94.y = 2026.638172789444;
 	location94.z = 4.02944;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][01890] = location94;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][1890] = location94;
 	}
 	else
 	{
-		SiteLocation[00004][01890] = location94;
+		SiteLocation[4][1890] = location94;
 	}
 
 	var location95 = new LocationInfo();
@@ -2386,14 +2386,14 @@ function getLocationDataArray()
 	location95.x = 314.8487258800378;
 	location95.y = 2031.302720089734;
 	location95.z = 4.24749;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02002] = location95;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2002] = location95;
 	}
 	else
 	{
-		SiteLocation[00004][02002] = location95;
+		SiteLocation[4][2002] = location95;
 	}
 
 	var location96 = new LocationInfo();
@@ -2411,14 +2411,14 @@ function getLocationDataArray()
 	location96.x = 314.8726629809753;
 	location96.y = 2031.3190012011291;
 	location96.z = 4.24378;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02008] = location96;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2008] = location96;
 	}
 	else
 	{
-		SiteLocation[00004][02008] = location96;
+		SiteLocation[4][2008] = location96;
 	}
 
 	var location97 = new LocationInfo();
@@ -2436,14 +2436,14 @@ function getLocationDataArray()
 	location97.x = 314.86728017395217;
 	location97.y = 2031.3099382741239;
 	location97.z = 4.24631;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02014] = location97;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2014] = location97;
 	}
 	else
 	{
-		SiteLocation[00004][02014] = location97;
+		SiteLocation[4][2014] = location97;
 	}
 
 	var location98 = new LocationInfo();
@@ -2461,14 +2461,14 @@ function getLocationDataArray()
 	location98.x = 314.8683282487;
 	location98.y = 2031.3067443682376;
 	location98.z = 4.24793;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02020] = location98;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2020] = location98;
 	}
 	else
 	{
-		SiteLocation[00004][02020] = location98;
+		SiteLocation[4][2020] = location98;
 	}
 
 	var location99 = new LocationInfo();
@@ -2486,14 +2486,14 @@ function getLocationDataArray()
 	location99.x = 314.87050149689094;
 	location99.y = 2031.3097422865576;
 	location99.z = 4.24439;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02026] = location99;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2026] = location99;
 	}
 	else
 	{
-		SiteLocation[00004][02026] = location99;
+		SiteLocation[4][2026] = location99;
 	}
 
 	var location100 = new LocationInfo();
@@ -2511,14 +2511,14 @@ function getLocationDataArray()
 	location100.x = 315.7306997754895;
 	location100.y = 2031.604852785953;
 	location100.z = 4.28606;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02032] = location100;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2032] = location100;
 	}
 	else
 	{
-		SiteLocation[00004][02032] = location100;
+		SiteLocation[4][2032] = location100;
 	}
 
 	var location101 = new LocationInfo();
@@ -2536,14 +2536,14 @@ function getLocationDataArray()
 	location101.x = 316.68904448789544;
 	location101.y = 2031.949291131743;
 	location101.z = 4.34221;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02038] = location101;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2038] = location101;
 	}
 	else
 	{
-		SiteLocation[00004][02038] = location101;
+		SiteLocation[4][2038] = location101;
 	}
 
 	var location102 = new LocationInfo();
@@ -2561,14 +2561,14 @@ function getLocationDataArray()
 	location102.x = 317.6821566178369;
 	location102.y = 2032.293700963528;
 	location102.z = 4.40794;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02044] = location102;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2044] = location102;
 	}
 	else
 	{
-		SiteLocation[00004][02044] = location102;
+		SiteLocation[4][2044] = location102;
 	}
 
 	var location103 = new LocationInfo();
@@ -2586,14 +2586,14 @@ function getLocationDataArray()
 	location103.x = 317.69508567671437;
 	location103.y = 2032.3200422327645;
 	location103.z = 4.40891;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02050] = location103;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2050] = location103;
 	}
 	else
 	{
-		SiteLocation[00004][02050] = location103;
+		SiteLocation[4][2050] = location103;
 	}
 
 	var location104 = new LocationInfo();
@@ -2611,14 +2611,14 @@ function getLocationDataArray()
 	location104.x = 317.70710061924547;
 	location104.y = 2032.3287016559625;
 	location104.z = 4.40196;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02056] = location104;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2056] = location104;
 	}
 	else
 	{
-		SiteLocation[00004][02056] = location104;
+		SiteLocation[4][2056] = location104;
 	}
 
 	var location105 = new LocationInfo();
@@ -2636,14 +2636,14 @@ function getLocationDataArray()
 	location105.x = 317.71436459737015;
 	location105.y = 2032.344953791846;
 	location105.z = 4.39982;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02062] = location105;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2062] = location105;
 	}
 	else
 	{
-		SiteLocation[00004][02062] = location105;
+		SiteLocation[4][2062] = location105;
 	}
 
 	var location106 = new LocationInfo();
@@ -2661,14 +2661,14 @@ function getLocationDataArray()
 	location106.x = 317.72806926071644;
 	location106.y = 2032.3618574519533;
 	location106.z = 4.40399;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02068] = location106;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2068] = location106;
 	}
 	else
 	{
-		SiteLocation[00004][02068] = location106;
+		SiteLocation[4][2068] = location106;
 	}
 
 	var location107 = new LocationInfo();
@@ -2686,14 +2686,14 @@ function getLocationDataArray()
 	location107.x = 317.74408897339526;
 	location107.y = 2032.3567092809863;
 	location107.z = 4.40912;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02074] = location107;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2074] = location107;
 	}
 	else
 	{
-		SiteLocation[00004][02074] = location107;
+		SiteLocation[4][2074] = location107;
 	}
 
 	var location108 = new LocationInfo();
@@ -2711,14 +2711,14 @@ function getLocationDataArray()
 	location108.x = 317.7498762484538;
 	location108.y = 2032.3521836587388;
 	location108.z = 4.41566;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02080] = location108;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2080] = location108;
 	}
 	else
 	{
-		SiteLocation[00004][02080] = location108;
+		SiteLocation[4][2080] = location108;
 	}
 
 	var location109 = new LocationInfo();
@@ -2736,14 +2736,14 @@ function getLocationDataArray()
 	location109.x = 317.23505751632547;
 	location109.y = 2033.2276000853599;
 	location109.z = 4.46115;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02086] = location109;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2086] = location109;
 	}
 	else
 	{
-		SiteLocation[00004][02086] = location109;
+		SiteLocation[4][2086] = location109;
 	}
 
 	var location110 = new LocationInfo();
@@ -2761,14 +2761,14 @@ function getLocationDataArray()
 	location110.x = 317.16065666882787;
 	location110.y = 2033.3468984951724;
 	location110.z = 4.46038;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02092] = location110;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2092] = location110;
 	}
 	else
 	{
-		SiteLocation[00004][02092] = location110;
+		SiteLocation[4][2092] = location110;
 	}
 
 	var location111 = new LocationInfo();
@@ -2786,14 +2786,14 @@ function getLocationDataArray()
 	location111.x = 317.1561427908491;
 	location111.y = 2033.3357284546946;
 	location111.z = 4.46038;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02100] = location111;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2100] = location111;
 	}
 	else
 	{
-		SiteLocation[00004][02100] = location111;
+		SiteLocation[4][2100] = location111;
 	}
 
 	var location112 = new LocationInfo();
@@ -2811,14 +2811,14 @@ function getLocationDataArray()
 	location112.x = 317.7139836473434;
 	location112.y = 2032.5426589857634;
 	location112.z = 4.41756;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02106] = location112;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2106] = location112;
 	}
 	else
 	{
-		SiteLocation[00004][02106] = location112;
+		SiteLocation[4][2106] = location112;
 	}
 
 	var location113 = new LocationInfo();
@@ -2836,14 +2836,14 @@ function getLocationDataArray()
 	location113.x = 317.72679840917044;
 	location113.y = 2032.5356414807866;
 	location113.z = 4.41609;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02112] = location113;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2112] = location113;
 	}
 	else
 	{
-		SiteLocation[00004][02112] = location113;
+		SiteLocation[4][2112] = location113;
 	}
 
 	var location114 = new LocationInfo();
@@ -2861,14 +2861,14 @@ function getLocationDataArray()
 	location114.x = 317.75891305453115;
 	location114.y = 2032.5399253791438;
 	location114.z = 4.40688;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02118] = location114;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2118] = location114;
 	}
 	else
 	{
-		SiteLocation[00004][02118] = location114;
+		SiteLocation[4][2118] = location114;
 	}
 
 	var location115 = new LocationInfo();
@@ -2886,14 +2886,14 @@ function getLocationDataArray()
 	location115.x = 318.6975009707203;
 	location115.y = 2032.3129445108789;
 	location115.z = 4.41577;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02124] = location115;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2124] = location115;
 	}
 	else
 	{
-		SiteLocation[00004][02124] = location115;
+		SiteLocation[4][2124] = location115;
 	}
 
 	var location116 = new LocationInfo();
@@ -2911,14 +2911,14 @@ function getLocationDataArray()
 	location116.x = 318.7319304574012;
 	location116.y = 2032.3040466919629;
 	location116.z = 4.42461;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02130] = location116;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2130] = location116;
 	}
 	else
 	{
-		SiteLocation[00004][02130] = location116;
+		SiteLocation[4][2130] = location116;
 	}
 
 	var location117 = new LocationInfo();
@@ -2936,14 +2936,14 @@ function getLocationDataArray()
 	location117.x = 318.74642337795376;
 	location117.y = 2032.3193755702741;
 	location117.z = 4.43191;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02136] = location117;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2136] = location117;
 	}
 	else
 	{
-		SiteLocation[00004][02136] = location117;
+		SiteLocation[4][2136] = location117;
 	}
 
 	var location118 = new LocationInfo();
@@ -2961,14 +2961,14 @@ function getLocationDataArray()
 	location118.x = 318.7552995247497;
 	location118.y = 2032.3478632336846;
 	location118.z = 4.43995;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02142] = location118;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2142] = location118;
 	}
 	else
 	{
-		SiteLocation[00004][02142] = location118;
+		SiteLocation[4][2142] = location118;
 	}
 
 	var location119 = new LocationInfo();
@@ -2986,14 +2986,14 @@ function getLocationDataArray()
 	location119.x = 318.77636516916755;
 	location119.y = 2032.3936942078144;
 	location119.z = 4.43405;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02148] = location119;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2148] = location119;
 	}
 	else
 	{
-		SiteLocation[00004][02148] = location119;
+		SiteLocation[4][2148] = location119;
 	}
 
 	var location120 = new LocationInfo();
@@ -3011,14 +3011,14 @@ function getLocationDataArray()
 	location120.x = 318.77847158908116;
 	location120.y = 2032.388632762435;
 	location120.z = 4.43969;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02154] = location120;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2154] = location120;
 	}
 	else
 	{
-		SiteLocation[00004][02154] = location120;
+		SiteLocation[4][2154] = location120;
 	}
 
 	var location121 = new LocationInfo();
@@ -3036,14 +3036,14 @@ function getLocationDataArray()
 	location121.x = 318.9557690476504;
 	location121.y = 2033.3746225840187;
 	location121.z = 4.51576;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02166] = location121;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2166] = location121;
 	}
 	else
 	{
-		SiteLocation[00004][02166] = location121;
+		SiteLocation[4][2166] = location121;
 	}
 
 	var location122 = new LocationInfo();
@@ -3061,14 +3061,14 @@ function getLocationDataArray()
 	location122.x = 319.1290683159932;
 	location122.y = 2034.3565237781659;
 	location122.z = 4.59966;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02178] = location122;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2178] = location122;
 	}
 	else
 	{
-		SiteLocation[00004][02178] = location122;
+		SiteLocation[4][2178] = location122;
 	}
 
 	var location123 = new LocationInfo();
@@ -3086,14 +3086,14 @@ function getLocationDataArray()
 	location123.x = 319.29893652833925;
 	location123.y = 2035.3668271612623;
 	location123.z = 4.66844;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02190] = location123;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2190] = location123;
 	}
 	else
 	{
-		SiteLocation[00004][02190] = location123;
+		SiteLocation[4][2190] = location123;
 	}
 
 	var location124 = new LocationInfo();
@@ -3111,14 +3111,14 @@ function getLocationDataArray()
 	location124.x = 319.4750197897374;
 	location124.y = 2036.3660063441785;
 	location124.z = 4.72788;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02202] = location124;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2202] = location124;
 	}
 	else
 	{
-		SiteLocation[00004][02202] = location124;
+		SiteLocation[4][2202] = location124;
 	}
 
 	var location125 = new LocationInfo();
@@ -3136,14 +3136,14 @@ function getLocationDataArray()
 	location125.x = 319.6457227257197;
 	location125.y = 2037.342813431973;
 	location125.z = 4.78396;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02214] = location125;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2214] = location125;
 	}
 	else
 	{
-		SiteLocation[00004][02214] = location125;
+		SiteLocation[4][2214] = location125;
 	}
 
 	var location126 = new LocationInfo();
@@ -3161,14 +3161,14 @@ function getLocationDataArray()
 	location126.x = 319.83362120138554;
 	location126.y = 2038.333952953053;
 	location126.z = 4.80957;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02226] = location126;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2226] = location126;
 	}
 	else
 	{
-		SiteLocation[00004][02226] = location126;
+		SiteLocation[4][2226] = location126;
 	}
 
 	var location127 = new LocationInfo();
@@ -3186,14 +3186,14 @@ function getLocationDataArray()
 	location127.x = 319.9997737525955;
 	location127.y = 2039.357428324627;
 	location127.z = 4.83818;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02238] = location127;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2238] = location127;
 	}
 	else
 	{
-		SiteLocation[00004][02238] = location127;
+		SiteLocation[4][2238] = location127;
 	}
 
 	var location128 = new LocationInfo();
@@ -3211,14 +3211,14 @@ function getLocationDataArray()
 	location128.x = 320.1504743190417;
 	location128.y = 2040.3249595601155;
 	location128.z = 4.89945;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02250] = location128;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2250] = location128;
 	}
 	else
 	{
-		SiteLocation[00004][02250] = location128;
+		SiteLocation[4][2250] = location128;
 	}
 
 	var location129 = new LocationInfo();
@@ -3236,14 +3236,14 @@ function getLocationDataArray()
 	location129.x = 320.3109588255611;
 	location129.y = 2041.3138782592468;
 	location129.z = 4.98244;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02262] = location129;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2262] = location129;
 	}
 	else
 	{
-		SiteLocation[00004][02262] = location129;
+		SiteLocation[4][2262] = location129;
 	}
 
 	var location130 = new LocationInfo();
@@ -3261,14 +3261,14 @@ function getLocationDataArray()
 	location130.x = 320.4659847468247;
 	location130.y = 2042.259104806304;
 	location130.z = 5.07627;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02274] = location130;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2274] = location130;
 	}
 	else
 	{
-		SiteLocation[00004][02274] = location130;
+		SiteLocation[4][2274] = location130;
 	}
 
 	var location131 = new LocationInfo();
@@ -3286,14 +3286,14 @@ function getLocationDataArray()
 	location131.x = 320.6407693230285;
 	location131.y = 2043.2562445399053;
 	location131.z = 5.18408;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02286] = location131;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2286] = location131;
 	}
 	else
 	{
-		SiteLocation[00004][02286] = location131;
+		SiteLocation[4][2286] = location131;
 	}
 
 	var location132 = new LocationInfo();
@@ -3311,14 +3311,14 @@ function getLocationDataArray()
 	location132.x = 320.8116267025871;
 	location132.y = 2044.2777221570177;
 	location132.z = 5.26164;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02298] = location132;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2298] = location132;
 	}
 	else
 	{
-		SiteLocation[00004][02298] = location132;
+		SiteLocation[4][2298] = location132;
 	}
 
 	var location133 = new LocationInfo();
@@ -3336,14 +3336,14 @@ function getLocationDataArray()
 	location133.x = 320.9837148878687;
 	location133.y = 2045.2697670893504;
 	location133.z = 5.32095;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02310] = location133;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2310] = location133;
 	}
 	else
 	{
-		SiteLocation[00004][02310] = location133;
+		SiteLocation[4][2310] = location133;
 	}
 
 	var location134 = new LocationInfo();
@@ -3361,14 +3361,14 @@ function getLocationDataArray()
 	location134.x = 321.1515673965514;
 	location134.y = 2046.2942694821832;
 	location134.z = 5.40043;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02322] = location134;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2322] = location134;
 	}
 	else
 	{
-		SiteLocation[00004][02322] = location134;
+		SiteLocation[4][2322] = location134;
 	}
 
 	var location135 = new LocationInfo();
@@ -3386,14 +3386,14 @@ function getLocationDataArray()
 	location135.x = 321.30635894554507;
 	location135.y = 2047.2729964940372;
 	location135.z = 5.45562;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02334] = location135;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2334] = location135;
 	}
 	else
 	{
-		SiteLocation[00004][02334] = location135;
+		SiteLocation[4][2334] = location135;
 	}
 
 	var location136 = new LocationInfo();
@@ -3411,14 +3411,14 @@ function getLocationDataArray()
 	location136.x = 321.48493848074577;
 	location136.y = 2048.2772690883867;
 	location136.z = 5.50042;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02346] = location136;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2346] = location136;
 	}
 	else
 	{
-		SiteLocation[00004][02346] = location136;
+		SiteLocation[4][2346] = location136;
 	}
 
 	var location137 = new LocationInfo();
@@ -3436,14 +3436,14 @@ function getLocationDataArray()
 	location137.x = 321.6163059465471;
 	location137.y = 2049.26598556745;
 	location137.z = 5.52795;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02358] = location137;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2358] = location137;
 	}
 	else
 	{
-		SiteLocation[00004][02358] = location137;
+		SiteLocation[4][2358] = location137;
 	}
 
 	var location138 = new LocationInfo();
@@ -3461,14 +3461,14 @@ function getLocationDataArray()
 	location138.x = 321.79551386004823;
 	location138.y = 2050.2428517229637;
 	location138.z = 5.56407;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02370] = location138;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2370] = location138;
 	}
 	else
 	{
-		SiteLocation[00004][02370] = location138;
+		SiteLocation[4][2370] = location138;
 	}
 
 	var location139 = new LocationInfo();
@@ -3486,14 +3486,14 @@ function getLocationDataArray()
 	location139.x = 321.9488921327902;
 	location139.y = 2051.233751498603;
 	location139.z = 5.60694;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02382] = location139;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2382] = location139;
 	}
 	else
 	{
-		SiteLocation[00004][02382] = location139;
+		SiteLocation[4][2382] = location139;
 	}
 
 	var location140 = new LocationInfo();
@@ -3511,14 +3511,14 @@ function getLocationDataArray()
 	location140.x = 322.0927918313282;
 	location140.y = 2052.198189856779;
 	location140.z = 5.6481;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02394] = location140;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2394] = location140;
 	}
 	else
 	{
-		SiteLocation[00004][02394] = location140;
+		SiteLocation[4][2394] = location140;
 	}
 
 	var location141 = new LocationInfo();
@@ -3536,14 +3536,14 @@ function getLocationDataArray()
 	location141.x = 322.26210640389763;
 	location141.y = 2053.1628047231825;
 	location141.z = 5.66608;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02406] = location141;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2406] = location141;
 	}
 	else
 	{
-		SiteLocation[00004][02406] = location141;
+		SiteLocation[4][2406] = location141;
 	}
 
 	var location142 = new LocationInfo();
@@ -3561,14 +3561,14 @@ function getLocationDataArray()
 	location142.x = 322.3924442191128;
 	location142.y = 2054.1799400691416;
 	location142.z = 5.69941;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02418] = location142;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2418] = location142;
 	}
 	else
 	{
-		SiteLocation[00004][02418] = location142;
+		SiteLocation[4][2418] = location142;
 	}
 
 	var location143 = new LocationInfo();
@@ -3586,14 +3586,14 @@ function getLocationDataArray()
 	location143.x = 322.5478589562372;
 	location143.y = 2055.136336680731;
 	location143.z = 5.73923;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02430] = location143;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2430] = location143;
 	}
 	else
 	{
-		SiteLocation[00004][02430] = location143;
+		SiteLocation[4][2430] = location143;
 	}
 
 	var location144 = new LocationInfo();
@@ -3611,14 +3611,14 @@ function getLocationDataArray()
 	location144.x = 322.70942853637825;
 	location144.y = 2056.1404911396494;
 	location144.z = 5.81111;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02442] = location144;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2442] = location144;
 	}
 	else
 	{
-		SiteLocation[00004][02442] = location144;
+		SiteLocation[4][2442] = location144;
 	}
 
 	var location145 = new LocationInfo();
@@ -3636,14 +3636,14 @@ function getLocationDataArray()
 	location145.x = 322.8655094282549;
 	location145.y = 2057.1303944702595;
 	location145.z = 5.88109;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02454] = location145;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2454] = location145;
 	}
 	else
 	{
-		SiteLocation[00004][02454] = location145;
+		SiteLocation[4][2454] = location145;
 	}
 
 	var location146 = new LocationInfo();
@@ -3661,14 +3661,14 @@ function getLocationDataArray()
 	location146.x = 323.0314763948336;
 	location146.y = 2058.1396555439896;
 	location146.z = 5.92205;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02466] = location146;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2466] = location146;
 	}
 	else
 	{
-		SiteLocation[00004][02466] = location146;
+		SiteLocation[4][2466] = location146;
 	}
 
 	var location147 = new LocationInfo();
@@ -3686,14 +3686,14 @@ function getLocationDataArray()
 	location147.x = 323.1861595809896;
 	location147.y = 2059.1265035226534;
 	location147.z = 5.9721;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02478] = location147;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2478] = location147;
 	}
 	else
 	{
-		SiteLocation[00004][02478] = location147;
+		SiteLocation[4][2478] = location147;
 	}
 
 	var location148 = new LocationInfo();
@@ -3711,14 +3711,14 @@ function getLocationDataArray()
 	location148.x = 323.3661523924493;
 	location148.y = 2060.118603353214;
 	location148.z = 6.03844;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02490] = location148;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2490] = location148;
 	}
 	else
 	{
-		SiteLocation[00004][02490] = location148;
+		SiteLocation[4][2490] = location148;
 	}
 
 	var location149 = new LocationInfo();
@@ -3736,14 +3736,14 @@ function getLocationDataArray()
 	location149.x = 323.54455776141185;
 	location149.y = 2061.09749436484;
 	location149.z = 6.09817;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02502] = location149;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2502] = location149;
 	}
 	else
 	{
-		SiteLocation[00004][02502] = location149;
+		SiteLocation[4][2502] = location149;
 	}
 
 	var location150 = new LocationInfo();
@@ -3761,14 +3761,14 @@ function getLocationDataArray()
 	location150.x = 323.7352641049474;
 	location150.y = 2062.082562097221;
 	location150.z = 6.15859;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02514] = location150;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2514] = location150;
 	}
 	else
 	{
-		SiteLocation[00004][02514] = location150;
+		SiteLocation[4][2514] = location150;
 	}
 
 	var location151 = new LocationInfo();
@@ -3786,14 +3786,14 @@ function getLocationDataArray()
 	location151.x = 323.8909437245529;
 	location151.y = 2063.073477855898;
 	location151.z = 6.20497;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02526] = location151;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2526] = location151;
 	}
 	else
 	{
-		SiteLocation[00004][02526] = location151;
+		SiteLocation[4][2526] = location151;
 	}
 
 	var location152 = new LocationInfo();
@@ -3811,14 +3811,14 @@ function getLocationDataArray()
 	location152.x = 324.0496012261283;
 	location152.y = 2064.087764239459;
 	location152.z = 6.25549;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02538] = location152;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2538] = location152;
 	}
 	else
 	{
-		SiteLocation[00004][02538] = location152;
+		SiteLocation[4][2538] = location152;
 	}
 
 	var location153 = new LocationInfo();
@@ -3836,14 +3836,14 @@ function getLocationDataArray()
 	location153.x = 324.18471757018415;
 	location153.y = 2065.0308220831394;
 	location153.z = 6.30975;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02550] = location153;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2550] = location153;
 	}
 	else
 	{
-		SiteLocation[00004][02550] = location153;
+		SiteLocation[4][2550] = location153;
 	}
 
 	var location154 = new LocationInfo();
@@ -3861,14 +3861,14 @@ function getLocationDataArray()
 	location154.x = 324.35236373353473;
 	location154.y = 2066.0614143324383;
 	location154.z = 6.35796;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02562] = location154;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2562] = location154;
 	}
 	else
 	{
-		SiteLocation[00004][02562] = location154;
+		SiteLocation[4][2562] = location154;
 	}
 
 	var location155 = new LocationInfo();
@@ -3886,14 +3886,14 @@ function getLocationDataArray()
 	location155.x = 324.5161657430326;
 	location155.y = 2067.0351278479975;
 	location155.z = 6.39628;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02574] = location155;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2574] = location155;
 	}
 	else
 	{
-		SiteLocation[00004][02574] = location155;
+		SiteLocation[4][2574] = location155;
 	}
 
 	var location156 = new LocationInfo();
@@ -3911,14 +3911,14 @@ function getLocationDataArray()
 	location156.x = 324.6727417375332;
 	location156.y = 2068.030110691765;
 	location156.z = 6.43248;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02586] = location156;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2586] = location156;
 	}
 	else
 	{
-		SiteLocation[00004][02586] = location156;
+		SiteLocation[4][2586] = location156;
 	}
 
 	var location157 = new LocationInfo();
@@ -3936,14 +3936,14 @@ function getLocationDataArray()
 	location157.x = 324.81613283898696;
 	location157.y = 2069.0026672370877;
 	location157.z = 6.45169;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02598] = location157;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2598] = location157;
 	}
 	else
 	{
-		SiteLocation[00004][02598] = location157;
+		SiteLocation[4][2598] = location157;
 	}
 
 	var location158 = new LocationInfo();
@@ -3961,14 +3961,14 @@ function getLocationDataArray()
 	location158.x = 324.98480034862587;
 	location158.y = 2070.01296228122;
 	location158.z = 6.46556;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02610] = location158;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2610] = location158;
 	}
 	else
 	{
-		SiteLocation[00004][02610] = location158;
+		SiteLocation[4][2610] = location158;
 	}
 
 	var location159 = new LocationInfo();
@@ -3986,14 +3986,14 @@ function getLocationDataArray()
 	location159.x = 325.16080119806793;
 	location159.y = 2070.99488223805;
 	location159.z = 6.50224;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02622] = location159;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2622] = location159;
 	}
 	else
 	{
-		SiteLocation[00004][02622] = location159;
+		SiteLocation[4][2622] = location159;
 	}
 
 	var location160 = new LocationInfo();
@@ -4011,14 +4011,14 @@ function getLocationDataArray()
 	location160.x = 325.33111635622845;
 	location160.y = 2071.9595040536005;
 	location160.z = 6.53785;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02634] = location160;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2634] = location160;
 	}
 	else
 	{
-		SiteLocation[00004][02634] = location160;
+		SiteLocation[4][2634] = location160;
 	}
 
 	var location161 = new LocationInfo();
@@ -4036,14 +4036,14 @@ function getLocationDataArray()
 	location161.x = 325.3294569817044;
 	location161.y = 2071.9601140315317;
 	location161.z = 6.53785;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02644] = location161;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2644] = location161;
 	}
 	else
 	{
-		SiteLocation[00004][02644] = location161;
+		SiteLocation[4][2644] = location161;
 	}
 
 	var location162 = new LocationInfo();
@@ -4061,14 +4061,14 @@ function getLocationDataArray()
 	location162.x = 325.19393886357284;
 	location162.y = 2081.7921865099015;
 	location162.z = 7.20914;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02680] = location162;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2680] = location162;
 	}
 	else
 	{
-		SiteLocation[00004][02680] = location162;
+		SiteLocation[4][2680] = location162;
 	}
 
 	var location163 = new LocationInfo();
@@ -4086,14 +4086,14 @@ function getLocationDataArray()
 	location163.x = 325.19379864242364;
 	location163.y = 2082.285125115566;
 	location163.z = 7.24928;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02686] = location163;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2686] = location163;
 	}
 	else
 	{
-		SiteLocation[00004][02686] = location163;
+		SiteLocation[4][2686] = location163;
 	}
 
 	var location164 = new LocationInfo();
@@ -4111,14 +4111,14 @@ function getLocationDataArray()
 	location164.x = 325.0736346454287;
 	location164.y = 2088.1764436089434;
 	location164.z = 7.77558;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02704] = location164;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2704] = location164;
 	}
 	else
 	{
-		SiteLocation[00004][02704] = location164;
+		SiteLocation[4][2704] = location164;
 	}
 
 	var location165 = new LocationInfo();
@@ -4136,14 +4136,14 @@ function getLocationDataArray()
 	location165.x = 325.1316840130603;
 	location165.y = 2092.1092507481408;
 	location165.z = 8.00723;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02716] = location165;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2716] = location165;
 	}
 	else
 	{
-		SiteLocation[00004][02716] = location165;
+		SiteLocation[4][2716] = location165;
 	}
 
 	var location166 = new LocationInfo();
@@ -4161,14 +4161,14 @@ function getLocationDataArray()
 	location166.x = 325.1504814600157;
 	location166.y = 2092.5969901946846;
 	location166.z = 8.03075;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02722] = location166;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2722] = location166;
 	}
 	else
 	{
-		SiteLocation[00004][02722] = location166;
+		SiteLocation[4][2722] = location166;
 	}
 
 	var location167 = new LocationInfo();
@@ -4186,14 +4186,14 @@ function getLocationDataArray()
 	location167.x = 324.9908030720362;
 	location167.y = 2102.1799809455515;
 	location167.z = 8.30643;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02778] = location167;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2778] = location167;
 	}
 	else
 	{
-		SiteLocation[00004][02778] = location167;
+		SiteLocation[4][2778] = location167;
 	}
 
 	var location168 = new LocationInfo();
@@ -4211,14 +4211,14 @@ function getLocationDataArray()
 	location168.x = 324.8844361750562;
 	location168.y = 2109.0430621664636;
 	location168.z = 8.7555;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02796] = location168;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2796] = location168;
 	}
 	else
 	{
-		SiteLocation[00004][02796] = location168;
+		SiteLocation[4][2796] = location168;
 	}
 
 	var location169 = new LocationInfo();
@@ -4236,14 +4236,14 @@ function getLocationDataArray()
 	location169.x = 325.00956003793544;
 	location169.y = 2109.513912525603;
 	location169.z = 8.78408;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02802] = location169;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2802] = location169;
 	}
 	else
 	{
-		SiteLocation[00004][02802] = location169;
+		SiteLocation[4][2802] = location169;
 	}
 
 	var location170 = new LocationInfo();
@@ -4261,14 +4261,14 @@ function getLocationDataArray()
 	location170.x = 326.90255742075533;
 	location170.y = 2119.112006153802;
 	location170.z = 9.85776;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02832] = location170;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2832] = location170;
 	}
 	else
 	{
-		SiteLocation[00004][02832] = location170;
+		SiteLocation[4][2832] = location170;
 	}
 
 	var location171 = new LocationInfo();
@@ -4286,14 +4286,14 @@ function getLocationDataArray()
 	location171.x = 326.9939029528068;
 	location171.y = 2119.589403260801;
 	location171.z = 9.88461;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02838] = location171;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2838] = location171;
 	}
 	else
 	{
-		SiteLocation[00004][02838] = location171;
+		SiteLocation[4][2838] = location171;
 	}
 
 	var location172 = new LocationInfo();
@@ -4311,14 +4311,14 @@ function getLocationDataArray()
 	location172.x = 328.6448915384244;
 	location172.y = 2127.291448228254;
 	location172.z = 10.4913;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02862] = location172;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2862] = location172;
 	}
 	else
 	{
-		SiteLocation[00004][02862] = location172;
+		SiteLocation[4][2862] = location172;
 	}
 
 	var location173 = new LocationInfo();
@@ -4336,14 +4336,14 @@ function getLocationDataArray()
 	location173.x = 329.10981369885485;
 	location173.y = 2129.198221643819;
 	location173.z = 10.6443;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02868] = location173;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2868] = location173;
 	}
 	else
 	{
-		SiteLocation[00004][02868] = location173;
+		SiteLocation[4][2868] = location173;
 	}
 
 	var location174 = new LocationInfo();
@@ -4361,14 +4361,14 @@ function getLocationDataArray()
 	location174.x = 329.2280590325936;
 	location174.y = 2129.6484548637964;
 	location174.z = 10.6619;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02874] = location174;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2874] = location174;
 	}
 	else
 	{
-		SiteLocation[00004][02874] = location174;
+		SiteLocation[4][2874] = location174;
 	}
 
 	var location175 = new LocationInfo();
@@ -4386,14 +4386,14 @@ function getLocationDataArray()
 	location175.x = 331.0725100396339;
 	location175.y = 2139.299792052596;
 	location175.z = 11.5283;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02910] = location175;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2910] = location175;
 	}
 	else
 	{
-		SiteLocation[00004][02910] = location175;
+		SiteLocation[4][2910] = location175;
 	}
 
 	var location176 = new LocationInfo();
@@ -4411,14 +4411,14 @@ function getLocationDataArray()
 	location176.x = 331.18290065220936;
 	location176.y = 2139.7709128662827;
 	location176.z = 11.5478;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02916] = location176;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2916] = location176;
 	}
 	else
 	{
-		SiteLocation[00004][02916] = location176;
+		SiteLocation[4][2916] = location176;
 	}
 
 	var location177 = new LocationInfo();
@@ -4436,14 +4436,14 @@ function getLocationDataArray()
 	location177.x = 332.8478293954904;
 	location177.y = 2149.458026072658;
 	location177.z = 11.9266;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02956] = location177;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2956] = location177;
 	}
 	else
 	{
-		SiteLocation[00004][02956] = location177;
+		SiteLocation[4][2956] = location177;
 	}
 
 	var location178 = new LocationInfo();
@@ -4461,14 +4461,14 @@ function getLocationDataArray()
 	location178.x = 333.48450929250976;
 	location178.y = 2150.237928477938;
 	location178.z = 11.9818;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02962] = location178;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2962] = location178;
 	}
 	else
 	{
-		SiteLocation[00004][02962] = location178;
+		SiteLocation[4][2962] = location178;
 	}
 
 	var location179 = new LocationInfo();
@@ -4486,14 +4486,14 @@ function getLocationDataArray()
 	location179.x = 333.95870221490986;
 	location179.y = 2151.0371995148125;
 	location179.z = 12.0402;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02968] = location179;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2968] = location179;
 	}
 	else
 	{
-		SiteLocation[00004][02968] = location179;
+		SiteLocation[4][2968] = location179;
 	}
 
 	var location180 = new LocationInfo();
@@ -4511,14 +4511,14 @@ function getLocationDataArray()
 	location180.x = 334.3155621428741;
 	location180.y = 2151.97378958873;
 	location180.z = 12.1045;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02974] = location180;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2974] = location180;
 	}
 	else
 	{
-		SiteLocation[00004][02974] = location180;
+		SiteLocation[4][2974] = location180;
 	}
 
 	var location181 = new LocationInfo();
@@ -4536,14 +4536,14 @@ function getLocationDataArray()
 	location181.x = 334.4938442186685;
 	location181.y = 2152.96544897931;
 	location181.z = 12.1637;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02980] = location181;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2980] = location181;
 	}
 	else
 	{
-		SiteLocation[00004][02980] = location181;
+		SiteLocation[4][2980] = location181;
 	}
 
 	var location182 = new LocationInfo();
@@ -4561,14 +4561,14 @@ function getLocationDataArray()
 	location182.x = 334.4989447332737;
 	location182.y = 2152.9645015725728;
 	location182.z = 12.1604;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02986] = location182;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2986] = location182;
 	}
 	else
 	{
-		SiteLocation[00004][02986] = location182;
+		SiteLocation[4][2986] = location182;
 	}
 
 	var location183 = new LocationInfo();
@@ -4586,14 +4586,14 @@ function getLocationDataArray()
 	location183.x = 334.6528985659861;
 	location183.y = 2153.8882056492257;
 	location183.z = 12.177;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02992] = location183;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2992] = location183;
 	}
 	else
 	{
-		SiteLocation[00004][02992] = location183;
+		SiteLocation[4][2992] = location183;
 	}
 
 	var location184 = new LocationInfo();
@@ -4611,14 +4611,14 @@ function getLocationDataArray()
 	location184.x = 334.8142364094165;
 	location184.y = 2154.872732243155;
 	location184.z = 12.1989;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][02998] = location184;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][2998] = location184;
 	}
 	else
 	{
-		SiteLocation[00004][02998] = location184;
+		SiteLocation[4][2998] = location184;
 	}
 
 	var location185 = new LocationInfo();
@@ -4636,14 +4636,14 @@ function getLocationDataArray()
 	location185.x = 334.96406943567854;
 	location185.y = 2155.8521696743446;
 	location185.z = 12.214;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03004] = location185;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3004] = location185;
 	}
 	else
 	{
-		SiteLocation[00004][03004] = location185;
+		SiteLocation[4][3004] = location185;
 	}
 
 	var location186 = new LocationInfo();
@@ -4661,14 +4661,14 @@ function getLocationDataArray()
 	location186.x = 335.12751866622784;
 	location186.y = 2156.8277529104816;
 	location186.z = 12.2273;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03010] = location186;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3010] = location186;
 	}
 	else
 	{
-		SiteLocation[00004][03010] = location186;
+		SiteLocation[4][3010] = location186;
 	}
 
 	var location187 = new LocationInfo();
@@ -4686,14 +4686,14 @@ function getLocationDataArray()
 	location187.x = 335.2947696065203;
 	location187.y = 2157.711745964447;
 	location187.z = 12.2252;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03016] = location187;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3016] = location187;
 	}
 	else
 	{
-		SiteLocation[00004][03016] = location187;
+		SiteLocation[4][3016] = location187;
 	}
 
 	var location188 = new LocationInfo();
@@ -4711,14 +4711,14 @@ function getLocationDataArray()
 	location188.x = 335.4532964902319;
 	location188.y = 2158.7052092596678;
 	location188.z = 12.2601;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03022] = location188;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3022] = location188;
 	}
 	else
 	{
-		SiteLocation[00004][03022] = location188;
+		SiteLocation[4][3022] = location188;
 	}
 
 	var location189 = new LocationInfo();
@@ -4736,14 +4736,14 @@ function getLocationDataArray()
 	location189.x = 335.6350974936613;
 	location189.y = 2159.662044280438;
 	location189.z = 12.3092;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03028] = location189;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3028] = location189;
 	}
 	else
 	{
-		SiteLocation[00004][03028] = location189;
+		SiteLocation[4][3028] = location189;
 	}
 
 	var location190 = new LocationInfo();
@@ -4761,14 +4761,14 @@ function getLocationDataArray()
 	location190.x = 335.7986457100342;
 	location190.y = 2160.629660949231;
 	location190.z = 12.333;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03034] = location190;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3034] = location190;
 	}
 	else
 	{
-		SiteLocation[00004][03034] = location190;
+		SiteLocation[4][3034] = location190;
 	}
 
 	var location191 = new LocationInfo();
@@ -4786,14 +4786,14 @@ function getLocationDataArray()
 	location191.x = 335.98205714508003;
 	location191.y = 2161.579539722876;
 	location191.z = 12.3467;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03040] = location191;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3040] = location191;
 	}
 	else
 	{
-		SiteLocation[00004][03040] = location191;
+		SiteLocation[4][3040] = location191;
 	}
 
 	var location192 = new LocationInfo();
@@ -4811,14 +4811,14 @@ function getLocationDataArray()
 	location192.x = 336.17575913913606;
 	location192.y = 2162.534496105476;
 	location192.z = 12.3315;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03046] = location192;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3046] = location192;
 	}
 	else
 	{
-		SiteLocation[00004][03046] = location192;
+		SiteLocation[4][3046] = location192;
 	}
 
 	var location193 = new LocationInfo();
@@ -4836,14 +4836,14 @@ function getLocationDataArray()
 	location193.x = 336.3654662047011;
 	location193.y = 2163.488418537283;
 	location193.z = 12.3319;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03052] = location193;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3052] = location193;
 	}
 	else
 	{
-		SiteLocation[00004][03052] = location193;
+		SiteLocation[4][3052] = location193;
 	}
 
 	var location194 = new LocationInfo();
@@ -4861,14 +4861,14 @@ function getLocationDataArray()
 	location194.x = 336.5563067317016;
 	location194.y = 2164.4373720608382;
 	location194.z = 12.3296;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03058] = location194;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3058] = location194;
 	}
 	else
 	{
-		SiteLocation[00004][03058] = location194;
+		SiteLocation[4][3058] = location194;
 	}
 
 	var location195 = new LocationInfo();
@@ -4886,14 +4886,14 @@ function getLocationDataArray()
 	location195.x = 336.7635668428484;
 	location195.y = 2165.3665630453943;
 	location195.z = 12.3317;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03064] = location195;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3064] = location195;
 	}
 	else
 	{
-		SiteLocation[00004][03064] = location195;
+		SiteLocation[4][3064] = location195;
 	}
 
 	var location196 = new LocationInfo();
@@ -4911,14 +4911,14 @@ function getLocationDataArray()
 	location196.x = 336.9338381982234;
 	location196.y = 2166.3133289738835;
 	location196.z = 12.3567;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03070] = location196;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3070] = location196;
 	}
 	else
 	{
-		SiteLocation[00004][03070] = location196;
+		SiteLocation[4][3070] = location196;
 	}
 
 	var location197 = new LocationInfo();
@@ -4936,14 +4936,14 @@ function getLocationDataArray()
 	location197.x = 337.03408133870107;
 	location197.y = 2167.1946925645243;
 	location197.z = 12.3423;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03076] = location197;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3076] = location197;
 	}
 	else
 	{
-		SiteLocation[00004][03076] = location197;
+		SiteLocation[4][3076] = location197;
 	}
 
 	var location198 = new LocationInfo();
@@ -4961,14 +4961,14 @@ function getLocationDataArray()
 	location198.x = 337.1607947365046;
 	location198.y = 2168.152995298431;
 	location198.z = 12.3429;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03082] = location198;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3082] = location198;
 	}
 	else
 	{
-		SiteLocation[00004][03082] = location198;
+		SiteLocation[4][3082] = location198;
 	}
 
 	var location199 = new LocationInfo();
@@ -4986,14 +4986,14 @@ function getLocationDataArray()
 	location199.x = 337.35085106553015;
 	location199.y = 2169.1109048081125;
 	location199.z = 12.3688;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03088] = location199;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3088] = location199;
 	}
 	else
 	{
-		SiteLocation[00004][03088] = location199;
+		SiteLocation[4][3088] = location199;
 	}
 
 	var location200 = new LocationInfo();
@@ -5011,14 +5011,14 @@ function getLocationDataArray()
 	location200.x = 337.504048913368;
 	location200.y = 2170.0684636055994;
 	location200.z = 12.3967;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03094] = location200;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3094] = location200;
 	}
 	else
 	{
-		SiteLocation[00004][03094] = location200;
+		SiteLocation[4][3094] = location200;
 	}
 
 	var location201 = new LocationInfo();
@@ -5036,14 +5036,14 @@ function getLocationDataArray()
 	location201.x = 337.6315402351938;
 	location201.y = 2171.065615348907;
 	location201.z = 12.4385;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03100] = location201;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3100] = location201;
 	}
 	else
 	{
-		SiteLocation[00004][03100] = location201;
+		SiteLocation[4][3100] = location201;
 	}
 
 	var location202 = new LocationInfo();
@@ -5061,14 +5061,14 @@ function getLocationDataArray()
 	location202.x = 337.74082440412167;
 	location202.y = 2172.0456628922293;
 	location202.z = 12.4967;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03106] = location202;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3106] = location202;
 	}
 	else
 	{
-		SiteLocation[00004][03106] = location202;
+		SiteLocation[4][3106] = location202;
 	}
 
 	var location203 = new LocationInfo();
@@ -5086,14 +5086,14 @@ function getLocationDataArray()
 	location203.x = 337.8787437553801;
 	location203.y = 2173.017019454379;
 	location203.z = 12.5421;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03112] = location203;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3112] = location203;
 	}
 	else
 	{
-		SiteLocation[00004][03112] = location203;
+		SiteLocation[4][3112] = location203;
 	}
 
 	var location204 = new LocationInfo();
@@ -5111,14 +5111,14 @@ function getLocationDataArray()
 	location204.x = 338.0395952813342;
 	location204.y = 2173.9567241816876;
 	location204.z = 12.5651;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03118] = location204;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3118] = location204;
 	}
 	else
 	{
-		SiteLocation[00004][03118] = location204;
+		SiteLocation[4][3118] = location204;
 	}
 
 	var location205 = new LocationInfo();
@@ -5136,14 +5136,14 @@ function getLocationDataArray()
 	location205.x = 338.14298994198543;
 	location205.y = 2174.8689918575183;
 	location205.z = 12.5587;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03124] = location205;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3124] = location205;
 	}
 	else
 	{
-		SiteLocation[00004][03124] = location205;
+		SiteLocation[4][3124] = location205;
 	}
 
 	var location206 = new LocationInfo();
@@ -5161,14 +5161,14 @@ function getLocationDataArray()
 	location206.x = 338.2393461030624;
 	location206.y = 2175.768245358864;
 	location206.z = 12.5344;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03130] = location206;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3130] = location206;
 	}
 	else
 	{
-		SiteLocation[00004][03130] = location206;
+		SiteLocation[4][3130] = location206;
 	}
 
 	var location207 = new LocationInfo();
@@ -5186,14 +5186,14 @@ function getLocationDataArray()
 	location207.x = 338.34826418778175;
 	location207.y = 2176.7582488053704;
 	location207.z = 12.5465;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03136] = location207;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3136] = location207;
 	}
 	else
 	{
-		SiteLocation[00004][03136] = location207;
+		SiteLocation[4][3136] = location207;
 	}
 
 	var location208 = new LocationInfo();
@@ -5211,14 +5211,14 @@ function getLocationDataArray()
 	location208.x = 338.4713007243299;
 	location208.y = 2177.7135287376186;
 	location208.z = 12.5784;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03142] = location208;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3142] = location208;
 	}
 	else
 	{
-		SiteLocation[00004][03142] = location208;
+		SiteLocation[4][3142] = location208;
 	}
 
 	var location209 = new LocationInfo();
@@ -5236,14 +5236,14 @@ function getLocationDataArray()
 	location209.x = 338.6629016178049;
 	location209.y = 2178.648546355027;
 	location209.z = 12.6036;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03148] = location209;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3148] = location209;
 	}
 	else
 	{
-		SiteLocation[00004][03148] = location209;
+		SiteLocation[4][3148] = location209;
 	}
 
 	var location210 = new LocationInfo();
@@ -5261,14 +5261,14 @@ function getLocationDataArray()
 	location210.x = 338.8026562783307;
 	location210.y = 2179.6318716441383;
 	location210.z = 12.6256;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03154] = location210;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3154] = location210;
 	}
 	else
 	{
-		SiteLocation[00004][03154] = location210;
+		SiteLocation[4][3154] = location210;
 	}
 
 	var location211 = new LocationInfo();
@@ -5286,14 +5286,14 @@ function getLocationDataArray()
 	location211.x = 338.91701537796325;
 	location211.y = 2180.5850771323894;
 	location211.z = 12.6515;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03160] = location211;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3160] = location211;
 	}
 	else
 	{
-		SiteLocation[00004][03160] = location211;
+		SiteLocation[4][3160] = location211;
 	}
 
 	var location212 = new LocationInfo();
@@ -5311,14 +5311,14 @@ function getLocationDataArray()
 	location212.x = 339.0404108028888;
 	location212.y = 2181.543348295447;
 	location212.z = 12.6561;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03166] = location212;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3166] = location212;
 	}
 	else
 	{
-		SiteLocation[00004][03166] = location212;
+		SiteLocation[4][3166] = location212;
 	}
 
 	var location213 = new LocationInfo();
@@ -5336,14 +5336,14 @@ function getLocationDataArray()
 	location213.x = 339.1654152447809;
 	location213.y = 2182.5016347684686;
 	location213.z = 12.6643;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03172] = location213;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3172] = location213;
 	}
 	else
 	{
-		SiteLocation[00004][03172] = location213;
+		SiteLocation[4][3172] = location213;
 	}
 
 	var location214 = new LocationInfo();
@@ -5361,14 +5361,14 @@ function getLocationDataArray()
 	location214.x = 339.29321886886464;
 	location214.y = 2183.45696006003;
 	location214.z = 12.6839;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03178] = location214;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3178] = location214;
 	}
 	else
 	{
-		SiteLocation[00004][03178] = location214;
+		SiteLocation[4][3178] = location214;
 	}
 
 	var location215 = new LocationInfo();
@@ -5386,14 +5386,14 @@ function getLocationDataArray()
 	location215.x = 339.43325680307316;
 	location215.y = 2184.406426130401;
 	location215.z = 12.6956;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03184] = location215;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3184] = location215;
 	}
 	else
 	{
-		SiteLocation[00004][03184] = location215;
+		SiteLocation[4][3184] = location215;
 	}
 
 	var location216 = new LocationInfo();
@@ -5411,14 +5411,14 @@ function getLocationDataArray()
 	location216.x = 339.47134887900756;
 	location216.y = 2184.7125417460556;
 	location216.z = 12.6964;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03190] = location216;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3190] = location216;
 	}
 	else
 	{
-		SiteLocation[00004][03190] = location216;
+		SiteLocation[4][3190] = location216;
 	}
 
 	var location217 = new LocationInfo();
@@ -5436,14 +5436,14 @@ function getLocationDataArray()
 	location217.x = 339.47134887900756;
 	location217.y = 2184.7125417460556;
 	location217.z = 12.6964;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03200] = location217;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3200] = location217;
 	}
 	else
 	{
-		SiteLocation[00004][03200] = location217;
+		SiteLocation[4][3200] = location217;
 	}
 
 	var location218 = new LocationInfo();
@@ -5461,14 +5461,14 @@ function getLocationDataArray()
 	location218.x = 339.4825119058878;
 	location218.y = 2184.698022407305;
 	location218.z = 12.6862;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03206] = location218;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3206] = location218;
 	}
 	else
 	{
-		SiteLocation[00004][03206] = location218;
+		SiteLocation[4][3206] = location218;
 	}
 
 	var location219 = new LocationInfo();
@@ -5486,14 +5486,14 @@ function getLocationDataArray()
 	location219.x = 339.6510745568994;
 	location219.y = 2185.661999291653;
 	location219.z = 12.7056;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03212] = location219;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3212] = location219;
 	}
 	else
 	{
-		SiteLocation[00004][03212] = location219;
+		SiteLocation[4][3212] = location219;
 	}
 
 	var location220 = new LocationInfo();
@@ -5511,14 +5511,14 @@ function getLocationDataArray()
 	location220.x = 339.82197964594525;
 	location220.y = 2186.624922479001;
 	location220.z = 12.7029;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03218] = location220;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3218] = location220;
 	}
 	else
 	{
-		SiteLocation[00004][03218] = location220;
+		SiteLocation[4][3218] = location220;
 	}
 
 	var location221 = new LocationInfo();
@@ -5536,14 +5536,14 @@ function getLocationDataArray()
 	location221.x = 339.85423765888845;
 	location221.y = 2186.7891403985886;
 	location221.z = 12.7019;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03224] = location221;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3224] = location221;
 	}
 	else
 	{
-		SiteLocation[00004][03224] = location221;
+		SiteLocation[4][3224] = location221;
 	}
 
 	var location222 = new LocationInfo();
@@ -5561,14 +5561,14 @@ function getLocationDataArray()
 	location222.x = 339.85311497997463;
 	location222.y = 2186.7524100145165;
 	location222.z = 12.7019;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03232] = location222;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3232] = location222;
 	}
 	else
 	{
-		SiteLocation[00004][03232] = location222;
+		SiteLocation[4][3232] = location222;
 	}
 
 	var location223 = new LocationInfo();
@@ -5586,14 +5586,14 @@ function getLocationDataArray()
 	location223.x = 339.85311497997463;
 	location223.y = 2186.7524100145165;
 	location223.z = 12.7019;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03238] = location223;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3238] = location223;
 	}
 	else
 	{
-		SiteLocation[00004][03238] = location223;
+		SiteLocation[4][3238] = location223;
 	}
 
 	var location224 = new LocationInfo();
@@ -5611,14 +5611,14 @@ function getLocationDataArray()
 	location224.x = 339.3694284468802;
 	location224.y = 2187.507989142403;
 	location224.z = 12.6485;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03244] = location224;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3244] = location224;
 	}
 	else
 	{
-		SiteLocation[00004][03244] = location224;
+		SiteLocation[4][3244] = location224;
 	}
 
 	var location225 = new LocationInfo();
@@ -5636,14 +5636,14 @@ function getLocationDataArray()
 	location225.x = 338.8277116891295;
 	location225.y = 2188.2886898513607;
 	location225.z = 12.5854;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03250] = location225;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3250] = location225;
 	}
 	else
 	{
-		SiteLocation[00004][03250] = location225;
+		SiteLocation[4][3250] = location225;
 	}
 
 	var location226 = new LocationInfo();
@@ -5661,14 +5661,14 @@ function getLocationDataArray()
 	location226.x = 338.221038887139;
 	location226.y = 2189.0415486081183;
 	location226.z = 12.5469;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03256] = location226;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3256] = location226;
 	}
 	else
 	{
-		SiteLocation[00004][03256] = location226;
+		SiteLocation[4][3256] = location226;
 	}
 
 	var location227 = new LocationInfo();
@@ -5686,14 +5686,14 @@ function getLocationDataArray()
 	location227.x = 337.60922245238544;
 	location227.y = 2189.817671146615;
 	location227.z = 12.5232;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03262] = location227;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3262] = location227;
 	}
 	else
 	{
-		SiteLocation[00004][03262] = location227;
+		SiteLocation[4][3262] = location227;
 	}
 
 	var location228 = new LocationInfo();
@@ -5711,14 +5711,14 @@ function getLocationDataArray()
 	location228.x = 337.02615153943407;
 	location228.y = 2190.6013448072517;
 	location228.z = 12.5027;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03268] = location228;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3268] = location228;
 	}
 	else
 	{
-		SiteLocation[00004][03268] = location228;
+		SiteLocation[4][3268] = location228;
 	}
 
 	var location229 = new LocationInfo();
@@ -5736,14 +5736,14 @@ function getLocationDataArray()
 	location229.x = 336.4552911179526;
 	location229.y = 2191.3713166674497;
 	location229.z = 12.5303;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03274] = location229;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3274] = location229;
 	}
 	else
 	{
-		SiteLocation[00004][03274] = location229;
+		SiteLocation[4][3274] = location229;
 	}
 
 	var location230 = new LocationInfo();
@@ -5761,14 +5761,14 @@ function getLocationDataArray()
 	location230.x = 335.98491063037363;
 	location230.y = 2192.2836325689605;
 	location230.z = 12.6647;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03280] = location230;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3280] = location230;
 	}
 	else
 	{
-		SiteLocation[00004][03280] = location230;
+		SiteLocation[4][3280] = location230;
 	}
 
 	var location231 = new LocationInfo();
@@ -5786,14 +5786,14 @@ function getLocationDataArray()
 	location231.x = 335.7038545459509;
 	location231.y = 2193.2932088248817;
 	location231.z = 12.8158;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03286] = location231;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3286] = location231;
 	}
 	else
 	{
-		SiteLocation[00004][03286] = location231;
+		SiteLocation[4][3286] = location231;
 	}
 
 	var location232 = new LocationInfo();
@@ -5811,14 +5811,14 @@ function getLocationDataArray()
 	location232.x = 335.47052664433795;
 	location232.y = 2194.2924332515104;
 	location232.z = 12.9543;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03292] = location232;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3292] = location232;
 	}
 	else
 	{
-		SiteLocation[00004][03292] = location232;
+		SiteLocation[4][3292] = location232;
 	}
 
 	var location233 = new LocationInfo();
@@ -5836,14 +5836,14 @@ function getLocationDataArray()
 	location233.x = 335.2512820293705;
 	location233.y = 2195.321367306544;
 	location233.z = 13.1066;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03298] = location233;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3298] = location233;
 	}
 	else
 	{
-		SiteLocation[00004][03298] = location233;
+		SiteLocation[4][3298] = location233;
 	}
 
 	var location234 = new LocationInfo();
@@ -5861,14 +5861,14 @@ function getLocationDataArray()
 	location234.x = 334.98858972918606;
 	location234.y = 2196.3987834718137;
 	location234.z = 13.2813;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03304] = location234;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3304] = location234;
 	}
 	else
 	{
-		SiteLocation[00004][03304] = location234;
+		SiteLocation[4][3304] = location234;
 	}
 
 	var location235 = new LocationInfo();
@@ -5886,14 +5886,14 @@ function getLocationDataArray()
 	location235.x = 334.72983911157644;
 	location235.y = 2197.423289403676;
 	location235.z = 13.427;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03310] = location235;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3310] = location235;
 	}
 	else
 	{
-		SiteLocation[00004][03310] = location235;
+		SiteLocation[4][3310] = location235;
 	}
 
 	var location236 = new LocationInfo();
@@ -5911,14 +5911,14 @@ function getLocationDataArray()
 	location236.x = 334.6583032796334;
 	location236.y = 2198.4635338124135;
 	location236.z = 13.5375;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03316] = location236;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3316] = location236;
 	}
 	else
 	{
-		SiteLocation[00004][03316] = location236;
+		SiteLocation[4][3316] = location236;
 	}
 
 	var location237 = new LocationInfo();
@@ -5936,14 +5936,14 @@ function getLocationDataArray()
 	location237.x = 334.86742331186906;
 	location237.y = 2199.4691625987252;
 	location237.z = 13.6546;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03322] = location237;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3322] = location237;
 	}
 	else
 	{
-		SiteLocation[00004][03322] = location237;
+		SiteLocation[4][3322] = location237;
 	}
 
 	var location238 = new LocationInfo();
@@ -5961,14 +5961,14 @@ function getLocationDataArray()
 	location238.x = 335.1214332131931;
 	location238.y = 2200.4834802787445;
 	location238.z = 13.736;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03328] = location238;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3328] = location238;
 	}
 	else
 	{
-		SiteLocation[00004][03328] = location238;
+		SiteLocation[4][3328] = location238;
 	}
 
 	var location239 = new LocationInfo();
@@ -5986,14 +5986,14 @@ function getLocationDataArray()
 	location239.x = 335.37601466926935;
 	location239.y = 2201.499917944606;
 	location239.z = 13.8495;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03334] = location239;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3334] = location239;
 	}
 	else
 	{
-		SiteLocation[00004][03334] = location239;
+		SiteLocation[4][3334] = location239;
 	}
 
 	var location240 = new LocationInfo();
@@ -6011,14 +6011,14 @@ function getLocationDataArray()
 	location240.x = 335.6203528395308;
 	location240.y = 2202.4760789022876;
 	location240.z = 13.9525;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03340] = location240;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3340] = location240;
 	}
 	else
 	{
-		SiteLocation[00004][03340] = location240;
+		SiteLocation[4][3340] = location240;
 	}
 
 	var location241 = new LocationInfo();
@@ -6036,14 +6036,14 @@ function getLocationDataArray()
 	location241.x = 335.84433863973027;
 	location241.y = 2203.5357687548603;
 	location241.z = 14.0518;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03346] = location241;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3346] = location241;
 	}
 	else
 	{
-		SiteLocation[00004][03346] = location241;
+		SiteLocation[4][3346] = location241;
 	}
 
 	var location242 = new LocationInfo();
@@ -6061,14 +6061,14 @@ function getLocationDataArray()
 	location242.x = 336.11196854070295;
 	location242.y = 2204.574500834555;
 	location242.z = 14.1173;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03352] = location242;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3352] = location242;
 	}
 	else
 	{
-		SiteLocation[00004][03352] = location242;
+		SiteLocation[4][3352] = location242;
 	}
 
 	var location243 = new LocationInfo();
@@ -6086,14 +6086,14 @@ function getLocationDataArray()
 	location243.x = 336.59454293934687;
 	location243.y = 2205.49678347832;
 	location243.z = 14.1144;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03358] = location243;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3358] = location243;
 	}
 	else
 	{
-		SiteLocation[00004][03358] = location243;
+		SiteLocation[4][3358] = location243;
 	}
 
 	var location244 = new LocationInfo();
@@ -6111,14 +6111,14 @@ function getLocationDataArray()
 	location244.x = 337.2414697364002;
 	location244.y = 2206.174279007708;
 	location244.z = 14.1;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03364] = location244;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3364] = location244;
 	}
 	else
 	{
-		SiteLocation[00004][03364] = location244;
+		SiteLocation[4][3364] = location244;
 	}
 
 	var location245 = new LocationInfo();
@@ -6136,14 +6136,14 @@ function getLocationDataArray()
 	location245.x = 337.9408048620062;
 	location245.y = 2206.8128636963156;
 	location245.z = 14.1161;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03370] = location245;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3370] = location245;
 	}
 	else
 	{
-		SiteLocation[00004][03370] = location245;
+		SiteLocation[4][3370] = location245;
 	}
 
 	var location246 = new LocationInfo();
@@ -6161,14 +6161,14 @@ function getLocationDataArray()
 	location246.x = 338.64424729854363;
 	location246.y = 2207.5054566860963;
 	location246.z = 14.1536;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03376] = location246;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3376] = location246;
 	}
 	else
 	{
-		SiteLocation[00004][03376] = location246;
+		SiteLocation[4][3376] = location246;
 	}
 
 	var location247 = new LocationInfo();
@@ -6186,14 +6186,14 @@ function getLocationDataArray()
 	location247.x = 338.6486817946716;
 	location247.y = 2207.5065370264856;
 	location247.z = 14.159;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03382] = location247;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3382] = location247;
 	}
 	else
 	{
-		SiteLocation[00004][03382] = location247;
+		SiteLocation[4][3382] = location247;
 	}
 
 	var location248 = new LocationInfo();
@@ -6211,14 +6211,14 @@ function getLocationDataArray()
 	location248.x = 339.48924976766284;
 	location248.y = 2208.191333820654;
 	location248.z = 14.2198;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03388] = location248;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3388] = location248;
 	}
 	else
 	{
-		SiteLocation[00004][03388] = location248;
+		SiteLocation[4][3388] = location248;
 	}
 
 	var location249 = new LocationInfo();
@@ -6236,14 +6236,14 @@ function getLocationDataArray()
 	location249.x = 339.48924976766284;
 	location249.y = 2208.191333820654;
 	location249.z = 14.2198;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03394] = location249;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3394] = location249;
 	}
 	else
 	{
-		SiteLocation[00004][03394] = location249;
+		SiteLocation[4][3394] = location249;
 	}
 
 	var location250 = new LocationInfo();
@@ -6261,14 +6261,14 @@ function getLocationDataArray()
 	location250.x = 339.48924976766284;
 	location250.y = 2208.191333820654;
 	location250.z = 14.2198;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03400] = location250;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3400] = location250;
 	}
 	else
 	{
-		SiteLocation[00004][03400] = location250;
+		SiteLocation[4][3400] = location250;
 	}
 
 	var location251 = new LocationInfo();
@@ -6286,14 +6286,14 @@ function getLocationDataArray()
 	location251.x = 339.48924976766284;
 	location251.y = 2208.191333820654;
 	location251.z = 14.2198;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03406] = location251;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3406] = location251;
 	}
 	else
 	{
-		SiteLocation[00004][03406] = location251;
+		SiteLocation[4][3406] = location251;
 	}
 
 	var location252 = new LocationInfo();
@@ -6311,14 +6311,14 @@ function getLocationDataArray()
 	location252.x = 339.4940338361703;
 	location252.y = 2208.1955298543908;
 	location252.z = 14.2198;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03416] = location252;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3416] = location252;
 	}
 	else
 	{
-		SiteLocation[00004][03416] = location252;
+		SiteLocation[4][3416] = location252;
 	}
 
 	var location253 = new LocationInfo();
@@ -6336,14 +6336,14 @@ function getLocationDataArray()
 	location253.x = 338.54554246786574;
 	location253.y = 2208.208152235289;
 	location253.z = 14.1917;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03422] = location253;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3422] = location253;
 	}
 	else
 	{
-		SiteLocation[00004][03422] = location253;
+		SiteLocation[4][3422] = location253;
 	}
 
 	var location254 = new LocationInfo();
@@ -6361,14 +6361,14 @@ function getLocationDataArray()
 	location254.x = 338.5257847045468;
 	location254.y = 2208.2082032549406;
 	location254.z = 14.1894;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03428] = location254;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3428] = location254;
 	}
 	else
 	{
-		SiteLocation[00004][03428] = location254;
+		SiteLocation[4][3428] = location254;
 	}
 
 	var location255 = new LocationInfo();
@@ -6386,14 +6386,14 @@ function getLocationDataArray()
 	location255.x = 338.55814148368154;
 	location255.y = 2208.2437256590674;
 	location255.z = 14.1931;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03434] = location255;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3434] = location255;
 	}
 	else
 	{
-		SiteLocation[00004][03434] = location255;
+		SiteLocation[4][3434] = location255;
 	}
 
 	var location256 = new LocationInfo();
@@ -6411,14 +6411,14 @@ function getLocationDataArray()
 	location256.x = 339.2484437468629;
 	location256.y = 2208.8970927417904;
 	location256.z = 14.2635;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03440] = location256;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3440] = location256;
 	}
 	else
 	{
-		SiteLocation[00004][03440] = location256;
+		SiteLocation[4][3440] = location256;
 	}
 
 	var location257 = new LocationInfo();
@@ -6436,14 +6436,14 @@ function getLocationDataArray()
 	location257.x = 339.9798623164206;
 	location257.y = 2209.569682600042;
 	location257.z = 14.3363;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03446] = location257;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3446] = location257;
 	}
 	else
 	{
-		SiteLocation[00004][03446] = location257;
+		SiteLocation[4][3446] = location257;
 	}
 
 	var location258 = new LocationInfo();
@@ -6461,14 +6461,14 @@ function getLocationDataArray()
 	location258.x = 340.68791638261973;
 	location258.y = 2210.2321596607035;
 	location258.z = 14.4027;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03452] = location258;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3452] = location258;
 	}
 	else
 	{
-		SiteLocation[00004][03452] = location258;
+		SiteLocation[4][3452] = location258;
 	}
 
 	var location259 = new LocationInfo();
@@ -6486,14 +6486,14 @@ function getLocationDataArray()
 	location259.x = 341.38478923048024;
 	location259.y = 2210.8285402441506;
 	location259.z = 14.4379;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03458] = location259;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3458] = location259;
 	}
 	else
 	{
-		SiteLocation[00004][03458] = location259;
+		SiteLocation[4][3458] = location259;
 	}
 
 	var location260 = new LocationInfo();
@@ -6511,14 +6511,14 @@ function getLocationDataArray()
 	location260.x = 342.14907461883195;
 	location260.y = 2211.421694811743;
 	location260.z = 14.4297;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03464] = location260;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3464] = location260;
 	}
 	else
 	{
-		SiteLocation[00004][03464] = location260;
+		SiteLocation[4][3464] = location260;
 	}
 
 	var location261 = new LocationInfo();
@@ -6536,14 +6536,14 @@ function getLocationDataArray()
 	location261.x = 342.14907461883195;
 	location261.y = 2211.421694811743;
 	location261.z = 14.4297;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03474] = location261;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3474] = location261;
 	}
 	else
 	{
-		SiteLocation[00004][03474] = location261;
+		SiteLocation[4][3474] = location261;
 	}
 
 	var location262 = new LocationInfo();
@@ -6561,14 +6561,14 @@ function getLocationDataArray()
 	location262.x = 342.14907461883195;
 	location262.y = 2211.421694811743;
 	location262.z = 14.4297;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03480] = location262;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3480] = location262;
 	}
 	else
 	{
-		SiteLocation[00004][03480] = location262;
+		SiteLocation[4][3480] = location262;
 	}
 
 	var location263 = new LocationInfo();
@@ -6586,14 +6586,14 @@ function getLocationDataArray()
 	location263.x = 341.93207661492124;
 	location263.y = 2211.4734451184377;
 	location263.z = 14.3992;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03486] = location263;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3486] = location263;
 	}
 	else
 	{
-		SiteLocation[00004][03486] = location263;
+		SiteLocation[4][3486] = location263;
 	}
 
 	var location264 = new LocationInfo();
@@ -6611,14 +6611,14 @@ function getLocationDataArray()
 	location264.x = 341.88950114408726;
 	location264.y = 2211.4835742110663;
 	location264.z = 14.3975;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03492] = location264;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3492] = location264;
 	}
 	else
 	{
-		SiteLocation[00004][03492] = location264;
+		SiteLocation[4][3492] = location264;
 	}
 
 	var location265 = new LocationInfo();
@@ -6636,14 +6636,14 @@ function getLocationDataArray()
 	location265.x = 341.88950114408726;
 	location265.y = 2211.4835742110663;
 	location265.z = 14.3975;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03496] = location265;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3496] = location265;
 	}
 	else
 	{
-		SiteLocation[00004][03496] = location265;
+		SiteLocation[4][3496] = location265;
 	}
 
 	var location266 = new LocationInfo();
@@ -6661,14 +6661,14 @@ function getLocationDataArray()
 	location266.x = 341.88950114408726;
 	location266.y = 2211.4835742110663;
 	location266.z = 14.3975;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03500] = location266;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3500] = location266;
 	}
 	else
 	{
-		SiteLocation[00004][03500] = location266;
+		SiteLocation[4][3500] = location266;
 	}
 
 	var location267 = new LocationInfo();
@@ -6686,14 +6686,14 @@ function getLocationDataArray()
 	location267.x = 341.88950114408726;
 	location267.y = 2211.4835742110663;
 	location267.z = 14.3975;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03504] = location267;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3504] = location267;
 	}
 	else
 	{
-		SiteLocation[00004][03504] = location267;
+		SiteLocation[4][3504] = location267;
 	}
 
 	var location268 = new LocationInfo();
@@ -6711,14 +6711,14 @@ function getLocationDataArray()
 	location268.x = 342.0015142774864;
 	location268.y = 2211.457087137129;
 	location268.z = 14.4115;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03510] = location268;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3510] = location268;
 	}
 	else
 	{
-		SiteLocation[00004][03510] = location268;
+		SiteLocation[4][3510] = location268;
 	}
 
 	var location269 = new LocationInfo();
@@ -6736,14 +6736,14 @@ function getLocationDataArray()
 	location269.x = 342.0015142774864;
 	location269.y = 2211.457087137129;
 	location269.z = 14.4115;
-	if(!SiteLocation[00004])
+	if(!SiteLocation[4])
 	{
-		SiteLocation[00004] = new Array();
-		SiteLocation[00004][03520] = location269;
+		SiteLocation[4] = new Array();
+		SiteLocation[4][3520] = location269;
 	}
 	else
 	{
-		SiteLocation[00004][03520] = location269;
+		SiteLocation[4][3520] = location269;
 	}
 
 	var location270 = new LocationInfo();
@@ -6761,14 +6761,14 @@ function getLocationDataArray()
 	location270.x = 341.9811496797374;
 	location270.y = 2210.729720142306;
 	location270.z = 0.0;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00000] = location270;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][0] = location270;
 	}
 	else
 	{
-		SiteLocation[00005][00000] = location270;
+		SiteLocation[5][0] = location270;
 	}
 
 	var location271 = new LocationInfo();
@@ -6786,14 +6786,14 @@ function getLocationDataArray()
 	location271.x = 341.9811496797374;
 	location271.y = 2210.729720142306;
 	location271.z = 0.0;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00006] = location271;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][6] = location271;
 	}
 	else
 	{
-		SiteLocation[00005][00006] = location271;
+		SiteLocation[5][6] = location271;
 	}
 
 	var location272 = new LocationInfo();
@@ -6811,14 +6811,14 @@ function getLocationDataArray()
 	location272.x = 342.02411789501275;
 	location272.y = 2210.7168208265175;
 	location272.z = -0.005914673333333333;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00012] = location272;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][12] = location272;
 	}
 	else
 	{
-		SiteLocation[00005][00012] = location272;
+		SiteLocation[5][12] = location272;
 	}
 
 	var location273 = new LocationInfo();
@@ -6836,14 +6836,14 @@ function getLocationDataArray()
 	location273.x = 342.0670861102881;
 	location273.y = 2210.703921510729;
 	location273.z = -0.011829346666666666;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00018] = location273;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][18] = location273;
 	}
 	else
 	{
-		SiteLocation[00005][00018] = location273;
+		SiteLocation[5][18] = location273;
 	}
 
 	var location274 = new LocationInfo();
@@ -6861,14 +6861,14 @@ function getLocationDataArray()
 	location274.x = 342.11005432556703;
 	location274.y = 2210.691022194944;
 	location274.z = -0.01774402;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00024] = location274;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][24] = location274;
 	}
 	else
 	{
-		SiteLocation[00005][00024] = location274;
+		SiteLocation[5][24] = location274;
 	}
 
 	var location275 = new LocationInfo();
@@ -6886,14 +6886,14 @@ function getLocationDataArray()
 	location275.x = 342.15302254084236;
 	location275.y = 2210.678122879155;
 	location275.z = -0.02365869333333333;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00030] = location275;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][30] = location275;
 	}
 	else
 	{
-		SiteLocation[00005][00030] = location275;
+		SiteLocation[5][30] = location275;
 	}
 
 	var location276 = new LocationInfo();
@@ -6911,14 +6911,14 @@ function getLocationDataArray()
 	location276.x = 342.1959907561177;
 	location276.y = 2210.6652235633665;
 	location276.z = -0.029573366666666663;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00036] = location276;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][36] = location276;
 	}
 	else
 	{
-		SiteLocation[00005][00036] = location276;
+		SiteLocation[5][36] = location276;
 	}
 
 	var location277 = new LocationInfo();
@@ -6936,14 +6936,14 @@ function getLocationDataArray()
 	location277.x = 342.238958971393;
 	location277.y = 2210.652324247578;
 	location277.z = -0.03548804;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00042] = location277;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][42] = location277;
 	}
 	else
 	{
-		SiteLocation[00005][00042] = location277;
+		SiteLocation[5][42] = location277;
 	}
 
 	var location278 = new LocationInfo();
@@ -6961,14 +6961,14 @@ function getLocationDataArray()
 	location278.x = 342.2819271866683;
 	location278.y = 2210.639424931789;
 	location278.z = -0.041402713333333334;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00048] = location278;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][48] = location278;
 	}
 	else
 	{
-		SiteLocation[00005][00048] = location278;
+		SiteLocation[5][48] = location278;
 	}
 
 	var location279 = new LocationInfo();
@@ -6986,14 +6986,14 @@ function getLocationDataArray()
 	location279.x = 342.3248954019473;
 	location279.y = 2210.626525616004;
 	location279.z = -0.04731738666666666;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00054] = location279;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][54] = location279;
 	}
 	else
 	{
-		SiteLocation[00005][00054] = location279;
+		SiteLocation[5][54] = location279;
 	}
 
 	var location280 = new LocationInfo();
@@ -7011,14 +7011,14 @@ function getLocationDataArray()
 	location280.x = 342.3678636172226;
 	location280.y = 2210.6136263002154;
 	location280.z = -0.05323206;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00066] = location280;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][66] = location280;
 	}
 	else
 	{
-		SiteLocation[00005][00066] = location280;
+		SiteLocation[5][66] = location280;
 	}
 
 	var location281 = new LocationInfo();
@@ -7036,14 +7036,14 @@ function getLocationDataArray()
 	location281.x = 342.41083183249793;
 	location281.y = 2210.6007269844267;
 	location281.z = -0.059146733333333326;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00072] = location281;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][72] = location281;
 	}
 	else
 	{
-		SiteLocation[00005][00072] = location281;
+		SiteLocation[5][72] = location281;
 	}
 
 	var location282 = new LocationInfo();
@@ -7061,14 +7061,14 @@ function getLocationDataArray()
 	location282.x = 342.45380004777326;
 	location282.y = 2210.587827668638;
 	location282.z = -0.06506140666666665;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00078] = location282;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][78] = location282;
 	}
 	else
 	{
-		SiteLocation[00005][00078] = location282;
+		SiteLocation[5][78] = location282;
 	}
 
 	var location283 = new LocationInfo();
@@ -7086,14 +7086,14 @@ function getLocationDataArray()
 	location283.x = 342.4967682630486;
 	location283.y = 2210.5749283528494;
 	location283.z = -0.07097608;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00084] = location283;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][84] = location283;
 	}
 	else
 	{
-		SiteLocation[00005][00084] = location283;
+		SiteLocation[5][84] = location283;
 	}
 
 	var location284 = new LocationInfo();
@@ -7111,14 +7111,14 @@ function getLocationDataArray()
 	location284.x = 342.53973647832754;
 	location284.y = 2210.5620290370643;
 	location284.z = -0.07689075333333334;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00090] = location284;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][90] = location284;
 	}
 	else
 	{
-		SiteLocation[00005][00090] = location284;
+		SiteLocation[5][90] = location284;
 	}
 
 	var location285 = new LocationInfo();
@@ -7136,14 +7136,14 @@ function getLocationDataArray()
 	location285.x = 342.58270469360286;
 	location285.y = 2210.5491297212757;
 	location285.z = -0.08280542666666667;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00096] = location285;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][96] = location285;
 	}
 	else
 	{
-		SiteLocation[00005][00096] = location285;
+		SiteLocation[5][96] = location285;
 	}
 
 	var location286 = new LocationInfo();
@@ -7161,14 +7161,14 @@ function getLocationDataArray()
 	location286.x = 342.6256729088782;
 	location286.y = 2210.536230405487;
 	location286.z = -0.0887201;
-	if(!SiteLocation[00005])
+	if(!SiteLocation[5])
 	{
-		SiteLocation[00005] = new Array();
-		SiteLocation[00005][00104] = location286;
+		SiteLocation[5] = new Array();
+		SiteLocation[5][104] = location286;
 	}
 	else
 	{
-		SiteLocation[00005][00104] = location286;
+		SiteLocation[5][104] = location286;
 	}
 
 }

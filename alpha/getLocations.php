@@ -47,6 +47,19 @@
 
 				foreach ($locations as $l)
 				{
+
+		        	if ($l->site == '00000')
+		        		$l->site = '0';
+		        	else
+						$l->site = ltrim($l->site, '0');
+
+
+					if ($l->drive == '00000')
+						$l->drive = '0';
+					else
+						$l->drive = ltrim($l->drive, '0');
+
+
 					fwrite($fh, "\tvar location".$count." = new LocationInfo();\n");
 					fwrite($fh, "\tlocation".$count.".itemName = ".$l->itemName.";\n");
 					fwrite($fh, "\tlocation".$count.".lon = ".$l->lon.";\n");
@@ -62,6 +75,7 @@
 					fwrite($fh, "\tlocation".$count.".x = ".$l->x.";\n");
 					fwrite($fh, "\tlocation".$count.".y = ".$l->y.";\n");
 					fwrite($fh, "\tlocation".$count.".z = ".$l->z.";\n");
+
 					fwrite($fh, "\tif(!SiteLocation[".$l->site."])\n");
 					fwrite($fh, "\t{\n");
 					fwrite($fh, "\t\tSiteLocation[".$l->site."] = new Array();\n");

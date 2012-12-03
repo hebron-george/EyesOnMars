@@ -72,74 +72,69 @@
 
 					foreach ($images as $i)
 					{
-					
 					        if ($i->sampleType == "full" && $i->site != 'UNK' && $i->drive != 'UNK' && $i->sol != 'UNK' && $i->utc != 'UNK' && $i->instrument != 'UNK' && $i->urlList != 'UNK' && $i->attitude != 'UNK' && $i->cameraPosition != 'UNK' && $i->mastAz != 'UNK' && $i->mastEl != 'UNK' && $i->xyz != 'UNK')
 					        {
 
-
-							//Replace the 'mars.jpl.nasa.gov' part of the url with 'msl-raws.s3.amazonaws.com'
-							$i->urlList = str_replace("mars.jpl.nasa.gov", "msl-raws.s3.amazonaws.com", $i->urlList);
-
-							//Add to Image
-							fwrite($fh, "\n\tvar Image".$count." = new ImageInfo();\n");
-							fwrite($fh, "\tImage".$count.".itemName = \"".$i->itemName."\";\n");
-							fwrite($fh, "\tImage".$count.".site = ".$i->site.";\n");
-							fwrite($fh, "\tImage".$count.".drive = ".$i->drive.";\n");
-							fwrite($fh, "\tImage".$count.".sol = ".$i->sol.";\n");
-							fwrite($fh, "\tImage".$count.".utc = \"".$i->utc."\";\n");
-							fwrite($fh, "\tImage".$count.".instrument = \"".$i->instrument."\";\n");
-							fwrite($fh, "\tImage".$count.".urlList = \"".$i->urlList."\";\n");
-							fwrite($fh, "\tImage".$count.".attitude = new THREE.Quaternion".$i->attitude.";\n");
-							if ($i->cameraPosition == "UNK")
-							{
-								fwrite($fh, "\tImage".$count.".cameraPosition = \"".$i->cameraPosition."\";\n");
-							}
-							else
-							{
-								fwrite($fh, "\tImage".$count.".cameraPosition = new THREE.Vector3".$i->cameraPosition.";\n");
-							}
-							if ($i->cameraVector == "UNK")
-							{
-								fwrite($fh, "\tImage".$count.".cameraVector = \"".$i->cameraVector."\";\n");
-							}
-							else
-							{
-								fwrite($fh, "\tImage".$count.".cameraVector = new THREE.Vector3".$i->cameraVector.";\n");
-							}							
-							fwrite($fh, "\tImage".$count.".mastAz = \"".$i->mastAz."\";\n");
-							fwrite($fh, "\tImage".$count.".mastEl = \"".$i->mastEl."\";\n");
-							fwrite($fh, "\tImage".$count.".xyz = new THREE.Vector3".$i->xyz.";\n");
+					        	if ($i->site == '00000')
+					        		$i->site = '0';
+					        	else
+									$i->site = ltrim($i->site, '0');
 
 
+								if ($i->drive == '00000')
+									$i->drive = '0';
+								else
+									$i->drive = ltrim($i->drive, '0');
 
-							//Add to SiteDrive
-							fwrite($fh, "\n\tif(!SiteLocation[".$i->site."][".$i->drive."].images)\n");
-							fwrite($fh, "\t{\n");
-							fwrite($fh, "\t\tSiteLocation[".$i->site."][".$i->drive."].images = new Array();\n");
-							fwrite($fh, "\t\tSiteLocation[".$i->site."][".$i->drive."].images[0] = Image".$count.";\n");
-							fwrite($fh, "\t}\n");
-							fwrite($fh, "\telse\n");
-							fwrite($fh, "\t{\n");
-							fwrite($fh, "\t\tSiteLocation[".$i->site."][".$i->drive."].images[SiteLocation[".$i->site."][".$i->drive."].images.length] = Image".$count.";\n");
-							fwrite($fh, "\t}\n");
+								//Replace the 'mars.jpl.nasa.gov' part of the url with 'msl-raws.s3.amazonaws.com'
+								$i->urlList = str_replace("mars.jpl.nasa.gov", "msl-raws.s3.amazonaws.com", $i->urlList);
+
+								//Add to Image
+								fwrite($fh, "\n\tvar Image".$count." = new ImageInfo();\n");
+								fwrite($fh, "\tImage".$count.".itemName = \"".$i->itemName."\";\n");
+								fwrite($fh, "\tImage".$count.".site = ".$i->site.";\n");
+								fwrite($fh, "\tImage".$count.".drive = ".$i->drive.";\n");
+								fwrite($fh, "\tImage".$count.".sol = ".$i->sol.";\n");
+								fwrite($fh, "\tImage".$count.".utc = \"".$i->utc."\";\n");
+								fwrite($fh, "\tImage".$count.".instrument = \"".$i->instrument."\";\n");
+								fwrite($fh, "\tImage".$count.".urlList = \"".$i->urlList."\";\n");
+								fwrite($fh, "\tImage".$count.".attitude = new THREE.Quaternion".$i->attitude.";\n");
+								if ($i->cameraPosition == "UNK")
+								{
+									fwrite($fh, "\tImage".$count.".cameraPosition = \"".$i->cameraPosition."\";\n");
+								}
+								else
+								{
+									fwrite($fh, "\tImage".$count.".cameraPosition = new THREE.Vector3".$i->cameraPosition.";\n");
+								}
+								if ($i->cameraVector == "UNK")
+								{
+									fwrite($fh, "\tImage".$count.".cameraVector = \"".$i->cameraVector."\";\n");
+								}
+								else
+								{
+									fwrite($fh, "\tImage".$count.".cameraVector = new THREE.Vector3".$i->cameraVector.";\n");
+								}							
+								fwrite($fh, "\tImage".$count.".mastAz = \"".$i->mastAz."\";\n");
+								fwrite($fh, "\tImage".$count.".mastEl = \"".$i->mastEl."\";\n");
+								fwrite($fh, "\tImage".$count.".xyz = new THREE.Vector3".$i->xyz.";\n");
 
 
 
-							//Add to Drive
-							// fwrite($fh, "\n\tif(!Drives[".$i->drive."])\n");
-							// fwrite($fh, "\t{\n");
-							// fwrite($fh, "\t\tDrives[".$i->drive."] = new Array();\n");
-							// fwrite($fh, "\t\tDrives[".$i->drive."][0] = Image".$count.";\n");
-							// fwrite($fh, "\t}\n");
-							// fwrite($fh, "\telse\n");
-							// fwrite($fh, "\t{\n");
-							// fwrite($fh, "\t\tDrives[".$i->drive."][Drives[".$i->drive."].length] = Image".$count.";\n");
-							// fwrite($fh, "\t}\n");
+								//Add to SiteDrive
+								fwrite($fh, "\n\tif(!SiteLocation[$i->site]){SiteLocation[$i->site] = new Array();}");
+								fwrite($fh, "\n\tif(!SiteLocation[$i->site][$i->drive]){SiteLocation[$i->site][$i->drive] = new Array();}");
+								fwrite($fh, "\n\tif(!SiteLocation[".$i->site."][".$i->drive."].images)\n");
+								fwrite($fh, "\t{\n");
+								fwrite($fh, "\t\tSiteLocation[".$i->site."][".$i->drive."].images = new Array();\n");
+								fwrite($fh, "\t\tSiteLocation[".$i->site."][".$i->drive."].images[0] = Image".$count.";\n");
+								fwrite($fh, "\t}\n");
+								fwrite($fh, "\telse\n");
+								fwrite($fh, "\t{\n");
+								fwrite($fh, "\t\tSiteLocation[".$i->site."][".$i->drive."].images[SiteLocation[".$i->site."][".$i->drive."].images.length] = Image".$count.";\n");
+								fwrite($fh, "\t}\n");
 
-
-
-			                // echo '<a href="'.$i->urlList.'">Image #'.$count.'</a><br>';
-			                $count++;							
+				                $count++;							
 					        }
 					
 					}
@@ -152,7 +147,6 @@
 				} 
 
 				fwrite($fh, "}\n");
-				//fwrite($fh, "</script>");
 				fclose($fh);
 
 			}
