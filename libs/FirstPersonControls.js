@@ -122,6 +122,8 @@ THREE.FirstPersonControls = function ( object, domElement ) {
 		}
 
 		this.mouseDragOn = false;
+		this.mouseX = 0;
+		this.mouseY = 0;		
 
 	};
 

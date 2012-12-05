@@ -191,7 +191,7 @@ Scene.prototype.addCuriosityPics = function()
 							if (true)// if (i == targetSite && j == targetDrive) 
 							{
 								
-								if ( SiteLocation[i][j].images[k].instrument != "FHAZ_RIGHT_A" && SiteLocation[i][j].images[k].instrument != "RHAZ_RIGHT_A" && SiteLocation[i][j].images[k].instrument != "NAV_RIGHT_A" )
+								if ( SiteLocation[i][j].images[k].instrument != "FHAZ_RIGHT_A" && SiteLocation[i][j].images[k].instrument != "RHAZ_RIGHT_A" && SiteLocation[i][j].images[k].instrument != "NAV_RIGHT_A" && SiteLocation[i][j].images[k].instrument != "CHEMCAM_RMI" && SiteLocation[i][j].images[k].instrument != "CHEMCAM_LMI")
 								{
 									counter++;
 									
