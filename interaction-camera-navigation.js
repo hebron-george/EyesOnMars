@@ -408,7 +408,7 @@ function ondblclick( event )
 		// app.scene.add( particle );	
 		var src = intersects[0].object.EOMsrcForImage;
 
-		$("#container").after('<div class="lightbox"><div class="img_container"><img src="' + src + '" /><div class="fb-like" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="verdana"></div></div></div>');
+		$("#container").after('<div class="lightbox"><div class="img_container"><img src="' + src + '" /></div></div>');
 		/*$("#container").after('<div class="fb-like" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" 
 			data-width="90" data-show-faces="false" data-font="verdana"></div>');*/
 		//
@@ -422,7 +422,7 @@ function ondblclick( event )
 		if (!$.browser.msie) {
 			$("body").mouseup(function () {
 				$(".lightbox").remove();
-				$(".fb-like").remove();
+				//$(".fb-like").remove();
 			});
 		}
 

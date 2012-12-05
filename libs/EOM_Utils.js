@@ -343,3 +343,9 @@ function fadeIn()
 		}
 	}
 }
+
+function updateFacebookURL()
+{
+	var sUrl = "http://localhost/?site=" + currentSite + "&drive=" + currentDrive;
+	document.getElementById('fb').setAttribute('data-href', sUrl);
+}
