@@ -48,24 +48,9 @@ body {
 }
 
 #fb {
-	bottom: 0px;
-	position: absolute;
-	width:95%;
-	height:6%;
-	bottom:0px;
-	top: 6%;
-	text-align:center;
+	bottom: 3px;
 }
 
-#goog {
-	bottom: 0px;
-	position: absolute;
-	width:95%;
-	height:6%;
-	bottom:0px;
-	top: 9%;
-	text-align:center;
-}
 
 
 /* FULL SCREEN Structure 

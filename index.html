@@ -4,7 +4,8 @@
 
 	<title>Eyes On Mars</title>
 
-	<link href="/css/base.css" rel="stylesheet" /> 
+	<link href="/css/base.css" rel="stylesheet" />
+	<link id="goog" rel="canonical" href="http://www.eyesonmars.com" />
 	<script src="/libs/Three.js"></script>
 	<script src="/libs/jquery-1.6.4.js"></script>
     <script src="/libs/jquery.mousewheel.js"></script>
@@ -98,6 +99,7 @@
 			whichStartDrive();
 			whichStartCamera();
 			app.camera.updateProjectionMatrix();
+			// gapi.plusone.go();
 		}
 	);
 	</script>
@@ -115,30 +117,18 @@
 		<br />
 		<center>
 			<form action="" method = "POST">
-				<p><button style="background-color:transparent; border-style:none" type="button" name="prev" onClick="getPrev()"><img src="LEFT.png"></button>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<button style="background-color:transparent; border-style:none" type="button" name="prev" onClick="getNext()"><img src="RIGHT.png"></button></p>
+				<button style="background-color:transparent; border-style:none" type="button" name="prev" onClick="getPrev()"><img src="LEFT.png"></button><div class="g-plusone" id="gp" data-href="http://www.eyesonmars.com"></div>
+				<div class="fb-like" id="fb" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="verdana"></div><button style="background-color:transparent; border-style:none" type="button" name="prev" onClick="getNext()"><img src="RIGHT.png"></button>
 			</form>
 		</center>
 	</div>
-
-	<div id="goog"><center>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="g-plusone" id="gp" data-size="medium" data-annotation="inline" data-width="120"></div>
-	</center></div>
-
-	<div class="fb-like" id="fb" onmouseover="updateFacebookURL()" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="verdana"></div>
 		
 	
 	
 
-
-<!-- Place this tag after the last +1 button tag. -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
+<!-- Place this tag in your head or just before your close body tag. -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+  {parsetags: 'explicit'}
 </script>
 
 <div id="fb-root"></div>
