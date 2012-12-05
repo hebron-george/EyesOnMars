@@ -276,7 +276,7 @@ function fadeOutImages(next)
 
 function fadeOutNEXT()
 {
-	var newOpacity = planeArr[0].material.opacity - 0.005;
+	var newOpacity = planeArr[0].material.opacity - 0.01;
 
 	if(newOpacity <= 0.01)
 	{
@@ -294,7 +294,7 @@ function fadeOutNEXT()
 
 function fadeOutPREV()
 {
-	var newOpacity = planeArr[0].material.opacity - 0.005;
+	var newOpacity = planeArr[0].material.opacity - 0.01;
 
 	if(newOpacity <= 0.01)
 	{
