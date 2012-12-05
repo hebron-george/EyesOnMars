@@ -90,7 +90,7 @@ function driveSwitching(desiredSite, desiredDrive)
 	// console.log("driveSwitching finished with site: "+desiredSite+" and drive: "+desiredDrive);
 	currentSite = desiredSite;
 	currentDrive = desiredDrive;
-
+	//Create cookie for current location
 	alert("You are now viewing Site:"+currentSite +" Drive:"+currentDrive);
 }
 
