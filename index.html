@@ -59,11 +59,33 @@
 	var ValidSiteDrive = Array();
 	var currentSite = 1;
 	var currentDrive = 0;
+	var cookieSite = null;
+	var cookieDrive = null;	
 	var app = null;
 	var myTween = null;
 	var myTween2 = null;
 	var mySequencer;
 	var objects = [];
+
+	var c1 = "site";
+	var c2 = "drive";
+
+	var i,x,y,ARRcookies=document.cookie.split(";");
+
+	for (i = 0; i < ARRcookies.length; i++)
+	{
+		x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+		y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+		x=x.replace(/^\s+|\s+$/g,"");
+		if (x==c1)
+		{
+			cookieSite = unescape(y);
+		}
+		else if (x==c2)
+		{
+			cookieDrive = unescape(y);
+		}
+	}
 
 	
 	$(document).ready(
@@ -78,36 +100,6 @@
 			app.camera.updateProjectionMatrix();
 		}
 	);
-	</script>
-
-	<script>
-		var c1 = "site";
-		var c2 = "drive";
-		var site = null;
-		var drive = null;
-
-		var i,x,y,ARRcookies=document.cookie.split(";");
-
-		for (i = 0; i < ARRcookies.length; i++)
-		{
-			x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-			y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-			x=x.replace(/^\s+|\s+$/g,"");
-			if (x==c1)
-			{
-				site = unescape(y);
-			}
-			else if (x==c2)
-			{
-				drive = unescape(y);
-			}
-		}
-
-		if (site != null && drive != null)
-		{
-			//Redirect to the location here
-			window.location = "http://www.eyesonmars.com/?site=" + site + "&drive=" + drive;			
-		}
 	</script>
 
 </head>

@@ -90,6 +90,12 @@ function driveSwitching(desiredSite, desiredDrive)
 	// console.log("driveSwitching finished with site: "+desiredSite+" and drive: "+desiredDrive);
 	currentSite = desiredSite;
 	currentDrive = desiredDrive;
+
+	var exdate=new Date();
+	exdate.setDate(exdate.getDate() + 180); // 180 days
+	document.cookie = 'site='+ currentSite +'; expires=' + exdate.toUTCString() +'; path=/';
+	document.cookie = 'drive='+ currentDrive +'; expires=' + exdate.toUTCString() +'; path=/';
+
 	//Create cookie for current location
 	alert("You are now viewing Site:"+currentSite +" Drive:"+currentDrive);
 }
@@ -229,13 +235,22 @@ function whichStartDrive()
 		__alert(sorry);
 	}
 
+	if (cookieSite != null && cookieDrive != null && (site == undefined || drive == undefined))
+	{
+		if (-1 == ValidSiteDrive.indexOf(combineSiteDriveNums(cookieSite,cookieDrive)))
+		{
+			sorry = "Sorry, Site:"+site+" and Drive:"+drive+" is not available.";
+			site = extractSite( ValidSiteDrive[ValidSiteDrive.length-1] );
+			drive = extractDrive( ValidSiteDrive[ValidSiteDrive.length-1]);
+		}
+		else
+		{
+			site = cookieSite;
+			drive = cookieDrive;			
+		}
 
-	if(site == undefined || drive == undefined)
-	{	// If site is not valid then default to largest site and drive, 
-		// therefore the latest
-		site = extractSite( ValidSiteDrive[ValidSiteDrive.length-1] );
-		drive = extractDrive( ValidSiteDrive[ValidSiteDrive.length-1]);
 	}
+
 
 	driveSwitching(site,drive);
 	fadeInImages();
