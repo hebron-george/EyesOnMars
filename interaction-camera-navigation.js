@@ -400,29 +400,16 @@ function ondblclick( event )
 
 	if ( intersects.length > 0 ) {
 
-		// intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );
-
-		// var particle = new THREE.Particle( particleMaterial );
-		// particle.position = intersects[ 0 ].point;
-		// particle.scale.x = particle.scale.y = 8;
-		// app.scene.add( particle );	
 		var src = intersects[0].object.EOMsrcForImage;
 
 		$("#container").after('<div class="lightbox"><div class="img_container"><img src="' + src + '" /></div></div>');
 		/*$("#container").after('<div class="fb-like" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" 
 			data-width="90" data-show-faces="false" data-font="verdana"></div>');*/
 		//
-		/* Close the grey area */
-		var mouse_is_inside = true;
-		$(".img_container").hover(function () {
-			mouse_is_inside = true;
-		}, function () {
-			mouse_is_inside = false;
-		});
+		/* Close the lightbox area */
 		if (!$.browser.msie) {
 			$("body").mouseup(function () {
 				$(".lightbox").remove();
-				//$(".fb-like").remove();
 			});
 		}
 
