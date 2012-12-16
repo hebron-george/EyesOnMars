@@ -44,6 +44,12 @@ SceneViewer.prototype.init = function(param)
     this.createCameraControls();
 	document.addEventListener( 'dblclick', ondblclick, false );
 
+	$('#liker').html('<fb:like href="http://www.EyesOnMars.com/?site=' + currentSite + '&amp;drive=' + currentDrive + '" send="true" layout="button_count" width="90" show_faces="false" font="arial"></fb:like>');
+		if (typeof FB !== 'undefined') 
+		{
+    		FB.XFBML.parse(document.getElementById('like'));
+		}
+
 }
 
 SceneViewer.prototype.createCameraControls = function()
