@@ -395,23 +395,41 @@ Model.prototype.handleLoaded = function(data)
 
 function ondblclick( event )
 {
+	/*
+	 *
+	 * This event will add a lightbox div which will lay on top of the canvas
+	 * and view the specific image that the user clicked on. If they click a single time
+	 * once more, then the lightbox div tag will get removed and they will be able to view
+	 * the canvas completely once more.
+	 *
+	 */
+
+
+	/*
+	 *
+	 * Create a ray object that will intersect any images from the location that the user double clicked.
+	 *
+	 */
 
 	var vector = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1, - ( event.clientY / window.innerHeight ) * 2 + 1, 0.5 );
 	var projector = new THREE.Projector();
 	projector.unprojectVector( vector, camera );
-
 	var ray = new THREE.Ray( camera.position, vector.subSelf( camera.position ).normalize() );
-
 	intersects = ray.intersectObjects( planeArrVisible );
+
+
+	/*
+	 *
+	 * The first image in the array that the ray created will get displayed.
+	 *
+	 */
 
 	if ( intersects.length > 0 ) {
 
 		var src = intersects[0].object.EOMsrcForImage;
 
 		$("#container").after('<div class="lightbox"><div class="img_container"><img src="' + src + '" /></div></div>');
-		/*$("#container").after('<div class="fb-like" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" 
-			data-width="90" data-show-faces="false" data-font="verdana"></div>');*/
-		//
+
 		/* Close the lightbox area */
 		if (!$.browser.msie) {
 			$("body").mouseup(function () {
