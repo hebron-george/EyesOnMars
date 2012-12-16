@@ -100,6 +100,12 @@ function driveSwitching(desiredSite, desiredDrive)
 
 	//Create cookie for current location
 	alert("You are now viewing Site:"+currentSite +" Drive:"+currentDrive);
+
+	$('#liker').html('<fb:like href="http://www.EyesOnMars.com/?site=' + currentSite + '&amp;drive=' + currentDrive + '" send="true" layout="button_count" width="90" show_faces="false" font="arial"></fb:like>');
+		if (typeof FB !== 'undefined') 
+		{
+    		FB.XFBML.parse(document.getElementById('like'));
+		}
 }
 
 
@@ -125,7 +131,6 @@ function createValidSiteDriveIndex()
 		}
 	}
 }
-
 
 function extractSite(SiteDriveNum)
 {
@@ -172,6 +177,8 @@ function gotoNextDrive()
 		fadeInImages();
 		return true;
 	}
+
+	$("#liker").remove();
 }
 
 function gotoPrevDrive()
@@ -205,6 +212,8 @@ function gotoPrevDrive()
 		fadeInImages();
 		return true;
 	}
+
+	$("#liker").remove();
 }
 
 function whichStartDrive()
