@@ -218,50 +218,53 @@ function gotoPrevDrive()
 
 function whichStartDrive()
 {
-	var siteDrive = null;
 	var sorry = null;
-	var site = getUrlVars()["site"];
-	var drive = getUrlVars()["drive"];
+	var UrlVarsSite = getUrlVars()["site"];
+	var UrlVarsDrive = getUrlVars()["drive"];
+	var site = undefined
+	var drive= undefined;
 
-		if (site && !drive)
+	if(cookieSite != "undefined" && cookieDrive != "undefined")
+	{
+		if (!(-1 == ValidSiteDrive.indexOf(combineSiteDriveNums(cookieSite,cookieDrive))))
 		{
-			sorry = "Sorry, URL must also include a drive.";
+			site = cookieSite;
+			drive = cookieDrive;
 		}
-		else if (!site && drive)
+	}
+
+	if (UrlVarsSite && !UrlVarsDrive)
+	{
+		sorry = "Sorry, URL must also include a drive.";
+	}
+	else if (!UrlVarsSite && UrlVarsDrive)
+	{
+		sorry = "Sorry, URL must also include a site.";
+	}
+	else if (UrlVarsSite && UrlVarsDrive)
+	{
+		if (-1 == ValidSiteDrive.indexOf(combineSiteDriveNums(UrlVarsSite,UrlVarsDrive)))
 		{
-			sorry = "Sorry, URL must also include a site.";
+			sorry = "Sorry, Site:"+UrlVarsSite+" and Drive:"+UrlVarsDrive+" is not available.";
 		}
-		else if (site && drive)
+		else
 		{
-			if (-1 == ValidSiteDrive.indexOf(combineSiteDriveNums(site,drive)))
-			{
-				sorry = "Sorry, Site:"+site+" and Drive:"+drive+" is not available.";
-				site = undefined;
-				drive = undefined;
-			}
+			site = UrlVarsSite;
+			drive = UrlVarsDrive;
 		}
+	}
+
+
+	if (site == undefined || drive == undefined)
+	{
+		site = extractSite( ValidSiteDrive[ValidSiteDrive.length-1] );
+		drive = extractDrive( ValidSiteDrive[ValidSiteDrive.length-1]);
+	}
 
 	if (sorry != null)
 	{
 		__alert(sorry);
 	}
-
-	if (cookieSite != null && cookieDrive != null && (site == undefined || drive == undefined))
-	{
-		if (-1 == ValidSiteDrive.indexOf(combineSiteDriveNums(cookieSite,cookieDrive)))
-		{
-			sorry = "Sorry, Site:"+site+" and Drive:"+drive+" is not available.";
-			site = extractSite( ValidSiteDrive[ValidSiteDrive.length-1] );
-			drive = extractDrive( ValidSiteDrive[ValidSiteDrive.length-1]);
-		}
-		else
-		{
-			site = cookieSite;
-			drive = cookieDrive;			
-		}
-
-	}
-
 
 	driveSwitching(site,drive);
 	fadeInImages();
