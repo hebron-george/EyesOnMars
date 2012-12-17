@@ -52,8 +52,25 @@ body {
 	height: auto;
 }
 
+#social {
+	width: auto;
+	height: auto;
+	position: 50%;
+}
 
+#gp {
+	width: auto;
+	height: auto;
+	position: 50%;
 
+}
+
+#fb {
+	width: auto;
+	height: auto;
+	position: 50%;
+	vertical-align:text-top;
+}
 /* FULL SCREEN Structure 
 #container:-webkit-full-screen {
 	width:100%; 
