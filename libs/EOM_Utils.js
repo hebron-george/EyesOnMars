@@ -101,7 +101,7 @@ function driveSwitching(desiredSite, desiredDrive)
 	//Create cookie for current location
 	alert("You are now viewing Site:"+currentSite +" Drive:"+currentDrive);
 
-	$('#liker').html('<fb:like href="http://www.EyesOnMars.com/?site=' + currentSite + '&amp;drive=' + currentDrive + '" send="true" layout="button_count" width="90" show_faces="false" font="arial"></fb:like>');
+	$('#liker').html('<fb:like href="http://www.EyesOnMars.com/?site=' + currentSite + '&amp;drive=' + currentDrive + '" send="true" layout="button_count" width="90" show_faces="false" font="verdana"></fb:like>');
 		if (typeof FB !== 'undefined') 
 		{
     		FB.XFBML.parse(document.getElementById('like'));
@@ -222,7 +222,7 @@ function whichStartDrive()
 	var UrlVarsSite = getUrlVars()["site"];
 	var UrlVarsDrive = getUrlVars()["drive"];
 	var site = undefined
-	var drive= undefined;
+	var drive = undefined;
 
 	if(cookieSite != "undefined" && cookieDrive != "undefined")
 	{
@@ -290,16 +290,42 @@ function whichStartCamera()
 
 var fadeOutID = -1;
 
-function fadeOutImages(next)
+function fadeOutImages(next,prev,newest)
 {
 
 	if(next)
 	{
 		fadeOutID = window.setInterval(fadeOutNEXT,10);
 	}
-	else
+	else if(prev)
 	{
 		fadeOutID = window.setInterval(fadeOutPREV,10);
+	}
+	else if(newest)
+	{
+		fadeOutID = window.setInterval(fadeOutNEW,10);
+	}
+}
+
+function fadeOutNEW()
+{
+	var newOpacity = planeArr[0].material.opacity - 0.01;
+
+	if(newOpacity <= 0.01)
+	{
+		var site = extractSite( ValidSiteDrive[ValidSiteDrive.length-1] );
+		var drive = extractDrive( ValidSiteDrive[ValidSiteDrive.length-1]);
+		driveSwitching(site,drive);
+		window.clearInterval(fadeOutID);
+		fadeOutID = -1;
+	}
+	else
+	{
+		for (var i = 0; i < planeArr.length; i++)
+		{
+			planeArr[i].material.opacity = newOpacity;
+			planeArr[i].material.needsUpdate = true;
+		}
 	}
 }
 
@@ -313,11 +339,13 @@ function fadeOutNEXT()
 		window.clearInterval(fadeOutID);
 		fadeOutID = -1;
 	}
-
-	for (var i = 0; i < planeArr.length; i++)
+	else
 	{
-		planeArr[i].material.opacity = newOpacity;
-		planeArr[i].material.needsUpdate = true;
+		for (var i = 0; i < planeArr.length; i++)
+		{
+			planeArr[i].material.opacity = newOpacity;
+			planeArr[i].material.needsUpdate = true;
+		}
 	}
 }
 
