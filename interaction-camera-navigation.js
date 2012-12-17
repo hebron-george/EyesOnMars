@@ -254,8 +254,11 @@ Scene.prototype.addCuriosityPics = function()
 									MyPlane.rotationAutoUpdate = true;
 									MyPlane.lookAt(MyLookVector);
 									MyPlane.EOMsrcForImage = SiteLocation[i][j].images[k].urlList;
+									MyPlane.EOMutc = SiteLocation[i][j].images[k].utc;
+									MyPlane.EOMsol = SiteLocation[i][j].images[k].sol;
 									MyPlane.EOMsite = i;
 									MyPlane.EOMdrive = j;
+
 									MyPlane.visible = false;
 
 									this.object3D.add(MyPlane);
@@ -420,13 +423,38 @@ function ondblclick( event )
 	if ( intersects.length > 0 ) {
 
 		var src = intersects[0].object.EOMsrcForImage;
+		var imgH;
+		var imgW;
+		for (var i = 0; i < intersects.length; i++)
+		{
+			if (intersects[i].object.visible)
+			{
+				src = intersects[i].object.EOMsrcForImage;
+				imgW = (document.width - intersects[i].object.material.map.image.width)/2;
+				imgH = (document.height - intersects[i].object.material.map.image.height)/2;
+				
+				if (imgW < 0)
+					imgW = 0;
+				if (imgH < 0)
+					imgH = 0;
 
-		$("#container").after('<div class="lightbox"><div class="img_container"><img src="' + src + '" /></div></div>');
+				$("#container").after('<div class="lightbox"><div class="img_container"><img class="centered" src="' + src + '" /></div></div>');
+				var imageInfo = ' ' + intersects[i].object.material.map.image.height + 'x' + intersects[i].object.material.map.image.width + '<br> Instrument: ' + intersects[i].object.EOMinstrument + 
+				'<br> Site: ' + intersects[i].object.EOMsite + '<br> Drive: ' + intersects[i].object.EOMdrive + '<br> UTC: ' + intersects[i].object.EOMutc + '<br> Sol: ' + intersects[i].object.EOMsol;
+				$("#container").after('<div class="img_info"><p>Size: ' + imageInfo + '</p></div>');
+				$('.centered').css({
+					"margin-left": imgW + "px",
+					"margin-top": imgH + "px"
+				})
+				break;
+			}
+		}
 
 		/* Close the lightbox area */
 		if (!$.browser.msie) {
 			$("body").mouseup(function () {
 				$(".lightbox").remove();
+				$(".img_info").remove();
 			});
 		}
 
