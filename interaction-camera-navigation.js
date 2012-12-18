@@ -439,9 +439,9 @@ function ondblclick( event )
 					imgH = 0;
 
 				$("#container").after('<div class="lightbox"><div class="img_container"><img class="centered" src="' + src + '" /></div></div>');
-				var imageInfo = ' ' + intersects[i].object.material.map.image.height + 'x' + intersects[i].object.material.map.image.width + '<br> Instrument: ' + intersects[i].object.EOMinstrument + 
-				'<br> Site: ' + intersects[i].object.EOMsite + '<br> Drive: ' + intersects[i].object.EOMdrive + '<br> UTC: ' + intersects[i].object.EOMutc + '<br> Sol: ' + intersects[i].object.EOMsol;
-				$("#container").after('<div class="img_info"><p>Size: ' + imageInfo + '</p></div>');
+				var imageInfo = intersects[i].object.material.map.image.height + 'x' + intersects[i].object.material.map.image.width + ' pixels<br>&nbsp;&nbsp;Instrument: ' + intersects[i].object.EOMinstrument + 
+				'<br>&nbsp;&nbsp;Site: ' + intersects[i].object.EOMsite + '<br>&nbsp;&nbsp;Drive: ' + intersects[i].object.EOMdrive + '<br>&nbsp;&nbsp;UTC: ' + intersects[i].object.EOMutc + '&nbsp;&nbsp;<br>&nbsp;&nbsp;Sol: ' + intersects[i].object.EOMsol;
+				$("#container").after('<div class="img_info"><h3><center>Image Data<hr></center></h3><p>&nbsp;&nbsp;Size: ' + imageInfo + '</p></div>');
 				$('.centered').css({
 					"margin-left": imgW + "px",
 					"margin-top": imgH + "px"

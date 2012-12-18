@@ -13,8 +13,8 @@ body {
 	top: 0%;
 	left: 0%;
 	position:absolute;
-	width:20%;
-	height:20%;
+	width:auto;
+	height:auto;
 	color:white;
 	font-family:Arial;
 	background-color: gray;
