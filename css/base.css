@@ -61,11 +61,6 @@ body {
 	text-align:center;
 }
 
-#liker {
-	width: auto;
-	height: auto;
-}
-
 #social {
 	width: auto;
 	height: auto;	
@@ -77,9 +72,26 @@ body {
 }
 
 #fb {
-	width: auto;
-	height: auto;
-	vertical-align:text-top;
+	width: 90px;
+	height: 20px;
+}
+
+#prev {
+	background-color: transparent;
+	border: 0px;
+	cursor: pointer;
+}
+
+#home {
+	background-color: transparent;
+	border: 0px;
+	cursor: pointer;
+}
+
+#next {
+	background-color: transparent;
+	border: 0px;
+	cursor: pointer;
 }
 /* FULL SCREEN Structure 
 #container:-webkit-full-screen {
@@ -126,7 +138,5 @@ body {
 	text-align:center; 
 	position:absolute;
 }
-
-
 
 */
