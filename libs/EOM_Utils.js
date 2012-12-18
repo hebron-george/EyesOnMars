@@ -290,22 +290,23 @@ function whichStartCamera()
 
 var fadeOutID = -1;
 
-function fadeOutImages(next,prev,newest)
+function fadeOutImages(buttonCmd)
 {
-
-	if(next)
+	if(buttonCmd == 'NEXT')
 	{
 		fadeOutID = window.setInterval(fadeOutNEXT,10);
 	}
-	else if(prev)
+	else if(buttonCmd == 'PREV')
 	{
 		fadeOutID = window.setInterval(fadeOutPREV,10);
 	}
-	else if(newest)
+	else if(buttonCmd == 'NEWEST')
 	{
 		fadeOutID = window.setInterval(fadeOutNEW,10);
 	}
 }
+
+/* Goes to the most current site/drive when the circle button is pressed */
 
 function fadeOutNEW()
 {
@@ -318,6 +319,7 @@ function fadeOutNEW()
 		driveSwitching(site,drive);
 		window.clearInterval(fadeOutID);
 		fadeOutID = -1;
+		fadeInImages();
 	}
 	else
 	{

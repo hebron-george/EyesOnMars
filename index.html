@@ -36,21 +36,21 @@
 	<script>
 		function getNext()
 		{
-			fadeOutImages(true,false,false);
+			fadeOutImages('NEXT');
 		}
 	</script>
 	
 	<script>
 		function getPrev()
 		{
-			fadeOutImages(false,true,false);
+			fadeOutImages('PREV');
 		}
 	</script>
 
 	<script>
 		function getNew()
 		{
-			fadeOutImages(false,false,true);
+			fadeOutImages('NEWEST');
 		}
 	</script>
 
@@ -128,14 +128,14 @@
 					<span class="g-plusone" id="gp" data-href="http://www.eyesonmars.com/"></span>
 					<span class="fb-like" id="fb" data-href="http://eyesonmars.com/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="verdana"></span>
 				</div>
-				<button style="background-color:transparent; border:0px; cursor: hand; cursor:pointer;" type="button" name="prev" onClick="getPrev()"><img src="LEFT.png"></button>
-				<button style="background-color:transparent; border:0px; cursor: hand; cursor:pointer;" type="button" name="prev" onClick="getNew()"><img src="HOME.png"></button>
-				<button style="background-color:transparent; border:0px; cursor:hand; cursor:pointer;" type="button" name="prev" onClick="getNext()"><img src="RIGHT.png"></button>
+				<button style="background-color:transparent; border:0px; cursor: hand; cursor:pointer;" type="button" name="prev" onClick="getPrev()"><img src="LEFT.png" onmouseover="this.src='LEFTtxt.png'" onmouseout="this.src='LEFT.png'"></button>
+				<button style="background-color:transparent; border:0px; cursor: hand; cursor:pointer;" type="button" name="prev" onClick="getNew()"><img src="HOME.png" onmouseover="this.src='HOMEtxt.png'" onmouseout="this.src='HOME.png'"></button>
+				<button style="background-color:transparent; border:0px; cursor:hand; cursor:pointer;" type="button" name="prev" onClick="getNext()"><img src="RIGHT.png"  onmouseover="this.src='RIGHTtxt.png'" onmouseout="this.src='RIGHT.png'"></button>
 			</form>
 		</center>
 	</span>
 		
-	
+
 	
 
 <!-- Place this tag in your head or just before your close body tag. -->
