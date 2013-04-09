@@ -20,9 +20,7 @@
 			else
 				$i->drive = ltrim($i->drive, '0');
 
-			//Replace the 'mars.jpl.nasa.gov' part of the url with 'msl-raws.s3.amazonaws.com'
 
-			$i->urlList = str_replace("mars.jpl.nasa.gov", "msl-raws.s3.amazonaws.com", $i->urlList);
 			//Add to Image
 			fwrite($fh, "\n\tvar Image".$count." = new ImageInfo();\n");
 			fwrite($fh, "\tImage".$count.".itemName = \"".$i->itemName."\";\n");
